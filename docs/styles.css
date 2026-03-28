@@ -1120,8 +1120,8 @@ body[data-theme="bw"] .stock-chart {
   }
 
   tbody tr {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 6px;
     padding: 8px;
     border: 1px solid var(--line-soft);
@@ -1133,6 +1133,10 @@ body[data-theme="bw"] .stock-chart {
     border: 0;
     padding: 0;
     min-width: 0;
+    flex: 1 1 calc(50% - 6px);
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   tbody td::before {
@@ -1156,7 +1160,7 @@ body[data-theme="bw"] .stock-chart {
   }
 
   tbody td:nth-child(5) {
-    grid-column: 1 / -1;
+    flex-basis: 100%;
   }
 
   .site-topbar-inner {
