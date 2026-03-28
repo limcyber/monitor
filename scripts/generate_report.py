@@ -320,6 +320,55 @@ def pick_market_reasons(level: int, positive_factors: list[str], negative_factor
     return negative_factors[:3]
 
 
+def prioritize_stock_reasons(reasons: list[str], state: str) -> list[str]:
+    if not reasons:
+        return []
+
+    positive_priority = [
+        "최근 중기 골든크로스가 나왔습니다",
+        "최근 단기 골든크로스가 나왔습니다",
+        "S&P500 대비 상대강도가 좋아지고 있습니다",
+        "최근 20일 수익률이 S&P500보다 좋습니다",
+        "상승할 때 거래량이 평균보다 강했습니다",
+        "최근에는 상승일 거래량이 더 우세했습니다",
+        "20일선이 50일선 위에 있습니다",
+        "20일선이 위로 기울고 있습니다",
+        "50일선 위에 있습니다",
+        "20일선 위에 있습니다",
+    ]
+    negative_priority = [
+        "최근 중기 데드크로스가 나왔습니다",
+        "최근 단기 데드크로스가 나왔습니다",
+        "실적이 가까워 보수적으로 봐야 합니다",
+        "실적 발표가 가까워 보수적으로 봐야 합니다",
+        "거래량이 아직 약합니다",
+        "상대강도가 약해졌습니다",
+        "최근 단기 급등이 커서 추격 매수는 부담입니다",
+        "최근 20일 기준 S&P500보다 약했습니다",
+        "최근 20일 수익률이 S&P500보다 좋지 않습니다",
+        "20일선이 50일선 아래라 추세가 약합니다",
+        "종가가 20일선 아래에 있습니다",
+        "종가가 50일선 아래에 있습니다",
+    ]
+
+    ordered = negative_priority + positive_priority if state in {"약함", "회피"} else positive_priority + negative_priority
+    picked = []
+    for needle in ordered:
+        for reason in reasons:
+            if needle in reason and reason not in picked:
+                picked.append(reason)
+                break
+        if len(picked) >= 3:
+            break
+    if len(picked) < 3:
+        for reason in reasons:
+            if reason not in picked:
+                picked.append(reason)
+            if len(picked) >= 3:
+                break
+    return picked
+
+
 def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) -> ScoreResult:
     score = 0
     reasons = []
@@ -796,6 +845,7 @@ def score_stock(
         if s_state in {"강함", "양호"}
         else "지금은 확실히 강하다고 보기 어렵습니다. 서두르기보다 조금 더 지켜보는 편이 좋습니다."
     )
+    reasons = prioritize_stock_reasons(reasons, s_state)
     note = summarize_stock_note(score, s_state, reasons, earnings_soon, overheated)
     return {
         "ticker": ticker,
@@ -844,17 +894,78 @@ def summarize_stock_note(score: int, state: str, reasons: list[str], earnings_so
         base = "지금 서두를 필요는 없어 보입니다."
     else:
         base = "지금은 굳이 들어갈 이유가 약합니다."
-    reason_text = translate_reason(reasons[0]) if reasons else default_reason_for_state(state)
+    reason_text = pick_note_reason(reasons, state) or default_reason_for_state(state)
     return f"{base} 이유: {reason_text}."
+
+
+def pick_note_reason(reasons: list[str], state: str) -> str | None:
+    if not reasons:
+        return None
+
+    weak_generic = {"20일선 위에 있습니다", "50일선 위에 있습니다"}
+    if state in {"약함", "회피"}:
+        preferred = [
+            "최근 중기 데드크로스가 나왔습니다",
+            "최근 단기 데드크로스가 나왔습니다",
+            "실적이 가까워 보수적으로 봐야 합니다",
+            "실적 발표가 가까워 보수적으로 봐야 합니다",
+            "거래량이 아직 약합니다",
+            "상대강도가 약해졌습니다",
+            "최근 단기 급등이 커서 추격 매수는 부담입니다",
+            "최근 20일 기준 S&P500보다 약했습니다",
+            "최근 20일 수익률이 S&P500보다 좋지 않습니다",
+            "20일선이 50일선 아래라 추세가 약합니다",
+            "종가가 20일선 아래에 있습니다",
+            "종가가 50일선 아래에 있습니다",
+        ]
+        for needle in preferred:
+            match = next((reason for reason in reasons if needle in reason), None)
+            if match:
+                return translate_reason(match)
+        for reason in reasons:
+            if reason not in weak_generic:
+                return translate_reason(reason)
+        return None
+
+    preferred = [
+        "최근 중기 골든크로스가 나왔습니다",
+        "최근 단기 골든크로스가 나왔습니다",
+        "S&P500 대비 상대강도가 좋아지고 있습니다",
+        "최근 20일 수익률이 S&P500보다 좋습니다",
+        "상승할 때 거래량이 평균보다 강했습니다",
+        "최근에는 상승일 거래량이 더 우세했습니다",
+        "20일선이 50일선 위에 있습니다",
+        "20일선이 위로 기울고 있습니다",
+        "50일선 위에 있습니다",
+        "20일선 위에 있습니다",
+    ]
+    for needle in preferred:
+        match = next((reason for reason in reasons if needle in reason), None)
+        if match:
+            return translate_reason(match)
+    return translate_reason(reasons[0])
 
 
 def translate_reason(reason: str) -> str:
     mapping = {
         "20일선 위에 있습니다": "20일선 위에 있습니다",
         "50일선 위에 있습니다": "50일선 위에 있습니다",
+        "20일선이 50일선 위에 있습니다": "20일선이 50일선 위에 있습니다",
+        "20일선이 위로 기울고 있습니다": "20일선이 위로 기울고 있습니다",
+        "종가가 20일선 아래에 있습니다": "20일선 아래에 있습니다",
+        "종가가 50일선 아래에 있습니다": "50일선 아래에 있습니다",
         "거래량이 아직 약합니다": "거래량이 아직 약합니다",
         "상대강도가 약해졌습니다": "상대강도가 약해졌습니다",
         "S&P500 대비 상대강도가 좋아지고 있습니다": "S&P500보다 더 강한 흐름입니다",
+        "최근 중기 골든크로스가 나왔습니다": "최근 중기 골든크로스가 나왔습니다",
+        "최근 단기 골든크로스가 나왔습니다": "최근 단기 골든크로스가 나왔습니다",
+        "최근 중기 데드크로스가 나왔습니다": "최근 중기 데드크로스가 나왔습니다",
+        "최근 단기 데드크로스가 나왔습니다": "최근 단기 데드크로스가 나왔습니다",
+        "최근 20일 수익률이 S&P500보다 좋습니다": "최근 20일 수익률이 S&P500보다 좋습니다",
+        "최근 20일 수익률이 S&P500보다 좋지 않습니다": "최근 20일 수익률이 S&P500보다 좋지 않습니다",
+        "상승할 때 거래량이 평균보다 강했습니다": "상승할 때 거래량이 평균보다 강했습니다",
+        "최근에는 상승일 거래량이 더 우세했습니다": "최근에는 상승일 거래량이 더 우세했습니다",
+        "최근 20일 기준 S&P500보다 약했습니다": "최근 20일 기준 S&P500보다 약했습니다",
         "실적이 가까워 보수적으로 봐야 합니다": "실적이 가까워 보수적으로 봐야 합니다",
         "뚜렷하게 강하다고 볼 근거가 부족합니다": "뚜렷하게 강하다고 볼 근거가 부족합니다",
     }
