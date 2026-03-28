@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import math
+import os
 from dataclasses import dataclass
 from datetime import date, datetime, time, timedelta
 from io import StringIO
@@ -23,6 +24,7 @@ OUTPUT_PATH = DOCS_DATA_DIR / "latest.json"
 HISTORY_PATH = DOCS_DATA_DIR / "history.json"
 ET = ZoneInfo("America/New_York")
 MARKET_LEVELS_TOTAL = 6
+GEMINI_MODEL = "gemini-2.5-flash-lite"
 
 
 @dataclass
@@ -52,6 +54,123 @@ def load_json(path: Path) -> dict:
             return json.load(f)
     except Exception:
         return {}
+
+
+def build_market_ai_payload(output: dict) -> dict:
+    market = output.get("market", {})
+    metrics = market.get("metrics", {})
+    summary_rows = []
+    for row in output.get("watchlist_summary", [])[:8]:
+        summary_rows.append(
+            {
+                "ticker": row.get("ticker"),
+                "score": row.get("stock_score"),
+                "state": row.get("stock_state"),
+                "action": row.get("final_action"),
+                "note": row.get("note"),
+                "close": row.get("close"),
+                "change_pct": row.get("close_change_pct"),
+            }
+        )
+    return {
+        "generated_at_et": output.get("generated_at_et"),
+        "market_data_as_of": output.get("market_data_as_of"),
+        "market": {
+            "score": market.get("score"),
+            "state": market.get("state"),
+            "action": market.get("action"),
+            "easy_explanation": market.get("easy_explanation"),
+            "top_reasons": market.get("top_reasons", [])[:5],
+            "cross_highlights": market.get("cross_highlights", [])[:4],
+            "positive_factors": market.get("positive_factors", [])[:5],
+            "negative_factors": market.get("negative_factors", [])[:6],
+            "alerts": market.get("alerts", [])[:4],
+            "metrics": {
+                "spx_close": metrics.get("spx_close"),
+                "spx_change_pct": metrics.get("spx_change_pct"),
+                "ndx_close": metrics.get("ndx_close"),
+                "ndx_change_pct": metrics.get("ndx_change_pct"),
+                "rut_close": metrics.get("rut_close"),
+                "rut_change_pct": metrics.get("rut_change_pct"),
+                "vix_close": metrics.get("vix_close"),
+                "vix_change_pct": metrics.get("vix_change_pct"),
+                "vix_percentile": metrics.get("vix_percentile"),
+                "tnx_close": metrics.get("tnx_close"),
+                "tnx_change_pct": metrics.get("tnx_change_pct"),
+                "dxy_20d_zscore": metrics.get("dxy_20d_zscore"),
+                "tnx_20d_zscore": metrics.get("tnx_20d_zscore"),
+                "pct_above_20dma": metrics.get("pct_above_20dma"),
+                "pct_above_50dma": metrics.get("pct_above_50dma"),
+                "brent_close": metrics.get("brent_close"),
+                "brent_change_pct": metrics.get("brent_change_pct"),
+            },
+        },
+        "watchlist_summary": summary_rows,
+    }
+
+
+def generate_market_ai_analysis(output: dict) -> dict:
+    api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+    if not api_key:
+        return {
+            "status": "disabled",
+            "model": GEMINI_MODEL,
+            "content": "GEMINI_API_KEY가 없어 AI 분석을 건너뛰었습니다.",
+        }
+
+    try:
+        from google import genai
+        from google.genai import types
+    except Exception:
+        return {
+            "status": "error",
+            "model": GEMINI_MODEL,
+            "content": "Gemini 라이브러리를 불러오지 못해 AI 분석을 만들지 못했습니다.",
+        }
+
+    payload = build_market_ai_payload(output)
+    prompt = f"""
+너는 미국 주식 시장을 보는 실전형 보조 애널리스트다.
+
+아래는 규칙 기반으로 계산한 미국 시장 모니터 데이터다.
+1. 이 규칙 기반 시장 상태가 대체로 맞는지 먼저 판단한다.
+2. Google Search로 최신 뉴스, 지정학, 금리, 변동성, 주도 업종 상황을 빠르게 확인해 현재 맥락을 반영한다.
+3. 한국어로만, 짧고 깔끔하게 답한다.
+4. 출력 형식은 아래 3줄만 쓴다.
+AI 판단: ...
+확인 포인트: ...
+한 줄 결론: ...
+5. 각 줄은 한두 문장 이내로 짧게 쓴다.
+6. 과장하지 말고, 규칙 기반 판단과 다르면 왜 다른지도 짚는다.
+
+시장 데이터:
+{json.dumps(payload, ensure_ascii=False, indent=2)}
+""".strip()
+
+    try:
+        client = genai.Client(api_key=api_key)
+        response = client.models.generate_content(
+            model=GEMINI_MODEL,
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                temperature=0.2,
+                tools=[types.Tool(google_search=types.GoogleSearch())],
+            ),
+        )
+        text = (getattr(response, "text", None) or "").strip()
+        if not text:
+            raise ValueError("empty Gemini response")
+        return {
+            "status": "ok",
+            "model": GEMINI_MODEL,
+            "content": text,
+        }
+    except Exception:
+        return {
+            "status": "error",
+            "model": GEMINI_MODEL,
+            "content": "AI 분석을 불러오지 못했습니다. 잠시 뒤 다시 확인해 주세요.",
+        }
 
 
 def to_date_list(values: list[str]) -> list[date]:
@@ -2151,6 +2270,7 @@ def main() -> None:
     }
     output["notifications"]["items"] = build_notifications(as_of, previous_output, market_output, stock_reports)
     output["notifications"]["count"] = len(output["notifications"]["items"])
+    output["market"]["ai_analysis"] = generate_market_ai_analysis(output)
 
     history = update_history(existing_history, output, as_of)
     output["market"]["history_tags"] = score_history_tags(history.get("market", []))

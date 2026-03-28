@@ -19,6 +19,12 @@ function marketTone(score) {
   return `tone-${scoreTone(score)}`;
 }
 
+function aiStatusTone(status) {
+  if (status === "ok") return "success";
+  if (status === "error") return "danger";
+  return "warning";
+}
+
 function formatScore(score) {
   return `${score}/100`;
 }
@@ -232,6 +238,13 @@ function renderMarket(data) {
   renderList(document.getElementById("marketCrossHighlights"), data.market.cross_highlights, "최근 눈에 띄는 골든크로스나 데드크로스는 없습니다.");
   setText("marketEasy", data.market.easy_explanation);
   setText("marketInvalidation", data.market.invalidation);
+  setText("marketAiText", data.market.ai_analysis?.content || "AI 분석이 아직 없습니다.");
+  const aiStatusEl = document.getElementById("marketAiStatus");
+  if (aiStatusEl) {
+    const status = data.market.ai_analysis?.status || "disabled";
+    aiStatusEl.className = `pill ${aiStatusTone(status)}`;
+    aiStatusEl.textContent = status === "ok" ? "분석 완료" : status === "error" ? "분석 실패" : "분석 꺼짐";
+  }
 
   const reasonsEl = document.getElementById("marketReasons");
   renderList(reasonsEl, data.market.top_reasons, "뚜렷하게 좋은 신호가 많지 않습니다.");
