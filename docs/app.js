@@ -588,7 +588,7 @@ function renderStressTable(charts) {
       name: "HYG",
       value: lastNumeric(charts?.hyg_close),
       change: changePctFromSeries(charts?.hyg_close),
-      note: "위험선호 약함",
+      note: "안전 선호",
       tone: "success",
       invert: false,
     },
