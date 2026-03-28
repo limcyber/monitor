@@ -18,6 +18,33 @@ def priority_label(priority: str) -> str:
     }.get(priority, "[INFO]")
 
 
+def env_flag(name: str, default: bool = False) -> bool:
+    raw = os.environ.get(name)
+    if raw is None:
+        return default
+    return raw.strip().lower() in {"1", "true", "yes", "on"}
+
+
+def build_status_ping(payload: dict) -> str:
+    market = payload.get("market", {})
+    summary = payload.get("watchlist_summary", [])
+    top_rows = sorted(summary, key=lambda row: row.get("stock_score", 0), reverse=True)[:3]
+    lines = [
+        "[TEST] 시장 상태 주기 알림",
+        f"생성 시각: {payload.get('generated_at_et', '-')}",
+        f"데이터 기준: {payload.get('market_data_as_of', '-')}",
+        f"시장 상태: {market.get('state', '-')} / {market.get('score', '-')}/100",
+        f"추천 행동: {market.get('action', '-')}",
+    ]
+    if top_rows:
+        top_text = ", ".join(
+            f"{row.get('ticker', '-')}: {row.get('stock_score', '-')}/100 {row.get('stock_state', '-')}"
+            for row in top_rows
+        )
+        lines.append(f"상위 관심종목: {top_text}")
+    return "\n".join(lines)
+
+
 def main() -> None:
     webhook_url = os.environ.get("DISCORD_WEBHOOK_URL", "").strip()
     if not webhook_url:
@@ -32,30 +59,39 @@ def main() -> None:
         payload = json.load(f)
 
     notifications = payload.get("notifications", {}).get("items", [])
-    if not notifications:
+    test_status_ping = env_flag("DISCORD_TEST_STATUS_PING", default=False)
+
+    market = payload.get("market", {})
+    sections: list[str] = []
+
+    if notifications:
+        lines = [
+            "시장 모니터 알림",
+            f"생성 시각: {payload.get('generated_at_et', '-')}",
+            f"데이터 기준: {payload.get('market_data_as_of', '-')}",
+            f"시장 상태: {market.get('state', '-')} / {market.get('score', '-')}/100 / {market.get('action', '-')}",
+            "",
+        ]
+        for item in notifications[:8]:
+            lines.append(f"{priority_label(item.get('priority', ''))} {item.get('title', '-')}")
+            lines.append(item.get("message", "-"))
+            lines.append("")
+        sections.append("\n".join(lines).strip())
+
+    if test_status_ping:
+        sections.append(build_status_ping(payload))
+
+    if not sections:
         print("No notifications to send.")
         return
 
-    market = payload.get("market", {})
-    lines = [
-        "시장 모니터 알림",
-        f"생성 시각: {payload.get('generated_at_et', '-')}",
-        f"데이터 기준: {payload.get('market_data_as_of', '-')}",
-        f"시장 상태: {market.get('state', '-')} / {market.get('score', '-')}/100 / {market.get('action', '-')}",
-        "",
-    ]
-    for item in notifications[:8]:
-        lines.append(f"{priority_label(item.get('priority', ''))} {item.get('title', '-')}")
-        lines.append(item.get("message", "-"))
-        lines.append("")
-
-    content = "\n".join(lines).strip()
+    content = "\n\n".join(sections).strip()
     if len(content) > 1800:
         content = f"{content[:1790]}\n..."
 
     response = requests.post(webhook_url, json={"content": content}, timeout=15)
     response.raise_for_status()
-    print(f"Sent {len(notifications)} Discord notifications.")
+    print(f"Sent Discord message with {len(notifications)} important notifications.")
 
 
 if __name__ == "__main__":

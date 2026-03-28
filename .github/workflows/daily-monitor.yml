@@ -71,6 +71,7 @@ jobs:
         if: (github.event_name != 'schedule' || steps.market_window.outputs.should_run == 'true') && secrets.DISCORD_WEBHOOK_URL != ''
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_TEST_STATUS_PING: "true"
         run: python scripts/send_discord_alerts.py
 
       - name: Upload artifact

@@ -385,6 +385,7 @@ Python 의존성 목록입니다.
 #### [daily-monitor.yml](./.github/workflows/daily-monitor.yml)
 데이터 생성과 Pages 배포를 자동화하는 워크플로입니다.
 - `DISCORD_WEBHOOK_URL` GitHub Secret이 있으면 중요 알림도 함께 전송합니다.
+- 현재는 초기 테스트를 위해 `DISCORD_TEST_STATUS_PING=true`로 시장 상태 요약도 주기적으로 함께 전송합니다. 나중에 이 값만 제거하면 테스트 핑이 꺼집니다.
 
 ## 9. 출력 JSON 구조
 
