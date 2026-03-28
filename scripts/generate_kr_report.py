@@ -507,13 +507,16 @@ def kr_market_guidance(score: int, market_data: dict) -> tuple[list[str], list[s
         negative_factors.append(factor_text("원달러와 해외 변동성이 같이 높아 부담이 큽니다", -4))
 
     if (
-        score_value < 55
+        score_value < 50
         and kospi.iloc[-1] > kospi_dma200.iloc[-1]
         and kosdaq.iloc[-1] > kosdaq_dma200.iloc[-1]
         and kospi_dma50.iloc[-1] > kospi_dma200.iloc[-1]
         and kosdaq_dma50.iloc[-1] > kosdaq_dma200.iloc[-1]
+        and not (kospi_short_bear and kosdaq_short_bear)
+        and usdkrw_z <= 1.2
+        and vix_pct < 80
     ):
-        score_value = 55
+        score_value = 50
 
     if kospi.iloc[-1] <= kospi_dma200.iloc[-1] and kosdaq.iloc[-1] <= kosdaq_dma200.iloc[-1]:
         invalidation = "KOSPI와 KOSDAQ이 모두 200일선 아래라면 반등이 나와도 쉽게 추격하기보다 방어적으로 보는 편이 좋습니다."
@@ -566,12 +569,15 @@ def build_kr_market_output(now_et: datetime, previous_output: dict) -> tuple[dic
     score = scored["score"]
     level = market_level(score)
     confidence = confidence_from_coverage(6, sum(1 for df in market_data.values() if not df.empty and len(df) >= 60))
+    usdkrw_z = zscore(usdkrw["Close"], 20)
+    vix_pct = percentile_rank(vix["Close"], 252)
+    high_stress = usdkrw_z > 1.2 or vix_pct > 80
 
     market_output = {
         "state": f"레벨 {level}/6 - {market_state_name(level)}",
         "score": score,
         "confidence": confidence,
-        "execution_strength": "보수적" if level <= 3 else "보통" if level == 4 else "좋음",
+        "execution_strength": "매우 보수적" if high_stress and level <= 3 else "보수적" if high_stress or level <= 3 else "보통" if level == 4 else "좋음",
         "action": market_action(level),
         "top_reasons": pick_market_reasons(level, scored["positive_factors"], scored["negative_factors"]),
         "cross_highlights": scored["cross_highlights"],
@@ -587,7 +593,7 @@ def build_kr_market_output(now_et: datetime, previous_output: dict) -> tuple[dic
         "negative_filters": {
             "filter_1_divergence": any("코스닥 참여는 약합니다" in item for item in scored["negative_factors"]),
             "filter_2_bigcap_only": any("중소형주 쪽 힘이 약합니다" in item for item in scored["negative_factors"]),
-            "filter_3_high_stress": any("원달러와 해외 변동성" in item for item in scored["negative_factors"]),
+            "filter_3_high_stress": high_stress,
             "filter_4_event_risk": False,
             "event_names": [],
         },
@@ -638,7 +644,7 @@ def main() -> None:
         if ts:
             latest_intraday_points.append(ts)
         benchmark = market_frames["KOSDAQ"] if item["market"] == "KOSDAQ" else market_frames["KOSPI"]
-        stock = score_stock(item["ticker"], sdf, benchmark, level, False, None)
+        stock = score_stock(item["ticker"], sdf, benchmark, level, None, None, neutral_missing_earnings=True)
         stock["name"] = item["name"]
         stock["market_label"] = item["market"]
         stock["display_label"] = f"{item['name']} ({item['ticker']})"

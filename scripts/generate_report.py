@@ -757,8 +757,8 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
         invalidation = f"{', '.join(event_names)} 이벤트가 가까워 공격적으로 대응하기는 부담스럽습니다."
 
     if (spx_close.iloc[-1] > spx_close.iloc[-2] or ndx_close.iloc[-1] > ndx_close.iloc[-2]) and (not breadth["adline_5d_up"] or breadth["pct_above_20dma_change"] < 0):
-        score -= 12
-        negative_factors.append(factor_text("지수는 반등해도 오르는 종목 수는 따라오지 못했습니다", -12))
+        score -= 6
+        negative_factors.append(factor_text("지수는 반등해도 오르는 종목 수는 따라오지 못했습니다", -6))
     rsp_spx_ratio = (rsp["Close"] / spx_close).dropna()
     if (spx_close.iloc[-1] > spx_dma50.iloc[-1] or ndx_close.iloc[-1] > ndx_dma50.iloc[-1]) and len(rsp_spx_ratio) >= 20 and rsp_spx_ratio.iloc[-1] < rsp_spx_ratio.iloc[-20]:
         negative_factors.append(factor_text("대형주 몇 종목만 버티고 있고 시장 전체 힘은 약합니다", 0))
@@ -850,6 +850,7 @@ def score_stock(
     market_lvl: int,
     earnings_soon: bool | None,
     earnings_date: date | None,
+    neutral_missing_earnings: bool = False,
 ) -> dict:
     close = stock_df["Close"]
     vol = stock_df["Volume"]
@@ -867,35 +868,35 @@ def score_stock(
         reasons.append("20일선 위에 있습니다")
         positive_factors.append(factor_text("종가가 20일선 위에 있습니다", 10))
     else:
-        score -= 6
+        score -= 4
         reasons.append("종가가 20일선 아래에 있습니다")
-        negative_factors.append(factor_text("종가가 20일선 아래에 있습니다", -6))
+        negative_factors.append(factor_text("종가가 20일선 아래에 있습니다", -4))
     if close.iloc[-1] > dma50.iloc[-1]:
         score += 10
         reasons.append("50일선 위에 있습니다")
         positive_factors.append(factor_text("종가가 50일선 위에 있습니다", 10))
     else:
-        score -= 8
+        score -= 6
         reasons.append("종가가 50일선 아래에 있습니다")
-        negative_factors.append(factor_text("종가가 50일선 아래에 있습니다", -8))
+        negative_factors.append(factor_text("종가가 50일선 아래에 있습니다", -6))
     if dma20.iloc[-1] > dma50.iloc[-1]:
         score += 10
         positive_factors.append(factor_text("짧은 흐름이 중간 흐름보다 좋습니다", 10))
     else:
-        score -= 4
-        negative_factors.append(factor_text("짧은 흐름이 중간 흐름보다 약합니다", -4))
+        score -= 2
+        negative_factors.append(factor_text("짧은 흐름이 중간 흐름보다 약합니다", -2))
     if slope_up(dma20):
         score += 10
         positive_factors.append(factor_text("20일선이 올라가는 중입니다", 10))
     else:
-        score -= 4
-        negative_factors.append(factor_text("20일선이 아직 올라가는 모습은 아닙니다", -4))
+        score -= 2
+        negative_factors.append(factor_text("20일선이 아직 올라가는 모습은 아닙니다", -2))
 
     short_bull, short_bear = recent_cross_signal(
         dma5,
         dma20,
         factor_text("최근 5일선이 20일선을 상향 돌파했습니다", 2),
-        factor_text("최근 5일선이 20일선을 하향 이탈했습니다", -6),
+        factor_text("최근 5일선이 20일선을 하향 이탈했습니다", -4),
     )
     if short_bull:
         score += 2
@@ -903,7 +904,7 @@ def score_stock(
         positive_factors.append(short_bull)
         reasons.append("최근 단기 골든크로스가 나왔습니다")
     if short_bear:
-        score -= 6
+        score -= 4
         cross_highlights.append(f"{ticker} 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다.")
         negative_factors.append(short_bear)
         reasons.append("최근 단기 데드크로스가 나왔습니다")
@@ -912,7 +913,7 @@ def score_stock(
         dma20,
         dma50,
         factor_text("최근 20일선이 50일선을 상향 돌파했습니다", 4),
-        factor_text("최근 20일선이 50일선을 하향 이탈했습니다", -10),
+        factor_text("최근 20일선이 50일선을 하향 이탈했습니다", -8),
         lookback=10,
     )
     if mid_bull:
@@ -921,7 +922,7 @@ def score_stock(
         positive_factors.append(mid_bull)
         reasons.append("최근 중기 골든크로스가 나왔습니다")
     if mid_bear:
-        score -= 10
+        score -= 8
         cross_highlights.append(f"{ticker} 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다.")
         negative_factors.append(mid_bear)
         reasons.append("최근 중기 데드크로스가 나왔습니다")
@@ -970,29 +971,34 @@ def score_stock(
         score += 5
         positive_factors.append(factor_text("최근 너무 급하게 오른 상태는 아닙니다", 5))
     else:
-        score -= 6
-        negative_factors.append(factor_text("최근 단기 급등이 커서 추격 매수는 부담입니다", -6))
+        score -= 4
+        negative_factors.append(factor_text("최근 단기 급등이 커서 추격 매수는 부담입니다", -4))
 
+    event_flag = "특이 일정 없음"
     if earnings_soon is False:
         score += 5
         positive_factors.append(factor_text("가까운 실적 일정 부담이 없습니다", 5))
     elif earnings_soon is True:
         reasons.append("실적이 가까워 보수적으로 봐야 합니다")
-        score -= 8
-        negative_factors.append(factor_text("실적 발표가 가까워 보수적으로 봐야 합니다", -8))
-    else:
         score -= 6
-        negative_factors.append(factor_text("실적 일정 확인이 안 돼서 조심해서 봐야 합니다", -6))
+        negative_factors.append(factor_text("실적 발표가 가까워 보수적으로 봐야 합니다", -6))
+        event_flag = "실적 7일 이내"
+    elif neutral_missing_earnings:
+        event_flag = "실적 미반영"
+    else:
+        score -= 4
+        negative_factors.append(factor_text("실적 일정 확인이 안 돼서 조심해서 봐야 합니다", -4))
+        event_flag = "실적 일정 확인 필요"
 
     rs_10d_weaker = bool(len(rs) >= 10 and rs.iloc[-1] < rs.iloc[-10])
     if close.iloc[-1] > dma20.iloc[-1] and vol.iloc[-1] < vol20.iloc[-1]:
-        score -= 8
+        score -= 6
         reasons.append("거래량이 아직 약합니다")
-        negative_factors.append(factor_text("거래량이 아직 약합니다", -8))
+        negative_factors.append(factor_text("거래량이 아직 약합니다", -6))
     if rs_10d_weaker:
-        score -= 8
+        score -= 6
         reasons.append("최근 시장보다 힘이 약합니다")
-        negative_factors.append(factor_text("시장보다 덜 강하게 움직입니다", -8))
+        negative_factors.append(factor_text("시장보다 덜 강하게 움직입니다", -6))
 
     if close.iloc[-1] <= dma20.iloc[-1]:
         negative_factors.append(factor_text("종가가 20일선 아래에 있습니다", 0))
@@ -1016,7 +1022,7 @@ def score_stock(
     score = int(max(0, min(100, round(score))))
     s_state = stock_state(score)
     action = combined_action(market_lvl, s_state)
-    if earnings_soon is True or earnings_soon is None or overheated:
+    if earnings_soon is True or (earnings_soon is None and not neutral_missing_earnings) or overheated:
         if action == "매수 가능":
             action = "소규모 매수"
         elif action == "선별 매수":
@@ -1039,7 +1045,7 @@ def score_stock(
         "easy_explanation": easy,
         "note": note,
         "cross_highlights": cross_highlights[:2],
-        "event_flag": "실적 7일 이내" if earnings_soon is True else "실적 일정 확인 필요" if earnings_soon is None else "특이 일정 없음",
+        "event_flag": event_flag,
         "earnings_date": earnings_date.isoformat() if earnings_date else None,
         "earnings_date_label": earnings_date.strftime("%Y-%m-%d") if earnings_date else "미확인",
         "earnings_soon": None if earnings_soon is None else bool(earnings_soon),

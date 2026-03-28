@@ -1,11 +1,11 @@
 {
-  "generated_at_et": "2026-03-28 06:54 ET",
+  "generated_at_et": "2026-03-28 07:01 ET",
   "market_data_as_of": "2026-03-27 15:30 KST (Close)",
   "market": {
     "state": "레벨 4/6 - 회복 구간",
     "score": 61,
     "confidence": "높음",
-    "execution_strength": "보통",
+    "execution_strength": "보수적",
     "action": "소규모 매수 / 보유",
     "top_reasons": [
       "KOSPI가 200일선 위에 있습니다 (+15)",
@@ -37,7 +37,7 @@
     "negative_filters": {
       "filter_1_divergence": false,
       "filter_2_bigcap_only": false,
-      "filter_3_high_stress": false,
+      "filter_3_high_stress": true,
       "filter_4_event_risk": false,
       "event_names": []
     },
@@ -61,15 +61,14 @@
       "kosdaq_kospi_ratio_change_20d": 0.09870880608312116
     },
     "change_tags": [
-      "점수 0",
-      "레벨 변화 없음",
-      "원달러 일간 +0.49%"
+      "첫 생성 데이터"
     ],
     "position_tags": [
       "총 노출 30~50%",
       "소규모 분할 진입"
     ],
     "alerts": [
+      "고스트레스 구간",
       "데드크로스 확인"
     ],
     "sector_tags": [],
@@ -83,7 +82,7 @@
       "ticker": "005930.KS",
       "name": "삼성전자",
       "market_label": "KOSPI",
-      "stock_score": 25,
+      "stock_score": 26,
       "stock_state": "회피",
       "final_action": "관찰",
       "note": "지금은 굳이 들어갈 이유가 약합니다. 이유: 최근 단기 데드크로스가 나왔습니다.",
@@ -94,7 +93,7 @@
       "ticker": "000660.KS",
       "name": "SK하이닉스",
       "market_label": "KOSPI",
-      "stock_score": 46,
+      "stock_score": 45,
       "stock_state": "약함",
       "final_action": "관찰",
       "note": "지금 서두를 필요는 없어 보입니다. 이유: 최근 시장보다 힘이 약합니다.",
@@ -116,7 +115,7 @@
       "ticker": "005380.KS",
       "name": "현대차",
       "market_label": "KOSPI",
-      "stock_score": 13,
+      "stock_score": 14,
       "stock_state": "회피",
       "final_action": "관찰",
       "note": "지금은 굳이 들어갈 이유가 약합니다. 이유: 최근 시장보다 힘이 약합니다.",
@@ -127,7 +126,7 @@
       "ticker": "124500.KQ",
       "name": "아이티센글로벌",
       "market_label": "KOSDAQ",
-      "stock_score": 7,
+      "stock_score": 10,
       "stock_state": "회피",
       "final_action": "관찰",
       "note": "지금은 굳이 들어갈 이유가 약합니다. 이유: 최근 단기 데드크로스가 나왔습니다.",
@@ -149,7 +148,7 @@
       "ticker": "012450.KS",
       "name": "한화에어로스페이스",
       "market_label": "KOSPI",
-      "stock_score": 55,
+      "stock_score": 56,
       "stock_state": "애매",
       "final_action": "관찰",
       "note": "아직 확실하진 않습니다. 이유: 이 종목이 시장보다 더 잘 버팁니다.",
@@ -160,7 +159,7 @@
       "ticker": "079550.KS",
       "name": "LIG넥스원",
       "market_label": "KOSPI",
-      "stock_score": 66,
+      "stock_score": 65,
       "stock_state": "양호",
       "final_action": "매우 선별적 접근",
       "note": "관심 있게 볼 만합니다. 이유: 이 종목이 시장보다 더 잘 버팁니다.",
@@ -171,7 +170,7 @@
   "stocks": [
     {
       "ticker": "005930.KS",
-      "stock_score": 25,
+      "stock_score": 26,
       "stock_state": "회피",
       "final_action": "관찰",
       "top_reasons": [
@@ -185,23 +184,22 @@
       "cross_highlights": [
         "삼성전자 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다."
       ],
-      "event_flag": "특이 일정 없음",
+      "event_flag": "실적 미반영",
       "earnings_date": null,
       "earnings_date_label": "미확인",
-      "earnings_soon": false,
+      "earnings_soon": null,
       "overheated": false,
       "positive_factors": [
         "종가가 50일선 위에 있습니다 (+10)",
         "짧은 흐름이 중간 흐름보다 좋습니다 (+10)",
         "20일선이 올라가는 중입니다 (+10)",
         "흔들림이 과하지 않습니다 (+5)",
-        "최근 너무 급하게 오른 상태는 아닙니다 (+5)",
-        "가까운 실적 일정 부담이 없습니다 (+5)"
+        "최근 너무 급하게 오른 상태는 아닙니다 (+5)"
       ],
       "negative_factors": [
-        "종가가 20일선 아래에 있습니다 (-6)",
-        "최근 5일선이 20일선을 하향 이탈했습니다 (-6)",
-        "시장보다 덜 강하게 움직입니다 (-8)",
+        "종가가 20일선 아래에 있습니다 (-4)",
+        "최근 5일선이 20일선을 하향 이탈했습니다 (-4)",
+        "시장보다 덜 강하게 움직입니다 (-6)",
         "종가가 20일선 아래에 있습니다 (0)",
         "최근 한 달 흐름이 시장보다 약했습니다 (0)",
         "최근 한 달 수익률이 시장보다 약합니다 (0)"
@@ -1198,7 +1196,7 @@
       "market_label": "KOSPI",
       "display_label": "삼성전자 (005930.KS)",
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -1211,12 +1209,12 @@
         "시장 대비 약세"
       ],
       "history_tags": [
-        "30일 최고 25"
+        "30일 최고 26"
       ]
     },
     {
       "ticker": "000660.KS",
-      "stock_score": 46,
+      "stock_score": 45,
       "stock_state": "약함",
       "final_action": "관찰",
       "top_reasons": [
@@ -1228,10 +1226,10 @@
       "easy_explanation": "지금은 확실히 강하다고 보기 어렵습니다. 서두르기보다 조금 더 지켜보는 편이 좋습니다.",
       "note": "지금 서두를 필요는 없어 보입니다. 이유: 최근 시장보다 힘이 약합니다.",
       "cross_highlights": [],
-      "event_flag": "특이 일정 없음",
+      "event_flag": "실적 미반영",
       "earnings_date": null,
       "earnings_date_label": "미확인",
-      "earnings_soon": false,
+      "earnings_soon": null,
       "overheated": false,
       "positive_factors": [
         "종가가 50일선 위에 있습니다 (+10)",
@@ -1242,8 +1240,8 @@
         "최근 너무 급하게 오른 상태는 아닙니다 (+5)"
       ],
       "negative_factors": [
-        "종가가 20일선 아래에 있습니다 (-6)",
-        "시장보다 덜 강하게 움직입니다 (-8)",
+        "종가가 20일선 아래에 있습니다 (-4)",
+        "시장보다 덜 강하게 움직입니다 (-6)",
         "종가가 20일선 아래에 있습니다 (0)",
         "최근 한 달 수익률이 시장보다 약합니다 (0)",
         "거래량이 강하게 붙는 모습은 아직 부족합니다 (0)",
@@ -2241,7 +2239,7 @@
       "market_label": "KOSPI",
       "display_label": "SK하이닉스 (000660.KS)",
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -2250,7 +2248,7 @@
       "alerts": [],
       "confidence_warnings": [],
       "history_tags": [
-        "30일 최고 46"
+        "30일 최고 45"
       ]
     },
     {
@@ -2267,23 +2265,22 @@
       "easy_explanation": "지금은 확실히 강하다고 보기 어렵습니다. 서두르기보다 조금 더 지켜보는 편이 좋습니다.",
       "note": "지금은 굳이 들어갈 이유가 약합니다. 이유: 최근 시장보다 힘이 약합니다.",
       "cross_highlights": [],
-      "event_flag": "특이 일정 없음",
+      "event_flag": "실적 미반영",
       "earnings_date": null,
       "earnings_date_label": "미확인",
-      "earnings_soon": false,
+      "earnings_soon": null,
       "overheated": false,
       "positive_factors": [
         "최근에는 상승일 거래량이 더 우세했습니다 (+5)",
         "흔들림이 과하지 않습니다 (+5)",
-        "최근 너무 급하게 오른 상태는 아닙니다 (+5)",
-        "가까운 실적 일정 부담이 없습니다 (+5)"
+        "최근 너무 급하게 오른 상태는 아닙니다 (+5)"
       ],
       "negative_factors": [
-        "종가가 20일선 아래에 있습니다 (-6)",
-        "종가가 50일선 아래에 있습니다 (-8)",
-        "짧은 흐름이 중간 흐름보다 약합니다 (-4)",
-        "20일선이 아직 올라가는 모습은 아닙니다 (-4)",
-        "시장보다 덜 강하게 움직입니다 (-8)",
+        "종가가 20일선 아래에 있습니다 (-4)",
+        "종가가 50일선 아래에 있습니다 (-6)",
+        "짧은 흐름이 중간 흐름보다 약합니다 (-2)",
+        "20일선이 아직 올라가는 모습은 아닙니다 (-2)",
+        "시장보다 덜 강하게 움직입니다 (-6)",
         "종가가 20일선 아래에 있습니다 (0)"
       ],
       "metrics": {
@@ -3278,7 +3275,7 @@
       "market_label": "KOSPI",
       "display_label": "NAVER (035420.KS)",
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -3295,7 +3292,7 @@
     },
     {
       "ticker": "005380.KS",
-      "stock_score": 13,
+      "stock_score": 14,
       "stock_state": "회피",
       "final_action": "관찰",
       "top_reasons": [
@@ -3307,22 +3304,21 @@
       "easy_explanation": "지금은 확실히 강하다고 보기 어렵습니다. 서두르기보다 조금 더 지켜보는 편이 좋습니다.",
       "note": "지금은 굳이 들어갈 이유가 약합니다. 이유: 최근 시장보다 힘이 약합니다.",
       "cross_highlights": [],
-      "event_flag": "특이 일정 없음",
+      "event_flag": "실적 미반영",
       "earnings_date": null,
       "earnings_date_label": "미확인",
-      "earnings_soon": false,
+      "earnings_soon": null,
       "overheated": false,
       "positive_factors": [
         "짧은 흐름이 중간 흐름보다 좋습니다 (+10)",
         "20일선이 올라가는 중입니다 (+10)",
         "흔들림이 과하지 않습니다 (+5)",
-        "최근 너무 급하게 오른 상태는 아닙니다 (+5)",
-        "가까운 실적 일정 부담이 없습니다 (+5)"
+        "최근 너무 급하게 오른 상태는 아닙니다 (+5)"
       ],
       "negative_factors": [
-        "종가가 20일선 아래에 있습니다 (-6)",
-        "종가가 50일선 아래에 있습니다 (-8)",
-        "시장보다 덜 강하게 움직입니다 (-8)",
+        "종가가 20일선 아래에 있습니다 (-4)",
+        "종가가 50일선 아래에 있습니다 (-6)",
+        "시장보다 덜 강하게 움직입니다 (-6)",
         "종가가 20일선 아래에 있습니다 (0)",
         "종가가 50일선 아래에 있습니다 (0)",
         "최근 한 달 흐름이 시장보다 약했습니다 (0)"
@@ -4319,7 +4315,7 @@
       "market_label": "KOSPI",
       "display_label": "현대차 (005380.KS)",
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -4331,12 +4327,12 @@
         "시장 대비 약세"
       ],
       "history_tags": [
-        "30일 최고 13"
+        "30일 최고 14"
       ]
     },
     {
       "ticker": "124500.KQ",
-      "stock_score": 7,
+      "stock_score": 10,
       "stock_state": "회피",
       "final_action": "관찰",
       "top_reasons": [
@@ -4350,23 +4346,22 @@
       "cross_highlights": [
         "아이티센글로벌 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다."
       ],
-      "event_flag": "특이 일정 없음",
+      "event_flag": "실적 미반영",
       "earnings_date": null,
       "earnings_date_label": "미확인",
-      "earnings_soon": false,
+      "earnings_soon": null,
       "overheated": false,
       "positive_factors": [
         "짧은 흐름이 중간 흐름보다 좋습니다 (+10)",
         "20일선이 올라가는 중입니다 (+10)",
         "최근에는 상승일 거래량이 더 우세했습니다 (+5)",
-        "최근 너무 급하게 오른 상태는 아닙니다 (+5)",
-        "가까운 실적 일정 부담이 없습니다 (+5)"
+        "최근 너무 급하게 오른 상태는 아닙니다 (+5)"
       ],
       "negative_factors": [
-        "종가가 20일선 아래에 있습니다 (-6)",
-        "종가가 50일선 아래에 있습니다 (-8)",
-        "최근 5일선이 20일선을 하향 이탈했습니다 (-6)",
-        "시장보다 덜 강하게 움직입니다 (-8)",
+        "종가가 20일선 아래에 있습니다 (-4)",
+        "종가가 50일선 아래에 있습니다 (-6)",
+        "최근 5일선이 20일선을 하향 이탈했습니다 (-4)",
+        "시장보다 덜 강하게 움직입니다 (-6)",
         "종가가 20일선 아래에 있습니다 (0)",
         "종가가 50일선 아래에 있습니다 (0)"
       ],
@@ -5362,7 +5357,7 @@
       "market_label": "KOSDAQ",
       "display_label": "아이티센글로벌 (124500.KQ)",
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -5376,7 +5371,7 @@
         "시장 대비 약세"
       ],
       "history_tags": [
-        "30일 최고 7"
+        "30일 최고 10"
       ]
     },
     {
@@ -5393,22 +5388,21 @@
       "easy_explanation": "지금은 확실히 강하다고 보기 어렵습니다. 서두르기보다 조금 더 지켜보는 편이 좋습니다.",
       "note": "지금은 굳이 들어갈 이유가 약합니다. 이유: 최근 시장보다 힘이 약합니다.",
       "cross_highlights": [],
-      "event_flag": "특이 일정 없음",
+      "event_flag": "실적 미반영",
       "earnings_date": null,
       "earnings_date_label": "미확인",
-      "earnings_soon": false,
+      "earnings_soon": null,
       "overheated": false,
       "positive_factors": [
         "최근에는 상승일 거래량이 더 우세했습니다 (+5)",
-        "최근 너무 급하게 오른 상태는 아닙니다 (+5)",
-        "가까운 실적 일정 부담이 없습니다 (+5)"
+        "최근 너무 급하게 오른 상태는 아닙니다 (+5)"
       ],
       "negative_factors": [
-        "종가가 20일선 아래에 있습니다 (-6)",
-        "종가가 50일선 아래에 있습니다 (-8)",
-        "짧은 흐름이 중간 흐름보다 약합니다 (-4)",
-        "20일선이 아직 올라가는 모습은 아닙니다 (-4)",
-        "시장보다 덜 강하게 움직입니다 (-8)",
+        "종가가 20일선 아래에 있습니다 (-4)",
+        "종가가 50일선 아래에 있습니다 (-6)",
+        "짧은 흐름이 중간 흐름보다 약합니다 (-2)",
+        "20일선이 아직 올라가는 모습은 아닙니다 (-2)",
+        "시장보다 덜 강하게 움직입니다 (-6)",
         "종가가 20일선 아래에 있습니다 (0)"
       ],
       "metrics": {
@@ -6403,7 +6397,7 @@
       "market_label": "KOSDAQ",
       "display_label": "클로봇 (466100.KQ)",
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -6420,7 +6414,7 @@
     },
     {
       "ticker": "012450.KS",
-      "stock_score": 55,
+      "stock_score": 56,
       "stock_state": "애매",
       "final_action": "관찰",
       "top_reasons": [
@@ -6434,10 +6428,10 @@
       "cross_highlights": [
         "한화에어로스페이스 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다."
       ],
-      "event_flag": "특이 일정 없음",
+      "event_flag": "실적 미반영",
       "earnings_date": null,
       "earnings_date_label": "미확인",
-      "earnings_soon": false,
+      "earnings_soon": null,
       "overheated": false,
       "positive_factors": [
         "종가가 50일선 위에 있습니다 (+10)",
@@ -6448,9 +6442,9 @@
         "최근에는 상승일 거래량이 더 우세했습니다 (+5)"
       ],
       "negative_factors": [
-        "종가가 20일선 아래에 있습니다 (-6)",
-        "최근 5일선이 20일선을 하향 이탈했습니다 (-6)",
-        "시장보다 덜 강하게 움직입니다 (-8)",
+        "종가가 20일선 아래에 있습니다 (-4)",
+        "최근 5일선이 20일선을 하향 이탈했습니다 (-4)",
+        "시장보다 덜 강하게 움직입니다 (-6)",
         "종가가 20일선 아래에 있습니다 (0)",
         "거래량이 강하게 붙는 모습은 아직 부족합니다 (0)"
       ],
@@ -7446,7 +7440,7 @@
       "market_label": "KOSPI",
       "display_label": "한화에어로스페이스 (012450.KS)",
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -7459,12 +7453,12 @@
         "거래량 약함"
       ],
       "history_tags": [
-        "30일 최고 55"
+        "30일 최고 56"
       ]
     },
     {
       "ticker": "079550.KS",
-      "stock_score": 66,
+      "stock_score": 65,
       "stock_state": "양호",
       "final_action": "매우 선별적 접근",
       "top_reasons": [
@@ -7478,10 +7472,10 @@
       "cross_highlights": [
         "LIG넥스원 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다."
       ],
-      "event_flag": "특이 일정 없음",
+      "event_flag": "실적 미반영",
       "earnings_date": null,
       "earnings_date_label": "미확인",
-      "earnings_soon": false,
+      "earnings_soon": null,
       "overheated": false,
       "positive_factors": [
         "종가가 20일선 위에 있습니다 (+10)",
@@ -7492,8 +7486,8 @@
         "최근 한 달 흐름이 시장보다 좋습니다 (+10)"
       ],
       "negative_factors": [
-        "최근 5일선이 20일선을 하향 이탈했습니다 (-6)",
-        "거래량이 아직 약합니다 (-8)",
+        "최근 5일선이 20일선을 하향 이탈했습니다 (-4)",
+        "거래량이 아직 약합니다 (-6)",
         "거래량이 강하게 붙는 모습은 아직 부족합니다 (0)",
         "움직임이 커서 흔들릴 수 있습니다 (0)"
       ],
@@ -8489,7 +8483,7 @@
       "market_label": "KOSPI",
       "display_label": "LIG넥스원 (079550.KS)",
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -8502,7 +8496,7 @@
         "거래량 약함"
       ],
       "history_tags": [
-        "30일 최고 66"
+        "30일 최고 65"
       ]
     }
   ],
@@ -9161,8 +9155,53 @@
     }
   },
   "notifications": {
-    "count": 0,
-    "items": []
+    "count": 5,
+    "items": [
+      {
+        "id": "kr-market-high-stress-2026-03-28",
+        "priority": "high",
+        "kind": "kr_market_high_stress",
+        "scope": "market",
+        "title": "한국 시장 고스트레스 구간",
+        "message": "원달러와 해외 변동성 부담이 같이 높아졌습니다. 신규 진입은 더 보수적으로 보는 편이 좋습니다."
+      },
+      {
+        "id": "kr-stock-dead-cross-079550.KS-2026-03-28",
+        "priority": "medium",
+        "kind": "kr_stock_dead_cross",
+        "scope": "stock",
+        "title": "LIG넥스원 데드크로스",
+        "message": "LIG넥스원 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다.",
+        "ticker": "079550.KS"
+      },
+      {
+        "id": "kr-stock-dead-cross-005930.KS-2026-03-28",
+        "priority": "medium",
+        "kind": "kr_stock_dead_cross",
+        "scope": "stock",
+        "title": "삼성전자 데드크로스",
+        "message": "삼성전자 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다.",
+        "ticker": "005930.KS"
+      },
+      {
+        "id": "kr-stock-dead-cross-124500.KQ-2026-03-28",
+        "priority": "medium",
+        "kind": "kr_stock_dead_cross",
+        "scope": "stock",
+        "title": "아이티센글로벌 데드크로스",
+        "message": "아이티센글로벌 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다.",
+        "ticker": "124500.KQ"
+      },
+      {
+        "id": "kr-stock-dead-cross-012450.KS-2026-03-28",
+        "priority": "medium",
+        "kind": "kr_stock_dead_cross",
+        "scope": "stock",
+        "title": "한화에어로스페이스 데드크로스",
+        "message": "한화에어로스페이스 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다.",
+        "ticker": "012450.KS"
+      }
+    ]
   },
   "history": {
     "market": [
@@ -9176,14 +9215,14 @@
       "005930.KS": [
         {
           "date": "2026-03-28",
-          "score": 25,
+          "score": 26,
           "state": "회피"
         }
       ],
       "000660.KS": [
         {
           "date": "2026-03-28",
-          "score": 46,
+          "score": 45,
           "state": "약함"
         }
       ],
@@ -9197,14 +9236,14 @@
       "005380.KS": [
         {
           "date": "2026-03-28",
-          "score": 13,
+          "score": 14,
           "state": "회피"
         }
       ],
       "124500.KQ": [
         {
           "date": "2026-03-28",
-          "score": 7,
+          "score": 10,
           "state": "회피"
         }
       ],
@@ -9218,14 +9257,14 @@
       "012450.KS": [
         {
           "date": "2026-03-28",
-          "score": 55,
+          "score": 56,
           "state": "애매"
         }
       ],
       "079550.KS": [
         {
           "date": "2026-03-28",
-          "score": 66,
+          "score": 65,
           "state": "양호"
         }
       ]
