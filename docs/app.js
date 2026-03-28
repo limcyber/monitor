@@ -77,7 +77,10 @@ function escapeHtml(value) {
 }
 
 function cleanAiText(value) {
-  return String(value || "").replaceAll("**", "").trim();
+  return String(value || "")
+    .replaceAll("**", "")
+    .replace(" (AI 점수:", "\n(AI 점수:")
+    .trim();
 }
 
 function tagTone(text) {
