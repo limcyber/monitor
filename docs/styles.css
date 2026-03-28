@@ -1193,24 +1193,15 @@ body[data-theme="bw"] .stock-chart {
   font-size: 10px;
 }
 
-.stress-axis-row {
-  margin-top: 2px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  justify-content: space-between;
+.stress-chart-wrap {
+  margin-top: 3px;
+  height: 92px;
 }
 
-.stress-axis-row-bottom {
-  margin-top: 2px;
-}
-
-.stress-axis-chip {
-  font-size: 10px;
-  line-height: 1.2;
-  color: var(--muted);
-  letter-spacing: 0;
-  white-space: nowrap;
+.stress-chart-canvas {
+  width: 100%;
+  height: 92px;
+  display: block;
 }
 
 body[data-theme="bw"] .stress-cell {
@@ -1230,14 +1221,6 @@ body[data-theme="bw"] .stress-mini-item {
 
 body[data-theme="bw"] .stress-mini-label {
   color: #86bf88;
-}
-
-body[data-theme="bw"] .stress-axis-chip {
-  color: #86bf88;
-}
-
-.stress-note {
-  display: none;
 }
 
 .chart-head {

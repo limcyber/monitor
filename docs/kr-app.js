@@ -107,6 +107,7 @@ function applyTheme(theme) {
   } catch {}
   if (appState.data) {
     renderMarketCharts(appState.data.charts.market);
+    renderStressTable(appState.data.charts.market);
   }
 }
 
@@ -281,6 +282,63 @@ function lineChart(ctx, labels, datasets, options = {}) {
   });
 }
 
+function supportMetricChart(ctx, labels, series, color) {
+  if (!ctx || !window.Chart) return null;
+  const theme = chartTheme();
+  return new Chart(ctx, {
+    type: "line",
+    data: {
+      labels,
+      datasets: [
+        {
+          data: series,
+          fill: false,
+          tension: 0.18,
+          pointRadius: 0,
+          borderWidth: 2,
+          borderColor: color,
+        },
+      ],
+    },
+    plugins: [createBackgroundPlugin(theme)],
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      layout: { padding: { left: 0, right: 0, top: 0, bottom: 0 } },
+      interaction: { mode: "index", intersect: false },
+      scales: {
+        x: {
+          grid: { color: theme.grid },
+          ticks: {
+            color: theme.ticks,
+            maxTicksLimit: 4,
+            maxRotation: 0,
+            font: { size: 8 },
+            callback(value, index) {
+              return formatChartLabel(labels[index]);
+            },
+          },
+        },
+        y: {
+          grid: { color: theme.grid },
+          ticks: {
+            color: theme.ticks,
+            maxTicksLimit: 4,
+            font: { size: 8 },
+            callback(value) {
+              return formatAxisValue(value);
+            },
+          },
+        },
+      },
+      plugins: {
+        legend: { display: false },
+        tooltip: { enabled: false },
+      },
+    },
+  });
+}
+
 function renderChartLegend(targetId, items) {
   const holder = document.getElementById(targetId);
   if (!holder) return;
@@ -319,22 +377,6 @@ function renderMiniSparkline(series, color) {
   return `<svg class="sparkline" viewBox="0 0 ${width} ${height}" preserveAspectRatio="none"><polyline fill="none" stroke="${color}" stroke-width="1.6" points="${points}"></polyline></svg>`;
 }
 
-function axisSummary(series, dates) {
-  const values = (series || []).filter((value) => typeof value === "number" && !Number.isNaN(value));
-  if (!values.length) {
-    return { yMax: "-", yMin: "-", xStart: "-", xEnd: "-", xStartDate: "-", xEndDate: "-" };
-  }
-  const dateSeries = (dates || []).filter(Boolean);
-  return {
-    yMax: formatAxisValue(Math.max(...values)),
-    yMin: formatAxisValue(Math.min(...values)),
-    xStart: formatAxisValue(values[0]),
-    xEnd: formatAxisValue(values[values.length - 1]),
-    xStartDate: formatChartLabel(dateSeries[0] || ""),
-    xEndDate: formatChartLabel(dateSeries[dateSeries.length - 1] || ""),
-  };
-}
-
 function lastNumeric(series) {
   if (!series?.length) return null;
   for (let index = series.length - 1; index >= 0; index -= 1) {
@@ -360,31 +402,27 @@ function renderStressColumn(targetId, rows) {
       ${rows
         .map(
           (row) => `
-          ${(() => {
-            const axis = axisSummary(row.series, row.dates);
-            return `
           <article class="stress-cell">
             <div class="stress-main">
               <strong class="stress-label">${row.label}</strong>
               <span class="stress-value">${row.value == null ? "-" : formatAxisValue(row.value)}</span>
               <span class="stress-change ${quoteTone(row.change, row.label === "USD/KRW" || row.label === "VIX" || row.label === "Brent")}">${formatPercent(row.change)}</span>
             </div>
-            <div class="stress-axis-row">
-              <span class="stress-axis-chip">${axis.yMin}</span>
-              <span class="stress-axis-chip">${axis.yMax}</span>
-            </div>
-            <div class="stress-spark">${renderMiniSparkline(row.series, row.color)}</div>
-            <div class="stress-axis-row stress-axis-row-bottom">
-              <span class="stress-axis-chip">${axis.xStartDate} ${axis.xStart}</span>
-              <span class="stress-axis-chip">${axis.xEndDate} ${axis.xEnd}</span>
+            <div class="stress-chart-wrap">
+              <canvas id="stress-chart-${row.label.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}" class="stress-chart-canvas"></canvas>
             </div>
           </article>
-        `;})()}
         `
         )
         .join("")}
     </div>
   `;
+  rows.forEach((row) => {
+    const canvas = document.getElementById(`stress-chart-${row.label.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}`);
+    if (!canvas) return;
+    const chart = supportMetricChart(canvas, row.dates || [], row.series || [], row.color);
+    if (chart) appState.charts.push(chart);
+  });
 }
 
 function renderStressTable(charts) {
