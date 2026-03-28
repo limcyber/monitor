@@ -1,5 +1,5 @@
 {
-  "generated_at_et": "2026-03-28 05:01 ET",
+  "generated_at_et": "2026-03-28 05:02 ET",
   "market_data_as_of": "2026-03-27 15:30 KST (Close)",
   "market": {
     "state": "레벨 6/6 - 강한 상승장",
@@ -7435,7 +7435,7 @@
       "market_label": "KOSPI",
       "display_label": "한화에어로스페이스 (012450.KS)",
       "change_tags": [
-        "첫 생성 데이터"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 3~6%",
@@ -8478,7 +8478,7 @@
       "market_label": "KOSPI",
       "display_label": "LIG넥스원 (079550.KS)",
       "change_tags": [
-        "첫 생성 데이터"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 3~6%",
