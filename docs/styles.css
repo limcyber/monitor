@@ -667,12 +667,12 @@ body[data-theme="bw"] .mini-tag.danger {
 
 .ai-analysis-body {
   display: grid;
-  gap: 8px;
-  margin-top: 8px;
+  gap: 6px;
+  margin-top: 7px;
 }
 
 .ai-analysis-item {
-  padding: 8px 9px;
+  padding: 7px 7px;
   border-radius: 12px;
   border: 1px solid rgba(95, 121, 160, 0.14);
   background: rgba(255, 255, 255, 0.56);
@@ -692,7 +692,7 @@ body[data-theme="bw"] .mini-tag.danger {
 }
 
 .ai-analysis-copy {
-  margin-top: 6px;
+  margin-top: 5px;
   color: #2a3b52;
   line-height: 1.5;
   font-size: 12px;
