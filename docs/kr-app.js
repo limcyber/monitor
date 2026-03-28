@@ -184,6 +184,20 @@ function formatAxisValue(value) {
   return value.toFixed(2);
 }
 
+function formatManAxisValue(value) {
+  if (typeof value !== "number" || Number.isNaN(value)) return "";
+  const abs = Math.abs(value);
+  if (abs >= 10000) {
+    const scaled = value / 10000;
+    const digits = Math.abs(scaled) >= 100 ? 0 : Math.abs(scaled) >= 10 ? 1 : 2;
+    return `${scaled.toFixed(digits)}만`;
+  }
+  if (abs >= 1000) return value.toLocaleString("en-US", { maximumFractionDigits: 0 });
+  if (abs >= 100) return value.toFixed(0);
+  if (abs >= 10) return value.toFixed(1);
+  return value.toFixed(2);
+}
+
 function createBackgroundPlugin(theme) {
   return {
     id: "chartBackground",
@@ -565,7 +579,7 @@ function renderStocks(stocks) {
         options: {
           responsive: true,
           maintainAspectRatio: true,
-          layout: { padding: { left: 8, right: 8, top: 4, bottom: 0 } },
+          layout: { padding: { left: 0, right: 0, top: 4, bottom: 0 } },
           scales: {
             x: {
               display: true,
@@ -588,9 +602,10 @@ function renderStocks(stocks) {
               grid: { color: theme.grid },
               ticks: {
                 color: theme.ticks,
+                padding: 0,
                 maxTicksLimit: 6,
                 callback(value) {
-                  return formatAxisValue(value);
+                  return formatManAxisValue(value);
                 },
               },
             },
@@ -600,9 +615,10 @@ function renderStocks(stocks) {
               grid: { drawOnChartArea: false },
               ticks: {
                 color: theme.ticks,
+                padding: 0,
                 maxTicksLimit: 6,
                 callback(value) {
-                  return formatAxisValue(value);
+                  return formatManAxisValue(value);
                 },
               },
             },
