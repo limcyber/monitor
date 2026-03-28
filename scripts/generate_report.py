@@ -1208,6 +1208,31 @@ def score_stock(
             if stk_ret20 > benchmark_ret20:
                 weak_market_floor += 2
             score = max(score, min(24, weak_market_floor))
+    elif market_lvl <= 4 and score < 30:
+        recovery_floor = 8
+        if gap20 <= 0.05:
+            recovery_floor += 4
+        elif gap20 <= 0.10:
+            recovery_floor += 2
+        if gap50 <= 0.08:
+            recovery_floor += 3
+        elif gap50 <= 0.15:
+            recovery_floor += 1
+        if rs_10d_change >= -0.03:
+            recovery_floor += 3
+        elif rs_10d_change >= -0.08:
+            recovery_floor += 1
+        if not mid_bear:
+            recovery_floor += 2
+        if not short_bear:
+            recovery_floor += 1
+        if atr_ratio < 0.06:
+            recovery_floor += 1
+        if vol20.iloc[-1] and vol.iloc[-1] >= vol20.iloc[-1] * 0.9:
+            recovery_floor += 1
+        if stk_ret20 > benchmark_ret20:
+            recovery_floor += 2
+        score = max(score, min(28, recovery_floor))
 
     positive_factors, negative_factors = prioritize_stock_factors(positive_factors, negative_factors)
     score = int(max(0, min(100, round(score))))
