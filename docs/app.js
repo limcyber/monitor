@@ -373,8 +373,10 @@ function lineChart(ctx, labels, datasets, config = {}) {
           ticks: {
             color: theme.ticks,
             autoSkip: true,
-            maxTicksLimit: 6,
+            maxTicksLimit: 4,
             maxRotation: 0,
+            padding: 2,
+            font: { size: 9 },
             callback(value, index, ticks) {
               const raw = labels[index] ?? ticks?.[value]?.label;
               return formatChartLabel(raw);
@@ -385,7 +387,9 @@ function lineChart(ctx, labels, datasets, config = {}) {
           grid: { color: theme.grid },
           ticks: {
             color: theme.ticks,
-            maxTicksLimit: 6,
+            maxTicksLimit: 4,
+            padding: 2,
+            font: { size: 9 },
             callback(value) {
               return formatAxisValue(value);
             },
@@ -398,7 +402,9 @@ function lineChart(ctx, labels, datasets, config = {}) {
                 grid: { drawOnChartArea: false, color: theme.grid },
                 ticks: {
                   color: theme.ticks,
-                  maxTicksLimit: 6,
+                  maxTicksLimit: 4,
+                  padding: 2,
+                  font: { size: 9 },
                   callback(value) {
                     return formatAxisValue(value);
                   },
@@ -454,8 +460,10 @@ function barChart(ctx, labels, datasets) {
           ticks: {
             color: theme.ticks,
             autoSkip: true,
-            maxTicksLimit: 6,
+            maxTicksLimit: 4,
             maxRotation: 0,
+            padding: 2,
+            font: { size: 9 },
             callback(value, index, ticks) {
               const raw = labels[index] ?? ticks?.[value]?.label;
               return formatChartLabel(raw);
@@ -466,7 +474,9 @@ function barChart(ctx, labels, datasets) {
           grid: { color: theme.grid },
           ticks: {
             color: theme.ticks,
-            maxTicksLimit: 6,
+            maxTicksLimit: 4,
+            padding: 2,
+            font: { size: 9 },
             callback(value) {
               return formatAxisValue(value);
             },
