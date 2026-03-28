@@ -1921,6 +1921,9 @@ def main() -> None:
     xly, ts = load_price_frame("XLY", now_et)
     if ts:
         latest_intraday_points.append(ts)
+    brent, ts = load_price_frame("BZ=F", now_et)
+    if ts:
+        latest_intraday_points.append(ts)
     vix, ts = load_price_frame("^VIX", now_et)
     if ts:
         latest_intraday_points.append(ts)
@@ -2034,6 +2037,8 @@ def main() -> None:
             "vix_change_pct": pct_change_from_prev_close(vix["Close"]),
             "tnx_close": float(tnx["Close"].iloc[-1]),
             "tnx_change_pct": pct_change_from_prev_close(tnx["Close"]),
+            "brent_close": float(brent["Close"].iloc[-1]),
+            "brent_change_pct": pct_change_from_prev_close(brent["Close"]),
             "pct_above_20dma": breadth["pct_above_20dma"],
             "pct_above_50dma": breadth["pct_above_50dma"],
             "vix_percentile": percentile_rank(vix["Close"]),
@@ -2078,6 +2083,7 @@ def main() -> None:
                 "hyg_close": [float(v) for v in hyg["Close"].tail(63).tolist()],
                 "tnx_close": [float(v) for v in tnx["Close"].tail(63).tolist()],
                 "dxy_close": [float(v) for v in dxy["Close"].tail(63).tolist()],
+                "brent_close": [float(v) for v in brent["Close"].tail(63).tolist()],
             }
         },
     }

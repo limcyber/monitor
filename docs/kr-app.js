@@ -387,6 +387,14 @@ function renderStressTable(charts) {
       series: charts?.vix_close,
     },
     {
+      label: "Brent",
+      value: lastNumeric(charts?.brent_close),
+      change: changePctFromSeries(charts?.brent_close),
+      note: "국제유가",
+      color: "#fb923c",
+      series: charts?.brent_close,
+    },
+    {
       label: "KOSDAQ/KOSPI",
       value: lastNumeric(charts?.kosdaq_kospi_ratio),
       change: changePctFromSeries(charts?.kosdaq_kospi_ratio),
@@ -396,7 +404,7 @@ function renderStressTable(charts) {
     },
   ];
   renderStressColumn("krStressPrimary", rows.slice(0, 2));
-  renderStressColumn("krStressSecondary", rows.slice(2, 4));
+  renderStressColumn("krStressSecondary", rows.slice(2, 5));
 }
 
 function renderMarket(data) {

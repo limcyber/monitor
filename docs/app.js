@@ -596,6 +596,13 @@ function renderStressTable(charts) {
       note: "달러 강세",
       tone: "warning",
     },
+    {
+      name: "Brent",
+      value: lastNumeric(charts?.brent_close),
+      change: appState.data?.market?.metrics?.brent_change_pct ?? changePctFromSeries(charts?.brent_close),
+      note: "국제유가 부담",
+      tone: "warning",
+    },
   ];
   el.innerHTML = `
     <table class="stress-table-grid">
@@ -638,6 +645,10 @@ function renderStressTable(charts) {
       <div class="stress-mini-item">
         <span class="stress-mini-label">DXY</span>
         ${renderMiniSparkline(charts?.dxy_close, "#f59e0b")}
+      </div>
+      <div class="stress-mini-item">
+        <span class="stress-mini-label">Brent</span>
+        ${renderMiniSparkline(charts?.brent_close, "#fb923c")}
       </div>
     </div>
   `;

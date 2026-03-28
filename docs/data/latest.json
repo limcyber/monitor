@@ -1,5 +1,5 @@
 {
-  "generated_at_et": "2026-03-28 15:21 ET",
+  "generated_at_et": "2026-03-28 15:27 ET",
   "market_data_as_of": "2026-03-27 16:00 ET (Close)",
   "market": {
     "state": "\ub808\ubca8 1/6 - \ubc29\uc5b4 \uc6b0\uc120",
@@ -50,6 +50,8 @@
       "vix_change_pct": 13.155971693667867,
       "tnx_close": 4.440000057220459,
       "tnx_change_pct": 0.5434820753603464,
+      "brent_close": 112.56999969482422,
+      "brent_change_pct": 4.2218289680638454,
       "pct_above_20dma": 13.717693836978132,
       "pct_above_50dma": 19.681908548707753,
       "vix_percentile": 96.82539682539682,
@@ -57,9 +59,7 @@
       "tnx_20d_zscore": 1.706566951735031
     },
     "change_tags": [
-      "\uc810\uc218 0",
-      "\ub808\ubca8 \ubcc0\ud654 \uc5c6\uc74c",
-      "VIX \uc77c\uac04 +13.16%"
+      "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
     ],
     "position_tags": [
       "\ucd1d \ub178\ucd9c 0~5%",
@@ -1193,7 +1193,7 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -2230,7 +2230,7 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -3267,7 +3267,7 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -4309,7 +4309,7 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -5344,7 +5344,7 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -6383,7 +6383,7 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -7422,7 +7422,7 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -8461,7 +8461,7 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -9521,12 +9521,112 @@
         99.5999984741211,
         99.9000015258789,
         100.1500015258789
+      ],
+      "brent_close": [
+        60.63999938964844,
+        61.939998626708984,
+        61.91999816894531,
+        60.849998474121094,
+        60.75,
+        61.7599983215332,
+        60.70000076293945,
+        59.959999084472656,
+        61.9900016784668,
+        63.34000015258789,
+        63.869998931884766,
+        65.47000122070312,
+        66.5199966430664,
+        63.7599983215332,
+        64.12999725341797,
+        64.91999816894531,
+        65.23999786376953,
+        64.05999755859375,
+        65.87999725341797,
+        65.58999633789062,
+        67.56999969482422,
+        68.4000015258789,
+        70.70999908447266,
+        70.69000244140625,
+        66.30000305175781,
+        67.33000183105469,
+        69.45999908447266,
+        67.55000305175781,
+        68.05000305175781,
+        69.04000091552734,
+        68.80000305175781,
+        69.4000015258789,
+        67.5199966430664,
+        67.75,
+        67.41999816894531,
+        70.3499984741211,
+        71.66000366210938,
+        71.76000213623047,
+        71.48999786376953,
+        70.7699966430664,
+        70.8499984741211,
+        70.75,
+        72.4800033569336,
+        77.73999786376953,
+        81.4000015258789,
+        81.4000015258789,
+        85.41000366210938,
+        92.69000244140625,
+        98.95999908447266,
+        87.80000305175781,
+        91.9800033569336,
+        100.45999908447266,
+        103.13999938964844,
+        100.20999908447266,
+        103.41999816894531,
+        107.37999725341797,
+        108.6500015258789,
+        112.19000244140625,
+        99.94000244140625,
+        104.48999786376953,
+        102.22000122070312,
+        108.01000213623047,
+        112.56999969482422
       ]
     }
   },
   "notifications": {
-    "count": 0,
-    "items": []
+    "count": 4,
+    "items": [
+      {
+        "id": "market-high-stress-2026-03-28",
+        "priority": "high",
+        "kind": "market_high_stress",
+        "scope": "market",
+        "title": "\uace0\uc2a4\ud2b8\ub808\uc2a4 \uad6c\uac04 \uc9c4\uc785",
+        "message": "VIX \ubd80\ub2f4\uc774 \ud07d\ub2c8\ub2e4. \uc0c8 \ub9e4\uc218\ubcf4\ub2e4 \ubc29\uc5b4\ub97c \uba3c\uc800 \ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4."
+      },
+      {
+        "id": "market-both-below-200dma-2026-03-28",
+        "priority": "high",
+        "kind": "market_below_200dma",
+        "scope": "market",
+        "title": "\ud575\uc2ec \uc9c0\uc218 200\uc77c\uc120 \uc774\ud0c8",
+        "message": "S&P500\uacfc Nasdaq\uc774 \ubaa8\ub450 200\uc77c\uc120 \uc544\ub798\uc785\ub2c8\ub2e4. \ubc18\ub4f1 \ucd94\uaca9\ubcf4\ub2e4 \ub300\uae30\uac00 \ub0ab\uc2b5\ub2c8\ub2e4."
+      },
+      {
+        "id": "stock-dead-cross-KORU-2026-03-28",
+        "priority": "medium",
+        "kind": "stock_dead_cross",
+        "scope": "stock",
+        "title": "KORU \ub370\ub4dc\ud06c\ub85c\uc2a4",
+        "message": "KORU \ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4: 20\uc77c\uc120\uc774 50\uc77c\uc120 \uc544\ub798\ub85c \ub0b4\ub824\uac14\uc2b5\ub2c8\ub2e4. \ub9e4\uc218\ubcf4\ub2e4 \ub300\uae30\ub098 \ube44\uc911 \uc870\uc808 \ucabd\uc774 \ub0ab\uc2b5\ub2c8\ub2e4.",
+        "ticker": "KORU"
+      },
+      {
+        "id": "stock-dead-cross-SOXX-2026-03-28",
+        "priority": "medium",
+        "kind": "stock_dead_cross",
+        "scope": "stock",
+        "title": "SOXX \ub370\ub4dc\ud06c\ub85c\uc2a4",
+        "message": "SOXX \ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4: 20\uc77c\uc120\uc774 50\uc77c\uc120 \uc544\ub798\ub85c \ub0b4\ub824\uac14\uc2b5\ub2c8\ub2e4. \ub9e4\uc218\ubcf4\ub2e4 \ub300\uae30\ub098 \ube44\uc911 \uc870\uc808 \ucabd\uc774 \ub0ab\uc2b5\ub2c8\ub2e4.",
+        "ticker": "SOXX"
+      }
+    ]
   },
   "history": {
     "market": [

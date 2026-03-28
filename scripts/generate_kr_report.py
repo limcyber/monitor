@@ -611,6 +611,9 @@ def build_kr_market_output(now_et: datetime, previous_output: dict) -> tuple[dic
     semicon, ts = load_price_frame("091160.KS", now_et)
     if ts:
         latest_intraday_points.append(ts)
+    brent, ts = load_price_frame("BZ=F", now_et)
+    if ts:
+        latest_intraday_points.append(ts)
     usdkrw, ts = load_price_frame("KRW=X", now_et)
     if ts:
         latest_intraday_points.append(ts)
@@ -623,6 +626,7 @@ def build_kr_market_output(now_et: datetime, previous_output: dict) -> tuple[dic
         "KOSDAQ": kosdaq,
         "KOSPI200": kospi200,
         "SEMICON": semicon,
+        "BRENT": brent,
         "USDKRW": usdkrw,
         "VIX": vix,
     }
@@ -668,6 +672,8 @@ def build_kr_market_output(now_et: datetime, previous_output: dict) -> tuple[dic
             "kospi200_change_pct": pct_change_from_prev_close(kospi200["Close"]),
             "semicon_close": float(semicon["Close"].iloc[-1]),
             "semicon_change_pct": pct_change_from_prev_close(semicon["Close"]),
+            "brent_close": float(brent["Close"].iloc[-1]),
+            "brent_change_pct": pct_change_from_prev_close(brent["Close"]),
             "usdkrw_close": float(usdkrw["Close"].iloc[-1]),
             "usdkrw_change_pct": pct_change_from_prev_close(usdkrw["Close"]),
             "vix_close": float(vix["Close"].iloc[-1]),
@@ -754,6 +760,7 @@ def main() -> None:
                 "kosdaq_dma200": [None if pd.isna(v) else float(v) for v in market_frames["KOSDAQ"]["Close"].rolling(200).mean().tail(63).tolist()],
                 "kospi200_close": [float(v) for v in market_frames["KOSPI200"]["Close"].tail(63).tolist()],
                 "semicon_close": [float(v) for v in market_frames["SEMICON"]["Close"].tail(63).tolist()],
+                "brent_close": [float(v) for v in market_frames["BRENT"]["Close"].tail(63).tolist()],
                 "usdkrw_close": [float(v) for v in market_frames["USDKRW"]["Close"].tail(63).tolist()],
                 "vix_close": [float(v) for v in market_frames["VIX"]["Close"].tail(63).tolist()],
                 "kosdaq_kospi_ratio": [
