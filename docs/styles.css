@@ -905,6 +905,35 @@ body[data-theme="bw"] .stock-chart {
   color: var(--muted);
 }
 
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: center;
+  margin: 0 0 8px;
+  padding: 0 2px;
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.chart-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.chart-legend-swatch {
+  width: 10px;
+  height: 3px;
+  border-radius: 999px;
+  flex: none;
+}
+
+body[data-theme="bw"] .chart-legend {
+  color: #86bf88;
+}
+
 .stock-cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

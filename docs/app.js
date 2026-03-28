@@ -150,6 +150,42 @@ function initThemeToggle() {
   document.getElementById("themeColor")?.addEventListener("click", () => applyTheme("finviz"));
 }
 
+function syncFactorBoxPair(grid) {
+  const boxes = Array.from(grid.querySelectorAll(".factor-box"));
+  if (boxes.length !== 2) return;
+  if (grid.dataset.synced === "true") return;
+  grid.dataset.synced = "true";
+
+  boxes.forEach((box, index) => {
+    box.addEventListener("toggle", () => {
+      if (box.dataset.syncing === "true") return;
+      const peer = boxes[index === 0 ? 1 : 0];
+      if (!peer) return;
+      peer.dataset.syncing = "true";
+      peer.open = box.open;
+      requestAnimationFrame(() => {
+        delete peer.dataset.syncing;
+      });
+    });
+  });
+}
+
+function bindFactorBoxes(root = document) {
+  root.querySelectorAll(".factor-grid").forEach(syncFactorBoxPair);
+}
+
+function bindStockExtraInfo(root = document) {
+  root.querySelectorAll(".stock-extra-info").forEach((details) => {
+    if (details.dataset.synced === "true") return;
+    details.dataset.synced = "true";
+    details.addEventListener("toggle", () => {
+      details.querySelectorAll(".factor-box").forEach((box) => {
+        box.open = details.open;
+      });
+    });
+  });
+}
+
 function renderMarket(data) {
   setText("generatedAt", `생성 시각: ${data.generated_at_et}`);
   setText("asOf", `데이터 기준 시각: ${data.market_data_as_of}`);
@@ -206,6 +242,7 @@ function renderMarket(data) {
     topbarMeta.classList.remove("tone-success", "tone-warning", "tone-danger");
     topbarMeta.classList.add(marketTone(data.market.score));
   }
+  bindFactorBoxes(document);
 }
 
 function renderTable(rows) {
@@ -250,6 +287,25 @@ function seriesPalette() {
   };
 }
 
+function stockSeriesPalette() {
+  if (document.body.dataset.theme === "bw") {
+    return {
+      close: "#76f08d",
+      dma5: "#ff7b7b",
+      dma20: "#7dd3fc",
+      dma50: "#d7c46a",
+      volume: "#f4a261",
+    };
+  }
+  return {
+    close: "#203757",
+    dma5: "#dc2626",
+    dma20: "#2563eb",
+    dma50: "#b47f00",
+    volume: "#f97316",
+  };
+}
+
 function formatChartLabel(label) {
   if (typeof label !== "string") return label;
   const parts = label.split("-");
@@ -275,7 +331,7 @@ function formatAxisValue(value) {
   return `${num.toFixed(1)}`;
 }
 
-function lineChart(ctx, labels, datasets) {
+function lineChart(ctx, labels, datasets, config = {}) {
   if (!window.Chart || !ctx) return null;
   const theme = chartTheme();
   const backgroundPlugin = {
@@ -334,6 +390,74 @@ function lineChart(ctx, labels, datasets) {
       elements: { line: { borderWidth: 1.8 }, point: { radius: 0 } },
       plugins: {
         legend: {
+          display: config.showLegend !== false,
+          position: "bottom",
+          labels: { color: theme.legend, boxWidth: 10 },
+        },
+      },
+    },
+  });
+}
+
+function barChart(ctx, labels, datasets) {
+  if (!window.Chart || !ctx) return null;
+  const theme = chartTheme();
+  const backgroundPlugin = {
+    id: "chartBackground",
+    beforeDraw(chart) {
+      const { ctx } = chart;
+      const area = chart.chartArea;
+      if (!area) return;
+      ctx.save();
+      ctx.fillStyle = theme.bg;
+      ctx.fillRect(area.left, area.top, area.right - area.left, area.bottom - area.top);
+      ctx.restore();
+    },
+  };
+  return new Chart(ctx, {
+    type: "bar",
+    data: { labels, datasets },
+    plugins: [backgroundPlugin],
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      layout: {
+        padding: { left: 8, right: 8, top: 4, bottom: 0 },
+      },
+      scales: {
+        x: {
+          display: true,
+          grid: { color: theme.grid },
+          title: {
+            display: true,
+            text: "날짜",
+            color: theme.ticks,
+          },
+          ticks: {
+            color: theme.ticks,
+            autoSkip: true,
+            maxTicksLimit: 6,
+            maxRotation: 0,
+            callback(value, index, ticks) {
+              const raw = labels[index] ?? ticks?.[value]?.label;
+              return formatChartLabel(raw);
+            },
+          },
+        },
+        y: {
+          grid: { color: theme.grid },
+          ticks: {
+            color: theme.ticks,
+            maxTicksLimit: 6,
+            callback(value) {
+              return formatAxisValue(value);
+            },
+          },
+        },
+      },
+      elements: { bar: { borderWidth: 0 }, line: { borderWidth: 1.8 }, point: { radius: 0 } },
+      plugins: {
+        legend: {
           display: true,
           position: "bottom",
           labels: { color: theme.legend, boxWidth: 10 },
@@ -343,6 +467,21 @@ function lineChart(ctx, labels, datasets) {
   });
 }
 
+function renderChartLegend(targetId, items) {
+  const el = document.getElementById(targetId);
+  if (!el) return;
+  el.innerHTML = items
+    .map(
+      (item) => `
+        <span class="chart-legend-item">
+          <span class="chart-legend-swatch" style="background:${item.color}"></span>
+          <span>${escapeHtml(item.label)}</span>
+        </span>
+      `
+    )
+    .join("");
+}
+
 function destroyCharts() {
   appState.charts.forEach((chart) => chart?.destroy?.());
   appState.charts = [];
@@ -350,36 +489,74 @@ function destroyCharts() {
 
 function renderMarketCharts(charts) {
   destroyCharts();
-  const palette = seriesPalette();
+  const palette = {
+    primary: "#d7263d",
+    secondary: "#f4d35e",
+    warning: "#ee964b",
+    danger: "#f95738",
+    neutral: "#8d99ae",
+  };
   const labels = charts.dates;
   appState.charts.push(
-    lineChart(document.getElementById("spyChart"), labels, [
+    lineChart(
+      document.getElementById("spyChart"),
+      labels,
+      [
       { label: "S&P500", data: charts.spx_close, borderColor: palette.primary },
       { label: "S&P500 200일선", data: charts.spx_dma200, borderColor: palette.warning },
       { label: "NASDAQ", data: charts.ndx_close, borderColor: palette.secondary },
       { label: "NASDAQ 200일선", data: charts.ndx_dma200, borderColor: palette.danger },
-    ])
+      ],
+      { showLegend: false }
+    )
   );
+  renderChartLegend("spyLegend", [
+    { label: "S&P500", color: palette.primary },
+    { label: "S&P500 200일선", color: palette.warning },
+    { label: "NASDAQ", color: palette.secondary },
+    { label: "NASDAQ 200일선", color: palette.danger },
+  ]);
   appState.charts.push(
-    lineChart(document.getElementById("breadthChart"), labels, [
+    lineChart(
+      document.getElementById("breadthChart"),
+      labels,
+      [
       { label: "20일선 위 종목 비율", data: charts.breadth_20, borderColor: palette.secondary },
       { label: "50일선 위 종목 비율", data: charts.breadth_50, borderColor: palette.primary },
-    ])
+      ],
+      { showLegend: false }
+    )
   );
+  renderChartLegend("breadthLegend", [
+    { label: "20일선 위 종목 비율", color: palette.secondary },
+    { label: "50일선 위 종목 비율", color: palette.primary },
+  ]);
   appState.charts.push(
-    lineChart(document.getElementById("stressChart"), labels, [
+    lineChart(
+      document.getElementById("stressChart"),
+      labels,
+      [
       { label: "VIX", data: charts.vix_close, borderColor: palette.danger },
       { label: "HYG", data: charts.hyg_close, borderColor: palette.secondary },
       { label: "10Y", data: charts.tnx_close, borderColor: palette.neutral },
       { label: "달러지수", data: charts.dxy_close, borderColor: palette.warning },
-    ])
+      ],
+      { showLegend: false }
+    )
   );
+  renderChartLegend("stressLegend", [
+    { label: "VIX", color: palette.danger },
+    { label: "HYG", color: palette.secondary },
+    { label: "10Y", color: palette.neutral },
+    { label: "달러지수", color: palette.warning },
+  ]);
 }
 
 function renderStocks(stocks) {
   const holder = document.getElementById("stockCards");
   holder.innerHTML = "";
   stocks.forEach((s) => {
+    const stockPalette = stockSeriesPalette();
     const card = document.createElement("article");
     card.className = "stock-card";
     card.innerHTML = `
@@ -423,19 +600,96 @@ function renderStocks(stocks) {
           <div class="tag-list">${(s.confidence_warnings?.length ? s.confidence_warnings : ["데이터 경고 없음"]).map((r) => `<span class="mini-tag ${tagTone(r)}">${escapeHtml(r)}</span>`).join("")}</div>
         </div>
       </details>
-      <div class="chart-head stock-chart-head">
-        <h4>가격 차트</h4>
-        <p>종가, 20일선, 50일선</p>
-      </div>
       <canvas id="chart-${s.ticker}" class="stock-chart"></canvas>
     `;
     holder.appendChild(card);
-    lineChart(document.getElementById(`chart-${s.ticker}`), s.series.dates, [
-      { label: `${s.ticker} 종가`, data: s.series.close, borderColor: seriesPalette().primary },
-      { label: "20일선", data: s.series.dma20, borderColor: seriesPalette().secondary },
-      { label: "50일선", data: s.series.dma50, borderColor: seriesPalette().warning },
-    ]);
+    const ctx = document.getElementById(`chart-${s.ticker}`);
+    if (window.Chart && ctx) {
+      const theme = chartTheme();
+      const backgroundPlugin = {
+        id: "chartBackground",
+        beforeDraw(chart) {
+          const { ctx } = chart;
+          const area = chart.chartArea;
+          if (!area) return;
+          ctx.save();
+          ctx.fillStyle = theme.bg;
+          ctx.fillRect(area.left, area.top, area.right - area.left, area.bottom - area.top);
+          ctx.restore();
+        },
+      };
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: s.series.dates,
+          datasets: [
+            { type: "line", label: `${s.ticker} 종가`, data: s.series.close, borderColor: stockPalette.close, yAxisID: "price" },
+            { type: "line", label: "5일선", data: s.series.dma5, borderColor: stockPalette.dma5, yAxisID: "price" },
+            { type: "line", label: "20일선", data: s.series.dma20, borderColor: stockPalette.dma20, yAxisID: "price" },
+            { type: "line", label: "50일선", data: s.series.dma50, borderColor: stockPalette.dma50, yAxisID: "price" },
+            { type: "bar", label: "거래량", data: s.series.volume, backgroundColor: "rgba(249, 115, 22, 0.16)", borderColor: "rgba(249, 115, 22, 0.22)", yAxisID: "volume", order: 2 },
+            { type: "line", label: "20일 평균 거래량", data: s.series.volume_dma20, borderColor: stockPalette.volume, yAxisID: "volume", borderWidth: 1.2, pointRadius: 0, borderDash: [4, 4], order: 1 },
+          ],
+        },
+        plugins: [backgroundPlugin],
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          layout: { padding: { left: 8, right: 8, top: 4, bottom: 0 } },
+          scales: {
+            x: {
+              display: true,
+              grid: { color: theme.grid },
+              title: { display: true, text: "날짜", color: theme.ticks },
+              ticks: {
+                color: theme.ticks,
+                autoSkip: true,
+                maxTicksLimit: 6,
+                maxRotation: 0,
+                callback(value, index, ticks) {
+                  const raw = s.series.dates[index] ?? ticks?.[value]?.label;
+                  return formatChartLabel(raw);
+                },
+              },
+            },
+            price: {
+              type: "linear",
+              position: "left",
+              grid: { color: theme.grid },
+              ticks: {
+                color: theme.ticks,
+                maxTicksLimit: 6,
+                callback(value) {
+                  return formatAxisValue(value);
+                },
+              },
+            },
+            volume: {
+              type: "linear",
+              position: "right",
+              grid: { drawOnChartArea: false },
+              ticks: {
+                color: theme.ticks,
+                maxTicksLimit: 6,
+                callback(value) {
+                  return formatAxisValue(value);
+                },
+              },
+            },
+          },
+          elements: { line: { borderWidth: 1.8 }, point: { radius: 0 }, bar: { borderWidth: 0 } },
+          plugins: {
+            legend: {
+              display: true,
+              position: "bottom",
+              labels: { color: theme.legend, boxWidth: 10 },
+            },
+          },
+        },
+      });
+    }
   });
+  bindFactorBoxes(holder);
 }
 
 async function boot() {
@@ -448,6 +702,7 @@ async function boot() {
   renderTable(data.watchlist_summary);
   renderMarketCharts(data.charts.market);
   renderStocks(data.stocks);
+  bindStockExtraInfo(document);
   if (!window.Chart) {
     const warning = document.createElement("p");
     warning.style.color = "#b47f00";

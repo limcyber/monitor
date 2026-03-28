@@ -865,6 +865,7 @@ def score_stock(
         "metrics": {
             "close": float(close.iloc[-1]),
             "close_change_pct": pct_change_from_prev_close(close),
+            "dma5": float(dma5.iloc[-1]) if pd.notna(dma5.iloc[-1]) else None,
             "dma20": float(dma20.iloc[-1]) if pd.notna(dma20.iloc[-1]) else None,
             "dma50": float(dma50.iloc[-1]) if pd.notna(dma50.iloc[-1]) else None,
             "volume_ratio_20d": float(vol.iloc[-1] / vol20.iloc[-1]) if pd.notna(vol20.iloc[-1]) else None,
@@ -874,6 +875,9 @@ def score_stock(
         "series": {
             "dates": [d.strftime("%Y-%m-%d") for d in close.tail(120).index],
             "close": [float(v) for v in close.tail(120).tolist()],
+            "volume": [float(v) for v in vol.tail(120).tolist()],
+            "volume_dma20": [None if pd.isna(v) else float(v) for v in vol.rolling(20).mean().tail(120).tolist()],
+            "dma5": [None if pd.isna(v) else float(v) for v in dma5.tail(120).tolist()],
             "dma20": [None if pd.isna(v) else float(v) for v in dma20.tail(120).tolist()],
             "dma50": [None if pd.isna(v) else float(v) for v in dma50.tail(120).tolist()],
             "rs": [float(v) for v in rs.tail(120).tolist()],
@@ -984,7 +988,7 @@ def default_reason_for_state(state: str) -> str:
 
 
 def get_earnings_within_7_days(ticker: str, as_of: date) -> bool | None:
-    if ticker.endswith("XX") or ticker in {"SPY", "QQQ", "RSP", "HYG", "UUP", "SOXX", "^GSPC", "^IXIC", "^VIX"}:
+    if ticker.endswith("XX") or ticker in {"SPY", "QQQ", "RSP", "HYG", "UUP", "SOXX", "KORU", "^GSPC", "^IXIC", "^VIX"}:
         return False
     try:
         cal = yf.Ticker(ticker).calendar
@@ -1213,8 +1217,8 @@ def main() -> None:
     existing_history = load_json(HISTORY_PATH)
 
     watchlist = load_yaml(WATCHLIST_PATH).get("watchlist", [])
-    if len(watchlist) != 6:
-        raise ValueError("watchlist.yml must contain exactly 6 tickers.")
+    if len(watchlist) != 8:
+        raise ValueError("watchlist.yml must contain exactly 8 tickers.")
 
     spx = download_ohlcv("^GSPC")
     ndx = download_ohlcv("^IXIC")
@@ -1349,22 +1353,22 @@ def main() -> None:
         "stocks": stock_reports,
         "charts": {
             "market": {
-                "dates": [d.strftime("%Y-%m-%d") for d in spx["Close"].tail(180).index],
-                "spx_close": [float(v) for v in spx["Close"].tail(180).tolist()],
-                "spx_dma20": [None if pd.isna(v) else float(v) for v in spx["Close"].rolling(20).mean().tail(180).tolist()],
-                "spx_dma50": [None if pd.isna(v) else float(v) for v in spx["Close"].rolling(50).mean().tail(180).tolist()],
-                "spx_dma200": [None if pd.isna(v) else float(v) for v in spx["Close"].rolling(200).mean().tail(180).tolist()],
-                "ndx_close": [float(v) for v in ndx["Close"].tail(180).tolist()],
-                "ndx_dma20": [None if pd.isna(v) else float(v) for v in ndx["Close"].rolling(20).mean().tail(180).tolist()],
-                "ndx_dma50": [None if pd.isna(v) else float(v) for v in ndx["Close"].rolling(50).mean().tail(180).tolist()],
-                "ndx_dma200": [None if pd.isna(v) else float(v) for v in ndx["Close"].rolling(200).mean().tail(180).tolist()],
-                "rut_close": [float(v) for v in rut["Close"].tail(180).tolist()],
-                "breadth_20": [float(v) for v in ((sp500_close > sp500_close.rolling(20).mean()).mean(axis=1) * 100).tail(180).tolist()],
-                "breadth_50": [float(v) for v in ((sp500_close > sp500_close.rolling(50).mean()).mean(axis=1) * 100).tail(180).tolist()],
-                "vix_close": [float(v) for v in vix["Close"].tail(180).tolist()],
-                "hyg_close": [float(v) for v in hyg["Close"].tail(180).tolist()],
-                "tnx_close": [float(v) for v in tnx["Close"].tail(180).tolist()],
-                "dxy_close": [float(v) for v in dxy["Close"].tail(180).tolist()],
+                "dates": [d.strftime("%Y-%m-%d") for d in spx["Close"].tail(63).index],
+                "spx_close": [float(v) for v in spx["Close"].tail(63).tolist()],
+                "spx_dma20": [None if pd.isna(v) else float(v) for v in spx["Close"].rolling(20).mean().tail(63).tolist()],
+                "spx_dma50": [None if pd.isna(v) else float(v) for v in spx["Close"].rolling(50).mean().tail(63).tolist()],
+                "spx_dma200": [None if pd.isna(v) else float(v) for v in spx["Close"].rolling(200).mean().tail(63).tolist()],
+                "ndx_close": [float(v) for v in ndx["Close"].tail(63).tolist()],
+                "ndx_dma20": [None if pd.isna(v) else float(v) for v in ndx["Close"].rolling(20).mean().tail(63).tolist()],
+                "ndx_dma50": [None if pd.isna(v) else float(v) for v in ndx["Close"].rolling(50).mean().tail(63).tolist()],
+                "ndx_dma200": [None if pd.isna(v) else float(v) for v in ndx["Close"].rolling(200).mean().tail(63).tolist()],
+                "rut_close": [float(v) for v in rut["Close"].tail(63).tolist()],
+                "breadth_20": [float(v) for v in ((sp500_close > sp500_close.rolling(20).mean()).mean(axis=1) * 100).tail(63).tolist()],
+                "breadth_50": [float(v) for v in ((sp500_close > sp500_close.rolling(50).mean()).mean(axis=1) * 100).tail(63).tolist()],
+                "vix_close": [float(v) for v in vix["Close"].tail(63).tolist()],
+                "hyg_close": [float(v) for v in hyg["Close"].tail(63).tolist()],
+                "tnx_close": [float(v) for v in tnx["Close"].tail(63).tolist()],
+                "dxy_close": [float(v) for v in dxy["Close"].tail(63).tolist()],
             }
         },
     }
