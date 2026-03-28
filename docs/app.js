@@ -83,6 +83,70 @@ function cleanAiText(value) {
     .trim();
 }
 
+function renderAiAnalysis(el, value) {
+  if (!el) return;
+  const text = cleanAiText(value);
+  if (!text || text === "-") {
+    el.textContent = "-";
+    return;
+  }
+
+  const lines = text
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean);
+
+  const sections = [];
+  let current = null;
+
+  lines.forEach((line) => {
+    const matched = line.match(/^(AI 판단|확인 포인트|결론):\s*(.*)$/);
+    if (matched) {
+      current = { label: matched[1], content: matched[2] ? [matched[2]] : [] };
+      sections.push(current);
+      return;
+    }
+    if (current) {
+      current.content.push(line);
+      return;
+    }
+    if (!sections.length) {
+      current = { label: "AI 분석", content: [line] };
+      sections.push(current);
+    } else {
+      sections[sections.length - 1].content.push(line);
+    }
+  });
+
+  if (!sections.length) {
+    el.textContent = text;
+    return;
+  }
+
+  el.innerHTML = sections
+    .map((section) => {
+      const items = section.content.filter(Boolean);
+      const bulletLines = items.filter((item) => /^[-*•]\s+/.test(item));
+      const proseLines = items.filter((item) => !/^[-*•]\s+/.test(item));
+      const proseHtml = proseLines.length
+        ? `<p>${proseLines.map((item) => escapeHtml(item)).join("<br>")}</p>`
+        : "";
+      const bulletsHtml = bulletLines.length
+        ? `<ul>${bulletLines
+            .map((item) => `<li>${escapeHtml(item.replace(/^[-*•]\s+/, ""))}</li>`)
+            .join("")}</ul>`
+        : "";
+
+      return `
+        <div class="ai-analysis-item">
+          <div class="ai-analysis-label">${escapeHtml(section.label)}</div>
+          <div class="ai-analysis-copy">${proseHtml}${bulletsHtml}</div>
+        </div>
+      `;
+    })
+    .join("");
+}
+
 function tagTone(text) {
   const value = String(text || "");
   if (value.includes("경고") || value.includes("주의") || value.includes("데드") || value.includes("약함") || value.includes("자제") || value.includes("보수") || value.includes("고스트레스") || value.includes("실적")) {
@@ -244,7 +308,7 @@ function renderMarket(data) {
   renderTagList(document.getElementById("marketHistoryTags"), data.market.history_tags, "히스토리 없음");
   renderList(document.getElementById("marketCrossHighlights"), data.market.cross_highlights, "최근 눈에 띄는 골든크로스나 데드크로스는 없습니다.");
   setText("marketInvalidation", data.market.invalidation);
-  setText("marketAiText", cleanAiText(data.market.ai_analysis?.content || "AI 분석이 아직 없습니다."));
+  renderAiAnalysis(document.getElementById("marketAiText"), data.market.ai_analysis?.content || "AI 분석이 아직 없습니다.");
   const aiStatusEl = document.getElementById("marketAiStatus");
   if (aiStatusEl) {
     const status = data.market.ai_analysis?.status || "disabled";
