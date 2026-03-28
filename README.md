@@ -386,6 +386,12 @@ Python 의존성 목록입니다.
 데이터 생성과 Pages 배포를 자동화하는 워크플로입니다.
 - `DISCORD_WEBHOOK_URL` GitHub Secret이 있으면 중요 알림도 함께 전송합니다.
 
+#### [discord-market-summary.yml](./.github/workflows/discord-market-summary.yml)
+기본 시장 상태 요약을 Discord로 보내는 워크플로입니다.
+- 평일 기준 하루 2번, `09:00 ET`와 `16:30 ET` 근처에 실행되도록 설정했습니다.
+- 시간대 차이와 GitHub 스케줄 지연을 감안해 UTC cron은 여러 개 두고, 실제 실행은 ET 기준 시간 창에서만 허용합니다.
+- `DISCORD_WEBHOOK_URL` GitHub Secret이 있으면 현재 시장 상태, 점수, 추천 행동, 상위 관심종목 3개를 전송합니다.
+
 ## 9. 출력 JSON 구조
 
 `docs/data/latest.json`은 대략 아래 구조를 가집니다.

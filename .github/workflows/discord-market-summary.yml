@@ -1,0 +1,70 @@
+name: Discord Market Summary
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 13 * * 1-5"
+    - cron: "0 14 * * 1-5"
+    - cron: "30 20 * * 1-5"
+    - cron: "30 21 * * 1-5"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "discord-market-summary"
+  cancel-in-progress: true
+
+jobs:
+  summary:
+    runs-on: ubuntu-latest
+    outputs:
+      should_run: ${{ steps.summary_window.outputs.should_run }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Decide whether to run summary now
+        id: summary_window
+        run: |
+          python - <<'PY'
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          import os
+
+          now = datetime.now(ZoneInfo("America/New_York"))
+          weekday = now.weekday() < 5
+          minute_of_day = now.hour * 60 + now.minute
+          windows = [
+              (9 * 60, 9 * 60 + 10),
+              (16 * 60 + 30, 16 * 60 + 40),
+          ]
+          should_run = weekday and any(start <= minute_of_day <= end for start, end in windows)
+
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+            f.write(f"should_run={'true' if should_run else 'false'}\n")
+          PY
+
+      - name: Stop outside summary window
+        if: github.event_name == 'schedule' && steps.summary_window.outputs.should_run != 'true'
+        run: echo "Outside ET summary window, skipping Discord summary."
+
+      - name: Install dependencies
+        if: github.event_name != 'schedule' || steps.summary_window.outputs.should_run == 'true'
+        run: pip install -r requirements.txt
+
+      - name: Generate report
+        if: github.event_name != 'schedule' || steps.summary_window.outputs.should_run == 'true'
+        run: python scripts/generate_report.py
+
+      - name: Send Discord market summary
+        if: github.event_name != 'schedule' || steps.summary_window.outputs.should_run == 'true'
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_MARKET_SUMMARY: "true"
+        run: python scripts/send_discord_alerts.py
