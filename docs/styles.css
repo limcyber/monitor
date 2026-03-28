@@ -642,9 +642,11 @@ body[data-theme="bw"] .mini-tag.danger {
 
 .ai-analysis-card {
   margin-top: 12px;
-  padding: 11px 12px;
-  border: 1px solid var(--line-soft);
-  background: linear-gradient(180deg, #f9fbff 0%, #eef4fb 100%);
+  padding: 10px 12px;
+  border: 1px solid color-mix(in srgb, var(--line-soft) 78%, transparent);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(244, 248, 253, 0.96) 0%, rgba(236, 242, 249, 0.92) 100%);
+  box-shadow: 0 8px 24px rgba(35, 49, 73, 0.04);
 }
 
 .ai-analysis-head {
@@ -656,12 +658,18 @@ body[data-theme="bw"] .mini-tag.danger {
 
 .ai-analysis-head h3 {
   margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #3f5471;
 }
 
 .ai-analysis-card p {
-  margin: 8px 0 0;
-  color: #22324a;
-  line-height: 1.5;
+  margin: 7px 0 0;
+  color: #2a3b52;
+  line-height: 1.45;
+  font-size: 12px;
   white-space: pre-line;
 }
 
@@ -1253,12 +1261,17 @@ body[data-theme="bw"] .stress-change {
 }
 
 body[data-theme="bw"] .ai-analysis-card {
-  background: linear-gradient(180deg, #0d1115 0%, #0a0d11 100%);
-  border-color: #1a2a39;
+  background: linear-gradient(180deg, #202a1c 0%, #1a2216 100%);
+  border-color: #45573a;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
 }
 
 body[data-theme="bw"] .ai-analysis-card p {
-  color: #d9f7d2;
+  color: #d7e7cc;
+}
+
+body[data-theme="bw"] .ai-analysis-head h3 {
+  color: #dfe9d6;
 }
 
 body[data-theme="bw"] .stress-mini-item {
