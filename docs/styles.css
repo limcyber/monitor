@@ -1499,6 +1499,41 @@ body[data-theme="bw"] .chart-legend {
     text-overflow: clip;
   }
 
+  .stress-table-grid tbody {
+    display: table-row-group;
+    gap: 0;
+  }
+
+  .stress-table-grid tbody tr {
+    display: table-row;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  .stress-table-grid tbody td {
+    display: table-cell;
+    padding: 6px 4px;
+    min-width: 0;
+    flex: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+  }
+
+  .stress-table-grid tbody td::before {
+    display: none;
+  }
+
+  .stress-table-grid tbody td:nth-child(5) {
+    grid-column: auto;
+  }
+
+  .stress-table-grid tbody td[data-label="해석"] {
+    white-space: normal;
+  }
+
   .site-topbar-inner {
     flex-direction: column;
     align-items: flex-start;
