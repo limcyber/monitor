@@ -348,7 +348,7 @@ function renderStressColumn(targetId, rows) {
             <div class="stress-main">
               <strong class="stress-label">${row.label}</strong>
               <span class="stress-value">${row.value == null ? "-" : formatAxisValue(row.value)}</span>
-              <span class="stress-change ${quoteTone(row.change, row.label === "USD/KRW" || row.label === "VIX")}">${formatPercent(row.change)}</span>
+              <span class="stress-change ${quoteTone(row.change, row.label === "USD/KRW" || row.label === "VIX" || row.label === "Brent")}">${formatPercent(row.change)}</span>
             </div>
             <div class="stress-note">${row.note}</div>
             <div class="stress-spark">${renderMiniSparkline(row.series, row.color)}</div>

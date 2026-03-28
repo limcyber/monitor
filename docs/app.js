@@ -574,6 +574,7 @@ function renderStressTable(charts) {
       change: appState.data?.market?.metrics?.vix_change_pct,
       note: "불안 증가",
       tone: "danger",
+      invert: true,
     },
     {
       name: "10Y",
@@ -581,6 +582,7 @@ function renderStressTable(charts) {
       change: appState.data?.market?.metrics?.tnx_change_pct,
       note: "금리 부담",
       tone: "warning",
+      invert: true,
     },
     {
       name: "HYG",
@@ -588,6 +590,7 @@ function renderStressTable(charts) {
       change: changePctFromSeries(charts?.hyg_close),
       note: "위험선호 약함",
       tone: "success",
+      invert: false,
     },
     {
       name: "DXY",
@@ -595,6 +598,7 @@ function renderStressTable(charts) {
       change: changePctFromSeries(charts?.dxy_close),
       note: "달러 강세",
       tone: "warning",
+      invert: true,
     },
     {
       name: "Brent",
@@ -602,6 +606,7 @@ function renderStressTable(charts) {
       change: appState.data?.market?.metrics?.brent_change_pct ?? changePctFromSeries(charts?.brent_close),
       note: "국제유가 부담",
       tone: "warning",
+      invert: true,
     },
   ];
   el.innerHTML = `
@@ -621,7 +626,7 @@ function renderStressTable(charts) {
               <tr>
                 <td data-label="지표"><span class="mini-tag ${row.tone}">${escapeHtml(row.name)}</span></td>
                 <td data-label="현재값">${formatMetricNumber(row.value)}</td>
-                <td data-label="등락률" class="${row.change >= 0 ? "tone-success" : row.change < 0 ? "tone-danger" : "tone-warning"}">${formatPercent(row.change)}</td>
+                <td data-label="등락률" class="tone-${quoteTone(row.change, row.invert)}">${formatPercent(row.change)}</td>
                 <td data-label="해석">${escapeHtml(row.note)}</td>
               </tr>
             `
