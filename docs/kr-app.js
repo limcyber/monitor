@@ -434,7 +434,7 @@ function renderTable(rows) {
   rows.forEach((row) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
-      <td data-label="종목"><strong>${escapeHtml(row.name || row.ticker)}</strong><br><span class="table-sub">${escapeHtml(row.ticker)}</span></td>
+      <td data-label="종목"><strong>${escapeHtml(row.name || row.ticker)}</strong><br><span class="table-sub">${escapeHtml(formatClose(row.close, row.close_change_pct))}</span></td>
       <td data-label="점수">${formatScore(row.stock_score)}</td>
       <td data-label="상태">${escapeHtml(row.stock_state)}</td>
       <td data-label="추천 행동">${escapeHtml(row.final_action)}</td>
