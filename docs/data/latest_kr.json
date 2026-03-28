@@ -1,5 +1,5 @@
 {
-  "generated_at_et": "2026-03-28 06:33 ET",
+  "generated_at_et": "2026-03-28 06:35 ET",
   "market_data_as_of": "2026-03-27 15:30 KST (Close)",
   "market": {
     "state": "레벨 5/6 - 상승 우위",
@@ -60,7 +60,9 @@
       "kosdaq_kospi_ratio_change_20d": 0.09870880608312116
     },
     "change_tags": [
-      "첫 생성 데이터"
+      "점수 0",
+      "레벨 변화 없음",
+      "원달러 일간 +0.49%"
     ],
     "position_tags": [
       "총 노출 60~80%",
@@ -1195,7 +1197,7 @@
       "market_label": "KOSPI",
       "display_label": "삼성전자 (005930.KS)",
       "change_tags": [
-        "첫 생성 데이터"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~3%",
@@ -2237,7 +2239,7 @@
       "market_label": "KOSPI",
       "display_label": "SK하이닉스 (000660.KS)",
       "change_tags": [
-        "첫 생성 데이터"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~3%",
@@ -3272,7 +3274,7 @@
       "market_label": "KOSPI",
       "display_label": "NAVER (035420.KS)",
       "change_tags": [
-        "첫 생성 데이터"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~3%",
@@ -4311,7 +4313,7 @@
       "market_label": "KOSPI",
       "display_label": "현대차 (005380.KS)",
       "change_tags": [
-        "첫 생성 데이터"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~3%",
@@ -5353,7 +5355,7 @@
       "market_label": "KOSDAQ",
       "display_label": "아이티센글로벌 (124500.KQ)",
       "change_tags": [
-        "첫 생성 데이터"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~3%",
@@ -6392,7 +6394,7 @@
       "market_label": "KOSDAQ",
       "display_label": "클로봇 (466100.KQ)",
       "change_tags": [
-        "첫 생성 데이터"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~3%",
@@ -7434,7 +7436,7 @@
       "market_label": "KOSPI",
       "display_label": "한화에어로스페이스 (012450.KS)",
       "change_tags": [
-        "첫 생성 데이터"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 3~6%",
@@ -8477,7 +8479,7 @@
       "market_label": "KOSPI",
       "display_label": "LIG넥스원 (079550.KS)",
       "change_tags": [
-        "첫 생성 데이터"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 3~6%",
@@ -9150,54 +9152,8 @@
     }
   },
   "notifications": {
-    "count": 5,
-    "items": [
-      {
-        "id": "kr-stock-dead-cross-079550.KS-2026-03-28",
-        "priority": "medium",
-        "kind": "kr_stock_dead_cross",
-        "scope": "stock",
-        "title": "LIG넥스원 데드크로스",
-        "message": "LIG넥스원 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다.",
-        "ticker": "079550.KS"
-      },
-      {
-        "id": "kr-stock-entry-079550.KS-2026-03-28",
-        "priority": "medium",
-        "kind": "kr_stock_entry_candidate",
-        "scope": "stock",
-        "title": "LIG넥스원 진입 후보",
-        "message": "LIG넥스원가 70/100으로 올라왔고 추천 행동은 '선별 매수'입니다.",
-        "ticker": "079550.KS"
-      },
-      {
-        "id": "kr-stock-dead-cross-005930.KS-2026-03-28",
-        "priority": "medium",
-        "kind": "kr_stock_dead_cross",
-        "scope": "stock",
-        "title": "삼성전자 데드크로스",
-        "message": "삼성전자 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다.",
-        "ticker": "005930.KS"
-      },
-      {
-        "id": "kr-stock-dead-cross-124500.KQ-2026-03-28",
-        "priority": "medium",
-        "kind": "kr_stock_dead_cross",
-        "scope": "stock",
-        "title": "아이티센글로벌 데드크로스",
-        "message": "아이티센글로벌 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다.",
-        "ticker": "124500.KQ"
-      },
-      {
-        "id": "kr-stock-dead-cross-012450.KS-2026-03-28",
-        "priority": "medium",
-        "kind": "kr_stock_dead_cross",
-        "scope": "stock",
-        "title": "한화에어로스페이스 데드크로스",
-        "message": "한화에어로스페이스 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다.",
-        "ticker": "012450.KS"
-      }
-    ]
+    "count": 0,
+    "items": []
   },
   "history": {
     "market": [
