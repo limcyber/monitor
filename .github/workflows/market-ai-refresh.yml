@@ -37,12 +37,12 @@ jobs:
           else
             MINUTE="$(date -u +%M)"
             echo "mode=normal" >> "$GITHUB_OUTPUT"
-            if [ "$MINUTE" = "00" ]; then
+            if [ "$MINUTE" = "00" ] || [ "$MINUTE" = "30" ]; then
               echo "should_run=true" >> "$GITHUB_OUTPUT"
-              echo "AI refresh mode: normal (hourly at :00). Running now."
+              echo "AI refresh mode: normal (every 30 minutes at :00 and :30). Running now."
             else
               echo "should_run=false" >> "$GITHUB_OUTPUT"
-              echo "AI refresh mode: normal (hourly at :00). Skipping this tick."
+              echo "AI refresh mode: normal (every 30 minutes at :00 and :30). Skipping this tick."
             fi
           fi
 
