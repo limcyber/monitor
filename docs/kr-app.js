@@ -352,6 +352,7 @@ function renderStressColumn(targetId, rows) {
             </div>
             <div class="stress-note">${row.note}</div>
             <div class="stress-spark">${renderMiniSparkline(row.series, row.color)}</div>
+            <div class="stress-axis-note">x축: 최근 흐름 · y축: 지표값</div>
           </article>
         `
         )

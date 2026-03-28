@@ -1193,6 +1193,14 @@ body[data-theme="bw"] .stock-chart {
   font-size: 10px;
 }
 
+.stress-axis-note {
+  margin-top: 3px;
+  font-size: 9px;
+  line-height: 1.2;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
 body[data-theme="bw"] .stress-cell {
   background: linear-gradient(180deg, #0d120f 0%, #0a0d0b 100%);
   border-color: #183020;
@@ -1209,6 +1217,10 @@ body[data-theme="bw"] .stress-mini-item {
 }
 
 body[data-theme="bw"] .stress-mini-label {
+  color: #86bf88;
+}
+
+body[data-theme="bw"] .stress-axis-note {
   color: #86bf88;
 }
 
