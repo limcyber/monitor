@@ -523,14 +523,16 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
     spx_short_bull, spx_short_bear = recent_cross_signal(
         spx_dma5,
         spx_dma20,
-        factor_text("S&P500에서 최근 5일선이 20일선을 상향 돌파했습니다", 0),
-        factor_text("S&P500에서 최근 5일선이 20일선을 하향 이탈했습니다", 0),
+        factor_text("S&P500에서 최근 5일선이 20일선을 상향 돌파했습니다", 2),
+        factor_text("S&P500에서 최근 5일선이 20일선을 하향 이탈했습니다", -6),
     )
     if spx_short_bull:
+        score += 2
         cross_highlights.append("S&P500 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다.")
         positive_factors.append(spx_short_bull)
         reasons.append("S&P500에서 최근 단기 골든크로스가 나왔습니다")
     if spx_short_bear:
+        score -= 6
         cross_highlights.append("S&P500 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다.")
         negative_factors.append(spx_short_bear)
         reasons.append("S&P500에서 최근 단기 데드크로스가 나왔습니다")
@@ -538,16 +540,19 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
     spx_mid_bull, spx_mid_bear = recent_cross_signal(
         spx_dma20,
         spx_dma50,
-        factor_text("S&P500에서 최근 20일선이 50일선을 상향 돌파했습니다", 0),
-        factor_text("S&P500에서 최근 20일선이 50일선을 하향 이탈했습니다", 0),
+        factor_text("S&P500에서 최근 20일선이 50일선을 상향 돌파했습니다", 4),
+        factor_text("S&P500에서 최근 20일선이 50일선을 하향 이탈했습니다", -10),
         lookback=10,
     )
     if spx_mid_bull:
+        score += 4
         cross_highlights.append("S&P500 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다.")
         positive_factors.append(spx_mid_bull)
     if spx_mid_bear:
+        score -= 10
         cross_highlights.append("S&P500 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다.")
         negative_factors.append(spx_mid_bear)
+        reasons.append("S&P500에서 최근 중기 데드크로스가 나왔습니다")
 
     if ndx_close.iloc[-1] > ndx_dma200.iloc[-1]:
         score += 10
@@ -572,14 +577,16 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
     ndx_short_bull, ndx_short_bear = recent_cross_signal(
         ndx_dma5,
         ndx_dma20,
-        factor_text("나스닥에서 최근 5일선이 20일선을 상향 돌파했습니다", 0),
-        factor_text("나스닥에서 최근 5일선이 20일선을 하향 이탈했습니다", 0),
+        factor_text("나스닥에서 최근 5일선이 20일선을 상향 돌파했습니다", 2),
+        factor_text("나스닥에서 최근 5일선이 20일선을 하향 이탈했습니다", -6),
     )
     if ndx_short_bull:
+        score += 2
         cross_highlights.append("나스닥 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다.")
         positive_factors.append(ndx_short_bull)
         reasons.append("나스닥에서 최근 단기 골든크로스가 나왔습니다")
     if ndx_short_bear:
+        score -= 6
         cross_highlights.append("나스닥 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다.")
         negative_factors.append(ndx_short_bear)
         reasons.append("나스닥에서 최근 단기 데드크로스가 나왔습니다")
@@ -587,16 +594,30 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
     ndx_mid_bull, ndx_mid_bear = recent_cross_signal(
         ndx_dma20,
         ndx_dma50,
-        factor_text("나스닥에서 최근 20일선이 50일선을 상향 돌파했습니다", 0),
-        factor_text("나스닥에서 최근 20일선이 50일선을 하향 이탈했습니다", 0),
+        factor_text("나스닥에서 최근 20일선이 50일선을 상향 돌파했습니다", 4),
+        factor_text("나스닥에서 최근 20일선이 50일선을 하향 이탈했습니다", -10),
         lookback=10,
     )
     if ndx_mid_bull:
+        score += 4
         cross_highlights.append("나스닥 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다.")
         positive_factors.append(ndx_mid_bull)
     if ndx_mid_bear:
+        score -= 10
         cross_highlights.append("나스닥 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다.")
         negative_factors.append(ndx_mid_bear)
+        reasons.append("나스닥에서 최근 중기 데드크로스가 나왔습니다")
+
+    if spx_short_bear and ndx_short_bear:
+        score -= 6
+        score = min(score, 72)
+        negative_factors.append(factor_text("S&P500과 나스닥이 함께 단기 데드크로스라 공격 점수를 높게 주기 어렵습니다", "상한 72"))
+        reasons.append("S&P500과 나스닥이 함께 단기 데드크로스입니다")
+
+    if spx_mid_bear and ndx_mid_bear:
+        score = min(score, 55)
+        negative_factors.append(factor_text("S&P500과 나스닥이 함께 중기 데드크로스라 회복 확인 전까지 보수적으로 보는 편이 좋습니다", "상한 55"))
+        reasons.append("S&P500과 나스닥이 함께 중기 데드크로스입니다")
 
     if rut_close.iloc[-1] > rut_dma200.iloc[-1]:
         score += 5
@@ -806,14 +827,16 @@ def score_stock(
     short_bull, short_bear = recent_cross_signal(
         dma5,
         dma20,
-        factor_text("최근 5일선이 20일선을 상향 돌파했습니다", 0),
-        factor_text("최근 5일선이 20일선을 하향 이탈했습니다", 0),
+        factor_text("최근 5일선이 20일선을 상향 돌파했습니다", 2),
+        factor_text("최근 5일선이 20일선을 하향 이탈했습니다", -6),
     )
     if short_bull:
+        score += 2
         cross_highlights.append(f"{ticker} 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다.")
         positive_factors.append(short_bull)
         reasons.append("최근 단기 골든크로스가 나왔습니다")
     if short_bear:
+        score -= 6
         cross_highlights.append(f"{ticker} 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다.")
         negative_factors.append(short_bear)
         reasons.append("최근 단기 데드크로스가 나왔습니다")
@@ -821,15 +844,17 @@ def score_stock(
     mid_bull, mid_bear = recent_cross_signal(
         dma20,
         dma50,
-        factor_text("최근 20일선이 50일선을 상향 돌파했습니다", 0),
-        factor_text("최근 20일선이 50일선을 하향 이탈했습니다", 0),
+        factor_text("최근 20일선이 50일선을 상향 돌파했습니다", 4),
+        factor_text("최근 20일선이 50일선을 하향 이탈했습니다", -10),
         lookback=10,
     )
     if mid_bull:
+        score += 4
         cross_highlights.append(f"{ticker} 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다.")
         positive_factors.append(mid_bull)
         reasons.append("최근 중기 골든크로스가 나왔습니다")
     if mid_bear:
+        score -= 10
         cross_highlights.append(f"{ticker} 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다.")
         negative_factors.append(mid_bear)
         reasons.append("최근 중기 데드크로스가 나왔습니다")
