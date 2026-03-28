@@ -45,7 +45,7 @@ jobs:
           should_run = False
 
           if weekday:
-            intraday_start = time(9, 35)
+            intraday_start = time(8, 30)
             intraday_end = time(16, 0)
             close_snapshot_start = time(16, 5)
             close_snapshot_end = time(16, 15)

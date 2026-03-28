@@ -55,7 +55,7 @@ The report JSON is generated at `docs/data/latest.json`.
 
 ## GitHub Actions schedule
 
-- Runs every 5 minutes on weekdays during US market hours.
+- Runs every 5 minutes on weekdays during the ET window from `08:30` to `16:00`.
 - Also generates a close snapshot after the market closes.
 - Also supports manual run via `workflow_dispatch`.
 
