@@ -93,6 +93,7 @@ a {
   align-items: baseline;
   gap: 10px;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .brand-mark {
@@ -1417,7 +1418,15 @@ body[data-theme="bw"] .chart-legend {
   }
 
   .brand-mark {
-    font-size: 24px;
+    display: block;
+    width: 100%;
+    font-size: 31px;
+    line-height: 1.02;
+    letter-spacing: 0.04em;
+    text-shadow:
+      0 1px 0 rgba(0, 0, 0, 0.35),
+      0 0 22px rgba(255, 255, 255, 0.12),
+      0 0 42px rgba(52, 114, 255, 0.08);
   }
 
   .brand-tag,
@@ -1426,6 +1435,10 @@ body[data-theme="bw"] .chart-legend {
   .page-switch a,
   .theme-segment-btn {
     font-size: 13px;
+  }
+
+  .brand-line {
+    gap: 0;
   }
 
   .panel h2,
