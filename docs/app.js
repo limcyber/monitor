@@ -100,7 +100,7 @@ function renderAiAnalysis(el, value) {
   let current = null;
 
   lines.forEach((line) => {
-    const matched = line.match(/^(AI 판단|확인 포인트|결론):\s*(.*)$/);
+    const matched = line.match(/^(AI 판단|확인 포인트|결론|속보 요약):\s*(.*)$/);
     if (matched) {
       current = { label: matched[1], content: matched[2] ? [matched[2]] : [] };
       sections.push(current);
