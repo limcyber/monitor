@@ -88,7 +88,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data/latest.json docs/data/history.json docs/data/latest_kr.json docs/data/history_kr.json
+          git add docs/data/latest.json docs/data/latest_ai.json docs/data/history.json docs/data/latest_kr.json docs/data/history_kr.json
           git diff --cached --quiet || git commit -m "chore: update market snapshot"
           git push
 

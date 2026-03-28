@@ -22,6 +22,7 @@ CALENDAR_PATH = BASE_DIR / "config" / "economic_calendar.yml"
 EARNINGS_PATH = BASE_DIR / "config" / "earnings_calendar.yml"
 OUTPUT_PATH = DOCS_DATA_DIR / "latest.json"
 HISTORY_PATH = DOCS_DATA_DIR / "history.json"
+AI_OUTPUT_PATH = DOCS_DATA_DIR / "latest_ai.json"
 ET = ZoneInfo("America/New_York")
 MARKET_LEVELS_TOTAL = 6
 GEMINI_MODEL = "gemini-2.5-flash"
@@ -106,6 +107,22 @@ def build_market_ai_payload(output: dict) -> dict:
             },
         },
         "watchlist_summary": summary_rows,
+    }
+
+
+def build_market_ai_output(output: dict, ai_analysis: dict) -> dict:
+    market = output.get("market", {})
+    return {
+        "generated_at_et": output.get("generated_at_et"),
+        "market_data_as_of": output.get("market_data_as_of"),
+        "market": {
+            "score": market.get("score"),
+            "state": market.get("state"),
+            "action": market.get("action"),
+            "cross_highlights": market.get("cross_highlights", [])[:4],
+            "top_reasons": market.get("top_reasons", [])[:5],
+        },
+        "ai_analysis": ai_analysis,
     }
 
 
@@ -2292,7 +2309,8 @@ def main() -> None:
     }
     output["notifications"]["items"] = build_notifications(as_of, previous_output, market_output, stock_reports)
     output["notifications"]["count"] = len(output["notifications"]["items"])
-    output["market"]["ai_analysis"] = generate_market_ai_analysis(output)
+    ai_output = generate_market_ai_analysis(output)
+    market_ai_output = build_market_ai_output(output, ai_output)
 
     history = update_history(existing_history, output, as_of)
     output["market"]["history_tags"] = score_history_tags(history.get("market", []))
@@ -2303,6 +2321,8 @@ def main() -> None:
     DOCS_DATA_DIR.mkdir(parents=True, exist_ok=True)
     with OUTPUT_PATH.open("w", encoding="utf-8") as f:
         json.dump(output, f, indent=2)
+    with AI_OUTPUT_PATH.open("w", encoding="utf-8") as f:
+        json.dump(market_ai_output, f, indent=2)
     with HISTORY_PATH.open("w", encoding="utf-8") as f:
         json.dump(history, f, indent=2)
 

@@ -259,6 +259,17 @@ function renderMarket(data) {
   bindFactorBoxes(document);
 }
 
+async function loadAiAnalysis() {
+  try {
+    const response = await fetch("./data/latest_ai.json", { cache: "no-store" });
+    if (!response.ok) throw new Error("Failed to load latest_ai.json");
+    const data = await response.json();
+    return data?.ai_analysis || null;
+  } catch {
+    return null;
+  }
+}
+
 function renderTable(rows) {
   const body = document.getElementById("watchlistTable");
   body.innerHTML = "";
@@ -916,9 +927,16 @@ function initStockPanel(stocks) {
 
 async function boot() {
   initThemeToggle();
-  const response = await fetch("./data/latest.json", { cache: "no-store" });
+  const [response, aiAnalysis] = await Promise.all([
+    fetch("./data/latest.json", { cache: "no-store" }),
+    loadAiAnalysis(),
+  ]);
   if (!response.ok) throw new Error("Failed to load latest.json");
   const data = await response.json();
+  if (aiAnalysis) {
+    data.market = data.market || {};
+    data.market.ai_analysis = aiAnalysis;
+  }
   appState.data = data;
   renderMarket(data);
   renderTable(data.watchlist_summary);
