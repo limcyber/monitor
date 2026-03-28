@@ -155,6 +155,7 @@
 - `08:30 KST`
 - `16:00 KST`
 - `docs/data/latest_kr.json` 기준으로 전송
+- GitHub Secret: `DISCORD_KR_WEBHOOK_URL`
 
 전송 내용:
 - 한국 시장 상태

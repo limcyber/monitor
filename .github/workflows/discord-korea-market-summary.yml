@@ -63,7 +63,7 @@ jobs:
       - name: Send Discord Korea market summary
         if: github.event_name != 'schedule' || steps.summary_window.outputs.should_run == 'true'
         env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_KR_WEBHOOK_URL }}
           DISCORD_MARKET_SUMMARY: "true"
           DISCORD_PAYLOAD_PATH: "kr"
           DISCORD_SUMMARY_TITLE: "한국 시장 상태 요약"
