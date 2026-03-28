@@ -247,7 +247,7 @@ GitHub Actions 워크플로는 [daily-monitor.yml](./.github/workflows/daily-mon
 - `AI_ANALYSIS_TEST_MODE=false`면 매 30분마다 실행합니다 (`:00`, `:30`)
 - `AI_ANALYSIS_TEST_MODE`가 없으면 기본값은 `true`입니다
 - `GOOGLE_API_KEY` secret이 필요합니다
-- 시장 AI는 `gemini-2.5-pro`, 종목 AI는 `gemini-2.5-flash`를 사용합니다
+- 시장 AI는 `gemini-2.5-flash`, 종목 AI는 `gemini-2.5-flash`를 사용합니다
 
 ## 7. 파일별 설명
 

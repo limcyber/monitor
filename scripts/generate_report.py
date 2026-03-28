@@ -26,7 +26,7 @@ AI_OUTPUT_PATH = DOCS_DATA_DIR / "latest_ai.json"
 WATCHLIST_AI_OUTPUT_PATH = DOCS_DATA_DIR / "latest_watchlist_ai.json"
 ET = ZoneInfo("America/New_York")
 MARKET_LEVELS_TOTAL = 6
-MARKET_GEMINI_MODEL = "gemini-2.5-pro"
+MARKET_GEMINI_MODEL = "gemini-2.5-flash"
 WATCHLIST_GEMINI_MODEL = "gemini-2.5-flash"
 
 
