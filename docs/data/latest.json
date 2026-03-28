@@ -1,5 +1,5 @@
 {
-  "generated_at_et": "2026-03-28 15:44 ET",
+  "generated_at_et": "2026-03-28 15:52 ET",
   "market_data_as_of": "2026-03-27 16:00 ET (Close)",
   "market": {
     "state": "\ub808\ubca8 1/6 - \ubc29\uc5b4 \uc6b0\uc120",
@@ -59,9 +59,7 @@
       "tnx_20d_zscore": 1.706566951735031
     },
     "change_tags": [
-      "\uc810\uc218 0",
-      "\ub808\ubca8 \ubcc0\ud654 \uc5c6\uc74c",
-      "VIX \uc77c\uac04 +13.16%"
+      "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
     ],
     "position_tags": [
       "\ucd1d \ub178\ucd9c 0~5%",
@@ -101,7 +99,7 @@
   "watchlist_summary": [
     {
       "ticker": "NVDA",
-      "stock_score": 5,
+      "stock_score": 15,
       "stock_state": "\ud68c\ud53c",
       "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
       "note": "\uc9c0\uae08\uc740 \ubc14\ub85c \ub4e4\uc5b4\uac08 \uc774\uc720\uac00 \ud06c\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\uc720: \uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4.",
@@ -110,7 +108,7 @@
     },
     {
       "ticker": "TSLA",
-      "stock_score": 0,
+      "stock_score": 4,
       "stock_state": "\ud68c\ud53c",
       "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
       "note": "\uc9c0\uae08\uc740 \ubc14\ub85c \ub4e4\uc5b4\uac08 \uc774\uc720\uac00 \ud06c\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\uc720: \uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4.",
@@ -119,7 +117,7 @@
     },
     {
       "ticker": "META",
-      "stock_score": 0,
+      "stock_score": 2,
       "stock_state": "\ud68c\ud53c",
       "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
       "note": "\uc9c0\uae08\uc740 \ubc14\ub85c \ub4e4\uc5b4\uac08 \uc774\uc720\uac00 \ud06c\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\uc720: \uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4.",
@@ -128,7 +126,7 @@
     },
     {
       "ticker": "AMD",
-      "stock_score": 41,
+      "stock_score": 46,
       "stock_state": "\uc57d\ud568",
       "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
       "note": "\uc9c0\uae08\uc740 \uc870\uae08 \ub354 \uae30\ub2e4\ub9ac\ub294 \ud3b8\uc774 \ub0ab\uc2b5\ub2c8\ub2e4. \uc774\uc720: \uac70\ub798\ub7c9\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4.",
@@ -146,7 +144,7 @@
     },
     {
       "ticker": "SOXX",
-      "stock_score": 0,
+      "stock_score": 3,
       "stock_state": "\ud68c\ud53c",
       "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
       "note": "\uc9c0\uae08\uc740 \ubc14\ub85c \ub4e4\uc5b4\uac08 \uc774\uc720\uac00 \ud06c\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\uc720: \ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4\uac00 \ub098\uc654\uc2b5\ub2c8\ub2e4.",
@@ -155,7 +153,7 @@
     },
     {
       "ticker": "SERV",
-      "stock_score": 0,
+      "stock_score": 2,
       "stock_state": "\ud68c\ud53c",
       "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
       "note": "\uc9c0\uae08\uc740 \ubc14\ub85c \ub4e4\uc5b4\uac08 \uc774\uc720\uac00 \ud06c\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\uc720: \uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4.",
@@ -175,7 +173,7 @@
   "stocks": [
     {
       "ticker": "NVDA",
-      "stock_score": 5,
+      "stock_score": 15,
       "stock_state": "\ud68c\ud53c",
       "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
       "top_reasons": [
@@ -199,11 +197,11 @@
         "\uac00\uae4c\uc6b4 \uc2e4\uc801 \uc77c\uc815 \ubd80\ub2f4\uc774 \uc5c6\uc2b5\ub2c8\ub2e4 (+5)"
       ],
       "negative_factors": [
-        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-6)",
-        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-4)",
-        "\uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4 (-6)",
-        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-2)",
-        "20\uc77c\uc120 \ubc29\ud5a5\uc774 \uc544\uc9c1 \uc0b4\uc544\ub098\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4 (-2)",
+        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-3)",
+        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-2)",
+        "\uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4 (-3)",
+        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-1)",
+        "20\uc77c\uc120 \ubc29\ud5a5\uc774 \uc544\uc9c1 \uc0b4\uc544\ub098\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4 (-1)",
         "20\uc77c\uc120 \uc544\ub798\ub77c \ud750\ub984 \ud655\uc778\uc774 \ub354 \ud544\uc694\ud569\ub2c8\ub2e4 (0)"
       ],
       "metrics": {
@@ -1195,7 +1193,7 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -1208,12 +1206,12 @@
         "\uc2dc\uc7a5 \ub300\ube44 \uc57d\uc138"
       ],
       "history_tags": [
-        "30\uc77c \ucd5c\uace0 5"
+        "30\uc77c \ucd5c\uace0 15"
       ]
     },
     {
       "ticker": "TSLA",
-      "stock_score": 0,
+      "stock_score": 4,
       "stock_state": "\ud68c\ud53c",
       "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
       "top_reasons": [
@@ -1236,11 +1234,11 @@
         "\uac00\uae4c\uc6b4 \uc2e4\uc801 \uc77c\uc815 \ubd80\ub2f4\uc774 \uc5c6\uc2b5\ub2c8\ub2e4 (+5)"
       ],
       "negative_factors": [
-        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-6)",
-        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-4)",
-        "\uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4 (-6)",
-        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-2)",
-        "20\uc77c\uc120 \ubc29\ud5a5\uc774 \uc544\uc9c1 \uc0b4\uc544\ub098\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4 (-2)",
+        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-4)",
+        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-2)",
+        "\uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4 (-3)",
+        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-1)",
+        "20\uc77c\uc120 \ubc29\ud5a5\uc774 \uc544\uc9c1 \uc0b4\uc544\ub098\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4 (-1)",
         "20\uc77c\uc120 \uc544\ub798\ub77c \ud750\ub984 \ud655\uc778\uc774 \ub354 \ud544\uc694\ud569\ub2c8\ub2e4 (0)"
       ],
       "metrics": {
@@ -2232,7 +2230,7 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -2245,12 +2243,12 @@
         "\uc2dc\uc7a5 \ub300\ube44 \uc57d\uc138"
       ],
       "history_tags": [
-        "30\uc77c \ucd5c\uace0 0"
+        "30\uc77c \ucd5c\uace0 4"
       ]
     },
     {
       "ticker": "META",
-      "stock_score": 0,
+      "stock_score": 2,
       "stock_state": "\ud68c\ud53c",
       "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
       "top_reasons": [
@@ -2273,11 +2271,11 @@
         "\uac00\uae4c\uc6b4 \uc2e4\uc801 \uc77c\uc815 \ubd80\ub2f4\uc774 \uc5c6\uc2b5\ub2c8\ub2e4 (+5)"
       ],
       "negative_factors": [
-        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-6)",
-        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-4)",
-        "\uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4 (-6)",
-        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-2)",
-        "20\uc77c\uc120 \ubc29\ud5a5\uc774 \uc544\uc9c1 \uc0b4\uc544\ub098\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4 (-2)",
+        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-4)",
+        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-3)",
+        "\uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4 (-4)",
+        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-1)",
+        "20\uc77c\uc120 \ubc29\ud5a5\uc774 \uc544\uc9c1 \uc0b4\uc544\ub098\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4 (-1)",
         "20\uc77c\uc120 \uc544\ub798\ub77c \ud750\ub984 \ud655\uc778\uc774 \ub354 \ud544\uc694\ud569\ub2c8\ub2e4 (0)"
       ],
       "metrics": {
@@ -3269,7 +3267,7 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -3282,12 +3280,12 @@
         "\uc2dc\uc7a5 \ub300\ube44 \uc57d\uc138"
       ],
       "history_tags": [
-        "30\uc77c \ucd5c\uace0 0"
+        "30\uc77c \ucd5c\uace0 2"
       ]
     },
     {
       "ticker": "AMD",
-      "stock_score": 41,
+      "stock_score": 46,
       "stock_state": "\uc57d\ud568",
       "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
       "top_reasons": [
@@ -3315,10 +3313,10 @@
         "\ud754\ub4e4\ub9bc\uc774 \uacfc\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4 (+5)"
       ],
       "negative_factors": [
-        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-6)",
+        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-3)",
         "\uac70\ub798\ub7c9\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-6)",
-        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-2)",
-        "20\uc77c\uc120 \ubc29\ud5a5\uc774 \uc544\uc9c1 \uc0b4\uc544\ub098\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4 (-2)",
+        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-1)",
+        "20\uc77c\uc120 \ubc29\ud5a5\uc774 \uc544\uc9c1 \uc0b4\uc544\ub098\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4 (-1)",
         "50\uc77c\uc120 \uc544\ub798\ub77c \uc911\uac04 \ud750\ub984 \ud655\uc778\uc774 \ub354 \ud544\uc694\ud569\ub2c8\ub2e4 (0)",
         "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc911\uae30 \ud750\ub984\ubcf4\ub2e4 \uc57d\ud569\ub2c8\ub2e4 (0)"
       ],
@@ -4311,7 +4309,7 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -4323,7 +4321,7 @@
       ],
       "confidence_warnings": [],
       "history_tags": [
-        "30\uc77c \ucd5c\uace0 41"
+        "30\uc77c \ucd5c\uace0 46"
       ]
     },
     {
@@ -4350,11 +4348,11 @@
         "\uac00\uae4c\uc6b4 \uc2e4\uc801 \uc77c\uc815 \ubd80\ub2f4\uc774 \uc5c6\uc2b5\ub2c8\ub2e4 (+5)"
       ],
       "negative_factors": [
-        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-6)",
-        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-4)",
-        "\uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4 (-6)",
-        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-2)",
-        "20\uc77c\uc120 \ubc29\ud5a5\uc774 \uc544\uc9c1 \uc0b4\uc544\ub098\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4 (-2)",
+        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-4)",
+        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-3)",
+        "\uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4 (-4)",
+        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-1)",
+        "20\uc77c\uc120 \ubc29\ud5a5\uc774 \uc544\uc9c1 \uc0b4\uc544\ub098\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4 (-1)",
         "20\uc77c\uc120 \uc544\ub798\ub77c \ud750\ub984 \ud655\uc778\uc774 \ub354 \ud544\uc694\ud569\ub2c8\ub2e4 (0)"
       ],
       "metrics": {
@@ -5346,7 +5344,7 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -5364,7 +5362,7 @@
     },
     {
       "ticker": "SOXX",
-      "stock_score": 0,
+      "stock_score": 3,
       "stock_state": "\ud68c\ud53c",
       "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
       "top_reasons": [
@@ -5389,11 +5387,11 @@
         "\uac00\uae4c\uc6b4 \uc2e4\uc801 \uc77c\uc815 \ubd80\ub2f4\uc774 \uc5c6\uc2b5\ub2c8\ub2e4 (+5)"
       ],
       "negative_factors": [
-        "\ucd5c\uadfc 20\uc77c\uc120\uc774 50\uc77c\uc120\uc744 \ud558\ud5a5 \uc774\ud0c8\ud588\uc2b5\ub2c8\ub2e4 (-8)",
-        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-6)",
-        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-4)",
-        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-2)",
-        "20\uc77c\uc120 \ubc29\ud5a5\uc774 \uc544\uc9c1 \uc0b4\uc544\ub098\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4 (-2)",
+        "\ucd5c\uadfc 20\uc77c\uc120\uc774 50\uc77c\uc120\uc744 \ud558\ud5a5 \uc774\ud0c8\ud588\uc2b5\ub2c8\ub2e4 (-5)",
+        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-3)",
+        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-2)",
+        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-1)",
+        "20\uc77c\uc120 \ubc29\ud5a5\uc774 \uc544\uc9c1 \uc0b4\uc544\ub098\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4 (-1)",
         "20\uc77c\uc120 \uc544\ub798\ub77c \ud750\ub984 \ud655\uc778\uc774 \ub354 \ud544\uc694\ud569\ub2c8\ub2e4 (0)"
       ],
       "metrics": {
@@ -6385,7 +6383,7 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -6400,12 +6398,12 @@
         "\uc2dc\uc7a5 \ub300\ube44 \uc57d\uc138"
       ],
       "history_tags": [
-        "30\uc77c \ucd5c\uace0 0"
+        "30\uc77c \ucd5c\uace0 3"
       ]
     },
     {
       "ticker": "SERV",
-      "stock_score": 0,
+      "stock_score": 2,
       "stock_state": "\ud68c\ud53c",
       "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
       "top_reasons": [
@@ -6428,11 +6426,11 @@
         "\uac00\uae4c\uc6b4 \uc2e4\uc801 \uc77c\uc815 \ubd80\ub2f4\uc774 \uc5c6\uc2b5\ub2c8\ub2e4 (+5)"
       ],
       "negative_factors": [
-        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-6)",
-        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-4)",
-        "\uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4 (-6)",
-        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-2)",
-        "20\uc77c\uc120 \ubc29\ud5a5\uc774 \uc544\uc9c1 \uc0b4\uc544\ub098\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4 (-2)",
+        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-4)",
+        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-3)",
+        "\uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4 (-4)",
+        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-1)",
+        "20\uc77c\uc120 \ubc29\ud5a5\uc774 \uc544\uc9c1 \uc0b4\uc544\ub098\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4 (-1)",
         "20\uc77c\uc120 \uc544\ub798\ub77c \ud750\ub984 \ud655\uc778\uc774 \ub354 \ud544\uc694\ud569\ub2c8\ub2e4 (0)"
       ],
       "metrics": {
@@ -7424,7 +7422,7 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -7438,7 +7436,7 @@
         "\uc2dc\uc7a5 \ub300\ube44 \uc57d\uc138"
       ],
       "history_tags": [
-        "30\uc77c \ucd5c\uace0 0"
+        "30\uc77c \ucd5c\uace0 2"
       ]
     },
     {
@@ -7467,12 +7465,12 @@
         "\uac00\uae4c\uc6b4 \uc2e4\uc801 \uc77c\uc815 \ubd80\ub2f4\uc774 \uc5c6\uc2b5\ub2c8\ub2e4 (+5)"
       ],
       "negative_factors": [
-        "\ucd5c\uadfc 20\uc77c\uc120\uc774 50\uc77c\uc120\uc744 \ud558\ud5a5 \uc774\ud0c8\ud588\uc2b5\ub2c8\ub2e4 (-8)",
-        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-6)",
-        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-4)",
-        "\uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4 (-6)",
-        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-2)",
-        "20\uc77c\uc120 \ubc29\ud5a5\uc774 \uc544\uc9c1 \uc0b4\uc544\ub098\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4 (-2)"
+        "\ucd5c\uadfc 20\uc77c\uc120\uc774 50\uc77c\uc120\uc744 \ud558\ud5a5 \uc774\ud0c8\ud588\uc2b5\ub2c8\ub2e4 (-5)",
+        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-4)",
+        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-3)",
+        "\uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4 (-4)",
+        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-1)",
+        "20\uc77c\uc120 \ubc29\ud5a5\uc774 \uc544\uc9c1 \uc0b4\uc544\ub098\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4 (-1)"
       ],
       "metrics": {
         "close": 274.0299987792969,
@@ -8463,7 +8461,7 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -9592,8 +9590,43 @@
     }
   },
   "notifications": {
-    "count": 0,
-    "items": []
+    "count": 4,
+    "items": [
+      {
+        "id": "market-high-stress-2026-03-28",
+        "priority": "high",
+        "kind": "market_high_stress",
+        "scope": "market",
+        "title": "\uace0\uc2a4\ud2b8\ub808\uc2a4 \uad6c\uac04 \uc9c4\uc785",
+        "message": "VIX \ubd80\ub2f4\uc774 \ud07d\ub2c8\ub2e4. \uc0c8 \ub9e4\uc218\ubcf4\ub2e4 \ubc29\uc5b4\ub97c \uba3c\uc800 \ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4."
+      },
+      {
+        "id": "market-both-below-200dma-2026-03-28",
+        "priority": "high",
+        "kind": "market_below_200dma",
+        "scope": "market",
+        "title": "\ud575\uc2ec \uc9c0\uc218 200\uc77c\uc120 \uc774\ud0c8",
+        "message": "S&P500\uacfc Nasdaq\uc774 \ubaa8\ub450 200\uc77c\uc120 \uc544\ub798\uc785\ub2c8\ub2e4. \ubc18\ub4f1 \ucd94\uaca9\ubcf4\ub2e4 \ub300\uae30\uac00 \ub0ab\uc2b5\ub2c8\ub2e4."
+      },
+      {
+        "id": "stock-dead-cross-KORU-2026-03-28",
+        "priority": "medium",
+        "kind": "stock_dead_cross",
+        "scope": "stock",
+        "title": "KORU \ub370\ub4dc\ud06c\ub85c\uc2a4",
+        "message": "KORU \ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4: 20\uc77c\uc120\uc774 50\uc77c\uc120 \uc544\ub798\ub85c \ub0b4\ub824\uac14\uc2b5\ub2c8\ub2e4. \ub9e4\uc218\ubcf4\ub2e4 \ub300\uae30\ub098 \ube44\uc911 \uc870\uc808 \ucabd\uc774 \ub0ab\uc2b5\ub2c8\ub2e4.",
+        "ticker": "KORU"
+      },
+      {
+        "id": "stock-dead-cross-SOXX-2026-03-28",
+        "priority": "medium",
+        "kind": "stock_dead_cross",
+        "scope": "stock",
+        "title": "SOXX \ub370\ub4dc\ud06c\ub85c\uc2a4",
+        "message": "SOXX \ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4: 20\uc77c\uc120\uc774 50\uc77c\uc120 \uc544\ub798\ub85c \ub0b4\ub824\uac14\uc2b5\ub2c8\ub2e4. \ub9e4\uc218\ubcf4\ub2e4 \ub300\uae30\ub098 \ube44\uc911 \uc870\uc808 \ucabd\uc774 \ub0ab\uc2b5\ub2c8\ub2e4.",
+        "ticker": "SOXX"
+      }
+    ]
   },
   "history": {
     "market": [
@@ -9607,28 +9640,28 @@
       "NVDA": [
         {
           "date": "2026-03-28",
-          "score": 5,
+          "score": 15,
           "state": "\ud68c\ud53c"
         }
       ],
       "TSLA": [
         {
           "date": "2026-03-28",
-          "score": 0,
+          "score": 4,
           "state": "\ud68c\ud53c"
         }
       ],
       "META": [
         {
           "date": "2026-03-28",
-          "score": 0,
+          "score": 2,
           "state": "\ud68c\ud53c"
         }
       ],
       "AMD": [
         {
           "date": "2026-03-28",
-          "score": 41,
+          "score": 46,
           "state": "\uc57d\ud568"
         }
       ],
@@ -9642,14 +9675,14 @@
       "SOXX": [
         {
           "date": "2026-03-28",
-          "score": 0,
+          "score": 3,
           "state": "\ud68c\ud53c"
         }
       ],
       "SERV": [
         {
           "date": "2026-03-28",
-          "score": 0,
+          "score": 2,
           "state": "\ud68c\ud53c"
         }
       ],

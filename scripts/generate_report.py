@@ -612,7 +612,9 @@ def prioritize_stock_reasons(reasons: list[str], state: str) -> list[str]:
 
 
 def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) -> ScoreResult:
-    score = 0
+    # Curated watchlists are meant to rank candidates, so keep a small base score
+    # and let weak setups drift down from there instead of collapsing too easily to zero.
+    score = 5
     reasons = []
     cross_highlights = []
     positive_factors = []
@@ -1020,40 +1022,44 @@ def score_stock(
     cross_highlights = []
     positive_factors = []
     negative_factors = []
+    gap20 = float((dma20.iloc[-1] - close.iloc[-1]) / dma20.iloc[-1]) if dma20.iloc[-1] else 0.0
+    gap50 = float((dma50.iloc[-1] - close.iloc[-1]) / dma50.iloc[-1]) if dma50.iloc[-1] else 0.0
     if close.iloc[-1] > dma20.iloc[-1]:
         score += 10
         reasons.append("20일선 위에 있습니다")
         positive_factors.append(factor_text("종가가 20일선 위에 있습니다", 10))
     else:
-        score -= 4
+        penalty20 = -1 if gap20 <= 0.03 else -2 if gap20 <= 0.08 else -3
+        score += penalty20
         reasons.append("종가가 20일선 아래에 있습니다")
-        negative_factors.append(factor_text("종가가 20일선 아래에 있습니다", -4))
+        negative_factors.append(factor_text("종가가 20일선 아래에 있습니다", penalty20))
     if close.iloc[-1] > dma50.iloc[-1]:
         score += 10
         reasons.append("50일선 위에 있습니다")
         positive_factors.append(factor_text("종가가 50일선 위에 있습니다", 10))
     else:
-        score -= 6
+        penalty50 = -2 if gap50 <= 0.04 else -3 if gap50 <= 0.10 else -4
+        score += penalty50
         reasons.append("종가가 50일선 아래에 있습니다")
-        negative_factors.append(factor_text("종가가 50일선 아래에 있습니다", -6))
+        negative_factors.append(factor_text("종가가 50일선 아래에 있습니다", penalty50))
     if dma20.iloc[-1] > dma50.iloc[-1]:
         score += 10
         positive_factors.append(factor_text("단기 흐름이 살아 있습니다", 10))
     else:
-        score -= 2
-        negative_factors.append(factor_text("단기 흐름이 아직 약합니다", -2))
+        score -= 1
+        negative_factors.append(factor_text("단기 흐름이 아직 약합니다", -1))
     if slope_up(dma20):
         score += 10
         positive_factors.append(factor_text("20일선이 올라가고 있습니다", 10))
     else:
-        score -= 2
-        negative_factors.append(factor_text("20일선 방향이 아직 살아나지 않았습니다", -2))
+        score -= 1
+        negative_factors.append(factor_text("20일선 방향이 아직 살아나지 않았습니다", -1))
 
     short_bull, short_bear = recent_cross_signal(
         dma5,
         dma20,
         factor_text("최근 5일선이 20일선을 상향 돌파했습니다", 2),
-        factor_text("최근 5일선이 20일선을 하향 이탈했습니다", -4),
+        factor_text("최근 5일선이 20일선을 하향 이탈했습니다", -2),
     )
     if short_bull:
         score += 2
@@ -1061,7 +1067,7 @@ def score_stock(
         positive_factors.append(short_bull)
         reasons.append("최근 단기 골든크로스가 나왔습니다")
     if short_bear:
-        score -= 4
+        score -= 2
         cross_highlights.append(f"{ticker} 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다.")
         negative_factors.append(short_bear)
         reasons.append("최근 단기 데드크로스가 나왔습니다")
@@ -1070,7 +1076,7 @@ def score_stock(
         dma20,
         dma50,
         factor_text("최근 20일선이 50일선을 상향 돌파했습니다", 4),
-        factor_text("최근 20일선이 50일선을 하향 이탈했습니다", -8),
+        factor_text("최근 20일선이 50일선을 하향 이탈했습니다", -5),
         lookback=10,
     )
     if mid_bull:
@@ -1079,7 +1085,7 @@ def score_stock(
         positive_factors.append(mid_bull)
         reasons.append("최근 중기 골든크로스가 나왔습니다")
     if mid_bear:
-        score -= 8
+        score -= 5
         cross_highlights.append(f"{ticker} 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다.")
         negative_factors.append(mid_bear)
         reasons.append("최근 중기 데드크로스가 나왔습니다")
@@ -1147,15 +1153,17 @@ def score_stock(
         negative_factors.append(factor_text("실적 일정이 확인되지 않아 조금 더 조심해서 봐야 합니다", -4))
         event_flag = "실적 일정 확인 필요"
 
-    rs_10d_weaker = bool(len(rs) >= 10 and rs.iloc[-1] < rs.iloc[-10])
+    rs_10d_change = float((rs.iloc[-1] / rs.iloc[-10]) - 1) if len(rs) >= 10 and rs.iloc[-10] else 0.0
+    rs_10d_weaker = rs_10d_change < 0
     if close.iloc[-1] > dma20.iloc[-1] and vol.iloc[-1] < vol20.iloc[-1]:
         score -= 6
         reasons.append("거래량이 아직 약합니다")
         negative_factors.append(factor_text("거래량이 아직 약합니다", -6))
     if rs_10d_weaker:
-        score -= 6
+        rs_penalty = -1 if rs_10d_change >= -0.02 else -3 if rs_10d_change >= -0.08 else -4
+        score += rs_penalty
         reasons.append("시장보다 힘이 약합니다")
-        negative_factors.append(factor_text("시장보다 힘이 약합니다", -6))
+        negative_factors.append(factor_text("시장보다 힘이 약합니다", rs_penalty))
 
     if close.iloc[-1] <= dma20.iloc[-1]:
         negative_factors.append(factor_text("20일선 아래라 흐름 확인이 더 필요합니다", 0))
