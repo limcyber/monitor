@@ -123,6 +123,14 @@ function renderAiAnalysis(el, value) {
     return;
   }
 
+  const hasBreakingNews = sections.some((section) => section.label === "속보 요약");
+  if (!hasBreakingNews) {
+    sections.push({
+      label: "속보 요약",
+      content: ["눈에 띄는 새 속보는 없습니다."],
+    });
+  }
+
   el.innerHTML = sections
     .map((section) => {
       const items = section.content.filter(Boolean);
