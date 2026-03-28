@@ -66,7 +66,7 @@ jobs:
       - name: Generate report
         if: github.event_name != 'schedule' || steps.market_window.outputs.should_run == 'true'
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         run: |
           python scripts/generate_report.py
           python scripts/generate_kr_report.py

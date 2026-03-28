@@ -9,7 +9,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 LATEST_US_PATH = BASE_DIR / "docs" / "data" / "latest.json"
-DEFAULT_MODEL = "gemini-2.5-flash-lite"
+DEFAULT_MODEL = "gemini-2.5-pro"
 
 
 def load_latest_market_payload() -> dict:
@@ -88,47 +88,71 @@ AI 판단: ...
 """.strip()
 
 
+def import_gemini():
+    try:
+        from google import genai as modern_genai
+        from google.genai import types
+        return ("genai", modern_genai, types)
+    except Exception as first_exc:
+        try:
+            import google.generativeai as legacy_genai
+            return ("generativeai", legacy_genai, None)
+        except Exception as second_exc:
+            raise ImportError(
+                "Google Gemini SDK import failed. Install it with 'pip install -r requirements.txt'."
+            ) from second_exc if second_exc else first_exc
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Gemini API local smoke test")
     parser.add_argument("--model", default=DEFAULT_MODEL, help="Gemini model name")
     parser.add_argument("--mode", choices=["simple", "market"], default="simple", help="Prompt mode")
-    parser.add_argument("--with-search", action="store_true", help="Enable Google Search tool")
+    parser.add_argument("--with-search", dest="with_search", action="store_true", help="Enable Google Search tool")
+    parser.add_argument("--no-search", dest="with_search", action="store_false", help="Disable Google Search tool")
+    parser.set_defaults(with_search=True)
     args = parser.parse_args()
 
-    api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+    api_key = os.environ.get("GOOGLE_API_KEY") or os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        print("GEMINI_API_KEY or GOOGLE_API_KEY is not set.", file=sys.stderr)
+        print("GOOGLE_API_KEY or GEMINI_API_KEY is not set.", file=sys.stderr)
         return 1
 
     try:
-        from google import genai
-        from google.genai import types
+        backend, genai, types = import_gemini()
     except Exception as exc:
-        print(f"Failed to import google.genai: {exc}", file=sys.stderr)
+        print(f"Failed to import Gemini SDK: {exc}", file=sys.stderr)
         return 1
 
     prompt = build_prompt(args.mode)
     print(f"Model: {args.model}")
+    print(f"Backend: {backend}")
     print(f"Mode: {args.mode}")
     print(f"Google Search: {'on' if args.with_search else 'off'}")
     print("-" * 60)
 
-    client = genai.Client(api_key=api_key)
-    config = types.GenerateContentConfig(temperature=0.2)
-    if args.with_search:
-        config.tools = [types.Tool(google_search=types.GoogleSearch())]
-
     try:
-        response = client.models.generate_content(
-            model=args.model,
-            contents=prompt,
-            config=config,
-        )
+        if backend == "genai":
+            client = genai.Client(api_key=api_key)
+            config = types.GenerateContentConfig(temperature=0.2)
+            if args.with_search:
+                config.tools = [types.Tool(google_search=types.GoogleSearch())]
+            response = client.models.generate_content(
+                model=args.model,
+                contents=prompt,
+                config=config,
+            )
+            text = (getattr(response, "text", None) or "").strip()
+        else:
+            if args.with_search:
+                print("Google Search requires google-genai; continuing without search on the legacy backend.", file=sys.stderr)
+            genai.configure(api_key=api_key)
+            model = genai.GenerativeModel(args.model)
+            response = model.generate_content(prompt)
+            text = (getattr(response, "text", None) or "").strip()
     except Exception as exc:
         print(f"Gemini request failed: {exc}", file=sys.stderr)
         return 2
 
-    text = (getattr(response, "text", None) or "").strip()
     if not text:
         print("Gemini returned an empty response.", file=sys.stderr)
         return 3

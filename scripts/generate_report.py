@@ -24,7 +24,7 @@ OUTPUT_PATH = DOCS_DATA_DIR / "latest.json"
 HISTORY_PATH = DOCS_DATA_DIR / "history.json"
 ET = ZoneInfo("America/New_York")
 MARKET_LEVELS_TOTAL = 6
-GEMINI_MODEL = "gemini-2.5-flash-lite"
+GEMINI_MODEL = "gemini-2.5-pro"
 
 
 @dataclass
@@ -110,22 +110,12 @@ def build_market_ai_payload(output: dict) -> dict:
 
 
 def generate_market_ai_analysis(output: dict) -> dict:
-    api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+    api_key = os.environ.get("GOOGLE_API_KEY") or os.environ.get("GEMINI_API_KEY")
     if not api_key:
         return {
             "status": "disabled",
             "model": GEMINI_MODEL,
-            "content": "GEMINI_API_KEY가 없어 AI 분석을 건너뛰었습니다.",
-        }
-
-    try:
-        from google import genai
-        from google.genai import types
-    except Exception:
-        return {
-            "status": "error",
-            "model": GEMINI_MODEL,
-            "content": "Gemini 라이브러리를 불러오지 못해 AI 분석을 만들지 못했습니다.",
+            "content": "GOOGLE_API_KEY가 없어 AI 분석을 건너뛰었습니다.",
         }
 
     payload = build_market_ai_payload(output)
@@ -134,7 +124,7 @@ def generate_market_ai_analysis(output: dict) -> dict:
 
 아래는 규칙 기반으로 계산한 미국 시장 모니터 데이터다.
 1. 이 규칙 기반 시장 상태가 대체로 맞는지 먼저 판단한다.
-2. Google Search로 최신 뉴스, 지정학, 금리, 변동성, 주도 업종 상황을 빠르게 확인해 현재 맥락을 반영한다.
+2. 최신 뉴스, 지정학, 금리, 변동성, 주도 업종 상황을 함께 감안한다.
 3. 한국어로만, 짧고 깔끔하게 답한다.
 4. 출력 형식은 아래 3줄만 쓴다.
 AI 판단: ...
@@ -148,6 +138,9 @@ AI 판단: ...
 """.strip()
 
     try:
+        from google import genai
+        from google.genai import types
+
         client = genai.Client(api_key=api_key)
         response = client.models.generate_content(
             model=GEMINI_MODEL,
@@ -165,6 +158,27 @@ AI 판단: ...
             "model": GEMINI_MODEL,
             "content": text,
         }
+    except ModuleNotFoundError:
+        try:
+            import google.generativeai as genai
+
+            genai.configure(api_key=api_key)
+            model = genai.GenerativeModel(GEMINI_MODEL)
+            response = model.generate_content(prompt)
+            text = (getattr(response, "text", None) or "").strip()
+            if not text:
+                raise ValueError("empty Gemini response")
+            return {
+                "status": "ok",
+                "model": GEMINI_MODEL,
+                "content": text,
+            }
+        except Exception:
+            return {
+                "status": "error",
+                "model": GEMINI_MODEL,
+                "content": "AI 분석을 불러오지 못했습니다. 잠시 뒤 다시 확인해 주세요.",
+            }
     except Exception:
         return {
             "status": "error",
