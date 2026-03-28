@@ -486,6 +486,11 @@ body[data-theme="bw"] .mini-tag.danger {
   gap: 6px;
 }
 
+.market-ticker-strip-secondary {
+  margin-top: 6px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .tag-row-block {
   margin-top: 10px;
   display: grid;

@@ -94,6 +94,8 @@ def kr_market_guidance(score: int, market_data: dict) -> tuple[list[str], list[s
     kospi = market_data["KOSPI"]["Close"]
     kosdaq = market_data["KOSDAQ"]["Close"]
     kospi200 = market_data["KOSPI200"]["Close"]
+    krx100 = market_data["KRX100"]["Close"]
+    semicon = market_data["SEMICON"]["Close"]
     usdkrw = market_data["USDKRW"]["Close"]
     vix = market_data["VIX"]["Close"]
 
@@ -114,6 +116,9 @@ def kr_market_guidance(score: int, market_data: dict) -> tuple[list[str], list[s
 
     kospi200_dma50 = kospi200.rolling(50).mean()
     kospi200_dma200 = kospi200.rolling(200).mean()
+    krx100_dma200 = krx100.rolling(200).mean()
+    semicon_dma20 = semicon.rolling(20).mean()
+    semicon_dma50 = semicon.rolling(50).mean()
 
     score_value = 0
 
@@ -152,12 +157,28 @@ def kr_market_guidance(score: int, market_data: dict) -> tuple[list[str], list[s
     if kospi200.iloc[-1] > kospi200_dma200.iloc[-1]:
         score_value += 5
         positive_factors.append(factor_text("KOSPI200이 200일선 위에 있습니다", 5))
+    if krx100.iloc[-1] > krx100_dma200.iloc[-1]:
+        score_value += 4
+        positive_factors.append(factor_text("KRX100이 200일선 위에 있습니다", 4))
 
     kosdaq_kospi_ratio = (kosdaq / kospi).dropna()
     if len(kosdaq_kospi_ratio) >= 20 and kosdaq_kospi_ratio.iloc[-1] >= kosdaq_kospi_ratio.iloc[-20]:
         score_value += 8
         positive_factors.append(factor_text("코스닥이 코스피에 크게 밀리지 않습니다", 8))
         reasons.append("코스닥이 코스피에 크게 밀리지 않습니다")
+
+    semicon_kospi_ratio = (semicon / kospi).dropna()
+    if semicon.iloc[-1] > semicon_dma50.iloc[-1]:
+        score_value += 5
+        positive_factors.append(factor_text("반도체 ETF가 50일선 위에 있습니다", 5))
+        reasons.append("반도체 흐름이 아직 꺾이지 않았습니다")
+    if semicon.iloc[-1] > semicon_dma20.iloc[-1]:
+        score_value += 3
+        positive_factors.append(factor_text("반도체 ETF가 20일선 위에 있습니다", 3))
+    if len(semicon_kospi_ratio) >= 20 and semicon_kospi_ratio.iloc[-1] >= semicon_kospi_ratio.iloc[-20]:
+        score_value += 4
+        positive_factors.append(factor_text("반도체가 코스피보다 더 강합니다", 4))
+        reasons.append("반도체가 코스피보다 더 강합니다")
 
     usdkrw_z = zscore(usdkrw, 20)
     if usdkrw_z <= 0.8:
@@ -249,6 +270,10 @@ def kr_market_guidance(score: int, market_data: dict) -> tuple[list[str], list[s
         negative_factors.append(factor_text("KOSDAQ이 200일선 아래에 있습니다", 0))
     if len(kosdaq_kospi_ratio) >= 20 and kosdaq_kospi_ratio.iloc[-1] < kosdaq_kospi_ratio.iloc[-20]:
         negative_factors.append(factor_text("중소형주 쪽 힘이 약합니다", 0))
+    if semicon.iloc[-1] <= semicon_dma50.iloc[-1]:
+        negative_factors.append(factor_text("반도체 ETF가 50일선 아래라 주도 업종 힘이 약합니다", 0))
+    if len(semicon_kospi_ratio) >= 20 and semicon_kospi_ratio.iloc[-1] < semicon_kospi_ratio.iloc[-20]:
+        negative_factors.append(factor_text("반도체가 코스피보다 약해지고 있습니다", 0))
 
     if kospi.iloc[-1] <= kospi_dma200.iloc[-1] and kosdaq.iloc[-1] <= kosdaq_dma200.iloc[-1]:
         score_value = min(score_value, 45)
@@ -292,6 +317,12 @@ def build_kr_market_output(now_et: datetime, previous_output: dict) -> tuple[dic
     kospi200, ts = load_price_frame("^KS200", now_et)
     if ts:
         latest_intraday_points.append(ts)
+    krx100, ts = load_price_frame("KRX100.KS", now_et)
+    if ts:
+        latest_intraday_points.append(ts)
+    semicon, ts = load_price_frame("091160.KS", now_et)
+    if ts:
+        latest_intraday_points.append(ts)
     usdkrw, ts = load_price_frame("KRW=X", now_et)
     if ts:
         latest_intraday_points.append(ts)
@@ -303,6 +334,8 @@ def build_kr_market_output(now_et: datetime, previous_output: dict) -> tuple[dic
         "KOSPI": kospi,
         "KOSDAQ": kosdaq,
         "KOSPI200": kospi200,
+        "KRX100": krx100,
+        "SEMICON": semicon,
         "USDKRW": usdkrw,
         "VIX": vix,
     }
@@ -344,6 +377,10 @@ def build_kr_market_output(now_et: datetime, previous_output: dict) -> tuple[dic
             "kosdaq_dma200": float(kosdaq["Close"].rolling(200).mean().iloc[-1]),
             "kospi200_close": float(kospi200["Close"].iloc[-1]),
             "kospi200_change_pct": pct_change_from_prev_close(kospi200["Close"]),
+            "krx100_close": float(krx100["Close"].iloc[-1]),
+            "krx100_change_pct": pct_change_from_prev_close(krx100["Close"]),
+            "semicon_close": float(semicon["Close"].iloc[-1]),
+            "semicon_change_pct": pct_change_from_prev_close(semicon["Close"]),
             "usdkrw_close": float(usdkrw["Close"].iloc[-1]),
             "usdkrw_change_pct": pct_change_from_prev_close(usdkrw["Close"]),
             "vix_close": float(vix["Close"].iloc[-1]),
@@ -427,6 +464,8 @@ def main() -> None:
                 "kosdaq_close": [float(v) for v in market_frames["KOSDAQ"]["Close"].tail(63).tolist()],
                 "kosdaq_dma200": [None if pd.isna(v) else float(v) for v in market_frames["KOSDAQ"]["Close"].rolling(200).mean().tail(63).tolist()],
                 "kospi200_close": [float(v) for v in market_frames["KOSPI200"]["Close"].tail(63).tolist()],
+                "krx100_close": [float(v) for v in market_frames["KRX100"]["Close"].tail(63).tolist()],
+                "semicon_close": [float(v) for v in market_frames["SEMICON"]["Close"].tail(63).tolist()],
                 "usdkrw_close": [float(v) for v in market_frames["USDKRW"]["Close"].tail(63).tolist()],
                 "vix_close": [float(v) for v in market_frames["VIX"]["Close"].tail(63).tolist()],
                 "kosdaq_kospi_ratio": [
