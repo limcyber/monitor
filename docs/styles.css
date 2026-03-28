@@ -680,6 +680,10 @@ body[data-theme="bw"] tbody tr:nth-child(even) {
   background: #0f1210;
 }
 
+body[data-theme="bw"] tbody tr {
+  background: linear-gradient(180deg, #0d120f 0%, #0a0d0b 100%);
+}
+
 body[data-theme="bw"] tbody td {
   border-bottom-color: #132219;
 }
@@ -1096,6 +1100,63 @@ body[data-theme="bw"] .stock-chart {
 
   .tag-row {
     grid-template-columns: 1fr;
+  }
+
+  .table-wrap {
+    overflow: visible;
+  }
+
+  table {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody {
+    display: grid;
+    gap: 8px;
+  }
+
+  tbody tr {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+    padding: 8px;
+    border: 1px solid var(--line-soft);
+    background: linear-gradient(180deg, #fbfcfd 0%, #f5f8fb 100%);
+  }
+
+  tbody td {
+    display: block;
+    border: 0;
+    padding: 0;
+    min-width: 0;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+
+  body[data-theme="bw"] tbody tr {
+    background: linear-gradient(180deg, #0d120f 0%, #0a0d0b 100%);
+    border-color: #183020;
+  }
+
+  body[data-theme="bw"] tbody td::before {
+    color: #86bf88;
+  }
+
+  tbody td:nth-child(5) {
+    grid-column: 1 / -1;
   }
 
   .site-topbar-inner {

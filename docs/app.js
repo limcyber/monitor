@@ -249,11 +249,11 @@ function renderTable(rows) {
   rows.forEach((row) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
-      <td>${row.ticker}</td>
-      <td><span class="pill ${scoreTone(row.stock_score)}">${formatScore(row.stock_score)}</span></td>
-      <td><span class="pill ${scoreTone(row.stock_score)}">${row.stock_state}</span></td>
-      <td><span class="pill ${scoreTone(row.stock_score)}">${row.final_action}</span></td>
-      <td>${row.note}</td>
+      <td data-label="종목">${row.ticker}</td>
+      <td data-label="점수"><span class="pill ${scoreTone(row.stock_score)}">${formatScore(row.stock_score)}</span></td>
+      <td data-label="상태"><span class="pill ${scoreTone(row.stock_score)}">${row.stock_state}</span></td>
+      <td data-label="추천 행동"><span class="pill ${scoreTone(row.stock_score)}">${row.final_action}</span></td>
+      <td data-label="메모">${row.note}</td>
     `;
     body.appendChild(tr);
   });
