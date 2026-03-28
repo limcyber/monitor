@@ -546,6 +546,16 @@ body[data-theme="bw"] .mini-tag.danger {
   margin-top: 7px;
 }
 
+.cross-note {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #8a6a10;
+}
+
 .cross-highlight-block li {
   font-weight: 700;
   color: #5d4300;
@@ -764,6 +774,10 @@ body[data-theme="bw"] .cross-highlight-block {
 body[data-theme="bw"] .cross-highlight-block h3,
 body[data-theme="bw"] .cross-highlight-block h4 {
   color: #d7f48d;
+}
+
+body[data-theme="bw"] .cross-note {
+  color: #b7cf79;
 }
 
 body[data-theme="bw"] .cross-highlight-block li {
@@ -1181,6 +1195,23 @@ body[data-theme="bw"] .chart-legend {
 
   body[data-theme="bw"] tbody td::before {
     color: #86bf88;
+  }
+
+  tbody td:nth-child(5) {
+    flex-basis: 100%;
+  }
+
+  tbody td[data-label="메모"] {
+    flex: 1 1 100%;
+    margin-top: 2px;
+    padding-top: 6px;
+    border-top: 1px dashed var(--line-soft);
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  body[data-theme="bw"] tbody td[data-label="메모"] {
+    border-top-color: #183020;
   }
 
   .site-topbar-inner {
