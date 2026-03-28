@@ -129,6 +129,9 @@ a {
   font-weight: 700;
   color: rgba(255, 255, 255, 0.78);
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .page-switch a + a {
@@ -138,6 +141,15 @@ a {
 .page-switch a[aria-current="page"] {
   background: rgba(255, 255, 255, 0.16);
   color: #fff;
+}
+
+.flag-emoji {
+  font-size: 13px;
+  line-height: 1;
+}
+
+.flag-label {
+  letter-spacing: 0.04em;
 }
 
 .page-head-time {
