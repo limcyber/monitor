@@ -1303,6 +1303,245 @@ def stock_confidence_warnings(stock: dict) -> list[str]:
     return warnings[:4]
 
 
+def parse_output_date(output: dict) -> date | None:
+    raw = output.get("market_data_as_of") or output.get("generated_at_et")
+    if not raw:
+        return None
+    try:
+        return datetime.strptime(str(raw)[:10], "%Y-%m-%d").date()
+    except Exception:
+        return None
+
+
+def state_rank(state_value: str) -> int:
+    return {
+        "강함": 4,
+        "양호": 3,
+        "애매": 2,
+        "약함": 1,
+        "회피": 0,
+    }.get(state_value, 0)
+
+
+def build_notification(
+    notification_id: str,
+    priority: str,
+    kind: str,
+    title: str,
+    message: str,
+    scope: str = "market",
+    ticker: str | None = None,
+) -> dict:
+    item = {
+        "id": notification_id,
+        "priority": priority,
+        "kind": kind,
+        "scope": scope,
+        "title": title,
+        "message": message,
+    }
+    if ticker:
+        item["ticker"] = ticker
+    return item
+
+
+def build_notifications(as_of: date, previous_output: dict, market_output: dict, stock_reports: list[dict]) -> list[dict]:
+    notifications: list[dict] = []
+    current_level = market_level(market_output["score"])
+    prev_market = previous_output.get("market", {}) if previous_output else {}
+    prev_level = market_level(prev_market["score"]) if isinstance(prev_market.get("score"), int) else None
+    prev_metrics = prev_market.get("metrics", {}) if isinstance(prev_market, dict) else {}
+    prev_filters = prev_market.get("negative_filters", {}) if isinstance(prev_market, dict) else {}
+    prev_output_date = parse_output_date(previous_output) if previous_output else None
+
+    if prev_level is not None and current_level != prev_level:
+        direction = "하락" if current_level < prev_level else "회복"
+        priority = "high" if current_level < prev_level else "medium"
+        message = (
+            f"시장 레벨이 {prev_level}/{MARKET_LEVELS_TOTAL}에서 {current_level}/{MARKET_LEVELS_TOTAL}로 {direction}했습니다. "
+            f"현재 추천 행동은 '{market_output['action']}'입니다."
+        )
+        notifications.append(
+            build_notification(
+                f"market-level-{direction}-{as_of.isoformat()}",
+                priority,
+                "market_level_change",
+                f"시장 레벨 {direction}",
+                message,
+            )
+        )
+
+    current_high_stress = bool(market_output["negative_filters"]["filter_3_high_stress"])
+    prev_high_stress = bool(prev_filters.get("filter_3_high_stress"))
+    if current_high_stress and not prev_high_stress:
+        notifications.append(
+            build_notification(
+                f"market-high-stress-{as_of.isoformat()}",
+                "high",
+                "market_high_stress",
+                "고스트레스 구간 진입",
+                "VIX가 높은 구간으로 올라왔습니다. 신규 진입은 더 보수적으로 보는 편이 좋습니다.",
+            )
+        )
+
+    current_both_below = bool(
+        market_output["metrics"]["spx_close"] < market_output["metrics"]["spx_dma200"]
+        and market_output["metrics"]["ndx_close"] < market_output["metrics"]["ndx_dma200"]
+    )
+    prev_both_below = bool(
+        prev_metrics
+        and prev_metrics.get("spx_close") is not None
+        and prev_metrics.get("spx_dma200") is not None
+        and prev_metrics.get("ndx_close") is not None
+        and prev_metrics.get("ndx_dma200") is not None
+        and prev_metrics["spx_close"] < prev_metrics["spx_dma200"]
+        and prev_metrics["ndx_close"] < prev_metrics["ndx_dma200"]
+    )
+    if current_both_below and not prev_both_below:
+        notifications.append(
+            build_notification(
+                f"market-both-below-200dma-{as_of.isoformat()}",
+                "high",
+                "market_below_200dma",
+                "핵심 지수 200일선 이탈",
+                "S&P500과 Nasdaq이 모두 200일선 아래에 있습니다. 방어적으로 보는 편이 좋습니다.",
+            )
+        )
+
+    current_event_names = market_output["negative_filters"].get("event_names", [])
+    prev_event_names = prev_filters.get("event_names", [])
+    if market_output["negative_filters"]["filter_4_event_risk"] and current_event_names != prev_event_names:
+        notifications.append(
+            build_notification(
+                f"market-event-risk-{as_of.isoformat()}",
+                "high",
+                "market_event_risk",
+                "중요 일정 임박",
+                f"{', '.join(current_event_names)} 일정이 가까워졌습니다. 변동성이 커질 수 있어 보수적으로 보는 편이 좋습니다.",
+            )
+        )
+
+    current_warnings = market_output.get("confidence_warnings", [])
+    prev_warnings = prev_market.get("confidence_warnings", []) if isinstance(prev_market, dict) else []
+    if current_warnings and current_warnings != prev_warnings:
+        notifications.append(
+            build_notification(
+                f"market-data-warning-{as_of.isoformat()}",
+                "medium",
+                "data_warning",
+                "데이터 확인 필요",
+                f"데이터 주의 항목: {', '.join(current_warnings)}",
+            )
+        )
+
+    previous_stock_map = {
+        stock.get("ticker"): stock for stock in previous_output.get("stocks", [])
+    } if previous_output else {}
+    buy_actions = {"매수 가능", "선별 매수", "소규모 매수"}
+
+    for stock in stock_reports:
+        ticker = stock["ticker"]
+        previous_stock = previous_stock_map.get(ticker, {})
+        prev_state = previous_stock.get("stock_state")
+        current_state = stock["stock_state"]
+        prev_action = previous_stock.get("final_action", "")
+        current_action = stock["final_action"]
+
+        if (
+            stock["stock_score"] >= 70
+            and current_level >= 4
+            and current_action in buy_actions
+            and not (
+                previous_stock
+                and previous_stock.get("stock_score", 0) >= 70
+                and prev_action in buy_actions
+            )
+        ):
+            notifications.append(
+                build_notification(
+                    f"stock-entry-{ticker}-{as_of.isoformat()}",
+                    "medium",
+                    "stock_entry_candidate",
+                    f"{ticker} 진입 후보",
+                    f"{ticker}가 {stock['stock_score']}/100으로 올라왔고 추천 행동은 '{current_action}'입니다.",
+                    scope="stock",
+                    ticker=ticker,
+                )
+            )
+
+        if prev_state and state_rank(prev_state) >= 3 and state_rank(current_state) <= 2:
+            notifications.append(
+                build_notification(
+                    f"stock-weakened-{ticker}-{as_of.isoformat()}",
+                    "medium",
+                    "stock_weakened",
+                    f"{ticker} 상태 약화",
+                    f"{ticker} 상태가 {prev_state}에서 {current_state}(으)로 약해졌습니다. 지금은 더 보수적으로 보는 편이 좋습니다.",
+                    scope="stock",
+                    ticker=ticker,
+                )
+            )
+
+        earnings_date_raw = stock.get("earnings_date")
+        if earnings_date_raw:
+            try:
+                earnings_date = datetime.strptime(earnings_date_raw, "%Y-%m-%d").date()
+            except Exception:
+                earnings_date = None
+            if earnings_date:
+                current_delta = (earnings_date - as_of).days
+                prev_delta = None
+                if prev_output_date:
+                    prev_delta = (earnings_date - prev_output_date).days
+                if 0 <= current_delta <= 3 and (prev_delta is None or prev_delta > 3):
+                    notifications.append(
+                        build_notification(
+                            f"stock-earnings-near-{ticker}-{as_of.isoformat()}",
+                            "medium",
+                            "stock_earnings_near",
+                            f"{ticker} 실적 임박",
+                            f"{ticker} 실적발표일이 {stock['earnings_date_label']}로 가까워졌습니다. 신규 진입은 더 보수적으로 보는 편이 좋습니다.",
+                            scope="stock",
+                            ticker=ticker,
+                        )
+                    )
+
+        current_crosses = set(stock.get("cross_highlights", []))
+        prev_crosses = set(previous_stock.get("cross_highlights", [])) if previous_stock else set()
+        new_crosses = [item for item in current_crosses if item not in prev_crosses]
+        for cross in new_crosses:
+            if "데드크로스" in cross:
+                notifications.append(
+                    build_notification(
+                        f"stock-dead-cross-{ticker}-{as_of.isoformat()}",
+                        "medium",
+                        "stock_dead_cross",
+                        f"{ticker} 데드크로스",
+                        cross,
+                        scope="stock",
+                        ticker=ticker,
+                    )
+                )
+                break
+            if "골든크로스" in cross and current_level >= 4 and stock["stock_score"] >= 65:
+                notifications.append(
+                    build_notification(
+                        f"stock-golden-cross-{ticker}-{as_of.isoformat()}",
+                        "low",
+                        "stock_golden_cross",
+                        f"{ticker} 골든크로스",
+                        cross,
+                        scope="stock",
+                        ticker=ticker,
+                    )
+                )
+                break
+
+    priority_rank = {"high": 0, "medium": 1, "low": 2}
+    notifications.sort(key=lambda item: (priority_rank.get(item["priority"], 9), item["title"]))
+    return notifications[:8]
+
+
 def main() -> None:
     now_et = datetime.now(tz=ET)
     as_of = now_et.date()
@@ -1509,6 +1748,12 @@ def main() -> None:
             }
         },
     }
+    output["notifications"] = {
+        "count": 0,
+        "items": [],
+    }
+    output["notifications"]["items"] = build_notifications(as_of, previous_output, market_output, stock_reports)
+    output["notifications"]["count"] = len(output["notifications"]["items"])
 
     history = update_history(existing_history, output, as_of)
     output["market"]["history_tags"] = score_history_tags(history.get("market", []))

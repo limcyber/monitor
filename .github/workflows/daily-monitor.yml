@@ -67,6 +67,12 @@ jobs:
         if: github.event_name != 'schedule' || steps.market_window.outputs.should_run == 'true'
         run: python scripts/generate_report.py
 
+      - name: Send Discord alerts
+        if: (github.event_name != 'schedule' || steps.market_window.outputs.should_run == 'true') && secrets.DISCORD_WEBHOOK_URL != ''
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python scripts/send_discord_alerts.py
+
       - name: Upload artifact
         if: github.event_name != 'schedule' || steps.market_window.outputs.should_run == 'true'
         uses: actions/upload-pages-artifact@v3

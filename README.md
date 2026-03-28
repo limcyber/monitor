@@ -384,6 +384,7 @@ Python 의존성 목록입니다.
 
 #### [daily-monitor.yml](./.github/workflows/daily-monitor.yml)
 데이터 생성과 Pages 배포를 자동화하는 워크플로입니다.
+- `DISCORD_WEBHOOK_URL` GitHub Secret이 있으면 중요 알림도 함께 전송합니다.
 
 ## 9. 출력 JSON 구조
 
@@ -407,6 +408,10 @@ Python 의존성 목록입니다.
   },
   "watchlist_summary": [],
   "stocks": [],
+  "notifications": {
+    "count": 0,
+    "items": []
+  },
   "charts": {
     "market": {}
   },
@@ -422,6 +427,10 @@ Python 의존성 목록입니다.
 
 ### stocks
 - 종목별 상세 카드용 데이터
+
+### notifications
+- Discord 전송에 사용할 중요 알림 목록
+- 시장 레벨 변화, 고스트레스 진입, 일정 임박, 종목 약화, 실적 임박 같은 핵심 변화만 포함
 
 ### charts.market
 - 시장 차트 시계열
