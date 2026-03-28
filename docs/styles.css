@@ -1417,7 +1417,7 @@ body[data-theme="bw"] .chart-legend {
   }
 
   .brand-mark {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .brand-tag,
@@ -1425,48 +1425,40 @@ body[data-theme="bw"] .chart-legend {
   .page-head-time,
   .page-switch a,
   .theme-segment-btn {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .panel h2,
   .stock-panel > summary h2 {
-    font-size: 16px;
-  }
-
-  .pill,
-  .pill[data-tone] {
-    font-size: 12px;
+    font-size: 17px;
   }
 
   .kpi h3,
   .ticker-chip h3,
-  .chart-head h3,
-  .chart-head h4,
   .mini-meta,
   .guide-card h3 {
-    font-size: 12px;
-  }
-
-  .kpi p {
-    font-size: 20px;
-  }
-
-  .ticker-chip p {
-    font-size: 15px;
-  }
-
-  .chart-head p,
-  .guide-card p,
-  .guide-card li,
-  .section-footnote,
-  tbody td,
-  .stock-card p,
-  .stock-card li {
     font-size: 13px;
   }
 
-  .stock-top h3 {
+  .kpi p {
+    font-size: 21px;
+  }
+
+  .ticker-chip p {
     font-size: 16px;
+  }
+
+  .guide-card p,
+  .guide-card li,
+  .section-footnote,
+  .stock-card p,
+  .stock-card li,
+  .topbar-meta span {
+    font-size: 14px;
+  }
+
+  .stock-top h3 {
+    font-size: 17px;
   }
 
   .panel {
@@ -1671,13 +1663,13 @@ body[data-theme="bw"] .chart-legend {
   }
 
   .kr-market-ticker-strip .ticker-chip h3 {
-    font-size: 12px;
+    font-size: 13px;
     letter-spacing: 0.03em;
   }
 
   .kr-market-ticker-strip .ticker-chip p {
     margin-top: 5px;
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.22;
   }
 
