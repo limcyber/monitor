@@ -590,8 +590,7 @@ def build_kr_market_output(now_et: datetime, previous_output: dict) -> tuple[dic
             "국내장 분위기가 비교적 괜찮아 대표주 위주로 선별 접근을 볼 수 있습니다."
             if level >= 5
             else "국내장은 아직 조심해서 보는 편이 좋습니다. 강한 종목도 분할 접근이 더 안전합니다."
-        )
-        + f" 신뢰도는 {confidence}입니다.",
+        ),
         "negative_filters": {
             "filter_1_divergence": any("코스닥 참여는 약합니다" in item for item in scored["negative_factors"]),
             "filter_2_bigcap_only": any("중소형주 쪽 힘이 약합니다" in item for item in scored["negative_factors"]),

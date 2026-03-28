@@ -993,7 +993,7 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
         confidence=confidence,
         reasons=top_reasons if top_reasons else ["오늘은 시장을 좋게 볼 만한 신호가 많지 않습니다"],
         invalidation=invalidation,
-        easy_explanation=easy + f" 신뢰도는 {confidence}입니다.",
+        easy_explanation=easy,
         cross_highlights=cross_highlights[:4],
         positive_factors=positive_factors[:6],
         negative_factors=negative_factors[:6],

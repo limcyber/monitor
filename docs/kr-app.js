@@ -410,13 +410,12 @@ function renderMarket(data) {
   const marketState = document.getElementById("marketState");
   marketState.textContent = data.market.state;
   marketState.className = `pill ${scoreTone(data.market.score)}`;
-  ["marketScore", "marketConfidence", "marketExecution", "marketAction"].forEach((id) => {
+  ["marketScore", "marketExecution", "marketAction"].forEach((id) => {
     const el = document.getElementById(id);
     if (!el) return;
     el.className = `market-value ${marketTone(data.market.score)}`;
   });
   setText("marketScore", formatScore(data.market.score));
-  setText("marketConfidence", data.market.confidence);
   setText("marketExecution", data.market.execution_strength);
   setText("marketAction", data.market.action);
   renderQuote("marketKospiQuote", data.market.metrics.kospi_close, data.market.metrics.kospi_change_pct);

@@ -208,11 +208,6 @@ function renderMarket(data) {
     scoreEl.textContent = formatScore(data.market.score);
     scoreEl.className = `market-value ${marketTone(data.market.score)}`;
   }
-  const confidenceEl = document.getElementById("marketConfidence");
-  if (confidenceEl) {
-    confidenceEl.textContent = data.market.confidence;
-    confidenceEl.className = `market-value ${marketTone(data.market.score)}`;
-  }
   const executionEl = document.getElementById("marketExecution");
   if (executionEl) {
     executionEl.textContent = data.market.execution_strength;
