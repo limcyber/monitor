@@ -1,5 +1,5 @@
 {
-  "generated_at_et": "2026-03-28 03:52 ET",
+  "generated_at_et": "2026-03-28 04:09 ET",
   "market_data_as_of": "2026-03-27 16:00 ET (Close)",
   "market": {
     "state": "\ub808\ubca8 1/6 - \ubc29\uc5b4 \uc6b0\uc120",
@@ -57,7 +57,9 @@
       "tnx_20d_zscore": 1.706566951735031
     },
     "change_tags": [
-      "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
+      "\uc810\uc218 0",
+      "\ub808\ubca8 \ubcc0\ud654 \uc5c6\uc74c",
+      "VIX \uc77c\uac04 +13.16%"
     ],
     "position_tags": [
       "\ucd1d \ub178\ucd9c 0~5%",
@@ -1173,7 +1175,7 @@
         ]
       },
       "change_tags": [
-        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
+        "\uc810\uc218 0"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -2208,7 +2210,7 @@
         ]
       },
       "change_tags": [
-        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
+        "\uc810\uc218 0"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -3243,7 +3245,7 @@
         ]
       },
       "change_tags": [
-        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
+        "\uc810\uc218 0"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -4284,7 +4286,7 @@
         ]
       },
       "change_tags": [
-        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
+        "\uc810\uc218 0"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -5317,7 +5319,7 @@
         ]
       },
       "change_tags": [
-        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
+        "\uc810\uc218 0"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -6354,7 +6356,7 @@
         ]
       },
       "change_tags": [
-        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
+        "\uc810\uc218 0"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -7391,7 +7393,7 @@
         ]
       },
       "change_tags": [
-        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
+        "\uc810\uc218 0"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -8429,7 +8431,7 @@
         ]
       },
       "change_tags": [
-        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
+        "\uc810\uc218 0"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -9493,43 +9495,8 @@
     }
   },
   "notifications": {
-    "count": 4,
-    "items": [
-      {
-        "id": "market-high-stress-2026-03-28",
-        "priority": "high",
-        "kind": "market_high_stress",
-        "scope": "market",
-        "title": "\uace0\uc2a4\ud2b8\ub808\uc2a4 \uad6c\uac04 \uc9c4\uc785",
-        "message": "VIX\uac00 \ub192\uc740 \uad6c\uac04\uc73c\ub85c \uc62c\ub77c\uc654\uc2b5\ub2c8\ub2e4. \uc2e0\uaddc \uc9c4\uc785\uc740 \ub354 \ubcf4\uc218\uc801\uc73c\ub85c \ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4."
-      },
-      {
-        "id": "market-both-below-200dma-2026-03-28",
-        "priority": "high",
-        "kind": "market_below_200dma",
-        "scope": "market",
-        "title": "\ud575\uc2ec \uc9c0\uc218 200\uc77c\uc120 \uc774\ud0c8",
-        "message": "S&P500\uacfc Nasdaq\uc774 \ubaa8\ub450 200\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4. \ubc29\uc5b4\uc801\uc73c\ub85c \ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4."
-      },
-      {
-        "id": "stock-dead-cross-KORU-2026-03-28",
-        "priority": "medium",
-        "kind": "stock_dead_cross",
-        "scope": "stock",
-        "title": "KORU \ub370\ub4dc\ud06c\ub85c\uc2a4",
-        "message": "KORU \ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4: 20\uc77c\uc120\uc774 50\uc77c\uc120 \uc544\ub798\ub85c \ub0b4\ub824\uac14\uc2b5\ub2c8\ub2e4.",
-        "ticker": "KORU"
-      },
-      {
-        "id": "stock-dead-cross-SOXX-2026-03-28",
-        "priority": "medium",
-        "kind": "stock_dead_cross",
-        "scope": "stock",
-        "title": "SOXX \ub370\ub4dc\ud06c\ub85c\uc2a4",
-        "message": "SOXX \ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4: 20\uc77c\uc120\uc774 50\uc77c\uc120 \uc544\ub798\ub85c \ub0b4\ub824\uac14\uc2b5\ub2c8\ub2e4.",
-        "ticker": "SOXX"
-      }
-    ]
+    "count": 0,
+    "items": []
   },
   "history": {
     "market": [
