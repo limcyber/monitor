@@ -1184,6 +1184,31 @@ def score_stock(
     if atr_ratio >= 0.06:
         negative_factors.append(factor_text("움직임이 커서 흔들릴 수 있습니다", 0))
 
+    if market_lvl <= 1:
+        if score > 35:
+            score = 35 + (score - 35) * 0.25
+        elif score < 25:
+            weak_market_floor = 6
+            if gap20 <= 0.06:
+                weak_market_floor += 4
+            elif gap20 <= 0.12:
+                weak_market_floor += 2
+            if gap50 <= 0.08:
+                weak_market_floor += 2
+            elif gap50 <= 0.15:
+                weak_market_floor += 1
+            if rs_10d_change >= -0.05:
+                weak_market_floor += 2
+            if not mid_bear:
+                weak_market_floor += 2
+            if atr_ratio < 0.06:
+                weak_market_floor += 1
+            if vol20.iloc[-1] and vol.iloc[-1] >= vol20.iloc[-1] * 0.9:
+                weak_market_floor += 1
+            if stk_ret20 > benchmark_ret20:
+                weak_market_floor += 2
+            score = max(score, min(24, weak_market_floor))
+
     positive_factors, negative_factors = prioritize_stock_factors(positive_factors, negative_factors)
     score = int(max(0, min(100, round(score))))
     s_state = stock_state(score)
