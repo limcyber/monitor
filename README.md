@@ -1,6 +1,8 @@
 # Simple Market Regime Monitor
 
 Market-first investment decision assistant with a fixed 5-stock watchlist.
+Repository: `limcyber/monitor`
+Live site: https://limcyber.github.io/monitor/
 
 ## What this project does
 
