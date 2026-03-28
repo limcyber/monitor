@@ -242,10 +242,12 @@ GitHub Actions 워크플로는 [daily-monitor.yml](./.github/workflows/daily-mon
 ### AI 분석 리프레시
 
 #### [market-ai-refresh.yml](./.github/workflows/market-ai-refresh.yml)
-미국 시장 상태 카드의 `AI 분석`을 정기적으로 새로 계산하는 워크플로입니다.
-- 현재는 매일 5분마다 돕니다
+미국 시장 `AI 분석`과 관심종목 `AI 요약`, 그리고 AI 전용 Discord 알림을 갱신하는 워크플로입니다.
+- `AI_ANALYSIS_TEST_MODE=true`면 매일 5분마다 실행합니다
+- `AI_ANALYSIS_TEST_MODE=false`면 매시간 정각에만 실행합니다
+- `AI_ANALYSIS_TEST_MODE`가 없으면 기본값은 `true`입니다
 - `GOOGLE_API_KEY` secret이 필요합니다
-- 현재 시장 상태, 점수, 추천 행동, 상위 관심종목 3개 전송
+- 시장 AI는 `gemini-2.5-pro`, 종목 AI는 `gemini-2.5-flash`를 사용합니다
 
 ## 7. 파일별 설명
 
