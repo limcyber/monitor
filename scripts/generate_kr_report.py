@@ -389,8 +389,8 @@ def kr_market_guidance(score: int, market_data: dict) -> tuple[list[str], list[s
         reasons.append("코스닥이 코스피에 크게 밀리지 않습니다")
     elif len(kosdaq_kospi_ratio) >= 20:
         score_value -= 4
-        negative_factors.append(factor_text("코스닥 쪽 힘이 약합니다", -4))
-        reasons.append("코스닥 쪽 힘이 약합니다")
+        negative_factors.append(factor_text("코스닥이 약해 시장 체감도 약합니다", -4))
+        reasons.append("코스닥이 약해 시장 체감도 약합니다")
 
     semicon_kospi_ratio = (semicon / kospi).dropna()
     if semicon.iloc[-1] > semicon_dma50.iloc[-1]:
@@ -405,7 +405,7 @@ def kr_market_guidance(score: int, market_data: dict) -> tuple[list[str], list[s
         positive_factors.append(factor_text("반도체 ETF가 20일선 위에 있습니다", 3))
     else:
         score_value -= 1
-        negative_factors.append(factor_text("반도체 ETF가 20일선 아래라 단기 흐름도 약합니다", -1))
+        negative_factors.append(factor_text("반도체 단기 흐름도 약합니다", -1))
     if len(semicon_kospi_ratio) >= 20 and semicon_kospi_ratio.iloc[-1] >= semicon_kospi_ratio.iloc[-20]:
         score_value += 4
         positive_factors.append(factor_text("반도체가 코스피보다 더 강합니다", 4))
@@ -487,7 +487,7 @@ def kr_market_guidance(score: int, market_data: dict) -> tuple[list[str], list[s
     if kospi_short_bear and kosdaq_short_bear:
         score_value -= 4
         score_value = min(score_value, 75)
-        negative_factors.append(factor_text("KOSPI와 KOSDAQ이 함께 단기 데드크로스라 아직 공격적으로 보기 어렵습니다", "상한 75"))
+        negative_factors.append(factor_text("KOSPI와 KOSDAQ이 함께 단기 데드크로스라 아직 적극적으로 보기 어렵습니다", "상한 75"))
         reasons.append("KOSPI와 KOSDAQ이 함께 단기 데드크로스입니다")
 
     kospi_mid_bull, kospi_mid_bear = recent_cross_signal(
@@ -544,7 +544,7 @@ def kr_market_guidance(score: int, market_data: dict) -> tuple[list[str], list[s
     if kosdaq.iloc[-1] <= kosdaq_dma200.iloc[-1]:
         negative_factors.append(factor_text("KOSDAQ이 200일선 아래에 있습니다", 0))
     if len(kosdaq_kospi_ratio) >= 20 and kosdaq_kospi_ratio.iloc[-1] < kosdaq_kospi_ratio.iloc[-20]:
-        negative_factors.append(factor_text("코스닥 쪽 힘이 약합니다", 0))
+        negative_factors.append(factor_text("코스닥이 약해 시장 체감도 약합니다", 0))
     if semicon.iloc[-1] <= semicon_dma50.iloc[-1]:
         negative_factors.append(factor_text("반도체 흐름이 약해졌습니다", 0))
     if len(semicon_kospi_ratio) >= 20 and semicon_kospi_ratio.iloc[-1] < semicon_kospi_ratio.iloc[-20]:
@@ -581,9 +581,9 @@ def kr_market_guidance(score: int, market_data: dict) -> tuple[list[str], list[s
     if kospi.iloc[-1] <= kospi_dma200.iloc[-1] and kosdaq.iloc[-1] <= kosdaq_dma200.iloc[-1]:
         invalidation = "KOSPI와 KOSDAQ이 모두 200일선 아래라면 반등이 나와도 쉽게 추격하기보다 방어적으로 보는 편이 좋습니다."
     elif usdkrw_z > 1.0:
-        invalidation = "원달러가 더 올라가면 국내장 수급이 흔들릴 수 있어 보수적으로 보는 편이 좋습니다."
+        invalidation = "원달러가 더 오르면 국내장 수급이 흔들릴 수 있어 더 조심해서 보는 편이 좋습니다."
     else:
-        invalidation = "KOSPI나 KOSDAQ이 20일선 아래로 다시 밀리고 원달러가 같이 오르면 공격적으로 보기 어렵습니다."
+        invalidation = "KOSPI나 KOSDAQ이 20일선 아래로 다시 밀리고 원달러가 같이 오르면 적극적으로 보기 어렵습니다."
 
     positive_factors, negative_factors = prioritize_market_factors(positive_factors, negative_factors)
     return {
@@ -646,13 +646,13 @@ def build_kr_market_output(now_et: datetime, previous_output: dict) -> tuple[dic
         "negative_factors": scored["negative_factors"],
         "invalidation": scored["invalidation"],
         "easy_explanation": (
-            "국내장 분위기가 비교적 괜찮아 대표주 위주로 선별 접근을 볼 수 있습니다."
+            "국내장 분위기가 아주 나쁘진 않아 대표주 위주로 선별 접근을 볼 수 있습니다."
             if level >= 5
             else "국내장은 아직 조심해서 보는 편이 좋습니다. 강한 종목도 분할 접근이 더 안전합니다."
         ),
         "negative_filters": {
             "filter_1_divergence": any("코스닥 참여는 약합니다" in item for item in scored["negative_factors"]),
-            "filter_2_bigcap_only": any("코스닥 쪽 힘이 약합니다" in item for item in scored["negative_factors"]),
+            "filter_2_bigcap_only": any("코스닥이 약해 시장 체감도 약합니다" in item for item in scored["negative_factors"]),
             "filter_3_high_stress": high_stress,
             "filter_4_event_risk": False,
             "event_names": [],

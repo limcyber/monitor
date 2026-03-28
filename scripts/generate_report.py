@@ -263,7 +263,7 @@ def market_state_name(level: int) -> str:
     return {
         6: "강한 상승장",
         5: "상승 우위",
-        4: "회복 구간",
+        4: "살아나는 구간",
         3: "중립 / 혼조",
         2: "약화 / 주의",
         1: "방어 우선",
@@ -540,7 +540,7 @@ def prioritize_stock_factors(positive_factors: list[str], negative_factors: list
         "최근 5일선이 20일선을 하향 이탈했습니다",
         "종가가 50일선 아래에 있습니다",
         "종가가 20일선 아래에 있습니다",
-        "시장보다 덜 강합니다",
+        "시장보다 힘이 약합니다",
         "거래량이 아직 약합니다",
         "최근 단기 급등이 커서 추격 매수는 부담입니다",
         "단기 흐름이 아직 약합니다",
@@ -584,7 +584,7 @@ def prioritize_stock_reasons(reasons: list[str], state: str) -> list[str]:
         "실적이 가까워 보수적으로 봐야 합니다",
         "실적 발표가 가까워 보수적으로 봐야 합니다",
         "거래량이 아직 약합니다",
-        "시장보다 덜 강합니다",
+        "시장보다 힘이 약합니다",
         "최근 단기 급등이 커서 추격 매수는 부담입니다",
         "최근 한 달 흐름이 시장보다 약합니다",
         "최근 한 달 수익률이 시장보다 약합니다",
@@ -904,7 +904,7 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
     if spx_close.iloc[-1] <= spx_dma200.iloc[-1] and ndx_close.iloc[-1] <= ndx_dma200.iloc[-1]:
         invalidation = "현재 S&P500과 나스닥이 모두 200일선 아래에 있습니다. 반등이 나오더라도 둘 다 200일선을 회복하지 못하고 오르는 종목 수까지 약하면 방어적으로 보는 편이 좋습니다."
     elif spx_close.iloc[-1] <= spx_dma200.iloc[-1] or ndx_close.iloc[-1] <= ndx_dma200.iloc[-1]:
-        invalidation = "S&P500 또는 나스닥 중 하나가 아직 200일선 아래에 있습니다. 둘 중 약한 쪽이 계속 밀리면 공격적으로 보기 어렵습니다."
+        invalidation = "S&P500 또는 나스닥 중 하나가 아직 200일선 아래에 있습니다. 둘 중 약한 쪽이 계속 밀리면 적극적으로 보기 어렵습니다."
     elif spx_close.iloc[-1] <= spx_dma50.iloc[-1] or ndx_close.iloc[-1] <= ndx_dma50.iloc[-1]:
         invalidation = "S&P500과 나스닥이 200일선 위에 있더라도 둘 중 하나가 50일선을 지키지 못하고 오르는 종목 수도 줄면 경계가 필요합니다."
     else:
@@ -982,7 +982,7 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
     confidence = confidence_from_coverage(total_count, valid_count)
     top_reasons = pick_market_reasons(lvl, positive_factors, negative_factors)
     easy = (
-        "시장 분위기가 비교적 괜찮아 강한 종목은 선별해서 접근해볼 수 있습니다."
+        "시장 분위기가 아주 나쁘진 않아 강한 종목은 선별해서 볼 수 있습니다."
         if lvl >= 5
         else "시장 분위기가 좋지 않아서 서두르기보다 방어적으로 보는 편이 좋습니다."
     )
@@ -1154,8 +1154,8 @@ def score_stock(
         negative_factors.append(factor_text("거래량이 아직 약합니다", -6))
     if rs_10d_weaker:
         score -= 6
-        reasons.append("시장보다 덜 강합니다")
-        negative_factors.append(factor_text("시장보다 덜 강합니다", -6))
+        reasons.append("시장보다 힘이 약합니다")
+        negative_factors.append(factor_text("시장보다 힘이 약합니다", -6))
 
     if close.iloc[-1] <= dma20.iloc[-1]:
         negative_factors.append(factor_text("20일선 아래라 흐름 확인이 더 필요합니다", 0))
@@ -1187,7 +1187,7 @@ def score_stock(
             action = "관찰"
 
     easy = (
-        "이 종목은 관심종목 안에서 비교적 괜찮은 편입니다. 다만 한 번에 크게 들어가기보다 차분히 접근하는 편이 좋습니다."
+        "이 종목은 관심종목 안에서 흐름이 나쁘지 않습니다. 다만 한 번에 크게 들어가기보다 차분히 접근하는 편이 좋습니다."
         if s_state in {"강함", "양호"}
         else "지금은 확실히 강하다고 보기 어렵습니다. 서두르기보다 조금 더 지켜보는 편이 좋습니다."
     )
@@ -1199,7 +1199,7 @@ def score_stock(
         "stock_state": s_state,
         "final_action": action,
         "top_reasons": reasons[:3] if reasons else ["뚜렷하게 강하다고 보긴 어렵습니다"],
-        "invalidation": "20일선 아래로 밀리고 시장보다 덜 강하게 움직이면 더 보수적으로 봐야 합니다.",
+        "invalidation": "20일선을 다시 깨고 시장보다 힘이 약해지면 더 조심해서 보는 편이 좋습니다.",
         "easy_explanation": easy,
         "note": note,
         "cross_highlights": cross_highlights[:2],
@@ -1243,9 +1243,9 @@ def summarize_stock_note(score: int, state: str, reasons: list[str], earnings_so
     elif state == "애매":
         base = "아직 확실하진 않습니다."
     elif state == "약함":
-        base = "지금 서두를 필요는 없어 보입니다."
+        base = "지금은 조금 더 기다리는 편이 낫습니다."
     else:
-        base = "지금은 굳이 들어갈 이유가 약합니다."
+        base = "지금은 바로 들어갈 이유가 크지 않습니다."
     reason_text = pick_note_reason(reasons, state) or default_reason_for_state(state)
     return f"{base} 이유: {reason_text}."
 
@@ -1262,7 +1262,7 @@ def pick_note_reason(reasons: list[str], state: str) -> str | None:
             "실적이 가까워 보수적으로 봐야 합니다",
             "실적 발표가 가까워 보수적으로 봐야 합니다",
             "거래량이 아직 약합니다",
-            "시장보다 덜 강합니다",
+            "시장보다 힘이 약합니다",
             "최근 단기 급등이 커서 추격 매수는 부담입니다",
             "최근 한 달 흐름이 시장보다 약합니다",
             "최근 한 달 수익률이 시장보다 약합니다",
@@ -1307,7 +1307,7 @@ def translate_reason(reason: str) -> str:
         "종가가 20일선 아래에 있습니다": "20일선 아래에 있습니다",
         "종가가 50일선 아래에 있습니다": "50일선 아래에 있습니다",
         "거래량이 아직 약합니다": "거래량이 아직 약합니다",
-        "시장보다 덜 강합니다": "시장보다 덜 강합니다",
+        "시장보다 힘이 약합니다": "시장보다 힘이 약합니다",
         "이 종목이 시장보다 더 잘 버팁니다": "이 종목이 시장보다 더 잘 버팁니다",
         "최근 중기 골든크로스가 나왔습니다": "최근 중기 골든크로스가 나왔습니다",
         "최근 단기 골든크로스가 나왔습니다": "최근 단기 골든크로스가 나왔습니다",
@@ -1326,8 +1326,8 @@ def translate_reason(reason: str) -> str:
 
 def default_reason_for_state(state: str) -> str:
     mapping = {
-        "강함": "추세가 비교적 안정적입니다",
-        "양호": "흐름이 비교적 괜찮습니다",
+        "강함": "추세가 안정적입니다",
+        "양호": "흐름이 나쁘지 않습니다",
         "애매": "강하다고 보기엔 아직 부족합니다",
         "약함": "주가 흐름이 약합니다",
         "회피": "지금은 좋은 진입 신호가 부족합니다",
