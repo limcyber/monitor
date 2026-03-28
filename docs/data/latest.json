@@ -1,5 +1,5 @@
 {
-  "generated_at_et": "2026-03-28 01:18 ET",
+  "generated_at_et": "2026-03-28 01:19 ET",
   "market_data_as_of": "2026-03-27 16:00 ET (Close)",
   "market": {
     "state": "\ub808\ubca8 1/6 - \ubc29\uc5b4 \uc6b0\uc120",
@@ -57,7 +57,9 @@
       "tnx_20d_zscore": 1.706566951735031
     },
     "change_tags": [
-      "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
+      "\uc810\uc218 0",
+      "\ub808\ubca8 \ubcc0\ud654 \uc5c6\uc74c",
+      "VIX \uc77c\uac04 +13.16%"
     ],
     "position_tags": [
       "\ucd1d \ub178\ucd9c 0~5%",
@@ -791,7 +793,7 @@
         ]
       },
       "change_tags": [
-        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
+        "\uc810\uc218 0"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -1457,7 +1459,7 @@
         ]
       },
       "change_tags": [
-        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
+        "\uc810\uc218 0"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -2123,7 +2125,7 @@
         ]
       },
       "change_tags": [
-        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
+        "\uc810\uc218 0"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -2797,7 +2799,7 @@
         ]
       },
       "change_tags": [
-        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
+        "\uc810\uc218 0"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -3462,7 +3464,7 @@
         ]
       },
       "change_tags": [
-        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
+        "\uc810\uc218 0"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -4131,7 +4133,7 @@
         ]
       },
       "change_tags": [
-        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
+        "\uc810\uc218 0"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
