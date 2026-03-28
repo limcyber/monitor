@@ -2,7 +2,7 @@
   "market": [
     {
       "date": "2026-03-28",
-      "score": 21,
+      "score": 0,
       "level": "\ub808\ubca8 1/6 - \ubc29\uc5b4 \uc6b0\uc120"
     }
   ],
@@ -10,29 +10,29 @@
     "NVDA": [
       {
         "date": "2026-03-28",
-        "score": 15,
+        "score": 0,
         "state": "\ud68c\ud53c"
       }
     ],
     "TSLA": [
       {
         "date": "2026-03-28",
-        "score": 5,
+        "score": 0,
         "state": "\ud68c\ud53c"
       }
     ],
     "META": [
       {
         "date": "2026-03-28",
-        "score": 5,
+        "score": 0,
         "state": "\ud68c\ud53c"
       }
     ],
     "AMD": [
       {
         "date": "2026-03-28",
-        "score": 47,
-        "state": "\uc57d\ud568"
+        "score": 33,
+        "state": "\ud68c\ud53c"
       }
     ],
     "TEM": [
@@ -45,14 +45,14 @@
     "SOXX": [
       {
         "date": "2026-03-28",
-        "score": 5,
+        "score": 0,
         "state": "\ud68c\ud53c"
       }
     ],
     "SERV": [
       {
         "date": "2026-03-28",
-        "score": 5,
+        "score": 0,
         "state": "\ud68c\ud53c"
       }
     ],
