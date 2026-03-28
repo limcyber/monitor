@@ -1345,9 +1345,16 @@ def main() -> None:
     market_output["sector_tags"] = sector_tags({"SOXX": soxx, "XLK": xlk, "XLF": xlf, "XLY": xly})
     market_output["confidence_warnings"] = market_confidence_warnings(sp500_close.shape[1], dxy_source, stock_reports)
 
+    market_close_time = datetime.combine(spx.index[-1].date(), datetime.min.time(), tzinfo=ET).replace(hour=16, minute=0)
+    intraday_mode = now_et.date() == spx.index[-1].date() and now_et < market_close_time
+
     output = {
         "generated_at_et": now_et.strftime("%Y-%m-%d %H:%M ET"),
-        "market_data_as_of": f"{spx.index[-1].strftime('%Y-%m-%d')} 16:00 ET (Close)",
+        "market_data_as_of": (
+            f"{now_et.strftime('%Y-%m-%d %H:%M ET')} (Intraday)"
+            if intraday_mode
+            else f"{spx.index[-1].strftime('%Y-%m-%d')} 16:00 ET (Close)"
+        ),
         "market": market_output,
         "watchlist_summary": summary_table,
         "stocks": stock_reports,
