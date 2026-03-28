@@ -629,7 +629,7 @@ function initStockPanel(stocks) {
   if (!panel) return;
   const stateEl = panel.querySelector(".stock-panel-state");
   const syncState = () => {
-    if (stateEl) stateEl.textContent = panel.open ? "펼침" : "닫힘";
+    if (stateEl) stateEl.textContent = panel.open ? "닫힘" : "펼침";
   };
   const renderIfNeeded = () => {
     if (appState.stockRendered) return;

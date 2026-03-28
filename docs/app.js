@@ -866,7 +866,7 @@ function initStockPanel(stocks) {
 
   const syncState = () => {
     if (stateEl) {
-      stateEl.textContent = panel.open ? "펼침" : "닫힘";
+      stateEl.textContent = panel.open ? "닫힘" : "펼침";
     }
   };
 
