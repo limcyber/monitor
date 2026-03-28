@@ -1537,12 +1537,25 @@ body[data-theme="bw"] .chart-legend {
     padding: 7px 7px 6px;
   }
 
+  .stress-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
   .stress-label {
     font-size: 10px;
+    white-space: nowrap;
   }
 
   .stress-value {
     font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .stress-change {
+    grid-column: auto;
   }
 
   .stress-mini-row {
