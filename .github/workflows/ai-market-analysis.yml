@@ -36,21 +36,19 @@ jobs:
         id: market_window
         run: |
           python - <<'PY'
-          from datetime import datetime, time
+          from datetime import datetime
           from zoneinfo import ZoneInfo
           import os
 
           now = datetime.now(ZoneInfo("America/New_York"))
-          current = now.time()
           test_mode = os.environ.get("AI_ANALYSIS_TEST_MODE", "true").strip().lower() in {"1", "true", "yes", "on"}
-          should_run = False
 
           if os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch":
             should_run = True
           elif test_mode:
             should_run = True
           else:
-            should_run = current.minute == 0
+            should_run = now.minute == 0
 
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
             f.write(f"should_run={'true' if should_run else 'false'}\n")
