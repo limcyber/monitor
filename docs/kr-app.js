@@ -408,7 +408,6 @@ function renderMarket(data) {
   renderQuote("marketKospiQuote", data.market.metrics.kospi_close, data.market.metrics.kospi_change_pct);
   renderQuote("marketKosdaqQuote", data.market.metrics.kosdaq_close, data.market.metrics.kosdaq_change_pct);
   renderQuote("marketKospi200Quote", data.market.metrics.kospi200_close, data.market.metrics.kospi200_change_pct);
-  renderQuote("marketKrx100Quote", data.market.metrics.krx100_close, data.market.metrics.krx100_change_pct);
   renderQuote("marketSemiconQuote", data.market.metrics.semicon_close, data.market.metrics.semicon_change_pct);
   renderQuote("marketUsdkrwQuote", data.market.metrics.usdkrw_close, data.market.metrics.usdkrw_change_pct, true);
   renderQuote("marketVixQuote", data.market.metrics.vix_close, data.market.metrics.vix_change_pct, true);

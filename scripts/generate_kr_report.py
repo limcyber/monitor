@@ -82,7 +82,7 @@ def kr_market_change_tags(previous_output: dict, current_market: dict) -> list[s
 
 def kr_confidence_warnings(data_map: dict[str, pd.DataFrame], stock_reports: list[dict]) -> list[str]:
     warnings = []
-    missing = [label for label, df in data_map.items() if df.empty]
+    missing = [label for label, df in data_map.items() if df.empty or len(df) < 60]
     if missing:
         warnings.append(f"지수 데이터 일부 누락: {', '.join(missing[:3])}")
     if any(len(stock.get("series", {}).get("dates", [])) < 60 for stock in stock_reports):
@@ -94,7 +94,6 @@ def kr_market_guidance(score: int, market_data: dict) -> tuple[list[str], list[s
     kospi = market_data["KOSPI"]["Close"]
     kosdaq = market_data["KOSDAQ"]["Close"]
     kospi200 = market_data["KOSPI200"]["Close"]
-    krx100 = market_data["KRX100"]["Close"]
     semicon = market_data["SEMICON"]["Close"]
     usdkrw = market_data["USDKRW"]["Close"]
     vix = market_data["VIX"]["Close"]
@@ -116,7 +115,6 @@ def kr_market_guidance(score: int, market_data: dict) -> tuple[list[str], list[s
 
     kospi200_dma50 = kospi200.rolling(50).mean()
     kospi200_dma200 = kospi200.rolling(200).mean()
-    krx100_dma200 = krx100.rolling(200).mean()
     semicon_dma20 = semicon.rolling(20).mean()
     semicon_dma50 = semicon.rolling(50).mean()
 
@@ -157,9 +155,6 @@ def kr_market_guidance(score: int, market_data: dict) -> tuple[list[str], list[s
     if kospi200.iloc[-1] > kospi200_dma200.iloc[-1]:
         score_value += 5
         positive_factors.append(factor_text("KOSPI200이 200일선 위에 있습니다", 5))
-    if krx100.iloc[-1] > krx100_dma200.iloc[-1]:
-        score_value += 4
-        positive_factors.append(factor_text("KRX100이 200일선 위에 있습니다", 4))
 
     kosdaq_kospi_ratio = (kosdaq / kospi).dropna()
     if len(kosdaq_kospi_ratio) >= 20 and kosdaq_kospi_ratio.iloc[-1] >= kosdaq_kospi_ratio.iloc[-20]:
@@ -317,9 +312,6 @@ def build_kr_market_output(now_et: datetime, previous_output: dict) -> tuple[dic
     kospi200, ts = load_price_frame("^KS200", now_et)
     if ts:
         latest_intraday_points.append(ts)
-    krx100, ts = load_price_frame("KRX100.KS", now_et)
-    if ts:
-        latest_intraday_points.append(ts)
     semicon, ts = load_price_frame("091160.KS", now_et)
     if ts:
         latest_intraday_points.append(ts)
@@ -334,7 +326,6 @@ def build_kr_market_output(now_et: datetime, previous_output: dict) -> tuple[dic
         "KOSPI": kospi,
         "KOSDAQ": kosdaq,
         "KOSPI200": kospi200,
-        "KRX100": krx100,
         "SEMICON": semicon,
         "USDKRW": usdkrw,
         "VIX": vix,
@@ -342,7 +333,7 @@ def build_kr_market_output(now_et: datetime, previous_output: dict) -> tuple[dic
     scored = kr_market_guidance(0, market_data)
     score = scored["score"]
     level = market_level(score)
-    confidence = confidence_from_coverage(13, sum(1 for df in market_data.values() if not df.empty and len(df) >= 60))
+    confidence = confidence_from_coverage(6, sum(1 for df in market_data.values() if not df.empty and len(df) >= 60))
 
     market_output = {
         "state": f"레벨 {level}/6 - {market_state_name(level)}",
@@ -377,8 +368,6 @@ def build_kr_market_output(now_et: datetime, previous_output: dict) -> tuple[dic
             "kosdaq_dma200": float(kosdaq["Close"].rolling(200).mean().iloc[-1]),
             "kospi200_close": float(kospi200["Close"].iloc[-1]),
             "kospi200_change_pct": pct_change_from_prev_close(kospi200["Close"]),
-            "krx100_close": float(krx100["Close"].iloc[-1]),
-            "krx100_change_pct": pct_change_from_prev_close(krx100["Close"]),
             "semicon_close": float(semicon["Close"].iloc[-1]),
             "semicon_change_pct": pct_change_from_prev_close(semicon["Close"]),
             "usdkrw_close": float(usdkrw["Close"].iloc[-1]),
@@ -466,7 +455,6 @@ def main() -> None:
                 "kosdaq_close": [float(v) for v in market_frames["KOSDAQ"]["Close"].tail(63).tolist()],
                 "kosdaq_dma200": [None if pd.isna(v) else float(v) for v in market_frames["KOSDAQ"]["Close"].rolling(200).mean().tail(63).tolist()],
                 "kospi200_close": [float(v) for v in market_frames["KOSPI200"]["Close"].tail(63).tolist()],
-                "krx100_close": [float(v) for v in market_frames["KRX100"]["Close"].tail(63).tolist()],
                 "semicon_close": [float(v) for v in market_frames["SEMICON"]["Close"].tail(63).tolist()],
                 "usdkrw_close": [float(v) for v in market_frames["USDKRW"]["Close"].tail(63).tolist()],
                 "vix_close": [float(v) for v in market_frames["VIX"]["Close"].tail(63).tolist()],

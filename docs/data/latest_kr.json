@@ -1,10 +1,10 @@
 {
-  "generated_at_et": "2026-03-28 04:56 ET",
+  "generated_at_et": "2026-03-28 04:59 ET",
   "market_data_as_of": "2026-03-27 15:30 KST (Close)",
   "market": {
     "state": "레벨 6/6 - 강한 상승장",
     "score": 91,
-    "confidence": "낮음",
+    "confidence": "높음",
     "execution_strength": "좋음",
     "action": "매수 / 강한 보유",
     "top_reasons": [
@@ -31,7 +31,7 @@
       "KOSDAQ에서 최근 5일선이 20일선을 하향 이탈했습니다 (0)"
     ],
     "invalidation": "원달러가 더 올라가면 국내장 수급이 흔들릴 수 있어 보수적으로 보는 편이 좋습니다.",
-    "easy_explanation": "국내장 분위기가 비교적 괜찮아 대표주 위주로 선별 접근을 볼 수 있습니다. 신뢰도는 낮음입니다.",
+    "easy_explanation": "국내장 분위기가 비교적 괜찮아 대표주 위주로 선별 접근을 볼 수 있습니다. 신뢰도는 높음입니다.",
     "negative_filters": {
       "filter_1_divergence": false,
       "filter_2_bigcap_only": false,
@@ -48,8 +48,6 @@
       "kosdaq_dma200": 911.1694497680664,
       "kospi200_close": 805.1900024414062,
       "kospi200_change_pct": -0.4574184549229976,
-      "krx100_close": 12655.66015625,
-      "krx100_change_pct": null,
       "semicon_close": 95450.0,
       "semicon_change_pct": -0.562558599854146,
       "usdkrw_close": 1508.3599853515625,
@@ -61,9 +59,7 @@
       "kosdaq_kospi_ratio_change_20d": 0.09870880608312116
     },
     "change_tags": [
-      "점수 0",
-      "레벨 변화 없음",
-      "원달러 일간 +0.49%"
+      "첫 생성 데이터"
     ],
     "position_tags": [
       "총 노출 80~100%",
@@ -1176,7 +1172,7 @@
       "market_label": "KOSPI",
       "display_label": "삼성전자 (005930.KS)",
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 0~3%",
@@ -2218,7 +2214,7 @@
       "market_label": "KOSPI",
       "display_label": "SK하이닉스 (000660.KS)",
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 0~3%",
@@ -3253,7 +3249,7 @@
       "market_label": "KOSPI",
       "display_label": "NAVER (035420.KS)",
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 0~3%",
@@ -4292,7 +4288,7 @@
       "market_label": "KOSPI",
       "display_label": "현대차 (005380.KS)",
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 0~3%",
@@ -5334,7 +5330,7 @@
       "market_label": "KOSDAQ",
       "display_label": "아이티센글로벌 (124500.KQ)",
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 0~3%",
@@ -6373,7 +6369,7 @@
       "market_label": "KOSDAQ",
       "display_label": "클로봇 (466100.KQ)",
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 0~3%",
@@ -6780,9 +6776,6 @@
         838.7000122070312,
         808.8900146484375,
         805.1900024414062
-      ],
-      "krx100_close": [
-        12655.66015625
       ],
       "semicon_close": [
         57990.0,
