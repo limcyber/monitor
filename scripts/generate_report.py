@@ -285,7 +285,7 @@ def stock_volume_points(price_up: bool, ratio: float | None) -> tuple[int, str |
     if ratio < 0.85:
         return (-10, None, factor_text("거래량이 아직 약합니다", -10))
     if ratio < 1.0:
-        return (0, None, factor_text("강한 상승 거래량 신호가 아직 부족합니다", 0))
+        return (0, None, factor_text("거래량이 강하게 붙는 모습은 아직 부족합니다", 0))
     return (0, None, None)
 
 
@@ -327,12 +327,12 @@ def prioritize_stock_reasons(reasons: list[str], state: str) -> list[str]:
     positive_priority = [
         "최근 중기 골든크로스가 나왔습니다",
         "최근 단기 골든크로스가 나왔습니다",
-        "S&P500 대비 상대강도가 좋아지고 있습니다",
-        "최근 20일 수익률이 S&P500보다 좋습니다",
+        "이 종목이 시장보다 더 잘 버팁니다",
+        "최근 한 달 흐름이 시장보다 좋습니다",
         "상승할 때 거래량이 평균보다 강했습니다",
         "최근에는 상승일 거래량이 더 우세했습니다",
-        "20일선이 50일선 위에 있습니다",
-        "20일선이 위로 기울고 있습니다",
+        "짧은 흐름이 중간 흐름보다 좋습니다",
+        "20일선이 올라가는 중입니다",
         "50일선 위에 있습니다",
         "20일선 위에 있습니다",
     ]
@@ -344,9 +344,9 @@ def prioritize_stock_reasons(reasons: list[str], state: str) -> list[str]:
         "거래량이 아직 약합니다",
         "최근 시장보다 힘이 약합니다",
         "최근 단기 급등이 커서 추격 매수는 부담입니다",
-        "최근 20일 기준 S&P500보다 약했습니다",
-        "최근 20일 수익률이 S&P500보다 좋지 않습니다",
-        "20일선이 50일선 아래라 추세가 약합니다",
+        "최근 한 달 흐름이 시장보다 약합니다",
+        "최근 한 달 수익률이 시장보다 약합니다",
+        "짧은 흐름이 중간 흐름보다 약합니다",
         "종가가 20일선 아래에 있습니다",
         "종가가 50일선 아래에 있습니다",
     ]
@@ -426,8 +426,8 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
     valid_count += 1
     if slope_up(spx_dma20):
         score += 5
-        reasons.append("S&P500의 20일선이 위로 기울고 있습니다")
-        positive_factors.append(factor_text("S&P500의 20일선이 위로 기울고 있습니다", 5))
+        reasons.append("S&P500의 20일선이 올라가는 중입니다")
+        positive_factors.append(factor_text("S&P500의 20일선이 올라가는 중입니다", 5))
     valid_count += 1
     if spx_close.iloc[-1] > spx_dma20.iloc[-1]:
         score += 5
@@ -475,8 +475,8 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
     valid_count += 1
     if slope_up(ndx_dma20):
         score += 5
-        reasons.append("나스닥의 20일선이 위로 기울고 있습니다")
-        positive_factors.append(factor_text("나스닥의 20일선이 위로 기울고 있습니다", 5))
+        reasons.append("나스닥의 20일선이 올라가는 중입니다")
+        positive_factors.append(factor_text("나스닥의 20일선이 올라가는 중입니다", 5))
     valid_count += 1
     if ndx_close.iloc[-1] > ndx_dma20.iloc[-1]:
         score += 5
@@ -522,12 +522,12 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
     valid_count += 1
     if len(rut_spx_ratio) >= 20 and rut_spx_ratio.iloc[-1] >= rut_spx_ratio.iloc[-20]:
         score += 4
-        positive_factors.append(factor_text("소형주가 대형주에 크게 밀리지 않습니다", 4))
+        positive_factors.append(factor_text("소형주도 대형주에 크게 밀리지 않습니다", 4))
     valid_count += 1
 
     if breadth["pct_above_20dma"] > 55:
         score += 5
-        reasons.append("시장 전체 종목 흐름이 비교적 건강합니다")
+        reasons.append("오르는 종목 수가 너무 적지는 않습니다")
         positive_factors.append(factor_text("20일선 위 종목 비율이 55%를 넘습니다", 5))
     valid_count += 1
     if breadth["pct_above_50dma"] > 50:
@@ -540,7 +540,7 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
     valid_count += 1
     if breadth["rsp_spy_ratio_20d_up_or_flat"]:
         score += 2
-        positive_factors.append(factor_text("동일가중 흐름이 대형주에 크게 밀리지 않습니다", 2))
+        positive_factors.append(factor_text("대형주 몇 종목만 오르는 장은 아닙니다", 2))
     valid_count += 1
 
     vix_pct = percentile_rank(vix["Close"])
@@ -556,12 +556,12 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
     dxy_z = zscore(dxy["Close"], 20)
     if dxy_z <= 1.0:
         score += 5
-        positive_factors.append(factor_text("달러 강세가 아직 과도하지 않습니다", 5))
+        positive_factors.append(factor_text("달러 강세가 아직 심하지 않습니다", 5))
     valid_count += 1
     tnx_z = zscore(tnx_close, 20)
     if tnx_z <= 0.8:
         score += 4
-        positive_factors.append(factor_text("10년물 금리 압박이 아직 과도하지 않습니다", 4))
+        positive_factors.append(factor_text("10년물 금리 부담이 아직 심하지 않습니다", 4))
     valid_count += 1
 
     spy_vol_ratio = volume_ratio(spy_proxy_volume, 20)
@@ -593,43 +593,43 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
     else:
         negative_factors.append(factor_text(f"{', '.join(event_names)} 이벤트가 가까워 보수적으로 봐야 합니다", -3))
     if spx_close.iloc[-1] <= spx_dma200.iloc[-1] and ndx_close.iloc[-1] <= ndx_dma200.iloc[-1]:
-        invalidation = "현재 S&P500과 나스닥이 모두 200일선 아래에 있습니다. 반등이 나오더라도 둘 다 200일선을 회복하지 못하고 시장 내부 흐름까지 약하면 방어적으로 보는 편이 좋습니다."
+        invalidation = "현재 S&P500과 나스닥이 모두 200일선 아래에 있습니다. 반등이 나오더라도 둘 다 200일선을 회복하지 못하고 오르는 종목 수까지 약하면 방어적으로 보는 편이 좋습니다."
     elif spx_close.iloc[-1] <= spx_dma200.iloc[-1] or ndx_close.iloc[-1] <= ndx_dma200.iloc[-1]:
-        invalidation = "S&P500 또는 나스닥 중 하나가 아직 200일선 아래에 있습니다. 둘 중 약한 축이 계속 무너지면 공격적으로 보기 어렵습니다."
+        invalidation = "S&P500 또는 나스닥 중 하나가 아직 200일선 아래에 있습니다. 둘 중 약한 쪽이 계속 밀리면 공격적으로 보기 어렵습니다."
     elif spx_close.iloc[-1] <= spx_dma50.iloc[-1] or ndx_close.iloc[-1] <= ndx_dma50.iloc[-1]:
-        invalidation = "S&P500과 나스닥이 200일선 위에 있더라도 둘 중 하나가 50일선을 지키지 못하고 시장 내부 흐름도 약해지면 경계가 필요합니다."
+        invalidation = "S&P500과 나스닥이 200일선 위에 있더라도 둘 중 하나가 50일선을 지키지 못하고 오르는 종목 수도 줄면 경계가 필요합니다."
     else:
-        invalidation = "S&P500과 나스닥 중 하나라도 50일선 아래로 밀리고 시장 내부 흐름도 함께 약해지면 경계가 필요합니다."
+        invalidation = "S&P500과 나스닥 중 하나라도 50일선 아래로 밀리고 오르는 종목 수도 함께 줄면 경계가 필요합니다."
     if event_risk:
         invalidation = f"{', '.join(event_names)} 이벤트가 가까워 공격적으로 대응하기는 부담스럽습니다."
 
     if (spx_close.iloc[-1] > spx_close.iloc[-2] or ndx_close.iloc[-1] > ndx_close.iloc[-2]) and (not breadth["adline_5d_up"] or breadth["pct_above_20dma_change"] < 0):
         score -= 12
-        negative_factors.append(factor_text("S&P500 또는 나스닥이 반등해도 시장 내부 흐름은 따라오지 못했습니다", -12))
+        negative_factors.append(factor_text("지수는 반등해도 오르는 종목 수는 따라오지 못했습니다", -12))
     rsp_spx_ratio = (rsp["Close"] / spx_close).dropna()
     if (spx_close.iloc[-1] > spx_dma50.iloc[-1] or ndx_close.iloc[-1] > ndx_dma50.iloc[-1]) and len(rsp_spx_ratio) >= 20 and rsp_spx_ratio.iloc[-1] < rsp_spx_ratio.iloc[-20]:
         score -= 8
-        negative_factors.append(factor_text("대형주와 나스닥만 버티고 있고 시장 전체 확산은 약합니다", -8))
+        negative_factors.append(factor_text("대형주 몇 종목만 버티고 있고 시장 전체 힘은 약합니다", -8))
     if vix_pct > 85:
         negative_factors.append(factor_text("VIX가 매우 높아 점수 상한이 걸렸습니다", "상한 50"))
         score = min(score, 50)
 
     if breadth["pct_above_20dma"] <= 55:
-        negative_factors.append(factor_text("20일선 위 종목 비율이 낮아 시장 폭이 약합니다", 0))
+        negative_factors.append(factor_text("20일선 위 종목 비율이 낮아 오르는 종목 수가 적습니다", 0))
     if breadth["pct_above_50dma"] <= 50:
-        negative_factors.append(factor_text("50일선 위 종목 비율이 낮아 중기 흐름도 약합니다", 0))
+        negative_factors.append(factor_text("50일선 위 종목 비율이 낮아 중간 흐름도 약합니다", 0))
     if not breadth["adline_5d_up"]:
         negative_factors.append(factor_text("최근 5일 기준 상승 종목 수 흐름이 약합니다", 0))
     if not breadth["rsp_spy_ratio_20d_up_or_flat"]:
-        negative_factors.append(factor_text("동일가중 지수가 약해 대형주 쏠림이 있습니다", 0))
+        negative_factors.append(factor_text("대형주 몇 종목에만 힘이 몰리고 있습니다", 0))
     if rut_close.iloc[-1] <= rut_dma200.iloc[-1]:
-        negative_factors.append(factor_text("소형주(RUT)가 200일선 아래에 있어 시장 폭이 약합니다", 0))
+        negative_factors.append(factor_text("소형주가 약해서 시장 전체 힘도 약합니다", 0))
     if len(rut_spx_ratio) >= 20 and rut_spx_ratio.iloc[-1] < rut_spx_ratio.iloc[-20]:
-        negative_factors.append(factor_text("소형주가 대형주 대비 약해 위험 선호가 낮습니다", 0))
+        negative_factors.append(factor_text("소형주가 대형주보다 약해 공격적인 분위기가 아닙니다", 0))
     if vix_pct >= 60 and vix_pct <= 85:
         negative_factors.append(factor_text("VIX가 낮지 않아 투자 심리가 불안합니다", 0))
     if hyg["Close"].iloc[-1] <= hyg_dma50.iloc[-1]:
-        negative_factors.append(factor_text("HYG가 50일선 아래라 위험 선호가 약합니다", 0))
+        negative_factors.append(factor_text("HYG가 50일선 아래라 위험자산 분위기가 약합니다", 0))
     if dxy_z > 1.0:
         negative_factors.append(factor_text("달러가 강해 위험자산에는 부담입니다", 0))
     if tnx_z > 0.8:
@@ -674,7 +674,7 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
         state=f"레벨 {lvl}/{MARKET_LEVELS_TOTAL} - {market_state_name(lvl)}",
         action=market_action(lvl),
         confidence=confidence,
-        reasons=top_reasons if top_reasons else ["오늘은 시장을 강하게 좋게 볼 근거가 많지 않습니다"],
+        reasons=top_reasons if top_reasons else ["오늘은 시장을 좋게 볼 만한 신호가 많지 않습니다"],
         invalidation=invalidation,
         easy_explanation=easy + f" 신뢰도는 {confidence}입니다.",
         cross_highlights=cross_highlights[:4],
@@ -711,10 +711,10 @@ def score_stock(
         positive_factors.append(factor_text("종가가 50일선 위에 있습니다", 10))
     if dma20.iloc[-1] > dma50.iloc[-1]:
         score += 10
-        positive_factors.append(factor_text("20일선이 50일선 위에 있습니다", 10))
+        positive_factors.append(factor_text("짧은 흐름이 중간 흐름보다 좋습니다", 10))
     if slope_up(dma20):
         score += 10
-        positive_factors.append(factor_text("20일선이 위로 기울고 있습니다", 10))
+        positive_factors.append(factor_text("20일선이 올라가는 중입니다", 10))
 
     short_bull, short_bear = recent_cross_signal(
         dma5,
@@ -750,14 +750,14 @@ def score_stock(
     rs = (close / benchmark_df["Close"]).dropna()
     if len(rs) >= 20 and rs.iloc[-1] > rs.iloc[-20]:
         score += 15
-        reasons.append("S&P500 대비 상대강도가 좋아지고 있습니다")
-        positive_factors.append(factor_text("S&P500보다 더 강한 흐름입니다", 15))
+        reasons.append("이 종목이 시장보다 더 잘 버팁니다")
+        positive_factors.append(factor_text("시장보다 더 잘 버팁니다", 15))
 
     stk_ret20 = close.pct_change(20).iloc[-1] if len(close) >= 21 else 0
     benchmark_ret20 = benchmark_df["Close"].pct_change(20).iloc[-1] if len(benchmark_df["Close"]) >= 21 else 0
     if stk_ret20 > benchmark_ret20:
         score += 10
-        positive_factors.append(factor_text("최근 20일 수익률이 S&P500보다 좋습니다", 10))
+        positive_factors.append(factor_text("최근 한 달 흐름이 시장보다 좋습니다", 10))
 
     vol20 = vol.rolling(20).mean()
     has_strong_volume = bool(close.iloc[-1] > close.iloc[-2] and vol.iloc[-1] > vol20.iloc[-1])
@@ -783,13 +783,13 @@ def score_stock(
     atr_ratio = float((atr14.iloc[-1] / close.iloc[-1]) if close.iloc[-1] else 0.0)
     if atr_ratio < 0.06:
         score += 5
-        positive_factors.append(factor_text("변동성이 과도하지 않습니다", 5))
+        positive_factors.append(factor_text("흔들림이 과하지 않습니다", 5))
 
     recent_5d = close.pct_change(5).iloc[-1] if len(close) >= 6 else 0
     overheated = recent_5d > 0.2
     if not overheated:
         score += 5
-        positive_factors.append(factor_text("최근 급등 과열 구간은 아닙니다", 5))
+        positive_factors.append(factor_text("최근 너무 급하게 오른 상태는 아닙니다", 5))
     else:
         negative_factors.append(factor_text("최근 단기 급등이 커서 추격 매수는 부담입니다", 0))
 
@@ -800,7 +800,7 @@ def score_stock(
         reasons.append("실적이 가까워 보수적으로 봐야 합니다")
         negative_factors.append(factor_text("실적 발표가 가까워 보수적으로 봐야 합니다", -5))
     else:
-        negative_factors.append(factor_text("실적 일정을 확인하지 못해 보수적으로 봐야 합니다", -5))
+        negative_factors.append(factor_text("실적 일정 확인이 안 돼서 조심해서 봐야 합니다", -5))
 
     rs_10d_weaker = bool(len(rs) >= 10 and rs.iloc[-1] < rs.iloc[-10])
     if close.iloc[-1] > dma20.iloc[-1] and vol.iloc[-1] < vol20.iloc[-1]:
@@ -810,26 +810,26 @@ def score_stock(
     if rs_10d_weaker:
         score -= 10
         reasons.append("최근 시장보다 힘이 약합니다")
-        negative_factors.append(factor_text("가격 대비 상대강도는 약해졌습니다", -10))
+        negative_factors.append(factor_text("시장보다 덜 강하게 움직입니다", -10))
 
     if close.iloc[-1] <= dma20.iloc[-1]:
         negative_factors.append(factor_text("종가가 20일선 아래에 있습니다", 0))
     if close.iloc[-1] <= dma50.iloc[-1]:
         negative_factors.append(factor_text("종가가 50일선 아래에 있습니다", 0))
     if dma20.iloc[-1] <= dma50.iloc[-1]:
-        negative_factors.append(factor_text("20일선이 50일선 아래라 추세가 약합니다", 0))
+        negative_factors.append(factor_text("짧은 흐름이 중간 흐름보다 약합니다", 0))
     if not slope_up(dma20):
-        negative_factors.append(factor_text("20일선 기울기가 아직 위를 향하지 않습니다", 0))
+        negative_factors.append(factor_text("20일선이 아직 올라가는 모습은 아닙니다", 0))
     if len(rs) >= 20 and rs.iloc[-1] <= rs.iloc[-20]:
-        negative_factors.append(factor_text("최근 20일 기준 S&P500보다 약했습니다", 0))
+        negative_factors.append(factor_text("최근 한 달 흐름이 시장보다 약했습니다", 0))
     if stk_ret20 <= benchmark_ret20:
-        negative_factors.append(factor_text("최근 20일 수익률이 S&P500보다 좋지 않습니다", 0))
+        negative_factors.append(factor_text("최근 한 달 수익률이 시장보다 약합니다", 0))
     if not has_strong_volume:
-        negative_factors.append(factor_text("강한 상승 거래량 신호가 아직 부족합니다", 0))
+        negative_factors.append(factor_text("거래량이 강하게 붙는 모습은 아직 부족합니다", 0))
     if not (pd.notna(up_days) and pd.notna(down_days) and up_days > down_days):
-        negative_factors.append(factor_text("상승일 거래량 우위가 뚜렷하지 않습니다", 0))
+        negative_factors.append(factor_text("오를 때 거래량이 뚜렷하게 붙지 않았습니다", 0))
     if atr_ratio >= 0.06:
-        negative_factors.append(factor_text("변동성이 커서 흔들림이 큽니다", 0))
+        negative_factors.append(factor_text("움직임이 커서 흔들릴 수 있습니다", 0))
 
     score = int(max(0, min(100, round(score))))
     s_state = stock_state(score)
@@ -852,8 +852,8 @@ def score_stock(
         "stock_score": score,
         "stock_state": s_state,
         "final_action": action,
-        "top_reasons": reasons[:3] if reasons else ["뚜렷하게 강하다고 볼 근거가 부족합니다"],
-        "invalidation": "20일선 아래로 밀리고 상대강도도 약해지면 더 보수적으로 봐야 합니다.",
+        "top_reasons": reasons[:3] if reasons else ["뚜렷하게 강하다고 보긴 어렵습니다"],
+        "invalidation": "20일선 아래로 밀리고 시장보다 덜 강하게 움직이면 더 보수적으로 봐야 합니다.",
         "easy_explanation": easy,
         "note": note,
         "cross_highlights": cross_highlights[:2],
@@ -912,9 +912,9 @@ def pick_note_reason(reasons: list[str], state: str) -> str | None:
             "거래량이 아직 약합니다",
             "최근 시장보다 힘이 약합니다",
             "최근 단기 급등이 커서 추격 매수는 부담입니다",
-            "최근 20일 기준 S&P500보다 약했습니다",
-            "최근 20일 수익률이 S&P500보다 좋지 않습니다",
-            "20일선이 50일선 아래라 추세가 약합니다",
+            "최근 한 달 흐름이 시장보다 약합니다",
+            "최근 한 달 수익률이 시장보다 약합니다",
+            "짧은 흐름이 중간 흐름보다 약합니다",
             "종가가 20일선 아래에 있습니다",
             "종가가 50일선 아래에 있습니다",
         ]
@@ -930,14 +930,14 @@ def pick_note_reason(reasons: list[str], state: str) -> str | None:
     preferred = [
         "최근 중기 골든크로스가 나왔습니다",
         "최근 단기 골든크로스가 나왔습니다",
-        "S&P500 대비 상대강도가 좋아지고 있습니다",
-        "최근 20일 수익률이 S&P500보다 좋습니다",
-        "상승할 때 거래량이 평균보다 강했습니다",
-        "최근에는 상승일 거래량이 더 우세했습니다",
-        "20일선이 50일선 위에 있습니다",
-        "20일선이 위로 기울고 있습니다",
-        "50일선 위에 있습니다",
-        "20일선 위에 있습니다",
+            "이 종목이 시장보다 더 잘 버팁니다",
+            "최근 한 달 흐름이 시장보다 좋습니다",
+            "상승할 때 거래량이 평균보다 강했습니다",
+            "최근에는 상승일 거래량이 더 우세했습니다",
+            "짧은 흐름이 중간 흐름보다 좋습니다",
+            "20일선이 올라가는 중입니다",
+            "50일선 위에 있습니다",
+            "20일선 위에 있습니다",
     ]
     for needle in preferred:
         match = next((reason for reason in reasons if needle in reason), None)
@@ -950,24 +950,24 @@ def translate_reason(reason: str) -> str:
     mapping = {
         "20일선 위에 있습니다": "20일선 위에 있습니다",
         "50일선 위에 있습니다": "50일선 위에 있습니다",
-        "20일선이 50일선 위에 있습니다": "20일선이 50일선 위에 있습니다",
-        "20일선이 위로 기울고 있습니다": "20일선이 위로 기울고 있습니다",
+        "짧은 흐름이 중간 흐름보다 좋습니다": "짧은 흐름이 중간 흐름보다 좋습니다",
+        "20일선이 올라가는 중입니다": "20일선이 올라가는 중입니다",
         "종가가 20일선 아래에 있습니다": "20일선 아래에 있습니다",
         "종가가 50일선 아래에 있습니다": "50일선 아래에 있습니다",
         "거래량이 아직 약합니다": "거래량이 아직 약합니다",
         "최근 시장보다 힘이 약합니다": "최근 시장보다 힘이 약합니다",
-        "S&P500 대비 상대강도가 좋아지고 있습니다": "S&P500보다 더 강한 흐름입니다",
+        "이 종목이 시장보다 더 잘 버팁니다": "이 종목이 시장보다 더 잘 버팁니다",
         "최근 중기 골든크로스가 나왔습니다": "최근 중기 골든크로스가 나왔습니다",
         "최근 단기 골든크로스가 나왔습니다": "최근 단기 골든크로스가 나왔습니다",
         "최근 중기 데드크로스가 나왔습니다": "최근 중기 데드크로스가 나왔습니다",
         "최근 단기 데드크로스가 나왔습니다": "최근 단기 데드크로스가 나왔습니다",
-        "최근 20일 수익률이 S&P500보다 좋습니다": "최근 20일 수익률이 S&P500보다 좋습니다",
-        "최근 20일 수익률이 S&P500보다 좋지 않습니다": "최근 20일 수익률이 S&P500보다 좋지 않습니다",
+        "최근 한 달 흐름이 시장보다 좋습니다": "최근 한 달 흐름이 시장보다 좋습니다",
+        "최근 한 달 수익률이 시장보다 약합니다": "최근 한 달 수익률이 시장보다 약합니다",
         "상승할 때 거래량이 평균보다 강했습니다": "상승할 때 거래량이 평균보다 강했습니다",
         "최근에는 상승일 거래량이 더 우세했습니다": "최근에는 상승일 거래량이 더 우세했습니다",
-        "최근 20일 기준 S&P500보다 약했습니다": "최근 20일 기준 S&P500보다 약했습니다",
+        "최근 한 달 흐름이 시장보다 약합니다": "최근 한 달 흐름이 시장보다 약합니다",
         "실적이 가까워 보수적으로 봐야 합니다": "실적이 가까워 보수적으로 봐야 합니다",
-        "뚜렷하게 강하다고 볼 근거가 부족합니다": "뚜렷하게 강하다고 볼 근거가 부족합니다",
+        "뚜렷하게 강하다고 보긴 어렵습니다": "뚜렷하게 강하다고 보긴 어렵습니다",
     }
     return mapping.get(reason, reason)
 
@@ -980,7 +980,7 @@ def default_reason_for_state(state: str) -> str:
         "약함": "주가 흐름이 약합니다",
         "회피": "지금은 좋은 진입 신호가 부족합니다",
     }
-    return mapping.get(state, "판단 근거가 충분하지 않습니다")
+    return mapping.get(state, "판단할 만한 신호가 아직 부족합니다")
 
 
 def get_earnings_within_7_days(ticker: str, as_of: date) -> bool | None:
@@ -1199,7 +1199,7 @@ def stock_confidence_warnings(stock: dict) -> list[str]:
         warnings.append("실적 일정 확인 필요")
     volume_ratio_20d = stock["metrics"].get("volume_ratio_20d")
     if isinstance(volume_ratio_20d, float) and volume_ratio_20d < 0.85:
-        warnings.append("거래량 신호 약함")
+        warnings.append("거래량 약함")
     rs_change = stock["metrics"].get("rs_20d_change")
     if isinstance(rs_change, float) and rs_change < 0:
         warnings.append("시장 대비 약세")

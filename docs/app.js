@@ -198,8 +198,8 @@ function renderMarket(data) {
 
   const reasonsEl = document.getElementById("marketReasons");
   renderList(reasonsEl, data.market.top_reasons, "뚜렷하게 좋은 신호가 많지 않습니다.");
-  renderList(document.getElementById("marketPositiveFactors"), data.market.positive_factors, "뚜렷한 가산 요인이 많지 않습니다.");
-  renderList(document.getElementById("marketNegativeFactors"), data.market.negative_factors, "큰 감점 요인은 없습니다.");
+  renderList(document.getElementById("marketPositiveFactors"), data.market.positive_factors, "점수를 올려준 신호가 많지 않습니다.");
+  renderList(document.getElementById("marketNegativeFactors"), data.market.negative_factors, "크게 나쁜 신호는 없습니다.");
 
   const topbarMeta = document.querySelector(".site-topbar-time");
   if (topbarMeta) {
@@ -378,11 +378,11 @@ function renderStocks(stocks) {
         <div class="factor-grid stock-factor-grid">
           <details class="factor-box factor-box-positive">
             <summary>점수를 올린 항목</summary>
-            <ul>${(s.positive_factors?.length ? s.positive_factors : ["뚜렷한 가산 요인이 많지 않습니다."]).map((r) => `<li>${r}</li>`).join("")}</ul>
+            <ul>${(s.positive_factors?.length ? s.positive_factors : ["점수를 올려준 신호가 많지 않습니다."]).map((r) => `<li>${r}</li>`).join("")}</ul>
           </details>
           <details class="factor-box factor-box-negative">
             <summary>점수를 깎았거나 불리한 항목</summary>
-            <ul>${(s.negative_factors?.length ? s.negative_factors : ["큰 감점 요인은 없습니다."]).map((r) => `<li>${r}</li>`).join("")}</ul>
+            <ul>${(s.negative_factors?.length ? s.negative_factors : ["크게 나쁜 신호는 없습니다."]).map((r) => `<li>${r}</li>`).join("")}</ul>
           </details>
         </div>
         <div class="tag-row compact-tag-row">
