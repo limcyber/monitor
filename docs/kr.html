@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>한국 주식 모니터</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+  </head>
+  <body>
+    <header class="site-topbar">
+      <div class="site-topbar-inner">
+        <div class="brand">
+          <div class="brand-line">
+            <span class="brand-mark">한국 주식 모니터</span>
+            <span class="brand-tag">대표주와 실전형 관심종목을 함께 보는 화면</span>
+          </div>
+          <div class="page-head-time">
+            <span id="generatedAt">생성 시각: -</span>
+            <span id="asOf">데이터 기준 시각: -</span>
+          </div>
+        </div>
+        <div class="topbar-meta">
+          <nav class="page-switch" aria-label="페이지 전환">
+            <a href="./index.html">미국</a>
+            <a href="./kr.html" aria-current="page">한국</a>
+          </nav>
+          <div class="theme-segment" role="group" aria-label="Theme mode">
+            <button id="themeBw" class="theme-segment-btn" type="button" aria-pressed="false">BW</button>
+            <button id="themeColor" class="theme-segment-btn" type="button" aria-pressed="false">Color</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <section class="panel market-panel">
+        <div class="panel-head">
+          <h2>한국 시장 상태</h2>
+          <span id="marketState" class="pill">-</span>
+        </div>
+        <div class="kpi-grid">
+          <article class="kpi"><h3>점수</h3><p id="marketScore">-</p></article>
+          <article class="kpi"><h3>신뢰도</h3><p id="marketConfidence">-</p></article>
+          <article class="kpi"><h3>매매 여건</h3><p id="marketExecution">-</p></article>
+          <article class="kpi"><h3>추천 행동</h3><p id="marketAction">-</p></article>
+        </div>
+        <div class="market-ticker-strip">
+          <article class="ticker-chip"><h3>KOSPI</h3><p id="marketKospiQuote">-</p></article>
+          <article class="ticker-chip"><h3>KOSDAQ</h3><p id="marketKosdaqQuote">-</p></article>
+          <article class="ticker-chip"><h3>KOSPI200</h3><p id="marketKospi200Quote">-</p></article>
+          <article class="ticker-chip"><h3>USD/KRW</h3><p id="marketUsdkrwQuote">-</p></article>
+          <article class="ticker-chip"><h3>VIX</h3><p id="marketVixQuote">-</p></article>
+        </div>
+        <div class="cross-highlight-block">
+          <h3>크로스 신호 <span class="cross-note">단기 5일, 중기 10일 기준</span></h3>
+          <ul id="marketCrossHighlights"></ul>
+        </div>
+        <div class="explain">
+          <h3>쉽게 설명하면</h3>
+          <p id="marketEasy">-</p>
+        </div>
+        <div class="reasons">
+          <h3>이렇게 본 이유</h3>
+          <ul id="marketReasons"></ul>
+        </div>
+        <details class="extra-info-box market-extra-info">
+          <summary>세부 정보</summary>
+          <div class="factor-grid">
+            <details class="factor-box factor-box-positive">
+              <summary>점수를 올린 항목</summary>
+              <ul id="marketPositiveFactors"></ul>
+            </details>
+            <details class="factor-box factor-box-negative">
+              <summary>점수를 깎았거나 불리한 항목</summary>
+              <ul id="marketNegativeFactors"></ul>
+            </details>
+          </div>
+          <div class="tag-row-block">
+            <div class="tag-row">
+              <h3>오늘 변화</h3>
+              <div id="marketChangeTags" class="tag-list"></div>
+            </div>
+            <div class="tag-row">
+              <h3>운용 가이드</h3>
+              <div id="marketPositionTags" class="tag-list"></div>
+            </div>
+            <div class="tag-row">
+              <h3>오늘 알림</h3>
+              <div id="marketAlertTags" class="tag-list"></div>
+            </div>
+            <div class="tag-row">
+              <h3>신뢰도 경고</h3>
+              <div id="marketWarningTags" class="tag-list"></div>
+            </div>
+            <div class="tag-row">
+              <h3>최근 30일</h3>
+              <div id="marketHistoryTags" class="tag-list"></div>
+            </div>
+          </div>
+          <p><strong>주의할 점:</strong> <span id="marketInvalidation">-</span></p>
+        </details>
+      </section>
+
+      <section class="panel">
+        <h2>시장 차트</h2>
+        <div class="chart-grid chart-grid-kr">
+          <article class="chart-card">
+            <div class="chart-head">
+              <h3>KOSPI / KOSDAQ 추세</h3>
+              <p>왼쪽은 KOSPI, 오른쪽은 KOSDAQ으로 나눠 최근 1달 흐름과 200일선을 함께 봅니다.</p>
+            </div>
+            <div id="krIndexLegend" class="chart-legend"></div>
+            <canvas id="krIndexChart"></canvas>
+          </article>
+          <article class="chart-card stress-table-card">
+            <div class="chart-head">
+              <h3>한국 시장 체감 지표</h3>
+              <p>원달러와 코스닥 참여도를 같이 보면 국내장 분위기를 더 쉽게 읽을 수 있습니다.</p>
+            </div>
+            <div id="krStressTable" class="stress-table"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>관심종목 요약</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>종목</th>
+                <th>점수</th>
+                <th>상태</th>
+                <th>추천 행동</th>
+                <th>메모</th>
+              </tr>
+            </thead>
+            <tbody id="watchlistTable"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <details class="panel stock-panel" id="stockPanel">
+        <summary>
+          <h2>종목별 상세</h2>
+          <span class="pill stock-panel-state">닫힘</span>
+        </summary>
+        <div class="stock-panel-body">
+          <div id="stockCards" class="stock-cards"></div>
+        </div>
+      </details>
+    </main>
+    <script src="./kr-app.js"></script>
+  </body>
+</html>

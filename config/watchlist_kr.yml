@@ -1,0 +1,19 @@
+watchlist:
+  - ticker: 005930.KS
+    name: 삼성전자
+    market: KOSPI
+  - ticker: 000660.KS
+    name: SK하이닉스
+    market: KOSPI
+  - ticker: 035420.KS
+    name: NAVER
+    market: KOSPI
+  - ticker: 005380.KS
+    name: 현대차
+    market: KOSPI
+  - ticker: 124500.KQ
+    name: 아이티센글로벌
+    market: KOSDAQ
+  - ticker: 466100.KQ
+    name: 클로봇
+    market: KOSDAQ
