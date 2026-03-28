@@ -37,7 +37,7 @@ def build_market_summary(payload: dict) -> str:
         f"생성: {payload.get('generated_at_et', '-')}",
         f"기준: {payload.get('market_data_as_of', '-')}",
         f"상태: {market.get('state', '-')}",
-        f"행동: {market.get('score', '-')}/100 / {market.get('action', '-')}",
+        f"점수/행동: {market.get('score', '-')}/100 / {market.get('action', '-')}",
         f"크로스: {cross_text}",
     ]
     if market.get("top_reasons"):
@@ -47,7 +47,7 @@ def build_market_summary(payload: dict) -> str:
             f"{row.get('name', row.get('ticker', '-'))}: {row.get('stock_score', '-')}/100 {row.get('stock_state', '-')}"
             for row in top_rows
         )
-        lines.append(f"관심: {top_text}")
+        lines.append(f"상위 종목: {top_text}")
     return "\n".join(lines)
 
 

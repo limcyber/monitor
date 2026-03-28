@@ -528,8 +528,8 @@ def prioritize_stock_factors(positive_factors: list[str], negative_factors: list
         "최근 한 달 흐름이 시장보다 좋습니다",
         "상승할 때 거래량이 평균보다 강했습니다",
         "최근에는 상승일 거래량이 더 우세했습니다",
-        "짧은 흐름이 중간 흐름보다 좋습니다",
-        "20일선이 올라가는 중입니다",
+        "단기 흐름이 살아 있습니다",
+        "20일선이 올라가고 있습니다",
         "종가가 50일선 위에 있습니다",
         "종가가 20일선 위에 있습니다",
     ]
@@ -540,11 +540,11 @@ def prioritize_stock_factors(positive_factors: list[str], negative_factors: list
         "최근 5일선이 20일선을 하향 이탈했습니다",
         "종가가 50일선 아래에 있습니다",
         "종가가 20일선 아래에 있습니다",
-        "시장보다 덜 강하게 움직입니다",
+        "시장보다 덜 강합니다",
         "거래량이 아직 약합니다",
         "최근 단기 급등이 커서 추격 매수는 부담입니다",
-        "짧은 흐름이 중간 흐름보다 약합니다",
-        "20일선이 아직 올라가는 모습은 아닙니다",
+        "단기 흐름이 아직 약합니다",
+        "20일선 방향이 아직 살아나지 않았습니다",
     ]
 
     def prioritize(items: list[str], priorities: list[str]) -> list[str]:
@@ -573,8 +573,8 @@ def prioritize_stock_reasons(reasons: list[str], state: str) -> list[str]:
         "최근 한 달 흐름이 시장보다 좋습니다",
         "상승할 때 거래량이 평균보다 강했습니다",
         "최근에는 상승일 거래량이 더 우세했습니다",
-        "짧은 흐름이 중간 흐름보다 좋습니다",
-        "20일선이 올라가는 중입니다",
+        "단기 흐름이 살아 있습니다",
+        "20일선이 올라가고 있습니다",
         "50일선 위에 있습니다",
         "20일선 위에 있습니다",
     ]
@@ -584,11 +584,11 @@ def prioritize_stock_reasons(reasons: list[str], state: str) -> list[str]:
         "실적이 가까워 보수적으로 봐야 합니다",
         "실적 발표가 가까워 보수적으로 봐야 합니다",
         "거래량이 아직 약합니다",
-        "최근 시장보다 힘이 약합니다",
+        "시장보다 덜 강합니다",
         "최근 단기 급등이 커서 추격 매수는 부담입니다",
         "최근 한 달 흐름이 시장보다 약합니다",
         "최근 한 달 수익률이 시장보다 약합니다",
-        "짧은 흐름이 중간 흐름보다 약합니다",
+        "단기 흐름이 아직 약합니다",
         "종가가 20일선 아래에 있습니다",
         "종가가 50일선 아래에 있습니다",
     ]
@@ -1038,16 +1038,16 @@ def score_stock(
         negative_factors.append(factor_text("종가가 50일선 아래에 있습니다", -6))
     if dma20.iloc[-1] > dma50.iloc[-1]:
         score += 10
-        positive_factors.append(factor_text("짧은 흐름이 중간 흐름보다 좋습니다", 10))
+        positive_factors.append(factor_text("단기 흐름이 살아 있습니다", 10))
     else:
         score -= 2
-        negative_factors.append(factor_text("짧은 흐름이 중간 흐름보다 약합니다", -2))
+        negative_factors.append(factor_text("단기 흐름이 아직 약합니다", -2))
     if slope_up(dma20):
         score += 10
-        positive_factors.append(factor_text("20일선이 올라가는 중입니다", 10))
+        positive_factors.append(factor_text("20일선이 올라가고 있습니다", 10))
     else:
         score -= 2
-        negative_factors.append(factor_text("20일선이 아직 올라가는 모습은 아닙니다", -2))
+        negative_factors.append(factor_text("20일선 방향이 아직 살아나지 않았습니다", -2))
 
     short_bull, short_bear = recent_cross_signal(
         dma5,
@@ -1154,19 +1154,19 @@ def score_stock(
         negative_factors.append(factor_text("거래량이 아직 약합니다", -6))
     if rs_10d_weaker:
         score -= 6
-        reasons.append("최근 시장보다 힘이 약합니다")
-        negative_factors.append(factor_text("시장보다 덜 강하게 움직입니다", -6))
+        reasons.append("시장보다 덜 강합니다")
+        negative_factors.append(factor_text("시장보다 덜 강합니다", -6))
 
     if close.iloc[-1] <= dma20.iloc[-1]:
-        negative_factors.append(factor_text("종가가 20일선 아래에 있습니다", 0))
+        negative_factors.append(factor_text("20일선 아래라 흐름 확인이 더 필요합니다", 0))
     if close.iloc[-1] <= dma50.iloc[-1]:
-        negative_factors.append(factor_text("종가가 50일선 아래에 있습니다", 0))
+        negative_factors.append(factor_text("50일선 아래라 중간 흐름 확인이 더 필요합니다", 0))
     if dma20.iloc[-1] <= dma50.iloc[-1]:
-        negative_factors.append(factor_text("짧은 흐름이 중간 흐름보다 약합니다", 0))
+        negative_factors.append(factor_text("단기 흐름이 아직 중기 흐름보다 약합니다", 0))
     if not slope_up(dma20):
-        negative_factors.append(factor_text("20일선이 아직 올라가는 모습은 아닙니다", 0))
+        negative_factors.append(factor_text("20일선 방향이 아직 완전히 살아나진 않았습니다", 0))
     if len(rs) >= 20 and rs.iloc[-1] <= rs.iloc[-20]:
-        negative_factors.append(factor_text("최근 한 달 흐름이 시장보다 약했습니다", 0))
+        negative_factors.append(factor_text("최근 한 달 흐름이 시장보다 약합니다", 0))
     if stk_ret20 <= benchmark_ret20:
         negative_factors.append(factor_text("최근 한 달 수익률이 시장보다 약합니다", 0))
     if not has_strong_volume:
@@ -1262,11 +1262,11 @@ def pick_note_reason(reasons: list[str], state: str) -> str | None:
             "실적이 가까워 보수적으로 봐야 합니다",
             "실적 발표가 가까워 보수적으로 봐야 합니다",
             "거래량이 아직 약합니다",
-            "최근 시장보다 힘이 약합니다",
+            "시장보다 덜 강합니다",
             "최근 단기 급등이 커서 추격 매수는 부담입니다",
             "최근 한 달 흐름이 시장보다 약합니다",
             "최근 한 달 수익률이 시장보다 약합니다",
-            "짧은 흐름이 중간 흐름보다 약합니다",
+            "단기 흐름이 아직 약합니다",
             "종가가 20일선 아래에 있습니다",
             "종가가 50일선 아래에 있습니다",
         ]
@@ -1286,8 +1286,8 @@ def pick_note_reason(reasons: list[str], state: str) -> str | None:
             "최근 한 달 흐름이 시장보다 좋습니다",
             "상승할 때 거래량이 평균보다 강했습니다",
             "최근에는 상승일 거래량이 더 우세했습니다",
-            "짧은 흐름이 중간 흐름보다 좋습니다",
-            "20일선이 올라가는 중입니다",
+            "단기 흐름이 살아 있습니다",
+            "20일선이 올라가고 있습니다",
             "50일선 위에 있습니다",
             "20일선 위에 있습니다",
     ]
@@ -1302,12 +1302,12 @@ def translate_reason(reason: str) -> str:
     mapping = {
         "20일선 위에 있습니다": "20일선 위에 있습니다",
         "50일선 위에 있습니다": "50일선 위에 있습니다",
-        "짧은 흐름이 중간 흐름보다 좋습니다": "짧은 흐름이 중간 흐름보다 좋습니다",
-        "20일선이 올라가는 중입니다": "20일선이 올라가는 중입니다",
+        "단기 흐름이 살아 있습니다": "단기 흐름이 살아 있습니다",
+        "20일선이 올라가고 있습니다": "20일선이 올라가고 있습니다",
         "종가가 20일선 아래에 있습니다": "20일선 아래에 있습니다",
         "종가가 50일선 아래에 있습니다": "50일선 아래에 있습니다",
         "거래량이 아직 약합니다": "거래량이 아직 약합니다",
-        "최근 시장보다 힘이 약합니다": "최근 시장보다 힘이 약합니다",
+        "시장보다 덜 강합니다": "시장보다 덜 강합니다",
         "이 종목이 시장보다 더 잘 버팁니다": "이 종목이 시장보다 더 잘 버팁니다",
         "최근 중기 골든크로스가 나왔습니다": "최근 중기 골든크로스가 나왔습니다",
         "최근 단기 골든크로스가 나왔습니다": "최근 단기 골든크로스가 나왔습니다",
@@ -1326,8 +1326,8 @@ def translate_reason(reason: str) -> str:
 
 def default_reason_for_state(state: str) -> str:
     mapping = {
-        "강함": "가격 흐름이 비교적 안정적입니다",
-        "양호": "흐름이 나쁘지 않습니다",
+        "강함": "추세가 비교적 안정적입니다",
+        "양호": "흐름이 비교적 괜찮습니다",
         "애매": "강하다고 보기엔 아직 부족합니다",
         "약함": "주가 흐름이 약합니다",
         "회피": "지금은 좋은 진입 신호가 부족합니다",
