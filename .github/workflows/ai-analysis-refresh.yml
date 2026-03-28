@@ -22,6 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       should_run: ${{ steps.market_window.outputs.should_run }}
+      has_api_key: ${{ steps.check_key.outputs.has_api_key }}
+      data_changed: ${{ steps.detect_changes.outputs.data_changed }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -55,33 +57,62 @@ jobs:
             f.write(f"should_run={'true' if should_run else 'false'}\n")
           PY
 
-      - name: Stop outside market window
+      - name: Log skipped schedule run
         if: github.event_name == 'schedule' && steps.market_window.outputs.should_run != 'true'
-        run: echo "Outside ET market window, skipping scheduled AI analysis refresh."
+        run: echo "AI refresh skipped: this schedule tick is outside the current run rule."
+
+      - name: Check API key
+        id: check_key
+        if: github.event_name != 'schedule' || steps.market_window.outputs.should_run == 'true'
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        run: |
+          if [ -n "${GOOGLE_API_KEY}" ]; then
+            echo "has_api_key=true" >> "$GITHUB_OUTPUT"
+            echo "AI refresh status: GOOGLE_API_KEY detected."
+          else
+            echo "has_api_key=false" >> "$GITHUB_OUTPUT"
+            echo "AI refresh skipped: GOOGLE_API_KEY is missing."
+          fi
 
       - name: Install dependencies
-        if: github.event_name != 'schedule' || steps.market_window.outputs.should_run == 'true'
+        if: (github.event_name != 'schedule' || steps.market_window.outputs.should_run == 'true') && steps.check_key.outputs.has_api_key == 'true'
         run: pip install -r requirements.txt
 
-      - name: Generate market report with AI analysis
-        if: github.event_name != 'schedule' || steps.market_window.outputs.should_run == 'true'
+      - name: Generate AI analysis files
+        if: (github.event_name != 'schedule' || steps.market_window.outputs.should_run == 'true') && steps.check_key.outputs.has_api_key == 'true'
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           RUN_AI_ANALYSIS: "true"
           AI_ONLY_MODE: "true"
-        run: python scripts/generate_report.py
+        run: |
+          echo "AI refresh running: generating market AI and watchlist AI files."
+          python scripts/generate_report.py
+
+      - name: Detect AI file changes
+        id: detect_changes
+        if: (github.event_name != 'schedule' || steps.market_window.outputs.should_run == 'true') && steps.check_key.outputs.has_api_key == 'true'
+        run: |
+          git add docs/data/latest_ai.json docs/data/latest_watchlist_ai.json
+          if git diff --cached --quiet; then
+            echo "data_changed=false" >> "$GITHUB_OUTPUT"
+            echo "AI refresh result: no file changes."
+          else
+            echo "data_changed=true" >> "$GITHUB_OUTPUT"
+            echo "AI refresh result: AI files changed."
+          fi
 
       - name: Commit AI analysis data
-        if: github.event_name != 'schedule' || steps.market_window.outputs.should_run == 'true'
+        if: steps.detect_changes.outputs.data_changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data/latest_ai.json docs/data/latest_watchlist_ai.json
-          git diff --cached --quiet || git commit -m "chore: refresh ai analysis"
+          git commit -m "chore: refresh ai analysis"
           git push
+          echo "AI refresh result: committed and pushed."
 
       - name: Upload artifact
-        if: github.event_name != 'schedule' || steps.market_window.outputs.should_run == 'true'
+        if: (github.event_name != 'schedule' || steps.market_window.outputs.should_run == 'true') && steps.check_key.outputs.has_api_key == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs
@@ -92,7 +123,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
-    if: github.event_name != 'schedule' || needs.build.outputs.should_run == 'true'
+    if: (github.event_name != 'schedule' || needs.build.outputs.should_run == 'true') && needs.build.outputs.has_api_key == 'true'
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
