@@ -19,7 +19,9 @@ DOCS_DATA_DIR = BASE_DIR / "docs" / "data"
 WATCHLIST_PATH = BASE_DIR / "config" / "watchlist.yml"
 CALENDAR_PATH = BASE_DIR / "config" / "economic_calendar.yml"
 OUTPUT_PATH = DOCS_DATA_DIR / "latest.json"
+HISTORY_PATH = DOCS_DATA_DIR / "history.json"
 ET = ZoneInfo("America/New_York")
+MARKET_LEVELS_TOTAL = 6
 
 
 @dataclass
@@ -27,14 +29,28 @@ class ScoreResult:
     score: int
     state: str
     action: str
+    confidence: str
     reasons: list[str]
     invalidation: str
     easy_explanation: str
+    cross_highlights: list[str]
+    positive_factors: list[str]
+    negative_factors: list[str]
 
 
 def load_yaml(path: Path) -> dict:
     with path.open("r", encoding="utf-8") as f:
         return yaml.safe_load(f) or {}
+
+
+def load_json(path: Path) -> dict:
+    if not path.exists():
+        return {}
+    try:
+        with path.open("r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {}
 
 
 def to_date_list(values: list[str]) -> list[date]:
@@ -159,206 +175,552 @@ def market_level(score: int) -> int:
 
 def market_state_name(level: int) -> str:
     return {
-        6: "Strong Risk-On",
-        5: "Risk-On",
-        4: "Improving / Recovery",
-        3: "Neutral / Mixed",
-        2: "Weakening / Caution",
-        1: "Risk-Off / Defensive",
+        6: "강한 상승장",
+        5: "상승 우위",
+        4: "회복 구간",
+        3: "중립 / 혼조",
+        2: "약화 / 주의",
+        1: "방어 우선",
     }[level]
 
 
 def market_action(level: int) -> str:
     return {
-        6: "Buy / Strong Hold",
-        5: "Buy / Hold",
-        4: "Small Buy / Hold",
-        3: "Hold / Reduce",
-        2: "Reduce",
-        1: "Exit / Defensive Hold",
+        6: "매수 / 강한 보유",
+        5: "매수 / 보유",
+        4: "소규모 매수 / 보유",
+        3: "보유 / 비중 축소",
+        2: "비중 축소",
+        1: "신규 진입 자제 / 방어",
     }[level]
 
 
 def stock_state(score: int) -> str:
     if score >= 80:
-        return "Strong"
+        return "강함"
     if score >= 65:
-        return "Good"
+        return "양호"
     if score >= 50:
-        return "Mixed"
+        return "애매"
     if score >= 35:
-        return "Weak"
-    return "Avoid"
+        return "약함"
+    return "회피"
 
 
 def combined_action(market_lvl: int, s_state: str) -> str:
     if market_lvl >= 5:
-        if s_state == "Strong":
-            return "Buy"
-        if s_state == "Good":
-            return "Selective Buy"
-        return "Hold / Watch"
+        if s_state == "강함":
+            return "매수 가능"
+        if s_state == "양호":
+            return "선별 매수"
+        return "보류 / 관찰"
     if market_lvl == 4:
-        if s_state == "Strong":
-            return "Small Buy"
-        if s_state == "Good":
-            return "Very Selective"
-        return "Watch"
-    if s_state == "Strong":
-        return "Tiny Position / Wait"
-    return "Avoid / Reduce"
+        if s_state == "강함":
+            return "소규모 매수"
+        if s_state == "양호":
+            return "매우 선별적 접근"
+        return "관찰"
+    if s_state == "강함":
+        return "아주 소규모 / 대기"
+    return "회피 / 비중 축소"
 
 
 def confidence_from_coverage(total_metrics: int, valid_metrics: int) -> str:
     ratio = valid_metrics / max(total_metrics, 1)
     if ratio >= 0.85:
-        return "High"
+        return "높음"
     if ratio >= 0.65:
-        return "Medium"
-    return "Low"
+        return "보통"
+    return "낮음"
+
+
+def factor_text(text: str, points: int | str) -> str:
+    if isinstance(points, int):
+        if points == 0:
+            return f"{text} (0)"
+        return f"{text} ({points:+d})"
+    return f"{text} ({points})"
+
+
+def pct_change_from_prev_close(series: pd.Series) -> float | None:
+    clean = series.dropna()
+    if len(clean) < 2:
+        return None
+    prev = clean.iloc[-2]
+    last = clean.iloc[-1]
+    if prev == 0 or pd.isna(prev) or pd.isna(last):
+        return None
+    return float((last / prev - 1.0) * 100.0)
+
+
+def volume_ratio(series: pd.Series, lookback: int = 20) -> float | None:
+    avg = series.rolling(lookback).mean().iloc[-1]
+    last = series.iloc[-1]
+    if pd.isna(avg) or avg == 0 or pd.isna(last):
+        return None
+    return float(last / avg)
+
+
+def market_volume_points(price_above_dma20: bool, ratio: float | None) -> tuple[int, str | None, str | None]:
+    if ratio is None:
+        return (0, None, None)
+    if price_above_dma20 and ratio >= 1.25:
+        return (5, factor_text("상승에 거래량이 강하게 붙었습니다", 5), None)
+    if price_above_dma20 and ratio >= 1.05:
+        return (3, factor_text("상승에 거래량이 어느 정도 붙었습니다", 3), None)
+    if price_above_dma20 and ratio < 0.9:
+        return (-3, None, factor_text("반등 시도 대비 거래량이 약합니다", -3))
+    return (0, None, None)
+
+
+def stock_volume_points(price_up: bool, ratio: float | None) -> tuple[int, str | None, str | None]:
+    if ratio is None:
+        return (0, None, None)
+    if price_up and ratio >= 1.5:
+        return (12, factor_text("상승할 때 거래량이 매우 강했습니다", 12), None)
+    if price_up and ratio >= 1.2:
+        return (10, factor_text("상승할 때 거래량이 평균보다 강했습니다", 10), None)
+    if price_up and ratio >= 1.0:
+        return (6, factor_text("상승할 때 거래량이 평균 수준은 나왔습니다", 6), None)
+    if ratio < 0.85:
+        return (-10, None, factor_text("거래량이 아직 약합니다", -10))
+    if ratio < 1.0:
+        return (0, None, factor_text("강한 상승 거래량 신호가 아직 부족합니다", 0))
+    return (0, None, None)
+
+
+def recent_cross_signal(short_ma: pd.Series, long_ma: pd.Series, bull_text: str, bear_text: str, lookback: int = 5) -> tuple[str | None, str | None]:
+    short_clean = short_ma.dropna()
+    long_clean = long_ma.dropna()
+    if len(short_clean) < lookback + 2 or len(long_clean) < lookback + 2:
+        return (None, None)
+    spread = (short_ma - long_ma).dropna()
+    if len(spread) < lookback + 1:
+        return (None, None)
+    recent = spread.tail(lookback + 1)
+    if recent.iloc[-1] > 0 and (recent <= 0).any():
+        return (bull_text, None)
+    if recent.iloc[-1] < 0 and (recent >= 0).any():
+        return (None, bear_text)
+    return (None, None)
+
+
+def pick_market_reasons(level: int, positive_factors: list[str], negative_factors: list[str]) -> list[str]:
+    if level <= 2:
+        primary = negative_factors[:3]
+        if primary:
+            return primary
+    if level == 3:
+        mixed = (negative_factors[:2] + positive_factors[:1])[:3]
+        if mixed:
+            return mixed
+    primary = positive_factors[:3]
+    if primary:
+        return primary
+    return negative_factors[:3]
 
 
 def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) -> ScoreResult:
     score = 0
     reasons = []
+    cross_highlights = []
+    positive_factors = []
+    negative_factors = []
     valid_count = 0
-    total_count = 12
+    total_count = 21
 
-    spy = market_data["SPY"]
+    spx = market_data["SPX"]
+    ndx = market_data["NDX"]
+    rut = market_data["RUT"]
+    tnx = market_data["TNX"]
+    spy_proxy = market_data["SPY_PROXY"]
+    qqq_proxy = market_data["QQQ_PROXY"]
     rsp = market_data["RSP"]
     hyg = market_data["HYG"]
     dxy = market_data["DXY"]
     vix = market_data["VIX"]
 
-    close = spy["Close"]
-    volume = spy["Volume"]
-    dma20 = close.rolling(20).mean()
-    dma50 = close.rolling(50).mean()
-    dma200 = close.rolling(200).mean()
+    spx_close = spx["Close"]
+    spx_dma5 = spx_close.rolling(5).mean()
+    spx_dma20 = spx_close.rolling(20).mean()
+    spx_dma50 = spx_close.rolling(50).mean()
+    spx_dma200 = spx_close.rolling(200).mean()
 
-    if close.iloc[-1] > dma200.iloc[-1]:
-        score += 15
-        reasons.append("SPY is above 200DMA")
-    valid_count += 1
-    if dma50.iloc[-1] > dma200.iloc[-1]:
+    ndx_close = ndx["Close"]
+    ndx_dma5 = ndx_close.rolling(5).mean()
+    ndx_dma20 = ndx_close.rolling(20).mean()
+    ndx_dma50 = ndx_close.rolling(50).mean()
+    ndx_dma200 = ndx_close.rolling(200).mean()
+
+    rut_close = rut["Close"]
+    rut_dma20 = rut_close.rolling(20).mean()
+    rut_dma50 = rut_close.rolling(50).mean()
+    rut_dma200 = rut_close.rolling(200).mean()
+    rut_spx_ratio = (rut_close / spx_close).dropna()
+
+    tnx_close = tnx["Close"]
+
+    spy_proxy_close = spy_proxy["Close"]
+    spy_proxy_volume = spy_proxy["Volume"]
+    qqq_proxy_close = qqq_proxy["Close"]
+    qqq_proxy_volume = qqq_proxy["Volume"]
+
+    if spx_close.iloc[-1] > spx_dma200.iloc[-1]:
         score += 10
-        reasons.append("50DMA is above 200DMA")
+        reasons.append("S&P500이 200일선 위에 있습니다")
+        positive_factors.append(factor_text("S&P500이 200일선 위에 있습니다", 10))
     valid_count += 1
-    if slope_up(dma20):
-        score += 10
-        reasons.append("20DMA slope is positive")
-    valid_count += 1
-    if close.iloc[-1] > dma20.iloc[-1]:
+    if spx_dma50.iloc[-1] > spx_dma200.iloc[-1]:
         score += 5
+        reasons.append("S&P500의 50일선이 200일선 위에 있습니다")
+        positive_factors.append(factor_text("S&P500의 50일선이 200일선 위에 있습니다", 5))
+    valid_count += 1
+    if slope_up(spx_dma20):
+        score += 5
+        reasons.append("S&P500의 20일선이 위로 기울고 있습니다")
+        positive_factors.append(factor_text("S&P500의 20일선이 위로 기울고 있습니다", 5))
+    valid_count += 1
+    if spx_close.iloc[-1] > spx_dma20.iloc[-1]:
+        score += 5
+        positive_factors.append(factor_text("S&P500이 20일선 위에 있습니다", 5))
+    valid_count += 1
+
+    spx_short_bull, spx_short_bear = recent_cross_signal(
+        spx_dma5,
+        spx_dma20,
+        factor_text("S&P500에서 최근 5일선이 20일선을 상향 돌파했습니다", 0),
+        factor_text("S&P500에서 최근 5일선이 20일선을 하향 이탈했습니다", 0),
+    )
+    if spx_short_bull:
+        cross_highlights.append("S&P500 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다.")
+        positive_factors.append(spx_short_bull)
+        reasons.append("S&P500에서 최근 단기 골든크로스가 나왔습니다")
+    if spx_short_bear:
+        cross_highlights.append("S&P500 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다.")
+        negative_factors.append(spx_short_bear)
+        reasons.append("S&P500에서 최근 단기 데드크로스가 나왔습니다")
+
+    spx_mid_bull, spx_mid_bear = recent_cross_signal(
+        spx_dma20,
+        spx_dma50,
+        factor_text("S&P500에서 최근 20일선이 50일선을 상향 돌파했습니다", 0),
+        factor_text("S&P500에서 최근 20일선이 50일선을 하향 이탈했습니다", 0),
+        lookback=10,
+    )
+    if spx_mid_bull:
+        cross_highlights.append("S&P500 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다.")
+        positive_factors.append(spx_mid_bull)
+    if spx_mid_bear:
+        cross_highlights.append("S&P500 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다.")
+        negative_factors.append(spx_mid_bear)
+
+    if ndx_close.iloc[-1] > ndx_dma200.iloc[-1]:
+        score += 10
+        reasons.append("나스닥이 200일선 위에 있습니다")
+        positive_factors.append(factor_text("나스닥이 200일선 위에 있습니다", 10))
+    valid_count += 1
+    if ndx_dma50.iloc[-1] > ndx_dma200.iloc[-1]:
+        score += 5
+        reasons.append("나스닥의 50일선이 200일선 위에 있습니다")
+        positive_factors.append(factor_text("나스닥의 50일선이 200일선 위에 있습니다", 5))
+    valid_count += 1
+    if slope_up(ndx_dma20):
+        score += 5
+        reasons.append("나스닥의 20일선이 위로 기울고 있습니다")
+        positive_factors.append(factor_text("나스닥의 20일선이 위로 기울고 있습니다", 5))
+    valid_count += 1
+    if ndx_close.iloc[-1] > ndx_dma20.iloc[-1]:
+        score += 5
+        positive_factors.append(factor_text("나스닥이 20일선 위에 있습니다", 5))
+    valid_count += 1
+
+    ndx_short_bull, ndx_short_bear = recent_cross_signal(
+        ndx_dma5,
+        ndx_dma20,
+        factor_text("나스닥에서 최근 5일선이 20일선을 상향 돌파했습니다", 0),
+        factor_text("나스닥에서 최근 5일선이 20일선을 하향 이탈했습니다", 0),
+    )
+    if ndx_short_bull:
+        cross_highlights.append("나스닥 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다.")
+        positive_factors.append(ndx_short_bull)
+        reasons.append("나스닥에서 최근 단기 골든크로스가 나왔습니다")
+    if ndx_short_bear:
+        cross_highlights.append("나스닥 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다.")
+        negative_factors.append(ndx_short_bear)
+        reasons.append("나스닥에서 최근 단기 데드크로스가 나왔습니다")
+
+    ndx_mid_bull, ndx_mid_bear = recent_cross_signal(
+        ndx_dma20,
+        ndx_dma50,
+        factor_text("나스닥에서 최근 20일선이 50일선을 상향 돌파했습니다", 0),
+        factor_text("나스닥에서 최근 20일선이 50일선을 하향 이탈했습니다", 0),
+        lookback=10,
+    )
+    if ndx_mid_bull:
+        cross_highlights.append("나스닥 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다.")
+        positive_factors.append(ndx_mid_bull)
+    if ndx_mid_bear:
+        cross_highlights.append("나스닥 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다.")
+        negative_factors.append(ndx_mid_bear)
+
+    if rut_close.iloc[-1] > rut_dma200.iloc[-1]:
+        score += 5
+        positive_factors.append(factor_text("소형주(RUT)가 200일선 위에 있습니다", 5))
+    valid_count += 1
+    if rut_close.iloc[-1] > rut_dma20.iloc[-1]:
+        score += 3
+        positive_factors.append(factor_text("소형주(RUT)가 20일선 위에 있습니다", 3))
+    valid_count += 1
+    if len(rut_spx_ratio) >= 20 and rut_spx_ratio.iloc[-1] >= rut_spx_ratio.iloc[-20]:
+        score += 4
+        positive_factors.append(factor_text("소형주가 대형주에 크게 밀리지 않습니다", 4))
     valid_count += 1
 
     if breadth["pct_above_20dma"] > 55:
-        score += 10
-        reasons.append("Breadth above 20DMA is healthy")
+        score += 5
+        reasons.append("시장 전체 종목 흐름이 비교적 건강합니다")
+        positive_factors.append(factor_text("20일선 위 종목 비율이 55%를 넘습니다", 5))
     valid_count += 1
     if breadth["pct_above_50dma"] > 50:
-        score += 10
+        score += 5
+        positive_factors.append(factor_text("50일선 위 종목 비율이 50%를 넘습니다", 5))
     valid_count += 1
     if breadth["adline_5d_up"]:
-        score += 5
+        score += 3
+        positive_factors.append(factor_text("상승 종목 수 흐름이 최근 5일 개선됐습니다", 3))
     valid_count += 1
     if breadth["rsp_spy_ratio_20d_up_or_flat"]:
-        score += 5
+        score += 2
+        positive_factors.append(factor_text("동일가중 흐름이 대형주에 크게 밀리지 않습니다", 2))
     valid_count += 1
 
     vix_pct = percentile_rank(vix["Close"])
     if vix_pct < 60:
-        score += 10
+        score += 12
+        positive_factors.append(factor_text("VIX가 과도하게 높지 않습니다", 12))
     valid_count += 1
     hyg_dma50 = hyg["Close"].rolling(50).mean()
     if hyg["Close"].iloc[-1] > hyg_dma50.iloc[-1]:
         score += 5
+        positive_factors.append(factor_text("HYG가 50일선 위에 있습니다", 5))
     valid_count += 1
     dxy_z = zscore(dxy["Close"], 20)
     if dxy_z <= 1.0:
         score += 5
+        positive_factors.append(factor_text("달러 강세가 아직 과도하지 않습니다", 5))
+    valid_count += 1
+    tnx_z = zscore(tnx_close, 20)
+    if tnx_z <= 0.8:
+        score += 4
+        positive_factors.append(factor_text("10년물 금리 압박이 아직 과도하지 않습니다", 4))
     valid_count += 1
 
-    spy_vol20 = volume.rolling(20).mean()
-    if close.iloc[-1] > dma20.iloc[-1] and volume.iloc[-1] > spy_vol20.iloc[-1]:
-        score += 5
+    spy_vol_ratio = volume_ratio(spy_proxy_volume, 20)
+    market_spy_vol_points, market_spy_vol_positive, market_spy_vol_negative = market_volume_points(
+        bool(spx_close.iloc[-1] > spx_dma20.iloc[-1]),
+        spy_vol_ratio,
+    )
+    score += market_spy_vol_points
+    if market_spy_vol_positive:
+        positive_factors.append(factor_text(f"S&P500 {market_spy_vol_positive.split(' (')[0]}", market_spy_vol_points))
+    if market_spy_vol_negative:
+        negative_factors.append(factor_text(f"S&P500 {market_spy_vol_negative.split(' (')[0]}", market_spy_vol_points))
+    valid_count += 1
+    qqq_vol_ratio = volume_ratio(qqq_proxy_volume, 20)
+    market_qqq_vol_points, market_qqq_vol_positive, market_qqq_vol_negative = market_volume_points(
+        bool(ndx_close.iloc[-1] > ndx_dma20.iloc[-1]),
+        qqq_vol_ratio,
+    )
+    score += market_qqq_vol_points
+    if market_qqq_vol_positive:
+        positive_factors.append(factor_text(f"나스닥 {market_qqq_vol_positive.split(' (')[0]}", market_qqq_vol_points))
+    if market_qqq_vol_negative:
+        negative_factors.append(factor_text(f"나스닥 {market_qqq_vol_negative.split(' (')[0]}", market_qqq_vol_points))
     valid_count += 1
     event_risk, event_names = is_event_d0_d1(as_of, events)
     if not event_risk:
-        score += 5
-
-    invalidation = "SPY loses 50DMA with breadth deterioration."
+        score += 3
+        positive_factors.append(factor_text("큰 이벤트가 바로 앞에 있지 않습니다", 3))
+    else:
+        negative_factors.append(factor_text(f"{', '.join(event_names)} 이벤트가 가까워 보수적으로 봐야 합니다", -3))
+    if spx_close.iloc[-1] <= spx_dma200.iloc[-1] and ndx_close.iloc[-1] <= ndx_dma200.iloc[-1]:
+        invalidation = "현재 S&P500과 나스닥이 모두 200일선 아래에 있습니다. 반등이 나오더라도 둘 다 200일선을 회복하지 못하고 시장 내부 흐름까지 약하면 방어적으로 보는 편이 좋습니다."
+    elif spx_close.iloc[-1] <= spx_dma200.iloc[-1] or ndx_close.iloc[-1] <= ndx_dma200.iloc[-1]:
+        invalidation = "S&P500 또는 나스닥 중 하나가 아직 200일선 아래에 있습니다. 둘 중 약한 축이 계속 무너지면 공격적으로 보기 어렵습니다."
+    elif spx_close.iloc[-1] <= spx_dma50.iloc[-1] or ndx_close.iloc[-1] <= ndx_dma50.iloc[-1]:
+        invalidation = "S&P500과 나스닥이 200일선 위에 있더라도 둘 중 하나가 50일선을 지키지 못하고 시장 내부 흐름도 약해지면 경계가 필요합니다."
+    else:
+        invalidation = "S&P500과 나스닥 중 하나라도 50일선 아래로 밀리고 시장 내부 흐름도 함께 약해지면 경계가 필요합니다."
     if event_risk:
-        invalidation = f"Event risk near term ({', '.join(event_names)}); reduce aggressiveness."
+        invalidation = f"{', '.join(event_names)} 이벤트가 가까워 공격적으로 대응하기는 부담스럽습니다."
 
-    if close.iloc[-1] > close.iloc[-2] and (not breadth["adline_5d_up"] or breadth["pct_above_20dma_change"] < 0):
-        score -= 15
-    rsp_spy_ratio = (rsp["Close"] / spy["Close"]).dropna()
-    if close.iloc[-1] > dma50.iloc[-1] and len(rsp_spy_ratio) >= 20 and rsp_spy_ratio.iloc[-1] < rsp_spy_ratio.iloc[-20]:
-        score -= 10
+    if (spx_close.iloc[-1] > spx_close.iloc[-2] or ndx_close.iloc[-1] > ndx_close.iloc[-2]) and (not breadth["adline_5d_up"] or breadth["pct_above_20dma_change"] < 0):
+        score -= 12
+        negative_factors.append(factor_text("S&P500 또는 나스닥이 반등해도 시장 내부 흐름은 따라오지 못했습니다", -12))
+    rsp_spx_ratio = (rsp["Close"] / spx_close).dropna()
+    if (spx_close.iloc[-1] > spx_dma50.iloc[-1] or ndx_close.iloc[-1] > ndx_dma50.iloc[-1]) and len(rsp_spx_ratio) >= 20 and rsp_spx_ratio.iloc[-1] < rsp_spx_ratio.iloc[-20]:
+        score -= 8
+        negative_factors.append(factor_text("대형주와 나스닥만 버티고 있고 시장 전체 확산은 약합니다", -8))
     if vix_pct > 85:
-        score = min(score, 55)
+        negative_factors.append(factor_text("VIX가 매우 높아 점수 상한이 걸렸습니다", "상한 50"))
+        score = min(score, 50)
+
+    if breadth["pct_above_20dma"] <= 55:
+        negative_factors.append(factor_text("20일선 위 종목 비율이 낮아 시장 폭이 약합니다", 0))
+    if breadth["pct_above_50dma"] <= 50:
+        negative_factors.append(factor_text("50일선 위 종목 비율이 낮아 중기 흐름도 약합니다", 0))
+    if not breadth["adline_5d_up"]:
+        negative_factors.append(factor_text("최근 5일 기준 상승 종목 수 흐름이 약합니다", 0))
+    if not breadth["rsp_spy_ratio_20d_up_or_flat"]:
+        negative_factors.append(factor_text("동일가중 지수가 약해 대형주 쏠림이 있습니다", 0))
+    if rut_close.iloc[-1] <= rut_dma200.iloc[-1]:
+        negative_factors.append(factor_text("소형주(RUT)가 200일선 아래에 있어 시장 폭이 약합니다", 0))
+    if len(rut_spx_ratio) >= 20 and rut_spx_ratio.iloc[-1] < rut_spx_ratio.iloc[-20]:
+        negative_factors.append(factor_text("소형주가 대형주 대비 약해 위험 선호가 낮습니다", 0))
+    if vix_pct >= 60 and vix_pct <= 85:
+        negative_factors.append(factor_text("VIX가 낮지 않아 투자 심리가 불안합니다", 0))
+    if hyg["Close"].iloc[-1] <= hyg_dma50.iloc[-1]:
+        negative_factors.append(factor_text("HYG가 50일선 아래라 위험 선호가 약합니다", 0))
+    if dxy_z > 1.0:
+        negative_factors.append(factor_text("달러가 강해 위험자산에는 부담입니다", 0))
+    if tnx_z > 0.8:
+        negative_factors.append(factor_text("10년물 금리가 높아 성장주에 부담입니다", 0))
+
+    available_checks = [
+        bool(pd.notna(spx_dma200.iloc[-1])),
+        bool(pd.notna(spx_dma50.iloc[-1]) and pd.notna(spx_dma200.iloc[-1])),
+        bool(len(spx_dma20.dropna()) >= 20),
+        bool(pd.notna(spx_dma20.iloc[-1])),
+        bool(pd.notna(ndx_dma200.iloc[-1])),
+        bool(pd.notna(ndx_dma50.iloc[-1]) and pd.notna(ndx_dma200.iloc[-1])),
+        bool(len(ndx_dma20.dropna()) >= 20),
+        bool(pd.notna(ndx_dma20.iloc[-1])),
+        bool(pd.notna(rut_dma200.iloc[-1])),
+        bool(pd.notna(rut_dma20.iloc[-1])),
+        bool(len(rut_spx_ratio) >= 20),
+        bool(not math.isnan(breadth["pct_above_20dma"])),
+        bool(not math.isnan(breadth["pct_above_50dma"])),
+        bool(breadth.get("adline_available", False)),
+        bool(breadth.get("rsp_spy_available", False)),
+        bool(len(vix["Close"].dropna()) >= 30),
+        bool(pd.notna(hyg_dma50.iloc[-1])),
+        bool(len(dxy["Close"].dropna()) >= 20),
+        bool(len(tnx_close.dropna()) >= 20),
+        bool(spy_vol_ratio is not None),
+        bool(qqq_vol_ratio is not None),
+    ]
+    valid_count = sum(available_checks)
 
     score = int(max(0, min(100, round(score))))
     lvl = market_level(score)
+    confidence = confidence_from_coverage(total_count, valid_count)
+    top_reasons = pick_market_reasons(lvl, positive_factors, negative_factors)
     easy = (
-        "Market internals are supportive and stress is contained, so selective risk-taking is allowed."
+        "시장 분위기가 비교적 괜찮아 강한 종목은 선별해서 접근해볼 수 있습니다."
         if lvl >= 5
-        else "Market is mixed or weak. Focus on capital protection and only take highly selective setups."
+        else "시장 분위기가 좋지 않아서 서두르기보다 방어적으로 보는 편이 좋습니다."
     )
     return ScoreResult(
         score=score,
-        state=f"LEVEL {lvl} - {market_state_name(lvl)}",
+        state=f"레벨 {lvl}/{MARKET_LEVELS_TOTAL} - {market_state_name(lvl)}",
         action=market_action(lvl),
-        reasons=reasons[:3] if reasons else ["No strong positive signals today."],
+        confidence=confidence,
+        reasons=top_reasons if top_reasons else ["오늘은 시장을 강하게 좋게 볼 근거가 많지 않습니다"],
         invalidation=invalidation,
-        easy_explanation=easy + f" Confidence: {confidence_from_coverage(total_count, valid_count)}.",
+        easy_explanation=easy + f" 신뢰도는 {confidence}입니다.",
+        cross_highlights=cross_highlights[:4],
+        positive_factors=positive_factors[:6],
+        negative_factors=negative_factors[:6],
     )
 
 
 def score_stock(
     ticker: str,
     stock_df: pd.DataFrame,
-    spy_df: pd.DataFrame,
+    benchmark_df: pd.DataFrame,
     market_lvl: int,
-    earnings_soon: bool,
+    earnings_soon: bool | None,
 ) -> dict:
     close = stock_df["Close"]
     vol = stock_df["Volume"]
+    dma5 = close.rolling(5).mean()
     dma20 = close.rolling(20).mean()
     dma50 = close.rolling(50).mean()
 
     score = 0
     reasons = []
+    cross_highlights = []
+    positive_factors = []
+    negative_factors = []
     if close.iloc[-1] > dma20.iloc[-1]:
         score += 10
-        reasons.append("Price above 20DMA")
+        reasons.append("20일선 위에 있습니다")
+        positive_factors.append(factor_text("종가가 20일선 위에 있습니다", 10))
     if close.iloc[-1] > dma50.iloc[-1]:
         score += 10
-        reasons.append("Price above 50DMA")
+        reasons.append("50일선 위에 있습니다")
+        positive_factors.append(factor_text("종가가 50일선 위에 있습니다", 10))
     if dma20.iloc[-1] > dma50.iloc[-1]:
         score += 10
+        positive_factors.append(factor_text("20일선이 50일선 위에 있습니다", 10))
     if slope_up(dma20):
         score += 10
+        positive_factors.append(factor_text("20일선이 위로 기울고 있습니다", 10))
 
-    rs = (close / spy_df["Close"]).dropna()
+    short_bull, short_bear = recent_cross_signal(
+        dma5,
+        dma20,
+        factor_text("최근 5일선이 20일선을 상향 돌파했습니다", 0),
+        factor_text("최근 5일선이 20일선을 하향 이탈했습니다", 0),
+    )
+    if short_bull:
+        cross_highlights.append(f"{ticker} 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다.")
+        positive_factors.append(short_bull)
+        reasons.append("최근 단기 골든크로스가 나왔습니다")
+    if short_bear:
+        cross_highlights.append(f"{ticker} 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다.")
+        negative_factors.append(short_bear)
+        reasons.append("최근 단기 데드크로스가 나왔습니다")
+
+    mid_bull, mid_bear = recent_cross_signal(
+        dma20,
+        dma50,
+        factor_text("최근 20일선이 50일선을 상향 돌파했습니다", 0),
+        factor_text("최근 20일선이 50일선을 하향 이탈했습니다", 0),
+        lookback=10,
+    )
+    if mid_bull:
+        cross_highlights.append(f"{ticker} 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다.")
+        positive_factors.append(mid_bull)
+        reasons.append("최근 중기 골든크로스가 나왔습니다")
+    if mid_bear:
+        cross_highlights.append(f"{ticker} 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다.")
+        negative_factors.append(mid_bear)
+        reasons.append("최근 중기 데드크로스가 나왔습니다")
+
+    rs = (close / benchmark_df["Close"]).dropna()
     if len(rs) >= 20 and rs.iloc[-1] > rs.iloc[-20]:
         score += 15
-        reasons.append("Relative strength vs SPY is rising")
+        reasons.append("S&P500 대비 상대강도가 좋아지고 있습니다")
+        positive_factors.append(factor_text("S&P500보다 더 강한 흐름입니다", 15))
 
     stk_ret20 = close.pct_change(20).iloc[-1] if len(close) >= 21 else 0
-    spy_ret20 = spy_df["Close"].pct_change(20).iloc[-1] if len(spy_df["Close"]) >= 21 else 0
-    if stk_ret20 > spy_ret20:
+    benchmark_ret20 = benchmark_df["Close"].pct_change(20).iloc[-1] if len(benchmark_df["Close"]) >= 21 else 0
+    if stk_ret20 > benchmark_ret20:
         score += 10
+        positive_factors.append(factor_text("최근 20일 수익률이 S&P500보다 좋습니다", 10))
 
     vol20 = vol.rolling(20).mean()
-    if close.iloc[-1] > close.iloc[-2] and vol.iloc[-1] > vol20.iloc[-1]:
+    has_strong_volume = bool(close.iloc[-1] > close.iloc[-2] and vol.iloc[-1] > vol20.iloc[-1])
+    if has_strong_volume:
         score += 10
+        positive_factors.append(factor_text("상승할 때 거래량이 평균보다 강했습니다", 10))
 
     up_days = stock_df[stock_df["Close"].pct_change() > 0]["Volume"].tail(20).mean()
     down_days = stock_df[stock_df["Close"].pct_change() < 0]["Volume"].tail(20).mean()
     if pd.notna(up_days) and pd.notna(down_days) and up_days > down_days:
         score += 5
+        positive_factors.append(factor_text("최근에는 상승일 거래량이 더 우세했습니다", 5))
 
     tr = pd.concat(
         [
@@ -372,48 +734,87 @@ def score_stock(
     atr_ratio = float((atr14.iloc[-1] / close.iloc[-1]) if close.iloc[-1] else 0.0)
     if atr_ratio < 0.06:
         score += 5
+        positive_factors.append(factor_text("변동성이 과도하지 않습니다", 5))
 
     recent_5d = close.pct_change(5).iloc[-1] if len(close) >= 6 else 0
     overheated = recent_5d > 0.2
     if not overheated:
         score += 5
-
-    if not earnings_soon:
-        score += 5
+        positive_factors.append(factor_text("최근 급등 과열 구간은 아닙니다", 5))
     else:
-        reasons.append("Earnings are close; execution should be reduced")
-    score += 5
+        negative_factors.append(factor_text("최근 단기 급등이 커서 추격 매수는 부담입니다", 0))
 
-    if close.iloc[-1] > close.iloc[-2] and vol.iloc[-1] < vol20.iloc[-1]:
+    if earnings_soon is False:
+        score += 5
+        positive_factors.append(factor_text("가까운 실적 일정 부담이 없습니다", 5))
+    elif earnings_soon is True:
+        reasons.append("실적이 가까워 보수적으로 봐야 합니다")
+        negative_factors.append(factor_text("실적 발표가 가까워 보수적으로 봐야 합니다", -5))
+    else:
+        negative_factors.append(factor_text("실적 일정을 확인하지 못해 보수적으로 봐야 합니다", -5))
+
+    rs_10d_weaker = bool(len(rs) >= 10 and rs.iloc[-1] < rs.iloc[-10])
+    if close.iloc[-1] > dma20.iloc[-1] and vol.iloc[-1] < vol20.iloc[-1]:
         score -= 10
-    if close.iloc[-1] > close.iloc[-2] and len(rs) >= 10 and rs.iloc[-1] < rs.iloc[-10]:
+        reasons.append("거래량이 아직 약합니다")
+        negative_factors.append(factor_text("거래량이 아직 약합니다", -10))
+    if rs_10d_weaker:
         score -= 10
+        reasons.append("상대강도가 약해졌습니다")
+        negative_factors.append(factor_text("가격 대비 상대강도는 약해졌습니다", -10))
+
+    if close.iloc[-1] <= dma20.iloc[-1]:
+        negative_factors.append(factor_text("종가가 20일선 아래에 있습니다", 0))
+    if close.iloc[-1] <= dma50.iloc[-1]:
+        negative_factors.append(factor_text("종가가 50일선 아래에 있습니다", 0))
+    if dma20.iloc[-1] <= dma50.iloc[-1]:
+        negative_factors.append(factor_text("20일선이 50일선 아래라 추세가 약합니다", 0))
+    if not slope_up(dma20):
+        negative_factors.append(factor_text("20일선 기울기가 아직 위를 향하지 않습니다", 0))
+    if len(rs) >= 20 and rs.iloc[-1] <= rs.iloc[-20]:
+        negative_factors.append(factor_text("최근 20일 기준 S&P500보다 약했습니다", 0))
+    if stk_ret20 <= benchmark_ret20:
+        negative_factors.append(factor_text("최근 20일 수익률이 S&P500보다 좋지 않습니다", 0))
+    if not has_strong_volume:
+        negative_factors.append(factor_text("강한 상승 거래량 신호가 아직 부족합니다", 0))
+    if not (pd.notna(up_days) and pd.notna(down_days) and up_days > down_days):
+        negative_factors.append(factor_text("상승일 거래량 우위가 뚜렷하지 않습니다", 0))
+    if atr_ratio >= 0.06:
+        negative_factors.append(factor_text("변동성이 커서 흔들림이 큽니다", 0))
 
     score = int(max(0, min(100, round(score))))
     s_state = stock_state(score)
     action = combined_action(market_lvl, s_state)
-    if earnings_soon or overheated:
-        if action == "Buy":
-            action = "Small Buy"
-        elif action == "Selective Buy":
-            action = "Watch"
+    if earnings_soon is True or earnings_soon is None or overheated:
+        if action == "매수 가능":
+            action = "소규모 매수"
+        elif action == "선별 매수":
+            action = "관찰"
 
     easy = (
-        "This stock is one of the stronger names versus SPY and trend conditions are constructive."
-        if s_state in {"Strong", "Good"}
-        else "Signals are mixed or weak, so waiting for cleaner strength is safer."
+        "이 종목은 관심종목 안에서 비교적 괜찮은 편입니다. 다만 한 번에 크게 들어가기보다 차분히 접근하는 편이 좋습니다."
+        if s_state in {"강함", "양호"}
+        else "지금은 확실히 강하다고 보기 어렵습니다. 서두르기보다 조금 더 지켜보는 편이 좋습니다."
     )
+    note = summarize_stock_note(score, s_state, reasons, earnings_soon, overheated)
     return {
         "ticker": ticker,
         "stock_score": score,
         "stock_state": s_state,
         "final_action": action,
-        "top_reasons": reasons[:3] if reasons else ["No strong setup confirmation."],
-        "invalidation": "Loss of 20DMA with weak relative strength.",
+        "top_reasons": reasons[:3] if reasons else ["뚜렷하게 강하다고 볼 근거가 부족합니다"],
+        "invalidation": "20일선 아래로 밀리고 상대강도도 약해지면 더 보수적으로 봐야 합니다.",
         "easy_explanation": easy,
-        "event_flag": "EARNINGS_WITHIN_7D" if earnings_soon else "NONE",
+        "note": note,
+        "cross_highlights": cross_highlights[:2],
+        "event_flag": "실적 7일 이내" if earnings_soon is True else "실적 일정 확인 필요" if earnings_soon is None else "특이 일정 없음",
+        "earnings_soon": None if earnings_soon is None else bool(earnings_soon),
+        "overheated": bool(overheated),
+        "positive_factors": positive_factors[:6],
+        "negative_factors": negative_factors[:6],
         "metrics": {
             "close": float(close.iloc[-1]),
+            "close_change_pct": pct_change_from_prev_close(close),
             "dma20": float(dma20.iloc[-1]) if pd.notna(dma20.iloc[-1]) else None,
             "dma50": float(dma50.iloc[-1]) if pd.notna(dma50.iloc[-1]) else None,
             "volume_ratio_20d": float(vol.iloc[-1] / vol20.iloc[-1]) if pd.notna(vol20.iloc[-1]) else None,
@@ -430,38 +831,301 @@ def score_stock(
     }
 
 
-def get_earnings_within_7_days(ticker: str, as_of: date) -> bool:
+def summarize_stock_note(score: int, state: str, reasons: list[str], earnings_soon: bool, overheated: bool) -> str:
+    if earnings_soon:
+        return "지금은 보수적으로 보는 편이 좋습니다. 이유: 곧 실적 발표가 있습니다."
+    if overheated:
+        return "지금 바로 따라 사기엔 부담이 있습니다. 이유: 최근에 너무 빨리 올랐습니다."
+    if state in {"강함", "양호"}:
+        base = "관심 있게 볼 만합니다."
+    elif state == "애매":
+        base = "아직 확실하진 않습니다."
+    elif state == "약함":
+        base = "지금 서두를 필요는 없어 보입니다."
+    else:
+        base = "지금은 굳이 들어갈 이유가 약합니다."
+    reason_text = translate_reason(reasons[0]) if reasons else default_reason_for_state(state)
+    return f"{base} 이유: {reason_text}."
+
+
+def translate_reason(reason: str) -> str:
+    mapping = {
+        "20일선 위에 있습니다": "20일선 위에 있습니다",
+        "50일선 위에 있습니다": "50일선 위에 있습니다",
+        "거래량이 아직 약합니다": "거래량이 아직 약합니다",
+        "상대강도가 약해졌습니다": "상대강도가 약해졌습니다",
+        "S&P500 대비 상대강도가 좋아지고 있습니다": "S&P500보다 더 강한 흐름입니다",
+        "실적이 가까워 보수적으로 봐야 합니다": "실적이 가까워 보수적으로 봐야 합니다",
+        "뚜렷하게 강하다고 볼 근거가 부족합니다": "뚜렷하게 강하다고 볼 근거가 부족합니다",
+    }
+    return mapping.get(reason, reason)
+
+
+def default_reason_for_state(state: str) -> str:
+    mapping = {
+        "강함": "가격 흐름이 비교적 안정적입니다",
+        "양호": "흐름이 나쁘지 않습니다",
+        "애매": "강하다고 보기엔 아직 부족합니다",
+        "약함": "주가 흐름이 약합니다",
+        "회피": "지금은 좋은 진입 신호가 부족합니다",
+    }
+    return mapping.get(state, "판단 근거가 충분하지 않습니다")
+
+
+def get_earnings_within_7_days(ticker: str, as_of: date) -> bool | None:
+    if ticker.endswith("XX") or ticker in {"SPY", "QQQ", "RSP", "HYG", "UUP", "SOXX", "^GSPC", "^IXIC", "^VIX"}:
+        return False
     try:
         cal = yf.Ticker(ticker).calendar
         if cal is None or cal.empty:
-            return False
+            return None
         raw_date = cal.loc["Earnings Date"].iloc[0]
         if pd.isna(raw_date):
-            return False
+            return None
         earn_date = pd.Timestamp(raw_date).date()
         delta = (earn_date - as_of).days
         return 0 <= delta <= 7
     except Exception:
-        return False
+        return None
+
+
+def compact_signed(value: int) -> str:
+    return f"{value:+d}" if value else "0"
+
+
+def score_history_tags(entries: list[dict]) -> list[str]:
+    if not entries:
+        return []
+    tags = []
+    if len(entries) >= 2:
+        tags.append(f"1일 점수 {compact_signed(entries[-1]['score'] - entries[-2]['score'])}")
+    if len(entries) >= 6:
+        tags.append(f"5일 점수 {compact_signed(entries[-1]['score'] - entries[-6]['score'])}")
+    if len(entries) >= 21:
+        tags.append(f"20일 점수 {compact_signed(entries[-1]['score'] - entries[-21]['score'])}")
+    window = entries[-30:]
+    if window:
+        tags.append(f"30일 최고 {max(x['score'] for x in window)}")
+    return tags[:4]
+
+
+def update_history(history: dict, output: dict, as_of: date) -> dict:
+    date_key = as_of.strftime("%Y-%m-%d")
+    market_entries = [x for x in history.get("market", []) if x.get("date") != date_key]
+    market_entries.append({"date": date_key, "score": output["market"]["score"], "level": output["market"]["state"]})
+    market_entries = market_entries[-30:]
+
+    stock_history = history.get("stocks", {})
+    next_stock_history = {}
+    for stock in output["stocks"]:
+        ticker = stock["ticker"]
+        entries = [x for x in stock_history.get(ticker, []) if x.get("date") != date_key]
+        entries.append({"date": date_key, "score": stock["stock_score"], "state": stock["stock_state"]})
+        next_stock_history[ticker] = entries[-30:]
+    return {"market": market_entries, "stocks": next_stock_history}
+
+
+def market_exposure_band(level: int) -> str:
+    return {
+        6: "총 노출 80~100%",
+        5: "총 노출 60~80%",
+        4: "총 노출 30~50%",
+        3: "총 노출 10~30%",
+        2: "총 노출 0~15%",
+        1: "총 노출 0~5%",
+    }[level]
+
+
+def market_position_tags(level: int, event_risk: bool) -> list[str]:
+    tags = [market_exposure_band(level)]
+    if level >= 5:
+        tags.append("강한 종목 선별 접근")
+    elif level == 4:
+        tags.append("소규모 분할 진입")
+    else:
+        tags.append("현금 비중 높게 유지")
+    if event_risk:
+        tags.append("이벤트 전 레버리지 자제")
+    return tags
+
+
+def stock_position_tags(market_lvl: int, stock_state_value: str, earnings_soon: bool | None, overheated: bool) -> list[str]:
+    if market_lvl <= 2:
+        base = "권장 비중 0~2%"
+    elif market_lvl == 3:
+        base = "권장 비중 1~3%"
+    elif market_lvl == 4:
+        base = "권장 비중 2~5%"
+    elif stock_state_value == "강함":
+        base = "권장 비중 4~8%"
+    elif stock_state_value == "양호":
+        base = "권장 비중 3~6%"
+    else:
+        base = "권장 비중 0~3%"
+    tags = [base, "분할 2~3회 접근"]
+    if earnings_soon is True:
+        tags.append("실적 전 비중 축소")
+    if overheated:
+        tags.append("추격 매수 금지")
+    return tags[:3]
+
+
+def market_change_tags(previous_output: dict, current_market: dict) -> list[str]:
+    if not previous_output:
+        return ["첫 생성 데이터"]
+    prev_market = previous_output.get("market", {})
+    tags = []
+    prev_score = prev_market.get("score")
+    if isinstance(prev_score, int):
+        tags.append(f"점수 {compact_signed(current_market['score'] - prev_score)}")
+    prev_state = prev_market.get("state")
+    if prev_state and prev_state != current_market["state"]:
+        tags.append(f"레벨 변화: {prev_state} -> {current_market['state']}")
+    elif prev_state:
+        tags.append("레벨 변화 없음")
+    prev_vix = prev_market.get("metrics", {}).get("vix_change_pct")
+    curr_vix = current_market.get("metrics", {}).get("vix_change_pct")
+    if isinstance(curr_vix, (int, float)):
+        tags.append(f"VIX 일간 {curr_vix:+.2f}%")
+    return tags[:4]
+
+
+def stock_change_tags(previous_output: dict, stock: dict) -> list[str]:
+    if not previous_output:
+        return ["첫 생성 데이터"]
+    previous_stock = next((x for x in previous_output.get("stocks", []) if x.get("ticker") == stock["ticker"]), None)
+    if not previous_stock:
+        return ["첫 생성 데이터"]
+    tags = [f"점수 {compact_signed(stock['stock_score'] - previous_stock.get('stock_score', stock['stock_score']))}"]
+    if previous_stock.get("stock_state") != stock["stock_state"]:
+        tags.append(f"상태 변화: {previous_stock.get('stock_state')} -> {stock['stock_state']}")
+    if previous_stock.get("final_action") != stock["final_action"]:
+        tags.append(f"행동 변화: {previous_stock.get('final_action')} -> {stock['final_action']}")
+    return tags[:3]
+
+
+def market_alert_tags(market_output: dict) -> list[str]:
+    alerts = []
+    if market_output["negative_filters"]["filter_3_high_stress"]:
+        alerts.append("고스트레스 구간")
+    if market_output["negative_filters"]["filter_4_event_risk"]:
+        alerts.append(f"{', '.join(market_output['negative_filters']['event_names'])} 경계")
+    if any("데드크로스" in x for x in market_output.get("cross_highlights", [])):
+        alerts.append("데드크로스 확인")
+    elif any("골든크로스" in x for x in market_output.get("cross_highlights", [])):
+        alerts.append("골든크로스 확인")
+    if market_output["score"] <= 39:
+        alerts.append("방어 모드 유지")
+    return alerts[:4]
+
+
+def stock_alert_tags(stock: dict) -> list[str]:
+    alerts = []
+    if stock["event_flag"] == "실적 7일 이내":
+        alerts.append("실적 임박")
+    if any("데드크로스" in x for x in stock.get("cross_highlights", [])):
+        alerts.append("데드크로스 발생")
+    elif any("골든크로스" in x for x in stock.get("cross_highlights", [])):
+        alerts.append("골든크로스 발생")
+    if stock["stock_score"] >= 70:
+        alerts.append("상위 점수권")
+    if "회피" in stock["final_action"]:
+        alerts.append("신규 진입 자제")
+    return alerts[:4]
+
+
+def sector_strength_label(close: pd.Series) -> str:
+    dma50 = close.rolling(50).mean()
+    ret20 = close.pct_change(20).iloc[-1] if len(close) >= 21 else 0
+    above50 = bool(pd.notna(dma50.iloc[-1]) and close.iloc[-1] > dma50.iloc[-1])
+    if above50 and ret20 > 0.03:
+        return "강함"
+    if above50 or ret20 > 0:
+        return "보통"
+    return "약함"
+
+
+def sector_display_name(label: str) -> str:
+    return {
+        "SOXX": "SOXX (반도체)",
+        "XLK": "XLK (기술)",
+        "XLF": "XLF (금융)",
+        "XLY": "XLY (소비재)",
+    }.get(label, label)
+
+
+def sector_tags(sector_map: dict[str, pd.DataFrame]) -> list[dict]:
+    tags = []
+    for label, df in sector_map.items():
+        if df.empty or "Close" not in df.columns:
+            continue
+        change_pct = pct_change_from_prev_close(df["Close"])
+        tags.append(
+            {
+                "name": sector_display_name(label),
+                "status": sector_strength_label(df["Close"]),
+                "change_pct": change_pct,
+            }
+        )
+    return tags
+
+
+def market_confidence_warnings(sp500_count: int, dxy_source: str, stock_reports: list[dict]) -> list[str]:
+    warnings = []
+    if sp500_count < 450:
+        warnings.append(f"Breadth 표본 축소: {sp500_count}종목")
+    if dxy_source != "DX-Y.NYB":
+        warnings.append("달러지수 대체값 사용")
+    unknown_earnings = sum(1 for stock in stock_reports if stock["event_flag"] == "실적 일정 확인 필요")
+    if unknown_earnings:
+        warnings.append(f"실적 일정 확인 필요 {unknown_earnings}종목")
+    return warnings[:4]
+
+
+def stock_confidence_warnings(stock: dict) -> list[str]:
+    warnings = []
+    if stock["event_flag"] == "실적 일정 확인 필요":
+        warnings.append("실적 일정 확인 필요")
+    volume_ratio_20d = stock["metrics"].get("volume_ratio_20d")
+    if isinstance(volume_ratio_20d, float) and volume_ratio_20d < 0.85:
+        warnings.append("거래량 신호 약함")
+    rs_change = stock["metrics"].get("rs_20d_change")
+    if isinstance(rs_change, float) and rs_change < 0:
+        warnings.append("시장 대비 약세")
+    return warnings[:4]
 
 
 def main() -> None:
     now_et = datetime.now(tz=ET)
     as_of = now_et.date()
+    previous_output = load_json(OUTPUT_PATH)
+    existing_history = load_json(HISTORY_PATH)
 
     watchlist = load_yaml(WATCHLIST_PATH).get("watchlist", [])
     if len(watchlist) != 6:
         raise ValueError("watchlist.yml must contain exactly 6 tickers.")
 
-    spy = download_ohlcv("SPY")
+    spx = download_ohlcv("^GSPC")
+    ndx = download_ohlcv("^IXIC")
+    rut = download_ohlcv("^RUT")
+    tnx = download_ohlcv("^TNX")
+    spy_proxy = download_ohlcv("SPY")
+    qqq_proxy = download_ohlcv("QQQ")
     rsp = download_ohlcv("RSP")
     hyg = download_ohlcv("HYG")
+    soxx = download_ohlcv("SOXX")
+    xlk = download_ohlcv("XLK")
+    xlf = download_ohlcv("XLF")
+    xly = download_ohlcv("XLY")
     vix = download_ohlcv("^VIX")
+    dxy_source = "DX-Y.NYB"
     try:
         dxy = download_ohlcv("DX-Y.NYB")
         if dxy.empty:
+            dxy_source = "UUP"
             dxy = download_ohlcv("UUP")
     except Exception:
+        dxy_source = "UUP"
         dxy = download_ohlcv("UUP")
 
     sp500_close = download_sp500_prices()
@@ -473,32 +1137,42 @@ def main() -> None:
     pct_above_20 = ((sp500_close.iloc[-1] > sp500_close.rolling(20).mean().iloc[-1]).mean() * 100.0)
     pct_above_50 = ((sp500_close.iloc[-1] > sp500_close.rolling(50).mean().iloc[-1]).mean() * 100.0)
     pct_above_20_prev = ((sp500_close.iloc[-2] > sp500_close.rolling(20).mean().iloc[-2]).mean() * 100.0)
-    rsp_spy = (rsp["Close"] / spy["Close"]).dropna()
+    rsp_spx = (rsp["Close"] / spx["Close"]).dropna()
 
     events = load_events(as_of)
-    market_data = {"SPY": spy, "RSP": rsp, "HYG": hyg, "DXY": dxy, "VIX": vix}
+    market_data = {"SPX": spx, "NDX": ndx, "RUT": rut, "TNX": tnx, "SPY_PROXY": spy_proxy, "QQQ_PROXY": qqq_proxy, "RSP": rsp, "HYG": hyg, "DXY": dxy, "VIX": vix}
     breadth = {
         "pct_above_20dma": float(pct_above_20),
         "pct_above_50dma": float(pct_above_50),
         "pct_above_20dma_change": float(pct_above_20 - pct_above_20_prev),
+        "adline_available": bool(len(ad_line) >= 6),
         "adline_5d_up": bool(len(ad_line) >= 6 and ad_line.iloc[-1] > ad_line.iloc[-6]),
-        "rsp_spy_ratio_20d_up_or_flat": bool(len(rsp_spy) >= 20 and rsp_spy.iloc[-1] >= rsp_spy.iloc[-20]),
+        "rsp_spy_available": bool(len(rsp_spx) >= 20),
+        "rsp_spy_ratio_20d_up_or_flat": bool(len(rsp_spx) >= 20 and rsp_spx.iloc[-1] >= rsp_spx.iloc[-20]),
     }
     market = score_market(as_of, market_data, breadth, events)
     lvl = market_level(market.score)
 
     event_risk, event_names = is_event_d0_d1(as_of, events)
-    execution_strength = "Normal"
+    execution_strength = "좋음"
     if event_risk:
-        execution_strength = "Reduced (Event D-1/D0)"
+        execution_strength = "매우 보수적"
     elif lvl <= 3:
-        execution_strength = "Reduced (Weak market regime)"
+        execution_strength = "보수적"
+    elif lvl == 4:
+        execution_strength = "보통"
 
     stock_reports = []
     for ticker in watchlist:
         sdf = download_ohlcv(ticker)
         earnings_soon = get_earnings_within_7_days(ticker, as_of)
-        stock_reports.append(score_stock(ticker, sdf, spy, lvl, earnings_soon))
+        stock_reports.append(score_stock(ticker, sdf, spx, lvl, earnings_soon))
+
+    for stock in stock_reports:
+        stock["change_tags"] = stock_change_tags(previous_output, stock)
+        stock["position_tags"] = stock_position_tags(lvl, stock["stock_state"], stock.get("earnings_soon"), stock.get("overheated", False))
+        stock["alerts"] = stock_alert_tags(stock)
+        stock["confidence_warnings"] = stock_confidence_warnings(stock)
 
     summary_table = [
         {
@@ -506,58 +1180,95 @@ def main() -> None:
             "stock_score": s["stock_score"],
             "stock_state": s["stock_state"],
             "final_action": s["final_action"],
-            "note": s["event_flag"],
+            "note": s["note"],
         }
         for s in stock_reports
     ]
 
+    market_output = {
+        "state": market.state,
+        "score": market.score,
+        "confidence": market.confidence,
+        "execution_strength": execution_strength,
+        "action": market.action,
+        "top_reasons": market.reasons,
+        "cross_highlights": market.cross_highlights,
+        "positive_factors": market.positive_factors,
+        "negative_factors": market.negative_factors,
+        "invalidation": market.invalidation,
+        "easy_explanation": market.easy_explanation,
+        "negative_filters": {
+            "filter_1_divergence": close_true(spx) and (not breadth["adline_5d_up"] or breadth["pct_above_20dma_change"] < 0),
+            "filter_2_bigcap_only": bool(len(rsp_spx) >= 20 and rsp_spx.iloc[-1] < rsp_spx.iloc[-20]),
+            "filter_3_high_stress": percentile_rank(vix["Close"]) > 85,
+            "filter_4_event_risk": event_risk,
+            "event_names": event_names,
+        },
+        "metrics": {
+            "spx_close": float(spx["Close"].iloc[-1]),
+            "spx_change_pct": pct_change_from_prev_close(spx["Close"]),
+            "spx_dma200": float(spx["Close"].rolling(200).mean().iloc[-1]),
+            "ndx_close": float(ndx["Close"].iloc[-1]),
+            "ndx_change_pct": pct_change_from_prev_close(ndx["Close"]),
+            "ndx_dma200": float(ndx["Close"].rolling(200).mean().iloc[-1]),
+            "rut_close": float(rut["Close"].iloc[-1]),
+            "rut_change_pct": pct_change_from_prev_close(rut["Close"]),
+            "vix_close": float(vix["Close"].iloc[-1]),
+            "vix_change_pct": pct_change_from_prev_close(vix["Close"]),
+            "tnx_close": float(tnx["Close"].iloc[-1]),
+            "tnx_change_pct": pct_change_from_prev_close(tnx["Close"]),
+            "pct_above_20dma": breadth["pct_above_20dma"],
+            "pct_above_50dma": breadth["pct_above_50dma"],
+            "vix_percentile": percentile_rank(vix["Close"]),
+            "dxy_20d_zscore": zscore(dxy["Close"], 20),
+            "tnx_20d_zscore": zscore(tnx["Close"], 20),
+        },
+    }
+    market_output["change_tags"] = market_change_tags(previous_output, market_output)
+    market_output["position_tags"] = market_position_tags(lvl, event_risk)
+    market_output["alerts"] = market_alert_tags(market_output)
+    market_output["sector_tags"] = sector_tags({"SOXX": soxx, "XLK": xlk, "XLF": xlf, "XLY": xly})
+    market_output["confidence_warnings"] = market_confidence_warnings(sp500_close.shape[1], dxy_source, stock_reports)
+
     output = {
         "generated_at_et": now_et.strftime("%Y-%m-%d %H:%M ET"),
-        "market_data_as_of": f"{spy.index[-1].strftime('%Y-%m-%d')} 16:00 ET (Close)",
-        "market": {
-            "state": market.state,
-            "score": market.score,
-            "confidence": confidence_from_coverage(12, 12),
-            "execution_strength": execution_strength,
-            "action": market.action,
-            "top_reasons": market.reasons,
-            "invalidation": market.invalidation,
-            "easy_explanation": market.easy_explanation,
-            "negative_filters": {
-                "filter_1_divergence": close_true(spy) and (not breadth["adline_5d_up"] or breadth["pct_above_20dma_change"] < 0),
-                "filter_2_bigcap_only": bool(len(rsp_spy) >= 20 and rsp_spy.iloc[-1] < rsp_spy.iloc[-20]),
-                "filter_3_high_stress": percentile_rank(vix["Close"]) > 85,
-                "filter_4_event_risk": event_risk,
-                "event_names": event_names,
-            },
-            "metrics": {
-                "pct_above_20dma": breadth["pct_above_20dma"],
-                "pct_above_50dma": breadth["pct_above_50dma"],
-                "vix_percentile": percentile_rank(vix["Close"]),
-                "dxy_20d_zscore": zscore(dxy["Close"], 20),
-            },
-        },
+        "market_data_as_of": f"{spx.index[-1].strftime('%Y-%m-%d')} 16:00 ET (Close)",
+        "market": market_output,
         "watchlist_summary": summary_table,
         "stocks": stock_reports,
         "charts": {
             "market": {
-                "dates": [d.strftime("%Y-%m-%d") for d in spy["Close"].tail(180).index],
-                "spy_close": [float(v) for v in spy["Close"].tail(180).tolist()],
-                "spy_dma20": [None if pd.isna(v) else float(v) for v in spy["Close"].rolling(20).mean().tail(180).tolist()],
-                "spy_dma50": [None if pd.isna(v) else float(v) for v in spy["Close"].rolling(50).mean().tail(180).tolist()],
-                "spy_dma200": [None if pd.isna(v) else float(v) for v in spy["Close"].rolling(200).mean().tail(180).tolist()],
+                "dates": [d.strftime("%Y-%m-%d") for d in spx["Close"].tail(180).index],
+                "spx_close": [float(v) for v in spx["Close"].tail(180).tolist()],
+                "spx_dma20": [None if pd.isna(v) else float(v) for v in spx["Close"].rolling(20).mean().tail(180).tolist()],
+                "spx_dma50": [None if pd.isna(v) else float(v) for v in spx["Close"].rolling(50).mean().tail(180).tolist()],
+                "spx_dma200": [None if pd.isna(v) else float(v) for v in spx["Close"].rolling(200).mean().tail(180).tolist()],
+                "ndx_close": [float(v) for v in ndx["Close"].tail(180).tolist()],
+                "ndx_dma20": [None if pd.isna(v) else float(v) for v in ndx["Close"].rolling(20).mean().tail(180).tolist()],
+                "ndx_dma50": [None if pd.isna(v) else float(v) for v in ndx["Close"].rolling(50).mean().tail(180).tolist()],
+                "ndx_dma200": [None if pd.isna(v) else float(v) for v in ndx["Close"].rolling(200).mean().tail(180).tolist()],
+                "rut_close": [float(v) for v in rut["Close"].tail(180).tolist()],
                 "breadth_20": [float(v) for v in ((sp500_close > sp500_close.rolling(20).mean()).mean(axis=1) * 100).tail(180).tolist()],
                 "breadth_50": [float(v) for v in ((sp500_close > sp500_close.rolling(50).mean()).mean(axis=1) * 100).tail(180).tolist()],
                 "vix_close": [float(v) for v in vix["Close"].tail(180).tolist()],
                 "hyg_close": [float(v) for v in hyg["Close"].tail(180).tolist()],
+                "tnx_close": [float(v) for v in tnx["Close"].tail(180).tolist()],
                 "dxy_close": [float(v) for v in dxy["Close"].tail(180).tolist()],
             }
         },
     }
 
+    history = update_history(existing_history, output, as_of)
+    output["market"]["history_tags"] = score_history_tags(history.get("market", []))
+    for stock in output["stocks"]:
+        stock["history_tags"] = score_history_tags(history.get("stocks", {}).get(stock["ticker"], []))
+    output["history"] = history
+
     DOCS_DATA_DIR.mkdir(parents=True, exist_ok=True)
     with OUTPUT_PATH.open("w", encoding="utf-8") as f:
         json.dump(output, f, indent=2)
+    with HISTORY_PATH.open("w", encoding="utf-8") as f:
+        json.dump(history, f, indent=2)
 
 
 def close_true(spy: pd.DataFrame) -> bool:

@@ -1,0 +1,53 @@
+{
+  "market": [
+    {
+      "date": "2026-03-28",
+      "score": 21,
+      "level": "\ub808\ubca8 1/6 - \ubc29\uc5b4 \uc6b0\uc120"
+    }
+  ],
+  "stocks": {
+    "NVDA": [
+      {
+        "date": "2026-03-28",
+        "score": 10,
+        "state": "\ud68c\ud53c"
+      }
+    ],
+    "TSLA": [
+      {
+        "date": "2026-03-28",
+        "score": 0,
+        "state": "\ud68c\ud53c"
+      }
+    ],
+    "META": [
+      {
+        "date": "2026-03-28",
+        "score": 0,
+        "state": "\ud68c\ud53c"
+      }
+    ],
+    "AMD": [
+      {
+        "date": "2026-03-28",
+        "score": 40,
+        "state": "\uc57d\ud568"
+      }
+    ],
+    "TEM": [
+      {
+        "date": "2026-03-28",
+        "score": 0,
+        "state": "\ud68c\ud53c"
+      }
+    ],
+    "SOXX": [
+      {
+        "date": "2026-03-28",
+        "score": 15,
+        "state": "\ud68c\ud53c"
+      }
+    ]
+  }
+}

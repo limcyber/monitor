@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Simple Market Regime Monitor</title>
+    <title>시장 흐름 모니터</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,11 +17,10 @@
     <header class="site-topbar">
       <div class="site-topbar-inner">
         <div class="brand">
-          <span class="brand-mark">Simple Market Regime Monitor</span>
-          <span class="brand-tag">finviz-inspired view</span>
+          <span class="brand-mark">시장 흐름 모니터</span>
+          <span class="brand-tag">간단하고 보기 쉬운 대시보드</span>
         </div>
         <div class="topbar-meta">
-          <span>Market Layer + Fixed 6-Stock Watchlist</span>
           <div class="theme-segment" role="group" aria-label="Theme mode">
             <button id="themeBw" class="theme-segment-btn" type="button" aria-pressed="false">
               BW
@@ -32,50 +31,114 @@
           </div>
         </div>
       </div>
+      <div class="site-topbar-time">
+        <span id="generatedAt">생성 시각: -</span>
+        <span id="asOf">데이터 기준 시각: -</span>
+      </div>
     </header>
     <main class="container">
       <header class="hero">
-        <h1>Simple Market Regime Monitor</h1>
-        <p>Market Layer + Fixed 6-Stock Watchlist</p>
-        <div class="meta-row">
-          <span id="generatedAt">Generated At: -</span>
-          <span id="asOf">Market Data As Of: -</span>
-        </div>
+        <h1>시장 흐름 모니터</h1>
       </header>
 
       <section class="panel market-panel">
         <div class="panel-head">
-          <h2>Market</h2>
+          <h2>시장 상태</h2>
           <span id="marketState" class="pill">-</span>
         </div>
         <div class="kpi-grid">
-          <article class="kpi"><h3>Score</h3><p id="marketScore">-</p></article>
-          <article class="kpi"><h3>Confidence</h3><p id="marketConfidence">-</p></article>
-          <article class="kpi"><h3>Execution</h3><p id="marketExecution">-</p></article>
-          <article class="kpi"><h3>Action</h3><p id="marketAction">-</p></article>
+          <article class="kpi"><h3>점수</h3><p id="marketScore">-</p></article>
+          <article class="kpi"><h3>신뢰도</h3><p id="marketConfidence">-</p></article>
+          <article class="kpi"><h3>매매 여건</h3><p id="marketExecution">-</p></article>
+          <article class="kpi"><h3>추천 행동</h3><p id="marketAction">-</p></article>
         </div>
+        <div class="market-ticker-strip">
+          <article class="ticker-chip">
+            <h3>S&amp;P500</h3>
+            <p id="marketSpyQuote">-</p>
+          </article>
+          <article class="ticker-chip">
+            <h3>NASDAQ</h3>
+            <p id="marketQqqQuote">-</p>
+          </article>
+          <article class="ticker-chip">
+            <h3>RUT</h3>
+            <p id="marketRutQuote">-</p>
+          </article>
+          <article class="ticker-chip">
+            <h3>VIX</h3>
+            <p id="marketVixQuote">-</p>
+          </article>
+          <article class="ticker-chip">
+            <h3>10Y</h3>
+            <p id="marketTnxQuote">-</p>
+          </article>
+        </div>
+        <div class="cross-highlight-block">
+          <h3>크로스 신호</h3>
+          <ul id="marketCrossHighlights"></ul>
+        </div>
+        <details class="extra-info-box">
+          <summary>추가 정보</summary>
+          <div class="tag-row-block">
+            <div class="tag-row">
+              <h3>오늘 변화</h3>
+              <div id="marketChangeTags" class="tag-list"></div>
+            </div>
+            <div class="tag-row">
+              <h3>운용 가이드</h3>
+              <div id="marketPositionTags" class="tag-list"></div>
+            </div>
+            <div class="tag-row">
+              <h3>오늘 알림</h3>
+              <div id="marketAlertTags" class="tag-list"></div>
+            </div>
+            <div class="tag-row">
+              <h3>신뢰도 경고</h3>
+              <div id="marketWarningTags" class="tag-list"></div>
+            </div>
+            <div class="tag-row">
+              <h3>섹터 강도</h3>
+              <div id="marketSectorTags" class="tag-list"></div>
+            </div>
+            <div class="tag-row">
+              <h3>최근 30일</h3>
+              <div id="marketHistoryTags" class="tag-list"></div>
+            </div>
+          </div>
+        </details>
         <div class="explain">
-          <h3>Easy Explanation</h3>
+          <h3>쉽게 설명하면</h3>
           <p id="marketEasy">-</p>
         </div>
         <div class="reasons">
-          <h3>Top 3 Reasons</h3>
+          <h3>이렇게 본 이유</h3>
           <ul id="marketReasons"></ul>
-          <p><strong>Invalidation:</strong> <span id="marketInvalidation">-</span></p>
+          <div class="factor-grid">
+            <details class="factor-box factor-box-positive">
+              <summary>점수를 올린 항목</summary>
+              <ul id="marketPositiveFactors"></ul>
+            </details>
+            <details class="factor-box factor-box-negative">
+              <summary>점수를 깎았거나 불리한 항목</summary>
+              <ul id="marketNegativeFactors"></ul>
+            </details>
+          </div>
+          <p><strong>주의할 점:</strong> <span id="marketInvalidation">-</span></p>
         </div>
       </section>
 
       <section class="panel">
-        <h2>Watchlist Summary</h2>
+        <h2>관심종목 요약</h2>
         <div class="table-wrap">
           <table>
             <thead>
               <tr>
-                <th>Ticker</th>
-                <th>Stock Score</th>
-                <th>Stock State</th>
-                <th>Final Action</th>
-                <th>Note</th>
+                <th>종목</th>
+                <th>점수</th>
+                <th>상태</th>
+                <th>추천 행동</th>
+                <th>메모</th>
               </tr>
             </thead>
             <tbody id="watchlistTable"></tbody>
@@ -84,26 +147,26 @@
       </section>
 
       <section class="panel">
-        <h2>Market Charts</h2>
+        <h2>시장 차트</h2>
         <div class="chart-grid">
           <article class="chart-card">
             <div class="chart-head">
-              <h3>SPY Trend</h3>
-              <p>Price vs 20/50/200DMA</p>
+              <h3>S&amp;P500 / Nasdaq 추세</h3>
+              <p>S&amp;P500 지수와 나스닥 지수가 200일선 위에 있는지 함께 봅니다.</p>
             </div>
             <canvas id="spyChart"></canvas>
           </article>
           <article class="chart-card">
             <div class="chart-head">
-              <h3>Breadth</h3>
-              <p>% of S&P 500 above key moving averages</p>
+              <h3>시장 폭</h3>
+              <p>전체 종목 중 얼마나 많은 종목이 같이 움직이는지 봅니다.</p>
             </div>
             <canvas id="breadthChart"></canvas>
           </article>
           <article class="chart-card">
             <div class="chart-head">
-              <h3>Stress</h3>
-              <p>VIX, HYG, and DXY stress snapshot</p>
+              <h3>시장 긴장도</h3>
+              <p>변동성, 하이일드, 10년물 금리, 달러 흐름으로 시장이 불안한지 봅니다.</p>
             </div>
             <canvas id="stressChart"></canvas>
           </article>
@@ -111,8 +174,59 @@
       </section>
 
       <section class="panel">
-        <h2>Stocks</h2>
+        <h2>종목별 상세</h2>
         <div id="stockCards" class="stock-cards"></div>
+      </section>
+
+      <section class="panel guide-panel">
+        <div class="panel-head">
+          <h2>이 모니터 툴 사용설명서</h2>
+          <span class="pill">읽는 순서 안내</span>
+        </div>
+        <div class="guide-grid">
+          <article class="guide-card">
+            <h3>1. 먼저 시장 상태를 봅니다</h3>
+            <p>
+              맨 위의 시장 상태에서 점수, 매매 여건, 추천 행동을 먼저 확인합니다. 시장이 약하면 좋은 종목도
+              공격적으로 보기 어렵습니다.
+            </p>
+          </article>
+          <article class="guide-card">
+            <h3>2. 크로스 신호를 먼저 체크합니다</h3>
+            <p>
+              골든크로스와 데드크로스는 최근 흐름 변화 신호입니다. 이 신호는 시장과 종목 설명의 맨 위에 따로
+              강조되어 보입니다.
+            </p>
+          </article>
+          <article class="guide-card">
+            <h3>3. 점수는 흐름 강도입니다</h3>
+            <p>
+              점수가 높을수록 추세, 상대강도, 거래량, 위험 요인이 더 유리하다는 뜻입니다. 다만 점수 하나만 보고
+              판단하지 말고 이유 항목을 함께 보는 것이 좋습니다.
+            </p>
+          </article>
+          <article class="guide-card">
+            <h3>4. 추천 행동은 시장 다음에 종목 순서입니다</h3>
+            <p>
+              이 화면은 항상 시장을 상위 필터로 사용합니다. 종목이 괜찮아 보여도 시장이 약하면 추천 행동은 더
+              보수적으로 내려갑니다.
+            </p>
+          </article>
+          <article class="guide-card">
+            <h3>5. 종목은 요약표 후 상세를 봅니다</h3>
+            <p>
+              관심종목 요약에서 어떤 종목이 상대적으로 나은지 먼저 보고, 아래 상세 카드에서 점수를 올린 항목과
+              불리한 항목을 확인하면 빠르게 비교할 수 있습니다.
+            </p>
+          </article>
+          <article class="guide-card">
+            <h3>6. 이 툴은 보조 판단용입니다</h3>
+            <p>
+              이 화면은 매수 버튼을 대신 눌러주는 시스템이 아니라, 시장 환경과 종목 상태를 한 번에 정리해주는
+              모니터입니다. 최종 판단은 손절 기준, 실적 일정, 포지션 크기까지 함께 보고 정하는 편이 좋습니다.
+            </p>
+          </article>
+        </div>
       </section>
     </main>
     <script src="./app.js" defer></script>
