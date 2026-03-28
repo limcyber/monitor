@@ -361,7 +361,7 @@ function lineChart(ctx, labels, datasets, config = {}) {
       responsive: true,
       maintainAspectRatio: true,
       layout: {
-        padding: { left: 8, right: 8, top: 4, bottom: 0 },
+        padding: { left: 4, right: 4, top: 4, bottom: 0 },
       },
       scales: {
         x: {
@@ -373,10 +373,9 @@ function lineChart(ctx, labels, datasets, config = {}) {
           ticks: {
             color: theme.ticks,
             autoSkip: true,
-            maxTicksLimit: 4,
+            maxTicksLimit: 6,
             maxRotation: 0,
-            padding: 2,
-            font: { size: 9 },
+            font: { size: 10 },
             callback(value, index, ticks) {
               const raw = labels[index] ?? ticks?.[value]?.label;
               return formatChartLabel(raw);
@@ -388,7 +387,7 @@ function lineChart(ctx, labels, datasets, config = {}) {
           ticks: {
             color: theme.ticks,
             maxTicksLimit: 4,
-            padding: 2,
+            padding: 0,
             font: { size: 9 },
             callback(value) {
               return formatAxisValue(value);
@@ -403,7 +402,7 @@ function lineChart(ctx, labels, datasets, config = {}) {
                 ticks: {
                   color: theme.ticks,
                   maxTicksLimit: 4,
-                  padding: 2,
+                  padding: 0,
                   font: { size: 9 },
                   callback(value) {
                     return formatAxisValue(value);
@@ -448,7 +447,7 @@ function barChart(ctx, labels, datasets) {
       responsive: true,
       maintainAspectRatio: true,
       layout: {
-        padding: { left: 8, right: 8, top: 4, bottom: 0 },
+        padding: { left: 4, right: 4, top: 4, bottom: 0 },
       },
       scales: {
         x: {
@@ -460,10 +459,9 @@ function barChart(ctx, labels, datasets) {
           ticks: {
             color: theme.ticks,
             autoSkip: true,
-            maxTicksLimit: 4,
+            maxTicksLimit: 6,
             maxRotation: 0,
-            padding: 2,
-            font: { size: 9 },
+            font: { size: 10 },
             callback(value, index, ticks) {
               const raw = labels[index] ?? ticks?.[value]?.label;
               return formatChartLabel(raw);
@@ -475,7 +473,7 @@ function barChart(ctx, labels, datasets) {
           ticks: {
             color: theme.ticks,
             maxTicksLimit: 4,
-            padding: 2,
+            padding: 0,
             font: { size: 9 },
             callback(value) {
               return formatAxisValue(value);
