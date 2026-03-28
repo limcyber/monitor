@@ -10,13 +10,6 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
-env:
-  AI_ANALYSIS_TEST_MODE: ${{ vars.AI_ANALYSIS_TEST_MODE }}
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -33,6 +26,8 @@ jobs:
 
       - name: Decide whether to run now
         id: market_window
+        env:
+          AI_ANALYSIS_TEST_MODE: ${{ vars.AI_ANALYSIS_TEST_MODE }}
         run: |
           python - <<'PY'
           from datetime import datetime
@@ -68,10 +63,6 @@ jobs:
           RUN_AI_ANALYSIS: "true"
           AI_ONLY_MODE: "true"
         run: |
-          if [ -z "${GOOGLE_API_KEY}" ]; then
-            echo "AI refresh skipped: GOOGLE_API_KEY is missing."
-            exit 0
-          fi
           echo "AI refresh running: generating market AI and watchlist AI files."
           python scripts/generate_report.py
 
