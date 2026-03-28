@@ -340,6 +340,7 @@ function formatAxisValue(value) {
 function lineChart(ctx, labels, datasets, config = {}) {
   if (!window.Chart || !ctx) return null;
   const theme = chartTheme();
+  const hasRightAxis = Boolean(config.rightAxis);
   const backgroundPlugin = {
     id: "chartBackground",
     beforeDraw(chart) {
@@ -390,6 +391,21 @@ function lineChart(ctx, labels, datasets, config = {}) {
             },
           },
         },
+        ...(hasRightAxis
+          ? {
+              y2: {
+                position: "right",
+                grid: { drawOnChartArea: false, color: theme.grid },
+                ticks: {
+                  color: theme.ticks,
+                  maxTicksLimit: 6,
+                  callback(value) {
+                    return formatAxisValue(value);
+                  },
+                },
+              },
+            }
+          : {}),
       },
       elements: { line: { borderWidth: 1.8 }, point: { radius: 0 } },
       plugins: {
@@ -638,17 +654,25 @@ function renderMarketCharts(charts) {
     neutral: "#6b7280",
   };
   const labels = charts.dates;
+  const monthStart = Math.max(0, labels.length - 21);
+  const monthLabels = labels.slice(monthStart);
+  const spxSeries = {
+    close: charts.spx_close.slice(monthStart),
+    dma200: charts.spx_dma200.slice(monthStart),
+    ndx_close: charts.ndx_close.slice(monthStart),
+    ndx_dma200: charts.ndx_dma200.slice(monthStart),
+  };
   appState.charts.push(
     lineChart(
       document.getElementById("spyChart"),
-      labels,
+      monthLabels,
       [
-      { label: "S&P500", data: charts.spx_close, borderColor: palette.primary },
-      { label: "S&P500 200일선", data: charts.spx_dma200, borderColor: palette.warning },
-      { label: "NASDAQ", data: charts.ndx_close, borderColor: palette.secondary },
-      { label: "NASDAQ 200일선", data: charts.ndx_dma200, borderColor: palette.danger },
+      { label: "S&P500", data: spxSeries.close, borderColor: palette.primary, yAxisID: "y" },
+      { label: "S&P500 200일선", data: spxSeries.dma200, borderColor: palette.warning, yAxisID: "y" },
+      { label: "NASDAQ", data: spxSeries.ndx_close, borderColor: palette.secondary, yAxisID: "y2" },
+      { label: "NASDAQ 200일선", data: spxSeries.ndx_dma200, borderColor: palette.danger, yAxisID: "y2" },
       ],
-      { showLegend: false }
+      { showLegend: false, rightAxis: true }
     )
   );
   renderChartLegend("spyLegend", [
