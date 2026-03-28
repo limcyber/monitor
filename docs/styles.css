@@ -817,6 +817,35 @@ table {
   font-size: 12px;
 }
 
+.watchlist-summary-table {
+  table-layout: fixed;
+}
+
+.watchlist-summary-table th:nth-child(1),
+.watchlist-summary-table td:nth-child(1) {
+  width: 11%;
+}
+
+.watchlist-summary-table th:nth-child(2),
+.watchlist-summary-table td:nth-child(2) {
+  width: 15%;
+}
+
+.watchlist-summary-table th:nth-child(3),
+.watchlist-summary-table td:nth-child(3) {
+  width: 10%;
+}
+
+.watchlist-summary-table th:nth-child(4),
+.watchlist-summary-table td:nth-child(4) {
+  width: 11%;
+}
+
+.watchlist-summary-table th:nth-child(5),
+.watchlist-summary-table td:nth-child(5) {
+  width: 14%;
+}
+
 thead th {
   background: linear-gradient(180deg, #eaf0f6 0%, #dfe7ef 100%);
   color: #20324a;
