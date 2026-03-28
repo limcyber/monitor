@@ -1167,4 +1167,31 @@ body[data-theme="bw"] .chart-legend {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .extra-info-box summary,
+  .factor-box summary,
+  .guide-extra-info > summary {
+    padding: 10px 12px;
+    padding-right: 34px;
+    min-height: 36px;
+    flex-wrap: wrap;
+    row-gap: 4px;
+  }
+
+  .extra-info-box summary::after,
+  .factor-box summary::after,
+  .guide-extra-info > summary::after {
+    right: 12px;
+    font-size: 9px;
+  }
+
+  .guide-summary-title {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .guide-extra-info > summary .pill {
+    font-size: 9px;
+    padding: 2px 9px;
+  }
 }
