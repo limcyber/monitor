@@ -1582,6 +1582,19 @@ def state_rank(state_value: str) -> int:
     }.get(state_value, 0)
 
 
+def stock_action_rank(action_value: str) -> int:
+    return {
+        "매수 가능": 6,
+        "선별 매수": 5,
+        "소규모 매수": 4,
+        "매우 선별적 접근": 3,
+        "보류 / 관찰": 2,
+        "관찰": 2,
+        "아주 소규모 / 대기": 1,
+        "진입 자제 / 회피": 0,
+    }.get(action_value, 0)
+
+
 def build_notification(
     notification_id: str,
     priority: str,
@@ -1643,6 +1656,33 @@ def build_notifications(as_of: date, previous_output: dict, market_output: dict,
             )
         )
 
+    current_market_crosses = market_output.get("cross_highlights", [])
+    prev_market_crosses = prev_market.get("cross_highlights", []) if isinstance(prev_market, dict) else []
+    new_market_crosses = [item for item in current_market_crosses if item not in prev_market_crosses]
+    new_market_dead_crosses = [item for item in new_market_crosses if "데드크로스" in item]
+    for cross in new_market_crosses:
+        title = cross.split(":")[0].strip()
+        if "데드크로스" in cross:
+            notifications.append(
+                build_notification(
+                    f"market-cross-dead-{title}-{as_of.isoformat()}",
+                    "high" if "중기" in cross else "medium",
+                    "market_dead_cross",
+                    title,
+                    cross,
+                )
+            )
+        elif "골든크로스" in cross and current_level >= 4:
+            notifications.append(
+                build_notification(
+                    f"market-cross-golden-{title}-{as_of.isoformat()}",
+                    "low",
+                    "market_golden_cross",
+                    title,
+                    cross,
+                )
+            )
+
     current_both_below = bool(
         market_output["metrics"]["spx_close"] < market_output["metrics"]["spx_dma200"]
         and market_output["metrics"]["ndx_close"] < market_output["metrics"]["ndx_dma200"]
@@ -1697,6 +1737,7 @@ def build_notifications(as_of: date, previous_output: dict, market_output: dict,
         stock.get("ticker"): stock for stock in previous_output.get("stocks", [])
     } if previous_output else {}
     buy_actions = {"매수 가능", "선별 매수", "소규모 매수"}
+    weakened_stock_names: list[str] = []
 
     for stock in stock_reports:
         ticker = stock["ticker"]
@@ -1705,6 +1746,8 @@ def build_notifications(as_of: date, previous_output: dict, market_output: dict,
         current_state = stock["stock_state"]
         prev_action = previous_stock.get("final_action", "")
         current_action = stock["final_action"]
+        prev_action_rank = stock_action_rank(prev_action) if prev_action else None
+        current_action_rank = stock_action_rank(current_action)
 
         if (
             stock["stock_score"] >= 70
@@ -1729,6 +1772,8 @@ def build_notifications(as_of: date, previous_output: dict, market_output: dict,
             )
 
         if prev_state and state_rank(prev_state) >= 3 and state_rank(current_state) <= 2:
+            if ticker not in weakened_stock_names:
+                weakened_stock_names.append(ticker)
             notifications.append(
                 build_notification(
                     f"stock-weakened-{ticker}-{as_of.isoformat()}",
@@ -1736,6 +1781,21 @@ def build_notifications(as_of: date, previous_output: dict, market_output: dict,
                     "stock_weakened",
                     f"{ticker} 상태 약화",
                     f"{ticker} 상태가 {prev_state}에서 {current_state}(으)로 약해졌습니다. 지금은 더 보수적으로 보는 편이 좋습니다.",
+                    scope="stock",
+                    ticker=ticker,
+                )
+            )
+
+        if prev_action_rank is not None and prev_action_rank - current_action_rank >= 2:
+            if ticker not in weakened_stock_names:
+                weakened_stock_names.append(ticker)
+            notifications.append(
+                build_notification(
+                    f"stock-action-softened-{ticker}-{as_of.isoformat()}",
+                    "medium",
+                    "stock_action_softened",
+                    f"{ticker} 추천 행동 약화",
+                    f"{ticker} 추천 행동이 '{prev_action}'에서 '{current_action}'(으)로 더 보수적으로 바뀌었습니다.",
                     scope="stock",
                     ticker=ticker,
                 )
@@ -1795,6 +1855,18 @@ def build_notifications(as_of: date, previous_output: dict, market_output: dict,
                     )
                 )
                 break
+
+    if weakened_stock_names and (new_market_dead_crosses or any("데드크로스" in item for item in current_market_crosses)):
+        joined_names = ", ".join(weakened_stock_names[:3])
+        notifications.append(
+            build_notification(
+                f"market-stock-weakness-{as_of.isoformat()}",
+                "high",
+                "market_stock_weakness_combo",
+                "시장 약세와 종목 약화 동시 발생",
+                f"시장 쪽 데드크로스가 확인됐고 {joined_names}도 함께 약해졌습니다. 매수보다 방어와 비중 조절을 먼저 보는 편이 좋습니다.",
+            )
+        )
 
     priority_rank = {"high": 0, "medium": 1, "low": 2}
     notifications.sort(key=lambda item: (priority_rank.get(item["priority"], 9), item["title"]))

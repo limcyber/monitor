@@ -30,12 +30,15 @@ def build_market_summary(payload: dict) -> str:
     market = payload.get("market", {})
     summary = payload.get("watchlist_summary", [])
     top_rows = sorted(summary, key=lambda row: row.get("stock_score", 0), reverse=True)[:3]
+    cross_items = market.get("cross_highlights", []) or []
+    cross_text = " / ".join(item.split(":")[0].strip() for item in cross_items[:2]) if cross_items else "뚜렷한 신호 없음"
     lines = [
         "시장 상태 요약",
         f"생성 시각: {payload.get('generated_at_et', '-')}",
         f"데이터 기준: {payload.get('market_data_as_of', '-')}",
         f"시장 상태: {market.get('state', '-')}",
         f"점수 / 행동: {market.get('score', '-')}/100 / {market.get('action', '-')}",
+        f"크로스 신호: {cross_text}",
     ]
     if market.get("top_reasons"):
         lines.append(f"핵심 이유: {market['top_reasons'][0]}")

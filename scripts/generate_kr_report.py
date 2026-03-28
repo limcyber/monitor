@@ -29,6 +29,7 @@ from generate_report import (
     score_history_tags,
     score_stock,
     slope_up,
+    stock_action_rank,
     state_rank,
     stock_alert_tags,
     stock_change_tags,
@@ -79,6 +80,32 @@ def build_kr_notifications(as_of, previous_output: dict, market_output: dict, st
             )
         )
 
+    current_market_crosses = market_output.get("cross_highlights", [])
+    prev_market_crosses = prev_market.get("cross_highlights", []) if isinstance(prev_market, dict) else []
+    new_market_crosses = [item for item in current_market_crosses if item not in prev_market_crosses]
+    new_market_dead_crosses = [item for item in new_market_crosses if "데드크로스" in item]
+    for cross in new_market_crosses:
+        if "데드크로스" in cross:
+            notifications.append(
+                build_notification(
+                    f"kr-market-cross-dead-{cross}-{as_of.isoformat()}",
+                    "high" if "중기" in cross else "medium",
+                    "kr_market_dead_cross",
+                    cross,
+                    cross,
+                )
+            )
+        elif "골든크로스" in cross and current_level >= 4:
+            notifications.append(
+                build_notification(
+                    f"kr-market-cross-golden-{cross}-{as_of.isoformat()}",
+                    "low",
+                    "kr_market_golden_cross",
+                    cross,
+                    cross,
+                )
+            )
+
     current_both_below = bool(
         market_output["metrics"]["kospi_close"] < market_output["metrics"]["kospi_dma200"]
         and market_output["metrics"]["kosdaq_close"] < market_output["metrics"]["kosdaq_dma200"]
@@ -120,6 +147,7 @@ def build_kr_notifications(as_of, previous_output: dict, market_output: dict, st
         stock.get("ticker"): stock for stock in previous_output.get("stocks", [])
     } if previous_output else {}
     buy_actions = {"매수 가능", "선별 매수", "소규모 매수"}
+    weakened_stock_names: list[str] = []
 
     for stock in stock_reports:
         ticker = stock["ticker"]
@@ -129,6 +157,8 @@ def build_kr_notifications(as_of, previous_output: dict, market_output: dict, st
         prev_action = previous_stock.get("final_action", "")
         current_action = stock["final_action"]
         name = stock.get("name", ticker)
+        prev_action_rank = stock_action_rank(prev_action) if prev_action else None
+        current_action_rank = stock_action_rank(current_action)
 
         if (
             stock["stock_score"] >= 70
@@ -153,6 +183,8 @@ def build_kr_notifications(as_of, previous_output: dict, market_output: dict, st
             )
 
         if prev_state and state_rank(prev_state) >= 3 and state_rank(current_state) <= 2:
+            if name not in weakened_stock_names:
+                weakened_stock_names.append(name)
             notifications.append(
                 build_notification(
                     f"kr-stock-weakened-{ticker}-{as_of.isoformat()}",
@@ -160,6 +192,21 @@ def build_kr_notifications(as_of, previous_output: dict, market_output: dict, st
                     "kr_stock_weakened",
                     f"{name} 상태 약화",
                     f"{name} 상태가 {prev_state}에서 {current_state}(으)로 약해졌습니다. 지금은 더 보수적으로 보는 편이 좋습니다.",
+                    scope="stock",
+                    ticker=ticker,
+                )
+            )
+
+        if prev_action_rank is not None and prev_action_rank - current_action_rank >= 2:
+            if name not in weakened_stock_names:
+                weakened_stock_names.append(name)
+            notifications.append(
+                build_notification(
+                    f"kr-stock-action-softened-{ticker}-{as_of.isoformat()}",
+                    "medium",
+                    "kr_stock_action_softened",
+                    f"{name} 추천 행동 약화",
+                    f"{name} 추천 행동이 '{prev_action}'에서 '{current_action}'(으)로 더 보수적으로 바뀌었습니다.",
                     scope="stock",
                     ticker=ticker,
                 )
@@ -195,6 +242,18 @@ def build_kr_notifications(as_of, previous_output: dict, market_output: dict, st
                     )
                 )
                 break
+
+    if weakened_stock_names and (new_market_dead_crosses or any("데드크로스" in item for item in current_market_crosses)):
+        joined_names = ", ".join(weakened_stock_names[:3])
+        notifications.append(
+            build_notification(
+                f"kr-market-stock-weakness-{as_of.isoformat()}",
+                "high",
+                "kr_market_stock_weakness_combo",
+                "한국 시장 약세와 종목 약화 동시 발생",
+                f"한국 시장 데드크로스가 확인됐고 {joined_names}도 함께 약해졌습니다. 신규 진입보다 방어와 비중 조절을 먼저 보는 편이 좋습니다.",
+            )
+        )
 
     priority_rank = {"high": 0, "medium": 1, "low": 2}
     notifications.sort(key=lambda item: (priority_rank.get(item["priority"], 9), item["title"]))
