@@ -110,12 +110,27 @@ a {
 .site-topbar-time {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 0 18px 10px;
+  padding: 6px 18px 10px;
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.site-topbar-time span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 20px;
+  padding: 1px 7px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.16);
 }
 
 .site-topbar-time.tone-success {
@@ -179,6 +194,19 @@ body[data-theme="bw"] .theme-segment-btn:hover {
 body[data-theme="bw"] .theme-segment-btn[aria-pressed="true"] {
   background: #18341f;
   color: #d9f7d2;
+}
+
+body[data-theme="bw"] .site-topbar-time {
+  color: #d7f5d3;
+  background: linear-gradient(180deg, rgba(21, 39, 24, 0.9), rgba(11, 19, 12, 0.92));
+  border-top-color: #19311d;
+  box-shadow: inset 0 1px 0 rgba(121, 160, 122, 0.08);
+}
+
+body[data-theme="bw"] .site-topbar-time span {
+  background: rgba(13, 27, 15, 0.92);
+  border-color: #1b3520;
+  text-shadow: none;
 }
 
 .container {
