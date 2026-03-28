@@ -364,14 +364,16 @@ def kr_market_guidance(score: int, market_data: dict) -> tuple[list[str], list[s
     kospi_short_bull, kospi_short_bear = recent_cross_signal(
         kospi_dma5,
         kospi_dma20,
-        factor_text("KOSPI에서 최근 5일선이 20일선을 상향 돌파했습니다", 0),
-        factor_text("KOSPI에서 최근 5일선이 20일선을 하향 이탈했습니다", 0),
+        factor_text("KOSPI에서 최근 5일선이 20일선을 상향 돌파했습니다", 2),
+        factor_text("KOSPI에서 최근 5일선이 20일선을 하향 이탈했습니다", -6),
     )
     if kospi_short_bull:
+        score_value += 2
         cross_highlights.append("KOSPI 최근 단기 골든크로스")
         positive_factors.append(kospi_short_bull)
         reasons.append("KOSPI에서 최근 단기 골든크로스가 나왔습니다")
     if kospi_short_bear:
+        score_value -= 6
         cross_highlights.append("KOSPI 최근 단기 데드크로스")
         negative_factors.append(kospi_short_bear)
         reasons.append("KOSPI에서 최근 단기 데드크로스가 나왔습니다")
@@ -379,45 +381,64 @@ def kr_market_guidance(score: int, market_data: dict) -> tuple[list[str], list[s
     kosdaq_short_bull, kosdaq_short_bear = recent_cross_signal(
         kosdaq_dma5,
         kosdaq_dma20,
-        factor_text("KOSDAQ에서 최근 5일선이 20일선을 상향 돌파했습니다", 0),
-        factor_text("KOSDAQ에서 최근 5일선이 20일선을 하향 이탈했습니다", 0),
+        factor_text("KOSDAQ에서 최근 5일선이 20일선을 상향 돌파했습니다", 2),
+        factor_text("KOSDAQ에서 최근 5일선이 20일선을 하향 이탈했습니다", -6),
     )
     if kosdaq_short_bull:
+        score_value += 2
         cross_highlights.append("KOSDAQ 최근 단기 골든크로스")
         positive_factors.append(kosdaq_short_bull)
         reasons.append("KOSDAQ에서 최근 단기 골든크로스가 나왔습니다")
     if kosdaq_short_bear:
+        score_value -= 6
         cross_highlights.append("KOSDAQ 최근 단기 데드크로스")
         negative_factors.append(kosdaq_short_bear)
         reasons.append("KOSDAQ에서 최근 단기 데드크로스가 나왔습니다")
 
+    if kospi_short_bear and kosdaq_short_bear:
+        score_value -= 6
+        score_value = min(score_value, 72)
+        negative_factors.append(factor_text("KOSPI와 KOSDAQ이 함께 단기 데드크로스라 공격 점수를 높게 주기 어렵습니다", "상한 72"))
+        reasons.append("KOSPI와 KOSDAQ이 함께 단기 데드크로스입니다")
+
     kospi_mid_bull, kospi_mid_bear = recent_cross_signal(
         kospi_dma20,
         kospi_dma50,
-        factor_text("KOSPI에서 최근 20일선이 50일선을 상향 돌파했습니다", 0),
-        factor_text("KOSPI에서 최근 20일선이 50일선을 하향 이탈했습니다", 0),
+        factor_text("KOSPI에서 최근 20일선이 50일선을 상향 돌파했습니다", 4),
+        factor_text("KOSPI에서 최근 20일선이 50일선을 하향 이탈했습니다", -10),
         lookback=10,
     )
     if kospi_mid_bull:
+        score_value += 4
         cross_highlights.append("KOSPI 최근 중기 골든크로스")
         positive_factors.append(kospi_mid_bull)
     if kospi_mid_bear:
+        score_value -= 10
         cross_highlights.append("KOSPI 최근 중기 데드크로스")
         negative_factors.append(kospi_mid_bear)
+        reasons.append("KOSPI에서 최근 중기 데드크로스가 나왔습니다")
 
     kosdaq_mid_bull, kosdaq_mid_bear = recent_cross_signal(
         kosdaq_dma20,
         kosdaq_dma50,
-        factor_text("KOSDAQ에서 최근 20일선이 50일선을 상향 돌파했습니다", 0),
-        factor_text("KOSDAQ에서 최근 20일선이 50일선을 하향 이탈했습니다", 0),
+        factor_text("KOSDAQ에서 최근 20일선이 50일선을 상향 돌파했습니다", 4),
+        factor_text("KOSDAQ에서 최근 20일선이 50일선을 하향 이탈했습니다", -10),
         lookback=10,
     )
     if kosdaq_mid_bull:
+        score_value += 4
         cross_highlights.append("KOSDAQ 최근 중기 골든크로스")
         positive_factors.append(kosdaq_mid_bull)
     if kosdaq_mid_bear:
+        score_value -= 10
         cross_highlights.append("KOSDAQ 최근 중기 데드크로스")
         negative_factors.append(kosdaq_mid_bear)
+        reasons.append("KOSDAQ에서 최근 중기 데드크로스가 나왔습니다")
+
+    if kospi_mid_bear and kosdaq_mid_bear:
+        score_value = min(score_value, 55)
+        negative_factors.append(factor_text("KOSPI와 KOSDAQ이 함께 중기 데드크로스라 회복 확인 전까지 보수적으로 보는 편이 좋습니다", "상한 55"))
+        reasons.append("KOSPI와 KOSDAQ이 함께 중기 데드크로스입니다")
 
     if kospi.iloc[-1] <= kospi_dma200.iloc[-1]:
         negative_factors.append(factor_text("KOSPI가 200일선 아래에 있습니다", 0))
