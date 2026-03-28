@@ -187,6 +187,10 @@ body[data-theme="bw"] .theme-segment-btn[aria-pressed="true"] {
   padding: 14px 16px 28px;
 }
 
+.mobile-only {
+  display: none;
+}
+
 .hero {
   background: linear-gradient(180deg, #fdfefe 0%, #f4f7fa 100%);
   border: 1px solid var(--line);
@@ -817,14 +821,24 @@ body[data-theme="bw"] .table-wrap,
 body[data-theme="bw"] .chart-card,
 body[data-theme="bw"] .chart-card canvas,
 body[data-theme="bw"] .stock-chart,
+body[data-theme="bw"] .mobile-stock-card,
 body[data-theme="bw"] .factor-box,
 body[data-theme="bw"] .guide-card {
   border-color: #183020;
 }
 
 body[data-theme="bw"] .factor-box,
-body[data-theme="bw"] .guide-card {
+body[data-theme="bw"] .guide-card,
+body[data-theme="bw"] .mobile-stock-card {
   background: linear-gradient(180deg, #0d120f 0%, #0a0d0b 100%);
+}
+
+body[data-theme="bw"] .mobile-stock-top strong {
+  color: #c4ffc5;
+}
+
+body[data-theme="bw"] .mobile-stock-card p {
+  color: #b0d9b2;
 }
 
 body[data-theme="bw"] .factor-box summary::after {
@@ -998,6 +1012,62 @@ body[data-theme="bw"] .stock-chart {
   line-height: 1.5;
 }
 
+.mobile-dashboard {
+  display: none;
+}
+
+.mobile-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.mobile-quote-strip {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.mobile-stock-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.mobile-stock-card {
+  border: 1px solid var(--line-soft);
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbfd 100%);
+  padding: 9px 10px;
+}
+
+.mobile-stock-top,
+.mobile-stock-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.mobile-stock-top strong {
+  font-size: 13px;
+  color: #12203d;
+}
+
+.mobile-stock-meta {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 11px;
+  flex-wrap: wrap;
+}
+
+.mobile-stock-card p {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: var(--ink);
+  line-height: 1.45;
+}
+
 .section-footnote {
   margin-top: 6px;
   font-size: 11px;
@@ -1005,12 +1075,26 @@ body[data-theme="bw"] .stock-chart {
 }
 
 @media (max-width: 960px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only,
+  .mobile-dashboard {
+    display: block;
+  }
+
   .kpi-grid,
   .market-ticker-strip,
   .chart-grid,
   .stock-cards,
   .factor-grid,
   .guide-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-kpi-grid,
+  .mobile-quote-strip {
     grid-template-columns: 1fr;
   }
 

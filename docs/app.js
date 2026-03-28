@@ -136,11 +136,11 @@ function applyTheme(theme) {
 }
 
 function initThemeToggle() {
-  let saved = "finviz";
+  let saved = "bw";
   try {
-    saved = localStorage.getItem("monitorTheme") || "finviz";
+    saved = localStorage.getItem("monitorTheme") || "bw";
   } catch {
-    saved = "finviz";
+    saved = "bw";
   }
   applyTheme(saved);
   document.getElementById("themeBw")?.addEventListener("click", () => applyTheme("bw"));
@@ -203,6 +203,44 @@ function renderMarket(data) {
     topbarMeta.classList.remove("tone-success", "tone-warning", "tone-danger");
     topbarMeta.classList.add(marketTone(data.market.score));
   }
+}
+
+function renderMobile(data) {
+  const marketState = document.getElementById("mobileMarketState");
+  if (marketState) {
+    marketState.textContent = data.market.state;
+    marketState.className = `pill ${scoreTone(data.market.score)}`;
+  }
+  const scoreEl = document.getElementById("mobileMarketScore");
+  if (scoreEl) scoreEl.textContent = formatScore(data.market.score);
+  const actionEl = document.getElementById("mobileMarketAction");
+  if (actionEl) actionEl.textContent = data.market.action;
+  renderQuote("mobileMarketSpxQuote", data.market.metrics.spx_close.toFixed(2), data.market.metrics.spx_change_pct);
+  renderQuote("mobileMarketNdqQuote", data.market.metrics.ndx_close.toFixed(2), data.market.metrics.ndx_change_pct);
+  renderQuote("mobileMarketVixQuote", data.market.metrics.vix_close.toFixed(2), data.market.metrics.vix_change_pct, true);
+  renderList(document.getElementById("mobileMarketCrossHighlights"), data.market.cross_highlights, "최근 눈에 띄는 골든크로스나 데드크로스는 없습니다.");
+  renderTagList(document.getElementById("mobileMarketChangeTags"), data.market.change_tags, "오늘 변화 없음");
+  renderTagList(document.getElementById("mobileMarketPositionTags"), data.market.position_tags, "기본 운용");
+
+  const holder = document.getElementById("mobileStockCards");
+  if (!holder) return;
+  holder.innerHTML = "";
+  data.stocks.forEach((s) => {
+    const card = document.createElement("article");
+    card.className = "mobile-stock-card";
+    card.innerHTML = `
+      <div class="mobile-stock-top">
+        <strong>${s.ticker}</strong>
+        <span class="pill ${scoreTone(s.stock_score)}">${formatScore(s.stock_score)}</span>
+      </div>
+      <div class="mobile-stock-meta">
+        <span class="pill ${scoreTone(s.stock_score)}">${s.stock_state}</span>
+        <span>${s.final_action}</span>
+      </div>
+      <p>${s.note}</p>
+    `;
+    holder.appendChild(card);
+  });
 }
 
 function renderTable(rows) {
@@ -417,6 +455,7 @@ async function boot() {
   const data = await response.json();
   appState.data = data;
   renderMarket(data);
+  renderMobile(data);
   renderTable(data.watchlist_summary);
   renderMarketCharts(data.charts.market);
   renderStocks(data.stocks);
