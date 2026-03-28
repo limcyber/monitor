@@ -558,9 +558,16 @@ body[data-theme="bw"] .mini-tag.danger {
   background: linear-gradient(180deg, #fafbfd 0%, #f4f7fa 100%);
 }
 
-.extra-info-box summary {
+.extra-info-box summary,
+.factor-box summary,
+.guide-extra-info > summary {
+  position: relative;
+  width: 100%;
   list-style: none;
   margin: 0;
+  padding: 10px 14px;
+  padding-right: 40px;
+  min-height: 38px;
   font-size: 11px;
   font-weight: 700;
   color: var(--muted);
@@ -571,19 +578,37 @@ body[data-theme="bw"] .mini-tag.danger {
   align-items: center;
   justify-content: space-between;
   gap: 8px;
+  border: 1px solid var(--line-soft);
+  border-radius: 9px;
+  background: linear-gradient(180deg, #ffffff 0%, #eef3f8 100%);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.88) inset,
+    0 6px 14px rgba(18, 32, 61, 0.05);
+  user-select: none;
+  touch-action: manipulation;
 }
 
-.extra-info-box summary::-webkit-details-marker {
+.extra-info-box summary::-webkit-details-marker,
+.factor-box summary::-webkit-details-marker,
+.guide-extra-info > summary::-webkit-details-marker {
   display: none;
 }
 
-.extra-info-box summary::after {
+.extra-info-box summary::after,
+.factor-box summary::after,
+.guide-extra-info > summary::after {
   content: "▾";
   font-size: 10px;
   color: var(--muted);
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.extra-info-box[open] summary::after {
+.extra-info-box[open] summary::after,
+.factor-box[open] summary::after,
+.guide-extra-info[open] > summary::after {
   content: "▴";
 }
 
@@ -606,35 +631,6 @@ body[data-theme="bw"] .mini-tag.danger {
   border: 1px solid var(--line-soft);
   background: linear-gradient(180deg, #fbfcfd 0%, #f5f8fb 100%);
   padding: 9px 10px;
-}
-
-.factor-box summary {
-  list-style: none;
-  margin: 0;
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-}
-
-.factor-box summary::-webkit-details-marker {
-  display: none;
-}
-
-.factor-box summary::after {
-  content: "▾";
-  font-size: 10px;
-  color: var(--muted);
-}
-
-.factor-box[open] summary::after {
-  content: "▴";
 }
 
 .factor-box-positive {
@@ -763,12 +759,15 @@ body[data-theme="bw"] .extra-info-box {
   background: linear-gradient(180deg, #0d120f 0%, #0a0d0b 100%);
 }
 
-body[data-theme="bw"] .extra-info-box summary {
+body[data-theme="bw"] .extra-info-box summary,
+body[data-theme="bw"] .factor-box summary,
+body[data-theme="bw"] .guide-extra-info > summary {
   color: #86bf88;
-}
-
-body[data-theme="bw"] .extra-info-box summary::after {
-  color: #86bf88;
+  background: linear-gradient(180deg, #111712 0%, #0a0d0b 100%);
+  border-color: #27412b;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.03) inset,
+    0 8px 18px rgba(0, 0, 0, 0.26);
 }
 
 body[data-theme="bw"] .site-topbar {
@@ -851,7 +850,9 @@ body[data-theme="bw"] .guide-card {
   background: linear-gradient(180deg, #0d120f 0%, #0a0d0b 100%);
 }
 
-body[data-theme="bw"] .factor-box summary::after {
+body[data-theme="bw"] .extra-info-box summary::after,
+body[data-theme="bw"] .factor-box summary::after,
+body[data-theme="bw"] .guide-extra-info > summary::after {
   color: #86bf88;
 }
 
@@ -869,6 +870,12 @@ body[data-theme="bw"] .guide-card p {
 
 body[data-theme="bw"] .guide-summary-title {
   color: #c4ffc5;
+}
+
+body[data-theme="bw"] .guide-extra-info > summary .pill {
+  background: linear-gradient(180deg, #18341f 0%, #0f2314 100%);
+  border-color: #2d5232;
+  color: #d9f7d2;
 }
 
 body[data-theme="bw"] .factor-box-positive {
@@ -1021,9 +1028,33 @@ body[data-theme="bw"] .chart-legend {
   margin-top: 0;
 }
 
+.guide-extra-info > summary {
+  justify-content: flex-start;
+  gap: 12px;
+  padding-right: 48px;
+}
+
+.guide-extra-info > summary::after {
+  right: 16px;
+}
+
+.guide-extra-info > summary .pill {
+  min-height: 24px;
+  padding: 3px 11px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #233a67 0%, #132848 100%);
+  border-color: #0e1d34;
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08) inset;
+}
+
 .guide-summary-title {
   color: #12203d;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 .guide-grid {
