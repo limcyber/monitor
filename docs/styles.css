@@ -509,8 +509,8 @@ body[data-theme="bw"] .mini-tag.danger {
 }
 
 .kr-market-ticker-strip {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 4px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 6px;
 }
 
 .tag-row-block {
@@ -609,20 +609,6 @@ body[data-theme="bw"] .mini-tag.danger {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.kr-market-ticker-strip .ticker-chip {
-  padding: 5px 6px;
-}
-
-.kr-market-ticker-strip .ticker-chip h3 {
-  font-size: 9px;
-  letter-spacing: 0.02em;
-}
-
-.kr-market-ticker-strip .ticker-chip p {
-  margin-top: 4px;
-  font-size: 12px;
 }
 
 .quote-value.success {
@@ -1669,21 +1655,6 @@ body[data-theme="bw"] .chart-legend {
   .chart-card canvas,
   .stock-chart {
     margin-bottom: 0;
-  }
-
-  .kr-market-ticker-strip .ticker-chip {
-    padding: 9px 11px;
-  }
-
-  .kr-market-ticker-strip .ticker-chip h3 {
-    font-size: 13px;
-    letter-spacing: 0.03em;
-  }
-
-  .kr-market-ticker-strip .ticker-chip p {
-    margin-top: 5px;
-    font-size: 18px;
-    line-height: 1.22;
   }
 
   .chart-grid-kr {
