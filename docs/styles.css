@@ -107,41 +107,49 @@ a {
   align-items: center;
 }
 
-.site-topbar-time {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 6px 18px 10px;
+.page-head {
+  margin: 0 0 10px;
+  padding: 2px 0 8px;
+}
+
+.page-head h1 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: #12203d;
+}
+
+.page-head-time {
+  margin-top: 4px;
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(17, 32, 61, 0.82);
   font-weight: 600;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 
-.site-topbar-time span {
+.page-head-time span {
   display: inline-flex;
   align-items: center;
   min-height: 20px;
   padding: 1px 7px;
   border-radius: 3px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.16);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(160, 172, 184, 0.62);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
 }
 
-.site-topbar-time.tone-success {
+.page-head-time.tone-success {
   color: rgba(147, 255, 170, 0.95);
 }
 
-.site-topbar-time.tone-warning {
+.page-head-time.tone-warning {
   color: rgba(234, 219, 115, 0.95);
 }
 
-.site-topbar-time.tone-danger {
+.page-head-time.tone-danger {
   color: rgba(255, 129, 129, 0.95);
 }
 
@@ -196,17 +204,18 @@ body[data-theme="bw"] .theme-segment-btn[aria-pressed="true"] {
   color: #d9f7d2;
 }
 
-body[data-theme="bw"] .site-topbar-time {
-  color: #d7f5d3;
-  background: linear-gradient(180deg, rgba(21, 39, 24, 0.9), rgba(11, 19, 12, 0.92));
-  border-top-color: #19311d;
-  box-shadow: inset 0 1px 0 rgba(121, 160, 122, 0.08);
+body[data-theme="bw"] .page-head h1 {
+  color: #d9f7d2;
 }
 
-body[data-theme="bw"] .site-topbar-time span {
+body[data-theme="bw"] .page-head-time {
+  color: #9fd0a3;
+}
+
+body[data-theme="bw"] .page-head-time span {
   background: rgba(13, 27, 15, 0.92);
   border-color: #1b3520;
-  text-shadow: none;
+  color: #d7f5d3;
 }
 
 .container {
