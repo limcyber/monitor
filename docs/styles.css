@@ -495,12 +495,13 @@ body[data-theme="bw"] .mini-tag.danger {
   margin-top: 10px;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 6px;
+  gap: 5px;
 }
 
 .market-ticker-strip-secondary {
-  margin-top: 6px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 5px;
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 210px;
 }
 
 .tag-row-block {
@@ -567,13 +568,13 @@ body[data-theme="bw"] .mini-tag.danger {
 .ticker-chip {
   border: 1px solid var(--line-soft);
   background: linear-gradient(180deg, #ffffff 0%, #f8fbfd 100%);
-  padding: 7px 8px;
+  padding: 6px 7px;
   min-width: 0;
 }
 
 .ticker-chip h3 {
   margin: 0;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   color: var(--muted);
   text-transform: uppercase;
@@ -593,7 +594,7 @@ body[data-theme="bw"] .mini-tag.danger {
 
 .ticker-chip p {
   margin: 6px 0 0;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.1;
   font-weight: 700;
   white-space: nowrap;
