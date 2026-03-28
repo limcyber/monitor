@@ -843,6 +843,10 @@ body[data-theme="bw"] .guide-card p {
   color: #a8d5ab;
 }
 
+body[data-theme="bw"] .guide-summary-title {
+  color: #c4ffc5;
+}
+
 body[data-theme="bw"] .factor-box-positive {
   border-color: #20402a;
 }
@@ -958,6 +962,15 @@ body[data-theme="bw"] .stock-chart {
   inset: 0 0 auto 0;
   height: 3px;
   background: linear-gradient(90deg, #203b6d 0%, #0f7b6c 45%, #c18a15 100%);
+}
+
+.guide-extra-info {
+  margin-top: 0;
+}
+
+.guide-summary-title {
+  color: #12203d;
+  font-size: 12px;
 }
 
 .guide-grid {
