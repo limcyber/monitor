@@ -392,18 +392,73 @@ def recent_cross_signal(short_ma: pd.Series, long_ma: pd.Series, bull_text: str,
 
 
 def pick_market_reasons(level: int, positive_factors: list[str], negative_factors: list[str]) -> list[str]:
+    positive_priority = [
+        "S&P500이 200일선 위에 있습니다",
+        "나스닥이 200일선 위에 있습니다",
+        "KOSPI가 200일선 위에 있습니다",
+        "KOSDAQ이 200일선 위에 있습니다",
+        "S&P500의 50일선이 200일선 위에 있습니다",
+        "나스닥의 50일선이 200일선 위에 있습니다",
+        "KOSPI의 50일선이 200일선 위에 있습니다",
+        "KOSDAQ의 50일선이 200일선 위에 있습니다",
+        "20일선 위 종목 비율이 55%를 넘습니다",
+        "50일선 위 종목 비율이 50%를 넘습니다",
+        "상승 종목 수 흐름이 최근 5일 개선됐습니다",
+        "반도체가 코스피보다 더 강합니다",
+        "코스닥이 코스피에 크게 밀리지 않습니다",
+    ]
+    negative_priority = [
+        "VIX가 매우 높아 점수 상한이 걸렸습니다",
+        "원달러와 해외 변동성이 같이 높아 부담이 큽니다",
+        "20일선 위 종목 비율이 너무 낮아 시장 폭이 크게 약합니다",
+        "50일선 위 종목 비율이 낮아 중간 흐름도 약합니다",
+        "지수는 반등해도 오르는 종목 수는 따라오지 못했습니다",
+        "S&P500과 나스닥이 함께 중기 데드크로스",
+        "S&P500과 나스닥이 함께 단기 데드크로스",
+        "KOSPI와 KOSDAQ이 함께 중기 데드크로스",
+        "KOSPI와 KOSDAQ이 함께 단기 데드크로스",
+        "해외 변동성이 높아 국내장도 흔들릴 수 있습니다",
+        "원달러가 많이 올라 외국인 수급 부담이 큽니다",
+        "원달러가 올라 외국인 수급에는 부담입니다",
+        "S&P500이 200일선 아래",
+        "나스닥이 200일선 아래",
+        "KOSPI가 200일선 아래에 있습니다",
+        "KOSDAQ이 200일선 아래에 있습니다",
+        "대형주 몇 종목에만 힘이 몰리고 있습니다",
+        "소형주가 대형주보다 약해 공격적인 분위기가 아닙니다",
+        "중소형주 쪽 힘이 약합니다",
+        "반도체 ETF가 50일선 아래라 주도 업종 힘이 약합니다",
+        "반도체가 코스피보다 약해지고 있습니다",
+    ]
+
+    def pick_by_priority(candidates: list[str], ordered: list[str]) -> list[str]:
+        picked: list[str] = []
+        for needle in ordered:
+            for item in candidates:
+                if needle in item and item not in picked:
+                    picked.append(item)
+                    break
+            if len(picked) >= 3:
+                return picked
+        for item in candidates:
+            if item not in picked:
+                picked.append(item)
+            if len(picked) >= 3:
+                break
+        return picked
+
     if level <= 2:
-        primary = negative_factors[:3]
+        primary = pick_by_priority(negative_factors, negative_priority)
         if primary:
             return primary
     if level == 3:
-        mixed = (negative_factors[:2] + positive_factors[:1])[:3]
+        mixed = pick_by_priority(negative_factors, negative_priority)[:2] + pick_by_priority(positive_factors, positive_priority)[:1]
         if mixed:
-            return mixed
-    primary = positive_factors[:3]
+            return mixed[:3]
+    primary = pick_by_priority(positive_factors, positive_priority)
     if primary:
         return primary
-    return negative_factors[:3]
+    return pick_by_priority(negative_factors, negative_priority)
 
 
 def prioritize_stock_reasons(reasons: list[str], state: str) -> list[str]:
