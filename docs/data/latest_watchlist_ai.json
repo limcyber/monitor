@@ -1,5 +1,5 @@
 {
-  "generated_at_et": "2026-03-28 19:06 ET",
+  "generated_at_et": "2026-03-28 19:50 ET",
   "market_data_as_of": "2026-03-27 16:00 ET (Close)",
   "status": "ok",
   "error": null,
@@ -7,58 +7,120 @@
     {
       "ticker": "NVDA",
       "ai_score": 20,
-      "ai_state": "\ud68c\ud53c",
-      "ai_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
-      "ai_note": "\ucd5c\uadfc \uaddc\uc81c \ubc0f \ubc95\uc801 \ubb38\uc81c\ub85c \uc8fc\uac00\uac00 \ud558\ub77d \uc555\ub825\uc744 \ubc1b\uace0 \uc788\uc73c\ub098, \uc544\ub9c8\uc874\uacfc\uc758 GPU \uacf5\uae09 \uacc4\uc57d \ub4f1 AI \uad00\ub828 \ud30c\ud2b8\ub108\uc2ed \ud655\ub300 \uc18c\uc2dd\ub3c4 \uc788\uc2b5\ub2c8\ub2e4."
+      "ai_state": "\uc57d\ud568",
+      "ai_action": "\uad00\ub9dd",
+      "ai_note": "\ucd5c\uadfc '\ub9e4\uadf8\ub2c8\ud53c\uc13c\ud2b8 7' \ud558\ub77d\uc138\uc640 \ud568\uaed8 \ub2e8\uae30 \ud558\ub77d \ucd94\uc138\uac00 \uc9c0\uc18d\ub418\uace0 \uc788\uc73c\ub098, BNP\ud30c\ub9ac\ubc14\ub294 2028\ub144 \ubaa9\ud45c\uc8fc\uac00 1000\ub2ec\ub7ec\ub97c \uc81c\uc2dc\ud558\ub294 \ub4f1 \uc7a5\uae30 \uc131\uc7a5 \uc7a0\uc7ac\ub825\uc740 \uc5ec\uc804\ud569\ub2c8\ub2e4.",
+      "close": 167.52000427246094,
+      "change_pct": -2.172390271764868,
+      "score": 17,
+      "state": "\ud68c\ud53c",
+      "action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
+      "cross_highlights": [],
+      "volume_ratio_20d": 1.0806385448791136
     },
     {
       "ticker": "TSLA",
-      "ai_score": 15,
-      "ai_state": "\ud68c\ud53c",
-      "ai_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
-      "ai_note": "\ub9e4\uadf8\ub2c8\ud53c\uc13c\ud2b8 7\uc758 \ud558\ub77d\uc138\uc640 \ud568\uaed8 \ub85c\ubcf4\ud0dd\uc2dc \uc548\uc804\uc131 \uc6b0\ub824, \uacbd\uc7c1 \uc2ec\ud654\ub85c \uc911\uae30 \ud558\ub77d \ucd94\uc138\uac00 \uc608\uc0c1\ub429\ub2c8\ub2e4."
+      "ai_score": 18,
+      "ai_state": "\uc57d\ud568",
+      "ai_action": "\uad00\ub9dd",
+      "ai_note": "'\ub9e4\uadf8\ub2c8\ud53c\uc13c\ud2b8 7' \ud558\ub77d\uc138\uc640 \ud568\uaed8 \ub2e8\uae30 \ud558\ub77d \ucd94\uc138\uac00 \uc9c0\uc18d\ub418\uace0 \uc788\uc73c\ub098, \ubbf8\uad6d 1\ubd84\uae30 \uc804\uae30\ucc28 \ud310\ub9e4\ub7c9 \uac10\uc18c \uc18d\uc5d0\uc11c\ub3c4 \uc2dc\uc7a5 \uc810\uc720\uc728\uc744 \ud655\ub300\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4.",
+      "close": 361.8299865722656,
+      "change_pct": -2.7626237359861583,
+      "score": 15,
+      "state": "\ud68c\ud53c",
+      "action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
+      "cross_highlights": [],
+      "volume_ratio_20d": 1.0150927889989887
     },
     {
       "ticker": "META",
-      "ai_score": 10,
-      "ai_state": "\ud68c\ud53c",
-      "ai_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
-      "ai_note": "\uc18c\uc15c \ubbf8\ub514\uc5b4 \uc911\ub3c5 \uad00\ub828 \ubc95\uc801 \uc545\uc7ac\ub85c \uc8fc\uac00\uac00 \uae09\ub77d\ud558\uba70 \uc2dc\uac00\ucd1d\uc561\uc774 \ud06c\uac8c \uc99d\ubc1c\ud588\uc2b5\ub2c8\ub2e4."
+      "ai_score": 12,
+      "ai_state": "\uc57d\ud568",
+      "ai_action": "\ud68c\ud53c",
+      "ai_note": "SNS \uc911\ub3c5 \uad00\ub828 \ud328\uc18c \ud310\uacb0 \uc545\uc7ac\ub85c \uc8fc\uac00\uac00 \uae09\ub77d\ud588\uc73c\uba70, AI \ub370\uc774\ud130\uc13c\ud130\uc5d0 100\uc5b5 \ub2ec\ub7ec\ub97c \ud22c\uc790\ud558\uba70 \uc7a5\uae30 \uc131\uc7a5\uc744 \ubaa8\uc0c9 \uc911\uc785\ub2c8\ub2e4.",
+      "close": 525.719970703125,
+      "change_pct": -3.985098476796356,
+      "score": 10,
+      "state": "\ud68c\ud53c",
+      "action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
+      "cross_highlights": [],
+      "volume_ratio_20d": 2.020999852370067
     },
     {
       "ticker": "AMD",
       "ai_score": 45,
-      "ai_state": "\uc57d\ud568",
-      "ai_action": "\uad00\ub9dd / \ube44\uc911 \uc720\uc9c0",
-      "ai_note": "CPU \uac00\uaca9 \uc778\uc0c1 \ubc0f \uc0c8\ub85c\uc6b4 AI \uc911\uc2ec \uc81c\ud488 \ucd9c\uc2dc \uc18c\uc2dd\uc73c\ub85c \uc8fc\uac00\uac00 \uc0c1\uc2b9\ud588\uc73c\ub098, \uac70\ub798\ub7c9\uc740 \uc544\uc9c1 \uc57d\ud55c \ud3b8\uc785\ub2c8\ub2e4."
+      "ai_state": "\uc911\ub9bd",
+      "ai_action": "\uad00\ub9dd",
+      "ai_note": "\uc0c8\ub85c\uc6b4 AI \ud504\ub85c\uc138\uc11c \ucd9c\uc2dc\uc640 CPU \uac00\uaca9 \uc778\uc0c1 \uc18c\uc2dd\uc73c\ub85c \uae0d\uc815\uc801\uc774\ub098, \uc911\ub3d9 \ubd84\uc7c1 \uc6b0\ub824\ub85c \ub2e8\uae30 \ud558\ub77d\uc138\ub97c \ubcf4\uc600\uc2b5\ub2c8\ub2e4. \ucd5c\uadfc \ub2e8\uae30 \uace8\ub4e0\ud06c\ub85c\uc2a4\uac00 \ubc1c\uc0dd\ud588\uc2b5\ub2c8\ub2e4.",
+      "close": 201.99000549316406,
+      "change_pct": -0.8735332688695641,
+      "score": 38,
+      "state": "\uc57d\ud568",
+      "action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
+      "cross_highlights": [
+        "AMD \ucd5c\uadfc \ub2e8\uae30 \uace8\ub4e0\ud06c\ub85c\uc2a4: 5\uc77c\uc120\uc774 20\uc77c\uc120\uc744 \uc704\ub85c \ub3cc\ud30c\ud588\uc2b5\ub2c8\ub2e4."
+      ],
+      "volume_ratio_20d": 0.8724078790706679
     },
     {
       "ticker": "TEM",
-      "ai_score": 10,
-      "ai_state": "\ud68c\ud53c",
-      "ai_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
-      "ai_note": "2026\ub144 \ub9e4\ucd9c \uac00\uc774\ub358\uc2a4\uc5d0 \ub300\ud55c \uc2e4\ub9dd\uac10\uacfc \uc2dc\uc7a5 \ubcc0\ub3d9\uc131\uc73c\ub85c \uc8fc\uac00\uac00 4\uc77c \uc5f0\uc18d \ud558\ub77d\ud588\uc2b5\ub2c8\ub2e4."
+      "ai_score": 30,
+      "ai_state": "\uc911\ub9bd",
+      "ai_action": "\uad00\ub9dd",
+      "ai_note": "\uce90\uc2dc \uc6b0\ub4dc\uc758 ARK \uc778\ubca0\uc2a4\ud2b8\uac00 \ub9e4\uc218\ud558\uace0 \ub2e4\uc774\uc774\ucc0c\uc0b0\ucfc4, Merck\uc640 AI \uae30\ubc18 \uc815\ubc00 \uc758\ud559 \uac1c\ubc1c \ud611\ub825\uc744 \ud655\ub300\ud558\ub294 \ub4f1 \uae0d\uc815\uc801\uc778 \uc18c\uc2dd\uc774 \uc788\uc73c\ub098, CEO\uc758 \uc8fc\uc2dd \ub9e4\uac01 \uc18c\uc2dd\ub3c4 \uc788\uc2b5\ub2c8\ub2e4.",
+      "close": 42.619998931884766,
+      "change_pct": -6.391390128337382,
+      "score": 9,
+      "state": "\ud68c\ud53c",
+      "action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
+      "cross_highlights": [],
+      "volume_ratio_20d": 1.185266788306319
     },
     {
       "ticker": "SOXX",
       "ai_score": 15,
-      "ai_state": "\ud68c\ud53c",
-      "ai_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
-      "ai_note": "\ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4\uac00 \ubc1c\uc0dd\ud588\uc73c\uba70, \ud5ec\ub968 \uacf5\uae09 \ubd88\ud655\uc2e4\uc131\uc73c\ub85c \ubc18\ub3c4\uccb4 ETF \uc804\ubc18\uc5d0 \ud0c0\uaca9 \uc6b0\ub824\uac00 \uc788\uc2b5\ub2c8\ub2e4."
+      "ai_state": "\uc57d\ud568",
+      "ai_action": "\ud68c\ud53c",
+      "ai_note": "\ubc18\ub3c4\uccb4 \uc0b0\uc5c5 \uc804\ubc18\uc758 \ub2e8\uae30 \uc870\uc815\uacfc \ud568\uaed8 \ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4\uac00 \ubc1c\uc0dd\ud558\uc5ec \uc57d\uc138 \ucd94\uc138\ub97c \ubcf4\uc774\uace0 \uc788\uc2b5\ub2c8\ub2e4.",
+      "close": 323.4800109863281,
+      "change_pct": -1.6329618420311443,
+      "score": 15,
+      "state": "\ud68c\ud53c",
+      "action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
+      "cross_highlights": [
+        "SOXX \ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4: 20\uc77c\uc120\uc774 50\uc77c\uc120 \uc544\ub798\ub85c \ub0b4\ub824\uac14\uc2b5\ub2c8\ub2e4."
+      ],
+      "volume_ratio_20d": 0.7801960569159317
     },
     {
       "ticker": "SERV",
-      "ai_score": 25,
-      "ai_state": "\uad00\ub9dd",
-      "ai_action": "\uad00\ub9dd / \uc18c\uc561 \ub9e4\uc218",
-      "ai_note": "\ucd5c\uadfc \uc8fc\uac00\ub294 \ud06c\uac8c \ud558\ub77d\ud588\uc73c\ub098, \uc560\ub110\ub9ac\uc2a4\ud2b8\ub4e4\uc758 \ub192\uc740 \ubaa9\ud45c\uac00\uc640 2026\ub144 \ub9e4\ucd9c \uc804\ub9dd \uc0c1\ud5a5 \ub4f1 \uae0d\uc815\uc801\uc778 \uc131\uc7a5 \uae30\ub300\uac10\uc774 \uc788\uc2b5\ub2c8\ub2e4."
+      "ai_score": 70,
+      "ai_state": "\uac15\ud568",
+      "ai_action": "\ub9e4\uc218",
+      "ai_note": "\ud654\uc774\ud2b8\uce90\uc2ac \ubc0f \uc6b0\ubc84\uc774\uce20\uc640 \uc790\uc728 \ubc30\ub2ec\uc744 \uc2dc\uc791\ud588\uc73c\uba70, 2025\ub144 4\ubd84\uae30 \ub9e4\ucd9c\uc774 \uc804\ub144 \ub300\ube44 400% \uc99d\uac00\ud558\ub294 \ub4f1 \uac15\ub825\ud55c \uc131\uc7a5\uc138\ub97c \ubcf4\uc774\uace0 \uc788\uc2b5\ub2c8\ub2e4.",
+      "close": 8.319999694824219,
+      "change_pct": -8.370046643917117,
+      "score": 8,
+      "state": "\ud68c\ud53c",
+      "action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
+      "cross_highlights": [],
+      "volume_ratio_20d": 0.7982916840252878
     },
     {
       "ticker": "KORU",
-      "ai_score": 15,
-      "ai_state": "\ud68c\ud53c",
-      "ai_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
-      "ai_note": "3\ubc30 \ub808\ubc84\ub9ac\uc9c0 ETF\ub85c \ub192\uc740 \ubcc0\ub3d9\uc131\uc744 \ubcf4\uc774\uba70 \ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4\uac00 \ub098\uc654\uc9c0\ub9cc, AI \ubc0f \ubc18\ub3c4\uccb4 \ud14c\ub9c8\ub85c YTD \uac15\ud55c \uc131\uacfc\ub97c \ubcf4\uc600\uc2b5\ub2c8\ub2e4."
+      "ai_score": 10,
+      "ai_state": "\ub9e4\uc6b0 \uc57d\ud568",
+      "ai_action": "\ud68c\ud53c",
+      "ai_note": "\ubbf8\uad6d-\uc774\ub780 \uc804\uba74\uc804 \uc6b0\ub824\ub85c 3\uc6d4 \ucd08 \uae09\ub77d\ud588\uc73c\uba70, \ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4\uac00 \ubc1c\uc0dd\ud558\uc5ec \ub9e4\uc6b0 \ub192\uc740 \ubcc0\ub3d9\uc131 \uc18d\uc5d0 \uc57d\uc138 \ucd94\uc138\ub97c \ubcf4\uc774\uace0 \uc788\uc2b5\ub2c8\ub2e4.",
+      "close": 274.0299987792969,
+      "change_pct": 1.518914612960498,
+      "score": 6,
+      "state": "\ud68c\ud53c",
+      "action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
+      "cross_highlights": [
+        "KORU \ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4: 20\uc77c\uc120\uc774 50\uc77c\uc120 \uc544\ub798\ub85c \ub0b4\ub824\uac14\uc2b5\ub2c8\ub2e4."
+      ],
+      "volume_ratio_20d": 0.6678081672854004
     }
   ]
 }
