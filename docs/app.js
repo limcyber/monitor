@@ -138,11 +138,14 @@ function applyTheme(theme) {
 function initThemeToggle() {
   let saved = "bw";
   try {
-    saved = localStorage.getItem("monitorTheme") || "bw";
+    saved = localStorage.getItem("monitorTheme");
   } catch {
+    saved = null;
+  }
+  if (saved !== "bw" && saved !== "finviz") {
     saved = "bw";
   }
-  applyTheme(saved);
+  applyTheme(saved || "bw");
   document.getElementById("themeBw")?.addEventListener("click", () => applyTheme("bw"));
   document.getElementById("themeColor")?.addEventListener("click", () => applyTheme("finviz"));
 }
