@@ -22,6 +22,7 @@ from generate_report import (
     market_state_name,
     pct_change_from_prev_close,
     percentile_rank,
+    prioritize_market_factors,
     pick_market_reasons,
     parse_output_date,
     recent_cross_signal,
@@ -525,6 +526,7 @@ def kr_market_guidance(score: int, market_data: dict) -> tuple[list[str], list[s
     else:
         invalidation = "KOSPI나 KOSDAQ이 20일선 아래로 다시 밀리고 원달러가 같이 오르면 공격적으로 보기 어렵습니다."
 
+    positive_factors, negative_factors = prioritize_market_factors(positive_factors, negative_factors)
     return {
         "score": int(max(0, min(100, round(score_value)))),
         "reasons": reasons,

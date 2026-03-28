@@ -461,6 +461,107 @@ def pick_market_reasons(level: int, positive_factors: list[str], negative_factor
     return pick_by_priority(negative_factors, negative_priority)
 
 
+def prioritize_market_factors(positive_factors: list[str], negative_factors: list[str]) -> tuple[list[str], list[str]]:
+    positive_priority = [
+        "S&P500이 200일선 위에 있습니다",
+        "나스닥이 200일선 위에 있습니다",
+        "KOSPI가 200일선 위에 있습니다",
+        "KOSDAQ이 200일선 위에 있습니다",
+        "S&P500의 50일선이 200일선 위에 있습니다",
+        "나스닥의 50일선이 200일선 위에 있습니다",
+        "KOSPI의 50일선이 200일선 위에 있습니다",
+        "KOSDAQ의 50일선이 200일선 위에 있습니다",
+        "20일선 위 종목 비율이 55%를 넘습니다",
+        "50일선 위 종목 비율이 50%를 넘습니다",
+        "상승 종목 수 흐름이 최근 5일 개선됐습니다",
+        "반도체가 코스피보다 더 강합니다",
+        "코스닥이 코스피에 크게 밀리지 않습니다",
+        "VIX가 과도하게 높지 않습니다",
+        "원달러 부담이 심하지 않습니다",
+        "해외 변동성 부담이 심하지 않습니다",
+    ]
+    negative_priority = [
+        "VIX가 매우 높아 점수 상한이 걸렸습니다",
+        "원달러와 해외 변동성이 같이 높아 부담이 큽니다",
+        "20일선 위 종목 비율이 너무 낮아 시장 폭이 크게 약합니다",
+        "50일선 위 종목 비율이 낮아 중간 흐름도 약합니다",
+        "지수는 반등해도 오르는 종목 수는 따라오지 못했습니다",
+        "S&P500과 나스닥이 함께 중기 데드크로스",
+        "S&P500과 나스닥이 함께 단기 데드크로스",
+        "KOSPI와 KOSDAQ이 함께 중기 데드크로스",
+        "KOSPI와 KOSDAQ이 함께 단기 데드크로스",
+        "해외 변동성이 높아 국내장도 흔들릴 수 있습니다",
+        "원달러가 많이 올라 외국인 수급 부담이 큽니다",
+        "원달러가 올라 외국인 수급에는 부담입니다",
+        "S&P500이 200일선 아래",
+        "나스닥이 200일선 아래",
+        "KOSPI가 200일선 아래에 있습니다",
+        "KOSDAQ이 200일선 아래에 있습니다",
+        "대형주 몇 종목에만 힘이 몰리고 있습니다",
+        "소형주가 대형주보다 약해 공격적인 분위기가 아닙니다",
+        "중소형주 쪽 힘이 약합니다",
+        "반도체 ETF가 50일선 아래라 주도 업종 힘이 약합니다",
+        "반도체가 코스피보다 약해지고 있습니다",
+        "달러와 금리가 함께 높아 성장주와 위험자산에 부담입니다",
+    ]
+
+    def prioritize(items: list[str], priorities: list[str]) -> list[str]:
+        picked: list[str] = []
+        for needle in priorities:
+            for item in items:
+                if needle in item and item not in picked:
+                    picked.append(item)
+                    break
+        for item in items:
+            if item not in picked:
+                picked.append(item)
+        return picked
+
+    return prioritize(positive_factors, positive_priority), prioritize(negative_factors, negative_priority)
+
+
+def prioritize_stock_factors(positive_factors: list[str], negative_factors: list[str]) -> tuple[list[str], list[str]]:
+    positive_priority = [
+        "최근 20일선이 50일선을 상향 돌파했습니다",
+        "최근 5일선이 20일선을 상향 돌파했습니다",
+        "시장보다 더 잘 버팁니다",
+        "최근 한 달 흐름이 시장보다 좋습니다",
+        "상승할 때 거래량이 평균보다 강했습니다",
+        "최근에는 상승일 거래량이 더 우세했습니다",
+        "짧은 흐름이 중간 흐름보다 좋습니다",
+        "20일선이 올라가는 중입니다",
+        "종가가 50일선 위에 있습니다",
+        "종가가 20일선 위에 있습니다",
+    ]
+    negative_priority = [
+        "실적 발표가 가까워 보수적으로 봐야 합니다",
+        "실적 일정 확인이 안 돼서 조심해서 봐야 합니다",
+        "최근 20일선이 50일선을 하향 이탈했습니다",
+        "최근 5일선이 20일선을 하향 이탈했습니다",
+        "종가가 50일선 아래에 있습니다",
+        "종가가 20일선 아래에 있습니다",
+        "시장보다 덜 강하게 움직입니다",
+        "거래량이 아직 약합니다",
+        "최근 단기 급등이 커서 추격 매수는 부담입니다",
+        "짧은 흐름이 중간 흐름보다 약합니다",
+        "20일선이 아직 올라가는 모습은 아닙니다",
+    ]
+
+    def prioritize(items: list[str], priorities: list[str]) -> list[str]:
+        picked: list[str] = []
+        for needle in priorities:
+            for item in items:
+                if needle in item and item not in picked:
+                    picked.append(item)
+                    break
+        for item in items:
+            if item not in picked:
+                picked.append(item)
+        return picked
+
+    return prioritize(positive_factors, positive_priority), prioritize(negative_factors, negative_priority)
+
+
 def prioritize_stock_reasons(reasons: list[str], state: str) -> list[str]:
     if not reasons:
         return []
@@ -869,6 +970,7 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
     ]
     valid_count = sum(available_checks)
 
+    positive_factors, negative_factors = prioritize_market_factors(positive_factors, negative_factors)
     score = int(max(0, min(100, round(score))))
     if (
         score < 15
@@ -1074,6 +1176,7 @@ def score_stock(
     if atr_ratio >= 0.06:
         negative_factors.append(factor_text("움직임이 커서 흔들릴 수 있습니다", 0))
 
+    positive_factors, negative_factors = prioritize_stock_factors(positive_factors, negative_factors)
     score = int(max(0, min(100, round(score))))
     s_state = stock_state(score)
     action = combined_action(market_lvl, s_state)
