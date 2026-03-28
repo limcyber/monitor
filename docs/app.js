@@ -317,6 +317,7 @@ function renderMarket(data) {
   renderList(document.getElementById("marketCrossHighlights"), data.market.cross_highlights, "최근 눈에 띄는 골든크로스나 데드크로스는 없습니다.");
   setText("marketInvalidation", data.market.invalidation);
   renderAiAnalysis(document.getElementById("marketAiText"), data.market.ai_analysis?.content || "AI 분석이 아직 없습니다.");
+  setText("marketAiUpdated", `(last updated: ${data.market.ai_analysis?.generated_at_et || data.generated_at_et || "-"})`);
   const aiStatusEl = document.getElementById("marketAiStatus");
   if (aiStatusEl) {
     const status = data.market.ai_analysis?.status || "disabled";
@@ -342,7 +343,11 @@ async function loadAiAnalysis() {
     const response = await fetch("./data/latest_ai.json", { cache: "no-store" });
     if (!response.ok) throw new Error("Failed to load latest_ai.json");
     const data = await response.json();
-    return data?.ai_analysis || null;
+    if (!data?.ai_analysis) return null;
+    return {
+      ...data.ai_analysis,
+      generated_at_et: data.generated_at_et,
+    };
   } catch {
     return null;
   }

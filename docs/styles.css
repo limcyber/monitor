@@ -665,6 +665,15 @@ body[data-theme="bw"] .mini-tag.danger {
   color: #3f5471;
 }
 
+.ai-analysis-updated {
+  margin-left: 6px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--muted);
+}
+
 .ai-analysis-body {
   display: grid;
   gap: 6px;
@@ -1375,6 +1384,10 @@ body[data-theme="bw"] .ai-analysis-meta.danger {
 
 body[data-theme="bw"] .ai-analysis-head h3 {
   color: #dfe9d6;
+}
+
+body[data-theme="bw"] .ai-analysis-updated {
+  color: #98b092;
 }
 
 body[data-theme="bw"] .stress-mini-item {
