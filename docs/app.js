@@ -236,7 +236,6 @@ function renderMarket(data) {
   renderSectorTagList(document.getElementById("marketSectorTags"), data.market.sector_tags, "섹터 데이터 없음");
   renderTagList(document.getElementById("marketHistoryTags"), data.market.history_tags, "히스토리 없음");
   renderList(document.getElementById("marketCrossHighlights"), data.market.cross_highlights, "최근 눈에 띄는 골든크로스나 데드크로스는 없습니다.");
-  setText("marketEasy", data.market.easy_explanation);
   setText("marketInvalidation", data.market.invalidation);
   setText("marketAiText", data.market.ai_analysis?.content || "AI 분석이 아직 없습니다.");
   const aiStatusEl = document.getElementById("marketAiStatus");

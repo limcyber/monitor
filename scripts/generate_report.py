@@ -80,7 +80,6 @@ def build_market_ai_payload(output: dict) -> dict:
             "score": market.get("score"),
             "state": market.get("state"),
             "action": market.get("action"),
-            "easy_explanation": market.get("easy_explanation"),
             "top_reasons": market.get("top_reasons", [])[:5],
             "cross_highlights": market.get("cross_highlights", [])[:4],
             "positive_factors": market.get("positive_factors", [])[:5],
@@ -149,14 +148,17 @@ def generate_market_ai_analysis(output: dict) -> dict:
 아래는 규칙 기반으로 계산한 미국 시장 모니터 데이터다.
 1. 이 규칙 기반 시장 상태 및 흐름이 대체로 맞는지 먼저 판단한다.
 2. 검색으로 확인된 최신 뉴스, 지정학, 금리, 변동성, 주도 업종 상황만 반영하고, 확인되지 않은 내용은 단정하지 않는다.
-3. 한국어로만, 짧고 깔끔하게 답한다.
-4. 출력 형식은 아래 3줄만 쓴다.
+3. 규칙 기반 데이터에 이미 들어 있는 점수 이유를 반복하지 말고, 그 바깥의 외부 변수와 맥락을 중심으로 설명한다.
+4. 시장 점수나 breadth, VIX 같은 지표 문장을 그대로 다시 풀어쓰지 말고, 왜 그런 환경이 만들어졌는지를 짚는다.
+5. 확인된 뉴스가 뚜렷하지 않으면 억지로 채우지 말고 생략한다.
+6. 한국어로만, 짧고 깔끔하게 답한다.
+7. 출력 형식은 아래 3줄만 쓴다.
 AI 판단: ...
 확인 포인트: ...
 결론: ...
-5. 각 줄은 한두 문장 이내로 짧게 쓴다. 결론은 중요한 이슈가 있으면 불릿 포인트로 2~3개까지 정리한다.
-6. 과장하지 말고, 규칙 기반 판단과 다르면 왜 다른지도 짚는다.
-7. 결론은 시장 레짐, 가장 큰 위험 요인, 가장 중요한 긍정 요인 순서로 정리한다.
+8. 각 줄은 한두 문장 이내로 짧게 쓴다. 결론은 중요한 이슈가 있으면 불릿 포인트로 2~3개까지 정리한다.
+9. 과장하지 말고, 규칙 기반 판단과 다르면 왜 다른지도 짚는다.
+10. 결론은 시장 레짐, 가장 큰 위험 요인, 가장 중요한 긍정 요인 순서로 정리한다.
 
 시장 데이터:
 {json.dumps(payload, ensure_ascii=False, indent=2)}
