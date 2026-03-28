@@ -386,12 +386,6 @@ Python 의존성 목록입니다.
 데이터 생성과 Pages 배포를 자동화하는 워크플로입니다.
 - `DISCORD_WEBHOOK_URL` GitHub Secret이 있으면 중요 알림도 함께 전송합니다.
 
-#### [discord-status-ping.yml](./.github/workflows/discord-status-ping.yml)
-Discord 테스트용 시장 상태 핑 워크플로입니다.
-- 평일 장중 및 마감 직후 구간에 1분마다 실행됩니다.
-- `DISCORD_WEBHOOK_URL` GitHub Secret이 있으면 현재 시장 상태 요약을 Discord로 전송합니다.
-- 이 테스트 핑은 나중에 워크플로를 끄거나 `DISCORD_TEST_STATUS_PING` 값을 제거하면 중단할 수 있습니다.
-
 ## 9. 출력 JSON 구조
 
 `docs/data/latest.json`은 대략 아래 구조를 가집니다.
