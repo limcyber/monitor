@@ -1665,6 +1665,8 @@ def main() -> None:
             "stock_state": s["stock_state"],
             "final_action": s["final_action"],
             "note": s["note"],
+            "close": s["metrics"]["close"],
+            "close_change_pct": s["metrics"]["close_change_pct"],
         }
         for s in stock_reports
     ]
