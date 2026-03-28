@@ -186,6 +186,11 @@ function bindStockExtraInfo(root = document) {
   });
 }
 
+function limitTags(items, max = 2) {
+  if (!items || !items.length) return [];
+  return items.slice(0, max);
+}
+
 function renderMarket(data) {
   setText("generatedAt", `생성 시각: ${data.generated_at_et}`);
   setText("asOf", `데이터 기준 시각: ${data.market_data_as_of}`);
@@ -255,7 +260,6 @@ function renderTable(rows) {
       <td data-label="점수"><span class="pill ${scoreTone(row.stock_score)}">${formatScore(row.stock_score)}</span></td>
       <td data-label="상태"><span class="pill ${scoreTone(row.stock_score)}">${row.stock_state}</span></td>
       <td data-label="추천 행동"><span class="pill ${scoreTone(row.stock_score)}">${row.final_action}</span></td>
-      <td data-label="메모">${row.note}</td>
     `;
     body.appendChild(tr);
   });
@@ -361,9 +365,7 @@ function lineChart(ctx, labels, datasets, config = {}) {
           display: true,
           grid: { color: theme.grid },
           title: {
-            display: true,
-            text: "날짜",
-            color: theme.ticks,
+            display: false,
           },
           ticks: {
             color: theme.ticks,
@@ -429,9 +431,7 @@ function barChart(ctx, labels, datasets) {
           display: true,
           grid: { color: theme.grid },
           title: {
-            display: true,
-            text: "날짜",
-            color: theme.ticks,
+            display: false,
           },
           ticks: {
             color: theme.ticks,
@@ -557,6 +557,9 @@ function renderStocks(stocks) {
   holder.innerHTML = "";
   stocks.forEach((s) => {
     const stockPalette = stockSeriesPalette();
+    const changeAndHistory = limitTags((s.change_tags?.length ? s.change_tags : ["오늘 변화 없음"]).concat(s.history_tags?.length ? s.history_tags : []));
+    const positionAndAlerts = limitTags((s.position_tags?.length ? s.position_tags : ["기본 운용"]).concat(s.alerts?.length ? s.alerts : []));
+    const warningTags = limitTags(s.confidence_warnings?.length ? s.confidence_warnings : ["데이터 경고 없음"]);
     const card = document.createElement("article");
     card.className = "stock-card";
     card.innerHTML = `
@@ -573,10 +576,12 @@ function renderStocks(stocks) {
         <h4>크로스 신호</h4>
         <ul>${(s.cross_highlights?.length ? s.cross_highlights : ["최근 눈에 띄는 골든크로스나 데드크로스는 없습니다."]).map((r) => `<li>${r}</li>`).join("")}</ul>
       </div>
-      <p>${s.easy_explanation}</p>
-      <ul>${(s.top_reasons || []).map((r) => `<li>${r}</li>`).join("")}</ul>
       <details class="extra-info-box stock-extra-info">
-        <summary>추가 정보</summary>
+        <summary>설명과 세부 정보</summary>
+        <div class="stock-summary-copy">
+          <p>${s.easy_explanation}</p>
+          <ul>${(s.top_reasons || []).map((r) => `<li>${r}</li>`).join("")}</ul>
+        </div>
         <div class="factor-grid stock-factor-grid">
           <details class="factor-box factor-box-positive">
             <summary>점수를 올린 항목</summary>
@@ -589,15 +594,15 @@ function renderStocks(stocks) {
         </div>
         <div class="tag-row compact-tag-row">
           <h4>변화/히스토리</h4>
-          <div class="tag-list">${(s.change_tags?.length ? s.change_tags : ["오늘 변화 없음"]).concat(s.history_tags?.length ? s.history_tags : []).map((r) => `<span class="mini-tag ${tagTone(r)}">${escapeHtml(r)}</span>`).join("")}</div>
+          <div class="tag-list">${changeAndHistory.map((r) => `<span class="mini-tag ${tagTone(r)}">${escapeHtml(r)}</span>`).join("")}</div>
         </div>
         <div class="tag-row compact-tag-row">
           <h4>운용/알림</h4>
-          <div class="tag-list">${(s.position_tags?.length ? s.position_tags : ["기본 운용"]).concat(s.alerts?.length ? s.alerts : []).map((r) => `<span class="mini-tag ${tagTone(r)}">${escapeHtml(r)}</span>`).join("")}</div>
+          <div class="tag-list">${positionAndAlerts.map((r) => `<span class="mini-tag ${tagTone(r)}">${escapeHtml(r)}</span>`).join("")}</div>
         </div>
-      <div class="tag-row compact-tag-row">
+        <div class="tag-row compact-tag-row">
           <h4>주의</h4>
-          <div class="tag-list">${(s.confidence_warnings?.length ? s.confidence_warnings : ["데이터 경고 없음"]).map((r) => `<span class="mini-tag ${tagTone(r)}">${escapeHtml(r)}</span>`).join("")}</div>
+          <div class="tag-list">${warningTags.map((r) => `<span class="mini-tag ${tagTone(r)}">${escapeHtml(r)}</span>`).join("")}</div>
         </div>
       </details>
       <canvas id="chart-${s.ticker}" class="stock-chart"></canvas>
@@ -641,7 +646,7 @@ function renderStocks(stocks) {
             x: {
               display: true,
               grid: { color: theme.grid },
-              title: { display: true, text: "날짜", color: theme.ticks },
+              title: { display: false },
               ticks: {
                 color: theme.ticks,
                 autoSkip: true,

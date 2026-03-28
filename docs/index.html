@@ -76,8 +76,26 @@
           <h3>크로스 신호</h3>
           <ul id="marketCrossHighlights"></ul>
         </div>
-        <details class="extra-info-box">
-          <summary>추가 정보</summary>
+        <div class="explain">
+          <h3>쉽게 설명하면</h3>
+          <p id="marketEasy">-</p>
+        </div>
+        <div class="reasons">
+          <h3>이렇게 본 이유</h3>
+          <ul id="marketReasons"></ul>
+        </div>
+        <details class="extra-info-box market-extra-info">
+          <summary>세부 정보</summary>
+          <div class="factor-grid">
+            <details class="factor-box factor-box-positive">
+              <summary>점수를 올린 항목</summary>
+              <ul id="marketPositiveFactors"></ul>
+            </details>
+            <details class="factor-box factor-box-negative">
+              <summary>점수를 깎았거나 불리한 항목</summary>
+              <ul id="marketNegativeFactors"></ul>
+            </details>
+          </div>
           <div class="tag-row-block">
             <div class="tag-row">
               <h3>오늘 변화</h3>
@@ -104,26 +122,8 @@
               <div id="marketHistoryTags" class="tag-list"></div>
             </div>
           </div>
-        </details>
-        <div class="explain">
-          <h3>쉽게 설명하면</h3>
-          <p id="marketEasy">-</p>
-        </div>
-        <div class="reasons">
-          <h3>이렇게 본 이유</h3>
-          <ul id="marketReasons"></ul>
-          <div class="factor-grid">
-            <details class="factor-box factor-box-positive">
-              <summary>점수를 올린 항목</summary>
-              <ul id="marketPositiveFactors"></ul>
-            </details>
-            <details class="factor-box factor-box-negative">
-              <summary>점수를 깎았거나 불리한 항목</summary>
-              <ul id="marketNegativeFactors"></ul>
-            </details>
-          </div>
           <p><strong>주의할 점:</strong> <span id="marketInvalidation">-</span></p>
-        </div>
+        </details>
       </section>
 
       <section class="panel">
@@ -136,7 +136,6 @@
                 <th>점수</th>
                 <th>상태</th>
                 <th>추천 행동</th>
-                <th>메모</th>
               </tr>
             </thead>
             <tbody id="watchlistTable"></tbody>

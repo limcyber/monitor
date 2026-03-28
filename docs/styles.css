@@ -521,6 +521,10 @@ body[data-theme="bw"] .mini-tag.danger {
   margin-top: 12px;
 }
 
+.market-extra-info {
+  margin-top: 12px;
+}
+
 .cross-highlight-block {
   margin-top: 12px;
   padding: 10px 11px;
@@ -618,6 +622,18 @@ body[data-theme="bw"] .mini-tag.danger {
 
 .compact-tag-row {
   margin-top: 8px;
+}
+
+.stock-summary-copy {
+  margin-top: 2px;
+}
+
+.stock-summary-copy p {
+  margin: 0 0 8px;
+}
+
+.stock-summary-copy ul {
+  margin-top: 0;
 }
 
 .factor-grid {
@@ -933,6 +949,7 @@ body[data-theme="bw"] .stock-chart {
 }
 
 .chart-legend {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 8px 12px;
@@ -944,6 +961,7 @@ body[data-theme="bw"] .stock-chart {
 }
 
 .stock-chart-legend {
+  width: 100%;
   margin: 8px 0 2px;
   padding: 0 2px 0 4px;
   justify-content: center;
@@ -1165,10 +1183,6 @@ body[data-theme="bw"] .chart-legend {
     color: #86bf88;
   }
 
-  tbody td:nth-child(5) {
-    flex-basis: 100%;
-  }
-
   .site-topbar-inner {
     flex-direction: column;
     align-items: flex-start;
@@ -1199,5 +1213,26 @@ body[data-theme="bw"] .chart-legend {
   .guide-extra-info > summary .pill {
     font-size: 9px;
     padding: 2px 9px;
+  }
+
+  .chart-legend {
+    justify-content: center;
+    gap: 6px 8px;
+    font-size: 9px;
+  }
+
+  .stock-chart-legend {
+    margin: 6px 0 2px;
+    padding: 0;
+  }
+
+  .chart-card canvas + .chart-legend + .stock-chart-legend,
+  .stock-chart + .stock-chart-legend {
+    margin-top: 4px;
+  }
+
+  .chart-card canvas,
+  .stock-chart {
+    margin-bottom: 0;
   }
 }
