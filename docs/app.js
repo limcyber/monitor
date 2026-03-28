@@ -317,7 +317,7 @@ function renderMarket(data) {
   renderList(document.getElementById("marketCrossHighlights"), data.market.cross_highlights, "최근 눈에 띄는 골든크로스나 데드크로스는 없습니다.");
   setText("marketInvalidation", data.market.invalidation);
   renderAiAnalysis(document.getElementById("marketAiText"), data.market.ai_analysis?.content || "AI 분석이 아직 없습니다.");
-  setText("marketAiUpdated", `(last updated: ${data.market.ai_analysis?.generated_at_et || data.generated_at_et || "-"})`);
+  setText("marketAiUpdated", `(updated: ${data.market.ai_analysis?.generated_at_et || data.generated_at_et || "-"})`);
   const aiStatusEl = document.getElementById("marketAiStatus");
   if (aiStatusEl) {
     const status = data.market.ai_analysis?.status || "disabled";
