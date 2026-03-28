@@ -946,6 +946,7 @@ body[data-theme="bw"] .stock-chart {
 .stock-chart-legend {
   margin: 8px 0 2px;
   padding: 0 2px 0 4px;
+  justify-content: center;
 }
 
 .chart-legend-item {
