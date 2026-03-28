@@ -449,9 +449,9 @@ def main() -> None:
     now_et = datetime.now(tz=ET)
     as_of = now_et.date()
 
-    watchlist = load_yaml(WATCHLIST_PATH).get("watchlist", [])[:5]
-    if len(watchlist) != 5:
-        raise ValueError("watchlist.yml must contain exactly 5 tickers.")
+    watchlist = load_yaml(WATCHLIST_PATH).get("watchlist", [])
+    if len(watchlist) != 6:
+        raise ValueError("watchlist.yml must contain exactly 6 tickers.")
 
     spy = download_ohlcv("SPY")
     rsp = download_ohlcv("RSP")

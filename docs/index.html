@@ -21,7 +21,7 @@
           <span class="brand-tag">finviz-inspired view</span>
         </div>
         <div class="topbar-meta">
-          <span>Market Layer + Fixed 5-Stock Watchlist</span>
+          <span>Market Layer + Fixed 6-Stock Watchlist</span>
           <div class="theme-segment" role="group" aria-label="Theme mode">
             <button id="themeBw" class="theme-segment-btn" type="button" aria-pressed="false">
               BW
@@ -36,7 +36,7 @@
     <main class="container">
       <header class="hero">
         <h1>Simple Market Regime Monitor</h1>
-        <p>Market Layer + Fixed 5-Stock Watchlist</p>
+        <p>Market Layer + Fixed 6-Stock Watchlist</p>
         <div class="meta-row">
           <span id="generatedAt">Generated At: -</span>
           <span id="asOf">Market Data As Of: -</span>
@@ -86,9 +86,27 @@
       <section class="panel">
         <h2>Market Charts</h2>
         <div class="chart-grid">
-          <canvas id="spyChart"></canvas>
-          <canvas id="breadthChart"></canvas>
-          <canvas id="stressChart"></canvas>
+          <article class="chart-card">
+            <div class="chart-head">
+              <h3>SPY Trend</h3>
+              <p>Price vs 20/50/200DMA</p>
+            </div>
+            <canvas id="spyChart"></canvas>
+          </article>
+          <article class="chart-card">
+            <div class="chart-head">
+              <h3>Breadth</h3>
+              <p>% of S&P 500 above key moving averages</p>
+            </div>
+            <canvas id="breadthChart"></canvas>
+          </article>
+          <article class="chart-card">
+            <div class="chart-head">
+              <h3>Stress</h3>
+              <p>VIX, HYG, and DXY stress snapshot</p>
+            </div>
+            <canvas id="stressChart"></canvas>
+          </article>
         </div>
       </section>
 
