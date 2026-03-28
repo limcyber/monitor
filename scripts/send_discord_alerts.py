@@ -8,6 +8,7 @@ import requests
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 LATEST_PATH = BASE_DIR / "docs" / "data" / "latest.json"
+LATEST_KR_PATH = BASE_DIR / "docs" / "data" / "latest_kr.json"
 
 
 def priority_label(priority: str) -> str:
@@ -40,11 +41,22 @@ def build_market_summary(payload: dict) -> str:
         lines.append(f"핵심 이유: {market['top_reasons'][0]}")
     if top_rows:
         top_text = ", ".join(
-            f"{row.get('ticker', '-')}: {row.get('stock_score', '-')}/100 {row.get('stock_state', '-')}"
+            f"{row.get('name', row.get('ticker', '-'))}: {row.get('stock_score', '-')}/100 {row.get('stock_state', '-')}"
             for row in top_rows
         )
         lines.append(f"상위 관심종목: {top_text}")
     return "\n".join(lines)
+
+
+def resolve_latest_path() -> Path:
+    raw = os.environ.get("DISCORD_PAYLOAD_PATH", "").strip().lower()
+    if raw in {"kr", "latest_kr.json", "korea", "korean"}:
+        return LATEST_KR_PATH
+    return LATEST_PATH
+
+
+def summary_heading() -> str:
+    return os.environ.get("DISCORD_SUMMARY_TITLE", "시장 상태 요약").strip() or "시장 상태 요약"
 
 
 def main() -> None:
@@ -53,15 +65,17 @@ def main() -> None:
         print("DISCORD_WEBHOOK_URL not set, skipping.")
         return
 
-    if not LATEST_PATH.exists():
-        print("latest.json not found, skipping.")
+    latest_path = resolve_latest_path()
+
+    if not latest_path.exists():
+        print(f"{latest_path.name} not found, skipping.")
         return
 
-    with LATEST_PATH.open("r", encoding="utf-8") as f:
+    with latest_path.open("r", encoding="utf-8") as f:
         payload = json.load(f)
 
     if env_flag("DISCORD_MARKET_SUMMARY", default=False):
-        content = build_market_summary(payload)
+        content = build_market_summary(payload).replace("시장 상태 요약", summary_heading(), 1)
         response = requests.post(webhook_url, json={"content": content}, timeout=15)
         response.raise_for_status()
         print("Sent Discord market summary.")

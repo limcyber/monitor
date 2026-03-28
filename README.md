@@ -455,6 +455,12 @@ Python 의존성 목록입니다.
 - 시간대 차이와 GitHub 스케줄 지연을 감안해 UTC cron은 여러 개 두고, 실제 실행은 ET 기준 시간 창에서만 허용합니다.
 - `DISCORD_WEBHOOK_URL` GitHub Secret이 있으면 현재 시장 상태, 점수, 추천 행동, 상위 관심종목 3개를 전송합니다.
 
+#### [discord-korea-market-summary.yml](./.github/workflows/discord-korea-market-summary.yml)
+한국장 기본 시장 상태 요약을 Discord로 보내는 워크플로입니다.
+- 평일 기준 하루 2번, `08:30 KST`와 `16:00 KST` 근처에 실행되도록 설정했습니다.
+- 한국장은 `docs/data/latest_kr.json`을 기준으로 한국 시장 상태, 점수, 추천 행동, 상위 관심종목 3개를 전송합니다.
+- 미국장과 같은 `DISCORD_WEBHOOK_URL` GitHub Secret을 사용합니다.
+
 ## 9. 출력 JSON 구조
 
 `docs/data/latest.json`은 대략 아래 구조를 가집니다.
