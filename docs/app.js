@@ -484,6 +484,145 @@ function renderChartLegend(targetId, items) {
     .join("");
 }
 
+function lastNumeric(series) {
+  if (!Array.isArray(series)) return null;
+  for (let i = series.length - 1; i >= 0; i -= 1) {
+    const value = series[i];
+    if (typeof value === "number" && Number.isFinite(value)) return value;
+  }
+  return null;
+}
+
+function changePctFromSeries(series) {
+  if (!Array.isArray(series) || series.length < 2) return null;
+  let last = null;
+  let prev = null;
+  for (let i = series.length - 1; i >= 0; i -= 1) {
+    const value = series[i];
+    if (typeof value !== "number" || !Number.isFinite(value)) continue;
+    if (last === null) {
+      last = value;
+    } else {
+      prev = value;
+      break;
+    }
+  }
+  if (last === null || prev === null || prev === 0) return null;
+  return ((last - prev) / prev) * 100;
+}
+
+function formatMetricNumber(value) {
+  if (typeof value !== "number" || Number.isNaN(value)) return "-";
+  return value.toFixed(2);
+}
+
+function buildSparklinePath(series, width = 96, height = 24) {
+  if (!Array.isArray(series)) return "";
+  const values = series.filter((value) => typeof value === "number" && Number.isFinite(value)).slice(-20);
+  if (values.length < 2) return "";
+  const min = Math.min(...values);
+  const max = Math.max(...values);
+  const range = max - min || 1;
+  return values
+    .map((value, index) => {
+      const x = (index / (values.length - 1)) * width;
+      const y = height - ((value - min) / range) * (height - 2);
+      return `${index === 0 ? "M" : "L"}${x.toFixed(1)},${y.toFixed(1)}`;
+    })
+    .join(" ");
+}
+
+function renderMiniSparkline(series, color) {
+  const path = buildSparklinePath(series);
+  if (!path) {
+    return `<span class="stress-sparkline-empty">-</span>`;
+  }
+  return `
+    <svg viewBox="0 0 96 24" class="stress-sparkline" aria-hidden="true">
+      <path d="${path}" fill="none" stroke="${color}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  `;
+}
+
+function renderStressTable(charts) {
+  const el = document.getElementById("stressTable");
+  if (!el) return;
+  const rows = [
+    {
+      name: "VIX",
+      value: lastNumeric(charts?.vix_close),
+      change: appState.data?.market?.metrics?.vix_change_pct,
+      note: "불안 증가",
+      tone: "danger",
+    },
+    {
+      name: "10Y",
+      value: lastNumeric(charts?.tnx_close),
+      change: appState.data?.market?.metrics?.tnx_change_pct,
+      note: "금리 부담",
+      tone: "warning",
+    },
+    {
+      name: "HYG",
+      value: lastNumeric(charts?.hyg_close),
+      change: changePctFromSeries(charts?.hyg_close),
+      note: "위험선호 약함",
+      tone: "success",
+    },
+    {
+      name: "DXY",
+      value: lastNumeric(charts?.dxy_close),
+      change: changePctFromSeries(charts?.dxy_close),
+      note: "달러 강세",
+      tone: "warning",
+    },
+  ];
+  el.innerHTML = `
+    <table class="stress-table-grid">
+      <thead>
+        <tr>
+          <th>지표</th>
+          <th>현재값</th>
+          <th>등락률</th>
+          <th>해석</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${rows
+          .map(
+            (row) => `
+              <tr>
+                <td data-label="지표"><span class="mini-tag ${row.tone}">${escapeHtml(row.name)}</span></td>
+                <td data-label="현재값">${formatMetricNumber(row.value)}</td>
+                <td data-label="등락률" class="${row.change >= 0 ? "tone-success" : row.change < 0 ? "tone-danger" : "tone-warning"}">${formatPercent(row.change)}</td>
+                <td data-label="해석">${escapeHtml(row.note)}</td>
+              </tr>
+            `
+          )
+          .join("")}
+      </tbody>
+    </table>
+    <div class="stress-mini-row">
+      <div class="stress-mini-item">
+        <span class="stress-mini-label">VIX</span>
+        ${renderMiniSparkline(charts?.vix_close, "#ef4444")}
+      </div>
+      <div class="stress-mini-item">
+        <span class="stress-mini-label">10Y</span>
+        ${renderMiniSparkline(charts?.tnx_close, "#6b7280")}
+      </div>
+      <div class="stress-mini-item">
+        <span class="stress-mini-label">HYG</span>
+        ${renderMiniSparkline(charts?.hyg_close, "#0f766e")}
+      </div>
+      <div class="stress-mini-item">
+        <span class="stress-mini-label">DXY</span>
+        ${renderMiniSparkline(charts?.dxy_close, "#f59e0b")}
+      </div>
+    </div>
+  `;
+}
+
 function destroyCharts() {
   appState.charts.forEach((chart) => chart?.destroy?.());
   appState.charts = [];
@@ -532,36 +671,6 @@ function renderMarketCharts(charts) {
   renderChartLegend("breadthLegend", [
     { label: "20일선 위 종목 비율", color: palette.secondary },
     { label: "50일선 위 종목 비율", color: palette.primary },
-  ]);
-  appState.charts.push(
-    lineChart(
-      document.getElementById("stressChart1"),
-      labels,
-      [
-        { label: "VIX", data: charts.vix_close, borderColor: palette.danger },
-        { label: "10Y", data: charts.tnx_close, borderColor: palette.neutral },
-      ],
-      { showLegend: false }
-    )
-  );
-  renderChartLegend("stressLegend1", [
-    { label: "VIX", color: palette.danger },
-    { label: "10Y", color: palette.neutral },
-  ]);
-  appState.charts.push(
-    lineChart(
-      document.getElementById("stressChart2"),
-      labels,
-      [
-        { label: "HYG", data: charts.hyg_close, borderColor: palette.secondary },
-        { label: "달러지수", data: charts.dxy_close, borderColor: palette.warning },
-      ],
-      { showLegend: false }
-    )
-  );
-  renderChartLegend("stressLegend2", [
-    { label: "HYG", color: palette.secondary },
-    { label: "달러지수", color: palette.warning },
   ]);
 }
 
@@ -757,6 +866,7 @@ async function boot() {
   renderMarket(data);
   renderTable(data.watchlist_summary);
   renderMarketCharts(data.charts.market);
+  renderStressTable(data.charts.market);
   initStockPanel(data.stocks);
   if (!window.Chart) {
     const warning = document.createElement("p");
