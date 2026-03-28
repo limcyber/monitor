@@ -5,6 +5,10 @@ on:
   schedule:
     - cron: "*/5 * * * *"
 
+concurrency:
+  group: market-ai-refresh
+  cancel-in-progress: false
+
 permissions:
   contents: write
   pages: write
@@ -73,6 +77,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase --autostash origin main
           git add docs/data/latest_ai.json docs/data/latest_watchlist_ai.json
           if git diff --cached --quiet; then
             echo "AI refresh result: no file changes."
