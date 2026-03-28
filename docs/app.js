@@ -258,7 +258,7 @@ function renderTable(rows) {
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td data-label="종목"><strong>${row.ticker}</strong></td>
-      <td data-label="현재가">${formatClose(row.close, row.close_change_pct)}</td>
+      <td data-label="현재가"><span class="quote-value ${quoteTone(row.close_change_pct)}">${formatClose(row.close, row.close_change_pct)}</span></td>
       <td data-label="점수"><span class="pill ${scoreTone(row.stock_score)}">${formatScore(row.stock_score)}</span></td>
       <td data-label="상태"><span class="pill ${scoreTone(row.stock_score)}">${row.stock_state}</span></td>
       <td data-label="추천 행동"><span class="pill ${scoreTone(row.stock_score)}">${row.final_action}</span></td>
