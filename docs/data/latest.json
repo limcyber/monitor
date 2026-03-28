@@ -1,32 +1,32 @@
 {
-  "generated_at_et": "2026-03-28 06:46 ET",
+  "generated_at_et": "2026-03-28 06:51 ET",
   "market_data_as_of": "2026-03-27 16:00 ET (Close)",
   "market": {
     "state": "\ub808\ubca8 1/6 - \ubc29\uc5b4 \uc6b0\uc120",
-    "score": 0,
+    "score": 15,
     "confidence": "\ub192\uc74c",
     "execution_strength": "\ubcf4\uc218\uc801",
     "action": "\uc2e0\uaddc \uc9c4\uc785 \uc790\uc81c / \ubc29\uc5b4",
     "top_reasons": [
-      "S&P500\uc774 20\uc77c\uc120 \uc544\ub798\ub77c \ub2e8\uae30 \ud750\ub984\uc774 \uc57d\ud569\ub2c8\ub2e4 (-4)",
-      "\ub098\uc2a4\ub2e5\uc774 20\uc77c\uc120 \uc544\ub798\ub77c \ub2e8\uae30 \ud750\ub984\uc774 \uc57d\ud569\ub2c8\ub2e4 (-4)",
-      "\uc18c\ud615\uc8fc\uac00 \ub300\ud615\uc8fc\ubcf4\ub2e4 \uc57d\ud574 \uacf5\uaca9\uc801\uc778 \ubd84\uc704\uae30\uac00 \uc544\ub2d9\ub2c8\ub2e4 (-4)"
+      "S&P500\uc774 20\uc77c\uc120 \uc544\ub798\ub77c \ub2e8\uae30 \ud750\ub984\uc774 \uc57d\ud569\ub2c8\ub2e4 (-2)",
+      "\ub098\uc2a4\ub2e5\uc774 20\uc77c\uc120 \uc544\ub798\ub77c \ub2e8\uae30 \ud750\ub984\uc774 \uc57d\ud569\ub2c8\ub2e4 (-2)",
+      "\uc18c\ud615\uc8fc\uac00 \ub300\ud615\uc8fc\ubcf4\ub2e4 \uc57d\ud574 \uacf5\uaca9\uc801\uc778 \ubd84\uc704\uae30\uac00 \uc544\ub2d9\ub2c8\ub2e4 (-2)"
     ],
     "cross_highlights": [],
     "positive_factors": [
-      "S&P500\uc758 50\uc77c\uc120\uc774 200\uc77c\uc120 \uc704\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (+5)",
-      "\ub098\uc2a4\ub2e5\uc758 50\uc77c\uc120\uc774 200\uc77c\uc120 \uc704\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (+5)",
-      "\uc18c\ud615\uc8fc(RUT)\uac00 200\uc77c\uc120 \uc704\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (+5)",
+      "S&P500\uc758 50\uc77c\uc120\uc774 200\uc77c\uc120 \uc704\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (+8)",
+      "\ub098\uc2a4\ub2e5\uc758 50\uc77c\uc120\uc774 200\uc77c\uc120 \uc704\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (+8)",
+      "\uc18c\ud615\uc8fc(RUT)\uac00 200\uc77c\uc120 \uc704\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (+6)",
       "\uc0c1\uc2b9 \uc885\ubaa9 \uc218 \ud750\ub984\uc774 \ucd5c\uadfc 5\uc77c \uac1c\uc120\ub410\uc2b5\ub2c8\ub2e4 (+3)",
       "\ud070 \uc774\ubca4\ud2b8\uac00 \ubc14\ub85c \uc55e\uc5d0 \uc788\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4 (+3)"
     ],
     "negative_factors": [
-      "S&P500\uc774 20\uc77c\uc120 \uc544\ub798\ub77c \ub2e8\uae30 \ud750\ub984\uc774 \uc57d\ud569\ub2c8\ub2e4 (-4)",
-      "\ub098\uc2a4\ub2e5\uc774 20\uc77c\uc120 \uc544\ub798\ub77c \ub2e8\uae30 \ud750\ub984\uc774 \uc57d\ud569\ub2c8\ub2e4 (-4)",
-      "\uc18c\ud615\uc8fc\uac00 \ub300\ud615\uc8fc\ubcf4\ub2e4 \uc57d\ud574 \uacf5\uaca9\uc801\uc778 \ubd84\uc704\uae30\uac00 \uc544\ub2d9\ub2c8\ub2e4 (-4)",
-      "20\uc77c\uc120 \uc704 \uc885\ubaa9 \ube44\uc728\uc774 \ub108\ubb34 \ub0ae\uc544 \uc2dc\uc7a5 \ud3ed\uc774 \ud06c\uac8c \uc57d\ud569\ub2c8\ub2e4 (-10)",
-      "50\uc77c\uc120 \uc704 \uc885\ubaa9 \ube44\uc728\uc774 \ub0ae\uc544 \uc911\uac04 \ud750\ub984\ub3c4 \uc57d\ud569\ub2c8\ub2e4 (-5)",
-      "\ub300\ud615\uc8fc \uba87 \uc885\ubaa9\uc5d0\ub9cc \ud798\uc774 \ubab0\ub9ac\uace0 \uc788\uc2b5\ub2c8\ub2e4 (-4)"
+      "S&P500\uc774 20\uc77c\uc120 \uc544\ub798\ub77c \ub2e8\uae30 \ud750\ub984\uc774 \uc57d\ud569\ub2c8\ub2e4 (-2)",
+      "\ub098\uc2a4\ub2e5\uc774 20\uc77c\uc120 \uc544\ub798\ub77c \ub2e8\uae30 \ud750\ub984\uc774 \uc57d\ud569\ub2c8\ub2e4 (-2)",
+      "\uc18c\ud615\uc8fc\uac00 \ub300\ud615\uc8fc\ubcf4\ub2e4 \uc57d\ud574 \uacf5\uaca9\uc801\uc778 \ubd84\uc704\uae30\uac00 \uc544\ub2d9\ub2c8\ub2e4 (-2)",
+      "20\uc77c\uc120 \uc704 \uc885\ubaa9 \ube44\uc728\uc774 \ub108\ubb34 \ub0ae\uc544 \uc2dc\uc7a5 \ud3ed\uc774 \ud06c\uac8c \uc57d\ud569\ub2c8\ub2e4 (-6)",
+      "50\uc77c\uc120 \uc704 \uc885\ubaa9 \ube44\uc728\uc774 \ub0ae\uc544 \uc911\uac04 \ud750\ub984\ub3c4 \uc57d\ud569\ub2c8\ub2e4 (-3)",
+      "\ub300\ud615\uc8fc \uba87 \uc885\ubaa9\uc5d0\ub9cc \ud798\uc774 \ubab0\ub9ac\uace0 \uc788\uc2b5\ub2c8\ub2e4 (-2)"
     ],
     "invalidation": "\ud604\uc7ac S&P500\uacfc \ub098\uc2a4\ub2e5\uc774 \ubaa8\ub450 200\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4. \ubc18\ub4f1\uc774 \ub098\uc624\ub354\ub77c\ub3c4 \ub458 \ub2e4 200\uc77c\uc120\uc744 \ud68c\ubcf5\ud558\uc9c0 \ubabb\ud558\uace0 \uc624\ub974\ub294 \uc885\ubaa9 \uc218\uae4c\uc9c0 \uc57d\ud558\uba74 \ubc29\uc5b4\uc801\uc73c\ub85c \ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4.",
     "easy_explanation": "\uc2dc\uc7a5 \ubd84\uc704\uae30\uac00 \uc88b\uc9c0 \uc54a\uc544\uc11c \uc11c\ub450\ub974\uae30\ubcf4\ub2e4 \ubc29\uc5b4\uc801\uc73c\ub85c \ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4. \uc2e0\ub8b0\ub3c4\ub294 \ub192\uc74c\uc785\ub2c8\ub2e4.",
@@ -57,9 +57,7 @@
       "tnx_20d_zscore": 1.706566951735031
     },
     "change_tags": [
-      "\uc810\uc218 0",
-      "\ub808\ubca8 \ubcc0\ud654 \uc5c6\uc74c",
-      "VIX \uc77c\uac04 +13.16%"
+      "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
     ],
     "position_tags": [
       "\ucd1d \ub178\ucd9c 0~5%",
@@ -93,7 +91,7 @@
     ],
     "confidence_warnings": [],
     "history_tags": [
-      "30\uc77c \ucd5c\uace0 0"
+      "30\uc77c \ucd5c\uace0 15"
     ]
   },
   "watchlist_summary": [
@@ -1193,7 +1191,7 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -2230,7 +2228,7 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -3267,7 +3265,7 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -4309,7 +4307,7 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -5344,7 +5342,7 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -6383,7 +6381,7 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -7422,7 +7420,7 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -8461,7 +8459,7 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "\uccab \uc0dd\uc131 \ub370\uc774\ud130"
       ],
       "position_tags": [
         "\uad8c\uc7a5 \ube44\uc911 0~2%",
@@ -9525,14 +9523,49 @@
     }
   },
   "notifications": {
-    "count": 0,
-    "items": []
+    "count": 4,
+    "items": [
+      {
+        "id": "market-high-stress-2026-03-28",
+        "priority": "high",
+        "kind": "market_high_stress",
+        "scope": "market",
+        "title": "\uace0\uc2a4\ud2b8\ub808\uc2a4 \uad6c\uac04 \uc9c4\uc785",
+        "message": "VIX\uac00 \ub192\uc740 \uad6c\uac04\uc73c\ub85c \uc62c\ub77c\uc654\uc2b5\ub2c8\ub2e4. \uc2e0\uaddc \uc9c4\uc785\uc740 \ub354 \ubcf4\uc218\uc801\uc73c\ub85c \ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4."
+      },
+      {
+        "id": "market-both-below-200dma-2026-03-28",
+        "priority": "high",
+        "kind": "market_below_200dma",
+        "scope": "market",
+        "title": "\ud575\uc2ec \uc9c0\uc218 200\uc77c\uc120 \uc774\ud0c8",
+        "message": "S&P500\uacfc Nasdaq\uc774 \ubaa8\ub450 200\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4. \ubc29\uc5b4\uc801\uc73c\ub85c \ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4."
+      },
+      {
+        "id": "stock-dead-cross-KORU-2026-03-28",
+        "priority": "medium",
+        "kind": "stock_dead_cross",
+        "scope": "stock",
+        "title": "KORU \ub370\ub4dc\ud06c\ub85c\uc2a4",
+        "message": "KORU \ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4: 20\uc77c\uc120\uc774 50\uc77c\uc120 \uc544\ub798\ub85c \ub0b4\ub824\uac14\uc2b5\ub2c8\ub2e4.",
+        "ticker": "KORU"
+      },
+      {
+        "id": "stock-dead-cross-SOXX-2026-03-28",
+        "priority": "medium",
+        "kind": "stock_dead_cross",
+        "scope": "stock",
+        "title": "SOXX \ub370\ub4dc\ud06c\ub85c\uc2a4",
+        "message": "SOXX \ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4: 20\uc77c\uc120\uc774 50\uc77c\uc120 \uc544\ub798\ub85c \ub0b4\ub824\uac14\uc2b5\ub2c8\ub2e4.",
+        "ticker": "SOXX"
+      }
+    ]
   },
   "history": {
     "market": [
       {
         "date": "2026-03-28",
-        "score": 0,
+        "score": 15,
         "level": "\ub808\ubca8 1/6 - \ubc29\uc5b4 \uc6b0\uc120"
       }
     ],

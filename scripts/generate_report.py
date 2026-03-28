@@ -506,9 +506,9 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
         positive_factors.append(factor_text("S&P500이 200일선 위에 있습니다", 10))
     valid_count += 1
     if spx_dma50.iloc[-1] > spx_dma200.iloc[-1]:
-        score += 5
+        score += 8
         reasons.append("S&P500의 50일선이 200일선 위에 있습니다")
-        positive_factors.append(factor_text("S&P500의 50일선이 200일선 위에 있습니다", 5))
+        positive_factors.append(factor_text("S&P500의 50일선이 200일선 위에 있습니다", 8))
     valid_count += 1
     if slope_up(spx_dma20):
         score += 5
@@ -519,8 +519,8 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
         score += 5
         positive_factors.append(factor_text("S&P500이 20일선 위에 있습니다", 5))
     else:
-        score -= 4
-        negative_factors.append(factor_text("S&P500이 20일선 아래라 단기 흐름이 약합니다", -4))
+        score -= 2
+        negative_factors.append(factor_text("S&P500이 20일선 아래라 단기 흐름이 약합니다", -2))
     valid_count += 1
 
     spx_short_bull, spx_short_bear = recent_cross_signal(
@@ -563,9 +563,9 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
         positive_factors.append(factor_text("나스닥이 200일선 위에 있습니다", 10))
     valid_count += 1
     if ndx_dma50.iloc[-1] > ndx_dma200.iloc[-1]:
-        score += 5
+        score += 8
         reasons.append("나스닥의 50일선이 200일선 위에 있습니다")
-        positive_factors.append(factor_text("나스닥의 50일선이 200일선 위에 있습니다", 5))
+        positive_factors.append(factor_text("나스닥의 50일선이 200일선 위에 있습니다", 8))
     valid_count += 1
     if slope_up(ndx_dma20):
         score += 5
@@ -576,8 +576,8 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
         score += 5
         positive_factors.append(factor_text("나스닥이 20일선 위에 있습니다", 5))
     else:
-        score -= 4
-        negative_factors.append(factor_text("나스닥이 20일선 아래라 단기 흐름이 약합니다", -4))
+        score -= 2
+        negative_factors.append(factor_text("나스닥이 20일선 아래라 단기 흐름이 약합니다", -2))
     valid_count += 1
 
     ndx_short_bull, ndx_short_bear = recent_cross_signal(
@@ -626,8 +626,8 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
         reasons.append("S&P500과 나스닥이 함께 중기 데드크로스입니다")
 
     if rut_close.iloc[-1] > rut_dma200.iloc[-1]:
-        score += 5
-        positive_factors.append(factor_text("소형주(RUT)가 200일선 위에 있습니다", 5))
+        score += 6
+        positive_factors.append(factor_text("소형주(RUT)가 200일선 위에 있습니다", 6))
     valid_count += 1
     if rut_close.iloc[-1] > rut_dma20.iloc[-1]:
         score += 3
@@ -637,8 +637,8 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
         score += 4
         positive_factors.append(factor_text("소형주도 대형주에 크게 밀리지 않습니다", 4))
     elif len(rut_spx_ratio) >= 20:
-        score -= 4
-        negative_factors.append(factor_text("소형주가 대형주보다 약해 공격적인 분위기가 아닙니다", -4))
+        score -= 2
+        negative_factors.append(factor_text("소형주가 대형주보다 약해 공격적인 분위기가 아닙니다", -2))
     valid_count += 1
 
     if breadth["pct_above_20dma"] > 55:
@@ -646,18 +646,18 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
         reasons.append("오르는 종목 수가 너무 적지는 않습니다")
         positive_factors.append(factor_text("20일선 위 종목 비율이 55%를 넘습니다", 5))
     elif breadth["pct_above_20dma"] < 35:
-        score -= 10
-        negative_factors.append(factor_text("20일선 위 종목 비율이 너무 낮아 시장 폭이 크게 약합니다", -10))
+        score -= 6
+        negative_factors.append(factor_text("20일선 위 종목 비율이 너무 낮아 시장 폭이 크게 약합니다", -6))
     elif breadth["pct_above_20dma"] < 45:
-        score -= 5
-        negative_factors.append(factor_text("20일선 위 종목 비율이 낮아 오르는 종목 수가 적습니다", -5))
+        score -= 3
+        negative_factors.append(factor_text("20일선 위 종목 비율이 낮아 오르는 종목 수가 적습니다", -3))
     valid_count += 1
     if breadth["pct_above_50dma"] > 50:
         score += 5
         positive_factors.append(factor_text("50일선 위 종목 비율이 50%를 넘습니다", 5))
     elif breadth["pct_above_50dma"] < 40:
-        score -= 5
-        negative_factors.append(factor_text("50일선 위 종목 비율이 낮아 중간 흐름도 약합니다", -5))
+        score -= 3
+        negative_factors.append(factor_text("50일선 위 종목 비율이 낮아 중간 흐름도 약합니다", -3))
     valid_count += 1
     if breadth["adline_5d_up"]:
         score += 3
@@ -667,8 +667,8 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
         score += 2
         positive_factors.append(factor_text("대형주 몇 종목만 오르는 장은 아닙니다", 2))
     else:
-        score -= 4
-        negative_factors.append(factor_text("대형주 몇 종목에만 힘이 몰리고 있습니다", -4))
+        score -= 2
+        negative_factors.append(factor_text("대형주 몇 종목에만 힘이 몰리고 있습니다", -2))
     valid_count += 1
 
     vix_pct = percentile_rank(vix["Close"])
@@ -676,35 +676,35 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
         score += 12
         positive_factors.append(factor_text("VIX가 과도하게 높지 않습니다", 12))
     elif vix_pct > 80:
-        score -= 10
-        negative_factors.append(factor_text("VIX가 높아 투자 심리가 크게 불안합니다", -10))
+        score -= 5
+        negative_factors.append(factor_text("VIX가 높아 투자 심리가 크게 불안합니다", -5))
     elif vix_pct > 70:
-        score -= 4
-        negative_factors.append(factor_text("VIX가 낮지 않아 투자 심리가 불안합니다", -4))
+        score -= 3
+        negative_factors.append(factor_text("VIX가 낮지 않아 투자 심리가 불안합니다", -3))
     valid_count += 1
     hyg_dma50 = hyg["Close"].rolling(50).mean()
     if hyg["Close"].iloc[-1] > hyg_dma50.iloc[-1]:
         score += 5
         positive_factors.append(factor_text("HYG가 50일선 위에 있습니다", 5))
     else:
-        score -= 5
-        negative_factors.append(factor_text("HYG가 50일선 아래라 위험자산 분위기가 약합니다", -5))
+        score -= 3
+        negative_factors.append(factor_text("HYG가 50일선 아래라 위험자산 분위기가 약합니다", -3))
     valid_count += 1
     dxy_z = zscore(dxy["Close"], 20)
     if dxy_z <= 1.0:
         score += 5
         positive_factors.append(factor_text("달러 강세가 아직 심하지 않습니다", 5))
     else:
-        score -= 4
-        negative_factors.append(factor_text("달러가 강해 위험자산에는 부담입니다", -4))
+        score -= 2
+        negative_factors.append(factor_text("달러가 강해 위험자산에는 부담입니다", -2))
     valid_count += 1
     tnx_z = zscore(tnx_close, 20)
     if tnx_z <= 0.8:
         score += 4
         positive_factors.append(factor_text("10년물 금리 부담이 아직 심하지 않습니다", 4))
     else:
-        score -= 4
-        negative_factors.append(factor_text("10년물 금리가 높아 성장주에 부담입니다", -4))
+        score -= 2
+        negative_factors.append(factor_text("10년물 금리가 높아 성장주에 부담입니다", -2))
     valid_count += 1
 
     spy_vol_ratio = volume_ratio(spy_proxy_volume, 20)
@@ -737,14 +737,14 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
         negative_factors.append(factor_text(f"{', '.join(event_names)} 이벤트가 가까워 보수적으로 봐야 합니다", -3))
 
     if spx_close.iloc[-1] <= spx_dma50.iloc[-1]:
-        score -= 6
-        negative_factors.append(factor_text("S&P500이 50일선 아래라 중간 흐름도 약합니다", -6))
+        score -= 3
+        negative_factors.append(factor_text("S&P500이 50일선 아래라 중간 흐름도 약합니다", -3))
     if ndx_close.iloc[-1] <= ndx_dma50.iloc[-1]:
-        score -= 6
-        negative_factors.append(factor_text("나스닥이 50일선 아래라 중간 흐름도 약합니다", -6))
+        score -= 3
+        negative_factors.append(factor_text("나스닥이 50일선 아래라 중간 흐름도 약합니다", -3))
     if spx_close.iloc[-1] <= spx_dma50.iloc[-1] and ndx_close.iloc[-1] <= ndx_dma50.iloc[-1]:
-        score -= 6
-        negative_factors.append(factor_text("S&P500과 나스닥이 함께 50일선 아래라 회복 확인이 더 필요합니다", -6))
+        score -= 2
+        negative_factors.append(factor_text("S&P500과 나스닥이 함께 50일선 아래라 회복 확인이 더 필요합니다", -2))
     if spx_close.iloc[-1] <= spx_dma200.iloc[-1] and ndx_close.iloc[-1] <= ndx_dma200.iloc[-1]:
         invalidation = "현재 S&P500과 나스닥이 모두 200일선 아래에 있습니다. 반등이 나오더라도 둘 다 200일선을 회복하지 못하고 오르는 종목 수까지 약하면 방어적으로 보는 편이 좋습니다."
     elif spx_close.iloc[-1] <= spx_dma200.iloc[-1] or ndx_close.iloc[-1] <= ndx_dma200.iloc[-1]:
@@ -761,14 +761,12 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
         negative_factors.append(factor_text("지수는 반등해도 오르는 종목 수는 따라오지 못했습니다", -12))
     rsp_spx_ratio = (rsp["Close"] / spx_close).dropna()
     if (spx_close.iloc[-1] > spx_dma50.iloc[-1] or ndx_close.iloc[-1] > ndx_dma50.iloc[-1]) and len(rsp_spx_ratio) >= 20 and rsp_spx_ratio.iloc[-1] < rsp_spx_ratio.iloc[-20]:
-        score -= 8
-        negative_factors.append(factor_text("대형주 몇 종목만 버티고 있고 시장 전체 힘은 약합니다", -8))
+        negative_factors.append(factor_text("대형주 몇 종목만 버티고 있고 시장 전체 힘은 약합니다", 0))
     if vix_pct > 85:
         negative_factors.append(factor_text("VIX가 매우 높아 점수 상한이 걸렸습니다", "상한 50"))
         score = min(score, 50)
     if dxy_z > 1.0 and tnx_z > 0.8:
-        score -= 5
-        negative_factors.append(factor_text("달러와 금리가 함께 높아 성장주와 위험자산에 부담입니다", -5))
+        negative_factors.append(factor_text("달러와 금리가 함께 높아 성장주와 위험자산에 부담입니다", 0))
 
     if breadth["pct_above_20dma"] <= 55 and breadth["pct_above_20dma"] >= 45:
         negative_factors.append(factor_text("20일선 위 종목 비율이 낮아 오르는 종목 수가 적습니다", 0))
@@ -817,6 +815,12 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
     valid_count = sum(available_checks)
 
     score = int(max(0, min(100, round(score))))
+    if (
+        score < 15
+        and spx_dma50.iloc[-1] > spx_dma200.iloc[-1]
+        and ndx_dma50.iloc[-1] > ndx_dma200.iloc[-1]
+    ):
+        score = 15
     lvl = market_level(score)
     confidence = confidence_from_coverage(total_count, valid_count)
     top_reasons = pick_market_reasons(lvl, positive_factors, negative_factors)
