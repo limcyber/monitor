@@ -319,16 +319,19 @@ function renderMiniSparkline(series, color) {
   return `<svg class="sparkline" viewBox="0 0 ${width} ${height}" preserveAspectRatio="none"><polyline fill="none" stroke="${color}" stroke-width="1.6" points="${points}"></polyline></svg>`;
 }
 
-function axisSummary(series) {
+function axisSummary(series, dates) {
   const values = (series || []).filter((value) => typeof value === "number" && !Number.isNaN(value));
   if (!values.length) {
-    return { yMax: "-", yMin: "-", xStart: "-", xEnd: "-" };
+    return { yMax: "-", yMin: "-", xStart: "-", xEnd: "-", xStartDate: "-", xEndDate: "-" };
   }
+  const dateSeries = (dates || []).filter(Boolean);
   return {
     yMax: formatAxisValue(Math.max(...values)),
     yMin: formatAxisValue(Math.min(...values)),
     xStart: formatAxisValue(values[0]),
     xEnd: formatAxisValue(values[values.length - 1]),
+    xStartDate: formatChartLabel(dateSeries[0] || ""),
+    xEndDate: formatChartLabel(dateSeries[dateSeries.length - 1] || ""),
   };
 }
 
@@ -358,7 +361,7 @@ function renderStressColumn(targetId, rows) {
         .map(
           (row) => `
           ${(() => {
-            const axis = axisSummary(row.series);
+            const axis = axisSummary(row.series, row.dates);
             return `
           <article class="stress-cell">
             <div class="stress-main">
@@ -373,8 +376,8 @@ function renderStressColumn(targetId, rows) {
             </div>
             <div class="stress-spark">${renderMiniSparkline(row.series, row.color)}</div>
             <div class="stress-axis-row stress-axis-row-bottom">
-              <span class="stress-axis-chip">x축 시작 ${axis.xStart}</span>
-              <span class="stress-axis-chip">x축 현재 ${axis.xEnd}</span>
+              <span class="stress-axis-chip">x축 시작 ${axis.xStart} (${axis.xStartDate})</span>
+              <span class="stress-axis-chip">x축 현재 ${axis.xEnd} (${axis.xEndDate})</span>
             </div>
           </article>
         `;})()}
@@ -394,6 +397,7 @@ function renderStressTable(charts) {
       note: "대형 대표주 체감",
       color: "#2563eb",
       series: charts?.kospi200_close,
+      dates: charts?.dates,
     },
     {
       label: "USD/KRW",
@@ -402,6 +406,7 @@ function renderStressTable(charts) {
       note: "원달러 부담",
       color: "#ef4444",
       series: charts?.usdkrw_close,
+      dates: charts?.dates,
     },
     {
       label: "VIX",
@@ -410,6 +415,7 @@ function renderStressTable(charts) {
       note: "해외 변동성",
       color: "#6b7280",
       series: charts?.vix_close,
+      dates: charts?.dates,
     },
     {
       label: "Brent",
@@ -418,6 +424,7 @@ function renderStressTable(charts) {
       note: "국제유가",
       color: "#fb923c",
       series: charts?.brent_close,
+      dates: charts?.dates,
     },
     {
       label: "KOSDAQ/KOSPI",
@@ -426,6 +433,7 @@ function renderStressTable(charts) {
       note: "중소형 참여도",
       color: "#f59e0b",
       series: charts?.kosdaq_kospi_ratio,
+      dates: charts?.dates,
     },
   ];
   renderStressColumn("krStressPrimary", rows.slice(0, 2));
