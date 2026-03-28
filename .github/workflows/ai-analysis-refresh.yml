@@ -23,7 +23,6 @@ jobs:
     outputs:
       should_run: ${{ steps.market_window.outputs.should_run }}
       has_api_key: ${{ steps.check_key.outputs.has_api_key }}
-      data_changed: ${{ steps.detect_changes.outputs.data_changed }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -89,27 +88,19 @@ jobs:
           echo "AI refresh running: generating market AI and watchlist AI files."
           python scripts/generate_report.py
 
-      - name: Detect AI file changes
-        id: detect_changes
-        if: (github.event_name != 'schedule' || steps.market_window.outputs.should_run == 'true') && steps.check_key.outputs.has_api_key == 'true'
-        run: |
-          git add docs/data/latest_ai.json docs/data/latest_watchlist_ai.json
-          if git diff --cached --quiet; then
-            echo "data_changed=false" >> "$GITHUB_OUTPUT"
-            echo "AI refresh result: no file changes."
-          else
-            echo "data_changed=true" >> "$GITHUB_OUTPUT"
-            echo "AI refresh result: AI files changed."
-          fi
-
       - name: Commit AI analysis data
-        if: steps.detect_changes.outputs.data_changed == 'true'
+        if: (github.event_name != 'schedule' || steps.market_window.outputs.should_run == 'true') && steps.check_key.outputs.has_api_key == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore: refresh ai analysis"
-          git push
-          echo "AI refresh result: committed and pushed."
+          git add docs/data/latest_ai.json docs/data/latest_watchlist_ai.json
+          if git diff --cached --quiet; then
+            echo "AI refresh result: no file changes."
+          else
+            git commit -m "chore: refresh ai analysis"
+            git push
+            echo "AI refresh result: committed and pushed."
+          fi
 
       - name: Upload artifact
         if: (github.event_name != 'schedule' || steps.market_window.outputs.should_run == 'true') && steps.check_key.outputs.has_api_key == 'true'
