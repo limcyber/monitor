@@ -1,0 +1,64 @@
+name: Market AI Refresh
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/5 * * * *"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate AI analysis files
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          RUN_AI_ANALYSIS: "true"
+          AI_ONLY_MODE: "true"
+        run: |
+          echo "AI refresh running: generating market AI and watchlist AI files."
+          python scripts/generate_report.py
+
+      - name: Commit AI analysis data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/latest_ai.json docs/data/latest_watchlist_ai.json
+          if git diff --cached --quiet; then
+            echo "AI refresh result: no file changes."
+          else
+            git commit -m "chore: refresh ai analysis"
+            git push
+            echo "AI refresh result: committed and pushed."
+          fi
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: refresh
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
