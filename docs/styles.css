@@ -1480,6 +1480,13 @@ body[data-theme="bw"] .chart-legend {
     letter-spacing: 0.02em;
   }
 
+  #watchlistTable td:nth-child(-n + 5)::before {
+    display: inline-block;
+    margin-right: 4px;
+    margin-bottom: 0;
+    vertical-align: baseline;
+  }
+
   #watchlistTable td:nth-child(-n + 5) {
     white-space: nowrap;
     overflow: hidden;
