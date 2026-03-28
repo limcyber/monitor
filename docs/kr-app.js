@@ -405,8 +405,10 @@ function renderStressColumn(targetId, rows) {
           <article class="stress-cell">
             <div class="stress-main">
               <strong class="stress-label">${row.label}</strong>
-              <span class="stress-value">${row.value == null ? "-" : formatAxisValue(row.value)}</span>
-              <span class="stress-change ${quoteTone(row.change, row.label === "USD/KRW" || row.label === "VIX" || row.label === "Brent")}">${formatPercent(row.change)}</span>
+              <span class="stress-quote ${quoteTone(row.change, row.label === "USD/KRW" || row.label === "VIX" || row.label === "Brent")}">
+                <span class="stress-value">${row.value == null ? "-" : formatAxisValue(row.value)}</span>
+                ${row.change == null ? "" : `<span class="stress-change">(${formatPercent(row.change)})</span>`}
+              </span>
             </div>
             <div class="stress-chart-wrap">
               <canvas id="stress-chart-${row.label.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}" class="stress-chart-canvas"></canvas>

@@ -1130,20 +1130,31 @@ body[data-theme="bw"] .stock-chart {
 }
 
 .stress-main {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 1px 6px;
-  align-items: start;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
 }
 
 .stress-label {
+  flex: 0 1 auto;
   font-size: 11px;
   line-height: 1.1;
   color: #12203d;
 }
 
+.stress-quote {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 4px;
+  margin-left: auto;
+  min-width: 0;
+  white-space: nowrap;
+}
+
 .stress-value {
-  justify-self: end;
   font-size: 13px;
   font-weight: 700;
   color: #0f1726;
@@ -1151,8 +1162,6 @@ body[data-theme="bw"] .stock-chart {
 }
 
 .stress-change {
-  grid-column: 2;
-  justify-self: end;
   font-size: 10px;
   font-weight: 700;
 }
@@ -1211,6 +1220,10 @@ body[data-theme="bw"] .stress-cell {
 
 body[data-theme="bw"] .stress-label,
 body[data-theme="bw"] .stress-value {
+  color: #d9f7d2;
+}
+
+body[data-theme="bw"] .stress-change {
   color: #d9f7d2;
 }
 
@@ -1677,15 +1690,17 @@ body[data-theme="bw"] .chart-legend {
   }
 
   .stress-main {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 8px;
+    gap: 6px;
   }
 
   .stress-label {
     font-size: 11px;
     white-space: nowrap;
+  }
+
+  .stress-quote {
+    gap: 3px;
   }
 
   .stress-value {
@@ -1694,7 +1709,7 @@ body[data-theme="bw"] .chart-legend {
   }
 
   .stress-change {
-    grid-column: auto;
+    font-size: 9px;
   }
 
   .stress-mini-row {
