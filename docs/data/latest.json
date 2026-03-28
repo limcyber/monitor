@@ -96,7 +96,7 @@
     "confidence_warnings": [],
     "ai_analysis": {
       "status": "error",
-      "model": "gemini-2.5-pro",
+      "model": "gemini-2.5-flash",
       "content": "AI \ubd84\uc11d\uc744 \ubd88\ub7ec\uc624\uc9c0 \ubabb\ud588\uc2b5\ub2c8\ub2e4. \uc7a0\uc2dc \ub4a4 \ub2e4\uc2dc \ud655\uc778\ud574 \uc8fc\uc138\uc694."
     },
     "history_tags": [

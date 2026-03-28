@@ -24,7 +24,7 @@ OUTPUT_PATH = DOCS_DATA_DIR / "latest.json"
 HISTORY_PATH = DOCS_DATA_DIR / "history.json"
 ET = ZoneInfo("America/New_York")
 MARKET_LEVELS_TOTAL = 6
-GEMINI_MODEL = "gemini-2.5-pro"
+GEMINI_MODEL = "gemini-2.5-flash"
 
 
 @dataclass
