@@ -279,11 +279,11 @@ function seriesPalette() {
     };
   }
   return {
-    primary: "#203757",
-    secondary: "#0f7b6c",
-    warning: "#b47f00",
-    danger: "#b94343",
-    neutral: "#526171",
+    primary: "#2563eb",
+    secondary: "#0f766e",
+    warning: "#d97706",
+    danger: "#dc2626",
+    neutral: "#6b7280",
   };
 }
 
@@ -298,10 +298,10 @@ function stockSeriesPalette() {
     };
   }
   return {
-    close: "#203757",
-    dma5: "#dc2626",
-    dma20: "#2563eb",
-    dma50: "#b47f00",
+    close: "#2563eb",
+    dma5: "#ef4444",
+    dma20: "#0f766e",
+    dma50: "#f59e0b",
     volume: "#f97316",
   };
 }
@@ -490,11 +490,11 @@ function destroyCharts() {
 function renderMarketCharts(charts) {
   destroyCharts();
   const palette = {
-    primary: "#d7263d",
-    secondary: "#f4d35e",
-    warning: "#ee964b",
-    danger: "#f95738",
-    neutral: "#8d99ae",
+    primary: "#2563eb",
+    secondary: "#0f766e",
+    warning: "#f59e0b",
+    danger: "#ef4444",
+    neutral: "#6b7280",
   };
   const labels = charts.dates;
   appState.charts.push(
