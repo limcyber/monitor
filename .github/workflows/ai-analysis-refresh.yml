@@ -3,7 +3,7 @@ name: AI Market Analysis Refresh
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/2 * * * *"
+    - cron: "*/5 * * * *"
 
 permissions:
   contents: write
