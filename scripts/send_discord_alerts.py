@@ -59,6 +59,10 @@ def summary_heading() -> str:
     return os.environ.get("DISCORD_SUMMARY_TITLE", "시장 상태 요약").strip() or "시장 상태 요약"
 
 
+def alert_heading() -> str:
+    return os.environ.get("DISCORD_ALERT_TITLE", "시장 모니터 알림").strip() or "시장 모니터 알림"
+
+
 def main() -> None:
     webhook_url = os.environ.get("DISCORD_WEBHOOK_URL", "").strip()
     if not webhook_url:
@@ -88,7 +92,7 @@ def main() -> None:
 
     market = payload.get("market", {})
     lines = [
-        "시장 모니터 알림",
+        alert_heading(),
         f"생성 시각: {payload.get('generated_at_et', '-')}",
         f"데이터 기준: {payload.get('market_data_as_of', '-')}",
         f"시장 상태: {market.get('state', '-')} / {market.get('score', '-')}/100 / {market.get('action', '-')}",

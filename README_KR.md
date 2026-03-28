@@ -155,6 +155,20 @@
 - `08:30 KST`
 - `16:00 KST`
 - `docs/data/latest_kr.json` 기준으로 전송
+
+#### [daily-monitor-korea.yml](./.github/workflows/daily-monitor-korea.yml)
+한국장 중요 알림을 Discord로 보내는 워크플로입니다.
+
+- 한국장 시간대에 5분 간격으로 확인
+- 핵심 변화가 있을 때만 전송
+- `DISCORD_KR_WEBHOOK_URL` 사용
+
+중요 알림 예시:
+- 한국 시장 레벨 하락 / 회복
+- KOSPI와 KOSDAQ이 동시에 200일선 아래로 내려갈 때
+- 고스트레스 구간 진입
+- 강한 종목이 약해질 때
+- 새 골든크로스 / 데드크로스
 - GitHub Secret: `DISCORD_KR_WEBHOOK_URL`
 
 전송 내용:
