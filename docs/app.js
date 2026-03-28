@@ -259,6 +259,22 @@ function formatChartLabel(label) {
   return label;
 }
 
+function formatAxisValue(value) {
+  const num = typeof value === "number" ? value : Number(value);
+  if (Number.isNaN(num)) return value;
+  const abs = Math.abs(num);
+  if (abs >= 1_000_000) {
+    return `${(num / 1_000_000).toFixed(1)}M`;
+  }
+  if (abs >= 1_000) {
+    return `${(num / 1_000).toFixed(1)}K`;
+  }
+  if (abs >= 100) {
+    return `${Math.round(num)}`;
+  }
+  return `${num.toFixed(1)}`;
+}
+
 function lineChart(ctx, labels, datasets) {
   if (!window.Chart || !ctx) return null;
   const theme = chartTheme();
@@ -281,6 +297,9 @@ function lineChart(ctx, labels, datasets) {
     options: {
       responsive: true,
       maintainAspectRatio: true,
+      layout: {
+        padding: { left: 8, right: 8, top: 4, bottom: 0 },
+      },
       scales: {
         x: {
           display: true,
@@ -303,7 +322,13 @@ function lineChart(ctx, labels, datasets) {
         },
         y: {
           grid: { color: theme.grid },
-          ticks: { color: theme.ticks },
+          ticks: {
+            color: theme.ticks,
+            maxTicksLimit: 6,
+            callback(value) {
+              return formatAxisValue(value);
+            },
+          },
         },
       },
       elements: { line: { borderWidth: 1.8 }, point: { radius: 0 } },
