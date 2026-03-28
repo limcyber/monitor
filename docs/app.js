@@ -535,21 +535,32 @@ function renderMarketCharts(charts) {
   ]);
   appState.charts.push(
     lineChart(
-      document.getElementById("stressChart"),
+      document.getElementById("stressChart1"),
       labels,
       [
-      { label: "VIX", data: charts.vix_close, borderColor: palette.danger },
-      { label: "HYG", data: charts.hyg_close, borderColor: palette.secondary },
-      { label: "10Y", data: charts.tnx_close, borderColor: palette.neutral },
-      { label: "달러지수", data: charts.dxy_close, borderColor: palette.warning },
+        { label: "VIX", data: charts.vix_close, borderColor: palette.danger },
+        { label: "10Y", data: charts.tnx_close, borderColor: palette.neutral },
       ],
       { showLegend: false }
     )
   );
-  renderChartLegend("stressLegend", [
+  renderChartLegend("stressLegend1", [
     { label: "VIX", color: palette.danger },
-    { label: "HYG", color: palette.secondary },
     { label: "10Y", color: palette.neutral },
+  ]);
+  appState.charts.push(
+    lineChart(
+      document.getElementById("stressChart2"),
+      labels,
+      [
+        { label: "HYG", data: charts.hyg_close, borderColor: palette.secondary },
+        { label: "달러지수", data: charts.dxy_close, borderColor: palette.warning },
+      ],
+      { showLegend: false }
+    )
+  );
+  renderChartLegend("stressLegend2", [
+    { label: "HYG", color: palette.secondary },
     { label: "달러지수", color: palette.warning },
   ]);
 }
