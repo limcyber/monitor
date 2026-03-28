@@ -76,6 +76,10 @@ function escapeHtml(value) {
     .replaceAll("'", "&#39;");
 }
 
+function cleanAiText(value) {
+  return String(value || "").replaceAll("**", "").trim();
+}
+
 function tagTone(text) {
   const value = String(text || "");
   if (value.includes("경고") || value.includes("주의") || value.includes("데드") || value.includes("약함") || value.includes("자제") || value.includes("보수") || value.includes("고스트레스") || value.includes("실적")) {
@@ -237,7 +241,7 @@ function renderMarket(data) {
   renderTagList(document.getElementById("marketHistoryTags"), data.market.history_tags, "히스토리 없음");
   renderList(document.getElementById("marketCrossHighlights"), data.market.cross_highlights, "최근 눈에 띄는 골든크로스나 데드크로스는 없습니다.");
   setText("marketInvalidation", data.market.invalidation);
-  setText("marketAiText", data.market.ai_analysis?.content || "AI 분석이 아직 없습니다.");
+  setText("marketAiText", cleanAiText(data.market.ai_analysis?.content || "AI 분석이 아직 없습니다."));
   const aiStatusEl = document.getElementById("marketAiStatus");
   if (aiStatusEl) {
     const status = data.market.ai_analysis?.status || "disabled";
