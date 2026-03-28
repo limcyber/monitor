@@ -1,5 +1,5 @@
 {
-  "generated_at_et": "2026-03-28 17:07 ET",
+  "generated_at_et": "2026-03-28 17:23 ET",
   "market_data_as_of": "2026-03-27 16:00 ET (Close)",
   "market": {
     "state": "\ub808\ubca8 1/6 - \ubc29\uc5b4 \uc6b0\uc120",
@@ -95,9 +95,9 @@
     ],
     "confidence_warnings": [],
     "ai_analysis": {
-      "status": "disabled",
+      "status": "error",
       "model": "gemini-2.5-pro",
-      "content": "GOOGLE_API_KEY\uac00 \uc5c6\uc5b4 AI \ubd84\uc11d\uc744 \uac74\ub108\ub6f0\uc5c8\uc2b5\ub2c8\ub2e4."
+      "content": "AI \ubd84\uc11d\uc744 \ubd88\ub7ec\uc624\uc9c0 \ubabb\ud588\uc2b5\ub2c8\ub2e4. \uc7a0\uc2dc \ub4a4 \ub2e4\uc2dc \ud655\uc778\ud574 \uc8fc\uc138\uc694."
     },
     "history_tags": [
       "30\uc77c \ucd5c\uace0 15"
