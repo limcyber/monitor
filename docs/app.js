@@ -694,15 +694,15 @@ function renderMarketCharts(charts) {
       document.getElementById("breadthChart"),
       labels,
       [
-      { label: "20일선 위 종목 비율", data: charts.breadth_20, borderColor: palette.secondary },
-      { label: "50일선 위 종목 비율", data: charts.breadth_50, borderColor: palette.primary },
+      { label: "20일선 위 종목 비율", data: charts.breadth_20, borderColor: "#7c3aed" },
+      { label: "50일선 위 종목 비율", data: charts.breadth_50, borderColor: "#f97316" },
       ],
       { showLegend: false }
     )
   );
   renderChartLegend("breadthLegend", [
-    { label: "20일선 위 종목 비율", color: palette.secondary },
-    { label: "50일선 위 종목 비율", color: palette.primary },
+    { label: "20일선 위 종목 비율", color: "#7c3aed" },
+    { label: "50일선 위 종목 비율", color: "#f97316" },
   ]);
 }
 
