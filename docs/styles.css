@@ -951,6 +951,15 @@ tbody tr:nth-child(even) {
   background: #f8fbfd;
 }
 
+.watchlist-ai-row td {
+  background: #fdfaf0;
+  font-size: 11px;
+}
+
+.watchlist-ai-row td:first-child strong {
+  color: #7a5a00;
+}
+
 body[data-theme="bw"] thead th {
   background: linear-gradient(180deg, #101710 0%, #090b0c 100%);
   color: #c9f1c1;
@@ -958,6 +967,14 @@ body[data-theme="bw"] thead th {
 
 body[data-theme="bw"] tbody tr:nth-child(even) {
   background: #0f1210;
+}
+
+body[data-theme="bw"] .watchlist-ai-row td {
+  background: #14120b;
+}
+
+body[data-theme="bw"] .watchlist-ai-row td:first-child strong {
+  color: #f1d37a;
 }
 
 body[data-theme="bw"] tbody tr {

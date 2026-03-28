@@ -533,6 +533,18 @@ function renderTable(rows) {
       <td data-label="메모">${escapeHtml(row.note)}</td>
     `;
     body.appendChild(tr);
+
+    const aiTr = document.createElement("tr");
+    aiTr.className = "watchlist-ai-row";
+    aiTr.innerHTML = `
+      <td data-label="종목"><strong>AI 분석(${escapeHtml(row.name || row.ticker)})</strong></td>
+      <td data-label="현재가"></td>
+      <td data-label="점수"><span class="pill warning">예시 58/100</span></td>
+      <td data-label="상태"><span class="pill warning">보통</span></td>
+      <td data-label="추천 행동"><span class="pill warning">관찰 / 대기</span></td>
+      <td data-label="메모">AI 판단 예시: 흐름이 완전히 꺾인 건 아니지만, 지금은 차분히 확인하는 편이 좋습니다.</td>
+    `;
+    body.appendChild(aiTr);
   });
 }
 
