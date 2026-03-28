@@ -129,7 +129,15 @@ function renderAiAnalysis(el, value) {
       const bulletLines = items.filter((item) => /^[-*•]\s+/.test(item));
       const proseLines = items.filter((item) => !/^[-*•]\s+/.test(item));
       const proseHtml = proseLines.length
-        ? `<p>${proseLines.map((item) => escapeHtml(item)).join("<br>")}</p>`
+        ? `<p>${proseLines
+            .map((item) => {
+              const scoreMatch = item.match(/AI 점수:\s*(\d{1,3})\/100/);
+              if (scoreMatch) {
+                return `<span class="ai-analysis-meta ${scoreTone(Number(scoreMatch[1]))}">${escapeHtml(item)}</span>`;
+              }
+              return escapeHtml(item);
+            })
+            .join("<br>")}</p>`
         : "";
       const bulletsHtml = bulletLines.length
         ? `<ul>${bulletLines

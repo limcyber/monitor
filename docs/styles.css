@@ -702,6 +702,29 @@ body[data-theme="bw"] .mini-tag.danger {
   margin: 0;
 }
 
+.ai-analysis-meta {
+  display: inline-block;
+  margin-top: 2px;
+  padding: 4px 7px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.ai-analysis-meta.success {
+  background: var(--green-soft);
+  color: var(--green);
+}
+
+.ai-analysis-meta.warning {
+  background: var(--yellow-soft);
+  color: var(--yellow);
+}
+
+.ai-analysis-meta.danger {
+  background: var(--red-soft);
+  color: var(--red);
+}
+
 .ai-analysis-copy ul {
   margin: 6px 0 0 16px;
   padding: 0;
@@ -1316,6 +1339,21 @@ body[data-theme="bw"] .ai-analysis-label {
 
 body[data-theme="bw"] .ai-analysis-copy {
   color: #d7e7cc;
+}
+
+body[data-theme="bw"] .ai-analysis-meta.success {
+  background: rgba(95, 196, 126, 0.16);
+  color: #96f2b2;
+}
+
+body[data-theme="bw"] .ai-analysis-meta.warning {
+  background: rgba(228, 188, 82, 0.16);
+  color: #ffd676;
+}
+
+body[data-theme="bw"] .ai-analysis-meta.danger {
+  background: rgba(214, 96, 96, 0.16);
+  color: #ff9d9d;
 }
 
 body[data-theme="bw"] .ai-analysis-head h3 {
