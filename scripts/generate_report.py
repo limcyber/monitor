@@ -535,7 +535,7 @@ def prioritize_stock_factors(positive_factors: list[str], negative_factors: list
     ]
     negative_priority = [
         "실적 발표가 가까워 보수적으로 봐야 합니다",
-        "실적 일정 확인이 안 돼서 조심해서 봐야 합니다",
+        "실적 일정이 확인되지 않아 조금 더 조심해서 봐야 합니다",
         "최근 20일선이 50일선을 하향 이탈했습니다",
         "최근 5일선이 20일선을 하향 이탈했습니다",
         "종가가 50일선 아래에 있습니다",
@@ -904,7 +904,7 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
     if spx_close.iloc[-1] <= spx_dma200.iloc[-1] and ndx_close.iloc[-1] <= ndx_dma200.iloc[-1]:
         invalidation = "현재 S&P500과 나스닥이 모두 200일선 아래에 있습니다. 반등이 나오더라도 둘 다 200일선을 회복하지 못하고 오르는 종목 수까지 약하면 방어적으로 보는 편이 좋습니다."
     elif spx_close.iloc[-1] <= spx_dma200.iloc[-1] or ndx_close.iloc[-1] <= ndx_dma200.iloc[-1]:
-        invalidation = "S&P500 또는 나스닥 중 하나가 아직 200일선 아래에 있습니다. 둘 중 약한 쪽이 계속 밀리면 적극적으로 보기 어렵습니다."
+        invalidation = "S&P500 또는 나스닥 중 하나가 아직 200일선 아래에 있습니다. 둘 중 약한 쪽이 계속 밀리면 강하게 보기 어렵습니다."
     elif spx_close.iloc[-1] <= spx_dma50.iloc[-1] or ndx_close.iloc[-1] <= ndx_dma50.iloc[-1]:
         invalidation = "S&P500과 나스닥이 200일선 위에 있더라도 둘 중 하나가 50일선을 지키지 못하고 오르는 종목 수도 줄면 경계가 필요합니다."
     else:
@@ -982,7 +982,7 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
     confidence = confidence_from_coverage(total_count, valid_count)
     top_reasons = pick_market_reasons(lvl, positive_factors, negative_factors)
     easy = (
-        "시장 분위기가 아주 나쁘진 않아 강한 종목은 선별해서 볼 수 있습니다."
+        "시장 분위기가 완전히 나쁜 건 아니라서 강한 종목은 선별해서 볼 수 있습니다."
         if lvl >= 5
         else "시장 분위기가 좋지 않아서 서두르기보다 방어적으로 보는 편이 좋습니다."
     )
@@ -1144,7 +1144,7 @@ def score_stock(
         event_flag = "실적 미반영"
     else:
         score -= 4
-        negative_factors.append(factor_text("실적 일정 확인이 안 돼서 조심해서 봐야 합니다", -4))
+        negative_factors.append(factor_text("실적 일정이 확인되지 않아 조금 더 조심해서 봐야 합니다", -4))
         event_flag = "실적 일정 확인 필요"
 
     rs_10d_weaker = bool(len(rs) >= 10 and rs.iloc[-1] < rs.iloc[-10])
@@ -1187,7 +1187,7 @@ def score_stock(
             action = "관찰"
 
     easy = (
-        "이 종목은 관심종목 안에서 흐름이 나쁘지 않습니다. 다만 한 번에 크게 들어가기보다 차분히 접근하는 편이 좋습니다."
+        "이 종목은 관심종목 안에서 흐름이 나쁘지 않습니다. 다만 한 번에 크게 들어가기보다 나눠서 보는 편이 좋습니다."
         if s_state in {"강함", "양호"}
         else "지금은 확실히 강하다고 보기 어렵습니다. 서두르기보다 조금 더 지켜보는 편이 좋습니다."
     )
@@ -1679,7 +1679,7 @@ def build_notifications(as_of: date, previous_output: dict, market_output: dict,
                     "low",
                     "market_golden_cross",
                     title,
-                    f"{cross} 다만 시장 점수 확인 후 선별 접근이 좋습니다.",
+                    f"{cross} 다만 시장 상태를 함께 보고 선별해서 보는 편이 좋습니다.",
                 )
             )
 
@@ -1849,7 +1849,7 @@ def build_notifications(as_of: date, previous_output: dict, market_output: dict,
                         "low",
                         "stock_golden_cross",
                         f"{ticker} 골든크로스",
-                        f"{cross} 다만 시장 점수 확인 후 선별 접근이 좋습니다.",
+                        f"{cross} 다만 시장 상태를 함께 보고 선별해서 보는 편이 좋습니다.",
                         scope="stock",
                         ticker=ticker,
                     )
