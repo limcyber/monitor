@@ -109,6 +109,13 @@ def build_market_ai_payload(output: dict) -> dict:
     }
 
 
+def summarize_ai_error(exc: Exception) -> str:
+    message = str(exc).strip().replace("\n", " ")
+    if not message:
+        message = exc.__class__.__name__
+    return message[:220]
+
+
 def generate_market_ai_analysis(output: dict) -> dict:
     api_key = os.environ.get("GOOGLE_API_KEY") or os.environ.get("GEMINI_API_KEY")
     if not api_key:
@@ -174,17 +181,17 @@ AI 판단: ...
                 "model": GEMINI_MODEL,
                 "content": text,
             }
-        except Exception:
+        except Exception as exc:
             return {
                 "status": "error",
                 "model": GEMINI_MODEL,
-                "content": "AI 분석을 불러오지 못했습니다. 잠시 뒤 다시 확인해 주세요.",
+                "content": f"AI 분석 실패: {summarize_ai_error(exc)}",
             }
-    except Exception:
+    except Exception as exc:
         return {
             "status": "error",
             "model": GEMINI_MODEL,
-            "content": "AI 분석을 불러오지 못했습니다. 잠시 뒤 다시 확인해 주세요.",
+            "content": f"AI 분석 실패: {summarize_ai_error(exc)}",
         }
 
 
