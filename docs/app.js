@@ -567,7 +567,7 @@ function renderStocks(stocks) {
       <p style="margin:6px 0;color:${scoreColor(s.stock_score)};"><strong>점수:</strong> ${formatScore(s.stock_score)} | <strong>추천 행동:</strong> ${s.final_action}</p>
       <div class="mini-meta">
         <span>일정: ${s.event_flag}</span>
-        <span>종가: ${formatClose(s.metrics.close, s.metrics.close_change_pct)}</span>
+        <span>현재가: ${formatClose(s.metrics.close, s.metrics.close_change_pct)}</span>
       </div>
       <div class="cross-highlight-block stock-cross-highlight">
         <h4>크로스 신호</h4>

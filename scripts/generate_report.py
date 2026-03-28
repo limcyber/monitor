@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 import math
 from dataclasses import dataclass
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, time, timedelta
 from io import StringIO
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -124,6 +124,78 @@ def download_ohlcv(ticker: str, period: str = "1y") -> pd.DataFrame:
         df.columns = [col[0] for col in df.columns]
     df = df.dropna(subset=["Close"])
     return df
+
+
+def is_intraday_session(now_et: datetime) -> bool:
+    return now_et.weekday() < 5 and time(8, 30) <= now_et.time() <= time(16, 0)
+
+
+def download_intraday_ohlcv(ticker: str, period: str = "5d") -> pd.DataFrame:
+    df = yf.download(
+        ticker,
+        period=period,
+        interval="5m",
+        progress=False,
+        auto_adjust=False,
+        prepost=True,
+        threads=False,
+    )
+    if isinstance(df.columns, pd.MultiIndex):
+        df.columns = [col[0] for col in df.columns]
+    if df.empty:
+        return df
+    if getattr(df.index, "tz", None) is None:
+        df.index = df.index.tz_localize("UTC").tz_convert(ET)
+    else:
+        df.index = df.index.tz_convert(ET)
+    df = df.dropna(subset=["Close"])
+    session_mask = (
+        (df.index.dayofweek < 5)
+        & (df.index.time >= time(8, 30))
+        & (df.index.time <= time(16, 0))
+    )
+    return df.loc[session_mask]
+
+
+def overlay_intraday_bar(daily_df: pd.DataFrame, intraday_df: pd.DataFrame) -> tuple[pd.DataFrame, datetime | None]:
+    if daily_df.empty or intraday_df.empty:
+        return daily_df, None
+
+    merged = daily_df.copy()
+    latest_ts = intraday_df.index[-1].to_pydatetime()
+    latest_bar = intraday_df.iloc[-1]
+    session_date = latest_ts.astimezone(ET).date()
+    target_index = pd.Timestamp(session_date)
+
+    row = {}
+    for col in merged.columns:
+        if col in latest_bar.index and pd.notna(latest_bar[col]):
+            row[col] = latest_bar[col]
+        elif col == "Adj Close" and "Close" in latest_bar.index and pd.notna(latest_bar["Close"]):
+            row[col] = latest_bar["Close"]
+        elif col == "Volume":
+            row[col] = float(latest_bar.get("Volume", 0) or 0)
+
+    if merged.index[-1].date() == session_date:
+        row_name = merged.index[-1]
+        for col, value in row.items():
+            merged.at[row_name, col] = value
+    else:
+        merged.loc[target_index] = {col: row.get(col, np.nan) for col in merged.columns}
+        merged = merged.sort_index()
+
+    return merged, latest_ts.astimezone(ET)
+
+
+def load_price_frame(ticker: str, now_et: datetime, period: str = "1y") -> tuple[pd.DataFrame, datetime | None]:
+    daily_df = download_ohlcv(ticker, period=period)
+    if not is_intraday_session(now_et):
+        return daily_df, None
+    try:
+        intraday_df = download_intraday_ohlcv(ticker)
+    except Exception:
+        return daily_df, None
+    return overlay_intraday_bar(daily_df, intraday_df)
 
 
 def download_sp500_prices(period: str = "1y") -> pd.DataFrame:
@@ -1220,28 +1292,62 @@ def main() -> None:
     if len(watchlist) != 8:
         raise ValueError("watchlist.yml must contain exactly 8 tickers.")
 
-    spx = download_ohlcv("^GSPC")
-    ndx = download_ohlcv("^IXIC")
-    rut = download_ohlcv("^RUT")
-    tnx = download_ohlcv("^TNX")
-    spy_proxy = download_ohlcv("SPY")
-    qqq_proxy = download_ohlcv("QQQ")
-    rsp = download_ohlcv("RSP")
-    hyg = download_ohlcv("HYG")
-    soxx = download_ohlcv("SOXX")
-    xlk = download_ohlcv("XLK")
-    xlf = download_ohlcv("XLF")
-    xly = download_ohlcv("XLY")
-    vix = download_ohlcv("^VIX")
+    latest_intraday_points: list[datetime] = []
+
+    spx, ts = load_price_frame("^GSPC", now_et)
+    if ts:
+        latest_intraday_points.append(ts)
+    ndx, ts = load_price_frame("^IXIC", now_et)
+    if ts:
+        latest_intraday_points.append(ts)
+    rut, ts = load_price_frame("^RUT", now_et)
+    if ts:
+        latest_intraday_points.append(ts)
+    tnx, ts = load_price_frame("^TNX", now_et)
+    if ts:
+        latest_intraday_points.append(ts)
+    spy_proxy, ts = load_price_frame("SPY", now_et)
+    if ts:
+        latest_intraday_points.append(ts)
+    qqq_proxy, ts = load_price_frame("QQQ", now_et)
+    if ts:
+        latest_intraday_points.append(ts)
+    rsp, ts = load_price_frame("RSP", now_et)
+    if ts:
+        latest_intraday_points.append(ts)
+    hyg, ts = load_price_frame("HYG", now_et)
+    if ts:
+        latest_intraday_points.append(ts)
+    soxx, ts = load_price_frame("SOXX", now_et)
+    if ts:
+        latest_intraday_points.append(ts)
+    xlk, ts = load_price_frame("XLK", now_et)
+    if ts:
+        latest_intraday_points.append(ts)
+    xlf, ts = load_price_frame("XLF", now_et)
+    if ts:
+        latest_intraday_points.append(ts)
+    xly, ts = load_price_frame("XLY", now_et)
+    if ts:
+        latest_intraday_points.append(ts)
+    vix, ts = load_price_frame("^VIX", now_et)
+    if ts:
+        latest_intraday_points.append(ts)
     dxy_source = "DX-Y.NYB"
     try:
-        dxy = download_ohlcv("DX-Y.NYB")
+        dxy, ts = load_price_frame("DX-Y.NYB", now_et)
+        if ts:
+            latest_intraday_points.append(ts)
         if dxy.empty:
             dxy_source = "UUP"
-            dxy = download_ohlcv("UUP")
+            dxy, ts = load_price_frame("UUP", now_et)
+            if ts:
+                latest_intraday_points.append(ts)
     except Exception:
         dxy_source = "UUP"
-        dxy = download_ohlcv("UUP")
+        dxy, ts = load_price_frame("UUP", now_et)
+        if ts:
+            latest_intraday_points.append(ts)
 
     sp500_close = download_sp500_prices()
     sp500_close = sp500_close.dropna(axis=1, how="all")
@@ -1279,7 +1385,9 @@ def main() -> None:
 
     stock_reports = []
     for ticker in watchlist:
-        sdf = download_ohlcv(ticker)
+        sdf, ts = load_price_frame(ticker, now_et)
+        if ts:
+            latest_intraday_points.append(ts)
         earnings_soon = get_earnings_within_7_days(ticker, as_of)
         stock_reports.append(score_stock(ticker, sdf, spx, lvl, earnings_soon))
 
@@ -1345,13 +1453,13 @@ def main() -> None:
     market_output["sector_tags"] = sector_tags({"SOXX": soxx, "XLK": xlk, "XLF": xlf, "XLY": xly})
     market_output["confidence_warnings"] = market_confidence_warnings(sp500_close.shape[1], dxy_source, stock_reports)
 
-    market_close_time = datetime.combine(spx.index[-1].date(), datetime.min.time(), tzinfo=ET).replace(hour=16, minute=0)
-    intraday_mode = now_et.date() == spx.index[-1].date() and now_et < market_close_time
+    latest_intraday_at = max(latest_intraday_points) if latest_intraday_points else None
+    intraday_mode = latest_intraday_at is not None and latest_intraday_at.date() == now_et.date()
 
     output = {
         "generated_at_et": now_et.strftime("%Y-%m-%d %H:%M ET"),
         "market_data_as_of": (
-            f"{now_et.strftime('%Y-%m-%d %H:%M ET')} (Intraday)"
+            f"{latest_intraday_at.strftime('%Y-%m-%d %H:%M ET')} (5분봉)"
             if intraday_mode
             else f"{spx.index[-1].strftime('%Y-%m-%d')} 16:00 ET (Close)"
         ),

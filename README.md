@@ -8,9 +8,9 @@ Live site: https://limcyber.github.io/monitor/
 
 - Scores the overall market (0-100) using trend, breadth, stress, and execution factors.
 - Applies market negative filters (breadth divergence, big-cap concentration, stress cap, event risk).
-- Scores 8 predefined watchlist stocks with the same daily timestamp.
+- Scores 8 predefined watchlist stocks with the same market snapshot.
 - Combines market state + stock state into final action guidance.
-- Publishes a daily dashboard to GitHub Pages.
+- Publishes an intraday-updating dashboard to GitHub Pages.
 
 ## Stack
 
@@ -61,5 +61,7 @@ The report JSON is generated at `docs/data/latest.json`.
 
 ## Notes
 
+- Core market prices and watchlist prices are refreshed from 5-minute intraday bars during market hours.
+- Broad market breadth calculations still use the latest completed daily dataset to keep the GitHub Actions workload realistic.
 - This is an analysis and monitoring tool, not financial advice.
 - Event dates are configured manually for transparency and control.
