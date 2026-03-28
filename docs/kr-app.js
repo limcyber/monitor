@@ -423,7 +423,6 @@ function renderMarket(data) {
   renderQuote("marketKospi200Quote", data.market.metrics.kospi200_close, data.market.metrics.kospi200_change_pct);
   renderQuote("marketSemiconQuote", data.market.metrics.semicon_close, data.market.metrics.semicon_change_pct);
   renderQuote("marketUsdkrwQuote", data.market.metrics.usdkrw_close, data.market.metrics.usdkrw_change_pct, true);
-  renderQuote("marketVixQuote", data.market.metrics.vix_close, data.market.metrics.vix_change_pct, true);
 
   renderList(document.getElementById("marketCrossHighlights"), data.market.cross_highlights, "최근 눈에 띄는 골든크로스나 데드크로스는 없습니다.");
   setText("marketEasy", data.market.easy_explanation);
