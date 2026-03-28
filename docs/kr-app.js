@@ -319,6 +319,19 @@ function renderMiniSparkline(series, color) {
   return `<svg class="sparkline" viewBox="0 0 ${width} ${height}" preserveAspectRatio="none"><polyline fill="none" stroke="${color}" stroke-width="1.6" points="${points}"></polyline></svg>`;
 }
 
+function axisSummary(series) {
+  const values = (series || []).filter((value) => typeof value === "number" && !Number.isNaN(value));
+  if (!values.length) {
+    return { yMax: "-", yMin: "-", xStart: "-", xEnd: "-" };
+  }
+  return {
+    yMax: formatAxisValue(Math.max(...values)),
+    yMin: formatAxisValue(Math.min(...values)),
+    xStart: formatAxisValue(values[0]),
+    xEnd: formatAxisValue(values[values.length - 1]),
+  };
+}
+
 function lastNumeric(series) {
   if (!series?.length) return null;
   for (let index = series.length - 1; index >= 0; index -= 1) {
@@ -344,6 +357,9 @@ function renderStressColumn(targetId, rows) {
       ${rows
         .map(
           (row) => `
+          ${(() => {
+            const axis = axisSummary(row.series);
+            return `
           <article class="stress-cell">
             <div class="stress-main">
               <strong class="stress-label">${row.label}</strong>
@@ -351,9 +367,17 @@ function renderStressColumn(targetId, rows) {
               <span class="stress-change ${quoteTone(row.change, row.label === "USD/KRW" || row.label === "VIX" || row.label === "Brent")}">${formatPercent(row.change)}</span>
             </div>
             <div class="stress-note">${row.note}</div>
+            <div class="stress-axis-row">
+              <span class="stress-axis-chip">y축 최고 ${axis.yMax}</span>
+              <span class="stress-axis-chip">y축 최저 ${axis.yMin}</span>
+            </div>
             <div class="stress-spark">${renderMiniSparkline(row.series, row.color)}</div>
-            <div class="stress-axis-note">x축: 최근 흐름 · y축: 지표값</div>
+            <div class="stress-axis-row stress-axis-row-bottom">
+              <span class="stress-axis-chip">x축 시작 ${axis.xStart}</span>
+              <span class="stress-axis-chip">x축 현재 ${axis.xEnd}</span>
+            </div>
           </article>
+        `;})()}
         `
         )
         .join("")}
