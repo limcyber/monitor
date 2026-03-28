@@ -361,7 +361,7 @@ function lineChart(ctx, labels, datasets, config = {}) {
       responsive: true,
       maintainAspectRatio: true,
       layout: {
-        padding: { left: 4, right: 4, top: 4, bottom: 0 },
+        padding: { left: 0, right: 0, top: 4, bottom: 0 },
       },
       scales: {
         x: {
@@ -447,7 +447,7 @@ function barChart(ctx, labels, datasets) {
       responsive: true,
       maintainAspectRatio: true,
       layout: {
-        padding: { left: 4, right: 4, top: 4, bottom: 0 },
+        padding: { left: 0, right: 0, top: 4, bottom: 0 },
       },
       scales: {
         x: {
