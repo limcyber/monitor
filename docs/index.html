@@ -127,6 +127,36 @@
       </section>
 
       <section class="panel">
+        <h2>시장 차트</h2>
+        <div class="chart-grid">
+          <article class="chart-card">
+            <div class="chart-head">
+              <h3>S&amp;P500 / Nasdaq 추세</h3>
+              <p>S&amp;P500 지수와 나스닥 지수가 200일선 위에 있는지 함께 봅니다.</p>
+            </div>
+            <div id="spyLegend" class="chart-legend"></div>
+            <canvas id="spyChart"></canvas>
+          </article>
+          <article class="chart-card">
+            <div class="chart-head">
+              <h3>시장 폭</h3>
+              <p>S&amp;P500 구성종목 중 얼마나 많은 종목이 같이 움직이는지 봅니다.</p>
+            </div>
+            <div id="breadthLegend" class="chart-legend"></div>
+            <canvas id="breadthChart"></canvas>
+          </article>
+          <article class="chart-card">
+            <div class="chart-head">
+              <h3>시장 긴장도</h3>
+              <p>변동성, 하이일드, 10년물 금리, 달러 흐름으로 시장이 불안한지 봅니다.</p>
+            </div>
+            <div id="stressLegend" class="chart-legend"></div>
+            <canvas id="stressChart"></canvas>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel">
         <h2>관심종목 요약</h2>
         <div class="table-wrap">
           <table>
@@ -144,40 +174,15 @@
         </div>
       </section>
 
-      <section class="panel">
-        <h2>시장 차트</h2>
-        <div class="chart-grid">
-          <article class="chart-card">
-            <div class="chart-head">
-              <h3>S&amp;P500 / Nasdaq 추세</h3>
-              <p>S&amp;P500 지수와 나스닥 지수가 200일선 위에 있는지 함께 봅니다.</p>
-            </div>
-            <div id="spyLegend" class="chart-legend"></div>
-            <canvas id="spyChart"></canvas>
-          </article>
-            <article class="chart-card">
-              <div class="chart-head">
-                <h3>시장 폭</h3>
-                <p>S&amp;P500 구성종목 중 얼마나 많은 종목이 같이 움직이는지 봅니다.</p>
-              </div>
-              <div id="breadthLegend" class="chart-legend"></div>
-              <canvas id="breadthChart"></canvas>
-            </article>
-          <article class="chart-card">
-            <div class="chart-head">
-              <h3>시장 긴장도</h3>
-              <p>변동성, 하이일드, 10년물 금리, 달러 흐름으로 시장이 불안한지 봅니다.</p>
-            </div>
-            <div id="stressLegend" class="chart-legend"></div>
-            <canvas id="stressChart"></canvas>
-          </article>
+      <details class="panel stock-panel" id="stockPanel">
+        <summary>
+          <h2>종목별 상세</h2>
+          <span class="pill stock-panel-state">닫힘</span>
+        </summary>
+        <div class="stock-panel-body">
+          <div id="stockCards" class="stock-cards"></div>
         </div>
-      </section>
-
-      <section class="panel">
-        <h2>종목별 상세</h2>
-        <div id="stockCards" class="stock-cards"></div>
-      </section>
+      </details>
 
       <section class="panel guide-panel">
         <details class="extra-info-box guide-extra-info">

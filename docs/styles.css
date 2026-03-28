@@ -253,6 +253,48 @@ body[data-theme="bw"] .stock-chart {
   padding: 12px 13px 13px;
 }
 
+.stock-panel {
+  padding: 0;
+}
+
+.stock-panel > summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 13px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.stock-panel > summary::-webkit-details-marker {
+  display: none;
+}
+
+.stock-panel > summary h2 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #12203d;
+}
+
+.stock-panel > summary .stock-panel-state {
+  min-height: 24px;
+  padding: 3px 11px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #233a67 0%, #132848 100%);
+  border-color: #0e1d34;
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08) inset;
+}
+
+.stock-panel-body {
+  padding: 0 13px 13px;
+}
+
 .container > .panel:first-of-type {
   margin-top: 6px;
 }
@@ -733,6 +775,10 @@ body[data-theme="bw"] .kpi p {
   color: #bfffc0;
 }
 
+body[data-theme="bw"] .stock-panel > summary h2 {
+  color: #bfffc0;
+}
+
 body[data-theme="bw"] .hero p,
 body[data-theme="bw"] .meta-row,
 body[data-theme="bw"] .kpi h3,
@@ -900,6 +946,12 @@ body[data-theme="bw"] .guide-card p {
 
 body[data-theme="bw"] .guide-summary-title {
   color: #c4ffc5;
+}
+
+body[data-theme="bw"] .stock-panel > summary .stock-panel-state {
+  background: linear-gradient(180deg, #18341f 0%, #0f2314 100%);
+  border-color: #2d5232;
+  color: #d9f7d2;
 }
 
 body[data-theme="bw"] .guide-extra-info > summary .pill {

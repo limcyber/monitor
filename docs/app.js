@@ -107,6 +107,7 @@ function renderSectorTagList(el, items, fallback) {
 const appState = {
   data: null,
   charts: [],
+  stockRendered: false,
 };
 
 function applyTheme(theme) {
@@ -705,6 +706,37 @@ function renderStocks(stocks) {
   bindFactorBoxes(holder);
 }
 
+function initStockPanel(stocks) {
+  const panel = document.getElementById("stockPanel");
+  if (!panel) return;
+  const stateEl = panel.querySelector(".stock-panel-state");
+
+  const syncState = () => {
+    if (stateEl) {
+      stateEl.textContent = panel.open ? "펼침" : "닫힘";
+    }
+  };
+
+  const renderIfNeeded = () => {
+    if (appState.stockRendered) return;
+    renderStocks(stocks);
+    appState.stockRendered = true;
+    bindStockExtraInfo(document);
+  };
+
+  syncState();
+  if (panel.open) {
+    renderIfNeeded();
+  }
+
+  panel.addEventListener("toggle", () => {
+    syncState();
+    if (panel.open) {
+      renderIfNeeded();
+    }
+  });
+}
+
 async function boot() {
   initThemeToggle();
   const response = await fetch("./data/latest.json", { cache: "no-store" });
@@ -714,8 +746,7 @@ async function boot() {
   renderMarket(data);
   renderTable(data.watchlist_summary);
   renderMarketCharts(data.charts.market);
-  renderStocks(data.stocks);
-  bindStockExtraInfo(document);
+  initStockPanel(data.stocks);
   if (!window.Chart) {
     const warning = document.createElement("p");
     warning.style.color = "#b47f00";
