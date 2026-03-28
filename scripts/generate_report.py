@@ -26,7 +26,8 @@ AI_OUTPUT_PATH = DOCS_DATA_DIR / "latest_ai.json"
 WATCHLIST_AI_OUTPUT_PATH = DOCS_DATA_DIR / "latest_watchlist_ai.json"
 ET = ZoneInfo("America/New_York")
 MARKET_LEVELS_TOTAL = 6
-GEMINI_MODEL = "gemini-2.5-flash"
+MARKET_GEMINI_MODEL = "gemini-2.5-pro"
+WATCHLIST_GEMINI_MODEL = "gemini-2.5-flash"
 
 
 @dataclass
@@ -391,14 +392,14 @@ def parse_json_blob(text: str):
     return json.loads(cleaned[start : end + 1])
 
 
-def gemini_generate_text(prompt: str, api_key: str) -> str:
+def gemini_generate_text(prompt: str, api_key: str, model_name: str) -> str:
     try:
         from google import genai
         from google.genai import types
 
         client = genai.Client(api_key=api_key)
         response = client.models.generate_content(
-            model=GEMINI_MODEL,
+            model=model_name,
             contents=prompt,
             config=types.GenerateContentConfig(
                 temperature=0.2,
@@ -413,7 +414,7 @@ def gemini_generate_text(prompt: str, api_key: str) -> str:
         import google.generativeai as genai
 
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel(GEMINI_MODEL)
+        model = genai.GenerativeModel(model_name)
         response = model.generate_content(prompt)
         text = (getattr(response, "text", None) or "").strip()
         if not text:
@@ -426,7 +427,7 @@ def generate_market_ai_analysis(output: dict) -> dict:
     if not api_key:
         return {
             "status": "disabled",
-            "model": GEMINI_MODEL,
+            "model": MARKET_GEMINI_MODEL,
             "content": "GOOGLE_API_KEY가 없어 AI 분석을 건너뛰었습니다.",
         }
 
@@ -452,21 +453,21 @@ AI 판단: ... (AI 점수: xx/100, AI 매매 여건: ..., AI 추천 행동: ...)
 11. 마크다운 굵게 표시(**)는 쓰지 않는다.
 12. 속보 요약에는 시장에 바로 영향을 줄 수 있는 최신 뉴스나 헤드라인만 1~3개까지 짧게 정리한다. 뚜렷한 속보가 없으면 '눈에 띄는 새 속보는 없습니다.'라고 쓴다.
 
-시장 데이터:
+    시장 데이터:
 {json.dumps(payload, ensure_ascii=False, indent=2)}
 """.strip()
 
     try:
-        text = gemini_generate_text(prompt, api_key)
+        text = gemini_generate_text(prompt, api_key, MARKET_GEMINI_MODEL)
         return {
             "status": "ok",
-            "model": GEMINI_MODEL,
+            "model": MARKET_GEMINI_MODEL,
             "content": text,
         }
     except Exception as exc:
         return {
             "status": "error",
-            "model": GEMINI_MODEL,
+            "model": MARKET_GEMINI_MODEL,
             "content": f"AI 분석 실패: {summarize_ai_error(exc)}",
         }
 
@@ -512,7 +513,7 @@ def generate_watchlist_ai_analysis(output: dict) -> dict:
 """.strip()
 
     try:
-        text = gemini_generate_text(prompt, api_key)
+        text = gemini_generate_text(prompt, api_key, WATCHLIST_GEMINI_MODEL)
         parsed = parse_json_blob(text)
         if not isinstance(parsed, list):
             raise ValueError("배열 형식 응답이 아닙니다.")

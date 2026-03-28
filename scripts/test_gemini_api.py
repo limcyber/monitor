@@ -9,7 +9,9 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 LATEST_US_PATH = BASE_DIR / "docs" / "data" / "latest.json"
-DEFAULT_MODEL = "gemini-2.5-flash"
+MARKET_MODEL = "gemini-2.5-pro"
+WATCHLIST_MODEL = "gemini-2.5-flash"
+SIMPLE_MODEL = MARKET_MODEL
 
 
 def load_latest_market_payload() -> dict:
@@ -172,7 +174,7 @@ def import_gemini():
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Gemini API local smoke test")
-    parser.add_argument("--model", default=DEFAULT_MODEL, help="Gemini model name")
+    parser.add_argument("--model", help="Gemini model name")
     parser.add_argument("--mode", choices=["simple", "market", "watchlist"], default="simple", help="Prompt mode")
     parser.add_argument("--with-search", dest="with_search", action="store_true", help="Enable Google Search tool")
     parser.add_argument("--no-search", dest="with_search", action="store_false", help="Disable Google Search tool")
@@ -191,7 +193,10 @@ def main() -> int:
         return 1
 
     prompt = build_prompt(args.mode)
-    print(f"Model: {args.model}")
+    selected_model = args.model or (
+        WATCHLIST_MODEL if args.mode == "watchlist" else MARKET_MODEL if args.mode == "market" else SIMPLE_MODEL
+    )
+    print(f"Model: {selected_model}")
     print(f"Backend: {backend}")
     print(f"Mode: {args.mode}")
     print(f"Google Search: {'on' if args.with_search else 'off'}")
@@ -204,7 +209,7 @@ def main() -> int:
             if args.with_search:
                 config.tools = [types.Tool(google_search=types.GoogleSearch())]
             response = client.models.generate_content(
-                model=args.model,
+                model=selected_model,
                 contents=prompt,
                 config=config,
             )
@@ -213,7 +218,7 @@ def main() -> int:
             if args.with_search:
                 print("Google Search requires google-genai; continuing without search on the legacy backend.", file=sys.stderr)
             genai.configure(api_key=api_key)
-            model = genai.GenerativeModel(args.model)
+            model = genai.GenerativeModel(selected_model)
             response = model.generate_content(prompt)
             text = (getattr(response, "text", None) or "").strip()
     except Exception as exc:
