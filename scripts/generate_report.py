@@ -18,6 +18,7 @@ BASE_DIR = Path(__file__).resolve().parents[1]
 DOCS_DATA_DIR = BASE_DIR / "docs" / "data"
 WATCHLIST_PATH = BASE_DIR / "config" / "watchlist.yml"
 CALENDAR_PATH = BASE_DIR / "config" / "economic_calendar.yml"
+EARNINGS_PATH = BASE_DIR / "config" / "earnings_calendar.yml"
 OUTPUT_PATH = DOCS_DATA_DIR / "latest.json"
 HISTORY_PATH = DOCS_DATA_DIR / "history.json"
 ET = ZoneInfo("America/New_York")
@@ -76,6 +77,19 @@ def load_events(as_of: date) -> dict:
         "nfp": to_date_list(calendar.get("nfp", [])),
         "opex": [op_ex],
     }
+
+
+def load_earnings_calendar() -> dict[str, date]:
+    raw = load_yaml(EARNINGS_PATH)
+    result: dict[str, date] = {}
+    for ticker, value in (raw.get("earnings", {}) or {}).items():
+        if not value:
+            continue
+        try:
+            result[str(ticker).upper()] = datetime.strptime(str(value), "%Y-%m-%d").date()
+        except Exception:
+            continue
+    return result
 
 
 def is_event_d0_d1(as_of: date, events: dict) -> tuple[bool, list[str]]:
@@ -761,6 +775,7 @@ def score_stock(
     benchmark_df: pd.DataFrame,
     market_lvl: int,
     earnings_soon: bool | None,
+    earnings_date: date | None,
 ) -> dict:
     close = stock_df["Close"]
     vol = stock_df["Volume"]
@@ -930,6 +945,8 @@ def score_stock(
         "note": note,
         "cross_highlights": cross_highlights[:2],
         "event_flag": "실적 7일 이내" if earnings_soon is True else "실적 일정 확인 필요" if earnings_soon is None else "특이 일정 없음",
+        "earnings_date": earnings_date.isoformat() if earnings_date else None,
+        "earnings_date_label": earnings_date.strftime("%Y-%m-%d") if earnings_date else "미확인",
         "earnings_soon": None if earnings_soon is None else bool(earnings_soon),
         "overheated": bool(overheated),
         "positive_factors": positive_factors[:6],
@@ -1059,21 +1076,25 @@ def default_reason_for_state(state: str) -> str:
     return mapping.get(state, "판단할 만한 신호가 아직 부족합니다")
 
 
-def get_earnings_within_7_days(ticker: str, as_of: date) -> bool | None:
+def get_earnings_info(ticker: str, as_of: date, manual_calendar: dict[str, date]) -> tuple[bool | None, date | None]:
+    manual_date = manual_calendar.get(ticker.upper())
+    if manual_date:
+        delta = (manual_date - as_of).days
+        return (0 <= delta <= 7, manual_date)
     if ticker.endswith("XX") or ticker in {"SPY", "QQQ", "RSP", "HYG", "UUP", "SOXX", "KORU", "^GSPC", "^IXIC", "^VIX"}:
-        return False
+        return (False, None)
     try:
         cal = yf.Ticker(ticker).calendar
         if cal is None or cal.empty:
-            return None
+            return (None, None)
         raw_date = cal.loc["Earnings Date"].iloc[0]
         if pd.isna(raw_date):
-            return None
+            return (None, None)
         earn_date = pd.Timestamp(raw_date).date()
         delta = (earn_date - as_of).days
-        return 0 <= delta <= 7
+        return (0 <= delta <= 7, earn_date)
     except Exception:
-        return None
+        return (None, None)
 
 
 def compact_signed(value: int) -> str:
@@ -1361,6 +1382,7 @@ def main() -> None:
     rsp_spx = (rsp["Close"] / spx["Close"]).dropna()
 
     events = load_events(as_of)
+    earnings_calendar = load_earnings_calendar()
     market_data = {"SPX": spx, "NDX": ndx, "RUT": rut, "TNX": tnx, "SPY_PROXY": spy_proxy, "QQQ_PROXY": qqq_proxy, "RSP": rsp, "HYG": hyg, "DXY": dxy, "VIX": vix}
     breadth = {
         "pct_above_20dma": float(pct_above_20),
@@ -1388,8 +1410,8 @@ def main() -> None:
         sdf, ts = load_price_frame(ticker, now_et)
         if ts:
             latest_intraday_points.append(ts)
-        earnings_soon = get_earnings_within_7_days(ticker, as_of)
-        stock_reports.append(score_stock(ticker, sdf, spx, lvl, earnings_soon))
+        earnings_soon, earnings_date = get_earnings_info(ticker, as_of, earnings_calendar)
+        stock_reports.append(score_stock(ticker, sdf, spx, lvl, earnings_soon, earnings_date))
 
     for stock in stock_reports:
         stock["change_tags"] = stock_change_tags(previous_output, stock)
