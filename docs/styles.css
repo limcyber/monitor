@@ -213,6 +213,21 @@ body[data-theme="bw"] .stock-chart {
   padding: 12px 13px 13px;
 }
 
+.market-panel.tone-success {
+  border-color: #9fd2b6;
+  box-shadow: 0 0 0 1px rgba(15, 123, 108, 0.08) inset;
+}
+
+.market-panel.tone-warning {
+  border-color: #e5cb86;
+  box-shadow: 0 0 0 1px rgba(180, 127, 0, 0.08) inset;
+}
+
+.market-panel.tone-danger {
+  border-color: #e1a3a3;
+  box-shadow: 0 0 0 1px rgba(185, 67, 67, 0.08) inset;
+}
+
 .panel h2 {
   margin: 0 0 10px;
   font-size: 14px;
@@ -315,6 +330,22 @@ body[data-theme="bw"] .tone-danger {
   line-height: 1;
   font-weight: 700;
   color: #0f1726;
+}
+
+.market-value {
+  display: block;
+}
+
+.market-value.tone-success {
+  color: var(--green);
+}
+
+.market-value.tone-warning {
+  color: var(--yellow);
+}
+
+.market-value.tone-danger {
+  color: var(--red);
 }
 
 .explain,
@@ -433,8 +464,36 @@ body[data-theme="bw"] .reasons li {
   color: #a8d5ab;
 }
 
+body[data-theme="bw"] .market-panel.tone-success {
+  border-color: rgba(125, 255, 153, 0.35);
+  box-shadow: 0 0 0 1px rgba(125, 255, 153, 0.08) inset, 0 0 16px rgba(125, 255, 153, 0.06);
+}
+
+body[data-theme="bw"] .market-panel.tone-warning {
+  border-color: rgba(234, 219, 115, 0.32);
+  box-shadow: 0 0 0 1px rgba(234, 219, 115, 0.08) inset, 0 0 16px rgba(234, 219, 115, 0.05);
+}
+
+body[data-theme="bw"] .market-panel.tone-danger {
+  border-color: rgba(255, 129, 129, 0.28);
+  box-shadow: 0 0 0 1px rgba(255, 129, 129, 0.08) inset, 0 0 16px rgba(255, 129, 129, 0.05);
+}
+
+body[data-theme="bw"] .market-value.tone-success {
+  color: #7dff99;
+}
+
+body[data-theme="bw"] .market-value.tone-warning {
+  color: #eadb73;
+}
+
+body[data-theme="bw"] .market-value.tone-danger {
+  color: #ff8181;
+}
+
 body[data-theme="bw"] .table-wrap,
-body[data-theme="bw"] .chart-grid canvas,
+body[data-theme="bw"] .chart-card,
+body[data-theme="bw"] .chart-card canvas,
 body[data-theme="bw"] .stock-chart {
   border-color: #183020;
 }
@@ -445,23 +504,43 @@ body[data-theme="bw"] .stock-chart {
   gap: 10px;
 }
 
-.chart-grid canvas,
+.chart-card,
+.stock-card {
+  border: 1px solid var(--line-soft);
+  background: #fff;
+  padding: 10px;
+}
+
+.chart-card canvas,
 .stock-chart {
+  width: 100%;
   background: #fff;
   border: 1px solid var(--line-soft);
   padding: 6px;
+}
+
+.chart-head {
+  margin: 0 0 8px;
+}
+
+.chart-head h3,
+.chart-head h4 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: #12203d;
+}
+
+.chart-head p {
+  margin: 3px 0 0;
+  font-size: 11px;
+  color: var(--muted);
 }
 
 .stock-cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
-}
-
-.stock-card {
-  border: 1px solid var(--line-soft);
-  background: #fff;
-  padding: 10px;
 }
 
 .stock-top {

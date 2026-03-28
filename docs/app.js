@@ -15,6 +15,10 @@ function scoreTone(score) {
   return "danger";
 }
 
+function marketTone(score) {
+  return `tone-${scoreTone(score)}`;
+}
+
 function formatScore(score) {
   return `${score}/100`;
 }
@@ -65,13 +69,34 @@ function initThemeToggle() {
 function renderMarket(data) {
   setText("generatedAt", `Generated At: ${data.generated_at_et}`);
   setText("asOf", `Market Data As Of: ${data.market_data_as_of}`);
+  const marketPanel = document.querySelector(".market-panel");
+  if (marketPanel) {
+    marketPanel.classList.remove("tone-success", "tone-warning", "tone-danger");
+    marketPanel.classList.add(marketTone(data.market.score));
+  }
   const marketState = document.getElementById("marketState");
   marketState.textContent = data.market.state;
   marketState.className = `pill ${scoreTone(data.market.score)}`;
-  setText("marketScore", formatScore(data.market.score));
-  setText("marketConfidence", data.market.confidence);
-  setText("marketExecution", data.market.execution_strength);
-  setText("marketAction", data.market.action);
+  const scoreEl = document.getElementById("marketScore");
+  if (scoreEl) {
+    scoreEl.textContent = formatScore(data.market.score);
+    scoreEl.className = `market-value ${marketTone(data.market.score)}`;
+  }
+  const confidenceEl = document.getElementById("marketConfidence");
+  if (confidenceEl) {
+    confidenceEl.textContent = data.market.confidence;
+    confidenceEl.className = `market-value ${marketTone(data.market.score)}`;
+  }
+  const executionEl = document.getElementById("marketExecution");
+  if (executionEl) {
+    executionEl.textContent = data.market.execution_strength;
+    executionEl.className = `market-value ${marketTone(data.market.score)}`;
+  }
+  const actionEl = document.getElementById("marketAction");
+  if (actionEl) {
+    actionEl.textContent = data.market.action;
+    actionEl.className = `market-value ${marketTone(data.market.score)}`;
+  }
   setText("marketEasy", data.market.easy_explanation);
   setText("marketInvalidation", data.market.invalidation);
 
@@ -126,6 +151,15 @@ function seriesPalette() {
   };
 }
 
+function formatChartLabel(label) {
+  if (typeof label !== "string") return label;
+  const parts = label.split("-");
+  if (parts.length === 3) {
+    return `${parts[1]}/${parts[2]}`;
+  }
+  return label;
+}
+
 function lineChart(ctx, labels, datasets) {
   if (!window.Chart || !ctx) return null;
   const theme = chartTheme();
@@ -137,9 +171,23 @@ function lineChart(ctx, labels, datasets) {
       maintainAspectRatio: true,
       scales: {
         x: {
-          display: false,
+          display: true,
           grid: { color: theme.grid },
-          ticks: { color: theme.ticks },
+          title: {
+            display: true,
+            text: "Date",
+            color: theme.ticks,
+          },
+          ticks: {
+            color: theme.ticks,
+            autoSkip: true,
+            maxTicksLimit: 6,
+            maxRotation: 0,
+            callback(value, index, ticks) {
+              const raw = labels[index] ?? ticks?.[value]?.label;
+              return formatChartLabel(raw);
+            },
+          },
         },
         y: {
           grid: { color: theme.grid },
@@ -208,6 +256,10 @@ function renderStocks(stocks) {
       </div>
       <p>${s.easy_explanation}</p>
       <ul>${(s.top_reasons || []).map((r) => `<li>${r}</li>`).join("")}</ul>
+      <div class="chart-head stock-chart-head">
+        <h4>Price Chart</h4>
+        <p>Close, 20DMA, 50DMA</p>
+      </div>
       <canvas id="chart-${s.ticker}" class="stock-chart"></canvas>
     `;
     holder.appendChild(card);
