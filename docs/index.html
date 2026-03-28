@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple Market Regime Monitor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+  </head>
+  <body>
+    <header class="site-topbar">
+      <div class="site-topbar-inner">
+        <div class="brand">
+          <span class="brand-mark">Simple Market Regime Monitor</span>
+          <span class="brand-tag">finviz-inspired view</span>
+        </div>
+        <div class="topbar-meta">
+          <span>Market Layer + Fixed 5-Stock Watchlist</span>
+          <div class="theme-segment" role="group" aria-label="Theme mode">
+            <button id="themeBw" class="theme-segment-btn" type="button" aria-pressed="false">
+              BW
+            </button>
+            <button id="themeColor" class="theme-segment-btn" type="button" aria-pressed="false">
+              Color
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <header class="hero">
+        <h1>Simple Market Regime Monitor</h1>
+        <p>Market Layer + Fixed 5-Stock Watchlist</p>
+        <div class="meta-row">
+          <span id="generatedAt">Generated At: -</span>
+          <span id="asOf">Market Data As Of: -</span>
+        </div>
+      </header>
+
+      <section class="panel market-panel">
+        <div class="panel-head">
+          <h2>Market</h2>
+          <span id="marketState" class="pill">-</span>
+        </div>
+        <div class="kpi-grid">
+          <article class="kpi"><h3>Score</h3><p id="marketScore">-</p></article>
+          <article class="kpi"><h3>Confidence</h3><p id="marketConfidence">-</p></article>
+          <article class="kpi"><h3>Execution</h3><p id="marketExecution">-</p></article>
+          <article class="kpi"><h3>Action</h3><p id="marketAction">-</p></article>
+        </div>
+        <div class="explain">
+          <h3>Easy Explanation</h3>
+          <p id="marketEasy">-</p>
+        </div>
+        <div class="reasons">
+          <h3>Top 3 Reasons</h3>
+          <ul id="marketReasons"></ul>
+          <p><strong>Invalidation:</strong> <span id="marketInvalidation">-</span></p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Watchlist Summary</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Ticker</th>
+                <th>Stock Score</th>
+                <th>Stock State</th>
+                <th>Final Action</th>
+                <th>Note</th>
+              </tr>
+            </thead>
+            <tbody id="watchlistTable"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Market Charts</h2>
+        <div class="chart-grid">
+          <canvas id="spyChart"></canvas>
+          <canvas id="breadthChart"></canvas>
+          <canvas id="stressChart"></canvas>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Stocks</h2>
+        <div id="stockCards" class="stock-cards"></div>
+      </section>
+    </main>
+    <script src="./app.js" defer></script>
+  </body>
+  </html>
