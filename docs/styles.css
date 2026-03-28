@@ -74,17 +74,25 @@ a {
   margin: 0 auto;
   padding: 10px 18px 9px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 12px;
 }
 
 .brand {
   display: flex;
-  align-items: baseline;
-  gap: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
   font-weight: 700;
   letter-spacing: 0.02em;
+}
+
+.brand-line {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .brand-mark {
@@ -107,26 +115,13 @@ a {
   align-items: center;
 }
 
-.page-head {
-  margin: 0 0 10px;
-  padding: 2px 0 8px;
-}
-
-.page-head h1 {
-  margin: 0;
-  font-size: 24px;
-  line-height: 1.08;
-  letter-spacing: -0.03em;
-  color: #12203d;
-}
-
 .page-head-time {
-  margin-top: 4px;
+  margin-top: 3px;
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
   font-size: 11px;
-  color: rgba(17, 32, 61, 0.82);
+  color: rgba(255, 255, 255, 0.9);
   font-weight: 600;
 }
 
@@ -136,21 +131,9 @@ a {
   min-height: 20px;
   padding: 1px 7px;
   border-radius: 3px;
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(160, 172, 184, 0.62);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
-}
-
-.page-head-time.tone-success {
-  color: rgba(147, 255, 170, 0.95);
-}
-
-.page-head-time.tone-warning {
-  color: rgba(234, 219, 115, 0.95);
-}
-
-.page-head-time.tone-danger {
-  color: rgba(255, 129, 129, 0.95);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.16);
 }
 
 .theme-segment {
@@ -204,12 +187,8 @@ body[data-theme="bw"] .theme-segment-btn[aria-pressed="true"] {
   color: #d9f7d2;
 }
 
-body[data-theme="bw"] .page-head h1 {
-  color: #d9f7d2;
-}
-
 body[data-theme="bw"] .page-head-time {
-  color: #9fd0a3;
+  color: #d7f5d3;
 }
 
 body[data-theme="bw"] .page-head-time span {
@@ -272,6 +251,10 @@ body[data-theme="bw"] .stock-chart {
   border: 1px solid var(--line);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9) inset;
   padding: 12px 13px 13px;
+}
+
+.container > .panel:first-of-type {
+  margin-top: 6px;
 }
 
 .market-panel.tone-success {
