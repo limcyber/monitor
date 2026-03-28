@@ -17,3 +17,9 @@ watchlist:
   - ticker: 466100.KQ
     name: 클로봇
     market: KOSDAQ
+  - ticker: 012450.KS
+    name: 한화에어로스페이스
+    market: KOSPI
+  - ticker: 079550.KS
+    name: LIG넥스원
+    market: KOSPI

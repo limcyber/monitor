@@ -394,8 +394,8 @@ def main() -> None:
     existing_history = load_json(KR_HISTORY_PATH)
 
     watchlist = load_kr_watchlist()
-    if len(watchlist) != 6:
-        raise ValueError("watchlist_kr.yml must contain exactly 6 stocks.")
+    if len(watchlist) != 8:
+        raise ValueError("watchlist_kr.yml must contain exactly 8 stocks.")
 
     market_output, latest_intraday_points, market_frames = build_kr_market_output(now_et, previous_output)
     level = market_level(market_output["score"])
