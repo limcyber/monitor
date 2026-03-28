@@ -1374,6 +1374,22 @@ body[data-theme="bw"] .chart-legend {
 }
 
 @media (max-width: 960px) {
+  .container {
+    padding: 10px 8px 22px;
+  }
+
+  .panel {
+    padding: 10px 9px 11px;
+  }
+
+  .stock-panel > summary {
+    padding: 10px 9px;
+  }
+
+  .stock-panel-body {
+    padding: 0 9px 10px;
+  }
+
   .kpi-grid,
   .market-ticker-strip,
   .chart-grid,
@@ -1389,6 +1405,16 @@ body[data-theme="bw"] .chart-legend {
 
   .table-wrap {
     overflow: visible;
+  }
+
+  .chart-card,
+  .stock-card {
+    padding: 8px;
+  }
+
+  .chart-card canvas,
+  .stock-chart {
+    padding: 4px;
   }
 
   table {
