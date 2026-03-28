@@ -1461,51 +1461,6 @@ body[data-theme="bw"] .chart-legend {
     border-top-color: #183020;
   }
 
-  #watchlistTable tr {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 6px 8px;
-    align-items: start;
-  }
-
-  #watchlistTable td {
-    display: block;
-    min-width: 0;
-    flex: none;
-  }
-
-  #watchlistTable td::before {
-    margin-bottom: 2px;
-    font-size: 9px;
-    letter-spacing: 0.02em;
-  }
-
-  #watchlistTable td:nth-child(-n + 5)::before {
-    display: inline-block;
-    margin-right: 4px;
-    margin-bottom: 0;
-    vertical-align: baseline;
-  }
-
-  #watchlistTable td:nth-child(-n + 5) {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 11px;
-    line-height: 1.25;
-  }
-
-  #watchlistTable td:nth-child(5) {
-    grid-column: auto;
-  }
-
-  #watchlistTable td[data-label="메모"] {
-    grid-column: 1 / -1;
-    white-space: normal;
-    overflow: visible;
-    text-overflow: clip;
-  }
-
   .stress-table-grid tbody {
     display: table-row-group;
     gap: 0;
