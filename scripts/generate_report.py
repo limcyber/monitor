@@ -117,12 +117,23 @@ def build_market_ai_output(output: dict, ai_analysis: dict) -> dict:
         "market_data_as_of": output.get("market_data_as_of"),
         "market": {
             "score": market.get("score"),
+            "level": market_level(market.get("score", 0)),
             "state": market.get("state"),
             "action": market.get("action"),
             "cross_highlights": market.get("cross_highlights", [])[:4],
             "top_reasons": market.get("top_reasons", [])[:5],
+            "metrics": {
+                "vix_close": market.get("metrics", {}).get("vix_close"),
+                "tnx_close": market.get("metrics", {}).get("tnx_close"),
+                "pct_above_20dma": market.get("metrics", {}).get("pct_above_20dma"),
+                "pct_above_50dma": market.get("metrics", {}).get("pct_above_50dma"),
+            },
         },
         "ai_analysis": ai_analysis,
+        "ai_notifications": {
+            "count": 0,
+            "items": [],
+        },
     }
 
 
@@ -144,6 +155,7 @@ def build_watchlist_ai_payload(output: dict) -> dict:
                 "cross_highlights": stock.get("cross_highlights", [])[:3],
                 "top_reasons": stock.get("top_reasons", [])[:4],
                 "earnings_date": stock.get("earnings_date"),
+                "volume_ratio_20d": stock.get("metrics", {}).get("volume_ratio_20d"),
             }
         )
 
@@ -170,6 +182,175 @@ def build_watchlist_ai_output(output: dict, ai_items: list[dict], status: str, e
         "error": error,
         "items": ai_items,
     }
+
+
+def previous_watchlist_ai_map(previous_watchlist_ai_output: dict) -> dict[str, dict]:
+    return {
+        str(item.get("ticker") or "").upper(): item
+        for item in previous_watchlist_ai_output.get("items", [])
+        if isinstance(item, dict) and item.get("ticker")
+    }
+
+
+def build_ai_notifications(
+    current_output: dict,
+    previous_ai_output: dict,
+    current_watchlist_ai_output: dict,
+    previous_watchlist_ai_output: dict,
+) -> list[dict]:
+    notifications: list[dict] = []
+    market_output = current_output.get("market", {})
+    current_level = market_level(market_output.get("score", 0))
+    prev_market = previous_ai_output.get("market", {}) if isinstance(previous_ai_output, dict) else {}
+    prev_level = prev_market.get("level")
+    if not isinstance(prev_level, int) and isinstance(prev_market.get("score"), int):
+        prev_level = market_level(prev_market["score"])
+
+    if isinstance(prev_level, int) and prev_level != current_level:
+        direction = "상향" if current_level > prev_level else "하향"
+        notifications.append(
+            build_notification(
+                f"ai-regime-shift-{current_level}-{current_output.get('generated_at_et', '')}",
+                "high",
+                "ai_regime_shift",
+                "시장 레벨 급변",
+                f"시장 레벨이 {prev_level}/{MARKET_LEVELS_TOTAL} -> {current_level}/{MARKET_LEVELS_TOTAL}(으)로 {direction} 이동했습니다. 전체 매매 전략을 다시 점검할 시점입니다.",
+            )
+        )
+
+    current_pct20 = market_output.get("metrics", {}).get("pct_above_20dma")
+    prev_pct20 = prev_market.get("metrics", {}).get("pct_above_20dma") if isinstance(prev_market, dict) else None
+    if isinstance(current_pct20, (int, float)):
+        crossed_overheated = current_pct20 >= 80 and (not isinstance(prev_pct20, (int, float)) or prev_pct20 < 80)
+        crossed_oversold = current_pct20 <= 20 and (not isinstance(prev_pct20, (int, float)) or prev_pct20 > 20)
+        if crossed_overheated:
+            notifications.append(
+                build_notification(
+                    f"ai-breadth-overheated-{current_output.get('generated_at_et', '')}",
+                    "medium",
+                    "ai_breadth_extreme",
+                    "시장 폭 과열 진입",
+                    f"S&P 500의 20일선 위 종목 비율이 {current_pct20:.1f}%까지 올라왔습니다. 추격 매수는 더 신중하게 보는 편이 좋습니다.",
+                )
+            )
+        elif crossed_oversold:
+            notifications.append(
+                build_notification(
+                    f"ai-breadth-oversold-{current_output.get('generated_at_et', '')}",
+                    "medium",
+                    "ai_breadth_extreme",
+                    "시장 폭 과매도 진입",
+                    f"S&P 500의 20일선 위 종목 비율이 {current_pct20:.1f}%로 매우 낮습니다. 저점 매수 후보를 준비할 구간인지 점검할 만합니다.",
+                )
+            )
+
+    current_vix_close = market_output.get("metrics", {}).get("vix_close")
+    prev_vix_close = prev_market.get("metrics", {}).get("vix_close") if isinstance(prev_market, dict) else None
+    if isinstance(current_vix_close, (int, float)) and isinstance(prev_vix_close, (int, float)) and prev_vix_close > 0:
+        vix_jump_pct = ((current_vix_close / prev_vix_close) - 1) * 100
+        if vix_jump_pct >= 5:
+            notifications.append(
+                build_notification(
+                    f"ai-vix-shock-{current_output.get('generated_at_et', '')}",
+                    "high",
+                    "ai_macro_shock",
+                    "변동성 급등",
+                    f"VIX가 직전 AI 갱신 대비 {vix_jump_pct:+.1f}% 급등했습니다. 리스크 오프 신호로 보고 방어적으로 대응하는 편이 좋습니다.",
+                )
+            )
+
+    current_tnx_close = market_output.get("metrics", {}).get("tnx_close")
+    prev_tnx_close = prev_market.get("metrics", {}).get("tnx_close") if isinstance(prev_market, dict) else None
+    if isinstance(current_tnx_close, (int, float)) and isinstance(prev_tnx_close, (int, float)) and prev_tnx_close > 0:
+        tnx_move_pct = abs((current_tnx_close / prev_tnx_close) - 1) * 100
+        if tnx_move_pct >= 1.5:
+            notifications.append(
+                build_notification(
+                    f"ai-tnx-shock-{current_output.get('generated_at_et', '')}",
+                    "high",
+                    "ai_macro_shock",
+                    "10년물 금리 급변",
+                    f"10년물 금리가 직전 AI 갱신 대비 {tnx_move_pct:.1f}% 움직였습니다. 성장주와 전체 밸류에이션 부담을 다시 확인할 필요가 있습니다.",
+                )
+            )
+
+    previous_watchlist_ai = previous_watchlist_ai_map(previous_watchlist_ai_output)
+    current_watchlist_ai = previous_watchlist_ai_map(current_watchlist_ai_output)
+    divergence_candidates: list[tuple[int, dict]] = []
+
+    for stock in current_output.get("stocks", []):
+        ticker = stock.get("ticker")
+        if not ticker:
+            continue
+        current_crosses = stock.get("cross_highlights", []) or []
+        prev_crosses = set(previous_watchlist_ai.get(ticker, {}).get("cross_highlights", []) or [])
+        new_short_crosses = [
+            cross for cross in current_crosses if cross not in prev_crosses and "최근 단기" in cross
+        ]
+        volume_ratio = stock.get("metrics", {}).get("volume_ratio_20d")
+        if new_short_crosses and isinstance(volume_ratio, (int, float)) and volume_ratio >= 1.5:
+            cross = new_short_crosses[0]
+            direction = "데드크로스" if "데드크로스" in cross else "골든크로스"
+            priority = "high" if direction == "데드크로스" else "medium"
+            notifications.append(
+                build_notification(
+                    f"ai-high-conviction-cross-{ticker}-{current_output.get('generated_at_et', '')}",
+                    priority,
+                    "ai_high_conviction_cross",
+                    f"{ticker} 고신뢰 크로스",
+                    f"{ticker}에서 {direction}가 나왔고 거래량도 20일 평균의 {volume_ratio:.1f}배입니다. 신호 강도가 평소보다 큽니다.",
+                    scope="stock",
+                    ticker=ticker,
+                )
+            )
+
+        current_ai_row = current_watchlist_ai.get(ticker)
+        previous_ai_row = previous_watchlist_ai.get(ticker)
+        if not current_ai_row or not previous_ai_row:
+            continue
+        current_ai_score = current_ai_row.get("ai_score")
+        prev_ai_score = previous_ai_row.get("ai_score")
+        price_change = stock.get("metrics", {}).get("close_change_pct")
+        if not all(isinstance(value, (int, float)) for value in [current_ai_score, prev_ai_score, price_change]):
+            continue
+        ai_delta = current_ai_score - prev_ai_score
+        if price_change >= -0.5 and ai_delta <= -15:
+            divergence_candidates.append(
+                (
+                    abs(ai_delta),
+                    build_notification(
+                        f"ai-negative-divergence-{ticker}-{current_output.get('generated_at_et', '')}",
+                        "medium",
+                        "ai_sentiment_divergence",
+                        f"{ticker} 가격-심리 괴리",
+                        f"{ticker} 주가는 버티고 있지만 AI 심리는 {abs(ai_delta)}점 악화됐습니다. 악재가 뒤늦게 가격에 반영될 수 있는지 확인이 필요합니다.",
+                        scope="stock",
+                        ticker=ticker,
+                    ),
+                )
+            )
+        elif price_change <= -2 and ai_delta >= 15:
+            divergence_candidates.append(
+                (
+                    abs(ai_delta),
+                    build_notification(
+                        f"ai-positive-divergence-{ticker}-{current_output.get('generated_at_et', '')}",
+                        "medium",
+                        "ai_sentiment_divergence",
+                        f"{ticker} 가격-심리 괴리",
+                        f"{ticker} 주가는 빠졌지만 AI 심리는 {ai_delta}점 개선됐습니다. 반전 전조인지 추가 확인할 만합니다.",
+                        scope="stock",
+                        ticker=ticker,
+                    ),
+                )
+            )
+
+    for _, item in sorted(divergence_candidates, key=lambda row: row[0], reverse=True)[:2]:
+        notifications.append(item)
+
+    priority_rank = {"high": 0, "medium": 1, "low": 2}
+    notifications.sort(key=lambda item: (priority_rank.get(item["priority"], 9), item["title"]))
+    return notifications[:8]
 
 
 def summarize_ai_error(exc: Exception) -> str:
@@ -296,6 +477,19 @@ def generate_watchlist_ai_analysis(output: dict) -> dict:
         return build_watchlist_ai_output(output, [], "disabled", "GOOGLE_API_KEY가 없어 종목 AI 분석을 건너뛰었습니다.")
 
     payload = build_watchlist_ai_payload(output)
+    snapshot_by_ticker = {
+        str(row.get("ticker") or "").upper(): {
+            "close": row.get("close"),
+            "change_pct": row.get("change_pct"),
+            "score": row.get("score"),
+            "state": row.get("state"),
+            "action": row.get("action"),
+            "cross_highlights": row.get("cross_highlights", []),
+            "volume_ratio_20d": row.get("volume_ratio_20d"),
+        }
+        for row in payload.get("watchlist", [])
+        if row.get("ticker")
+    }
     prompt = f"""
 너는 미국 관심종목을 빠르게 정리하는 실전형 전문 애널리스트다.
 
@@ -330,6 +524,7 @@ def generate_watchlist_ai_analysis(output: dict) -> dict:
             ticker = str(row.get("ticker") or "").upper().strip()
             if not ticker:
                 continue
+            snapshot = snapshot_by_ticker.get(ticker, {})
             try:
                 ai_score = int(max(0, min(100, int(row.get("ai_score", 0)))))
             except Exception:
@@ -341,6 +536,13 @@ def generate_watchlist_ai_analysis(output: dict) -> dict:
                     "ai_state": str(row.get("ai_state") or "보통").strip()[:40],
                     "ai_action": str(row.get("ai_action") or "관찰").strip()[:60],
                     "ai_note": str(row.get("ai_note") or "").strip()[:240],
+                    "close": snapshot.get("close"),
+                    "change_pct": snapshot.get("change_pct"),
+                    "score": snapshot.get("score"),
+                    "state": snapshot.get("state"),
+                    "action": snapshot.get("action"),
+                    "cross_highlights": snapshot.get("cross_highlights", []),
+                    "volume_ratio_20d": snapshot.get("volume_ratio_20d"),
                 }
             )
         return build_watchlist_ai_output(output, items, "ok")
@@ -349,9 +551,14 @@ def generate_watchlist_ai_analysis(output: dict) -> dict:
 
 
 def write_ai_outputs(output: dict) -> None:
+    previous_ai_output = load_json(AI_OUTPUT_PATH)
+    previous_watchlist_ai_output = load_json(WATCHLIST_AI_OUTPUT_PATH)
     ai_output = generate_market_ai_analysis(output)
     market_ai_output = build_market_ai_output(output, ai_output)
     watchlist_ai_output = generate_watchlist_ai_analysis(output)
+    ai_notifications = build_ai_notifications(output, previous_ai_output, watchlist_ai_output, previous_watchlist_ai_output)
+    market_ai_output["ai_notifications"]["items"] = ai_notifications
+    market_ai_output["ai_notifications"]["count"] = len(ai_notifications)
     DOCS_DATA_DIR.mkdir(parents=True, exist_ok=True)
     with AI_OUTPUT_PATH.open("w", encoding="utf-8") as f:
         json.dump(market_ai_output, f, indent=2)

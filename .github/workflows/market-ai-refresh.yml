@@ -34,6 +34,13 @@ jobs:
           echo "AI refresh running: generating market AI and watchlist AI files."
           python scripts/generate_report.py
 
+      - name: Send Discord AI alerts
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_AI_ALERTS: "true"
+        run: |
+          python scripts/send_discord_alerts.py
+
       - name: Commit AI analysis data
         run: |
           git config user.name "github-actions[bot]"

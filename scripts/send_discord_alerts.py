@@ -9,6 +9,7 @@ import requests
 BASE_DIR = Path(__file__).resolve().parents[1]
 LATEST_PATH = BASE_DIR / "docs" / "data" / "latest.json"
 LATEST_KR_PATH = BASE_DIR / "docs" / "data" / "latest_kr.json"
+LATEST_AI_PATH = BASE_DIR / "docs" / "data" / "latest_ai.json"
 
 
 def priority_label(priority: str) -> str:
@@ -66,13 +67,20 @@ def alert_heading() -> str:
     return os.environ.get("DISCORD_ALERT_TITLE", "시장 모니터 알림").strip() or "시장 모니터 알림"
 
 
+def ai_alert_heading() -> str:
+    return os.environ.get("DISCORD_AI_ALERT_TITLE", "AI 시장 분석 알림").strip() or "AI 시장 분석 알림"
+
+
 def main() -> None:
     webhook_url = os.environ.get("DISCORD_WEBHOOK_URL", "").strip()
     if not webhook_url:
         print("DISCORD_WEBHOOK_URL not set, skipping.")
         return
 
-    latest_path = resolve_latest_path()
+    if env_flag("DISCORD_AI_ALERTS", default=False):
+        latest_path = LATEST_AI_PATH
+    else:
+        latest_path = resolve_latest_path()
 
     if not latest_path.exists():
         print(f"{latest_path.name} not found, skipping.")
@@ -80,6 +88,33 @@ def main() -> None:
 
     with latest_path.open("r", encoding="utf-8") as f:
         payload = json.load(f)
+
+    if env_flag("DISCORD_AI_ALERTS", default=False):
+        notifications = payload.get("ai_notifications", {}).get("items", [])
+        if not notifications:
+            print("No AI notifications to send.")
+            return
+        market = payload.get("market", {})
+        lines = [
+            ai_alert_heading(),
+            f"업데이트: {payload.get('generated_at_et', '-')}",
+            f"기준: {payload.get('market_data_as_of', '-')}",
+            f"상태: {market.get('state', '-')} / {market.get('score', '-')}/100 / {market.get('action', '-')}",
+            "",
+        ]
+        for item in notifications[:8]:
+            lines.append(f"{priority_label(item.get('priority', ''))} {item.get('title', '-')}")
+            lines.append(item.get("message", "-"))
+            lines.append("")
+
+        content = "\n".join(lines).strip()
+        if len(content) > 1800:
+            content = f"{content[:1790]}\n..."
+
+        response = requests.post(webhook_url, json={"content": content}, timeout=15)
+        response.raise_for_status()
+        print(f"Sent Discord AI message with {len(notifications)} AI notifications.")
+        return
 
     if env_flag("DISCORD_MARKET_SUMMARY", default=False):
         content = build_market_summary(payload).replace("시장 상태 요약", summary_heading(), 1)
