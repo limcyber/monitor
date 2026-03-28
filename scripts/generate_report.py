@@ -346,6 +346,17 @@ def generate_watchlist_ai_analysis(output: dict) -> dict:
         return build_watchlist_ai_output(output, [], "error", f"종목 AI 분석 실패: {summarize_ai_error(exc)}")
 
 
+def write_ai_outputs(output: dict) -> None:
+    ai_output = generate_market_ai_analysis(output)
+    market_ai_output = build_market_ai_output(output, ai_output)
+    watchlist_ai_output = generate_watchlist_ai_analysis(output)
+    DOCS_DATA_DIR.mkdir(parents=True, exist_ok=True)
+    with AI_OUTPUT_PATH.open("w", encoding="utf-8") as f:
+        json.dump(market_ai_output, f, indent=2)
+    with WATCHLIST_AI_OUTPUT_PATH.open("w", encoding="utf-8") as f:
+        json.dump(watchlist_ai_output, f, indent=2)
+
+
 def to_date_list(values: list[str]) -> list[date]:
     result = []
     for value in values:
@@ -2228,6 +2239,13 @@ def main() -> None:
     as_of = now_et.date()
     previous_output = load_json(OUTPUT_PATH)
     existing_history = load_json(HISTORY_PATH)
+    run_ai_analysis = os.environ.get("RUN_AI_ANALYSIS", "false").strip().lower() in {"1", "true", "yes", "on"}
+    ai_only_mode = os.environ.get("AI_ONLY_MODE", "false").strip().lower() in {"1", "true", "yes", "on"}
+
+    if ai_only_mode:
+        if previous_output:
+            write_ai_outputs(previous_output)
+        return
 
     watchlist = load_yaml(WATCHLIST_PATH).get("watchlist", [])
     if len(watchlist) != 8:
@@ -2443,10 +2461,6 @@ def main() -> None:
     }
     output["notifications"]["items"] = build_notifications(as_of, previous_output, market_output, stock_reports)
     output["notifications"]["count"] = len(output["notifications"]["items"])
-    ai_output = generate_market_ai_analysis(output)
-    market_ai_output = build_market_ai_output(output, ai_output)
-    watchlist_ai_output = generate_watchlist_ai_analysis(output)
-
     history = update_history(existing_history, output, as_of)
     output["market"]["history_tags"] = score_history_tags(history.get("market", []))
     for stock in output["stocks"]:
@@ -2456,12 +2470,10 @@ def main() -> None:
     DOCS_DATA_DIR.mkdir(parents=True, exist_ok=True)
     with OUTPUT_PATH.open("w", encoding="utf-8") as f:
         json.dump(output, f, indent=2)
-    with AI_OUTPUT_PATH.open("w", encoding="utf-8") as f:
-        json.dump(market_ai_output, f, indent=2)
-    with WATCHLIST_AI_OUTPUT_PATH.open("w", encoding="utf-8") as f:
-        json.dump(watchlist_ai_output, f, indent=2)
     with HISTORY_PATH.open("w", encoding="utf-8") as f:
         json.dump(history, f, indent=2)
+    if run_ai_analysis:
+        write_ai_outputs(output)
 
 
 def close_true(spy: pd.DataFrame) -> bool:

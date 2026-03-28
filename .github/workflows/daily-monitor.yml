@@ -66,7 +66,7 @@ jobs:
       - name: Generate report
         if: github.event_name != 'schedule' || steps.market_window.outputs.should_run == 'true'
         env:
-          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          RUN_AI_ANALYSIS: "false"
         run: |
           python scripts/generate_report.py
           python scripts/generate_kr_report.py
@@ -88,7 +88,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data/latest.json docs/data/latest_ai.json docs/data/latest_watchlist_ai.json docs/data/history.json docs/data/latest_kr.json docs/data/history_kr.json
+          git add docs/data/latest.json docs/data/history.json docs/data/latest_kr.json docs/data/history_kr.json
           git diff --cached --quiet || git commit -m "chore: update market snapshot"
           git push
 

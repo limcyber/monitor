@@ -6,7 +6,7 @@ on:
     - cron: "*/2 * * * *"
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -67,7 +67,18 @@ jobs:
         if: github.event_name != 'schedule' || steps.market_window.outputs.should_run == 'true'
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          RUN_AI_ANALYSIS: "true"
+          AI_ONLY_MODE: "true"
         run: python scripts/generate_report.py
+
+      - name: Commit AI analysis data
+        if: github.event_name != 'schedule' || steps.market_window.outputs.should_run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/latest_ai.json docs/data/latest_watchlist_ai.json
+          git diff --cached --quiet || git commit -m "chore: refresh ai analysis"
+          git push
 
       - name: Upload artifact
         if: github.event_name != 'schedule' || steps.market_window.outputs.should_run == 'true'
