@@ -322,9 +322,31 @@ function changePctFromSeries(series) {
   return ((current / prev) - 1) * 100;
 }
 
-function renderStressTable(charts) {
-  const el = document.getElementById("krStressTable");
+function renderStressColumn(targetId, rows) {
+  const el = document.getElementById(targetId);
   if (!el) return;
+  el.innerHTML = `
+    <div class="stress-column-grid">
+      ${rows
+        .map(
+          (row) => `
+          <article class="stress-cell">
+            <div class="stress-main">
+              <strong class="stress-label">${row.label}</strong>
+              <span class="stress-value">${row.value == null ? "-" : formatAxisValue(row.value)}</span>
+              <span class="stress-change ${quoteTone(row.change, row.label === "USD/KRW" || row.label === "VIX")}">${formatPercent(row.change)}</span>
+            </div>
+            <div class="stress-note">${row.note}</div>
+            <div class="stress-spark">${renderMiniSparkline(row.series, row.color)}</div>
+          </article>
+        `
+        )
+        .join("")}
+    </div>
+  `;
+}
+
+function renderStressTable(charts) {
   const rows = [
     {
       label: "KOSPI200",
@@ -332,6 +354,7 @@ function renderStressTable(charts) {
       change: changePctFromSeries(charts?.kospi200_close),
       note: "대형 대표주 체감",
       color: "#2563eb",
+      series: charts?.kospi200_close,
     },
     {
       label: "USD/KRW",
@@ -339,6 +362,7 @@ function renderStressTable(charts) {
       change: changePctFromSeries(charts?.usdkrw_close),
       note: "원달러 부담",
       color: "#ef4444",
+      series: charts?.usdkrw_close,
     },
     {
       label: "VIX",
@@ -346,6 +370,7 @@ function renderStressTable(charts) {
       change: changePctFromSeries(charts?.vix_close),
       note: "해외 변동성",
       color: "#6b7280",
+      series: charts?.vix_close,
     },
     {
       label: "KOSDAQ/KOSPI",
@@ -353,27 +378,11 @@ function renderStressTable(charts) {
       change: changePctFromSeries(charts?.kosdaq_kospi_ratio),
       note: "중소형 참여도",
       color: "#f59e0b",
+      series: charts?.kosdaq_kospi_ratio,
     },
   ];
-  el.innerHTML = `
-    <div class="stress-table-grid">
-      ${rows
-        .map(
-          (row) => `
-          <div class="stress-row">
-            <div class="stress-main">
-              <strong>${row.label}</strong>
-              <span>${row.value == null ? "-" : formatAxisValue(row.value)}</span>
-              <span class="${quoteTone(row.change, row.label === "USD/KRW" || row.label === "VIX")}">${formatPercent(row.change)}</span>
-            </div>
-            <div class="stress-note">${row.note}</div>
-            <div class="stress-spark">${renderMiniSparkline(charts?.[row.label === "KOSPI200" ? "kospi200_close" : row.label === "USD/KRW" ? "usdkrw_close" : row.label === "VIX" ? "vix_close" : "kosdaq_kospi_ratio"], row.color)}</div>
-          </div>
-        `
-        )
-        .join("")}
-    </div>
-  `;
+  renderStressColumn("krStressPrimary", rows.slice(0, 2));
+  renderStressColumn("krStressSecondary", rows.slice(2, 4));
 }
 
 function renderMarket(data) {
