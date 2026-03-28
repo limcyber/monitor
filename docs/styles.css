@@ -1194,7 +1194,7 @@ body[data-theme="bw"] .stock-chart {
 }
 
 .stress-axis-row {
-  margin-top: 3px;
+  margin-top: 2px;
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
@@ -1206,10 +1206,10 @@ body[data-theme="bw"] .stock-chart {
 }
 
 .stress-axis-chip {
-  font-size: 9px;
+  font-size: 10px;
   line-height: 1.2;
   color: var(--muted);
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
   white-space: nowrap;
 }
 
@@ -1234,6 +1234,10 @@ body[data-theme="bw"] .stress-mini-label {
 
 body[data-theme="bw"] .stress-axis-chip {
   color: #86bf88;
+}
+
+.stress-note {
+  display: none;
 }
 
 .chart-head {

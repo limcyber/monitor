@@ -369,15 +369,14 @@ function renderStressColumn(targetId, rows) {
               <span class="stress-value">${row.value == null ? "-" : formatAxisValue(row.value)}</span>
               <span class="stress-change ${quoteTone(row.change, row.label === "USD/KRW" || row.label === "VIX" || row.label === "Brent")}">${formatPercent(row.change)}</span>
             </div>
-            <div class="stress-note">${row.note}</div>
             <div class="stress-axis-row">
-              <span class="stress-axis-chip">y축 최고 ${axis.yMax}</span>
-              <span class="stress-axis-chip">y축 최저 ${axis.yMin}</span>
+              <span class="stress-axis-chip">${axis.yMin}</span>
+              <span class="stress-axis-chip">${axis.yMax}</span>
             </div>
             <div class="stress-spark">${renderMiniSparkline(row.series, row.color)}</div>
             <div class="stress-axis-row stress-axis-row-bottom">
-              <span class="stress-axis-chip">x축 시작 ${axis.xStart} (${axis.xStartDate})</span>
-              <span class="stress-axis-chip">x축 현재 ${axis.xEnd} (${axis.xEndDate})</span>
+              <span class="stress-axis-chip">${axis.xStartDate} ${axis.xStart}</span>
+              <span class="stress-axis-chip">${axis.xEndDate} ${axis.xEnd}</span>
             </div>
           </article>
         `;})()}
