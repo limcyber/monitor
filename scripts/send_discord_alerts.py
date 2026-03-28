@@ -34,20 +34,20 @@ def build_market_summary(payload: dict) -> str:
     cross_text = " / ".join(item.split(":")[0].strip() for item in cross_items[:2]) if cross_items else "뚜렷한 신호 없음"
     lines = [
         "시장 상태 요약",
-        f"생성 시각: {payload.get('generated_at_et', '-')}",
-        f"데이터 기준: {payload.get('market_data_as_of', '-')}",
-        f"시장 상태: {market.get('state', '-')}",
-        f"점수 / 행동: {market.get('score', '-')}/100 / {market.get('action', '-')}",
-        f"크로스 신호: {cross_text}",
+        f"생성: {payload.get('generated_at_et', '-')}",
+        f"기준: {payload.get('market_data_as_of', '-')}",
+        f"상태: {market.get('state', '-')}",
+        f"행동: {market.get('score', '-')}/100 / {market.get('action', '-')}",
+        f"크로스: {cross_text}",
     ]
     if market.get("top_reasons"):
-        lines.append(f"핵심 이유: {market['top_reasons'][0]}")
+        lines.append(f"핵심: {market['top_reasons'][0]}")
     if top_rows:
         top_text = ", ".join(
             f"{row.get('name', row.get('ticker', '-'))}: {row.get('stock_score', '-')}/100 {row.get('stock_state', '-')}"
             for row in top_rows
         )
-        lines.append(f"상위 관심종목: {top_text}")
+        lines.append(f"관심: {top_text}")
     return "\n".join(lines)
 
 
@@ -96,9 +96,9 @@ def main() -> None:
     market = payload.get("market", {})
     lines = [
         alert_heading(),
-        f"생성 시각: {payload.get('generated_at_et', '-')}",
-        f"데이터 기준: {payload.get('market_data_as_of', '-')}",
-        f"시장 상태: {market.get('state', '-')} / {market.get('score', '-')}/100 / {market.get('action', '-')}",
+        f"생성: {payload.get('generated_at_et', '-')}",
+        f"기준: {payload.get('market_data_as_of', '-')}",
+        f"상태: {market.get('state', '-')} / {market.get('score', '-')}/100 / {market.get('action', '-')}",
         "",
     ]
     for item in notifications[:8]:

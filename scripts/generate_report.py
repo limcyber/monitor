@@ -1630,8 +1630,8 @@ def build_notifications(as_of: date, previous_output: dict, market_output: dict,
         direction = "하락" if current_level < prev_level else "회복"
         priority = "high" if current_level < prev_level else "medium"
         message = (
-            f"시장 레벨이 {prev_level}/{MARKET_LEVELS_TOTAL}에서 {current_level}/{MARKET_LEVELS_TOTAL}로 {direction}했습니다. "
-            f"현재 추천 행동은 '{market_output['action']}'입니다."
+            f"레벨 {prev_level}/{MARKET_LEVELS_TOTAL} -> {current_level}/{MARKET_LEVELS_TOTAL}. "
+            f"지금은 '{market_output['action']}' 기준으로 보는 편이 좋습니다."
         )
         notifications.append(
             build_notification(
@@ -1652,7 +1652,7 @@ def build_notifications(as_of: date, previous_output: dict, market_output: dict,
                 "high",
                 "market_high_stress",
                 "고스트레스 구간 진입",
-                "VIX가 높은 구간으로 올라왔습니다. 신규 진입은 더 보수적으로 보는 편이 좋습니다.",
+                "VIX 부담이 큽니다. 새 매수보다 방어를 먼저 보는 편이 좋습니다.",
             )
         )
 
@@ -1669,7 +1669,7 @@ def build_notifications(as_of: date, previous_output: dict, market_output: dict,
                     "high" if "중기" in cross else "medium",
                     "market_dead_cross",
                     title,
-                    cross,
+                    f"{cross} 매수보다 방어를 먼저 보는 편이 좋습니다.",
                 )
             )
         elif "골든크로스" in cross and current_level >= 4:
@@ -1679,7 +1679,7 @@ def build_notifications(as_of: date, previous_output: dict, market_output: dict,
                     "low",
                     "market_golden_cross",
                     title,
-                    cross,
+                    f"{cross} 다만 시장 점수 확인 후 선별 접근이 좋습니다.",
                 )
             )
 
@@ -1703,7 +1703,7 @@ def build_notifications(as_of: date, previous_output: dict, market_output: dict,
                 "high",
                 "market_below_200dma",
                 "핵심 지수 200일선 이탈",
-                "S&P500과 Nasdaq이 모두 200일선 아래에 있습니다. 방어적으로 보는 편이 좋습니다.",
+                "S&P500과 Nasdaq이 모두 200일선 아래입니다. 반등 추격보다 대기가 낫습니다.",
             )
         )
 
@@ -1716,7 +1716,7 @@ def build_notifications(as_of: date, previous_output: dict, market_output: dict,
                 "high",
                 "market_event_risk",
                 "중요 일정 임박",
-                f"{', '.join(current_event_names)} 일정이 가까워졌습니다. 변동성이 커질 수 있어 보수적으로 보는 편이 좋습니다.",
+                f"{', '.join(current_event_names)} 전입니다. 새 진입은 줄이고 변동성 대비가 좋습니다.",
             )
         )
 
@@ -1729,7 +1729,7 @@ def build_notifications(as_of: date, previous_output: dict, market_output: dict,
                 "medium",
                 "data_warning",
                 "데이터 확인 필요",
-                f"데이터 주의 항목: {', '.join(current_warnings)}",
+                f"데이터 주의: {', '.join(current_warnings)}",
             )
         )
 
@@ -1765,7 +1765,7 @@ def build_notifications(as_of: date, previous_output: dict, market_output: dict,
                     "medium",
                     "stock_entry_candidate",
                     f"{ticker} 진입 후보",
-                    f"{ticker}가 {stock['stock_score']}/100으로 올라왔고 추천 행동은 '{current_action}'입니다.",
+                    f"{ticker} {stock['stock_score']}/100, '{current_action}'입니다. 관심 후보로 올려둘 만합니다.",
                     scope="stock",
                     ticker=ticker,
                 )
@@ -1780,7 +1780,7 @@ def build_notifications(as_of: date, previous_output: dict, market_output: dict,
                     "medium",
                     "stock_weakened",
                     f"{ticker} 상태 약화",
-                    f"{ticker} 상태가 {prev_state}에서 {current_state}(으)로 약해졌습니다. 지금은 더 보수적으로 보는 편이 좋습니다.",
+                    f"{ticker} 상태가 {prev_state} -> {current_state}(으)로 약해졌습니다. 비중 축소나 대기 쪽이 낫습니다.",
                     scope="stock",
                     ticker=ticker,
                 )
@@ -1795,7 +1795,7 @@ def build_notifications(as_of: date, previous_output: dict, market_output: dict,
                     "medium",
                     "stock_action_softened",
                     f"{ticker} 추천 행동 약화",
-                    f"{ticker} 추천 행동이 '{prev_action}'에서 '{current_action}'(으)로 더 보수적으로 바뀌었습니다.",
+                    f"{ticker} 행동이 '{prev_action}' -> '{current_action}'(으)로 약해졌습니다. 추격보다 관망이 좋습니다.",
                     scope="stock",
                     ticker=ticker,
                 )
@@ -1819,7 +1819,7 @@ def build_notifications(as_of: date, previous_output: dict, market_output: dict,
                             "medium",
                             "stock_earnings_near",
                             f"{ticker} 실적 임박",
-                            f"{ticker} 실적발표일이 {stock['earnings_date_label']}로 가까워졌습니다. 신규 진입은 더 보수적으로 보는 편이 좋습니다.",
+                            f"{ticker} 실적이 {stock['earnings_date_label']}입니다. 신규 진입보다 대기가 낫습니다.",
                             scope="stock",
                             ticker=ticker,
                         )
@@ -1836,7 +1836,7 @@ def build_notifications(as_of: date, previous_output: dict, market_output: dict,
                         "medium",
                         "stock_dead_cross",
                         f"{ticker} 데드크로스",
-                        cross,
+                        f"{cross} 매수보다 대기나 비중 조절 쪽이 낫습니다.",
                         scope="stock",
                         ticker=ticker,
                     )
@@ -1849,7 +1849,7 @@ def build_notifications(as_of: date, previous_output: dict, market_output: dict,
                         "low",
                         "stock_golden_cross",
                         f"{ticker} 골든크로스",
-                        cross,
+                        f"{cross} 다만 시장 점수 확인 후 선별 접근이 좋습니다.",
                         scope="stock",
                         ticker=ticker,
                     )
@@ -1864,7 +1864,7 @@ def build_notifications(as_of: date, previous_output: dict, market_output: dict,
                 "high",
                 "market_stock_weakness_combo",
                 "시장 약세와 종목 약화 동시 발생",
-                f"시장 쪽 데드크로스가 확인됐고 {joined_names}도 함께 약해졌습니다. 매수보다 방어와 비중 조절을 먼저 보는 편이 좋습니다.",
+                f"시장 데드크로스와 {joined_names} 약세가 겹쳤습니다. 매수보다 방어와 비중 조절이 먼저입니다.",
             )
         )
 

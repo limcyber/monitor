@@ -63,7 +63,7 @@ def build_kr_notifications(as_of, previous_output: dict, market_output: dict, st
                 priority,
                 "kr_market_level_change",
                 f"한국 시장 레벨 {direction}",
-                f"한국 시장 레벨이 {prev_level}/6에서 {current_level}/6으로 {direction}했습니다. 현재 추천 행동은 '{market_output['action']}'입니다.",
+                f"레벨 {prev_level}/6 -> {current_level}/6. 지금은 '{market_output['action']}' 기준으로 보는 편이 좋습니다.",
             )
         )
 
@@ -76,7 +76,7 @@ def build_kr_notifications(as_of, previous_output: dict, market_output: dict, st
                 "high",
                 "kr_market_high_stress",
                 "한국 시장 고스트레스 구간",
-                "원달러와 해외 변동성 부담이 같이 높아졌습니다. 신규 진입은 더 보수적으로 보는 편이 좋습니다.",
+                "원달러와 변동성 부담이 큽니다. 새 매수보다 방어를 먼저 보는 편이 좋습니다.",
             )
         )
 
@@ -92,7 +92,7 @@ def build_kr_notifications(as_of, previous_output: dict, market_output: dict, st
                     "high" if "중기" in cross else "medium",
                     "kr_market_dead_cross",
                     cross,
-                    cross,
+                    f"{cross}. 신규 매수보다 대기나 방어 쪽이 낫습니다.",
                 )
             )
         elif "골든크로스" in cross and current_level >= 4:
@@ -102,7 +102,7 @@ def build_kr_notifications(as_of, previous_output: dict, market_output: dict, st
                     "low",
                     "kr_market_golden_cross",
                     cross,
-                    cross,
+                    f"{cross}. 다만 시장 점수 확인 후 선별 접근이 좋습니다.",
                 )
             )
 
@@ -126,7 +126,7 @@ def build_kr_notifications(as_of, previous_output: dict, market_output: dict, st
                 "high",
                 "kr_market_below_200dma",
                 "한국 핵심 지수 200일선 이탈",
-                "KOSPI와 KOSDAQ이 모두 200일선 아래에 있습니다. 방어적으로 보는 편이 좋습니다.",
+                "KOSPI와 KOSDAQ이 모두 200일선 아래입니다. 신규 매수보다 대기가 낫습니다.",
             )
         )
 
@@ -139,7 +139,7 @@ def build_kr_notifications(as_of, previous_output: dict, market_output: dict, st
                 "medium",
                 "kr_data_warning",
                 "한국 데이터 확인 필요",
-                f"데이터 주의 항목: {', '.join(current_warnings)}",
+                f"데이터 주의: {', '.join(current_warnings)}",
             )
         )
 
@@ -176,7 +176,7 @@ def build_kr_notifications(as_of, previous_output: dict, market_output: dict, st
                     "medium",
                     "kr_stock_entry_candidate",
                     f"{name} 진입 후보",
-                    f"{name}가 {stock['stock_score']}/100으로 올라왔고 추천 행동은 '{current_action}'입니다.",
+                    f"{name} {stock['stock_score']}/100, '{current_action}'입니다. 관심 후보로 올려둘 만합니다.",
                     scope="stock",
                     ticker=ticker,
                 )
@@ -191,7 +191,7 @@ def build_kr_notifications(as_of, previous_output: dict, market_output: dict, st
                     "medium",
                     "kr_stock_weakened",
                     f"{name} 상태 약화",
-                    f"{name} 상태가 {prev_state}에서 {current_state}(으)로 약해졌습니다. 지금은 더 보수적으로 보는 편이 좋습니다.",
+                    f"{name} 상태가 {prev_state} -> {current_state}(으)로 약해졌습니다. 비중 축소나 대기 쪽이 낫습니다.",
                     scope="stock",
                     ticker=ticker,
                 )
@@ -206,7 +206,7 @@ def build_kr_notifications(as_of, previous_output: dict, market_output: dict, st
                     "medium",
                     "kr_stock_action_softened",
                     f"{name} 추천 행동 약화",
-                    f"{name} 추천 행동이 '{prev_action}'에서 '{current_action}'(으)로 더 보수적으로 바뀌었습니다.",
+                    f"{name} 행동이 '{prev_action}' -> '{current_action}'(으)로 약해졌습니다. 추격보다 관망이 좋습니다.",
                     scope="stock",
                     ticker=ticker,
                 )
@@ -223,7 +223,7 @@ def build_kr_notifications(as_of, previous_output: dict, market_output: dict, st
                         "medium",
                         "kr_stock_dead_cross",
                         f"{name} 데드크로스",
-                        cross,
+                        f"{cross}. 매수보다 대기나 비중 조절 쪽이 낫습니다.",
                         scope="stock",
                         ticker=ticker,
                     )
@@ -236,7 +236,7 @@ def build_kr_notifications(as_of, previous_output: dict, market_output: dict, st
                         "low",
                         "kr_stock_golden_cross",
                         f"{name} 골든크로스",
-                        cross,
+                        f"{cross}. 다만 시장 점수 확인 후 선별 접근이 좋습니다.",
                         scope="stock",
                         ticker=ticker,
                     )
@@ -251,7 +251,7 @@ def build_kr_notifications(as_of, previous_output: dict, market_output: dict, st
                 "high",
                 "kr_market_stock_weakness_combo",
                 "한국 시장 약세와 종목 약화 동시 발생",
-                f"한국 시장 데드크로스가 확인됐고 {joined_names}도 함께 약해졌습니다. 신규 진입보다 방어와 비중 조절을 먼저 보는 편이 좋습니다.",
+                f"한국 시장 데드크로스와 {joined_names} 약세가 겹쳤습니다. 신규 매수보다 방어와 비중 조절이 먼저입니다.",
             )
         )
 
