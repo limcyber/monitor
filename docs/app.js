@@ -623,12 +623,12 @@ function renderStocks(stocks) {
         data: {
           labels: s.series.dates,
           datasets: [
-            { type: "line", label: `${s.ticker} 종가`, data: s.series.close, borderColor: stockPalette.close, yAxisID: "price" },
+            { type: "line", label: "종가", data: s.series.close, borderColor: stockPalette.close, yAxisID: "price" },
             { type: "line", label: "5일선", data: s.series.dma5, borderColor: stockPalette.dma5, yAxisID: "price" },
             { type: "line", label: "20일선", data: s.series.dma20, borderColor: stockPalette.dma20, yAxisID: "price" },
             { type: "line", label: "50일선", data: s.series.dma50, borderColor: stockPalette.dma50, yAxisID: "price" },
             { type: "bar", label: "거래량", data: s.series.volume, backgroundColor: "rgba(249, 115, 22, 0.16)", borderColor: "rgba(249, 115, 22, 0.22)", yAxisID: "volume", order: 2 },
-            { type: "line", label: "20일 평균 거래량", data: s.series.volume_dma20, borderColor: stockPalette.volume, yAxisID: "volume", borderWidth: 1.2, pointRadius: 0, borderDash: [4, 4], order: 1 },
+            { type: "line", label: "20일 평균", data: s.series.volume_dma20, borderColor: stockPalette.volume, yAxisID: "volume", borderWidth: 1.2, pointRadius: 0, borderDash: [4, 4], order: 1 },
           ],
         },
         plugins: [backgroundPlugin],
