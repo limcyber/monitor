@@ -1075,10 +1075,6 @@ body[data-theme="bw"] .stock-chart {
 }
 
 @media (max-width: 960px) {
-  .desktop-only {
-    display: none !important;
-  }
-
   .mobile-only,
   .mobile-dashboard {
     display: block;
