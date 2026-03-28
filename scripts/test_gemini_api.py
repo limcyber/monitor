@@ -65,9 +65,68 @@ def load_latest_market_payload() -> dict:
     }
 
 
+def load_latest_watchlist_payload() -> dict:
+    data = json.loads(LATEST_US_PATH.read_text(encoding="utf-8"))
+    market = data.get("market", {})
+    stocks_by_ticker = {stock.get("ticker"): stock for stock in data.get("stocks", [])}
+    rows = []
+    for row in data.get("watchlist_summary", [])[:10]:
+        ticker = row.get("ticker")
+        stock = stocks_by_ticker.get(ticker, {})
+        rows.append(
+            {
+                "ticker": ticker,
+                "close": row.get("close"),
+                "change_pct": row.get("close_change_pct"),
+                "score": row.get("stock_score"),
+                "state": row.get("stock_state"),
+                "action": row.get("final_action"),
+                "note": row.get("note"),
+                "cross_highlights": stock.get("cross_highlights", [])[:3],
+                "top_reasons": stock.get("top_reasons", [])[:4],
+                "earnings_date": stock.get("earnings_date"),
+            }
+        )
+    return {
+        "generated_at_et": data.get("generated_at_et"),
+        "market_data_as_of": data.get("market_data_as_of"),
+        "market": {
+            "score": market.get("score"),
+            "state": market.get("state"),
+            "action": market.get("action"),
+            "top_reasons": market.get("top_reasons", [])[:4],
+            "cross_highlights": market.get("cross_highlights", [])[:3],
+        },
+        "watchlist": rows,
+    }
+
+
 def build_prompt(mode: str) -> str:
     if mode == "simple":
         return "현재 미국 시장을 볼 때 핵심 체크 포인트 5개를 한국어로 아주 짧게 정리해줘."
+
+    if mode == "watchlist":
+        payload = load_latest_watchlist_payload()
+        return f"""
+너는 미국 관심종목을 빠르게 정리하는 실전형 전문 애널리스트다.
+
+아래는 최대 10개 미국 관심종목의 현재 데이터다.
+1. 각 종목마다 검색으로 확인된 최신 주요 헤드라인 뉴스와 현재 추세를 함께 본다.
+2. 확인되지 않은 내용은 단정하지 않는다.
+3. 한국어로만 짧고 실전적으로 쓴다.
+4. 반드시 JSON 배열만 출력한다. 마크다운이나 설명 문장은 쓰지 않는다.
+5. 각 원소는 아래 키만 가진다.
+   - ticker: 문자열
+   - ai_score: 0~100 정수
+   - ai_state: 짧은 상태 문자열
+   - ai_action: 짧은 추천 행동 문자열
+   - ai_note: 한두 문장 메모. 가능하면 최신 헤드라인 뉴스 한 가지와 현재 추세를 함께 넣는다.
+6. 점수는 현재 추세와 뉴스 흐름을 함께 반영하되, 현재 규칙 기반 점수와 완전히 동떨어지지 않게 쓴다.
+7. 길게 쓰지 말고 종목당 메모는 1~2문장으로 끝낸다.
+
+종목 데이터:
+{json.dumps(payload, ensure_ascii=False, indent=2)}
+""".strip()
 
     payload = load_latest_market_payload()
     return f"""
@@ -112,7 +171,7 @@ def import_gemini():
 def main() -> int:
     parser = argparse.ArgumentParser(description="Gemini API local smoke test")
     parser.add_argument("--model", default=DEFAULT_MODEL, help="Gemini model name")
-    parser.add_argument("--mode", choices=["simple", "market"], default="simple", help="Prompt mode")
+    parser.add_argument("--mode", choices=["simple", "market", "watchlist"], default="simple", help="Prompt mode")
     parser.add_argument("--with-search", dest="with_search", action="store_true", help="Enable Google Search tool")
     parser.add_argument("--no-search", dest="with_search", action="store_false", help="Disable Google Search tool")
     parser.set_defaults(with_search=True)

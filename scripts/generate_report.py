@@ -23,6 +23,7 @@ EARNINGS_PATH = BASE_DIR / "config" / "earnings_calendar.yml"
 OUTPUT_PATH = DOCS_DATA_DIR / "latest.json"
 HISTORY_PATH = DOCS_DATA_DIR / "history.json"
 AI_OUTPUT_PATH = DOCS_DATA_DIR / "latest_ai.json"
+WATCHLIST_AI_OUTPUT_PATH = DOCS_DATA_DIR / "latest_watchlist_ai.json"
 ET = ZoneInfo("America/New_York")
 MARKET_LEVELS_TOTAL = 6
 GEMINI_MODEL = "gemini-2.5-flash"
@@ -125,11 +126,118 @@ def build_market_ai_output(output: dict, ai_analysis: dict) -> dict:
     }
 
 
+def build_watchlist_ai_payload(output: dict) -> dict:
+    stocks_by_ticker = {stock.get("ticker"): stock for stock in output.get("stocks", [])}
+    rows = []
+    for row in output.get("watchlist_summary", [])[:10]:
+        ticker = row.get("ticker")
+        stock = stocks_by_ticker.get(ticker, {})
+        rows.append(
+            {
+                "ticker": ticker,
+                "close": row.get("close"),
+                "change_pct": row.get("close_change_pct"),
+                "score": row.get("stock_score"),
+                "state": row.get("stock_state"),
+                "action": row.get("final_action"),
+                "note": row.get("note"),
+                "cross_highlights": stock.get("cross_highlights", [])[:3],
+                "top_reasons": stock.get("top_reasons", [])[:4],
+                "earnings_date": stock.get("earnings_date"),
+            }
+        )
+
+    market = output.get("market", {})
+    return {
+        "generated_at_et": output.get("generated_at_et"),
+        "market_data_as_of": output.get("market_data_as_of"),
+        "market": {
+            "score": market.get("score"),
+            "state": market.get("state"),
+            "action": market.get("action"),
+            "top_reasons": market.get("top_reasons", [])[:4],
+            "cross_highlights": market.get("cross_highlights", [])[:3],
+        },
+        "watchlist": rows,
+    }
+
+
+def build_watchlist_ai_output(output: dict, ai_items: list[dict], status: str, error: str | None = None) -> dict:
+    return {
+        "generated_at_et": output.get("generated_at_et"),
+        "market_data_as_of": output.get("market_data_as_of"),
+        "status": status,
+        "error": error,
+        "items": ai_items,
+    }
+
+
 def summarize_ai_error(exc: Exception) -> str:
     message = str(exc).strip().replace("\n", " ")
     if not message:
         message = exc.__class__.__name__
     return message[:220]
+
+
+def strip_code_fence(text: str) -> str:
+    cleaned = text.strip()
+    if cleaned.startswith("```"):
+        lines = cleaned.splitlines()
+        if lines and lines[0].startswith("```"):
+            lines = lines[1:]
+        if lines and lines[-1].strip() == "```":
+            lines = lines[:-1]
+        cleaned = "\n".join(lines).strip()
+    return cleaned
+
+
+def parse_json_blob(text: str):
+    cleaned = strip_code_fence(text)
+    try:
+        return json.loads(cleaned)
+    except Exception:
+        pass
+
+    start_candidates = [idx for idx in [cleaned.find("["), cleaned.find("{")] if idx >= 0]
+    if not start_candidates:
+        raise ValueError("JSON 응답을 찾지 못했습니다.")
+    start = min(start_candidates)
+
+    end_candidates = [idx for idx in [cleaned.rfind("]"), cleaned.rfind("}")] if idx >= 0]
+    if not end_candidates:
+        raise ValueError("JSON 응답을 찾지 못했습니다.")
+    end = max(end_candidates)
+    return json.loads(cleaned[start : end + 1])
+
+
+def gemini_generate_text(prompt: str, api_key: str) -> str:
+    try:
+        from google import genai
+        from google.genai import types
+
+        client = genai.Client(api_key=api_key)
+        response = client.models.generate_content(
+            model=GEMINI_MODEL,
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                temperature=0.2,
+                tools=[types.Tool(google_search=types.GoogleSearch())],
+            ),
+        )
+        text = (getattr(response, "text", None) or "").strip()
+        if not text:
+            raise ValueError("empty Gemini response")
+        return text
+    except ModuleNotFoundError:
+        import google.generativeai as genai
+
+        genai.configure(api_key=api_key)
+        model = genai.GenerativeModel(GEMINI_MODEL)
+        response = model.generate_content(prompt)
+        text = (getattr(response, "text", None) or "").strip()
+        if not text:
+            raise ValueError("empty Gemini response")
+        return text
 
 
 def generate_market_ai_analysis(output: dict) -> dict:
@@ -166,53 +274,76 @@ AI 판단: ... (AI 점수: xx/100, AI 매매 여건: ..., AI 추천 행동: ...)
 """.strip()
 
     try:
-        from google import genai
-        from google.genai import types
-
-        client = genai.Client(api_key=api_key)
-        response = client.models.generate_content(
-            model=GEMINI_MODEL,
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                temperature=0.2,
-                tools=[types.Tool(google_search=types.GoogleSearch())],
-            ),
-        )
-        text = (getattr(response, "text", None) or "").strip()
-        if not text:
-            raise ValueError("empty Gemini response")
+        text = gemini_generate_text(prompt, api_key)
         return {
             "status": "ok",
             "model": GEMINI_MODEL,
             "content": text,
         }
-    except ModuleNotFoundError:
-        try:
-            import google.generativeai as genai
-
-            genai.configure(api_key=api_key)
-            model = genai.GenerativeModel(GEMINI_MODEL)
-            response = model.generate_content(prompt)
-            text = (getattr(response, "text", None) or "").strip()
-            if not text:
-                raise ValueError("empty Gemini response")
-            return {
-                "status": "ok",
-                "model": GEMINI_MODEL,
-                "content": text,
-            }
-        except Exception as exc:
-            return {
-                "status": "error",
-                "model": GEMINI_MODEL,
-                "content": f"AI 분석 실패: {summarize_ai_error(exc)}",
-            }
     except Exception as exc:
         return {
             "status": "error",
             "model": GEMINI_MODEL,
             "content": f"AI 분석 실패: {summarize_ai_error(exc)}",
         }
+
+
+def generate_watchlist_ai_analysis(output: dict) -> dict:
+    api_key = os.environ.get("GOOGLE_API_KEY") or os.environ.get("GEMINI_API_KEY")
+    if not api_key:
+        return build_watchlist_ai_output(output, [], "disabled", "GOOGLE_API_KEY가 없어 종목 AI 분석을 건너뛰었습니다.")
+
+    payload = build_watchlist_ai_payload(output)
+    prompt = f"""
+너는 미국 관심종목을 빠르게 정리하는 실전형 전문 애널리스트다.
+
+아래는 최대 10개 미국 관심종목의 현재 데이터다.
+1. 각 종목마다 검색으로 확인된 최신 주요 헤드라인 뉴스와 현재 추세를 함께 본다.
+2. 확인되지 않은 내용은 단정하지 않는다.
+3. 한국어로만 짧고 실전적으로 쓴다.
+4. 반드시 JSON 배열만 출력한다. 마크다운이나 설명 문장은 쓰지 않는다.
+5. 각 원소는 아래 키만 가진다.
+   - ticker: 문자열
+   - ai_score: 0~100 정수
+   - ai_state: 짧은 상태 문자열
+   - ai_action: 짧은 추천 행동 문자열
+   - ai_note: 한두 문장 메모. 가능하면 최신 헤드라인 뉴스 한 가지와 현재 추세를 함께 넣는다.
+6. 점수는 현재 추세와 뉴스 흐름을 함께 반영하되, 현재 규칙 기반 점수와 완전히 동떨어지지 않게 쓴다.
+7. 길게 쓰지 말고 종목당 메모는 1~2문장으로 끝낸다.
+
+종목 데이터:
+{json.dumps(payload, ensure_ascii=False, indent=2)}
+""".strip()
+
+    try:
+        text = gemini_generate_text(prompt, api_key)
+        parsed = parse_json_blob(text)
+        if not isinstance(parsed, list):
+            raise ValueError("배열 형식 응답이 아닙니다.")
+
+        items = []
+        for row in parsed[:10]:
+            if not isinstance(row, dict):
+                continue
+            ticker = str(row.get("ticker") or "").upper().strip()
+            if not ticker:
+                continue
+            try:
+                ai_score = int(max(0, min(100, int(row.get("ai_score", 0)))))
+            except Exception:
+                ai_score = 0
+            items.append(
+                {
+                    "ticker": ticker,
+                    "ai_score": ai_score,
+                    "ai_state": str(row.get("ai_state") or "보통").strip()[:40],
+                    "ai_action": str(row.get("ai_action") or "관찰").strip()[:60],
+                    "ai_note": str(row.get("ai_note") or "").strip()[:240],
+                }
+            )
+        return build_watchlist_ai_output(output, items, "ok")
+    except Exception as exc:
+        return build_watchlist_ai_output(output, [], "error", f"종목 AI 분석 실패: {summarize_ai_error(exc)}")
 
 
 def to_date_list(values: list[str]) -> list[date]:
@@ -2314,6 +2445,7 @@ def main() -> None:
     output["notifications"]["count"] = len(output["notifications"]["items"])
     ai_output = generate_market_ai_analysis(output)
     market_ai_output = build_market_ai_output(output, ai_output)
+    watchlist_ai_output = generate_watchlist_ai_analysis(output)
 
     history = update_history(existing_history, output, as_of)
     output["market"]["history_tags"] = score_history_tags(history.get("market", []))
@@ -2326,6 +2458,8 @@ def main() -> None:
         json.dump(output, f, indent=2)
     with AI_OUTPUT_PATH.open("w", encoding="utf-8") as f:
         json.dump(market_ai_output, f, indent=2)
+    with WATCHLIST_AI_OUTPUT_PATH.open("w", encoding="utf-8") as f:
+        json.dump(watchlist_ai_output, f, indent=2)
     with HISTORY_PATH.open("w", encoding="utf-8") as f:
         json.dump(history, f, indent=2)
 

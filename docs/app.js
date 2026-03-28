@@ -348,9 +348,23 @@ async function loadAiAnalysis() {
   }
 }
 
-function renderTable(rows) {
+async function loadWatchlistAi() {
+  try {
+    const response = await fetch("./data/latest_watchlist_ai.json", { cache: "no-store" });
+    if (!response.ok) throw new Error("Failed to load latest_watchlist_ai.json");
+    const data = await response.json();
+    return data?.items || [];
+  } catch {
+    return [];
+  }
+}
+
+function renderTable(rows, aiRows = []) {
   const body = document.getElementById("watchlistTable");
   body.innerHTML = "";
+  const aiByTicker = new Map(
+    (aiRows || []).map((item) => [String(item.ticker || "").toUpperCase(), item])
+  );
   rows.forEach((row) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
@@ -363,15 +377,17 @@ function renderTable(rows) {
     `;
     body.appendChild(tr);
 
+    const aiRow = aiByTicker.get(String(row.ticker || "").toUpperCase());
+    const aiScore = aiRow?.ai_score ?? row.stock_score;
     const aiTr = document.createElement("tr");
     aiTr.className = "watchlist-ai-row";
     aiTr.innerHTML = `
       <td data-label="종목"><strong>AI 분석(${row.ticker})</strong></td>
       <td data-label="현재가"></td>
-      <td data-label="점수"><span class="pill warning">예시 58/100</span></td>
-      <td data-label="상태"><span class="pill warning">보통</span></td>
-      <td data-label="추천 행동"><span class="pill warning">관찰 / 대기</span></td>
-      <td data-label="메모">AI 판단 예시: 지금은 바로 추격하기보다 시장 반응을 한 번 더 확인하는 편이 좋습니다.</td>
+      <td data-label="점수"><span class="pill ${scoreTone(aiScore)}">${formatScore(aiScore)}</span></td>
+      <td data-label="상태"><span class="pill ${scoreTone(aiScore)}">${escapeHtml(aiRow?.ai_state || "분석 대기")}</span></td>
+      <td data-label="추천 행동"><span class="pill ${scoreTone(aiScore)}">${escapeHtml(aiRow?.ai_action || "분석 대기")}</span></td>
+      <td data-label="메모">${escapeHtml(aiRow?.ai_note || "AI 분석을 아직 불러오지 못했습니다.")}</td>
     `;
     body.appendChild(aiTr);
   });
@@ -1017,9 +1033,10 @@ function initStockPanel(stocks) {
 
 async function boot() {
   initThemeToggle();
-  const [response, aiAnalysis] = await Promise.all([
+  const [response, aiAnalysis, watchlistAi] = await Promise.all([
     fetch("./data/latest.json", { cache: "no-store" }),
     loadAiAnalysis(),
+    loadWatchlistAi(),
   ]);
   if (!response.ok) throw new Error("Failed to load latest.json");
   const data = await response.json();
@@ -1027,9 +1044,10 @@ async function boot() {
     data.market = data.market || {};
     data.market.ai_analysis = aiAnalysis;
   }
+  data.watchlist_ai = watchlistAi;
   appState.data = data;
   renderMarket(data);
-  renderTable(data.watchlist_summary);
+  renderTable(data.watchlist_summary, data.watchlist_ai);
   renderMarketCharts(data.charts.market);
   renderStressTable(data.charts.market);
   initStockPanel(data.stocks);
