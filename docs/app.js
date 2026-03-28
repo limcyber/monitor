@@ -595,12 +595,13 @@ function renderStocks(stocks) {
           <h4>운용/알림</h4>
           <div class="tag-list">${(s.position_tags?.length ? s.position_tags : ["기본 운용"]).concat(s.alerts?.length ? s.alerts : []).map((r) => `<span class="mini-tag ${tagTone(r)}">${escapeHtml(r)}</span>`).join("")}</div>
         </div>
-        <div class="tag-row compact-tag-row">
+      <div class="tag-row compact-tag-row">
           <h4>주의</h4>
           <div class="tag-list">${(s.confidence_warnings?.length ? s.confidence_warnings : ["데이터 경고 없음"]).map((r) => `<span class="mini-tag ${tagTone(r)}">${escapeHtml(r)}</span>`).join("")}</div>
         </div>
       </details>
       <canvas id="chart-${s.ticker}" class="stock-chart"></canvas>
+      <div id="stockLegend-${s.ticker}" class="chart-legend stock-chart-legend"></div>
     `;
     holder.appendChild(card);
     const ctx = document.getElementById(`chart-${s.ticker}`);
@@ -680,13 +681,19 @@ function renderStocks(stocks) {
           elements: { line: { borderWidth: 1.8 }, point: { radius: 0 }, bar: { borderWidth: 0 } },
           plugins: {
             legend: {
-              display: true,
-              position: "bottom",
-              labels: { color: theme.legend, boxWidth: 10 },
+              display: false,
             },
           },
         },
       });
+      renderChartLegend(`stockLegend-${s.ticker}`, [
+        { label: "현재가", color: stockPalette.close },
+        { label: "5일선", color: stockPalette.dma5 },
+        { label: "20일선", color: stockPalette.dma20 },
+        { label: "50일선", color: stockPalette.dma50 },
+        { label: "거래량", color: "rgba(249, 115, 22, 0.55)" },
+        { label: "20일 평균", color: stockPalette.volume },
+      ]);
     }
   });
   bindFactorBoxes(holder);
