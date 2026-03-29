@@ -1,5 +1,5 @@
 {
-  "generated_at_et": "2026-03-29 02:04 ET",
+  "generated_at_et": "2026-03-29 02:06 ET",
   "market_data_as_of": "2026-03-27 16:00 ET (Close)",
   "market": {
     "state": "레벨 1/6 - 방어 우선",
@@ -59,7 +59,9 @@
       "tnx_20d_zscore": 1.706566951735031
     },
     "change_tags": [
-      "첫 생성 데이터"
+      "점수 0",
+      "레벨 변화 없음",
+      "VIX 일간 +13.16%"
     ],
     "position_tags": [
       "총 노출 0~5%",
@@ -1198,7 +1200,7 @@
         ]
       },
       "change_tags": [
-        "첫 생성 데이터"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -2240,7 +2242,7 @@
         ]
       },
       "change_tags": [
-        "첫 생성 데이터"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -3282,7 +3284,7 @@
         ]
       },
       "change_tags": [
-        "첫 생성 데이터"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -4329,7 +4331,7 @@
         ]
       },
       "change_tags": [
-        "첫 생성 데이터"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -5369,7 +5371,7 @@
         ]
       },
       "change_tags": [
-        "첫 생성 데이터"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -6413,7 +6415,7 @@
         ]
       },
       "change_tags": [
-        "첫 생성 데이터"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -7457,7 +7459,7 @@
         ]
       },
       "change_tags": [
-        "첫 생성 데이터"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -8501,7 +8503,7 @@
         ]
       },
       "change_tags": [
-        "첫 생성 데이터"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -9631,43 +9633,8 @@
     }
   },
   "notifications": {
-    "count": 4,
-    "items": [
-      {
-        "id": "market-high-stress-2026-03-29",
-        "priority": "high",
-        "kind": "market_high_stress",
-        "scope": "market",
-        "title": "고스트레스 구간 진입",
-        "message": "VIX 부담이 큽니다. 새 매수보다 방어를 먼저 보는 편이 좋습니다."
-      },
-      {
-        "id": "market-both-below-200dma-2026-03-29",
-        "priority": "high",
-        "kind": "market_below_200dma",
-        "scope": "market",
-        "title": "핵심 지수 200일선 이탈",
-        "message": "S&P500과 Nasdaq이 모두 200일선 아래입니다. 반등 추격보다 대기가 낫습니다."
-      },
-      {
-        "id": "stock-dead-cross-KORU-2026-03-29",
-        "priority": "medium",
-        "kind": "stock_dead_cross",
-        "scope": "stock",
-        "title": "KORU 데드크로스",
-        "message": "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 매수보다 대기나 비중 조절 쪽이 낫습니다.",
-        "ticker": "KORU"
-      },
-      {
-        "id": "stock-dead-cross-SOXX-2026-03-29",
-        "priority": "medium",
-        "kind": "stock_dead_cross",
-        "scope": "stock",
-        "title": "SOXX 데드크로스",
-        "message": "SOXX 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 매수보다 대기나 비중 조절 쪽이 낫습니다.",
-        "ticker": "SOXX"
-      }
-    ]
+    "count": 0,
+    "items": []
   },
   "history": {
     "market": [
