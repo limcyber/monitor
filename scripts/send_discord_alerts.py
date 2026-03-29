@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import json
 import os
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import requests
 
@@ -10,6 +12,7 @@ BASE_DIR = Path(__file__).resolve().parents[1]
 LATEST_PATH = BASE_DIR / "docs" / "data" / "latest.json"
 LATEST_KR_PATH = BASE_DIR / "docs" / "data" / "latest_kr.json"
 LATEST_AI_PATH = BASE_DIR / "docs" / "data" / "latest_ai.json"
+ET = ZoneInfo("America/New_York")
 
 
 def priority_label(priority: str) -> str:
@@ -110,6 +113,11 @@ def build_test_message(kind: str, payload: dict) -> str:
     raise ValueError(f"Unknown DISCORD_TEST_KIND: {kind}")
 
 
+def is_quiet_hours() -> bool:
+    now_et = datetime.now(ET)
+    return 0 <= now_et.hour < 7
+
+
 def main() -> None:
     webhook_url = os.environ.get("DISCORD_WEBHOOK_URL", "").strip()
     if not webhook_url:
@@ -134,6 +142,11 @@ def main() -> None:
         response = requests.post(webhook_url, json={"content": content}, timeout=15)
         response.raise_for_status()
         print(f"Sent Discord test message for kind={test_kind}.")
+        return
+
+    if is_quiet_hours():
+        now_et = datetime.now(ET).strftime("%Y-%m-%d %H:%M ET")
+        print(f"Discord send skipped during quiet hours: {now_et}")
         return
 
     if env_flag("DISCORD_AI_ALERTS", default=False):
