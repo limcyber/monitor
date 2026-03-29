@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-03-29 15:33 ET",
-  "count": 5,
+  "updated_at_et": "2026-03-29 19:52 ET",
+  "count": 6,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:41 ET",
@@ -334,6 +334,174 @@
           "ai_state": "양호",
           "ai_action": "선별적 접근",
           "ai_note": "LIG넥스원은 시장 대비 강한 흐름을 보이며 20일선과 50일선 위에 있습니다. 제노코와의 위성통신 및 항공 분야 협력 강화 등 긍정적인 소식이 있습니다.",
+          "close": 735000.0,
+          "change_pct": 0.0,
+          "score": 67,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [
+            "LIG넥스원 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.4x (거래량 약함) / RSI 40 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.41486393392201554,
+          "rsi14": 40.37854889589905,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-03-29 19:52 ET",
+      "market_data_as_of": "2026-03-27 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "005930.KS",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "최근 단기 데드크로스 발생 및 시장 대비 약한 흐름을 보이고 있습니다. 삼성전자 뉴스룸에서는 특별한 신규 정보가 확인되지 않았습니다.",
+          "close": 180100.0,
+          "change_pct": 0.0,
+          "score": 33,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "삼성전자 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.9x (거래량 보통) / RSI 54 (중립)"
+          ],
+          "volume_ratio_20d": 0.8560528413576823,
+          "rsi14": 53.96634615384616,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 55,
+          "ai_state": "중립",
+          "ai_action": "관망",
+          "ai_note": "시장 대비 견조한 흐름을 보이고 있으나, 뚜렷한 상승 모멘텀은 부족합니다. SK하이닉스는 GTC 2026 참가 및 AI 메모리 제품 포트폴리오 공개 소식이 있습니다.",
+          "close": 933000.0,
+          "change_pct": 0.0,
+          "score": 51,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.9347530003428609,
+          "rsi14": 58.584070796460175,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "시장 대비 약한 흐름을 보이며 20일선 및 50일선 아래에 위치해 있습니다. 네이버 포털에서는 특별한 신규 뉴스가 확인되지 않았습니다.",
+          "close": 211500.0,
+          "change_pct": 0.0,
+          "score": 20,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5157790082400219,
+          "rsi14": 42.708333333333336,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "시장 대비 약한 흐름이며, 20일선 및 50일선 아래에 위치해 있습니다. 현대차그룹은 에너지 절감을 위해 전 계열사 차량 5부제를 확대 적용한다는 소식이 있습니다.",
+          "close": 495000.0,
+          "change_pct": 1.0204081632652962,
+          "score": 25,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.6533709409778599,
+          "rsi14": 46.62921348314607,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 15,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "단기 데드크로스 발생 및 시장 대비 약한 흐름을 보이고 있습니다. 아이티센글로벌은 웹3, 디지털 자산 거래 등 신사업 확장에 대한 전망이 있습니다.",
+          "close": 46900.0,
+          "change_pct": -2.2916666666666696,
+          "score": 18,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "아이티센글로벌 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.5x (거래량 약함) / RSI 41 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.48583071498050073,
+          "rsi14": 40.89068825910931,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 10,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "시장 대비 약한 흐름이며, 20일선 및 50일선 아래에 위치해 있습니다. 클로봇은 LG CNS 출신 DX 전문가를 영입하며 로봇 사업 고도화에 나섰다는 소식이 있습니다.",
+          "close": 50800.0,
+          "change_pct": 0.19723865877712132,
+          "score": 11,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.4924934276942561,
+          "rsi14": 32.29166666666667,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 60,
+          "ai_state": "중립",
+          "ai_action": "선별적 접근",
+          "ai_note": "시장 대비 견조한 흐름을 보이고 있으나, 단기 데드크로스가 발생했습니다. 한화에어로스페이스는 항공엔진 소재·부품 자립화 협의체 출범 및 유럽 K9 생산시설 착공 소식이 있습니다.",
+          "close": 1369000.0,
+          "change_pct": 0.0,
+          "score": 64,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.5x (거래량 약함) / RSI 44 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.49914513446738035,
+          "rsi14": 43.5897435897436,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 65,
+          "ai_state": "양호",
+          "ai_action": "선별적 접근",
+          "ai_note": "시장 대비 견조한 흐름을 보이고 있으나, 단기 데드크로스가 발생했습니다. LIG넥스원은 제노코와 위성통신·항공 분야 협력을 위한 MOU를 체결했습니다.",
           "close": 735000.0,
           "change_pct": 0.0,
           "score": 67,
