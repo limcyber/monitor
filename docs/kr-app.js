@@ -78,7 +78,7 @@ function escapeHtml(value) {
 function cleanAiText(value) {
   return String(value || "")
     .replaceAll("**", "")
-    .replace(/(?<!^)(?=(AI 판단|확인 포인트|결론|속보 요약):)/g, "\n")
+    .replace(/(?<!^)(?=(AI 판단|확인 포인트|결론|속보 요약|단기투자 팁):)/g, "\n")
     .replace(" (AI 점수:", "\n(AI 점수:")
     .trim();
 }
@@ -91,6 +91,7 @@ function aiDisplayContent(aiAnalysis) {
       "확인 포인트: 다음 한국장 AI 갱신이 끝나면 자동으로 내용이 채워집니다.",
       "결론: 지금은 아래 한국 시장 지표와 핵심 이유를 먼저 참고해 주세요.",
       "속보 요약: 기존 흐름을 이어서 확인 중입니다.",
+      "단기투자 팁: 업데이트 대기중",
     ].join("\n");
   }
   if (status === "error") {
@@ -99,6 +100,7 @@ function aiDisplayContent(aiAnalysis) {
       "확인 포인트: 잠시 뒤 다시 확인해 주세요.",
       "결론: 현재 화면의 한국 시장 지표와 핵심 이유는 정상적으로 참고할 수 있습니다.",
       "속보 요약: 기존 흐름을 이어서 확인 중입니다.",
+      "단기투자 팁: 업데이트 대기중",
     ].join("\n");
   }
   return aiAnalysis?.content || "AI 분석이 아직 없습니다.";
@@ -122,7 +124,7 @@ function renderAiAnalysis(el, value) {
   let current = null;
 
   lines.forEach((line) => {
-    const matched = line.match(/^(AI 판단|확인 포인트|결론|속보 요약):\s*(.*)$/);
+    const matched = line.match(/^(AI 판단|확인 포인트|결론|속보 요약|단기투자 팁):\s*(.*)$/);
     if (matched) {
       const label = matched[1];
       const nextSection = { label, content: matched[2] ? [matched[2]] : [] };
@@ -159,6 +161,19 @@ function renderAiAnalysis(el, value) {
       label: "속보 요약",
       content: ["기존 흐름을 이어서 확인 중입니다."],
     });
+  }
+
+  const shortTermTipIndex = sections.findIndex((section) => section.label === "단기투자 팁");
+  if (shortTermTipIndex === -1) {
+    sections.push({
+      label: "단기투자 팁",
+      content: ["업데이트 대기중"],
+    });
+  } else if (!sections[shortTermTipIndex].content.some(Boolean)) {
+    sections[shortTermTipIndex] = {
+      label: "단기투자 팁",
+      content: ["업데이트 대기중"],
+    };
   }
 
   el.innerHTML = sections
