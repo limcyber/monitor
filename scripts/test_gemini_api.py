@@ -9,6 +9,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 LATEST_US_PATH = BASE_DIR / "docs" / "data" / "latest.json"
+LATEST_AI_PATH = BASE_DIR / "docs" / "data" / "latest_ai.json"
 MARKET_MODEL = "gemini-2.5-flash-lite"
 WATCHLIST_MODEL = "gemini-2.5-flash-lite"
 SIMPLE_MODEL = MARKET_MODEL
@@ -103,6 +104,23 @@ def load_latest_watchlist_payload() -> dict:
     }
 
 
+def load_latest_ai_text() -> str:
+    if not LATEST_AI_PATH.exists():
+        return "이전 AI 분석 없음"
+    try:
+        data = json.loads(LATEST_AI_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return "이전 AI 분석 없음"
+    ai_analysis = data.get("ai_analysis", {})
+    if not isinstance(ai_analysis, dict):
+        return "이전 AI 분석 없음"
+    status = str(ai_analysis.get("status") or "").strip().lower()
+    content = str(ai_analysis.get("content") or "").strip()
+    if status == "ok" and content:
+        return content
+    return "이전 AI 분석 없음"
+
+
 def build_prompt(mode: str) -> str:
     if mode == "simple":
         return "현재 미국 시장을 볼 때 핵심 체크 포인트 5개를 한국어로 아주 짧게 정리해줘."
@@ -131,6 +149,7 @@ def build_prompt(mode: str) -> str:
 """.strip()
 
     payload = load_latest_market_payload()
+    previous_text = load_latest_ai_text()
     return f"""
 너는 미국 주식 시장을 보는 실전형 전문 애널리스트다.
 
@@ -139,19 +158,26 @@ def build_prompt(mode: str) -> str:
 2. 검색으로 확인된 최신 뉴스, 지정학, 금리, 변동성, 주도 업종 상황만 반영하고, 확인되지 않은 내용은 단정하지 않는다.
 3. 규칙 기반 데이터에 이미 들어 있는 점수 이유를 반복하지 말고, 그 바깥의 외부 변수와 맥락을 중심으로 설명한다.
 4. 시장 점수나 breadth, VIX 같은 지표 문장을 그대로 다시 풀어쓰지 말고, 왜 그런 환경이 만들어졌는지를 짚는다.
-5. 확인된 뉴스가 뚜렷하지 않으면 억지로 채우지 말고 생략한다.
-6. 한국어로만, 짧고 깔끔하게 답한다.
-7. 출력 형식은 아래 4줄만 쓴다.
+5. 아래에 첨부된 가장 최근 AI 분석 내용을 참고해서, 이번 답변이 이전보다 무엇이 달라졌는지 확인한다.
+6. 새로 확인된 속보나 업데이트된 이슈가 있으면 `속보 요약`에 이전보다 더 최근 정보를 반영한다.
+7. 이전 AI 분석과 같은 내용만 반복하지 말고, 달라진 점이나 새로 확인된 점이 있으면 우선해서 반영한다.
+8. 확인된 뉴스가 뚜렷하지 않으면 억지로 채우지 말고 생략한다.
+9. 한국어로만, 짧고 깔끔하게 답한다.
+10. 출력 형식은 아래 4줄만 쓴다.
 AI 판단: 먼저 한 문장으로 현재 시장 판단을 쓰고, 바로 다음 줄 괄호에 (AI 점수: xx/100, AI 매매 여건: ..., AI 추천 행동: ...) 형식으로 쓴다.
 확인 포인트: ...
 결론: ...
 속보 요약: ...
-8. 각 줄은 한두 문장 이내로 짧게 쓴다. 결론은 중요한 이슈가 있으면 불릿 포인트로 2~3개까지 정리한다.
-9. 과장하지 말고, 규칙 기반 판단과 다르면 왜 다른지도 짚는다.
-10. 결론은 시장 분위기, 가장 큰 위험 요인, 가장 중요한 긍정 요인 순서로 정리한다.
-11. 마크다운 굵게 표시(**)는 쓰지 않는다.
-12. 속보 요약에는 시장에 바로 영향을 줄 수 있는 최신 뉴스나 헤드라인만 1~3개까지 짧게 정리한다. 뚜렷한 속보가 없으면 '눈에 띄는 새 속보는 없습니다.'라고 쓴다.
-13. AI 판단 줄에는 점수 괄호만 쓰지 말고, 반드시 설명 문장을 먼저 쓴다.
+11. 각 줄은 한두 문장 이내로 짧게 쓴다. 결론은 중요한 이슈가 있으면 불릿 포인트로 2~3개까지 정리한다.
+12. 과장하지 말고, 규칙 기반 판단과 다르면 왜 다른지도 짚는다.
+13. 결론은 시장 분위기, 가장 큰 위험 요인, 가장 중요한 긍정 요인 순서로 정리한다.
+14. 마크다운 굵게 표시(**)는 쓰지 않는다.
+15. 속보 요약에는 시장에 바로 영향을 줄 수 있는 최신 뉴스나 헤드라인만 1~3개까지 짧게 정리한다. 뚜렷한 속보가 없으면 '눈에 띄는 새 속보는 없습니다.'라고 쓴다.
+16. AI 판단 줄에는 점수 괄호만 쓰지 말고, 반드시 설명 문장을 먼저 쓴다.
+17. 이전 AI 분석과 비교해도 새로 업데이트된 정보가 없으면, 기존 요약을 불필요하게 크게 바꾸지 않는다.
+
+가장 최근 AI 분석:
+{previous_text}
 
 시장 데이터:
 {json.dumps(payload, ensure_ascii=False, indent=2)}
