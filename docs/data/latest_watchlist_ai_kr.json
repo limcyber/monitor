@@ -1,9 +1,5 @@
 {
-<<<<<<< Updated upstream
-  "generated_at_et": "2026-03-29 03:03 ET",
-=======
   "generated_at_et": "2026-03-29 03:12 ET",
->>>>>>> Stashed changes
   "market_data_as_of": "2026-03-27 15:30 KST (Close)",
   "status": "ok",
   "error": null,
@@ -13,11 +9,7 @@
       "ai_score": 33,
       "ai_state": "회피",
       "ai_action": "관찰",
-<<<<<<< Updated upstream
-      "ai_note": "최근 단기 데드크로스가 발생하여 현재는 관찰이 필요합니다.",
-=======
       "ai_note": "최근 단기 데드크로스 발생으로 시장 대비 약한 흐름을 보이고 있어 관찰이 필요합니다.",
->>>>>>> Stashed changes
       "close": 180100.0,
       "change_pct": 0.0,
       "score": 33,
@@ -37,11 +29,7 @@
       "ai_score": 51,
       "ai_state": "애매",
       "ai_action": "관찰",
-<<<<<<< Updated upstream
-      "ai_note": "시장 대비 강한 흐름을 보이고 있으나, 추가적인 상승 모멘텀 확인이 필요합니다.",
-=======
       "ai_note": "시장 대비 견조한 흐름을 보이나, 50일선 위에 위치하며 아직 확실한 추세 전환 신호는 없습니다.",
->>>>>>> Stashed changes
       "close": 933000.0,
       "change_pct": 0.0,
       "score": 51,
@@ -59,11 +47,7 @@
       "ai_score": 20,
       "ai_state": "회피",
       "ai_action": "관찰",
-<<<<<<< Updated upstream
-      "ai_note": "시장 대비 약한 흐름을 보이고 있어 현재는 관망하는 것이 좋습니다.",
-=======
       "ai_note": "시장 대비 약한 흐름과 20, 50일선 하회로 인해 현재 진입은 부적절합니다.",
->>>>>>> Stashed changes
       "close": 211500.0,
       "change_pct": 0.0,
       "score": 20,
@@ -81,11 +65,7 @@
       "ai_score": 25,
       "ai_state": "회피",
       "ai_action": "관찰",
-<<<<<<< Updated upstream
-      "ai_note": "시장 대비 약한 흐름을 보이고 있어 현재는 관망하는 것이 좋습니다.",
-=======
       "ai_note": "시장 대비 약한 흐름과 20, 50일선 하회로 인해 현재 진입은 부적절합니다.",
->>>>>>> Stashed changes
       "close": 495000.0,
       "change_pct": 1.0204081632652962,
       "score": 25,
@@ -103,11 +83,7 @@
       "ai_score": 18,
       "ai_state": "회피",
       "ai_action": "관찰",
-<<<<<<< Updated upstream
-      "ai_note": "최근 단기 데드크로스가 발생하여 현재는 관찰이 필요합니다.",
-=======
       "ai_note": "최근 단기 데드크로스 발생 및 시장 대비 약한 흐름으로 관찰이 필요합니다.",
->>>>>>> Stashed changes
       "close": 46900.0,
       "change_pct": -2.2916666666666696,
       "score": 18,
@@ -127,11 +103,7 @@
       "ai_score": 11,
       "ai_state": "회피",
       "ai_action": "관찰",
-<<<<<<< Updated upstream
-      "ai_note": "시장 대비 약한 흐름을 보이고 있어 현재는 관망하는 것이 좋습니다.",
-=======
       "ai_note": "시장 대비 약한 흐름과 20, 50일선 하회로 인해 현재 진입은 부적절합니다.",
->>>>>>> Stashed changes
       "close": 50800.0,
       "change_pct": 0.19723865877712132,
       "score": 11,
@@ -149,11 +121,7 @@
       "ai_score": 64,
       "ai_state": "애매",
       "ai_action": "관찰",
-<<<<<<< Updated upstream
-      "ai_note": "시장 대비 강한 흐름을 보이고 있으나, 최근 단기 데드크로스 발생으로 추가 확인이 필요합니다.",
-=======
       "ai_note": "시장 대비 견조한 흐름과 50일선 위에 위치하나, 최근 단기 데드크로스 발생으로 추가 확인이 필요합니다.",
->>>>>>> Stashed changes
       "close": 1369000.0,
       "change_pct": 0.0,
       "score": 64,
@@ -173,11 +141,7 @@
       "ai_score": 67,
       "ai_state": "양호",
       "ai_action": "매우 선별적 접근",
-<<<<<<< Updated upstream
-      "ai_note": "시장 대비 강한 흐름을 보이며 20일선 및 50일선 위에 있어 긍정적이나, 최근 단기 데드크로스 발생으로 선별적 접근이 유효합니다.",
-=======
       "ai_note": "시장 대비 강한 흐름과 20, 50일선 위에 위치하여 관심 있게 볼 만합니다.",
->>>>>>> Stashed changes
       "close": 735000.0,
       "change_pct": 0.0,
       "score": 67,
