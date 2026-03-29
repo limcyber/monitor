@@ -164,17 +164,20 @@ function renderAiAnalysis(el, value) {
   }
 
   const shortTermTipIndex = sections.findIndex((section) => section.label === "단기투자 팁");
-  if (shortTermTipIndex === -1) {
-    sections.push({
-      label: "단기투자 팁",
-      content: ["업데이트 대기중"],
-    });
-  } else if (!sections[shortTermTipIndex].content.some(Boolean)) {
-    sections[shortTermTipIndex] = {
-      label: "단기투자 팁",
-      content: ["업데이트 대기중"],
-    };
+  const shortTermTipText =
+    shortTermTipIndex === -1
+      ? "업데이트 대기중"
+      : sections[shortTermTipIndex].content.filter(Boolean).join(" ").trim() || "업데이트 대기중";
+  if (shortTermTipIndex !== -1) {
+    sections.splice(shortTermTipIndex, 1);
   }
+
+  let aiJudgment = sections.find((section) => section.label === "AI 판단");
+  if (!aiJudgment) {
+    aiJudgment = { label: "AI 판단", content: [] };
+    sections.unshift(aiJudgment);
+  }
+  aiJudgment.content.push(`단기투자 팁: ${shortTermTipText}`);
 
   el.innerHTML = sections
     .map((section) => {
