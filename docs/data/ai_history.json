@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-03-29 02:07 ET",
-  "count": 2,
+  "updated_at_et": "2026-03-29 02:11 ET",
+  "count": 3,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:06 ET",
@@ -72,6 +72,37 @@
             "ticker": "TEM"
           }
         ]
+      }
+    },
+    {
+      "generated_at_et": "2026-03-29 02:11 ET",
+      "market_data_as_of": "2026-03-27 16:00 ET (Close)",
+      "market": {
+        "score": 15,
+        "level": 1,
+        "state": "레벨 1/6 - 방어 우선",
+        "action": "신규 진입 자제 / 방어",
+        "cross_highlights": [],
+        "top_reasons": [
+          "VIX가 매우 높아 점수 상한이 걸렸습니다 (상한 50)",
+          "20일선 위 종목 비율이 너무 낮아 시장 폭이 크게 약합니다 (-6)",
+          "50일선 위 종목 비율이 낮아 중간 흐름도 약합니다 (-3)"
+        ],
+        "metrics": {
+          "vix_close": 31.049999237060547,
+          "tnx_close": 4.440000057220459,
+          "pct_above_20dma": 13.717693836978132,
+          "pct_above_50dma": 19.681908548707753
+        }
+      },
+      "ai_analysis": {
+        "status": "error",
+        "model": "gemini-2.5-flash-lite",
+        "content": "AI 분석 실패: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/"
+      },
+      "ai_notifications": {
+        "count": 0,
+        "items": []
       }
     }
   ]
