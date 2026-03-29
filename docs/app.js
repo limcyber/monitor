@@ -162,20 +162,6 @@ function renderAiAnalysis(el, value) {
     });
   }
 
-  const aiJudgmentSection = sections.find((section) => section.label === "AI 판단");
-  if (aiJudgmentSection) {
-    const hasProse = aiJudgmentSection.content.some((item) => item && !item.includes("AI 점수:"));
-    if (!hasProse) {
-      const fallbackSource =
-        sections.find((section) => section.label === "확인 포인트") ||
-        sections.find((section) => section.label === "결론");
-      const fallbackLine = fallbackSource?.content?.find((item) => item && !item.includes("AI 점수:")) || "";
-      aiJudgmentSection.content.unshift(
-        fallbackLine || "현재 규칙 기반 판단과 비슷한 흐름으로 보고 있습니다."
-      );
-    }
-  }
-
   el.innerHTML = sections
     .map((section) => {
       const items = section.content.filter(Boolean);
