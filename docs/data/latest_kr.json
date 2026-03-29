@@ -1,5 +1,5 @@
 {
-  "generated_at_et": "2026-03-28 19:58 ET",
+  "generated_at_et": "2026-03-28 20:13 ET",
   "market_data_as_of": "2026-03-27 15:30 KST (Close)",
   "market": {
     "state": "레벨 4/6 - 살아나는 구간",
@@ -208,6 +208,10 @@
         "최근 한 달 흐름이 시장보다 약합니다 (0)",
         "최근 한 달 수익률이 시장보다 약합니다 (0)"
       ],
+      "signals": {
+        "short_cross": "bear",
+        "mid_cross": "none"
+      },
       "metrics": {
         "close": 180100.0,
         "close_change_pct": 0.0,
@@ -1251,6 +1255,10 @@
         "거래량이 강하게 붙는 모습은 아직 부족합니다 (0)",
         "움직임이 커서 흔들릴 수 있습니다 (0)"
       ],
+      "signals": {
+        "short_cross": "none",
+        "mid_cross": "none"
+      },
       "metrics": {
         "close": 933000.0,
         "close_change_pct": 0.0,
@@ -2287,6 +2295,10 @@
         "20일선 방향이 아직 살아나지 않았습니다 (-1)",
         "20일선 아래라 흐름 확인이 더 필요합니다 (0)"
       ],
+      "signals": {
+        "short_cross": "none",
+        "mid_cross": "none"
+      },
       "metrics": {
         "close": 211500.0,
         "close_change_pct": 0.0,
@@ -3327,6 +3339,10 @@
         "50일선 아래라 중간 흐름 확인이 더 필요합니다 (0)",
         "최근 한 달 흐름이 시장보다 약합니다 (0)"
       ],
+      "signals": {
+        "short_cross": "none",
+        "mid_cross": "none"
+      },
       "metrics": {
         "close": 495000.0,
         "close_change_pct": 1.0204081632652962,
@@ -4369,6 +4385,10 @@
         "20일선 아래라 흐름 확인이 더 필요합니다 (0)",
         "50일선 아래라 중간 흐름 확인이 더 필요합니다 (0)"
       ],
+      "signals": {
+        "short_cross": "bear",
+        "mid_cross": "none"
+      },
       "metrics": {
         "close": 46900.0,
         "close_change_pct": -2.2916666666666696,
@@ -5409,6 +5429,10 @@
         "20일선 방향이 아직 살아나지 않았습니다 (-1)",
         "20일선 아래라 흐름 확인이 더 필요합니다 (0)"
       ],
+      "signals": {
+        "short_cross": "none",
+        "mid_cross": "none"
+      },
       "metrics": {
         "close": 50800.0,
         "close_change_pct": 0.19723865877712132,
@@ -6452,6 +6476,10 @@
         "20일선 아래라 흐름 확인이 더 필요합니다 (0)",
         "거래량이 강하게 붙는 모습은 아직 부족합니다 (0)"
       ],
+      "signals": {
+        "short_cross": "bear",
+        "mid_cross": "none"
+      },
       "metrics": {
         "close": 1369000.0,
         "close_change_pct": 0.0,
@@ -7495,6 +7523,10 @@
         "거래량이 강하게 붙는 모습은 아직 부족합니다 (0)",
         "움직임이 커서 흔들릴 수 있습니다 (0)"
       ],
+      "signals": {
+        "short_cross": "bear",
+        "mid_cross": "none"
+      },
       "metrics": {
         "close": 735000.0,
         "close_change_pct": 0.0,
