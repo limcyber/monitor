@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-03-29 17:53 ET",
-  "count": 3,
+  "updated_at_et": "2026-03-29 19:04 ET",
+  "count": 4,
   "items": [
     {
       "generated_at_et": "2026-03-29 15:33 ET",
@@ -475,6 +475,13 @@
           }
         }
       ]
+    },
+    {
+      "generated_at_et": "2026-03-29 19:04 ET",
+      "market_data_as_of": "2026-03-27 16:00 ET (Close)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: empty Gemini response",
+      "items": []
     }
   ]
 }
