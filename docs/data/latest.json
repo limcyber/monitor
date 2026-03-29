@@ -1,35 +1,35 @@
 {
-  "generated_at_et": "2026-03-28 20:12 ET",
+  "generated_at_et": "2026-03-28 20:29 ET",
   "market_data_as_of": "2026-03-27 16:00 ET (Close)",
   "market": {
-    "state": "\ub808\ubca8 1/6 - \ubc29\uc5b4 \uc6b0\uc120",
+    "state": "레벨 1/6 - 방어 우선",
     "score": 15,
-    "confidence": "\ub192\uc74c",
-    "execution_strength": "\ubcf4\uc218\uc801",
-    "action": "\uc2e0\uaddc \uc9c4\uc785 \uc790\uc81c / \ubc29\uc5b4",
+    "confidence": "높음",
+    "execution_strength": "보수적",
+    "action": "신규 진입 자제 / 방어",
     "top_reasons": [
-      "VIX\uac00 \ub9e4\uc6b0 \ub192\uc544 \uc810\uc218 \uc0c1\ud55c\uc774 \uac78\ub838\uc2b5\ub2c8\ub2e4 (\uc0c1\ud55c 50)",
-      "20\uc77c\uc120 \uc704 \uc885\ubaa9 \ube44\uc728\uc774 \ub108\ubb34 \ub0ae\uc544 \uc2dc\uc7a5 \ud3ed\uc774 \ud06c\uac8c \uc57d\ud569\ub2c8\ub2e4 (-6)",
-      "50\uc77c\uc120 \uc704 \uc885\ubaa9 \ube44\uc728\uc774 \ub0ae\uc544 \uc911\uac04 \ud750\ub984\ub3c4 \uc57d\ud569\ub2c8\ub2e4 (-3)"
+      "VIX가 매우 높아 점수 상한이 걸렸습니다 (상한 50)",
+      "20일선 위 종목 비율이 너무 낮아 시장 폭이 크게 약합니다 (-6)",
+      "50일선 위 종목 비율이 낮아 중간 흐름도 약합니다 (-3)"
     ],
     "cross_highlights": [],
     "positive_factors": [
-      "S&P500\uc758 50\uc77c\uc120\uc774 200\uc77c\uc120 \uc704\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (+8)",
-      "\ub098\uc2a4\ub2e5\uc758 50\uc77c\uc120\uc774 200\uc77c\uc120 \uc704\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (+8)",
-      "\uc0c1\uc2b9 \uc885\ubaa9 \uc218 \ud750\ub984\uc774 \ucd5c\uadfc 5\uc77c \uac1c\uc120\ub410\uc2b5\ub2c8\ub2e4 (+3)",
-      "\uc18c\ud615\uc8fc(RUT)\uac00 200\uc77c\uc120 \uc704\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (+6)",
-      "\ud070 \uc774\ubca4\ud2b8\uac00 \ubc14\ub85c \uc55e\uc5d0 \uc788\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4 (+3)"
+      "S&P500의 50일선이 200일선 위에 있습니다 (+8)",
+      "나스닥의 50일선이 200일선 위에 있습니다 (+8)",
+      "상승 종목 수 흐름이 최근 5일 개선됐습니다 (+3)",
+      "소형주(RUT)가 200일선 위에 있습니다 (+6)",
+      "큰 이벤트가 바로 앞에 있지 않습니다 (+3)"
     ],
     "negative_factors": [
-      "VIX\uac00 \ub9e4\uc6b0 \ub192\uc544 \uc810\uc218 \uc0c1\ud55c\uc774 \uac78\ub838\uc2b5\ub2c8\ub2e4 (\uc0c1\ud55c 50)",
-      "20\uc77c\uc120 \uc704 \uc885\ubaa9 \ube44\uc728\uc774 \ub108\ubb34 \ub0ae\uc544 \uc2dc\uc7a5 \ud3ed\uc774 \ud06c\uac8c \uc57d\ud569\ub2c8\ub2e4 (-6)",
-      "50\uc77c\uc120 \uc704 \uc885\ubaa9 \ube44\uc728\uc774 \ub0ae\uc544 \uc911\uac04 \ud750\ub984\ub3c4 \uc57d\ud569\ub2c8\ub2e4 (-3)",
-      "\ub300\ud615\uc8fc \uba87 \uc885\ubaa9\uc5d0\ub9cc \ud798\uc774 \ubab0\ub9ac\uace0 \uc788\uc2b5\ub2c8\ub2e4 (-2)",
-      "\uc18c\ud615\uc8fc\uac00 \ub300\ud615\uc8fc\ubcf4\ub2e4 \uc57d\ud574 \uacf5\uaca9\uc801\uc778 \ubd84\uc704\uae30\uac00 \uc544\ub2d9\ub2c8\ub2e4 (-2)",
-      "\ub2ec\ub7ec\uc640 \uae08\ub9ac\uac00 \ud568\uaed8 \ub192\uc544 \uc131\uc7a5\uc8fc\uc640 \uc704\ud5d8\uc790\uc0b0\uc5d0 \ubd80\ub2f4\uc785\ub2c8\ub2e4 (0)"
+      "VIX가 매우 높아 점수 상한이 걸렸습니다 (상한 50)",
+      "20일선 위 종목 비율이 너무 낮아 시장 폭이 크게 약합니다 (-6)",
+      "50일선 위 종목 비율이 낮아 중간 흐름도 약합니다 (-3)",
+      "대형주 몇 종목에만 힘이 몰리고 있습니다 (-2)",
+      "소형주가 대형주보다 약해 공격적인 분위기가 아닙니다 (-2)",
+      "달러와 금리가 함께 높아 성장주와 위험자산에 부담입니다 (0)"
     ],
-    "invalidation": "\ud604\uc7ac S&P500\uacfc \ub098\uc2a4\ub2e5\uc774 \ubaa8\ub450 200\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4. \ubc18\ub4f1\uc774 \ub098\uc624\ub354\ub77c\ub3c4 \ub458 \ub2e4 200\uc77c\uc120\uc744 \ud68c\ubcf5\ud558\uc9c0 \ubabb\ud558\uace0 \uc624\ub974\ub294 \uc885\ubaa9 \uc218\uae4c\uc9c0 \uc57d\ud558\uba74 \ubc29\uc5b4\uc801\uc73c\ub85c \ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4.",
-    "easy_explanation": "\uc2dc\uc7a5 \ubd84\uc704\uae30\uac00 \uc88b\uc9c0 \uc54a\uc544\uc11c \uc11c\ub450\ub974\uae30\ubcf4\ub2e4 \ubc29\uc5b4\uc801\uc73c\ub85c \ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4.",
+    "invalidation": "현재 S&P500과 나스닥이 모두 200일선 아래에 있습니다. 반등이 나오더라도 둘 다 200일선을 회복하지 못하고 오르는 종목 수까지 약하면 방어적으로 보는 편이 좋습니다.",
+    "easy_explanation": "시장 분위기가 좋지 않아서 서두르기보다 방어적으로 보는 편이 좋습니다.",
     "negative_filters": {
       "filter_1_divergence": false,
       "filter_2_bigcap_only": true,
@@ -59,115 +59,115 @@
       "tnx_20d_zscore": 1.706566951735031
     },
     "change_tags": [
-      "\uc810\uc218 0",
-      "\ub808\ubca8 \ubcc0\ud654 \uc5c6\uc74c",
-      "VIX \uc77c\uac04 +13.16%"
+      "점수 0",
+      "레벨 변화 없음",
+      "VIX 일간 +13.16%"
     ],
     "position_tags": [
-      "\ucd1d \ub178\ucd9c 0~5%",
-      "\ud604\uae08 \ube44\uc911 \ub192\uac8c \uc720\uc9c0"
+      "총 노출 0~5%",
+      "현금 비중 높게 유지"
     ],
     "alerts": [
-      "\uace0\uc2a4\ud2b8\ub808\uc2a4 \uad6c\uac04",
-      "\ubc29\uc5b4 \ubaa8\ub4dc \uc720\uc9c0"
+      "고스트레스 구간",
+      "방어 모드 유지"
     ],
     "sector_tags": [
       {
-        "name": "SOXX (\ubc18\ub3c4\uccb4)",
-        "status": "\uc57d\ud568",
+        "name": "SOXX (반도체)",
+        "status": "약함",
         "change_pct": -1.6329618420311443
       },
       {
-        "name": "XLK (\uae30\uc220)",
-        "status": "\uc57d\ud568",
+        "name": "XLK (기술)",
+        "status": "약함",
         "change_pct": -1.94717119324882
       },
       {
-        "name": "XLF (\uae08\uc735)",
-        "status": "\uc57d\ud568",
+        "name": "XLF (금융)",
+        "status": "약함",
         "change_pct": -2.528028303887575
       },
       {
-        "name": "XLY (\uc18c\ube44\uc7ac)",
-        "status": "\uc57d\ud568",
+        "name": "XLY (소비재)",
+        "status": "약함",
         "change_pct": -2.894423847174876
       }
     ],
     "confidence_warnings": [],
     "history_tags": [
-      "30\uc77c \ucd5c\uace0 15"
+      "30일 최고 15"
     ]
   },
   "watchlist_summary": [
     {
       "ticker": "NVDA",
       "stock_score": 17,
-      "stock_state": "\ud68c\ud53c",
-      "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
-      "note": "\uc9c0\uae08\uc740 \ubc14\ub85c \ub4e4\uc5b4\uac08 \uc774\uc720\uac00 \ud06c\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\uc720: \uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4.",
+      "stock_state": "회피",
+      "final_action": "회피 / 비중 축소",
+      "note": "지금은 바로 들어갈 이유가 크지 않습니다. 이유: 시장보다 힘이 약합니다.",
       "close": 167.52000427246094,
       "close_change_pct": -2.172390271764868
     },
     {
       "ticker": "TSLA",
       "stock_score": 15,
-      "stock_state": "\ud68c\ud53c",
-      "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
-      "note": "\uc9c0\uae08\uc740 \ubc14\ub85c \ub4e4\uc5b4\uac08 \uc774\uc720\uac00 \ud06c\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\uc720: \uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4.",
+      "stock_state": "회피",
+      "final_action": "회피 / 비중 축소",
+      "note": "지금은 바로 들어갈 이유가 크지 않습니다. 이유: 시장보다 힘이 약합니다.",
       "close": 361.8299865722656,
       "close_change_pct": -2.7626237359861583
     },
     {
       "ticker": "META",
       "stock_score": 10,
-      "stock_state": "\ud68c\ud53c",
-      "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
-      "note": "\uc9c0\uae08\uc740 \ubc14\ub85c \ub4e4\uc5b4\uac08 \uc774\uc720\uac00 \ud06c\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\uc720: \uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4.",
+      "stock_state": "회피",
+      "final_action": "회피 / 비중 축소",
+      "note": "지금은 바로 들어갈 이유가 크지 않습니다. 이유: 시장보다 힘이 약합니다.",
       "close": 525.719970703125,
       "close_change_pct": -3.985098476796356
     },
     {
       "ticker": "AMD",
       "stock_score": 38,
-      "stock_state": "\uc57d\ud568",
-      "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
-      "note": "\uc9c0\uae08\uc740 \uc870\uae08 \ub354 \uae30\ub2e4\ub9ac\ub294 \ud3b8\uc774 \ub0ab\uc2b5\ub2c8\ub2e4. \uc774\uc720: \uac70\ub798\ub7c9\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4.",
+      "stock_state": "약함",
+      "final_action": "회피 / 비중 축소",
+      "note": "지금은 조금 더 기다리는 편이 낫습니다. 이유: 거래량이 아직 약합니다.",
       "close": 201.99000549316406,
       "close_change_pct": -0.8735332688695641
     },
     {
       "ticker": "TEM",
       "stock_score": 9,
-      "stock_state": "\ud68c\ud53c",
-      "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
-      "note": "\uc9c0\uae08\uc740 \ubc14\ub85c \ub4e4\uc5b4\uac08 \uc774\uc720\uac00 \ud06c\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\uc720: \uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4.",
+      "stock_state": "회피",
+      "final_action": "회피 / 비중 축소",
+      "note": "지금은 바로 들어갈 이유가 크지 않습니다. 이유: 시장보다 힘이 약합니다.",
       "close": 42.619998931884766,
       "close_change_pct": -6.391390128337382
     },
     {
       "ticker": "SOXX",
       "stock_score": 15,
-      "stock_state": "\ud68c\ud53c",
-      "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
-      "note": "\uc9c0\uae08\uc740 \ubc14\ub85c \ub4e4\uc5b4\uac08 \uc774\uc720\uac00 \ud06c\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\uc720: \ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4\uac00 \ub098\uc654\uc2b5\ub2c8\ub2e4.",
+      "stock_state": "회피",
+      "final_action": "회피 / 비중 축소",
+      "note": "지금은 바로 들어갈 이유가 크지 않습니다. 이유: 최근 중기 데드크로스가 나왔습니다.",
       "close": 323.4800109863281,
       "close_change_pct": -1.6329618420311443
     },
     {
       "ticker": "SERV",
       "stock_score": 8,
-      "stock_state": "\ud68c\ud53c",
-      "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
-      "note": "\uc9c0\uae08\uc740 \ubc14\ub85c \ub4e4\uc5b4\uac08 \uc774\uc720\uac00 \ud06c\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\uc720: \uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4.",
+      "stock_state": "회피",
+      "final_action": "회피 / 비중 축소",
+      "note": "지금은 바로 들어갈 이유가 크지 않습니다. 이유: 시장보다 힘이 약합니다.",
       "close": 8.319999694824219,
       "close_change_pct": -8.370046643917117
     },
     {
       "ticker": "KORU",
       "stock_score": 6,
-      "stock_state": "\ud68c\ud53c",
-      "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
-      "note": "\uc9c0\uae08\uc740 \ubc14\ub85c \ub4e4\uc5b4\uac08 \uc774\uc720\uac00 \ud06c\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\uc720: \ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4\uac00 \ub098\uc654\uc2b5\ub2c8\ub2e4.",
+      "stock_state": "회피",
+      "final_action": "회피 / 비중 축소",
+      "note": "지금은 바로 들어갈 이유가 크지 않습니다. 이유: 최근 중기 데드크로스가 나왔습니다.",
       "close": 274.0299987792969,
       "close_change_pct": 1.518914612960498
     }
@@ -176,35 +176,35 @@
     {
       "ticker": "NVDA",
       "stock_score": 17,
-      "stock_state": "\ud68c\ud53c",
-      "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
+      "stock_state": "회피",
+      "final_action": "회피 / 비중 축소",
       "top_reasons": [
-        "\uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4",
-        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4",
-        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4"
+        "시장보다 힘이 약합니다",
+        "종가가 20일선 아래에 있습니다",
+        "종가가 50일선 아래에 있습니다"
       ],
-      "invalidation": "20\uc77c\uc120\uc744 \ub2e4\uc2dc \uae68\uace0 \uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud574\uc9c0\uba74 \ub354 \uc870\uc2ec\ud574\uc11c \ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4.",
-      "easy_explanation": "\uc9c0\uae08\uc740 \ud655\uc2e4\ud788 \uac15\ud558\ub2e4\uace0 \ubcf4\uae30 \uc5b4\ub835\uc2b5\ub2c8\ub2e4. \uc11c\ub450\ub974\uae30\ubcf4\ub2e4 \uc870\uae08 \ub354 \uc9c0\ucf1c\ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4.",
-      "note": "\uc9c0\uae08\uc740 \ubc14\ub85c \ub4e4\uc5b4\uac08 \uc774\uc720\uac00 \ud06c\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\uc720: \uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4.",
+      "invalidation": "20일선을 다시 깨고 시장보다 힘이 약해지면 더 조심해서 보는 편이 좋습니다.",
+      "easy_explanation": "지금은 확실히 강하다고 보기 어렵습니다. 서두르기보다 조금 더 지켜보는 편이 좋습니다.",
+      "note": "지금은 바로 들어갈 이유가 크지 않습니다. 이유: 시장보다 힘이 약합니다.",
       "cross_highlights": [],
-      "event_flag": "\ud2b9\uc774 \uc77c\uc815 \uc5c6\uc74c",
+      "event_flag": "특이 일정 없음",
       "earnings_date": "2026-05-27",
       "earnings_date_label": "2026-05-27",
       "earnings_soon": false,
       "overheated": false,
       "positive_factors": [
-        "\ucd5c\uadfc \ud55c \ub2ec \ud750\ub984\uc774 \uc2dc\uc7a5\ubcf4\ub2e4 \uc88b\uc2b5\ub2c8\ub2e4 (+10)",
-        "\ud754\ub4e4\ub9bc\uc774 \uacfc\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4 (+5)",
-        "\ucd5c\uadfc \ub108\ubb34 \uae09\ud558\uac8c \uc624\ub978 \uc0c1\ud0dc\ub294 \uc544\ub2d9\ub2c8\ub2e4 (+5)",
-        "\uac00\uae4c\uc6b4 \uc2e4\uc801 \uc77c\uc815 \ubd80\ub2f4\uc774 \uc5c6\uc2b5\ub2c8\ub2e4 (+5)"
+        "최근 한 달 흐름이 시장보다 좋습니다 (+10)",
+        "흔들림이 과하지 않습니다 (+5)",
+        "최근 너무 급하게 오른 상태는 아닙니다 (+5)",
+        "가까운 실적 일정 부담이 없습니다 (+5)"
       ],
       "negative_factors": [
-        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-3)",
-        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-2)",
-        "\uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4 (-3)",
-        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-1)",
-        "20\uc77c\uc120 \ubc29\ud5a5\uc774 \uc544\uc9c1 \uc0b4\uc544\ub098\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4 (-1)",
-        "20\uc77c\uc120 \uc544\ub798\ub77c \ud750\ub984 \ud655\uc778\uc774 \ub354 \ud544\uc694\ud569\ub2c8\ub2e4 (0)"
+        "종가가 50일선 아래에 있습니다 (-3)",
+        "종가가 20일선 아래에 있습니다 (-2)",
+        "시장보다 힘이 약합니다 (-3)",
+        "단기 흐름이 아직 약합니다 (-1)",
+        "20일선 방향이 아직 살아나지 않았습니다 (-1)",
+        "20일선 아래라 흐름 확인이 더 필요합니다 (0)"
       ],
       "signals": {
         "short_cross": "none",
@@ -1199,53 +1199,53 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "점수 0"
       ],
       "position_tags": [
-        "\uad8c\uc7a5 \ube44\uc911 0~2%",
-        "\ubd84\ud560 2~3\ud68c \uc811\uadfc"
+        "권장 비중 0~2%",
+        "분할 2~3회 접근"
       ],
       "alerts": [
-        "\uc2e0\uaddc \uc9c4\uc785 \uc790\uc81c"
+        "신규 진입 자제"
       ],
       "confidence_warnings": [
-        "\uc2dc\uc7a5 \ub300\ube44 \uc57d\uc138"
+        "시장 대비 약세"
       ],
       "history_tags": [
-        "30\uc77c \ucd5c\uace0 17"
+        "30일 최고 17"
       ]
     },
     {
       "ticker": "TSLA",
       "stock_score": 15,
-      "stock_state": "\ud68c\ud53c",
-      "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
+      "stock_state": "회피",
+      "final_action": "회피 / 비중 축소",
       "top_reasons": [
-        "\uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4",
-        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4",
-        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4"
+        "시장보다 힘이 약합니다",
+        "종가가 20일선 아래에 있습니다",
+        "종가가 50일선 아래에 있습니다"
       ],
-      "invalidation": "20\uc77c\uc120\uc744 \ub2e4\uc2dc \uae68\uace0 \uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud574\uc9c0\uba74 \ub354 \uc870\uc2ec\ud574\uc11c \ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4.",
-      "easy_explanation": "\uc9c0\uae08\uc740 \ud655\uc2e4\ud788 \uac15\ud558\ub2e4\uace0 \ubcf4\uae30 \uc5b4\ub835\uc2b5\ub2c8\ub2e4. \uc11c\ub450\ub974\uae30\ubcf4\ub2e4 \uc870\uae08 \ub354 \uc9c0\ucf1c\ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4.",
-      "note": "\uc9c0\uae08\uc740 \ubc14\ub85c \ub4e4\uc5b4\uac08 \uc774\uc720\uac00 \ud06c\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\uc720: \uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4.",
+      "invalidation": "20일선을 다시 깨고 시장보다 힘이 약해지면 더 조심해서 보는 편이 좋습니다.",
+      "easy_explanation": "지금은 확실히 강하다고 보기 어렵습니다. 서두르기보다 조금 더 지켜보는 편이 좋습니다.",
+      "note": "지금은 바로 들어갈 이유가 크지 않습니다. 이유: 시장보다 힘이 약합니다.",
       "cross_highlights": [],
-      "event_flag": "\ud2b9\uc774 \uc77c\uc815 \uc5c6\uc74c",
+      "event_flag": "특이 일정 없음",
       "earnings_date": "2026-04-28",
       "earnings_date_label": "2026-04-28",
       "earnings_soon": false,
       "overheated": false,
       "positive_factors": [
-        "\ud754\ub4e4\ub9bc\uc774 \uacfc\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4 (+5)",
-        "\ucd5c\uadfc \ub108\ubb34 \uae09\ud558\uac8c \uc624\ub978 \uc0c1\ud0dc\ub294 \uc544\ub2d9\ub2c8\ub2e4 (+5)",
-        "\uac00\uae4c\uc6b4 \uc2e4\uc801 \uc77c\uc815 \ubd80\ub2f4\uc774 \uc5c6\uc2b5\ub2c8\ub2e4 (+5)"
+        "흔들림이 과하지 않습니다 (+5)",
+        "최근 너무 급하게 오른 상태는 아닙니다 (+5)",
+        "가까운 실적 일정 부담이 없습니다 (+5)"
       ],
       "negative_factors": [
-        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-4)",
-        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-2)",
-        "\uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4 (-3)",
-        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-1)",
-        "20\uc77c\uc120 \ubc29\ud5a5\uc774 \uc544\uc9c1 \uc0b4\uc544\ub098\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4 (-1)",
-        "20\uc77c\uc120 \uc544\ub798\ub77c \ud750\ub984 \ud655\uc778\uc774 \ub354 \ud544\uc694\ud569\ub2c8\ub2e4 (0)"
+        "종가가 50일선 아래에 있습니다 (-4)",
+        "종가가 20일선 아래에 있습니다 (-2)",
+        "시장보다 힘이 약합니다 (-3)",
+        "단기 흐름이 아직 약합니다 (-1)",
+        "20일선 방향이 아직 살아나지 않았습니다 (-1)",
+        "20일선 아래라 흐름 확인이 더 필요합니다 (0)"
       ],
       "signals": {
         "short_cross": "none",
@@ -2240,53 +2240,53 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "점수 0"
       ],
       "position_tags": [
-        "\uad8c\uc7a5 \ube44\uc911 0~2%",
-        "\ubd84\ud560 2~3\ud68c \uc811\uadfc"
+        "권장 비중 0~2%",
+        "분할 2~3회 접근"
       ],
       "alerts": [
-        "\uc2e0\uaddc \uc9c4\uc785 \uc790\uc81c"
+        "신규 진입 자제"
       ],
       "confidence_warnings": [
-        "\uc2dc\uc7a5 \ub300\ube44 \uc57d\uc138"
+        "시장 대비 약세"
       ],
       "history_tags": [
-        "30\uc77c \ucd5c\uace0 15"
+        "30일 최고 15"
       ]
     },
     {
       "ticker": "META",
       "stock_score": 10,
-      "stock_state": "\ud68c\ud53c",
-      "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
+      "stock_state": "회피",
+      "final_action": "회피 / 비중 축소",
       "top_reasons": [
-        "\uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4",
-        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4",
-        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4"
+        "시장보다 힘이 약합니다",
+        "종가가 20일선 아래에 있습니다",
+        "종가가 50일선 아래에 있습니다"
       ],
-      "invalidation": "20\uc77c\uc120\uc744 \ub2e4\uc2dc \uae68\uace0 \uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud574\uc9c0\uba74 \ub354 \uc870\uc2ec\ud574\uc11c \ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4.",
-      "easy_explanation": "\uc9c0\uae08\uc740 \ud655\uc2e4\ud788 \uac15\ud558\ub2e4\uace0 \ubcf4\uae30 \uc5b4\ub835\uc2b5\ub2c8\ub2e4. \uc11c\ub450\ub974\uae30\ubcf4\ub2e4 \uc870\uae08 \ub354 \uc9c0\ucf1c\ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4.",
-      "note": "\uc9c0\uae08\uc740 \ubc14\ub85c \ub4e4\uc5b4\uac08 \uc774\uc720\uac00 \ud06c\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\uc720: \uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4.",
+      "invalidation": "20일선을 다시 깨고 시장보다 힘이 약해지면 더 조심해서 보는 편이 좋습니다.",
+      "easy_explanation": "지금은 확실히 강하다고 보기 어렵습니다. 서두르기보다 조금 더 지켜보는 편이 좋습니다.",
+      "note": "지금은 바로 들어갈 이유가 크지 않습니다. 이유: 시장보다 힘이 약합니다.",
       "cross_highlights": [],
-      "event_flag": "\ud2b9\uc774 \uc77c\uc815 \uc5c6\uc74c",
+      "event_flag": "특이 일정 없음",
       "earnings_date": "2026-04-29",
       "earnings_date_label": "2026-04-29",
       "earnings_soon": false,
       "overheated": false,
       "positive_factors": [
-        "\ud754\ub4e4\ub9bc\uc774 \uacfc\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4 (+5)",
-        "\ucd5c\uadfc \ub108\ubb34 \uae09\ud558\uac8c \uc624\ub978 \uc0c1\ud0dc\ub294 \uc544\ub2d9\ub2c8\ub2e4 (+5)",
-        "\uac00\uae4c\uc6b4 \uc2e4\uc801 \uc77c\uc815 \ubd80\ub2f4\uc774 \uc5c6\uc2b5\ub2c8\ub2e4 (+5)"
+        "흔들림이 과하지 않습니다 (+5)",
+        "최근 너무 급하게 오른 상태는 아닙니다 (+5)",
+        "가까운 실적 일정 부담이 없습니다 (+5)"
       ],
       "negative_factors": [
-        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-4)",
-        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-3)",
-        "\uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4 (-4)",
-        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-1)",
-        "20\uc77c\uc120 \ubc29\ud5a5\uc774 \uc544\uc9c1 \uc0b4\uc544\ub098\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4 (-1)",
-        "20\uc77c\uc120 \uc544\ub798\ub77c \ud750\ub984 \ud655\uc778\uc774 \ub354 \ud544\uc694\ud569\ub2c8\ub2e4 (0)"
+        "종가가 50일선 아래에 있습니다 (-4)",
+        "종가가 20일선 아래에 있습니다 (-3)",
+        "시장보다 힘이 약합니다 (-4)",
+        "단기 흐름이 아직 약합니다 (-1)",
+        "20일선 방향이 아직 살아나지 않았습니다 (-1)",
+        "20일선 아래라 흐름 확인이 더 필요합니다 (0)"
       ],
       "signals": {
         "short_cross": "none",
@@ -3281,58 +3281,58 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "점수 0"
       ],
       "position_tags": [
-        "\uad8c\uc7a5 \ube44\uc911 0~2%",
-        "\ubd84\ud560 2~3\ud68c \uc811\uadfc"
+        "권장 비중 0~2%",
+        "분할 2~3회 접근"
       ],
       "alerts": [
-        "\uc2e0\uaddc \uc9c4\uc785 \uc790\uc81c"
+        "신규 진입 자제"
       ],
       "confidence_warnings": [
-        "\uc2dc\uc7a5 \ub300\ube44 \uc57d\uc138"
+        "시장 대비 약세"
       ],
       "history_tags": [
-        "30\uc77c \ucd5c\uace0 10"
+        "30일 최고 10"
       ]
     },
     {
       "ticker": "AMD",
       "stock_score": 38,
-      "stock_state": "\uc57d\ud568",
-      "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
+      "stock_state": "약함",
+      "final_action": "회피 / 비중 축소",
       "top_reasons": [
-        "\uac70\ub798\ub7c9\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4",
-        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4",
-        "\ucd5c\uadfc \ub2e8\uae30 \uace8\ub4e0\ud06c\ub85c\uc2a4\uac00 \ub098\uc654\uc2b5\ub2c8\ub2e4"
+        "거래량이 아직 약합니다",
+        "종가가 50일선 아래에 있습니다",
+        "최근 단기 골든크로스가 나왔습니다"
       ],
-      "invalidation": "20\uc77c\uc120\uc744 \ub2e4\uc2dc \uae68\uace0 \uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud574\uc9c0\uba74 \ub354 \uc870\uc2ec\ud574\uc11c \ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4.",
-      "easy_explanation": "\uc9c0\uae08\uc740 \ud655\uc2e4\ud788 \uac15\ud558\ub2e4\uace0 \ubcf4\uae30 \uc5b4\ub835\uc2b5\ub2c8\ub2e4. \uc11c\ub450\ub974\uae30\ubcf4\ub2e4 \uc870\uae08 \ub354 \uc9c0\ucf1c\ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4.",
-      "note": "\uc9c0\uae08\uc740 \uc870\uae08 \ub354 \uae30\ub2e4\ub9ac\ub294 \ud3b8\uc774 \ub0ab\uc2b5\ub2c8\ub2e4. \uc774\uc720: \uac70\ub798\ub7c9\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4.",
+      "invalidation": "20일선을 다시 깨고 시장보다 힘이 약해지면 더 조심해서 보는 편이 좋습니다.",
+      "easy_explanation": "지금은 확실히 강하다고 보기 어렵습니다. 서두르기보다 조금 더 지켜보는 편이 좋습니다.",
+      "note": "지금은 조금 더 기다리는 편이 낫습니다. 이유: 거래량이 아직 약합니다.",
       "cross_highlights": [
-        "AMD \ucd5c\uadfc \ub2e8\uae30 \uace8\ub4e0\ud06c\ub85c\uc2a4: 5\uc77c\uc120\uc774 20\uc77c\uc120\uc744 \uc704\ub85c \ub3cc\ud30c\ud588\uc2b5\ub2c8\ub2e4."
+        "AMD 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다."
       ],
-      "event_flag": "\ud2b9\uc774 \uc77c\uc815 \uc5c6\uc74c",
+      "event_flag": "특이 일정 없음",
       "earnings_date": "2026-05-05",
       "earnings_date_label": "2026-05-05",
       "earnings_soon": false,
       "overheated": false,
       "positive_factors": [
-        "\ucd5c\uadfc 5\uc77c\uc120\uc774 20\uc77c\uc120\uc744 \uc0c1\ud5a5 \ub3cc\ud30c\ud588\uc2b5\ub2c8\ub2e4 (+2)",
-        "\uc2dc\uc7a5\ubcf4\ub2e4 \ub354 \uc798 \ubc84\ud301\ub2c8\ub2e4 (+15)",
-        "\ucd5c\uadfc \ud55c \ub2ec \ud750\ub984\uc774 \uc2dc\uc7a5\ubcf4\ub2e4 \uc88b\uc2b5\ub2c8\ub2e4 (+10)",
-        "\ucd5c\uadfc\uc5d0\ub294 \uc0c1\uc2b9\uc77c \uac70\ub798\ub7c9\uc774 \ub354 \uc6b0\uc138\ud588\uc2b5\ub2c8\ub2e4 (+5)",
-        "\uc885\uac00\uac00 20\uc77c\uc120 \uc704\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (+10)",
-        "\ud754\ub4e4\ub9bc\uc774 \uacfc\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4 (+5)"
+        "최근 5일선이 20일선을 상향 돌파했습니다 (+2)",
+        "시장보다 더 잘 버팁니다 (+15)",
+        "최근 한 달 흐름이 시장보다 좋습니다 (+10)",
+        "최근에는 상승일 거래량이 더 우세했습니다 (+5)",
+        "종가가 20일선 위에 있습니다 (+10)",
+        "흔들림이 과하지 않습니다 (+5)"
       ],
       "negative_factors": [
-        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-3)",
-        "\uac70\ub798\ub7c9\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-6)",
-        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-1)",
-        "20\uc77c\uc120 \ubc29\ud5a5\uc774 \uc544\uc9c1 \uc0b4\uc544\ub098\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4 (-1)",
-        "50\uc77c\uc120 \uc544\ub798\ub77c \uc911\uac04 \ud750\ub984 \ud655\uc778\uc774 \ub354 \ud544\uc694\ud569\ub2c8\ub2e4 (0)",
-        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc911\uae30 \ud750\ub984\ubcf4\ub2e4 \uc57d\ud569\ub2c8\ub2e4 (0)"
+        "종가가 50일선 아래에 있습니다 (-3)",
+        "거래량이 아직 약합니다 (-6)",
+        "단기 흐름이 아직 약합니다 (-1)",
+        "20일선 방향이 아직 살아나지 않았습니다 (-1)",
+        "50일선 아래라 중간 흐름 확인이 더 필요합니다 (0)",
+        "단기 흐름이 아직 중기 흐름보다 약합니다 (0)"
       ],
       "signals": {
         "short_cross": "bull",
@@ -4327,51 +4327,51 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "점수 0"
       ],
       "position_tags": [
-        "\uad8c\uc7a5 \ube44\uc911 0~2%",
-        "\ubd84\ud560 2~3\ud68c \uc811\uadfc"
+        "권장 비중 0~2%",
+        "분할 2~3회 접근"
       ],
       "alerts": [
-        "\uace8\ub4e0\ud06c\ub85c\uc2a4 \ubc1c\uc0dd",
-        "\uc2e0\uaddc \uc9c4\uc785 \uc790\uc81c"
+        "골든크로스 발생",
+        "신규 진입 자제"
       ],
       "confidence_warnings": [],
       "history_tags": [
-        "30\uc77c \ucd5c\uace0 38"
+        "30일 최고 38"
       ]
     },
     {
       "ticker": "TEM",
       "stock_score": 9,
-      "stock_state": "\ud68c\ud53c",
-      "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
+      "stock_state": "회피",
+      "final_action": "회피 / 비중 축소",
       "top_reasons": [
-        "\uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4",
-        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4",
-        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4"
+        "시장보다 힘이 약합니다",
+        "종가가 20일선 아래에 있습니다",
+        "종가가 50일선 아래에 있습니다"
       ],
-      "invalidation": "20\uc77c\uc120\uc744 \ub2e4\uc2dc \uae68\uace0 \uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud574\uc9c0\uba74 \ub354 \uc870\uc2ec\ud574\uc11c \ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4.",
-      "easy_explanation": "\uc9c0\uae08\uc740 \ud655\uc2e4\ud788 \uac15\ud558\ub2e4\uace0 \ubcf4\uae30 \uc5b4\ub835\uc2b5\ub2c8\ub2e4. \uc11c\ub450\ub974\uae30\ubcf4\ub2e4 \uc870\uae08 \ub354 \uc9c0\ucf1c\ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4.",
-      "note": "\uc9c0\uae08\uc740 \ubc14\ub85c \ub4e4\uc5b4\uac08 \uc774\uc720\uac00 \ud06c\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\uc720: \uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4.",
+      "invalidation": "20일선을 다시 깨고 시장보다 힘이 약해지면 더 조심해서 보는 편이 좋습니다.",
+      "easy_explanation": "지금은 확실히 강하다고 보기 어렵습니다. 서두르기보다 조금 더 지켜보는 편이 좋습니다.",
+      "note": "지금은 바로 들어갈 이유가 크지 않습니다. 이유: 시장보다 힘이 약합니다.",
       "cross_highlights": [],
-      "event_flag": "\ud2b9\uc774 \uc77c\uc815 \uc5c6\uc74c",
+      "event_flag": "특이 일정 없음",
       "earnings_date": "2026-05-04",
       "earnings_date_label": "2026-05-04",
       "earnings_soon": false,
       "overheated": false,
       "positive_factors": [
-        "\ucd5c\uadfc \ub108\ubb34 \uae09\ud558\uac8c \uc624\ub978 \uc0c1\ud0dc\ub294 \uc544\ub2d9\ub2c8\ub2e4 (+5)",
-        "\uac00\uae4c\uc6b4 \uc2e4\uc801 \uc77c\uc815 \ubd80\ub2f4\uc774 \uc5c6\uc2b5\ub2c8\ub2e4 (+5)"
+        "최근 너무 급하게 오른 상태는 아닙니다 (+5)",
+        "가까운 실적 일정 부담이 없습니다 (+5)"
       ],
       "negative_factors": [
-        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-4)",
-        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-3)",
-        "\uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4 (-4)",
-        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-1)",
-        "20\uc77c\uc120 \ubc29\ud5a5\uc774 \uc544\uc9c1 \uc0b4\uc544\ub098\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4 (-1)",
-        "20\uc77c\uc120 \uc544\ub798\ub77c \ud750\ub984 \ud655\uc778\uc774 \ub354 \ud544\uc694\ud569\ub2c8\ub2e4 (0)"
+        "종가가 50일선 아래에 있습니다 (-4)",
+        "종가가 20일선 아래에 있습니다 (-3)",
+        "시장보다 힘이 약합니다 (-4)",
+        "단기 흐름이 아직 약합니다 (-1)",
+        "20일선 방향이 아직 살아나지 않았습니다 (-1)",
+        "20일선 아래라 흐름 확인이 더 필요합니다 (0)"
       ],
       "signals": {
         "short_cross": "none",
@@ -5366,55 +5366,55 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "점수 0"
       ],
       "position_tags": [
-        "\uad8c\uc7a5 \ube44\uc911 0~2%",
-        "\ubd84\ud560 2~3\ud68c \uc811\uadfc"
+        "권장 비중 0~2%",
+        "분할 2~3회 접근"
       ],
       "alerts": [
-        "\uc2e0\uaddc \uc9c4\uc785 \uc790\uc81c"
+        "신규 진입 자제"
       ],
       "confidence_warnings": [
-        "\uc2dc\uc7a5 \ub300\ube44 \uc57d\uc138"
+        "시장 대비 약세"
       ],
       "history_tags": [
-        "30\uc77c \ucd5c\uace0 9"
+        "30일 최고 9"
       ]
     },
     {
       "ticker": "SOXX",
       "stock_score": 15,
-      "stock_state": "\ud68c\ud53c",
-      "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
+      "stock_state": "회피",
+      "final_action": "회피 / 비중 축소",
       "top_reasons": [
-        "\ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4\uac00 \ub098\uc654\uc2b5\ub2c8\ub2e4",
-        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4",
-        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4"
+        "최근 중기 데드크로스가 나왔습니다",
+        "종가가 20일선 아래에 있습니다",
+        "종가가 50일선 아래에 있습니다"
       ],
-      "invalidation": "20\uc77c\uc120\uc744 \ub2e4\uc2dc \uae68\uace0 \uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud574\uc9c0\uba74 \ub354 \uc870\uc2ec\ud574\uc11c \ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4.",
-      "easy_explanation": "\uc9c0\uae08\uc740 \ud655\uc2e4\ud788 \uac15\ud558\ub2e4\uace0 \ubcf4\uae30 \uc5b4\ub835\uc2b5\ub2c8\ub2e4. \uc11c\ub450\ub974\uae30\ubcf4\ub2e4 \uc870\uae08 \ub354 \uc9c0\ucf1c\ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4.",
-      "note": "\uc9c0\uae08\uc740 \ubc14\ub85c \ub4e4\uc5b4\uac08 \uc774\uc720\uac00 \ud06c\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\uc720: \ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4\uac00 \ub098\uc654\uc2b5\ub2c8\ub2e4.",
+      "invalidation": "20일선을 다시 깨고 시장보다 힘이 약해지면 더 조심해서 보는 편이 좋습니다.",
+      "easy_explanation": "지금은 확실히 강하다고 보기 어렵습니다. 서두르기보다 조금 더 지켜보는 편이 좋습니다.",
+      "note": "지금은 바로 들어갈 이유가 크지 않습니다. 이유: 최근 중기 데드크로스가 나왔습니다.",
       "cross_highlights": [
-        "SOXX \ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4: 20\uc77c\uc120\uc774 50\uc77c\uc120 \uc544\ub798\ub85c \ub0b4\ub824\uac14\uc2b5\ub2c8\ub2e4."
+        "SOXX 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다."
       ],
-      "event_flag": "\ud2b9\uc774 \uc77c\uc815 \uc5c6\uc74c",
+      "event_flag": "특이 일정 없음",
       "earnings_date": null,
-      "earnings_date_label": "\ubbf8\ud655\uc778",
+      "earnings_date_label": "미확인",
       "earnings_soon": false,
       "overheated": false,
       "positive_factors": [
-        "\ud754\ub4e4\ub9bc\uc774 \uacfc\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4 (+5)",
-        "\ucd5c\uadfc \ub108\ubb34 \uae09\ud558\uac8c \uc624\ub978 \uc0c1\ud0dc\ub294 \uc544\ub2d9\ub2c8\ub2e4 (+5)",
-        "\uac00\uae4c\uc6b4 \uc2e4\uc801 \uc77c\uc815 \ubd80\ub2f4\uc774 \uc5c6\uc2b5\ub2c8\ub2e4 (+5)"
+        "흔들림이 과하지 않습니다 (+5)",
+        "최근 너무 급하게 오른 상태는 아닙니다 (+5)",
+        "가까운 실적 일정 부담이 없습니다 (+5)"
       ],
       "negative_factors": [
-        "\ucd5c\uadfc 20\uc77c\uc120\uc774 50\uc77c\uc120\uc744 \ud558\ud5a5 \uc774\ud0c8\ud588\uc2b5\ub2c8\ub2e4 (-5)",
-        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-3)",
-        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-2)",
-        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-1)",
-        "20\uc77c\uc120 \ubc29\ud5a5\uc774 \uc544\uc9c1 \uc0b4\uc544\ub098\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4 (-1)",
-        "20\uc77c\uc120 \uc544\ub798\ub77c \ud750\ub984 \ud655\uc778\uc774 \ub354 \ud544\uc694\ud569\ub2c8\ub2e4 (0)"
+        "최근 20일선이 50일선을 하향 이탈했습니다 (-5)",
+        "종가가 50일선 아래에 있습니다 (-3)",
+        "종가가 20일선 아래에 있습니다 (-2)",
+        "단기 흐름이 아직 약합니다 (-1)",
+        "20일선 방향이 아직 살아나지 않았습니다 (-1)",
+        "20일선 아래라 흐름 확인이 더 필요합니다 (0)"
       ],
       "signals": {
         "short_cross": "none",
@@ -6409,55 +6409,55 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "점수 0"
       ],
       "position_tags": [
-        "\uad8c\uc7a5 \ube44\uc911 0~2%",
-        "\ubd84\ud560 2~3\ud68c \uc811\uadfc"
+        "권장 비중 0~2%",
+        "분할 2~3회 접근"
       ],
       "alerts": [
-        "\ub370\ub4dc\ud06c\ub85c\uc2a4 \ubc1c\uc0dd",
-        "\uc2e0\uaddc \uc9c4\uc785 \uc790\uc81c"
+        "데드크로스 발생",
+        "신규 진입 자제"
       ],
       "confidence_warnings": [
-        "\uac70\ub798\ub7c9 \uc57d\ud568",
-        "\uc2dc\uc7a5 \ub300\ube44 \uc57d\uc138"
+        "거래량 약함",
+        "시장 대비 약세"
       ],
       "history_tags": [
-        "30\uc77c \ucd5c\uace0 15"
+        "30일 최고 15"
       ]
     },
     {
       "ticker": "SERV",
       "stock_score": 8,
-      "stock_state": "\ud68c\ud53c",
-      "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
+      "stock_state": "회피",
+      "final_action": "회피 / 비중 축소",
       "top_reasons": [
-        "\uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4",
-        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4",
-        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4"
+        "시장보다 힘이 약합니다",
+        "종가가 20일선 아래에 있습니다",
+        "종가가 50일선 아래에 있습니다"
       ],
-      "invalidation": "20\uc77c\uc120\uc744 \ub2e4\uc2dc \uae68\uace0 \uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud574\uc9c0\uba74 \ub354 \uc870\uc2ec\ud574\uc11c \ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4.",
-      "easy_explanation": "\uc9c0\uae08\uc740 \ud655\uc2e4\ud788 \uac15\ud558\ub2e4\uace0 \ubcf4\uae30 \uc5b4\ub835\uc2b5\ub2c8\ub2e4. \uc11c\ub450\ub974\uae30\ubcf4\ub2e4 \uc870\uae08 \ub354 \uc9c0\ucf1c\ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4.",
-      "note": "\uc9c0\uae08\uc740 \ubc14\ub85c \ub4e4\uc5b4\uac08 \uc774\uc720\uac00 \ud06c\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\uc720: \uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4.",
+      "invalidation": "20일선을 다시 깨고 시장보다 힘이 약해지면 더 조심해서 보는 편이 좋습니다.",
+      "easy_explanation": "지금은 확실히 강하다고 보기 어렵습니다. 서두르기보다 조금 더 지켜보는 편이 좋습니다.",
+      "note": "지금은 바로 들어갈 이유가 크지 않습니다. 이유: 시장보다 힘이 약합니다.",
       "cross_highlights": [],
-      "event_flag": "\ud2b9\uc774 \uc77c\uc815 \uc5c6\uc74c",
+      "event_flag": "특이 일정 없음",
       "earnings_date": "2026-05-20",
       "earnings_date_label": "2026-05-20",
       "earnings_soon": false,
       "overheated": false,
       "positive_factors": [
-        "\ucd5c\uadfc\uc5d0\ub294 \uc0c1\uc2b9\uc77c \uac70\ub798\ub7c9\uc774 \ub354 \uc6b0\uc138\ud588\uc2b5\ub2c8\ub2e4 (+5)",
-        "\ucd5c\uadfc \ub108\ubb34 \uae09\ud558\uac8c \uc624\ub978 \uc0c1\ud0dc\ub294 \uc544\ub2d9\ub2c8\ub2e4 (+5)",
-        "\uac00\uae4c\uc6b4 \uc2e4\uc801 \uc77c\uc815 \ubd80\ub2f4\uc774 \uc5c6\uc2b5\ub2c8\ub2e4 (+5)"
+        "최근에는 상승일 거래량이 더 우세했습니다 (+5)",
+        "최근 너무 급하게 오른 상태는 아닙니다 (+5)",
+        "가까운 실적 일정 부담이 없습니다 (+5)"
       ],
       "negative_factors": [
-        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-4)",
-        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-3)",
-        "\uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4 (-4)",
-        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-1)",
-        "20\uc77c\uc120 \ubc29\ud5a5\uc774 \uc544\uc9c1 \uc0b4\uc544\ub098\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4 (-1)",
-        "20\uc77c\uc120 \uc544\ub798\ub77c \ud750\ub984 \ud655\uc778\uc774 \ub354 \ud544\uc694\ud569\ub2c8\ub2e4 (0)"
+        "종가가 50일선 아래에 있습니다 (-4)",
+        "종가가 20일선 아래에 있습니다 (-3)",
+        "시장보다 힘이 약합니다 (-4)",
+        "단기 흐름이 아직 약합니다 (-1)",
+        "20일선 방향이 아직 살아나지 않았습니다 (-1)",
+        "20일선 아래라 흐름 확인이 더 필요합니다 (0)"
       ],
       "signals": {
         "short_cross": "none",
@@ -7452,55 +7452,55 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "점수 0"
       ],
       "position_tags": [
-        "\uad8c\uc7a5 \ube44\uc911 0~2%",
-        "\ubd84\ud560 2~3\ud68c \uc811\uadfc"
+        "권장 비중 0~2%",
+        "분할 2~3회 접근"
       ],
       "alerts": [
-        "\uc2e0\uaddc \uc9c4\uc785 \uc790\uc81c"
+        "신규 진입 자제"
       ],
       "confidence_warnings": [
-        "\uac70\ub798\ub7c9 \uc57d\ud568",
-        "\uc2dc\uc7a5 \ub300\ube44 \uc57d\uc138"
+        "거래량 약함",
+        "시장 대비 약세"
       ],
       "history_tags": [
-        "30\uc77c \ucd5c\uace0 8"
+        "30일 최고 8"
       ]
     },
     {
       "ticker": "KORU",
       "stock_score": 6,
-      "stock_state": "\ud68c\ud53c",
-      "final_action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
+      "stock_state": "회피",
+      "final_action": "회피 / 비중 축소",
       "top_reasons": [
-        "\ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4\uac00 \ub098\uc654\uc2b5\ub2c8\ub2e4",
-        "\uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4",
-        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4"
+        "최근 중기 데드크로스가 나왔습니다",
+        "시장보다 힘이 약합니다",
+        "종가가 20일선 아래에 있습니다"
       ],
-      "invalidation": "20\uc77c\uc120\uc744 \ub2e4\uc2dc \uae68\uace0 \uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud574\uc9c0\uba74 \ub354 \uc870\uc2ec\ud574\uc11c \ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4.",
-      "easy_explanation": "\uc9c0\uae08\uc740 \ud655\uc2e4\ud788 \uac15\ud558\ub2e4\uace0 \ubcf4\uae30 \uc5b4\ub835\uc2b5\ub2c8\ub2e4. \uc11c\ub450\ub974\uae30\ubcf4\ub2e4 \uc870\uae08 \ub354 \uc9c0\ucf1c\ubcf4\ub294 \ud3b8\uc774 \uc88b\uc2b5\ub2c8\ub2e4.",
-      "note": "\uc9c0\uae08\uc740 \ubc14\ub85c \ub4e4\uc5b4\uac08 \uc774\uc720\uac00 \ud06c\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\uc720: \ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4\uac00 \ub098\uc654\uc2b5\ub2c8\ub2e4.",
+      "invalidation": "20일선을 다시 깨고 시장보다 힘이 약해지면 더 조심해서 보는 편이 좋습니다.",
+      "easy_explanation": "지금은 확실히 강하다고 보기 어렵습니다. 서두르기보다 조금 더 지켜보는 편이 좋습니다.",
+      "note": "지금은 바로 들어갈 이유가 크지 않습니다. 이유: 최근 중기 데드크로스가 나왔습니다.",
       "cross_highlights": [
-        "KORU \ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4: 20\uc77c\uc120\uc774 50\uc77c\uc120 \uc544\ub798\ub85c \ub0b4\ub824\uac14\uc2b5\ub2c8\ub2e4."
+        "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다."
       ],
-      "event_flag": "\ud2b9\uc774 \uc77c\uc815 \uc5c6\uc74c",
+      "event_flag": "특이 일정 없음",
       "earnings_date": null,
-      "earnings_date_label": "\ubbf8\ud655\uc778",
+      "earnings_date_label": "미확인",
       "earnings_soon": false,
       "overheated": false,
       "positive_factors": [
-        "\ucd5c\uadfc \ub108\ubb34 \uae09\ud558\uac8c \uc624\ub978 \uc0c1\ud0dc\ub294 \uc544\ub2d9\ub2c8\ub2e4 (+5)",
-        "\uac00\uae4c\uc6b4 \uc2e4\uc801 \uc77c\uc815 \ubd80\ub2f4\uc774 \uc5c6\uc2b5\ub2c8\ub2e4 (+5)"
+        "최근 너무 급하게 오른 상태는 아닙니다 (+5)",
+        "가까운 실적 일정 부담이 없습니다 (+5)"
       ],
       "negative_factors": [
-        "\ucd5c\uadfc 20\uc77c\uc120\uc774 50\uc77c\uc120\uc744 \ud558\ud5a5 \uc774\ud0c8\ud588\uc2b5\ub2c8\ub2e4 (-5)",
-        "\uc885\uac00\uac00 50\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-4)",
-        "\uc885\uac00\uac00 20\uc77c\uc120 \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4 (-3)",
-        "\uc2dc\uc7a5\ubcf4\ub2e4 \ud798\uc774 \uc57d\ud569\ub2c8\ub2e4 (-4)",
-        "\ub2e8\uae30 \ud750\ub984\uc774 \uc544\uc9c1 \uc57d\ud569\ub2c8\ub2e4 (-1)",
-        "20\uc77c\uc120 \ubc29\ud5a5\uc774 \uc544\uc9c1 \uc0b4\uc544\ub098\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4 (-1)"
+        "최근 20일선이 50일선을 하향 이탈했습니다 (-5)",
+        "종가가 50일선 아래에 있습니다 (-4)",
+        "종가가 20일선 아래에 있습니다 (-3)",
+        "시장보다 힘이 약합니다 (-4)",
+        "단기 흐름이 아직 약합니다 (-1)",
+        "20일선 방향이 아직 살아나지 않았습니다 (-1)"
       ],
       "signals": {
         "short_cross": "none",
@@ -8495,22 +8495,22 @@
         ]
       },
       "change_tags": [
-        "\uc810\uc218 0"
+        "점수 0"
       ],
       "position_tags": [
-        "\uad8c\uc7a5 \ube44\uc911 0~2%",
-        "\ubd84\ud560 2~3\ud68c \uc811\uadfc"
+        "권장 비중 0~2%",
+        "분할 2~3회 접근"
       ],
       "alerts": [
-        "\ub370\ub4dc\ud06c\ub85c\uc2a4 \ubc1c\uc0dd",
-        "\uc2e0\uaddc \uc9c4\uc785 \uc790\uc81c"
+        "데드크로스 발생",
+        "신규 진입 자제"
       ],
       "confidence_warnings": [
-        "\uac70\ub798\ub7c9 \uc57d\ud568",
-        "\uc2dc\uc7a5 \ub300\ube44 \uc57d\uc138"
+        "거래량 약함",
+        "시장 대비 약세"
       ],
       "history_tags": [
-        "30\uc77c \ucd5c\uace0 6"
+        "30일 최고 6"
       ]
     }
   ],
@@ -9632,7 +9632,7 @@
       {
         "date": "2026-03-28",
         "score": 15,
-        "level": "\ub808\ubca8 1/6 - \ubc29\uc5b4 \uc6b0\uc120"
+        "level": "레벨 1/6 - 방어 우선"
       }
     ],
     "stocks": {
@@ -9640,56 +9640,56 @@
         {
           "date": "2026-03-28",
           "score": 17,
-          "state": "\ud68c\ud53c"
+          "state": "회피"
         }
       ],
       "TSLA": [
         {
           "date": "2026-03-28",
           "score": 15,
-          "state": "\ud68c\ud53c"
+          "state": "회피"
         }
       ],
       "META": [
         {
           "date": "2026-03-28",
           "score": 10,
-          "state": "\ud68c\ud53c"
+          "state": "회피"
         }
       ],
       "AMD": [
         {
           "date": "2026-03-28",
           "score": 38,
-          "state": "\uc57d\ud568"
+          "state": "약함"
         }
       ],
       "TEM": [
         {
           "date": "2026-03-28",
           "score": 9,
-          "state": "\ud68c\ud53c"
+          "state": "회피"
         }
       ],
       "SOXX": [
         {
           "date": "2026-03-28",
           "score": 15,
-          "state": "\ud68c\ud53c"
+          "state": "회피"
         }
       ],
       "SERV": [
         {
           "date": "2026-03-28",
           "score": 8,
-          "state": "\ud68c\ud53c"
+          "state": "회피"
         }
       ],
       "KORU": [
         {
           "date": "2026-03-28",
           "score": 6,
-          "state": "\ud68c\ud53c"
+          "state": "회피"
         }
       ]
     }

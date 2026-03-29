@@ -3,7 +3,7 @@
     {
       "date": "2026-03-28",
       "score": 15,
-      "level": "\ub808\ubca8 1/6 - \ubc29\uc5b4 \uc6b0\uc120"
+      "level": "레벨 1/6 - 방어 우선"
     }
   ],
   "stocks": {
@@ -11,56 +11,56 @@
       {
         "date": "2026-03-28",
         "score": 17,
-        "state": "\ud68c\ud53c"
+        "state": "회피"
       }
     ],
     "TSLA": [
       {
         "date": "2026-03-28",
         "score": 15,
-        "state": "\ud68c\ud53c"
+        "state": "회피"
       }
     ],
     "META": [
       {
         "date": "2026-03-28",
         "score": 10,
-        "state": "\ud68c\ud53c"
+        "state": "회피"
       }
     ],
     "AMD": [
       {
         "date": "2026-03-28",
         "score": 38,
-        "state": "\uc57d\ud568"
+        "state": "약함"
       }
     ],
     "TEM": [
       {
         "date": "2026-03-28",
         "score": 9,
-        "state": "\ud68c\ud53c"
+        "state": "회피"
       }
     ],
     "SOXX": [
       {
         "date": "2026-03-28",
         "score": 15,
-        "state": "\ud68c\ud53c"
+        "state": "회피"
       }
     ],
     "SERV": [
       {
         "date": "2026-03-28",
         "score": 8,
-        "state": "\ud68c\ud53c"
+        "state": "회피"
       }
     ],
     "KORU": [
       {
         "date": "2026-03-28",
         "score": 6,
-        "state": "\ud68c\ud53c"
+        "state": "회피"
       }
     ]
   }
