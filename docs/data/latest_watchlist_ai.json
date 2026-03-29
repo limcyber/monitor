@@ -1,5 +1,5 @@
 {
-  "generated_at_et": "2026-03-29 01:33 ET",
+  "generated_at_et": "2026-03-29 01:35 ET",
   "market_data_as_of": "2026-03-27 16:00 ET (Close)",
   "status": "error",
   "error": "\uc885\ubaa9 AI \ubd84\uc11d \uc2e4\ud328: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/",
