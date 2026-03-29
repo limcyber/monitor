@@ -1,7 +1,158 @@
 {
-  "generated_at_et": "2026-03-29 01:58 ET",
+  "generated_at_et": "2026-03-29 01:59 ET",
   "market_data_as_of": "2026-03-27 16:00 ET (Close)",
-  "status": "error",
-  "error": "\uc885\ubaa9 AI \ubd84\uc11d \uc2e4\ud328: empty Gemini response",
-  "items": []
+  "status": "ok",
+  "error": null,
+  "items": [
+    {
+      "ticker": "NVDA",
+      "ai_score": 75,
+      "ai_state": "\uac15\uc138",
+      "ai_action": "\ub9e4\uc218 \uace0\ub824",
+      "ai_note": "NVIDIA\ub294 \ub85c\ubd07 \uacf5\ud559, \uc2dc\ubbac\ub808\uc774\uc158 \ud504\ub808\uc784\uc6cc\ud06c \ubc0f \uc624\ud508 \ub85c\ubd07 \ubaa8\ub378\uc744 \ubc1c\ud45c\ud558\uba70 \ubb3c\ub9ac\uc801 AI\ub97c \ud655\uc7a5\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4. \ub610\ud55c \ud604\ub300\ucc28\uadf8\ub8f9 \ubc0f \uae30\uc544\uc640 \ucc28\uc138\ub300 \uc790\uc728 \uc8fc\ud589 \uae30\uc220 \ud611\ub825\uc744 \ud655\ub300\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4.",
+      "close": 167.52000427246094,
+      "change_pct": -2.172390271764868,
+      "score": 17,
+      "state": "\ud68c\ud53c",
+      "action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
+      "cross_highlights": [],
+      "volume_ratio_20d": 1.0806385448791136,
+      "signals": {
+        "short_cross": "none",
+        "mid_cross": "none"
+      }
+    },
+    {
+      "ticker": "TSLA",
+      "ai_score": 30,
+      "ai_state": "\uc57d\uc138",
+      "ai_action": "\uad00\ub9dd",
+      "ai_note": "\ud14c\uc2ac\ub77c\ub294 2025\ub144 1\ubd84\uae30 \ub9e4\ucd9c\uc774 \uc804\ub144 \ub300\ube44 9% \uac10\uc18c\ud588\ub2e4\uace0 \ubcf4\uace0\ud588\uc73c\uba70, \uc774\ub294 \ubaa8\ub378 Y \uc0dd\uc0b0 \ub77c\uc778 \ubcc0\uacbd\uc5d0 \ub530\ub978 \uac83\uc785\ub2c8\ub2e4.",
+      "close": 361.8299865722656,
+      "change_pct": -2.7626237359861583,
+      "score": 15,
+      "state": "\ud68c\ud53c",
+      "action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
+      "cross_highlights": [],
+      "volume_ratio_20d": 1.0150927889989887,
+      "signals": {
+        "short_cross": "none",
+        "mid_cross": "none"
+      }
+    },
+    {
+      "ticker": "META",
+      "ai_score": 40,
+      "ai_state": "\uc911\ub9bd",
+      "ai_action": "\uad00\ub9dd",
+      "ai_note": "\uba54\ud0c0\ub294 AI \uac1c\ubc1c\uc5d0 \uc9d1\uc911\ud558\uba70 Reality Labs \ubd80\uc11c \ub0b4 \uc9c1\ucc45\uc744 \uc7ac\ud3b8\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4. \ub610\ud55c, \ub274\uba55\uc2dc\ucf54\uc5d0\uc11c \uc5f4\ub9b0 \uc18c\uc1a1\uc5d0\uc11c \uc544\ub3d9 \uc131 \ucc29\ucde8 \ubc29\uce58 \ubc0f \uc548\uc804\uc5d0 \ub300\ud55c \ud5c8\uc704 \uc815\ubcf4 \uc81c\uacf5 \ud610\uc758\ub85c 3\uc5b5 7,500\ub9cc \ub2ec\ub7ec\uc758 \ubbfc\uc0ac \uc190\ud574\ubc30\uc0c1 \ud310\uacb0\uc744 \ubc1b\uc558\uc2b5\ub2c8\ub2e4.",
+      "close": 525.719970703125,
+      "change_pct": -3.985098476796356,
+      "score": 10,
+      "state": "\ud68c\ud53c",
+      "action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
+      "cross_highlights": [],
+      "volume_ratio_20d": 2.020999852370067,
+      "signals": {
+        "short_cross": "none",
+        "mid_cross": "none"
+      }
+    },
+    {
+      "ticker": "AMD",
+      "ai_score": 65,
+      "ai_state": "\uac15\uc138",
+      "ai_action": "\ub9e4\uc218 \uace0\ub824",
+      "ai_note": "AMD\ub294 \uc0bc\uc131\uacfc \ucc28\uc138\ub300 AI \uba54\ubaa8\ub9ac \uc194\ub8e8\uc158 \ud611\ub825\uc744 \ud655\ub300\ud558\uace0 \uc788\uc73c\uba70, \ud55c\uad6d\uc5d0\uc11c AI \uc778\ud504\ub77c \ubc1c\uc804\uc744 \uc704\ud55c NAVER \ud074\ub77c\uc6b0\ub4dc \ubc0f \uc5c5\uc2a4\ud14c\uc774\uc9c0\uc640 \ud611\ub825\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4.",
+      "close": 201.99000549316406,
+      "change_pct": -0.8735332688695641,
+      "score": 38,
+      "state": "\uc57d\ud568",
+      "action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
+      "cross_highlights": [
+        "AMD \ucd5c\uadfc \ub2e8\uae30 \uace8\ub4e0\ud06c\ub85c\uc2a4: 5\uc77c\uc120\uc774 20\uc77c\uc120\uc744 \uc704\ub85c \ub3cc\ud30c\ud588\uc2b5\ub2c8\ub2e4."
+      ],
+      "volume_ratio_20d": 0.8724078790706679,
+      "signals": {
+        "short_cross": "bull",
+        "mid_cross": "none"
+      }
+    },
+    {
+      "ticker": "TEM",
+      "ai_score": 25,
+      "ai_state": "\uc57d\uc138",
+      "ai_action": "\uad00\ub9dd",
+      "ai_note": "Tempus AI\uc758 CEO\uc778 Eric P. Lefkofsky\ub294 \uc57d 4,578\ub9cc~4,742\ub9cc \ub2ec\ub7ec\uc5d0 \ub2ec\ud558\ub294 166,250\uc8fc\ub97c \ub9e4\ub3c4\ud588\uc2b5\ub2c8\ub2e4.",
+      "close": 42.619998931884766,
+      "change_pct": -6.391390128337382,
+      "score": 9,
+      "state": "\ud68c\ud53c",
+      "action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
+      "cross_highlights": [],
+      "volume_ratio_20d": 1.185266788306319,
+      "signals": {
+        "short_cross": "none",
+        "mid_cross": "none"
+      }
+    },
+    {
+      "ticker": "SOXX",
+      "ai_score": 35,
+      "ai_state": "\uc57d\uc138",
+      "ai_action": "\uad00\ub9dd",
+      "ai_note": "\ubc18\ub3c4\uccb4 ETF\uc778 SOXX\ub294 \uc911\ub3d9 \uc9c0\uc5ed\uc758 \uc9c0\uc815\ud559\uc801 \uae34\uc7a5 \uace0\uc870\uc640 \uc720\uac00 \uc0c1\uc2b9\uc73c\ub85c \uc778\ud574 \ud558\ub77d\ud588\uc2b5\ub2c8\ub2e4.",
+      "close": 323.4800109863281,
+      "change_pct": -1.6329618420311443,
+      "score": 15,
+      "state": "\ud68c\ud53c",
+      "action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
+      "cross_highlights": [
+        "SOXX \ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4: 20\uc77c\uc120\uc774 50\uc77c\uc120 \uc544\ub798\ub85c \ub0b4\ub824\uac14\uc2b5\ub2c8\ub2e4."
+      ],
+      "volume_ratio_20d": 0.7801960569159317,
+      "signals": {
+        "short_cross": "none",
+        "mid_cross": "bear"
+      }
+    },
+    {
+      "ticker": "SERV",
+      "ai_score": 20,
+      "ai_state": "\uc57d\uc138",
+      "ai_action": "\uad00\ub9dd",
+      "ai_note": "Serve Robotics\ub294 2025\ub144 4\ubd84\uae30 \ub9e4\ucd9c\uc774 90\ub9cc \ub2ec\ub7ec\ub85c \uc804\ub144 \ub3d9\uae30 \ub300\ube44 400% \uc99d\uac00\ud588\ub2e4\uace0 \ubc1c\ud45c\ud588\uc2b5\ub2c8\ub2e4.",
+      "close": 8.319999694824219,
+      "change_pct": -8.370046643917117,
+      "score": 8,
+      "state": "\ud68c\ud53c",
+      "action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
+      "cross_highlights": [],
+      "volume_ratio_20d": 0.7982916840252878,
+      "signals": {
+        "short_cross": "none",
+        "mid_cross": "none"
+      }
+    },
+    {
+      "ticker": "KORU",
+      "ai_score": 10,
+      "ai_state": "\ub9e4\uc6b0 \uc57d\uc138",
+      "ai_action": "\ud68c\ud53c",
+      "ai_note": "KORU Medical Systems\ub294 2025\ub144 4\ubd84\uae30 \ub9e4\ucd9c\uc774 1,090\ub9cc \ub2ec\ub7ec\ub85c \uc804\ub144 \ub3d9\uae30 \ub300\ube44 23% \uc99d\uac00\ud588\uc9c0\ub9cc, CEO \uad50\uccb4 \uc18c\uc2dd\uc774 \uc788\uc5c8\uc2b5\ub2c8\ub2e4.",
+      "close": 274.0299987792969,
+      "change_pct": 1.518914612960498,
+      "score": 6,
+      "state": "\ud68c\ud53c",
+      "action": "\ud68c\ud53c / \ube44\uc911 \ucd95\uc18c",
+      "cross_highlights": [
+        "KORU \ucd5c\uadfc \uc911\uae30 \ub370\ub4dc\ud06c\ub85c\uc2a4: 20\uc77c\uc120\uc774 50\uc77c\uc120 \uc544\ub798\ub85c \ub0b4\ub824\uac14\uc2b5\ub2c8\ub2e4."
+      ],
+      "volume_ratio_20d": 0.6678081672854004,
+      "signals": {
+        "short_cross": "none",
+        "mid_cross": "bear"
+      }
+    }
+  ]
 }
