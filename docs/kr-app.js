@@ -19,6 +19,12 @@ function marketTone(score) {
   return `tone-${scoreTone(score)}`;
 }
 
+function aiStatusTone(status) {
+  if (status === "ok") return "success";
+  if (status === "error") return "danger";
+  return "warning";
+}
+
 function formatScore(score) {
   return `${score}/100`;
 }
@@ -67,6 +73,121 @@ function escapeHtml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
+}
+
+function cleanAiText(value) {
+  return String(value || "")
+    .replaceAll("**", "")
+    .replace(/(?<!^)(?=(AI 판단|확인 포인트|결론|속보 요약):)/g, "\n")
+    .replace(" (AI 점수:", "\n(AI 점수:")
+    .trim();
+}
+
+function aiDisplayContent(aiAnalysis) {
+  const status = aiAnalysis?.status || "disabled";
+  if (status === "disabled") {
+    return [
+      "AI 분석: 분석 대기 중입니다.",
+      "확인 포인트: 다음 한국장 AI 갱신이 끝나면 자동으로 내용이 채워집니다.",
+      "결론: 지금은 아래 한국 시장 지표와 핵심 이유를 먼저 참고해 주세요.",
+      "속보 요약: 기존 흐름을 이어서 확인 중입니다.",
+    ].join("\n");
+  }
+  if (status === "error") {
+    return [
+      "AI 분석: 지금은 분석 결과를 불러오지 못했습니다.",
+      "확인 포인트: 잠시 뒤 다시 확인해 주세요.",
+      "결론: 현재 화면의 한국 시장 지표와 핵심 이유는 정상적으로 참고할 수 있습니다.",
+      "속보 요약: 기존 흐름을 이어서 확인 중입니다.",
+    ].join("\n");
+  }
+  return aiAnalysis?.content || "AI 분석이 아직 없습니다.";
+}
+
+function renderAiAnalysis(el, value) {
+  if (!el) return;
+  const text = cleanAiText(value);
+  if (!text || text === "-") {
+    el.textContent = "-";
+    return;
+  }
+
+  const lines = text
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean);
+
+  const sections = [];
+  const sectionIndexByLabel = new Map();
+  let current = null;
+
+  lines.forEach((line) => {
+    const matched = line.match(/^(AI 판단|확인 포인트|결론|속보 요약):\s*(.*)$/);
+    if (matched) {
+      const label = matched[1];
+      const nextSection = { label, content: matched[2] ? [matched[2]] : [] };
+      if (sectionIndexByLabel.has(label)) {
+        const index = sectionIndexByLabel.get(label);
+        sections[index] = nextSection;
+      } else {
+        sectionIndexByLabel.set(label, sections.length);
+        sections.push(nextSection);
+      }
+      current = nextSection;
+      return;
+    }
+    if (current) {
+      current.content.push(line);
+      return;
+    }
+    if (!sections.length) {
+      current = { label: "AI 분석", content: [line] };
+      sections.push(current);
+    } else {
+      sections[sections.length - 1].content.push(line);
+    }
+  });
+
+  if (!sections.length) {
+    el.textContent = text;
+    return;
+  }
+
+  const hasBreakingNews = sections.some((section) => section.label === "속보 요약");
+  if (!hasBreakingNews) {
+    sections.push({
+      label: "속보 요약",
+      content: ["기존 흐름을 이어서 확인 중입니다."],
+    });
+  }
+
+  el.innerHTML = sections
+    .map((section) => {
+      const items = section.content.filter(Boolean);
+      const bulletLines = items.filter((item) => /^[-*•]\s+/.test(item));
+      const proseLines = items.filter((item) => !/^[-*•]\s+/.test(item));
+      const proseHtml = proseLines.length
+        ? `<p>${proseLines
+            .map((item) => {
+              const scoreMatch = item.match(/AI 점수:\s*(\d{1,3})\/100/);
+              if (scoreMatch) {
+                return `<span class="ai-analysis-meta ${scoreTone(Number(scoreMatch[1]))}">${escapeHtml(item)}</span>`;
+              }
+              return escapeHtml(item);
+            })
+            .join("<br>")}</p>`
+        : "";
+      const bulletHtml = bulletLines.length
+        ? `<ul>${bulletLines.map((item) => `<li>${escapeHtml(item.replace(/^[-*•]\s+/, ""))}</li>`).join("")}</ul>`
+        : "";
+      return `
+        <section class="ai-analysis-item">
+          <div class="ai-analysis-label">${escapeHtml(section.label)}</div>
+          <div class="ai-analysis-copy">${proseHtml}${bulletHtml}</div>
+        </section>
+      `;
+    })
+    .join("");
 }
 
 function tagTone(text) {
@@ -505,6 +626,14 @@ function renderMarket(data) {
   renderQuote("marketUsdkrwQuote", data.market.metrics.usdkrw_close, data.market.metrics.usdkrw_change_pct, true);
 
   renderList(document.getElementById("marketCrossHighlights"), data.market.cross_highlights, "최근 눈에 띄는 골든크로스나 데드크로스는 없습니다.");
+  renderAiAnalysis(document.getElementById("marketAiText"), aiDisplayContent(data.market.ai_analysis));
+  setText("marketAiUpdated", `(updated: ${data.market.ai_analysis?.generated_at_et || data.generated_at_et || "-"})`);
+  const aiStatusEl = document.getElementById("marketAiStatus");
+  if (aiStatusEl) {
+    const status = data.market.ai_analysis?.status || "disabled";
+    aiStatusEl.className = `pill ${aiStatusTone(status)}`;
+    aiStatusEl.textContent = status === "ok" ? "분석 완료" : status === "error" ? "분석 실패" : "분석 대기";
+  }
   setText("marketEasy", data.market.easy_explanation);
   setText("marketInvalidation", data.market.invalidation);
   renderList(document.getElementById("marketReasons"), data.market.top_reasons, "오늘은 시장을 좋게 볼 만한 신호가 많지 않습니다.");
@@ -759,12 +888,24 @@ function initStockPanel(stocks) {
 
 async function boot() {
   initThemeToggle();
-  const [response, aiResponse] = await Promise.all([
+  const [response, marketAiResponse, aiResponse] = await Promise.all([
     fetch("./data/latest_kr.json", { cache: "no-store" }),
+    fetch("./data/latest_ai_kr.json", { cache: "no-store" }).catch(() => null),
     fetch("./data/latest_watchlist_ai_kr.json", { cache: "no-store" }).catch(() => null),
   ]);
   if (!response.ok) throw new Error("Failed to load latest_kr.json");
   const data = await response.json();
+  if (marketAiResponse && marketAiResponse.ok) {
+    try {
+      const marketAiData = await marketAiResponse.json();
+      if (marketAiData?.ai_analysis) {
+        data.market.ai_analysis = {
+          ...marketAiData.ai_analysis,
+          generated_at_et: marketAiData.generated_at_et,
+        };
+      }
+    } catch {}
+  }
   let aiMap = {};
   if (aiResponse && aiResponse.ok) {
     try {

@@ -190,13 +190,15 @@
 ## 9. 한국 종목 AI 분석
 
 #### [korea-watchlist-ai-refresh.yml](./.github/workflows/korea-watchlist-ai-refresh.yml)
-한국 관심종목 요약 아래의 `AI 분석(종목명)` 행을 갱신하는 워크플로입니다.
+한국 시장 카드의 `AI 분석`과 관심종목 요약 아래의 `AI 분석(종목명)` 행을 함께 갱신하는 워크플로입니다.
 
 - 평일 한국장 시간에만 실행
-- `09:00 KST`부터 `15:00 KST`까지 매시간 정각
+- `09:00 KST`부터 `16:00 KST`까지 매시간 정각
 - 장외 시간에는 실행하지 않음
 - `GOOGLE_API_KEY` 사용
 - 결과 파일:
+  - [docs/data/latest_ai_kr.json](./docs/data/latest_ai_kr.json)
+  - [docs/data/ai_history_kr.json](./docs/data/ai_history_kr.json)
   - [docs/data/latest_watchlist_ai_kr.json](./docs/data/latest_watchlist_ai_kr.json)
   - [docs/data/watchlist_ai_history_kr.json](./docs/data/watchlist_ai_history_kr.json)
 
@@ -208,6 +210,8 @@
 - [scripts/generate_kr_ai.py](./scripts/generate_kr_ai.py)
 - [docs/data/latest_kr.json](./docs/data/latest_kr.json)
 - [docs/data/history_kr.json](./docs/data/history_kr.json)
+- [docs/data/latest_ai_kr.json](./docs/data/latest_ai_kr.json)
+- [docs/data/ai_history_kr.json](./docs/data/ai_history_kr.json)
 - [docs/data/latest_watchlist_ai_kr.json](./docs/data/latest_watchlist_ai_kr.json)
 - [docs/data/watchlist_ai_history_kr.json](./docs/data/watchlist_ai_history_kr.json)
 - [config/watchlist_kr.yml](./config/watchlist_kr.yml)

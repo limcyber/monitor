@@ -46,7 +46,7 @@ jobs:
             echo "Skipping: not on the hour."
             exit 0
           fi
-          if [ "$HOUR" -lt 9 ] || [ "$HOUR" -gt 15 ]; then
+          if [ "$HOUR" -lt 9 ] || [ "$HOUR" -gt 16 ]; then
             echo "should_run=false" >> "$GITHUB_OUTPUT"
             echo "Skipping: outside Korea market AI window."
             exit 0
@@ -58,26 +58,26 @@ jobs:
         if: steps.window.outputs.should_run == 'true'
         run: pip install -r requirements.txt
 
-      - name: Generate Korea watchlist AI files
+      - name: Generate Korea AI files
         if: steps.window.outputs.should_run == 'true'
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         run: |
           python scripts/generate_kr_ai.py
 
-      - name: Commit Korea watchlist AI data
+      - name: Commit Korea AI data
         if: steps.window.outputs.should_run == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git pull --rebase --autostash origin main
-          git add docs/data/latest_watchlist_ai_kr.json docs/data/watchlist_ai_history_kr.json
+          git add docs/data/latest_ai_kr.json docs/data/ai_history_kr.json docs/data/latest_watchlist_ai_kr.json docs/data/watchlist_ai_history_kr.json
           if git diff --cached --quiet; then
-            echo "Korea watchlist AI result: no file changes."
+            echo "Korea AI result: no file changes."
           else
-            git commit -m "chore: refresh korea watchlist ai"
+            git commit -m "chore: refresh korea ai"
             git push
-            echo "Korea watchlist AI result: committed and pushed."
+            echo "Korea AI result: committed and pushed."
           fi
 
       - name: Upload artifact

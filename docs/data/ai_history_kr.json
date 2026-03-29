@@ -1,0 +1,74 @@
+{
+  "updated_at_et": "2026-03-29 02:48 ET",
+  "count": 2,
+  "items": [
+    {
+      "generated_at_et": "2026-03-29 02:47 ET",
+      "market_data_as_of": "2026-03-27 15:30 KST (Close)",
+      "market": {
+        "score": 61,
+        "level": 4,
+        "state": "레벨 4/6 - 살아나는 구간",
+        "action": "소규모 매수 / 보유",
+        "cross_highlights": [
+          "KOSPI 최근 단기 데드크로스",
+          "KOSDAQ 최근 단기 데드크로스"
+        ],
+        "top_reasons": [
+          "KOSPI가 200일선 위에 있습니다 (+15)",
+          "KOSDAQ이 200일선 위에 있습니다 (+12)",
+          "KOSPI의 50일선이 200일선 위에 있습니다 (+8)"
+        ],
+        "metrics": {
+          "vix_close": 31.049999237060547,
+          "tnx_close": null,
+          "pct_above_20dma": null,
+          "pct_above_50dma": null
+        }
+      },
+      "ai_analysis": {
+        "status": "disabled",
+        "model": "gemini-2.5-flash-lite",
+        "content": "GOOGLE_API_KEY가 없어 한국 시장 AI 분석을 건너뛰었습니다."
+      },
+      "ai_notifications": {
+        "count": 0,
+        "items": []
+      }
+    },
+    {
+      "generated_at_et": "2026-03-29 02:48 ET",
+      "market_data_as_of": "2026-03-27 15:30 KST (Close)",
+      "market": {
+        "score": 61,
+        "level": 4,
+        "state": "레벨 4/6 - 살아나는 구간",
+        "action": "소규모 매수 / 보유",
+        "cross_highlights": [
+          "KOSPI 최근 단기 데드크로스",
+          "KOSDAQ 최근 단기 데드크로스"
+        ],
+        "top_reasons": [
+          "KOSPI가 200일선 위에 있습니다 (+15)",
+          "KOSDAQ이 200일선 위에 있습니다 (+12)",
+          "KOSPI의 50일선이 200일선 위에 있습니다 (+8)"
+        ],
+        "metrics": {
+          "vix_close": 31.049999237060547,
+          "tnx_close": null,
+          "pct_above_20dma": null,
+          "pct_above_50dma": null
+        }
+      },
+      "ai_analysis": {
+        "status": "disabled",
+        "model": "gemini-2.5-flash-lite",
+        "content": "GOOGLE_API_KEY가 없어 한국 시장 AI 분석을 건너뛰었습니다."
+      },
+      "ai_notifications": {
+        "count": 0,
+        "items": []
+      }
+    }
+  ]
+}

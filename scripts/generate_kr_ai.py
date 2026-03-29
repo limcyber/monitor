@@ -8,10 +8,13 @@ from pathlib import Path
 from generate_report import (
     DOCS_DATA_DIR,
     ET,
+    MARKET_GEMINI_MODEL,
     WATCHLIST_GEMINI_MODEL,
     append_ai_history,
+    build_market_ai_output,
     build_watchlist_ai_output,
     gemini_generate_text,
+    latest_market_ai_text,
     load_json,
     parse_json_blob,
     summarize_ai_error,
@@ -19,8 +22,121 @@ from generate_report import (
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 KR_OUTPUT_PATH = DOCS_DATA_DIR / "latest_kr.json"
+KR_AI_OUTPUT_PATH = DOCS_DATA_DIR / "latest_ai_kr.json"
+KR_AI_HISTORY_PATH = DOCS_DATA_DIR / "ai_history_kr.json"
 KR_WATCHLIST_AI_OUTPUT_PATH = DOCS_DATA_DIR / "latest_watchlist_ai_kr.json"
 KR_WATCHLIST_AI_HISTORY_PATH = DOCS_DATA_DIR / "watchlist_ai_history_kr.json"
+
+
+def build_kr_market_ai_payload(output: dict) -> dict:
+    market = output.get("market", {})
+    metrics = market.get("metrics", {})
+    summary_rows = []
+    for row in output.get("watchlist_summary", [])[:8]:
+        summary_rows.append(
+            {
+                "ticker": row.get("ticker"),
+                "name": row.get("name"),
+                "score": row.get("stock_score"),
+                "state": row.get("stock_state"),
+                "action": row.get("final_action"),
+                "note": row.get("note"),
+                "close": row.get("close"),
+                "change_pct": row.get("close_change_pct"),
+            }
+        )
+
+    return {
+        "generated_at_et": output.get("generated_at_et"),
+        "market_data_as_of": output.get("market_data_as_of"),
+        "market": {
+            "score": market.get("score"),
+            "state": market.get("state"),
+            "action": market.get("action"),
+            "top_reasons": market.get("top_reasons", [])[:4],
+            "cross_highlights": market.get("cross_highlights", [])[:3],
+            "positive_factors": market.get("positive_factors", [])[:4],
+            "negative_factors": market.get("negative_factors", [])[:4],
+            "alerts": market.get("alerts", [])[:4],
+            "metrics": {
+                "kospi_close": metrics.get("kospi_close"),
+                "kospi_change_pct": metrics.get("kospi_change_pct"),
+                "kosdaq_close": metrics.get("kosdaq_close"),
+                "kosdaq_change_pct": metrics.get("kosdaq_change_pct"),
+                "kospi200_close": metrics.get("kospi200_close"),
+                "kospi200_change_pct": metrics.get("kospi200_change_pct"),
+                "usdkrw_close": metrics.get("usdkrw_close"),
+                "usdkrw_change_pct": metrics.get("usdkrw_change_pct"),
+                "vix_close": metrics.get("vix_close"),
+                "vix_change_pct": metrics.get("vix_change_pct"),
+                "vix_percentile": metrics.get("vix_percentile"),
+                "semicon_close": metrics.get("semicon_close"),
+                "semicon_change_pct": metrics.get("semicon_change_pct"),
+                "brent_close": metrics.get("brent_close"),
+                "brent_change_pct": metrics.get("brent_change_pct"),
+            },
+        },
+        "watchlist_summary": summary_rows,
+    }
+
+
+def generate_kr_market_ai_analysis(output: dict, previous_ai_output: dict | None = None) -> dict:
+    api_key = os.environ.get("GOOGLE_API_KEY") or os.environ.get("GEMINI_API_KEY")
+    if not api_key:
+        return {
+            "status": "disabled",
+            "model": MARKET_GEMINI_MODEL,
+            "content": "GOOGLE_API_KEY가 없어 한국 시장 AI 분석을 건너뛰었습니다.",
+        }
+
+    payload = build_kr_market_ai_payload(output)
+    previous_text = latest_market_ai_text(previous_ai_output or {})
+    prompt = f"""
+너는 한국 주식 시장을 보는 실전형 전문 애널리스트다.
+
+아래는 규칙 기반으로 계산한 한국 시장 모니터 데이터다.
+1. 이 규칙 기반 시장 상태 및 흐름이 대체로 맞는지 먼저 판단한다.
+2. 검색으로 확인된 최신 뉴스, 지정학, 환율, 금리, 변동성, 주도 업종 상황만 반영하고, 확인되지 않은 내용은 단정하지 않는다.
+3. 규칙 기반 데이터에 이미 들어 있는 점수 이유를 반복하지 말고, 그 바깥의 외부 변수와 맥락을 중심으로 설명한다.
+4. KOSPI, KOSDAQ, 원달러, 반도체, 국제유가, 해외 변동성이 왜 지금 한국 시장 분위기에 영향을 주는지 짚는다.
+5. 아래에 첨부된 가장 최근 AI 분석 내용을 참고해서, 이번 답변이 이전보다 무엇이 달라졌는지 확인한다.
+6. 새로 확인된 속보나 업데이트된 이슈가 있으면 `속보 요약`에 이전보다 더 최근 정보를 반영한다.
+7. 이전 AI 분석과 같은 내용만 반복하지 말고, 달라진 점이나 새로 확인된 점이 있으면 우선해서 반영한다.
+8. 확인된 뉴스가 뚜렷하지 않으면 억지로 채우지 말고 생략한다.
+9. 한국어로만, 짧고 깔끔하게 답한다.
+10. 출력 형식은 아래 4줄만 쓴다.
+AI 판단: 먼저 한 문장으로 현재 시장 판단을 쓰고, 바로 다음 줄 괄호에 (AI 점수: xx/100, AI 매매 여건: ..., AI 추천 행동: ...) 형식으로 쓴다.
+확인 포인트: ...
+결론: ...
+속보 요약: ...
+11. 각 줄은 한두 문장 이내로 짧게 쓴다. 결론은 중요한 이슈가 있으면 불릿 포인트로 2~3개까지 정리한다.
+12. 과장하지 말고, 규칙 기반 판단과 다르면 왜 다른지도 짚는다.
+13. 결론은 시장 분위기, 가장 큰 위험 요인, 가장 중요한 긍정 요인 순서로 정리한다.
+14. 마크다운 굵게 표시(**)는 쓰지 않는다.
+15. 속보 요약에는 한국 시장에 바로 영향을 줄 수 있는 최신 뉴스나 헤드라인만 1~3개까지 짧게 정리한다. 새 속보가 많지 않더라도 기존 속보 흐름을 이어서 최신 내용으로 압축해 쓴다.
+16. AI 판단 줄에는 점수 괄호만 쓰지 말고, 반드시 설명 문장을 먼저 쓴다.
+17. 이전 AI 분석과 비교해도 새로 업데이트된 정보가 없으면, 기존 요약을 불필요하게 크게 바꾸지 않는다.
+
+가장 최근 AI 분석:
+{previous_text}
+
+시장 데이터:
+{json.dumps(payload, ensure_ascii=False, indent=2)}
+""".strip()
+
+    try:
+        text = gemini_generate_text(prompt, api_key, MARKET_GEMINI_MODEL)
+        return {
+            "status": "ok",
+            "model": MARKET_GEMINI_MODEL,
+            "content": text,
+        }
+    except Exception as exc:
+        return {
+            "status": "error",
+            "model": MARKET_GEMINI_MODEL,
+            "content": f"한국 시장 AI 분석 실패: {summarize_ai_error(exc)}",
+        }
 
 
 def build_kr_watchlist_ai_payload(output: dict) -> dict:
@@ -153,18 +269,28 @@ def main() -> None:
     if not output:
         raise RuntimeError("latest_kr.json not found or invalid")
 
+    previous_market_output = load_json(KR_AI_OUTPUT_PATH)
     previous_output = load_json(KR_WATCHLIST_AI_OUTPUT_PATH)
     ai_generated_at_et = datetime.now(tz=ET).strftime("%Y-%m-%d %H:%M ET")
+    market_ai = generate_kr_market_ai_analysis(output, previous_market_output)
+    market_output = build_market_ai_output(output, market_ai, ai_generated_at_et)
     current_output = generate_kr_watchlist_ai_analysis(output)
     current_output["generated_at_et"] = ai_generated_at_et
+
+    latest_market_output = market_output
+    if market_output.get("ai_analysis", {}).get("status") != "ok" and previous_market_output.get("ai_analysis", {}).get("status") == "ok":
+        latest_market_output = previous_market_output
 
     latest_output = current_output
     if current_output.get("status") != "ok" and previous_output.get("status") == "ok":
         latest_output = previous_output
 
     DOCS_DATA_DIR.mkdir(parents=True, exist_ok=True)
+    with KR_AI_OUTPUT_PATH.open("w", encoding="utf-8") as f:
+        json.dump(latest_market_output, f, indent=2, ensure_ascii=False)
     with KR_WATCHLIST_AI_OUTPUT_PATH.open("w", encoding="utf-8") as f:
         json.dump(latest_output, f, indent=2, ensure_ascii=False)
+    append_ai_history(KR_AI_HISTORY_PATH, market_output)
     append_ai_history(KR_WATCHLIST_AI_HISTORY_PATH, current_output)
 
 
