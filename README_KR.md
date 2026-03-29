@@ -160,6 +160,14 @@
 
 - 한국장 시간대에 5분 간격으로 확인
 - 핵심 변화가 있을 때만 전송
+- 다만 공통 Discord 조용한 시간(`00:00~06:59 ET`)에는 실제 전송이 막힙니다
+- `DISCORD_KR_WEBHOOK_URL` 사용
+
+#### [discord-korea-delayed-alerts.yml](./.github/workflows/discord-korea-delayed-alerts.yml)
+조용한 시간에 걸려 막힌 한국장 오후 중요 알림을 따로 보내는 워크플로입니다.
+
+- 평일 `07:05 ET` 기준으로 한 번 실행
+- 한국장 마감 후 생성된 `latest_kr.json`의 중요 알림을 다시 전송
 - `DISCORD_KR_WEBHOOK_URL` 사용
 
 중요 알림 예시:
