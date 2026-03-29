@@ -10,7 +10,9 @@ from generate_report import (
     DOCS_DATA_DIR,
     ET,
     build_notification,
+    compute_rsi,
     confidence_from_coverage,
+    cross_context_text,
     factor_text,
     has_valid_close_frame,
     load_json,
@@ -37,6 +39,7 @@ from generate_report import (
     stock_confidence_warnings,
     stock_position_tags,
     update_history,
+    volume_ratio,
     zscore,
 )
 
@@ -336,11 +339,15 @@ def kr_market_guidance(score: int, market_data: dict) -> tuple[list[str], list[s
     kospi_dma20 = kospi.rolling(20).mean()
     kospi_dma50 = kospi.rolling(50).mean()
     kospi_dma200 = kospi.rolling(200).mean()
+    kospi_volume_ratio_20d = volume_ratio(market_data["KOSPI"].get("Volume", pd.Series(dtype=float)), 20)
+    kospi_rsi14 = compute_rsi(kospi)
 
     kosdaq_dma5 = kosdaq.rolling(5).mean()
     kosdaq_dma20 = kosdaq.rolling(20).mean()
     kosdaq_dma50 = kosdaq.rolling(50).mean()
     kosdaq_dma200 = kosdaq.rolling(200).mean()
+    kosdaq_volume_ratio_20d = volume_ratio(market_data["KOSDAQ"].get("Volume", pd.Series(dtype=float)), 20)
+    kosdaq_rsi14 = compute_rsi(kosdaq)
 
     kospi200_dma50 = kospi200.rolling(50).mean()
     kospi200_dma200 = kospi200.rolling(200).mean()
@@ -467,12 +474,12 @@ def kr_market_guidance(score: int, market_data: dict) -> tuple[list[str], list[s
     )
     if kospi_short_bull:
         score_value += 2
-        cross_highlights.append("KOSPI 최근 단기 골든크로스")
+        cross_highlights.append(f"KOSPI 최근 단기 골든크로스: {cross_context_text(kospi_volume_ratio_20d, kospi_rsi14)}")
         positive_factors.append(kospi_short_bull)
         reasons.append("KOSPI에서 최근 단기 골든크로스가 나왔습니다")
     if kospi_short_bear:
         score_value -= 5
-        cross_highlights.append("KOSPI 최근 단기 데드크로스")
+        cross_highlights.append(f"KOSPI 최근 단기 데드크로스: {cross_context_text(kospi_volume_ratio_20d, kospi_rsi14)}")
         negative_factors.append(kospi_short_bear)
         reasons.append("KOSPI에서 최근 단기 데드크로스가 나왔습니다")
 
@@ -484,12 +491,12 @@ def kr_market_guidance(score: int, market_data: dict) -> tuple[list[str], list[s
     )
     if kosdaq_short_bull:
         score_value += 2
-        cross_highlights.append("KOSDAQ 최근 단기 골든크로스")
+        cross_highlights.append(f"KOSDAQ 최근 단기 골든크로스: {cross_context_text(kosdaq_volume_ratio_20d, kosdaq_rsi14)}")
         positive_factors.append(kosdaq_short_bull)
         reasons.append("KOSDAQ에서 최근 단기 골든크로스가 나왔습니다")
     if kosdaq_short_bear:
         score_value -= 5
-        cross_highlights.append("KOSDAQ 최근 단기 데드크로스")
+        cross_highlights.append(f"KOSDAQ 최근 단기 데드크로스: {cross_context_text(kosdaq_volume_ratio_20d, kosdaq_rsi14)}")
         negative_factors.append(kosdaq_short_bear)
         reasons.append("KOSDAQ에서 최근 단기 데드크로스가 나왔습니다")
 
@@ -508,11 +515,11 @@ def kr_market_guidance(score: int, market_data: dict) -> tuple[list[str], list[s
     )
     if kospi_mid_bull:
         score_value += 4
-        cross_highlights.append("KOSPI 최근 중기 골든크로스")
+        cross_highlights.append(f"KOSPI 최근 중기 골든크로스: {cross_context_text(kospi_volume_ratio_20d, kospi_rsi14)}")
         positive_factors.append(kospi_mid_bull)
     if kospi_mid_bear:
         score_value -= 10
-        cross_highlights.append("KOSPI 최근 중기 데드크로스")
+        cross_highlights.append(f"KOSPI 최근 중기 데드크로스: {cross_context_text(kospi_volume_ratio_20d, kospi_rsi14)}")
         negative_factors.append(kospi_mid_bear)
         reasons.append("KOSPI에서 최근 중기 데드크로스가 나왔습니다")
 
@@ -525,11 +532,11 @@ def kr_market_guidance(score: int, market_data: dict) -> tuple[list[str], list[s
     )
     if kosdaq_mid_bull:
         score_value += 4
-        cross_highlights.append("KOSDAQ 최근 중기 골든크로스")
+        cross_highlights.append(f"KOSDAQ 최근 중기 골든크로스: {cross_context_text(kosdaq_volume_ratio_20d, kosdaq_rsi14)}")
         positive_factors.append(kosdaq_mid_bull)
     if kosdaq_mid_bear:
         score_value -= 10
-        cross_highlights.append("KOSDAQ 최근 중기 데드크로스")
+        cross_highlights.append(f"KOSDAQ 최근 중기 데드크로스: {cross_context_text(kosdaq_volume_ratio_20d, kosdaq_rsi14)}")
         negative_factors.append(kosdaq_mid_bear)
         reasons.append("KOSDAQ에서 최근 중기 데드크로스가 나왔습니다")
 
@@ -648,6 +655,10 @@ def build_kr_market_output(now_et: datetime, previous_output: dict) -> tuple[dic
     confidence = confidence_from_coverage(6, sum(1 for df in market_data.values() if not df.empty and len(df) >= 60))
     usdkrw_z = zscore(usdkrw["Close"], 20)
     vix_pct = percentile_rank(vix["Close"], 252)
+    kospi_rsi14 = compute_rsi(kospi["Close"])
+    kosdaq_rsi14 = compute_rsi(kosdaq["Close"])
+    kospi_volume_ratio_20d = volume_ratio(kospi.get("Volume", pd.Series(dtype=float)), 20)
+    kosdaq_volume_ratio_20d = volume_ratio(kosdaq.get("Volume", pd.Series(dtype=float)), 20)
     high_stress = usdkrw_z > 1.2 or vix_pct > 80
 
     market_output = {
@@ -692,6 +703,10 @@ def build_kr_market_output(now_et: datetime, previous_output: dict) -> tuple[dic
             "vix_change_pct": pct_change_from_prev_close(vix["Close"]),
             "usdkrw_20d_zscore": zscore(usdkrw["Close"], 20),
             "vix_percentile": percentile_rank(vix["Close"], 252),
+            "kospi_rsi14": kospi_rsi14,
+            "kosdaq_rsi14": kosdaq_rsi14,
+            "kospi_volume_ratio_20d": kospi_volume_ratio_20d,
+            "kosdaq_volume_ratio_20d": kosdaq_volume_ratio_20d,
             "kosdaq_kospi_ratio_change_20d": float((kosdaq["Close"].iloc[-1] / kospi["Close"].iloc[-1]) / (kosdaq["Close"].iloc[-20] / kospi["Close"].iloc[-20]) - 1) if len(kospi) >= 20 and len(kosdaq) >= 20 else 0.0,
         },
     }
@@ -759,6 +774,7 @@ def main() -> None:
             "note": stock["note"],
             "close": stock["metrics"]["close"],
             "close_change_pct": stock["metrics"]["close_change_pct"],
+            "rsi14": stock["metrics"].get("rsi14"),
         }
         for stock in stock_reports
     ]

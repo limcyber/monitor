@@ -43,6 +43,7 @@ def build_kr_market_ai_payload(output: dict) -> dict:
                 "note": row.get("note"),
                 "close": row.get("close"),
                 "change_pct": row.get("close_change_pct"),
+                "rsi14": row.get("rsi14"),
             }
         )
 
@@ -55,6 +56,7 @@ def build_kr_market_ai_payload(output: dict) -> dict:
             "action": market.get("action"),
             "top_reasons": market.get("top_reasons", [])[:4],
             "cross_highlights": market.get("cross_highlights", [])[:3],
+            "cross_details": market.get("cross_highlights", [])[:3],
             "positive_factors": market.get("positive_factors", [])[:4],
             "negative_factors": market.get("negative_factors", [])[:4],
             "alerts": market.get("alerts", [])[:4],
@@ -70,6 +72,10 @@ def build_kr_market_ai_payload(output: dict) -> dict:
                 "vix_close": metrics.get("vix_close"),
                 "vix_change_pct": metrics.get("vix_change_pct"),
                 "vix_percentile": metrics.get("vix_percentile"),
+                "kospi_rsi14": metrics.get("kospi_rsi14"),
+                "kosdaq_rsi14": metrics.get("kosdaq_rsi14"),
+                "kospi_volume_ratio_20d": metrics.get("kospi_volume_ratio_20d"),
+                "kosdaq_volume_ratio_20d": metrics.get("kosdaq_volume_ratio_20d"),
                 "semicon_close": metrics.get("semicon_close"),
                 "semicon_change_pct": metrics.get("semicon_change_pct"),
                 "brent_close": metrics.get("brent_close"),
@@ -99,24 +105,25 @@ def generate_kr_market_ai_analysis(output: dict, previous_ai_output: dict | None
 2. 검색은 한국 뉴스와 한국 포털(예: 네이버)에서 확인되는 내용을 우선하고, 최신 뉴스, 지정학, 환율, 금리, 변동성, 주도 업종 상황만 반영하며, 확인되지 않은 내용은 단정하지 않는다.
 3. 규칙 기반 데이터에 이미 들어 있는 점수 이유를 반복하지 말고, 그 바깥의 외부 변수와 맥락을 중심으로 설명한다.
 4. AI 점수와 매매 여건은 규칙 기반 점수와 꼭 같게 맞추지 말고, 독립적으로 판단한다.
-5. KOSPI, KOSDAQ, 원달러, 반도체, 국제유가, 해외 변동성이 왜 지금 한국 시장 분위기에 영향을 주는지 짚는다.
-6. 아래에 첨부된 가장 최근 AI 분석 내용을 참고해서, 이번 답변이 이전보다 무엇이 달라졌는지 확인한다.
-7. 새로 확인된 속보나 업데이트된 이슈가 있으면 `속보 요약`에 이전보다 더 최근 정보를 반영한다.
-8. 이전 AI 분석과 같은 내용만 반복하지 말고, 달라진 점이나 새로 확인된 점이 있으면 우선해서 반영한다.
-9. 확인된 뉴스가 뚜렷하지 않으면 억지로 채우지 말고 생략한다.
-10. 한국어로만, 짧고 깔끔하게 답한다.
-11. 출력 형식은 아래 4줄만 쓴다.
+5. 크로스 신호에 함께 들어간 거래량과 RSI 정보도 같이 보고, 신호 강도가 실제로 실릴 만한지 판단에 반영한다.
+6. KOSPI, KOSDAQ, 원달러, 반도체, 국제유가, 해외 변동성이 왜 지금 한국 시장 분위기에 영향을 주는지 짚는다.
+7. 아래에 첨부된 가장 최근 AI 분석 내용을 참고해서, 이번 답변이 이전보다 무엇이 달라졌는지 확인한다.
+8. 새로 확인된 속보나 업데이트된 이슈가 있으면 `속보 요약`에 이전보다 더 최근 정보를 반영한다.
+9. 이전 AI 분석과 같은 내용만 반복하지 말고, 달라진 점이나 새로 확인된 점이 있으면 우선해서 반영한다.
+10. 확인된 뉴스가 뚜렷하지 않으면 억지로 채우지 말고 생략한다.
+11. 한국어로만, 짧고 깔끔하게 답한다.
+12. 출력 형식은 아래 4줄만 쓴다.
 AI 판단: 먼저 한 문장으로 현재 시장 판단을 쓰고, 바로 다음 줄 괄호에 (AI 점수: xx/100, AI 매매 여건: ..., AI 추천 행동: ...) 형식으로 쓴다.
 확인 포인트: ...
 결론: ...
 속보 요약: ...
-12. 각 줄은 한두 문장 이내로 짧게 쓴다. 결론은 중요한 이슈가 있으면 불릿 포인트로 2~3개까지 정리한다.
-13. 과장하지 말고, 규칙 기반 판단과 다르면 왜 다른지도 짚는다.
-14. 결론은 시장 분위기, 가장 큰 위험 요인, 가장 중요한 긍정 요인 순서로 정리한다.
-15. 마크다운 굵게 표시(**)는 쓰지 않는다.
-16. 속보 요약에는 한국 시장에 바로 영향을 줄 수 있는 최신 뉴스나 헤드라인만 1~3개까지 짧게 정리한다. 새 속보가 많지 않더라도 기존 속보 흐름을 이어서 최신 내용으로 압축해 쓴다.
-17. AI 판단 줄에는 점수 괄호만 쓰지 말고, 반드시 설명 문장을 먼저 쓴다.
-18. 이전 AI 분석과 비교해도 새로 업데이트된 정보가 없으면, 기존 요약을 불필요하게 크게 바꾸지 않는다.
+13. 각 줄은 한두 문장 이내로 짧게 쓴다. 결론은 중요한 이슈가 있으면 불릿 포인트로 2~3개까지 정리한다.
+14. 과장하지 말고, 규칙 기반 판단과 다르면 왜 다른지도 짚는다.
+15. 결론은 시장 분위기, 가장 큰 위험 요인, 가장 중요한 긍정 요인 순서로 정리한다.
+16. 마크다운 굵게 표시(**)는 쓰지 않는다.
+17. 속보 요약에는 한국 시장에 바로 영향을 줄 수 있는 최신 뉴스나 헤드라인만 1~3개까지 짧게 정리한다. 새 속보가 많지 않더라도 기존 속보 흐름을 이어서 최신 내용으로 압축해 쓴다.
+18. AI 판단 줄에는 점수 괄호만 쓰지 말고, 반드시 설명 문장을 먼저 쓴다.
+19. 이전 AI 분석과 비교해도 새로 업데이트된 정보가 없으면, 기존 요약을 불필요하게 크게 바꾸지 않는다.
 
 가장 최근 AI 분석:
 {previous_text}
@@ -160,6 +167,7 @@ def build_kr_watchlist_ai_payload(output: dict) -> dict:
                 "cross_highlights": stock.get("cross_highlights", [])[:3],
                 "top_reasons": stock.get("top_reasons", [])[:4],
                 "volume_ratio_20d": stock.get("metrics", {}).get("volume_ratio_20d"),
+                "rsi14": stock.get("metrics", {}).get("rsi14"),
                 "signals": stock.get("signals", {}),
             }
         )
@@ -174,6 +182,7 @@ def build_kr_watchlist_ai_payload(output: dict) -> dict:
             "action": market.get("action"),
             "top_reasons": market.get("top_reasons", [])[:4],
             "cross_highlights": market.get("cross_highlights", [])[:3],
+            "cross_details": market.get("cross_highlights", [])[:3],
         },
         "watchlist": rows,
     }
@@ -199,6 +208,7 @@ def generate_kr_watchlist_ai_analysis(output: dict) -> dict:
             "action": row.get("action"),
             "cross_highlights": row.get("cross_highlights", []),
             "volume_ratio_20d": row.get("volume_ratio_20d"),
+            "rsi14": row.get("rsi14"),
             "signals": row.get("signals", {}),
         }
         for row in payload.get("watchlist", [])
@@ -220,7 +230,8 @@ def generate_kr_watchlist_ai_analysis(output: dict) -> dict:
    - ai_note: 한두 문장 메모. 가능하면 최신 헤드라인 뉴스 한 가지와 현재 추세를 함께 넣는다.
 6. 점수는 현재 추세와 뉴스 흐름을 함께 반영하되, 현재 규칙 기반 점수와 완전히 같은 값으로 맞추지 말고 독립적으로 판단한다.
 7. 상태와 추천 행동도 규칙 기반과 꼭 같게 맞추려 하지 말고, 뉴스와 추세가 다르면 표현을 조정한다.
-8. 길게 쓰지 말고 종목당 메모는 1~2문장으로 끝낸다.
+8. 크로스 신호에 함께 들어간 거래량과 RSI 정보도 같이 보고, 신호 강도가 실리는 구간인지 판단에 반영한다.
+9. 길게 쓰지 말고 종목당 메모는 1~2문장으로 끝낸다.
 
 종목 데이터:
 {json.dumps(payload, ensure_ascii=False, indent=2)}
@@ -258,6 +269,7 @@ def generate_kr_watchlist_ai_analysis(output: dict) -> dict:
                     "action": snapshot.get("action"),
                     "cross_highlights": snapshot.get("cross_highlights", []),
                     "volume_ratio_20d": snapshot.get("volume_ratio_20d"),
+                    "rsi14": snapshot.get("rsi14"),
                     "signals": snapshot.get("signals", {}),
                 }
             )

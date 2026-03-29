@@ -92,6 +92,7 @@ def build_market_ai_payload(output: dict) -> dict:
                 "note": row.get("note"),
                 "close": row.get("close"),
                 "change_pct": row.get("close_change_pct"),
+                "rsi14": row.get("rsi14"),
             }
         )
     return {
@@ -103,6 +104,7 @@ def build_market_ai_payload(output: dict) -> dict:
             "action": market.get("action"),
             "top_reasons": market.get("top_reasons", [])[:5],
             "cross_highlights": market.get("cross_highlights", [])[:4],
+            "cross_details": market.get("cross_highlights", [])[:4],
             "positive_factors": market.get("positive_factors", [])[:5],
             "negative_factors": market.get("negative_factors", [])[:6],
             "alerts": market.get("alerts", [])[:4],
@@ -118,6 +120,10 @@ def build_market_ai_payload(output: dict) -> dict:
                 "vix_percentile": metrics.get("vix_percentile"),
                 "tnx_close": metrics.get("tnx_close"),
                 "tnx_change_pct": metrics.get("tnx_change_pct"),
+                "spx_rsi14": metrics.get("spx_rsi14"),
+                "ndx_rsi14": metrics.get("ndx_rsi14"),
+                "spy_volume_ratio_20d": metrics.get("spy_volume_ratio_20d"),
+                "qqq_volume_ratio_20d": metrics.get("qqq_volume_ratio_20d"),
                 "dxy_20d_zscore": metrics.get("dxy_20d_zscore"),
                 "tnx_20d_zscore": metrics.get("tnx_20d_zscore"),
                 "pct_above_20dma": metrics.get("pct_above_20dma"),
@@ -176,6 +182,7 @@ def build_watchlist_ai_payload(output: dict) -> dict:
                 "top_reasons": stock.get("top_reasons", [])[:4],
                 "earnings_date": stock.get("earnings_date"),
                 "volume_ratio_20d": stock.get("metrics", {}).get("volume_ratio_20d"),
+                "rsi14": stock.get("metrics", {}).get("rsi14"),
                 "signals": stock.get("signals", {}),
             }
         )
@@ -190,6 +197,7 @@ def build_watchlist_ai_payload(output: dict) -> dict:
             "action": market.get("action"),
             "top_reasons": market.get("top_reasons", [])[:4],
             "cross_highlights": market.get("cross_highlights", [])[:3],
+            "cross_details": market.get("cross_highlights", [])[:3],
         },
         "watchlist": rows,
     }
@@ -518,24 +526,25 @@ def generate_market_ai_analysis(output: dict, previous_ai_output: dict | None = 
 2. 검색으로 확인된 최신 뉴스, 지정학, 금리, 변동성, 주도 업종 상황만 반영하고, 확인되지 않은 내용은 단정하지 않는다.
 3. 규칙 기반 데이터에 이미 들어 있는 점수 이유를 반복하지 말고, 그 바깥의 외부 변수와 맥락을 중심으로 설명한다.
 4. AI 점수와 매매 여건은 규칙 기반 점수와 꼭 같게 맞추지 말고, 독립적으로 판단한다.
-5. 시장 점수나 breadth, VIX 같은 지표 문장을 그대로 다시 풀어쓰지 말고, 왜 그런 환경이 만들어졌는지를 짚는다.
-6. 아래에 첨부된 가장 최근 AI 분석 내용을 참고해서, 이번 답변이 이전보다 무엇이 달라졌는지 확인한다.
-7. 새로 확인된 속보나 업데이트된 이슈가 있으면 `속보 요약`에 이전보다 더 최근 정보를 반영한다.
-8. 이전 AI 분석과 같은 내용만 반복하지 말고, 달라진 점이나 새로 확인된 점이 있으면 우선해서 반영한다.
-9. 확인된 뉴스가 뚜렷하지 않으면 억지로 채우지 말고 생략한다.
-10. 한국어로만, 짧고 깔끔하게 답한다.
-11. 출력 형식은 아래 4줄만 쓴다.
+5. 크로스 신호에 함께 들어간 거래량과 RSI 정보도 같이 보고, 신호 강도가 실제로 실릴 만한지 판단에 반영한다.
+6. 시장 점수나 breadth, VIX 같은 지표 문장을 그대로 다시 풀어쓰지 말고, 왜 그런 환경이 만들어졌는지를 짚는다.
+7. 아래에 첨부된 가장 최근 AI 분석 내용을 참고해서, 이번 답변이 이전보다 무엇이 달라졌는지 확인한다.
+8. 새로 확인된 속보나 업데이트된 이슈가 있으면 `속보 요약`에 이전보다 더 최근 정보를 반영한다.
+9. 이전 AI 분석과 같은 내용만 반복하지 말고, 달라진 점이나 새로 확인된 점이 있으면 우선해서 반영한다.
+10. 확인된 뉴스가 뚜렷하지 않으면 억지로 채우지 말고 생략한다.
+11. 한국어로만, 짧고 깔끔하게 답한다.
+12. 출력 형식은 아래 4줄만 쓴다.
 AI 판단: 먼저 한 문장으로 현재 시장 판단을 쓰고, 바로 다음 줄 괄호에 (AI 점수: xx/100, AI 매매 여건: ..., AI 추천 행동: ...) 형식으로 쓴다.
 확인 포인트: ...
 결론: ...
 속보 요약: ...
-12. 각 줄은 한두 문장 이내로 짧게 쓴다. 결론은 중요한 이슈가 있으면 불릿 포인트로 2~3개까지 정리한다.
-13. 과장하지 말고, 규칙 기반 판단과 다르면 왜 다른지도 짚는다.
-14. 결론은 시장 분위기, 가장 큰 위험 요인, 가장 중요한 긍정 요인 순서로 정리한다.
-15. 마크다운 굵게 표시(**)는 쓰지 않는다.
-16. 속보 요약에는 시장에 바로 영향을 줄 수 있는 최신 뉴스나 헤드라인만 1~3개까지 짧게 정리한다. 새 속보가 많지 않더라도 기존 속보 흐름을 이어서 최신 내용으로 압축해 쓴다.
-17. AI 판단 줄에는 점수 괄호만 쓰지 말고, 반드시 설명 문장을 먼저 쓴다.
-18. 이전 AI 분석과 비교해도 새로 업데이트된 정보가 없으면, 기존 요약을 불필요하게 크게 바꾸지 않는다.
+13. 각 줄은 한두 문장 이내로 짧게 쓴다. 결론은 중요한 이슈가 있으면 불릿 포인트로 2~3개까지 정리한다.
+14. 과장하지 말고, 규칙 기반 판단과 다르면 왜 다른지도 짚는다.
+15. 결론은 시장 분위기, 가장 큰 위험 요인, 가장 중요한 긍정 요인 순서로 정리한다.
+16. 마크다운 굵게 표시(**)는 쓰지 않는다.
+17. 속보 요약에는 시장에 바로 영향을 줄 수 있는 최신 뉴스나 헤드라인만 1~3개까지 짧게 정리한다. 새 속보가 많지 않더라도 기존 속보 흐름을 이어서 최신 내용으로 압축해 쓴다.
+18. AI 판단 줄에는 점수 괄호만 쓰지 말고, 반드시 설명 문장을 먼저 쓴다.
+19. 이전 AI 분석과 비교해도 새로 업데이트된 정보가 없으면, 기존 요약을 불필요하게 크게 바꾸지 않는다.
 
 가장 최근 AI 분석:
 {previous_text}
@@ -595,7 +604,8 @@ def generate_watchlist_ai_analysis(output: dict) -> dict:
    - ai_note: 한두 문장 메모. 가능하면 최신 헤드라인 뉴스 한 가지와 현재 추세를 함께 넣는다.
 6. 점수는 현재 추세와 뉴스 흐름을 함께 반영하되, 현재 규칙 기반 점수와 완전히 같은 값으로 맞추지 말고 독립적으로 판단한다.
 7. 상태와 추천 행동도 규칙 기반과 꼭 같게 맞추려 하지 말고, 뉴스와 추세가 다르면 표현을 조정한다.
-8. 길게 쓰지 말고 종목당 메모는 1~2문장으로 끝낸다.
+8. 크로스 신호에 함께 들어간 거래량과 RSI 정보도 같이 보고, 신호 강도가 실리는 구간인지 판단에 반영한다.
+9. 길게 쓰지 말고 종목당 메모는 1~2문장으로 끝낸다.
 
 종목 데이터:
 {json.dumps(payload, ensure_ascii=False, indent=2)}
@@ -958,11 +968,67 @@ def pct_change_from_prev_close(series: pd.Series) -> float | None:
 
 
 def volume_ratio(series: pd.Series, lookback: int = 20) -> float | None:
+    if not isinstance(series, pd.Series) or series.empty:
+        return None
     avg = series.rolling(lookback).mean().iloc[-1]
     last = series.iloc[-1]
     if pd.isna(avg) or avg == 0 or pd.isna(last):
         return None
     return float(last / avg)
+
+
+def compute_rsi(series: pd.Series, period: int = 14) -> float | None:
+    if not isinstance(series, pd.Series):
+        return None
+    clean = series.dropna()
+    if len(clean) < period + 1:
+        return None
+    delta = clean.diff()
+    gains = delta.clip(lower=0)
+    losses = -delta.clip(upper=0)
+    avg_gain = gains.rolling(period).mean().iloc[-1]
+    avg_loss = losses.rolling(period).mean().iloc[-1]
+    if pd.isna(avg_gain) or pd.isna(avg_loss):
+        return None
+    if avg_loss == 0:
+        return 100.0
+    rs = avg_gain / avg_loss
+    return float(100 - (100 / (1 + rs)))
+
+
+def volume_context_label(ratio: float | None) -> str:
+    if ratio is None:
+        return "거래량 미확인"
+    if ratio >= 1.5:
+        return "거래량 강함"
+    if ratio >= 1.15:
+        return "거래량 확인"
+    if ratio >= 0.85:
+        return "거래량 보통"
+    return "거래량 약함"
+
+
+def rsi_context_label(rsi: float | None) -> str:
+    if rsi is None:
+        return "RSI 미확인"
+    if rsi >= 70:
+        return "과열 구간"
+    if rsi >= 55:
+        return "상방 우세"
+    if rsi >= 45:
+        return "중립"
+    if rsi >= 30:
+        return "하방 우세"
+    return "과매도 구간"
+
+
+def cross_context_text(volume_ratio_20d: float | None, rsi14: float | None) -> str:
+    volume_text = f"{volume_ratio_20d:.1f}x" if isinstance(volume_ratio_20d, (int, float)) else "-"
+    rsi_text = f"{rsi14:.0f}" if isinstance(rsi14, (int, float)) else "-"
+    return (
+        f"거래량 {volume_text} ({volume_context_label(volume_ratio_20d)}) / "
+        f"RSI {rsi_text} ({rsi_context_label(rsi14)})"
+    )
 
 
 def market_volume_points(price_above_dma20: bool, ratio: float | None) -> tuple[int, str | None, str | None]:
@@ -1275,6 +1341,10 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
     spy_proxy_volume = spy_proxy["Volume"]
     qqq_proxy_close = qqq_proxy["Close"]
     qqq_proxy_volume = qqq_proxy["Volume"]
+    spy_vol_ratio = volume_ratio(spy_proxy_volume, 20)
+    qqq_vol_ratio = volume_ratio(qqq_proxy_volume, 20)
+    spx_rsi14 = compute_rsi(spx_close)
+    ndx_rsi14 = compute_rsi(ndx_close)
 
     if spx_close.iloc[-1] > spx_dma200.iloc[-1]:
         score += 10
@@ -1307,12 +1377,16 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
     )
     if spx_short_bull:
         score += 2
-        cross_highlights.append("S&P500 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다.")
+        cross_highlights.append(
+            f"S&P500 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. {cross_context_text(spy_vol_ratio, spx_rsi14)}"
+        )
         positive_factors.append(spx_short_bull)
         reasons.append("S&P500에서 최근 단기 골든크로스가 나왔습니다")
     if spx_short_bear:
         score -= 6
-        cross_highlights.append("S&P500 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다.")
+        cross_highlights.append(
+            f"S&P500 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. {cross_context_text(spy_vol_ratio, spx_rsi14)}"
+        )
         negative_factors.append(spx_short_bear)
         reasons.append("S&P500에서 최근 단기 데드크로스가 나왔습니다")
 
@@ -1325,11 +1399,15 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
     )
     if spx_mid_bull:
         score += 4
-        cross_highlights.append("S&P500 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다.")
+        cross_highlights.append(
+            f"S&P500 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. {cross_context_text(spy_vol_ratio, spx_rsi14)}"
+        )
         positive_factors.append(spx_mid_bull)
     if spx_mid_bear:
         score -= 10
-        cross_highlights.append("S&P500 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다.")
+        cross_highlights.append(
+            f"S&P500 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. {cross_context_text(spy_vol_ratio, spx_rsi14)}"
+        )
         negative_factors.append(spx_mid_bear)
         reasons.append("S&P500에서 최근 중기 데드크로스가 나왔습니다")
 
@@ -1364,12 +1442,16 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
     )
     if ndx_short_bull:
         score += 2
-        cross_highlights.append("나스닥 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다.")
+        cross_highlights.append(
+            f"나스닥 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. {cross_context_text(qqq_vol_ratio, ndx_rsi14)}"
+        )
         positive_factors.append(ndx_short_bull)
         reasons.append("나스닥에서 최근 단기 골든크로스가 나왔습니다")
     if ndx_short_bear:
         score -= 6
-        cross_highlights.append("나스닥 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다.")
+        cross_highlights.append(
+            f"나스닥 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. {cross_context_text(qqq_vol_ratio, ndx_rsi14)}"
+        )
         negative_factors.append(ndx_short_bear)
         reasons.append("나스닥에서 최근 단기 데드크로스가 나왔습니다")
 
@@ -1382,11 +1464,15 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
     )
     if ndx_mid_bull:
         score += 4
-        cross_highlights.append("나스닥 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다.")
+        cross_highlights.append(
+            f"나스닥 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. {cross_context_text(qqq_vol_ratio, ndx_rsi14)}"
+        )
         positive_factors.append(ndx_mid_bull)
     if ndx_mid_bear:
         score -= 10
-        cross_highlights.append("나스닥 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다.")
+        cross_highlights.append(
+            f"나스닥 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. {cross_context_text(qqq_vol_ratio, ndx_rsi14)}"
+        )
         negative_factors.append(ndx_mid_bear)
         reasons.append("나스닥에서 최근 중기 데드크로스가 나왔습니다")
 
@@ -1483,7 +1569,6 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
         negative_factors.append(factor_text("10년물 금리가 높아 성장주에 부담입니다", -2))
     valid_count += 1
 
-    spy_vol_ratio = volume_ratio(spy_proxy_volume, 20)
     market_spy_vol_points, market_spy_vol_positive, market_spy_vol_negative = market_volume_points(
         bool(spx_close.iloc[-1] > spx_dma20.iloc[-1]),
         spy_vol_ratio,
@@ -1494,7 +1579,6 @@ def score_market(as_of: date, market_data: dict, breadth: dict, events: dict) ->
     if market_spy_vol_negative:
         negative_factors.append(factor_text(f"S&P500 {market_spy_vol_negative.split(' (')[0]}", market_spy_vol_points))
     valid_count += 1
-    qqq_vol_ratio = volume_ratio(qqq_proxy_volume, 20)
     market_qqq_vol_points, market_qqq_vol_positive, market_qqq_vol_negative = market_volume_points(
         bool(ndx_close.iloc[-1] > ndx_dma20.iloc[-1]),
         qqq_vol_ratio,
@@ -1681,12 +1765,16 @@ def score_stock(
     )
     if short_bull:
         score += 2
-        cross_highlights.append(f"{ticker} 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다.")
+        cross_highlights.append(
+            f"{ticker} 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. {cross_context_text(volume_ratio(vol, 20), compute_rsi(close))}"
+        )
         positive_factors.append(short_bull)
         reasons.append("최근 단기 골든크로스가 나왔습니다")
     if short_bear:
         score -= 2
-        cross_highlights.append(f"{ticker} 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다.")
+        cross_highlights.append(
+            f"{ticker} 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. {cross_context_text(volume_ratio(vol, 20), compute_rsi(close))}"
+        )
         negative_factors.append(short_bear)
         reasons.append("최근 단기 데드크로스가 나왔습니다")
 
@@ -1699,12 +1787,16 @@ def score_stock(
     )
     if mid_bull:
         score += 4
-        cross_highlights.append(f"{ticker} 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다.")
+        cross_highlights.append(
+            f"{ticker} 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. {cross_context_text(volume_ratio(vol, 20), compute_rsi(close))}"
+        )
         positive_factors.append(mid_bull)
         reasons.append("최근 중기 골든크로스가 나왔습니다")
     if mid_bear:
         score -= 5
-        cross_highlights.append(f"{ticker} 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다.")
+        cross_highlights.append(
+            f"{ticker} 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. {cross_context_text(volume_ratio(vol, 20), compute_rsi(close))}"
+        )
         negative_factors.append(mid_bear)
         reasons.append("최근 중기 데드크로스가 나왔습니다")
 
@@ -1721,6 +1813,8 @@ def score_stock(
         positive_factors.append(factor_text("최근 한 달 흐름이 시장보다 좋습니다", 10))
 
     vol20 = vol.rolling(20).mean()
+    volume_ratio_20d = volume_ratio(vol, 20)
+    rsi14 = compute_rsi(close)
     has_strong_volume = bool(close.iloc[-1] > close.iloc[-2] and vol.iloc[-1] > vol20.iloc[-1])
     if has_strong_volume:
         score += 10
@@ -1896,7 +1990,8 @@ def score_stock(
             "dma5": float(dma5.iloc[-1]) if pd.notna(dma5.iloc[-1]) else None,
             "dma20": float(dma20.iloc[-1]) if pd.notna(dma20.iloc[-1]) else None,
             "dma50": float(dma50.iloc[-1]) if pd.notna(dma50.iloc[-1]) else None,
-            "volume_ratio_20d": float(vol.iloc[-1] / vol20.iloc[-1]) if pd.notna(vol20.iloc[-1]) else None,
+            "volume_ratio_20d": volume_ratio_20d,
+            "rsi14": rsi14,
             "atr_ratio": atr_ratio,
             "rs_20d_change": float(rs.iloc[-1] / rs.iloc[-20] - 1) if len(rs) >= 20 else None,
         },
@@ -2675,6 +2770,10 @@ def main() -> None:
     pct_above_50 = ((sp500_close.iloc[-1] > sp500_close.rolling(50).mean().iloc[-1]).mean() * 100.0)
     pct_above_20_prev = ((sp500_close.iloc[-2] > sp500_close.rolling(20).mean().iloc[-2]).mean() * 100.0)
     rsp_spx = (rsp["Close"] / spx["Close"]).dropna()
+    spx_rsi14 = compute_rsi(spx["Close"])
+    ndx_rsi14 = compute_rsi(ndx["Close"])
+    spy_vol_ratio = volume_ratio(spy_proxy["Volume"], 20)
+    qqq_vol_ratio = volume_ratio(qqq_proxy["Volume"], 20)
 
     events = load_events(as_of)
     earnings_calendar = load_earnings_calendar()
@@ -2731,6 +2830,7 @@ def main() -> None:
             "note": s["note"],
             "close": s["metrics"]["close"],
             "close_change_pct": s["metrics"]["close_change_pct"],
+            "rsi14": s["metrics"].get("rsi14"),
         }
         for s in stock_reports
     ]
@@ -2774,6 +2874,10 @@ def main() -> None:
             "vix_percentile": percentile_rank(vix["Close"]),
             "dxy_20d_zscore": zscore(dxy["Close"], 20),
             "tnx_20d_zscore": zscore(tnx["Close"], 20),
+            "spx_rsi14": spx_rsi14,
+            "ndx_rsi14": ndx_rsi14,
+            "spy_volume_ratio_20d": spy_vol_ratio,
+            "qqq_volume_ratio_20d": qqq_vol_ratio,
         },
     }
     market_output["change_tags"] = market_change_tags(previous_output, market_output)
