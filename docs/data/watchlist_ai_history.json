@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-03-29 02:11 ET",
-  "count": 3,
+  "updated_at_et": "2026-03-29 15:21 ET",
+  "count": 4,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:06 ET",
@@ -173,6 +173,164 @@
       "status": "error",
       "error": "종목 AI 분석 실패: empty Gemini response",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-03-29 15:21 ET",
+      "market_data_as_of": "2026-03-27 16:00 ET (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "최근 2.17% 하락하며 20일선과 50일선 아래로 내려왔습니다. RSI가 31로 낮아 추가 하락 가능성이 있습니다.",
+          "close": 167.52000427246094,
+          "change_pct": -2.172390271764868,
+          "score": 17,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.0806385448791136,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "2.76% 하락하며 20일선과 50일선 아래에 위치했습니다. RSI 32로 약세를 보이며, 시장 대비 힘이 약한 모습입니다.",
+          "close": 361.8299865722656,
+          "change_pct": -2.7626237359861583,
+          "score": 15,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.0150927889989887,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 15,
+          "ai_state": "매우 약세",
+          "ai_action": "비중 축소",
+          "ai_note": "3.98% 급락하며 20일선과 50일선 아래로 떨어졌습니다. RSI 17로 극도로 낮아 추가 하락 위험이 있습니다.",
+          "close": 525.719970703125,
+          "change_pct": -3.985098476796356,
+          "score": 10,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 2.020999852370067,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 45,
+          "ai_state": "중립 약세",
+          "ai_action": "관망",
+          "ai_note": "최근 단기 골든크로스가 발생했으나, 거래량이 0.87배로 약하고 50일선 아래에 있습니다. RSI 49로 중립 구간입니다.",
+          "close": 201.99000549316406,
+          "change_pct": -0.8735332688695641,
+          "score": 38,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "AMD 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.9x (거래량 보통) / RSI 49 (중립)"
+          ],
+          "volume_ratio_20d": 0.8724078790706679,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 10,
+          "ai_state": "매우 약세",
+          "ai_action": "비중 축소",
+          "ai_note": "6.39% 하락하며 20일선과 50일선 아래로 내려왔습니다. RSI 26으로 약세를 보이며 시장 대비 힘이 약합니다.",
+          "close": 42.619998931884766,
+          "change_pct": -6.391390128337382,
+          "score": 9,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.185266788306319,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "최근 20일선이 50일선을 하향 돌파하는 데드크로스가 발생했습니다. RSI 41로 하방 우세이며, 20일선과 50일선 아래에 있습니다.",
+          "close": 323.4800109863281,
+          "change_pct": -1.6329618420311443,
+          "score": 15,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "SOXX 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.8x (거래량 약함) / RSI 41 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.7801960569159317,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 10,
+          "ai_state": "매우 약세",
+          "ai_action": "비중 축소",
+          "ai_note": "8.37% 급락하며 20일선과 50일선 아래로 떨어졌습니다. RSI 40으로 약세를 보이며 시장 대비 힘이 약합니다.",
+          "close": 8.319999694824219,
+          "change_pct": -8.370046643917117,
+          "score": 8,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.7982916840252878,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 15,
+          "ai_state": "약세",
+          "ai_action": "비중 축소",
+          "ai_note": "최근 20일선이 50일선을 하향 돌파하는 데드크로스가 나왔습니다. 거래량 0.67배로 약하고 RSI 37로 하방 우세입니다.",
+          "close": 274.0299987792969,
+          "change_pct": 1.518914612960498,
+          "score": 6,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.7x (거래량 약함) / RSI 37 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.6678081672854004,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        }
+      ]
     }
   ]
 }
