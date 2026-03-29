@@ -260,7 +260,7 @@ GitHub Actions 워크플로는 [daily-monitor.yml](./.github/workflows/daily-mon
 미국 시장 `AI 분석`과 관심종목 `AI 요약`, 그리고 AI 전용 Discord 알림을 갱신하는 워크플로입니다.
 - `AI_ANALYSIS_TEST_MODE=true`면 매일 5분마다 실행합니다
 - `AI_ANALYSIS_TEST_MODE=false`면 매 30분마다 실행합니다 (`:00`, `:30`)
-- `AI_ANALYSIS_TEST_MODE`가 없으면 기본값은 `true`입니다
+- `AI_ANALYSIS_TEST_MODE`가 없으면 기본값은 `false`입니다
 - `GOOGLE_API_KEY` secret이 필요합니다
 - 시장 AI는 `gemini-2.5-flash-lite`, 종목 AI는 `gemini-2.5-flash-lite`를 사용합니다
 

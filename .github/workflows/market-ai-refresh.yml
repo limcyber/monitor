@@ -4,10 +4,6 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "*/5 * * * *"
-  workflow_run:
-    workflows: ["Market Monitor"]
-    types:
-      - completed
 
 concurrency:
   group: market-ai-refresh
@@ -20,12 +16,11 @@ permissions:
 
 jobs:
   refresh:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     outputs:
       should_run: ${{ steps.mode.outputs.should_run }}
     env:
-      AI_ANALYSIS_TEST_MODE: ${{ vars.AI_ANALYSIS_TEST_MODE || 'true' }}
+      AI_ANALYSIS_TEST_MODE: ${{ vars.AI_ANALYSIS_TEST_MODE || 'false' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -38,26 +33,20 @@ jobs:
       - name: Decide AI refresh mode
         id: mode
         run: |
-          if [ "${{ github.event_name }}" = "workflow_run" ]; then
-            echo "mode=workflow_run" >> "$GITHUB_OUTPUT"
+          MODE="$(printf '%s' "${AI_ANALYSIS_TEST_MODE}" | tr '[:upper:]' '[:lower:]')"
+          if [ "$MODE" = "1" ] || [ "$MODE" = "true" ] || [ "$MODE" = "yes" ] || [ "$MODE" = "on" ]; then
+            echo "mode=test" >> "$GITHUB_OUTPUT"
             echo "should_run=true" >> "$GITHUB_OUTPUT"
-            echo "AI refresh mode: workflow_run fallback after Market Monitor success."
+            echo "AI refresh mode: test (every 5 minutes)."
           else
-            MODE="$(printf '%s' "${AI_ANALYSIS_TEST_MODE}" | tr '[:upper:]' '[:lower:]')"
-            if [ "$MODE" = "1" ] || [ "$MODE" = "true" ] || [ "$MODE" = "yes" ] || [ "$MODE" = "on" ]; then
-              echo "mode=test" >> "$GITHUB_OUTPUT"
+            MINUTE="$(date -u +%M)"
+            echo "mode=normal" >> "$GITHUB_OUTPUT"
+            if [ "$MINUTE" = "00" ] || [ "$MINUTE" = "30" ]; then
               echo "should_run=true" >> "$GITHUB_OUTPUT"
-              echo "AI refresh mode: test (every 5 minutes)."
+              echo "AI refresh mode: normal (every 30 minutes at :00 and :30). Running now."
             else
-              MINUTE="$(date -u +%M)"
-              echo "mode=normal" >> "$GITHUB_OUTPUT"
-              if [ "$MINUTE" = "00" ] || [ "$MINUTE" = "30" ]; then
-                echo "should_run=true" >> "$GITHUB_OUTPUT"
-                echo "AI refresh mode: normal (every 30 minutes at :00 and :30). Running now."
-              else
-                echo "should_run=false" >> "$GITHUB_OUTPUT"
-                echo "AI refresh mode: normal (every 30 minutes at :00 and :30). Skipping this tick."
-              fi
+              echo "should_run=false" >> "$GITHUB_OUTPUT"
+              echo "AI refresh mode: normal (every 30 minutes at :00 and :30). Skipping this tick."
             fi
           fi
 
