@@ -36,7 +36,6 @@ def build_market_summary(payload: dict) -> str:
     lines = [
         "시장 상태 요약",
         f"생성: {payload.get('generated_at_et', '-')}",
-        f"기준: {payload.get('market_data_as_of', '-')}",
         f"상태: {market.get('state', '-')}",
         f"점수/행동: {market.get('score', '-')}/100 / {market.get('action', '-')}",
         f"크로스: {cross_text}",
@@ -82,7 +81,6 @@ def build_test_message(kind: str, payload: dict) -> str:
             [
                 f"{summary_heading()} [TEST]",
                 f"생성: {generated_at}",
-                f"기준: {as_of}",
                 f"상태: {state_line}",
                 "핵심: 테스트용 기본 요약 메시지입니다.",
             ]
@@ -93,8 +91,6 @@ def build_test_message(kind: str, payload: dict) -> str:
             [
                 f"{alert_heading()} [TEST]",
                 f"생성: {generated_at}",
-                f"기준: {as_of}",
-                f"상태: {state_line}",
                 "",
                 "[HIGH] 시장 레벨 하락",
                 "테스트용 중요 알림입니다. 실제 조건과 무관하게 전송됩니다.",
@@ -106,8 +102,6 @@ def build_test_message(kind: str, payload: dict) -> str:
             [
                 f"{ai_alert_heading()} [TEST]",
                 f"업데이트: {generated_at}",
-                f"기준: {as_of}",
-                f"상태: {state_line}",
                 "",
                 "[HIGH] 시장 레벨 급변",
                 "테스트용 AI 알림입니다. 실제 AI 조건과 무관하게 전송됩니다.",
@@ -148,12 +142,9 @@ def main() -> None:
         if not notifications:
             print("No AI notifications to send.")
             return
-        market = payload.get("market", {})
         lines = [
             ai_alert_heading(),
             f"업데이트: {payload.get('generated_at_et', '-')}",
-            f"기준: {payload.get('market_data_as_of', '-')}",
-            f"상태: {market.get('state', '-')} / {market.get('score', '-')}/100 / {market.get('action', '-')}",
             "",
         ]
         for item in notifications[:8]:
@@ -182,12 +173,9 @@ def main() -> None:
         print("No notifications to send.")
         return
 
-    market = payload.get("market", {})
     lines = [
         alert_heading(),
         f"생성: {payload.get('generated_at_et', '-')}",
-        f"기준: {payload.get('market_data_as_of', '-')}",
-        f"상태: {market.get('state', '-')} / {market.get('score', '-')}/100 / {market.get('action', '-')}",
         "",
     ]
     for item in notifications[:8]:
