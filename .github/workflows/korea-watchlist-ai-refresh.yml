@@ -51,7 +51,7 @@ jobs:
             echo "Skipping: not on the hour."
             exit 0
           fi
-          if [ "$HOUR" -lt 9 ] || [ "$HOUR" -gt 16 ]; then
+          if [ "$HOUR" -lt 8 ] || [ "$HOUR" -gt 16 ]; then
             echo "should_run=false" >> "$GITHUB_OUTPUT"
             echo "Skipping: outside Korea market AI window."
             exit 0
