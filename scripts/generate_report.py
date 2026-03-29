@@ -128,10 +128,10 @@ def build_market_ai_payload(output: dict) -> dict:
     }
 
 
-def build_market_ai_output(output: dict, ai_analysis: dict) -> dict:
+def build_market_ai_output(output: dict, ai_analysis: dict, ai_generated_at_et: str) -> dict:
     market = output.get("market", {})
     return {
-        "generated_at_et": output.get("generated_at_et"),
+        "generated_at_et": ai_generated_at_et,
         "market_data_as_of": output.get("market_data_as_of"),
         "market": {
             "score": market.get("score"),
@@ -193,9 +193,15 @@ def build_watchlist_ai_payload(output: dict) -> dict:
     }
 
 
-def build_watchlist_ai_output(output: dict, ai_items: list[dict], status: str, error: str | None = None) -> dict:
+def build_watchlist_ai_output(
+    output: dict,
+    ai_items: list[dict],
+    status: str,
+    error: str | None = None,
+    ai_generated_at_et: str | None = None,
+) -> dict:
     return {
-        "generated_at_et": output.get("generated_at_et"),
+        "generated_at_et": ai_generated_at_et or output.get("generated_at_et"),
         "market_data_as_of": output.get("market_data_as_of"),
         "status": status,
         "error": error,
@@ -590,11 +596,13 @@ def generate_watchlist_ai_analysis(output: dict) -> dict:
 
 
 def write_ai_outputs(output: dict) -> None:
+    ai_generated_at_et = datetime.now(tz=ET).strftime("%Y-%m-%d %H:%M ET")
     previous_ai_output = load_json(AI_OUTPUT_PATH)
     previous_watchlist_ai_output = load_json(WATCHLIST_AI_OUTPUT_PATH)
     ai_output = generate_market_ai_analysis(output)
-    market_ai_output = build_market_ai_output(output, ai_output)
+    market_ai_output = build_market_ai_output(output, ai_output, ai_generated_at_et)
     watchlist_ai_output = generate_watchlist_ai_analysis(output)
+    watchlist_ai_output["generated_at_et"] = ai_generated_at_et
     ai_notifications = build_ai_notifications(output, previous_ai_output, watchlist_ai_output, previous_watchlist_ai_output)
     market_ai_output["ai_notifications"]["items"] = ai_notifications
     market_ai_output["ai_notifications"]["count"] = len(ai_notifications)
