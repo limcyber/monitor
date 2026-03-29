@@ -12,6 +12,7 @@ from generate_report import (
     build_notification,
     confidence_from_coverage,
     factor_text,
+    has_valid_close_frame,
     load_json,
     load_price_frame,
     load_yaml,
@@ -43,6 +44,14 @@ BASE_DIR = Path(__file__).resolve().parents[1]
 KR_WATCHLIST_PATH = BASE_DIR / "config" / "watchlist_kr.yml"
 KR_OUTPUT_PATH = DOCS_DATA_DIR / "latest_kr.json"
 KR_HISTORY_PATH = DOCS_DATA_DIR / "history_kr.json"
+
+
+def write_kr_snapshot_files(output: dict, history: dict) -> None:
+    DOCS_DATA_DIR.mkdir(parents=True, exist_ok=True)
+    with KR_OUTPUT_PATH.open("w", encoding="utf-8") as f:
+        json.dump(output, f, indent=2, ensure_ascii=False)
+    with KR_HISTORY_PATH.open("w", encoding="utf-8") as f:
+        json.dump(history, f, indent=2, ensure_ascii=False)
 
 
 def build_kr_notifications(as_of, previous_output: dict, market_output: dict, stock_reports: list[dict]) -> list[dict]:
@@ -630,6 +639,9 @@ def build_kr_market_output(now_et: datetime, previous_output: dict) -> tuple[dic
         "USDKRW": usdkrw,
         "VIX": vix,
     }
+    missing_market_frames = [name for name, frame in market_data.items() if not has_valid_close_frame(frame)]
+    if missing_market_frames:
+        raise RuntimeError(f"Critical Korea market frames unavailable: {', '.join(missing_market_frames)}")
     scored = kr_market_guidance(0, market_data)
     score = scored["score"]
     level = market_level(score)
@@ -701,7 +713,14 @@ def main() -> None:
     if len(watchlist) != 8:
         raise ValueError("watchlist_kr.yml must contain exactly 8 stocks.")
 
-    market_output, latest_intraday_points, market_frames = build_kr_market_output(now_et, previous_output)
+    try:
+        market_output, latest_intraday_points, market_frames = build_kr_market_output(now_et, previous_output)
+    except RuntimeError as exc:
+        if previous_output:
+            print(f"{exc}. Keeping previous Korea snapshot.")
+            write_kr_snapshot_files(previous_output, existing_history or previous_output.get("history", {}))
+            return
+        raise
     level = market_level(market_output["score"])
 
     stock_reports = []
@@ -709,6 +728,12 @@ def main() -> None:
         sdf, ts = load_price_frame(item["ticker"], now_et)
         if ts:
             latest_intraday_points.append(ts)
+        if not has_valid_close_frame(sdf):
+            if previous_output:
+                print(f"Watchlist frame unavailable for {item['ticker']}. Keeping previous Korea snapshot.")
+                write_kr_snapshot_files(previous_output, existing_history or previous_output.get("history", {}))
+                return
+            raise RuntimeError(f"Watchlist frame unavailable for {item['ticker']}")
         benchmark = market_frames["KOSDAQ"] if item["market"] == "KOSDAQ" else market_frames["KOSPI"]
         stock = score_stock(item["ticker"], sdf, benchmark, level, None, None, neutral_missing_earnings=True)
         stock["name"] = item["name"]

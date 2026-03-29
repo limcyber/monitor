@@ -3,18 +3,19 @@ name: Korea Market Alerts
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/5 * * * 0-4"
-    - cron: "*/5 * * * 1-5"
+    - cron: "*/5 * * * *"
 
 permissions:
-  contents: read
+  contents: write
+  pages: write
+  id-token: write
 
 concurrency:
-  group: "korea-market-alerts"
-  cancel-in-progress: true
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  alerts:
+  build:
     runs-on: ubuntu-latest
     outputs:
       should_run: ${{ steps.market_window.outputs.should_run }}
@@ -70,3 +71,31 @@ jobs:
           DISCORD_PAYLOAD_PATH: "kr"
           DISCORD_ALERT_TITLE: "한국 시장 모니터 알림"
         run: python scripts/send_discord_alerts.py
+
+      - name: Upload artifact
+        if: github.event_name != 'schedule' || steps.market_window.outputs.should_run == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Commit Korea latest data
+        if: github.event_name != 'schedule' || steps.market_window.outputs.should_run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase --autostash origin main
+          git add docs/data/latest_kr.json docs/data/history_kr.json
+          git diff --cached --quiet || git commit -m "chore: update korea market snapshot"
+          git push
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.event_name != 'schedule' || needs.build.outputs.should_run == 'true'
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

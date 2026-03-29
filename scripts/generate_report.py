@@ -59,6 +59,23 @@ def load_json(path: Path) -> dict:
         return {}
 
 
+def has_valid_close_frame(df: pd.DataFrame, min_rows: int = 2) -> bool:
+    return (
+        isinstance(df, pd.DataFrame)
+        and not df.empty
+        and "Close" in df.columns
+        and len(df["Close"].dropna()) >= min_rows
+    )
+
+
+def write_snapshot_files(output: dict, history: dict) -> None:
+    DOCS_DATA_DIR.mkdir(parents=True, exist_ok=True)
+    with OUTPUT_PATH.open("w", encoding="utf-8") as f:
+        json.dump(output, f, indent=2, ensure_ascii=False)
+    with HISTORY_PATH.open("w", encoding="utf-8") as f:
+        json.dump(history, f, indent=2, ensure_ascii=False)
+
+
 def build_market_ai_payload(output: dict) -> dict:
     market = output.get("market", {})
     metrics = market.get("metrics", {})
@@ -2546,8 +2563,43 @@ def main() -> None:
         if ts:
             latest_intraday_points.append(ts)
 
+    critical_market_frames = {
+        "SPX": spx,
+        "NDX": ndx,
+        "RUT": rut,
+        "TNX": tnx,
+        "SPY_PROXY": spy_proxy,
+        "QQQ_PROXY": qqq_proxy,
+        "RSP": rsp,
+        "HYG": hyg,
+        "SOXX": soxx,
+        "XLK": xlk,
+        "XLF": xlf,
+        "XLY": xly,
+        "BRENT": brent,
+        "VIX": vix,
+        "DXY": dxy,
+    }
+    missing_market_frames = [name for name, frame in critical_market_frames.items() if not has_valid_close_frame(frame)]
+    if missing_market_frames:
+        if previous_output:
+            print(f"Critical market frames unavailable ({', '.join(missing_market_frames)}). Keeping previous US snapshot.")
+            write_snapshot_files(previous_output, existing_history or previous_output.get("history", {}))
+            if run_ai_analysis:
+                write_ai_outputs(previous_output)
+            return
+        raise RuntimeError(f"Critical market frames unavailable: {', '.join(missing_market_frames)}")
+
     sp500_close = download_sp500_prices()
     sp500_close = sp500_close.dropna(axis=1, how="all")
+    if sp500_close.empty or len(sp500_close.index) < 2:
+        if previous_output:
+            print("S&P 500 breadth source unavailable. Keeping previous US snapshot.")
+            write_snapshot_files(previous_output, existing_history or previous_output.get("history", {}))
+            if run_ai_analysis:
+                write_ai_outputs(previous_output)
+            return
+        raise RuntimeError("S&P 500 breadth source unavailable")
     sp500_ret = sp500_close.pct_change()
     ad_daily = (sp500_ret > 0).sum(axis=1) - (sp500_ret < 0).sum(axis=1)
     ad_line = ad_daily.fillna(0).cumsum()
@@ -2586,6 +2638,14 @@ def main() -> None:
         sdf, ts = load_price_frame(ticker, now_et)
         if ts:
             latest_intraday_points.append(ts)
+        if not has_valid_close_frame(sdf):
+            if previous_output:
+                print(f"Watchlist frame unavailable for {ticker}. Keeping previous US snapshot.")
+                write_snapshot_files(previous_output, existing_history or previous_output.get("history", {}))
+                if run_ai_analysis:
+                    write_ai_outputs(previous_output)
+                return
+            raise RuntimeError(f"Watchlist frame unavailable for {ticker}")
         earnings_soon, earnings_date = get_earnings_info(ticker, as_of, earnings_calendar)
         stock_reports.append(score_stock(ticker, sdf, spx, lvl, earnings_soon, earnings_date))
 
@@ -2702,11 +2762,7 @@ def main() -> None:
         stock["history_tags"] = score_history_tags(history.get("stocks", {}).get(stock["ticker"], []))
     output["history"] = history
 
-    DOCS_DATA_DIR.mkdir(parents=True, exist_ok=True)
-    with OUTPUT_PATH.open("w", encoding="utf-8") as f:
-        json.dump(output, f, indent=2)
-    with HISTORY_PATH.open("w", encoding="utf-8") as f:
-        json.dump(history, f, indent=2)
+    write_snapshot_files(output, history)
     if run_ai_analysis:
         write_ai_outputs(output)
 
