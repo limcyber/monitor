@@ -79,6 +79,7 @@ function escapeHtml(value) {
 function cleanAiText(value) {
   return String(value || "")
     .replaceAll("**", "")
+    .replace(/(?<!^)(?=(AI 판단|확인 포인트|결론|속보 요약):)/g, "\n")
     .replace(" (AI 점수:", "\n(AI 점수:")
     .trim();
 }
@@ -118,13 +119,22 @@ function renderAiAnalysis(el, value) {
     .filter(Boolean);
 
   const sections = [];
+  const sectionIndexByLabel = new Map();
   let current = null;
 
   lines.forEach((line) => {
     const matched = line.match(/^(AI 판단|확인 포인트|결론|속보 요약):\s*(.*)$/);
     if (matched) {
-      current = { label: matched[1], content: matched[2] ? [matched[2]] : [] };
-      sections.push(current);
+      const label = matched[1];
+      const nextSection = { label, content: matched[2] ? [matched[2]] : [] };
+      if (sectionIndexByLabel.has(label)) {
+        const index = sectionIndexByLabel.get(label);
+        sections[index] = nextSection;
+      } else {
+        sectionIndexByLabel.set(label, sections.length);
+        sections.push(nextSection);
+      }
+      current = nextSection;
       return;
     }
     if (current) {
