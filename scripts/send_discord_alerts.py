@@ -71,6 +71,52 @@ def ai_alert_heading() -> str:
     return os.environ.get("DISCORD_AI_ALERT_TITLE", "AI 시장 분석 알림").strip() or "AI 시장 분석 알림"
 
 
+def build_test_message(kind: str, payload: dict) -> str:
+    market = payload.get("market", {})
+    generated_at = payload.get("generated_at_et", "-")
+    as_of = payload.get("market_data_as_of", "-")
+    state_line = f"{market.get('state', '-')} / {market.get('score', '-')}/100 / {market.get('action', '-')}"
+
+    if kind == "summary":
+        return "\n".join(
+            [
+                f"{summary_heading()} [TEST]",
+                f"생성: {generated_at}",
+                f"기준: {as_of}",
+                f"상태: {state_line}",
+                "핵심: 테스트용 기본 요약 메시지입니다.",
+            ]
+        )
+
+    if kind == "important":
+        return "\n".join(
+            [
+                f"{alert_heading()} [TEST]",
+                f"생성: {generated_at}",
+                f"기준: {as_of}",
+                f"상태: {state_line}",
+                "",
+                "[HIGH] 시장 레벨 하락",
+                "테스트용 중요 알림입니다. 실제 조건과 무관하게 전송됩니다.",
+            ]
+        )
+
+    if kind == "ai":
+        return "\n".join(
+            [
+                f"{ai_alert_heading()} [TEST]",
+                f"업데이트: {generated_at}",
+                f"기준: {as_of}",
+                f"상태: {state_line}",
+                "",
+                "[HIGH] 시장 레벨 급변",
+                "테스트용 AI 알림입니다. 실제 AI 조건과 무관하게 전송됩니다.",
+            ]
+        )
+
+    raise ValueError(f"Unknown DISCORD_TEST_KIND: {kind}")
+
+
 def main() -> None:
     webhook_url = os.environ.get("DISCORD_WEBHOOK_URL", "").strip()
     if not webhook_url:
@@ -88,6 +134,14 @@ def main() -> None:
 
     with latest_path.open("r", encoding="utf-8") as f:
         payload = json.load(f)
+
+    test_kind = os.environ.get("DISCORD_TEST_KIND", "").strip().lower()
+    if test_kind:
+        content = build_test_message(test_kind, payload)
+        response = requests.post(webhook_url, json={"content": content}, timeout=15)
+        response.raise_for_status()
+        print(f"Sent Discord test message for kind={test_kind}.")
+        return
 
     if env_flag("DISCORD_AI_ALERTS", default=False):
         notifications = payload.get("ai_notifications", {}).get("items", [])

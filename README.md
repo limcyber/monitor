@@ -218,6 +218,21 @@
 ### 계속 일봉 기준인 항목
 - S&P500 breadth
 - A/D Line
+
+## Discord 테스트 전송
+
+`send_discord_alerts.py`는 샘플 메시지도 바로 보낼 수 있습니다.
+
+- 중요 알림 테스트
+  - `DISCORD_TEST_KIND=important python3 scripts/send_discord_alerts.py`
+- 기본 요약 테스트
+  - `DISCORD_MARKET_SUMMARY=true DISCORD_TEST_KIND=summary python3 scripts/send_discord_alerts.py`
+- AI 알림 테스트
+  - `DISCORD_AI_ALERTS=true DISCORD_TEST_KIND=ai python3 scripts/send_discord_alerts.py`
+
+공통:
+- `DISCORD_WEBHOOK_URL`이 필요합니다.
+- 한국장 기본 요약을 테스트하려면 `DISCORD_PAYLOAD_PATH=kr`를 같이 주면 됩니다.
 - 20일선 / 50일선 / 200일선 같은 중장기 이동평균
 
 ## 6. 자동화와 배포
