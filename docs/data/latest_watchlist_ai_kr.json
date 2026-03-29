@@ -1,7 +1,160 @@
 {
-  "generated_at_et": "2026-03-29 02:48 ET",
+  "generated_at_et": "2026-03-29 03:03 ET",
   "market_data_as_of": "2026-03-27 15:30 KST (Close)",
-  "status": "disabled",
-  "error": "GOOGLE_API_KEY가 없어 한국 종목 AI 분석을 건너뛰었습니다.",
-  "items": []
+  "status": "ok",
+  "error": null,
+  "items": [
+    {
+      "ticker": "005930.KS",
+      "ai_score": 33,
+      "ai_state": "회피",
+      "ai_action": "관찰",
+      "ai_note": "최근 단기 데드크로스가 발생하여 현재는 관찰이 필요합니다.",
+      "close": 180100.0,
+      "change_pct": 0.0,
+      "score": 33,
+      "state": "회피",
+      "action": "관찰",
+      "cross_highlights": [
+        "삼성전자 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다."
+      ],
+      "volume_ratio_20d": 0.8560528413576823,
+      "signals": {
+        "short_cross": "bear",
+        "mid_cross": "none"
+      }
+    },
+    {
+      "ticker": "000660.KS",
+      "ai_score": 51,
+      "ai_state": "애매",
+      "ai_action": "관찰",
+      "ai_note": "시장 대비 강한 흐름을 보이고 있으나, 추가적인 상승 모멘텀 확인이 필요합니다.",
+      "close": 933000.0,
+      "change_pct": 0.0,
+      "score": 51,
+      "state": "애매",
+      "action": "관찰",
+      "cross_highlights": [],
+      "volume_ratio_20d": 0.9347530003428609,
+      "signals": {
+        "short_cross": "none",
+        "mid_cross": "none"
+      }
+    },
+    {
+      "ticker": "035420.KS",
+      "ai_score": 20,
+      "ai_state": "회피",
+      "ai_action": "관찰",
+      "ai_note": "시장 대비 약한 흐름을 보이고 있어 현재는 관망하는 것이 좋습니다.",
+      "close": 211500.0,
+      "change_pct": 0.0,
+      "score": 20,
+      "state": "회피",
+      "action": "관찰",
+      "cross_highlights": [],
+      "volume_ratio_20d": 0.5157790082400219,
+      "signals": {
+        "short_cross": "none",
+        "mid_cross": "none"
+      }
+    },
+    {
+      "ticker": "005380.KS",
+      "ai_score": 25,
+      "ai_state": "회피",
+      "ai_action": "관찰",
+      "ai_note": "시장 대비 약한 흐름을 보이고 있어 현재는 관망하는 것이 좋습니다.",
+      "close": 495000.0,
+      "change_pct": 1.0204081632652962,
+      "score": 25,
+      "state": "회피",
+      "action": "관찰",
+      "cross_highlights": [],
+      "volume_ratio_20d": 0.6533709409778599,
+      "signals": {
+        "short_cross": "none",
+        "mid_cross": "none"
+      }
+    },
+    {
+      "ticker": "124500.KQ",
+      "ai_score": 18,
+      "ai_state": "회피",
+      "ai_action": "관찰",
+      "ai_note": "최근 단기 데드크로스가 발생하여 현재는 관찰이 필요합니다.",
+      "close": 46900.0,
+      "change_pct": -2.2916666666666696,
+      "score": 18,
+      "state": "회피",
+      "action": "관찰",
+      "cross_highlights": [
+        "아이티센글로벌 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다."
+      ],
+      "volume_ratio_20d": 0.48583071498050073,
+      "signals": {
+        "short_cross": "bear",
+        "mid_cross": "none"
+      }
+    },
+    {
+      "ticker": "466100.KQ",
+      "ai_score": 11,
+      "ai_state": "회피",
+      "ai_action": "관찰",
+      "ai_note": "시장 대비 약한 흐름을 보이고 있어 현재는 관망하는 것이 좋습니다.",
+      "close": 50800.0,
+      "change_pct": 0.19723865877712132,
+      "score": 11,
+      "state": "회피",
+      "action": "관찰",
+      "cross_highlights": [],
+      "volume_ratio_20d": 0.4924934276942561,
+      "signals": {
+        "short_cross": "none",
+        "mid_cross": "none"
+      }
+    },
+    {
+      "ticker": "012450.KS",
+      "ai_score": 64,
+      "ai_state": "애매",
+      "ai_action": "관찰",
+      "ai_note": "시장 대비 강한 흐름을 보이고 있으나, 최근 단기 데드크로스 발생으로 추가 확인이 필요합니다.",
+      "close": 1369000.0,
+      "change_pct": 0.0,
+      "score": 64,
+      "state": "애매",
+      "action": "관찰",
+      "cross_highlights": [
+        "한화에어로스페이스 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다."
+      ],
+      "volume_ratio_20d": 0.49914513446738035,
+      "signals": {
+        "short_cross": "bear",
+        "mid_cross": "none"
+      }
+    },
+    {
+      "ticker": "079550.KS",
+      "ai_score": 67,
+      "ai_state": "양호",
+      "ai_action": "매우 선별적 접근",
+      "ai_note": "시장 대비 강한 흐름을 보이며 20일선 및 50일선 위에 있어 긍정적이나, 최근 단기 데드크로스 발생으로 선별적 접근이 유효합니다.",
+      "close": 735000.0,
+      "change_pct": 0.0,
+      "score": 67,
+      "state": "양호",
+      "action": "매우 선별적 접근",
+      "cross_highlights": [
+        "LIG넥스원 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다."
+      ],
+      "volume_ratio_20d": 0.41486393392201554,
+      "signals": {
+        "short_cross": "bear",
+        "mid_cross": "none"
+      }
+    }
+  ]
 }
