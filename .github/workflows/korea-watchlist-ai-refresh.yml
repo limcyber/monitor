@@ -88,7 +88,7 @@ jobs:
 
       - name: Skip note
         if: steps.window.outputs.should_run != 'true'
-        run: echo "Korea watchlist AI refresh skipped for this tick."
+        run: echo "Korea market AI refresh skipped for this tick."
 
   deploy:
     environment:
