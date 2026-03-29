@@ -164,7 +164,7 @@ function renderAiAnalysis(el, value) {
 
   const shortTermTipFallback = {
     label: "단기투자 팁",
-    content: ["단기 방향이 확인되기 전에는 추격보다 확인 후 대응이 낫습니다."],
+    content: ["업데이트 대기중"],
   };
   const shortTermTipIndex = sections.findIndex((section) => section.label === "단기투자 팁");
   if (shortTermTipIndex === -1) {
