@@ -36,8 +36,7 @@ def build_market_summary(payload: dict) -> str:
     lines = [
         "시장 상태 요약",
         f"생성: {payload.get('generated_at_et', '-')}",
-        f"상태: {market.get('state', '-')}",
-        f"점수/행동: {market.get('score', '-')}/100 / {market.get('action', '-')}",
+        f"상태/행동: {market.get('state', '-')} / {market.get('score', '-')}/100 / {market.get('action', '-')}",
         f"크로스: {cross_text}",
     ]
     if market.get("top_reasons"):
@@ -81,7 +80,7 @@ def build_test_message(kind: str, payload: dict) -> str:
             [
                 f"{summary_heading()} [TEST]",
                 f"생성: {generated_at}",
-                f"상태: {state_line}",
+                f"상태/행동: {state_line}",
                 "핵심: 테스트용 기본 요약 메시지입니다.",
             ]
         )
