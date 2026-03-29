@@ -1040,25 +1040,21 @@ body[data-theme="bw"] .stock-card p {
 }
 
 body[data-theme="bw"] .cross-highlight-block {
-  border-color: #2d6a46;
-  background:
-    linear-gradient(180deg, rgba(13, 29, 19, 0.96) 0%, rgba(9, 18, 12, 0.98) 100%);
-  box-shadow:
-    inset 0 1px 0 rgba(124, 255, 176, 0.05),
-    0 12px 30px rgba(0, 0, 0, 0.3);
+  border-color: #476233;
+  background: linear-gradient(180deg, #11170c 0%, #171f10 100%);
 }
 
 body[data-theme="bw"] .cross-highlight-block h3,
 body[data-theme="bw"] .cross-highlight-block h4 {
-  color: #d5ffd8;
+  color: #d7f48d;
 }
 
 body[data-theme="bw"] .cross-note {
-  color: #8bd7a1;
+  color: #d6b66a;
 }
 
 body[data-theme="bw"] .cross-highlight-block li {
-  color: #d7ffe5;
+  color: #f3e5b8;
 }
 
 body[data-theme="bw"] .extra-info-box {
