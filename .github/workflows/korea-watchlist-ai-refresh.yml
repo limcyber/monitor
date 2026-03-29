@@ -1,0 +1,103 @@
+name: Korea Watchlist AI Refresh
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 * * * *"
+
+concurrency:
+  group: korea-watchlist-ai-refresh
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    outputs:
+      should_run: ${{ steps.window.outputs.should_run }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check Korea market window
+        id: window
+        run: |
+          DAY="$(TZ=Asia/Seoul date +%u)"
+          HOUR="$(TZ=Asia/Seoul date +%H)"
+          MINUTE="$(TZ=Asia/Seoul date +%M)"
+          KST_NOW="$(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M KST')"
+          echo "KST now: ${KST_NOW}"
+          if [ "$DAY" -gt 5 ]; then
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+            echo "Skipping: weekend."
+            exit 0
+          fi
+          if [ "$MINUTE" != "00" ]; then
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+            echo "Skipping: not on the hour."
+            exit 0
+          fi
+          if [ "$HOUR" -lt 9 ] || [ "$HOUR" -gt 15 ]; then
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+            echo "Skipping: outside Korea market AI window."
+            exit 0
+          fi
+          echo "should_run=true" >> "$GITHUB_OUTPUT"
+          echo "Running: inside Korea market AI window."
+
+      - name: Install dependencies
+        if: steps.window.outputs.should_run == 'true'
+        run: pip install -r requirements.txt
+
+      - name: Generate Korea watchlist AI files
+        if: steps.window.outputs.should_run == 'true'
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        run: |
+          python scripts/generate_kr_ai.py
+
+      - name: Commit Korea watchlist AI data
+        if: steps.window.outputs.should_run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase --autostash origin main
+          git add docs/data/latest_watchlist_ai_kr.json docs/data/watchlist_ai_history_kr.json
+          if git diff --cached --quiet; then
+            echo "Korea watchlist AI result: no file changes."
+          else
+            git commit -m "chore: refresh korea watchlist ai"
+            git push
+            echo "Korea watchlist AI result: committed and pushed."
+          fi
+
+      - name: Upload artifact
+        if: steps.window.outputs.should_run == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Skip note
+        if: steps.window.outputs.should_run != 'true'
+        run: echo "Korea watchlist AI refresh skipped for this tick."
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: refresh
+    if: needs.refresh.result == 'success' && needs.refresh.outputs.should_run == 'true'
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

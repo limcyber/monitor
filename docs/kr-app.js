@@ -518,7 +518,7 @@ function renderMarket(data) {
   bindFactorBoxes(document);
 }
 
-function renderTable(rows) {
+function renderTable(rows, aiMap = {}) {
   const body = document.getElementById("watchlistTable");
   if (!body) return;
   body.innerHTML = "";
@@ -534,15 +534,21 @@ function renderTable(rows) {
     `;
     body.appendChild(tr);
 
+    const aiRow = aiMap[String(row.ticker || "").toUpperCase()] || null;
+    const aiScore = aiRow?.ai_score;
+    const aiTone = typeof aiScore === "number" ? scoreTone(aiScore) : "warning";
+    const aiState = aiRow?.ai_state || "분석 대기";
+    const aiAction = aiRow?.ai_action || "대기";
+    const aiNote = aiRow?.ai_note || "다음 한국장 AI 갱신이 끝나면 내용이 채워집니다.";
     const aiTr = document.createElement("tr");
     aiTr.className = "watchlist-ai-row";
     aiTr.innerHTML = `
       <td data-label="종목"><strong>AI 분석(${escapeHtml(row.name || row.ticker)})</strong></td>
       <td data-label="현재가"></td>
-      <td data-label="점수"><span class="pill warning">예시 58/100</span></td>
-      <td data-label="상태"><span class="pill warning">보통</span></td>
-      <td data-label="추천 행동"><span class="pill warning">관찰 / 대기</span></td>
-      <td data-label="메모">AI 판단 예시: 흐름이 완전히 꺾인 건 아니지만, 지금은 차분히 확인하는 편이 좋습니다.</td>
+      <td data-label="점수"><span class="pill ${aiTone}">${typeof aiScore === "number" ? formatScore(aiScore) : "-"}</span></td>
+      <td data-label="상태"><span class="pill ${aiTone}">${escapeHtml(aiState)}</span></td>
+      <td data-label="추천 행동"><span class="pill ${aiTone}">${escapeHtml(aiAction)}</span></td>
+      <td data-label="메모">${escapeHtml(aiNote)}</td>
     `;
     body.appendChild(aiTr);
   });
@@ -753,12 +759,24 @@ function initStockPanel(stocks) {
 
 async function boot() {
   initThemeToggle();
-  const response = await fetch("./data/latest_kr.json", { cache: "no-store" });
+  const [response, aiResponse] = await Promise.all([
+    fetch("./data/latest_kr.json", { cache: "no-store" }),
+    fetch("./data/latest_watchlist_ai_kr.json", { cache: "no-store" }).catch(() => null),
+  ]);
   if (!response.ok) throw new Error("Failed to load latest_kr.json");
   const data = await response.json();
+  let aiMap = {};
+  if (aiResponse && aiResponse.ok) {
+    try {
+      const aiData = await aiResponse.json();
+      aiMap = Object.fromEntries((aiData.items || []).map((item) => [String(item.ticker || "").toUpperCase(), item]));
+    } catch {
+      aiMap = {};
+    }
+  }
   appState.data = data;
   renderMarket(data);
-  renderTable(data.watchlist_summary);
+  renderTable(data.watchlist_summary, aiMap);
   renderMarketCharts(data.charts.market);
   renderStressTable(data.charts.market);
   initStockPanel(data.stocks);
