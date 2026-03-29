@@ -24,6 +24,8 @@ OUTPUT_PATH = DOCS_DATA_DIR / "latest.json"
 HISTORY_PATH = DOCS_DATA_DIR / "history.json"
 AI_OUTPUT_PATH = DOCS_DATA_DIR / "latest_ai.json"
 WATCHLIST_AI_OUTPUT_PATH = DOCS_DATA_DIR / "latest_watchlist_ai.json"
+AI_HISTORY_PATH = DOCS_DATA_DIR / "ai_history.json"
+WATCHLIST_AI_HISTORY_PATH = DOCS_DATA_DIR / "watchlist_ai_history.json"
 ET = ZoneInfo("America/New_York")
 MARKET_LEVELS_TOTAL = 6
 MARKET_GEMINI_MODEL = "gemini-2.5-flash-lite"
@@ -207,6 +209,26 @@ def build_watchlist_ai_output(
         "error": error,
         "items": ai_items,
     }
+
+
+def append_ai_history(path: Path, entry: dict, limit: int = 200) -> None:
+    history = load_json(path)
+    items = history.get("items", []) if isinstance(history, dict) else []
+    if not isinstance(items, list):
+        items = []
+    items.append(entry)
+    trimmed = items[-limit:]
+    with path.open("w", encoding="utf-8") as f:
+        json.dump(
+            {
+                "updated_at_et": entry.get("generated_at_et"),
+                "count": len(trimmed),
+                "items": trimmed,
+            },
+            f,
+            indent=2,
+            ensure_ascii=False,
+        )
 
 
 def previous_watchlist_ai_map(previous_watchlist_ai_output: dict) -> dict[str, dict]:
@@ -607,11 +629,24 @@ def write_ai_outputs(output: dict) -> None:
     ai_notifications = build_ai_notifications(output, previous_ai_output, watchlist_ai_output, previous_watchlist_ai_output)
     market_ai_output["ai_notifications"]["items"] = ai_notifications
     market_ai_output["ai_notifications"]["count"] = len(ai_notifications)
+
+    latest_market_ai_output = market_ai_output
+    if market_ai_output.get("ai_analysis", {}).get("status") != "ok":
+        if previous_ai_output.get("ai_analysis", {}).get("status") == "ok":
+            latest_market_ai_output = previous_ai_output
+
+    latest_watchlist_ai_output = watchlist_ai_output
+    if watchlist_ai_output.get("status") != "ok":
+        if previous_watchlist_ai_output.get("status") == "ok":
+            latest_watchlist_ai_output = previous_watchlist_ai_output
+
     DOCS_DATA_DIR.mkdir(parents=True, exist_ok=True)
     with AI_OUTPUT_PATH.open("w", encoding="utf-8") as f:
-        json.dump(market_ai_output, f, indent=2)
+        json.dump(latest_market_ai_output, f, indent=2, ensure_ascii=False)
     with WATCHLIST_AI_OUTPUT_PATH.open("w", encoding="utf-8") as f:
-        json.dump(watchlist_ai_output, f, indent=2)
+        json.dump(latest_watchlist_ai_output, f, indent=2, ensure_ascii=False)
+    append_ai_history(AI_HISTORY_PATH, market_ai_output)
+    append_ai_history(WATCHLIST_AI_HISTORY_PATH, watchlist_ai_output)
 
 
 def to_date_list(values: list[str]) -> list[date]:
