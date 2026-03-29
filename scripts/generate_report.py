@@ -28,7 +28,7 @@ AI_HISTORY_PATH = DOCS_DATA_DIR / "ai_history.json"
 WATCHLIST_AI_HISTORY_PATH = DOCS_DATA_DIR / "watchlist_ai_history.json"
 ET = ZoneInfo("America/New_York")
 MARKET_LEVELS_TOTAL = 6
-MARKET_GEMINI_MODEL = "gemini-2.5-flash-lite"
+MARKET_GEMINI_MODEL = "gemini-2.5-flash"
 WATCHLIST_GEMINI_MODEL = "gemini-2.5-flash-lite"
 
 

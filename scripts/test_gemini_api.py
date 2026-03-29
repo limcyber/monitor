@@ -10,7 +10,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parents[1]
 LATEST_US_PATH = BASE_DIR / "docs" / "data" / "latest.json"
 LATEST_AI_PATH = BASE_DIR / "docs" / "data" / "latest_ai.json"
-MARKET_MODEL = "gemini-2.5-flash-lite"
+MARKET_MODEL = "gemini-2.5-flash"
 WATCHLIST_MODEL = "gemini-2.5-flash-lite"
 SIMPLE_MODEL = MARKET_MODEL
 
