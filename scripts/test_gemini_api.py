@@ -9,8 +9,8 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 LATEST_US_PATH = BASE_DIR / "docs" / "data" / "latest.json"
-MARKET_MODEL = "gemini-2.5-flash"
-WATCHLIST_MODEL = "gemini-2.5-flash"
+MARKET_MODEL = "gemini-2.5-flash-lite"
+WATCHLIST_MODEL = "gemini-2.5-flash-lite"
 SIMPLE_MODEL = MARKET_MODEL
 
 
