@@ -115,7 +115,8 @@ def build_test_message(kind: str, payload: dict) -> str:
 
 def is_quiet_hours() -> bool:
     now_et = datetime.now(ET)
-    return 0 <= now_et.hour < 7
+    minute_of_day = now_et.hour * 60 + now_et.minute
+    return 0 <= minute_of_day < (2 * 60 + 30)
 
 
 def main() -> None:
