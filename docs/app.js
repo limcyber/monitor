@@ -162,6 +162,17 @@ function renderAiAnalysis(el, value) {
     });
   }
 
+  const shortTermTipFallback = {
+    label: "단기투자 팁",
+    content: ["단기 방향이 확인되기 전에는 추격보다 확인 후 대응이 낫습니다."],
+  };
+  const shortTermTipIndex = sections.findIndex((section) => section.label === "단기투자 팁");
+  if (shortTermTipIndex === -1) {
+    sections.push(shortTermTipFallback);
+  } else if (!sections[shortTermTipIndex].content.some(Boolean)) {
+    sections[shortTermTipIndex] = shortTermTipFallback;
+  }
+
   el.innerHTML = sections
     .map((section) => {
       const items = section.content.filter(Boolean);
