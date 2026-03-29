@@ -157,6 +157,7 @@ def build_watchlist_ai_payload(output: dict) -> dict:
                 "top_reasons": stock.get("top_reasons", [])[:4],
                 "earnings_date": stock.get("earnings_date"),
                 "volume_ratio_20d": stock.get("metrics", {}).get("volume_ratio_20d"),
+                "signals": stock.get("signals", {}),
             }
         )
 
@@ -193,6 +194,17 @@ def previous_watchlist_ai_map(previous_watchlist_ai_output: dict) -> dict[str, d
     }
 
 
+def previous_ai_notification_ids(previous_ai_output: dict) -> set[str]:
+    if not isinstance(previous_ai_output, dict):
+        return set()
+    items = previous_ai_output.get("ai_notifications", {}).get("items", [])
+    return {
+        str(item.get("id") or "").strip()
+        for item in items
+        if isinstance(item, dict) and item.get("id")
+    }
+
+
 def build_ai_notifications(
     current_output: dict,
     previous_ai_output: dict,
@@ -200,6 +212,8 @@ def build_ai_notifications(
     previous_watchlist_ai_output: dict,
 ) -> list[dict]:
     notifications: list[dict] = []
+    previous_ids = previous_ai_notification_ids(previous_ai_output)
+    added_ids: set[str] = set()
     market_output = current_output.get("market", {})
     current_level = market_level(market_output.get("score", 0))
     prev_market = previous_ai_output.get("market", {}) if isinstance(previous_ai_output, dict) else {}
@@ -207,11 +221,18 @@ def build_ai_notifications(
     if not isinstance(prev_level, int) and isinstance(prev_market.get("score"), int):
         prev_level = market_level(prev_market["score"])
 
+    def add_notification(item: dict) -> None:
+        item_id = str(item.get("id") or "").strip()
+        if not item_id or item_id in previous_ids or item_id in added_ids:
+            return
+        added_ids.add(item_id)
+        notifications.append(item)
+
     if isinstance(prev_level, int) and prev_level != current_level:
         direction = "상향" if current_level > prev_level else "하향"
-        notifications.append(
+        add_notification(
             build_notification(
-                f"ai-regime-shift-{current_level}-{current_output.get('generated_at_et', '')}",
+                f"ai-regime-shift-l{prev_level}-to-l{current_level}",
                 "high",
                 "ai_regime_shift",
                 "시장 레벨 급변",
@@ -225,9 +246,9 @@ def build_ai_notifications(
         crossed_overheated = current_pct20 >= 80 and (not isinstance(prev_pct20, (int, float)) or prev_pct20 < 80)
         crossed_oversold = current_pct20 <= 20 and (not isinstance(prev_pct20, (int, float)) or prev_pct20 > 20)
         if crossed_overheated:
-            notifications.append(
+            add_notification(
                 build_notification(
-                    f"ai-breadth-overheated-{current_output.get('generated_at_et', '')}",
+                    "ai-breadth-overheated",
                     "medium",
                     "ai_breadth_extreme",
                     "시장 폭 과열 진입",
@@ -235,9 +256,9 @@ def build_ai_notifications(
                 )
             )
         elif crossed_oversold:
-            notifications.append(
+            add_notification(
                 build_notification(
-                    f"ai-breadth-oversold-{current_output.get('generated_at_et', '')}",
+                    "ai-breadth-oversold",
                     "medium",
                     "ai_breadth_extreme",
                     "시장 폭 과매도 진입",
@@ -250,9 +271,9 @@ def build_ai_notifications(
     if isinstance(current_vix_close, (int, float)) and isinstance(prev_vix_close, (int, float)) and prev_vix_close > 0:
         vix_jump_pct = ((current_vix_close / prev_vix_close) - 1) * 100
         if vix_jump_pct >= 5:
-            notifications.append(
+            add_notification(
                 build_notification(
-                    f"ai-vix-shock-{current_output.get('generated_at_et', '')}",
+                    "ai-vix-shock",
                     "high",
                     "ai_macro_shock",
                     "변동성 급등",
@@ -265,9 +286,9 @@ def build_ai_notifications(
     if isinstance(current_tnx_close, (int, float)) and isinstance(prev_tnx_close, (int, float)) and prev_tnx_close > 0:
         tnx_move_pct = abs((current_tnx_close / prev_tnx_close) - 1) * 100
         if tnx_move_pct >= 1.5:
-            notifications.append(
+            add_notification(
                 build_notification(
-                    f"ai-tnx-shock-{current_output.get('generated_at_et', '')}",
+                    "ai-tnx-shock",
                     "high",
                     "ai_macro_shock",
                     "10년물 금리 급변",
@@ -283,19 +304,17 @@ def build_ai_notifications(
         ticker = stock.get("ticker")
         if not ticker:
             continue
-        current_crosses = stock.get("cross_highlights", []) or []
-        prev_crosses = set(previous_watchlist_ai.get(ticker, {}).get("cross_highlights", []) or [])
-        new_short_crosses = [
-            cross for cross in current_crosses if cross not in prev_crosses and "최근 단기" in cross
-        ]
+        current_signals = stock.get("signals", {}) if isinstance(stock.get("signals"), dict) else {}
+        prev_signals = previous_watchlist_ai.get(ticker, {}).get("signals", {}) if isinstance(previous_watchlist_ai.get(ticker, {}).get("signals"), dict) else {}
+        current_short_signal = str(current_signals.get("short_cross") or "none")
+        prev_short_signal = str(prev_signals.get("short_cross") or "none")
         volume_ratio = stock.get("metrics", {}).get("volume_ratio_20d")
-        if new_short_crosses and isinstance(volume_ratio, (int, float)) and volume_ratio >= 1.5:
-            cross = new_short_crosses[0]
-            direction = "데드크로스" if "데드크로스" in cross else "골든크로스"
+        if current_short_signal in {"bull", "bear"} and current_short_signal != prev_short_signal and isinstance(volume_ratio, (int, float)) and volume_ratio >= 1.5:
+            direction = "데드크로스" if current_short_signal == "bear" else "골든크로스"
             priority = "high" if direction == "데드크로스" else "medium"
-            notifications.append(
+            add_notification(
                 build_notification(
-                    f"ai-high-conviction-cross-{ticker}-{current_output.get('generated_at_et', '')}",
+                    f"ai-high-conviction-cross-{ticker}-{current_short_signal}",
                     priority,
                     "ai_high_conviction_cross",
                     f"{ticker} 고신뢰 크로스",
@@ -320,11 +339,11 @@ def build_ai_notifications(
                 (
                     abs(ai_delta),
                     build_notification(
-                        f"ai-negative-divergence-{ticker}-{current_output.get('generated_at_et', '')}",
+                        f"ai-judgment-divergence-negative-{ticker}",
                         "medium",
                         "ai_sentiment_divergence",
-                        f"{ticker} 가격-심리 괴리",
-                        f"{ticker} 주가는 버티고 있지만 AI 심리는 {abs(ai_delta)}점 악화됐습니다. 악재가 뒤늦게 가격에 반영될 수 있는지 확인이 필요합니다.",
+                        f"{ticker} AI 판단 괴리",
+                        f"{ticker} 주가는 버티고 있지만 AI 판단 점수는 {abs(ai_delta)}점 악화됐습니다. 악재가 뒤늦게 가격에 반영될 수 있는지 확인이 필요합니다.",
                         scope="stock",
                         ticker=ticker,
                     ),
@@ -335,11 +354,11 @@ def build_ai_notifications(
                 (
                     abs(ai_delta),
                     build_notification(
-                        f"ai-positive-divergence-{ticker}-{current_output.get('generated_at_et', '')}",
+                        f"ai-judgment-divergence-positive-{ticker}",
                         "medium",
                         "ai_sentiment_divergence",
-                        f"{ticker} 가격-심리 괴리",
-                        f"{ticker} 주가는 빠졌지만 AI 심리는 {ai_delta}점 개선됐습니다. 반전 전조인지 추가 확인할 만합니다.",
+                        f"{ticker} AI 판단 괴리",
+                        f"{ticker} 주가는 빠졌지만 AI 판단 점수는 {ai_delta}점 개선됐습니다. 반전 전조인지 추가 확인할 만합니다.",
                         scope="stock",
                         ticker=ticker,
                     ),
@@ -347,7 +366,7 @@ def build_ai_notifications(
             )
 
     for _, item in sorted(divergence_candidates, key=lambda row: row[0], reverse=True)[:2]:
-        notifications.append(item)
+        add_notification(item)
 
     priority_rank = {"high": 0, "medium": 1, "low": 2}
     notifications.sort(key=lambda item: (priority_rank.get(item["priority"], 9), item["title"]))
@@ -487,6 +506,7 @@ def generate_watchlist_ai_analysis(output: dict) -> dict:
             "action": row.get("action"),
             "cross_highlights": row.get("cross_highlights", []),
             "volume_ratio_20d": row.get("volume_ratio_20d"),
+            "signals": row.get("signals", {}),
         }
         for row in payload.get("watchlist", [])
         if row.get("ticker")
@@ -544,6 +564,7 @@ def generate_watchlist_ai_analysis(output: dict) -> dict:
                     "action": snapshot.get("action"),
                     "cross_highlights": snapshot.get("cross_highlights", []),
                     "volume_ratio_20d": snapshot.get("volume_ratio_20d"),
+                    "signals": snapshot.get("signals", {}),
                 }
             )
         return build_watchlist_ai_output(output, items, "ok")
@@ -1781,6 +1802,10 @@ def score_stock(
         "overheated": bool(overheated),
         "positive_factors": positive_factors[:6],
         "negative_factors": negative_factors[:6],
+        "signals": {
+            "short_cross": "bull" if short_bull else "bear" if short_bear else "none",
+            "mid_cross": "bull" if mid_bull else "bear" if mid_bear else "none",
+        },
         "metrics": {
             "close": float(close.iloc[-1]),
             "close_change_pct": pct_change_from_prev_close(close),
