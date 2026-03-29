@@ -1,5 +1,5 @@
 {
-  "generated_at_et": "2026-03-29 03:35 ET",
+  "generated_at_et": "2026-03-29 03:38 ET",
   "market_data_as_of": "2026-03-27 15:30 KST (Close)",
   "market": {
     "state": "레벨 4/6 - 살아나는 구간",
@@ -13,8 +13,8 @@
       "KOSPI의 50일선이 200일선 위에 있습니다 (+8)"
     ],
     "cross_highlights": [
-      "KOSPI 최근 단기 데드크로스: 거래량 0.8x (거래량 약함) / RSI 55 (중립)",
-      "KOSDAQ 최근 단기 데드크로스: 거래량 1.2x (거래량 확인) / RSI 57 (상방 우세)"
+      "KOSPI 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.8x (거래량 약함) / RSI 55 (중립)",
+      "KOSDAQ 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 1.2x (거래량 확인) / RSI 57 (상방 우세)"
     ],
     "positive_factors": [
       "KOSPI가 200일선 위에 있습니다 (+15)",
@@ -9285,59 +9285,23 @@
     }
   },
   "notifications": {
-    "count": 6,
+    "count": 2,
     "items": [
       {
-        "id": "kr-market-cross-dead-KOSDAQ 최근 단기 데드크로스: 거래량 1.2x (거래량 확인) / RSI 57 (상방 우세)-2026-03-29",
+        "id": "kr-market-cross-dead-KOSDAQ 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 1.2x (거래량 확인) / RSI 57 (상방 우세)-2026-03-29",
         "priority": "medium",
         "kind": "kr_market_dead_cross",
         "scope": "market",
-        "title": "KOSDAQ 최근 단기 데드크로스: 거래량 1.2x (거래량 확인) / RSI 57 (상방 우세)",
-        "message": "KOSDAQ 최근 단기 데드크로스: 거래량 1.2x (거래량 확인) / RSI 57 (상방 우세). 신규 매수보다 대기나 방어 쪽이 낫습니다."
+        "title": "KOSDAQ 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 1.2x (거래량 확인) / RSI 57 (상방 우세)",
+        "message": "KOSDAQ 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 1.2x (거래량 확인) / RSI 57 (상방 우세). 신규 매수보다 대기나 방어 쪽이 낫습니다."
       },
       {
-        "id": "kr-market-cross-dead-KOSPI 최근 단기 데드크로스: 거래량 0.8x (거래량 약함) / RSI 55 (중립)-2026-03-29",
+        "id": "kr-market-cross-dead-KOSPI 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.8x (거래량 약함) / RSI 55 (중립)-2026-03-29",
         "priority": "medium",
         "kind": "kr_market_dead_cross",
         "scope": "market",
-        "title": "KOSPI 최근 단기 데드크로스: 거래량 0.8x (거래량 약함) / RSI 55 (중립)",
-        "message": "KOSPI 최근 단기 데드크로스: 거래량 0.8x (거래량 약함) / RSI 55 (중립). 신규 매수보다 대기나 방어 쪽이 낫습니다."
-      },
-      {
-        "id": "kr-stock-dead-cross-079550.KS-2026-03-29",
-        "priority": "medium",
-        "kind": "kr_stock_dead_cross",
-        "scope": "stock",
-        "title": "LIG넥스원 데드크로스",
-        "message": "LIG넥스원 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.4x (거래량 약함) / RSI 40 (하방 우세). 매수보다 대기나 비중 조절 쪽이 낫습니다.",
-        "ticker": "079550.KS"
-      },
-      {
-        "id": "kr-stock-dead-cross-005930.KS-2026-03-29",
-        "priority": "medium",
-        "kind": "kr_stock_dead_cross",
-        "scope": "stock",
-        "title": "삼성전자 데드크로스",
-        "message": "삼성전자 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.9x (거래량 보통) / RSI 54 (중립). 매수보다 대기나 비중 조절 쪽이 낫습니다.",
-        "ticker": "005930.KS"
-      },
-      {
-        "id": "kr-stock-dead-cross-124500.KQ-2026-03-29",
-        "priority": "medium",
-        "kind": "kr_stock_dead_cross",
-        "scope": "stock",
-        "title": "아이티센글로벌 데드크로스",
-        "message": "아이티센글로벌 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.5x (거래량 약함) / RSI 41 (하방 우세). 매수보다 대기나 비중 조절 쪽이 낫습니다.",
-        "ticker": "124500.KQ"
-      },
-      {
-        "id": "kr-stock-dead-cross-012450.KS-2026-03-29",
-        "priority": "medium",
-        "kind": "kr_stock_dead_cross",
-        "scope": "stock",
-        "title": "한화에어로스페이스 데드크로스",
-        "message": "한화에어로스페이스 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.5x (거래량 약함) / RSI 44 (하방 우세). 매수보다 대기나 비중 조절 쪽이 낫습니다.",
-        "ticker": "012450.KS"
+        "title": "KOSPI 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.8x (거래량 약함) / RSI 55 (중립)",
+        "message": "KOSPI 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.8x (거래량 약함) / RSI 55 (중립). 신규 매수보다 대기나 방어 쪽이 낫습니다."
       }
     ]
   },
