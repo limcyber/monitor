@@ -634,7 +634,6 @@ function renderMarket(data) {
     aiStatusEl.className = `pill ${aiStatusTone(status)}`;
     aiStatusEl.textContent = status === "ok" ? "분석 완료" : status === "error" ? "분석 실패" : "분석 대기";
   }
-  setText("marketEasy", data.market.easy_explanation);
   setText("marketInvalidation", data.market.invalidation);
   renderList(document.getElementById("marketReasons"), data.market.top_reasons, "오늘은 시장을 좋게 볼 만한 신호가 많지 않습니다.");
   renderList(document.getElementById("marketPositiveFactors"), data.market.positive_factors, "점수를 올려준 신호가 많지 않습니다.");
