@@ -164,10 +164,11 @@
 - `DISCORD_KR_WEBHOOK_URL` 사용
 
 #### [discord-korea-delayed-alerts.yml](./.github/workflows/discord-korea-delayed-alerts.yml)
-조용한 시간에 걸려 막힌 한국장 오후 중요 알림을 따로 보내는 워크플로입니다.
+조용한 시간에 걸려 막힌 한국장 오후 중요 알림과 오후 요약을 따로 보내는 워크플로입니다.
 
 - 평일 `07:05 ET` 기준으로 한 번 실행
 - 한국장 마감 후 생성된 `latest_kr.json`의 중요 알림을 다시 전송
+- 같은 워크플로에서 한국장 오후 요약도 함께 전송
 - `DISCORD_KR_WEBHOOK_URL` 사용
 
 중요 알림 예시:

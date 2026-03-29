@@ -59,3 +59,12 @@ jobs:
           DISCORD_PAYLOAD_PATH: "kr"
           DISCORD_ALERT_TITLE: "한국 시장 오후 중요 알림"
         run: python scripts/send_discord_alerts.py
+
+      - name: Send delayed Korea market summary
+        if: github.event_name != 'schedule' || steps.window.outputs.should_run == 'true'
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_KR_WEBHOOK_URL }}
+          DISCORD_PAYLOAD_PATH: "kr"
+          DISCORD_MARKET_SUMMARY: "true"
+          DISCORD_SUMMARY_TITLE: "한국 시장 오후 요약"
+        run: python scripts/send_discord_alerts.py
