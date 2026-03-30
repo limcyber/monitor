@@ -1,5 +1,9 @@
 {
+<<<<<<< Updated upstream
   "generated_at_et": "2026-03-29 20:03 ET",
+=======
+  "generated_at_et": "2026-03-29 20:05 ET",
+>>>>>>> Stashed changes
   "market_data_as_of": "2026-03-27 15:30 KST (Close)",
   "market": {
     "state": "레벨 4/6 - 살아나는 구간",
@@ -52,6 +56,7 @@
       "kospi200_change_pct": -0.4574184549229976,
       "semicon_close": 95450.0,
       "semicon_change_pct": -0.562558599854146,
+<<<<<<< Updated upstream
       "brent_close": 108.4800033569336,
       "brent_change_pct": -3.633291595432664,
       "usdkrw_close": 1515.1800537109375,
@@ -59,6 +64,15 @@
       "vix_close": 31.049999237060547,
       "vix_change_pct": 13.155971693667867,
       "usdkrw_20d_zscore": 1.745915411378082,
+=======
+      "brent_close": 108.44999694824219,
+      "brent_change_pct": -3.6599473729690857,
+      "usdkrw_close": 1514.280029296875,
+      "usdkrw_change_pct": 0.3924821662471212,
+      "vix_close": 31.049999237060547,
+      "vix_change_pct": 13.155971693667867,
+      "usdkrw_20d_zscore": 1.7023110866746582,
+>>>>>>> Stashed changes
       "vix_percentile": 96.82539682539682,
       "kospi_rsi14": 54.88602972321139,
       "kosdaq_rsi14": 56.76728207832201,
@@ -69,7 +83,11 @@
     "change_tags": [
       "점수 -2",
       "레벨 변화 없음",
+<<<<<<< Updated upstream
       "원달러 일간 +0.45%"
+=======
+      "원달러 일간 +0.39%"
+>>>>>>> Stashed changes
     ],
     "position_tags": [
       "총 노출 30~50%",
@@ -9085,7 +9103,11 @@
         102.22000122070312,
         108.01000213623047,
         112.56999969482422,
+<<<<<<< Updated upstream
         108.4800033569336
+=======
+        108.44999694824219
+>>>>>>> Stashed changes
       ],
       "usdkrw_close": [
         1437.9100341796875,
@@ -9150,7 +9172,11 @@
         1497.31005859375,
         1500.969970703125,
         1508.3599853515625,
+<<<<<<< Updated upstream
         1515.1800537109375
+=======
+        1514.280029296875
+>>>>>>> Stashed changes
       ],
       "vix_close": [
         13.600000381469727,
