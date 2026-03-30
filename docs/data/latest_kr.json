@@ -1,9 +1,5 @@
 {
-<<<<<<< Updated upstream
-  "generated_at_et": "2026-03-29 20:03 ET",
-=======
-  "generated_at_et": "2026-03-29 20:05 ET",
->>>>>>> Stashed changes
+  "generated_at_et": "2026-03-29 20:06 ET",
   "market_data_as_of": "2026-03-27 15:30 KST (Close)",
   "market": {
     "state": "레벨 4/6 - 살아나는 구간",
@@ -56,23 +52,13 @@
       "kospi200_change_pct": -0.4574184549229976,
       "semicon_close": 95450.0,
       "semicon_change_pct": -0.562558599854146,
-<<<<<<< Updated upstream
-      "brent_close": 108.4800033569336,
-      "brent_change_pct": -3.633291595432664,
-      "usdkrw_close": 1515.1800537109375,
-      "usdkrw_change_pct": 0.4521512388029336,
+      "brent_close": 108.33999633789062,
+      "brent_change_pct": -3.7576648915351174,
+      "usdkrw_close": 1514.3800048828125,
+      "usdkrw_change_pct": 0.3991102647719069,
       "vix_close": 31.049999237060547,
       "vix_change_pct": 13.155971693667867,
-      "usdkrw_20d_zscore": 1.745915411378082,
-=======
-      "brent_close": 108.44999694824219,
-      "brent_change_pct": -3.6599473729690857,
-      "usdkrw_close": 1514.280029296875,
-      "usdkrw_change_pct": 0.3924821662471212,
-      "vix_close": 31.049999237060547,
-      "vix_change_pct": 13.155971693667867,
-      "usdkrw_20d_zscore": 1.7023110866746582,
->>>>>>> Stashed changes
+      "usdkrw_20d_zscore": 1.7071849663168577,
       "vix_percentile": 96.82539682539682,
       "kospi_rsi14": 54.88602972321139,
       "kosdaq_rsi14": 56.76728207832201,
@@ -81,13 +67,7 @@
       "kosdaq_kospi_ratio_change_20d": 0.09870880608312116
     },
     "change_tags": [
-      "점수 -2",
-      "레벨 변화 없음",
-<<<<<<< Updated upstream
-      "원달러 일간 +0.45%"
-=======
-      "원달러 일간 +0.39%"
->>>>>>> Stashed changes
+      "첫 생성 데이터"
     ],
     "position_tags": [
       "총 노출 30~50%",
@@ -1235,7 +1215,7 @@
       "market_label": "KOSDAQ",
       "display_label": "아이티센글로벌 (124500.KQ)",
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -2281,7 +2261,7 @@
       "market_label": "KOSDAQ",
       "display_label": "클로봇 (466100.KQ)",
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -3330,7 +3310,7 @@
       "market_label": "KOSPI",
       "display_label": "삼성전자 (005930.KS)",
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -4379,7 +4359,7 @@
       "market_label": "KOSPI",
       "display_label": "SK하이닉스 (000660.KS)",
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -5421,7 +5401,7 @@
       "market_label": "KOSPI",
       "display_label": "NAVER (035420.KS)",
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -6467,7 +6447,7 @@
       "market_label": "KOSPI",
       "display_label": "현대차 (005380.KS)",
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -7516,7 +7496,7 @@
       "market_label": "KOSPI",
       "display_label": "한화에어로스페이스 (012450.KS)",
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -8565,7 +8545,7 @@
       "market_label": "KOSPI",
       "display_label": "LIG넥스원 (079550.KS)",
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -9103,11 +9083,7 @@
         102.22000122070312,
         108.01000213623047,
         112.56999969482422,
-<<<<<<< Updated upstream
-        108.4800033569336
-=======
-        108.44999694824219
->>>>>>> Stashed changes
+        108.33999633789062
       ],
       "usdkrw_close": [
         1437.9100341796875,
@@ -9172,11 +9148,7 @@
         1497.31005859375,
         1500.969970703125,
         1508.3599853515625,
-<<<<<<< Updated upstream
-        1515.1800537109375
-=======
-        1514.280029296875
->>>>>>> Stashed changes
+        1514.3800048828125
       ],
       "vix_close": [
         13.600000381469727,
@@ -9311,8 +9283,69 @@
     }
   },
   "notifications": {
-    "count": 0,
-    "items": []
+    "count": 7,
+    "items": [
+      {
+        "id": "kr-market-high-stress-2026-03-29",
+        "priority": "high",
+        "kind": "kr_market_high_stress",
+        "scope": "market",
+        "title": "한국 시장 고스트레스 구간",
+        "message": "원달러와 변동성 부담이 큽니다. 새 매수보다 방어를 먼저 보는 편이 좋습니다."
+      },
+      {
+        "id": "kr-market-cross-dead-KOSDAQ 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 1.2x (거래량 확인) / RSI 57 (상방 우세)-2026-03-29",
+        "priority": "medium",
+        "kind": "kr_market_dead_cross",
+        "scope": "market",
+        "title": "KOSDAQ 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 1.2x (거래량 확인) / RSI 57 (상방 우세)",
+        "message": "KOSDAQ 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 1.2x (거래량 확인) / RSI 57 (상방 우세). 신규 매수보다 대기나 방어 쪽이 낫습니다."
+      },
+      {
+        "id": "kr-market-cross-dead-KOSPI 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.8x (거래량 약함) / RSI 55 (중립)-2026-03-29",
+        "priority": "medium",
+        "kind": "kr_market_dead_cross",
+        "scope": "market",
+        "title": "KOSPI 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.8x (거래량 약함) / RSI 55 (중립)",
+        "message": "KOSPI 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.8x (거래량 약함) / RSI 55 (중립). 신규 매수보다 대기나 방어 쪽이 낫습니다."
+      },
+      {
+        "id": "kr-stock-dead-cross-079550.KS-2026-03-29",
+        "priority": "medium",
+        "kind": "kr_stock_dead_cross",
+        "scope": "stock",
+        "title": "LIG넥스원 데드크로스",
+        "message": "LIG넥스원 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.4x (거래량 약함) / RSI 40 (하방 우세). 매수보다 대기나 비중 조절 쪽이 낫습니다.",
+        "ticker": "079550.KS"
+      },
+      {
+        "id": "kr-stock-dead-cross-005930.KS-2026-03-29",
+        "priority": "medium",
+        "kind": "kr_stock_dead_cross",
+        "scope": "stock",
+        "title": "삼성전자 데드크로스",
+        "message": "삼성전자 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.9x (거래량 보통) / RSI 54 (중립). 매수보다 대기나 비중 조절 쪽이 낫습니다.",
+        "ticker": "005930.KS"
+      },
+      {
+        "id": "kr-stock-dead-cross-124500.KQ-2026-03-29",
+        "priority": "medium",
+        "kind": "kr_stock_dead_cross",
+        "scope": "stock",
+        "title": "아이티센글로벌 데드크로스",
+        "message": "아이티센글로벌 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.5x (거래량 약함) / RSI 41 (하방 우세). 매수보다 대기나 비중 조절 쪽이 낫습니다.",
+        "ticker": "124500.KQ"
+      },
+      {
+        "id": "kr-stock-dead-cross-012450.KS-2026-03-29",
+        "priority": "medium",
+        "kind": "kr_stock_dead_cross",
+        "scope": "stock",
+        "title": "한화에어로스페이스 데드크로스",
+        "message": "한화에어로스페이스 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.5x (거래량 약함) / RSI 44 (하방 우세). 매수보다 대기나 비중 조절 쪽이 낫습니다.",
+        "ticker": "012450.KS"
+      }
+    ]
   },
   "history": {
     "market": [
