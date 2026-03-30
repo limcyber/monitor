@@ -1,13 +1,5 @@
 {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  "generated_at_et": "2026-03-29 20:31 ET",
-=======
-  "generated_at_et": "2026-03-29 20:46 ET",
->>>>>>> Stashed changes
-=======
-  "generated_at_et": "2026-03-29 20:48 ET",
->>>>>>> Stashed changes
+  "generated_at_et": "2026-03-29 20:51 ET",
   "market_data_as_of": "2026-03-27 16:00 ET (Close)",
   "market": {
     "state": "레벨 1/6 - 방어 우선",
@@ -58,30 +50,12 @@
       "vix_change_pct": 13.155971693667867,
       "tnx_close": 4.440000057220459,
       "tnx_change_pct": 0.5434820753603464,
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      "brent_close": 107.06999969482422,
-      "brent_change_pct": -4.885848818433358,
+      "brent_close": 108.20999908447266,
+      "brent_change_pct": -3.873146150991802,
       "pct_above_20dma": 13.717693836978132,
       "pct_above_50dma": 19.681908548707753,
       "vix_percentile": 96.82539682539682,
-      "dxy_20d_zscore": 1.4684407265487411,
-=======
-      "brent_close": 108.19999694824219,
-      "brent_change_pct": -3.8820314101706055,
-      "pct_above_20dma": 13.717693836978132,
-      "pct_above_50dma": 19.681908548707753,
-      "vix_percentile": 96.82539682539682,
-      "dxy_20d_zscore": 1.417264396599671,
->>>>>>> Stashed changes
-=======
-      "brent_close": 108.16000366210938,
-      "brent_change_pct": -3.917558891951922,
-      "pct_above_20dma": 13.717693836978132,
-      "pct_above_50dma": 19.681908548707753,
-      "vix_percentile": 96.82539682539682,
-      "dxy_20d_zscore": 1.4411091513266088,
->>>>>>> Stashed changes
+      "dxy_20d_zscore": 1.4575229405250592,
       "tnx_20d_zscore": 1.706566951735031,
       "spx_rsi14": 23.796355262188314,
       "ndx_rsi14": 24.82187799683939,
@@ -9607,15 +9581,7 @@
         99.5999984741211,
         99.9000015258789,
         100.1500015258789,
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        100.1780014038086
-=======
-        100.1500015258789
->>>>>>> Stashed changes
-=======
-        100.16300201416016
->>>>>>> Stashed changes
+        100.1719970703125
       ],
       "brent_close": [
         61.939998626708984,
@@ -9680,15 +9646,7 @@
         102.22000122070312,
         108.01000213623047,
         112.56999969482422,
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        107.06999969482422
-=======
-        108.19999694824219
->>>>>>> Stashed changes
-=======
-        108.16000366210938
->>>>>>> Stashed changes
+        108.20999908447266
       ]
     }
   },
