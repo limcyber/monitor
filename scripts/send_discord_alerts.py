@@ -137,6 +137,8 @@ def main() -> None:
     with latest_path.open("r", encoding="utf-8") as f:
         payload = json.load(f)
 
+    is_korean_payload = latest_path == LATEST_KR_PATH
+
     test_kind = os.environ.get("DISCORD_TEST_KIND", "").strip().lower()
     if test_kind:
         content = build_test_message(test_kind, payload)
@@ -145,7 +147,7 @@ def main() -> None:
         print(f"Sent Discord test message for kind={test_kind}.")
         return
 
-    if is_quiet_hours():
+    if is_quiet_hours() and not is_korean_payload:
         now_et = datetime.now(ET).strftime("%Y-%m-%d %H:%M ET")
         print(f"Discord send skipped during quiet hours: {now_et}")
         return
