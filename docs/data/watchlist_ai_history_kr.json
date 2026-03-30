@@ -1,20 +1,7 @@
 {
-<<<<<<< Updated upstream
-  "updated_at_et": "2026-03-29 20:11 ET",
-  "count": 6,
-=======
   "updated_at_et": "2026-03-29 20:46 ET",
-  "count": 1,
->>>>>>> Stashed changes
+  "count": 6,
   "items": [
-    {
-      "generated_at_et": "2026-03-29 20:46 ET",
-      "market_data_as_of": "2026-03-27 15:30 KST (Close)",
-      "status": "error",
-      "error": "한국 종목 AI 분석 실패: empty Gemini response",
-      "items": []
-<<<<<<< Updated upstream
-    },
     {
       "generated_at_et": "2026-03-29 02:47 ET",
       "market_data_as_of": "2026-03-27 15:30 KST (Close)",
@@ -524,8 +511,13 @@
           }
         }
       ]
-=======
->>>>>>> Stashed changes
+    },
+    {
+      "generated_at_et": "2026-03-29 20:46 ET",
+      "market_data_as_of": "2026-03-27 15:30 KST (Close)",
+      "status": "error",
+      "error": "한국 종목 AI 분석 실패: empty Gemini response",
+      "items": []
     }
   ]
 }

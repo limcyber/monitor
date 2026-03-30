@@ -1,5 +1,4 @@
 {
-<<<<<<< Updated upstream
   "generated_at_et": "2026-03-29 20:11 ET",
   "market_data_as_of": "2026-03-27 15:30 KST (Close)",
   "status": "ok",
@@ -167,11 +166,3 @@
     }
   ]
 }
-=======
-  "generated_at_et": "2026-03-29 20:46 ET",
-  "market_data_as_of": "2026-03-27 15:30 KST (Close)",
-  "status": "error",
-  "error": "한국 종목 AI 분석 실패: empty Gemini response",
-  "items": []
-}
->>>>>>> Stashed changes
