@@ -1,9 +1,5 @@
 {
-<<<<<<< Updated upstream
-  "generated_at_et": "2026-03-29 20:06 ET",
-=======
-  "generated_at_et": "2026-03-29 20:08 ET",
->>>>>>> Stashed changes
+  "generated_at_et": "2026-03-29 20:11 ET",
   "market_data_as_of": "2026-03-27 16:00 ET (Close)",
   "market": {
     "state": "레벨 1/6 - 방어 우선",
@@ -54,21 +50,12 @@
       "vix_change_pct": 13.155971693667867,
       "tnx_close": 4.440000057220459,
       "tnx_change_pct": 0.5434820753603464,
-<<<<<<< Updated upstream
-      "brent_close": 108.3499984741211,
-      "brent_change_pct": -3.7487796323563027,
+      "brent_close": 108.69000244140625,
+      "brent_change_pct": -3.446741817479426,
       "pct_above_20dma": 13.717693836978132,
       "pct_above_50dma": 19.681908548707753,
       "vix_percentile": 96.82539682539682,
-      "dxy_20d_zscore": 1.7207393496923629,
-=======
-      "brent_close": 108.43000030517578,
-      "brent_change_pct": -3.6777111138597496,
-      "pct_above_20dma": 13.717693836978132,
-      "pct_above_50dma": 19.681908548707753,
-      "vix_percentile": 96.82539682539682,
-      "dxy_20d_zscore": 1.7190526271354976,
->>>>>>> Stashed changes
+      "dxy_20d_zscore": 1.7106052948759336,
       "tnx_20d_zscore": 1.706566951735031,
       "spx_rsi14": 23.796355262188314,
       "ndx_rsi14": 24.82187799683939,
@@ -76,9 +63,7 @@
       "qqq_volume_ratio_20d": 1.1274715074172557
     },
     "change_tags": [
-      "점수 0",
-      "레벨 변화 없음",
-      "VIX 일간 +13.16%"
+      "첫 생성 데이터"
     ],
     "position_tags": [
       "총 노출 0~5%",
@@ -1226,7 +1211,7 @@
         ]
       },
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -2269,7 +2254,7 @@
         ]
       },
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -3312,7 +3297,7 @@
         ]
       },
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -4360,7 +4345,7 @@
         ]
       },
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -5401,7 +5386,7 @@
         ]
       },
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -6446,7 +6431,7 @@
         ]
       },
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -7491,7 +7476,7 @@
         ]
       },
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -8536,7 +8521,7 @@
         ]
       },
       "change_tags": [
-        "점수 0"
+        "첫 생성 데이터"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -9596,11 +9581,7 @@
         99.5999984741211,
         99.9000015258789,
         100.1500015258789,
-<<<<<<< Updated upstream
-        100.3219985961914
-=======
-        100.32099914550781
->>>>>>> Stashed changes
+        100.31600189208984
       ],
       "brent_close": [
         61.939998626708984,
@@ -9665,17 +9646,48 @@
         102.22000122070312,
         108.01000213623047,
         112.56999969482422,
-<<<<<<< Updated upstream
-        108.3499984741211
-=======
-        108.43000030517578
->>>>>>> Stashed changes
+        108.69000244140625
       ]
     }
   },
   "notifications": {
-    "count": 0,
-    "items": []
+    "count": 4,
+    "items": [
+      {
+        "id": "market-high-stress-2026-03-29",
+        "priority": "high",
+        "kind": "market_high_stress",
+        "scope": "market",
+        "title": "고스트레스 구간 진입",
+        "message": "VIX 부담이 큽니다. 새 매수보다 방어를 먼저 보는 편이 좋습니다."
+      },
+      {
+        "id": "market-both-below-200dma-2026-03-29",
+        "priority": "high",
+        "kind": "market_below_200dma",
+        "scope": "market",
+        "title": "핵심 지수 200일선 이탈",
+        "message": "S&P500과 Nasdaq이 모두 200일선 아래입니다. 반등 추격보다 대기가 낫습니다."
+      },
+      {
+        "id": "stock-dead-cross-KORU-2026-03-29",
+        "priority": "medium",
+        "kind": "stock_dead_cross",
+        "scope": "stock",
+        "title": "KORU 데드크로스",
+        "message": "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.7x (거래량 약함) / RSI 37 (하방 우세) 매수보다 대기나 비중 조절 쪽이 낫습니다.",
+        "ticker": "KORU"
+      },
+      {
+        "id": "stock-dead-cross-SOXX-2026-03-29",
+        "priority": "medium",
+        "kind": "stock_dead_cross",
+        "scope": "stock",
+        "title": "SOXX 데드크로스",
+        "message": "SOXX 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.8x (거래량 약함) / RSI 41 (하방 우세) 매수보다 대기나 비중 조절 쪽이 낫습니다.",
+        "ticker": "SOXX"
+      }
+    ]
   },
   "history": {
     "market": [
