@@ -1,4 +1,10 @@
 watchlist:
+  - ticker: 124500.KQ
+    name: 아이티센글로벌
+    market: KOSDAQ
+  - ticker: 466100.KQ
+    name: 클로봇
+    market: KOSDAQ
   - ticker: 005930.KS
     name: 삼성전자
     market: KOSPI
@@ -11,12 +17,6 @@ watchlist:
   - ticker: 005380.KS
     name: 현대차
     market: KOSPI
-  - ticker: 124500.KQ
-    name: 아이티센글로벌
-    market: KOSDAQ
-  - ticker: 466100.KQ
-    name: 클로봇
-    market: KOSDAQ
   - ticker: 012450.KS
     name: 한화에어로스페이스
     market: KOSPI
