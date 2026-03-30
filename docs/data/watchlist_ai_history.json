@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-03-30 10:54 ET",
-  "count": 8,
+  "updated_at_et": "2026-03-30 14:06 ET",
+  "count": 9,
   "items": [
     {
       "generated_at_et": "2026-03-29 15:33 ET",
@@ -955,6 +955,162 @@
             "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 38 (하방 우세)"
           ],
           "volume_ratio_20d": 0.009239927041531095,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-03-30 14:06 ET",
+      "market_data_as_of": "2026-03-30 13:55 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "NVIDIA는 AI 팩토리용 추론 운영체제 Dynamo 1.0을 출시하며 로봇 및 AI 에이전트 개발을 가속화하고 있습니다. 그러나 최근 밸류에이션이 S&P 500과 동일한 수준으로 하락하며 경쟁 심화 우려가 나타나고 있습니다.",
+          "close": 166.22999572753906,
+          "change_pct": -0.7700623877872848,
+          "score": 14,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0009103963391407889,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "Tesla는 2026년 1분기 인도량 발표를 앞두고 있으며, 시장은 전년 대비 소폭 증가하지만 전분기 대비 감소할 것으로 예상합니다. 경쟁 심화와 자율주행 기술에 대한 기대치 미달이 주가에 부담을 주고 있습니다.",
+          "close": 356.9200134277344,
+          "change_pct": -1.3569834802927838,
+          "score": 12,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0011735736977219525,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "Meta는 AI 투자 확대와 법적 리스크로 인해 3월 한 달간 시가총액이 3100억 달러 이상 하락했습니다. 법원 판결과 AI 관련 막대한 지출이 투자자들의 신뢰를 약화시키고 있습니다.",
+          "close": 537.4600830078125,
+          "change_pct": 2.2331493873032127,
+          "score": 9,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0018549429651744654,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 45,
+          "ai_state": "중립",
+          "ai_action": "관망",
+          "ai_note": "AMD는 미국 상무부 장관과 반도체 공급망 및 AI 기술에 대해 논의하며 정부 차원의 지원 가능성을 높이고 있습니다. 그러나 경쟁사 NVIDIA와의 AI 칩 시장 경쟁 심화 우려도 존재합니다.",
+          "close": 196.7364959716797,
+          "change_pct": -2.600875973371941,
+          "score": 36,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0021750853311725154,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 35,
+          "ai_state": "중립",
+          "ai_action": "관망",
+          "ai_note": "Tempus AI는 Merck와 AI 기반 정밀 의학 협력을 강화하며 사업 확장을 모색하고 있습니다. 그러나 최근 주가 하락과 내부자 매도 압력이 부담으로 작용하고 있습니다.",
+          "close": 42.209999084472656,
+          "change_pct": -0.9619893422976644,
+          "score": 8,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0017646852152915964,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "반도체 ETF인 SOXX는 최근 메모리 반도체 가격 상승 전망에도 불구하고, NVIDIA의 밸류에이션 조정과 경쟁 심화 우려가 전반적인 시장 심리에 영향을 미치고 있습니다.",
+          "close": 311.1199951171875,
+          "change_pct": -3.820951975194231,
+          "score": 12,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "SOXX 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 33 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0016939950508599942,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 30,
+          "ai_state": "중립",
+          "ai_action": "관망",
+          "ai_note": "Serve Robotics는 2,000대의 자율주행 로봇을 배치하며 사업을 확장하고 있으나, 최근 목표 주가 하향 조정이 있었습니다.",
+          "close": 7.795000076293945,
+          "change_pct": -6.310091800326267,
+          "score": 8,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0007305669199298657,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 55,
+          "ai_state": "강세",
+          "ai_action": "보유 유지",
+          "ai_note": "KORU Medical Systems는 2025년 4분기 및 연간 실적에서 기록적인 매출 성장과 긍정적인 영업 현금 흐름을 달성했습니다. 2026년에도 15~22%의 매출 성장을 전망하며 CEO 교체 후에도 안정적인 성장세를 이어갈 것으로 보입니다.",
+          "close": 242.42999267578125,
+          "change_pct": -11.53158641180968,
+          "score": 6,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 37 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.002954190504269223,
           "signals": {
             "short_cross": "none",
             "mid_cross": "bear"
