@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import math
 import os
+import time
 from dataclasses import dataclass
 from datetime import date, datetime, time, timedelta
 from io import StringIO
@@ -477,34 +478,77 @@ def parse_json_blob(text: str):
     return json.loads(cleaned[start : end + 1])
 
 
+def extract_gemini_text(response) -> str:
+    text = str(getattr(response, "text", None) or "").strip()
+    if text:
+        return text
+
+    candidates = getattr(response, "candidates", None) or []
+    fragments: list[str] = []
+    for candidate in candidates:
+        content = getattr(candidate, "content", None)
+        parts = getattr(content, "parts", None) or []
+        for part in parts:
+            part_text = str(getattr(part, "text", None) or "").strip()
+            if part_text:
+                fragments.append(part_text)
+    return "\n".join(fragments).strip()
+
+
 def gemini_generate_text(prompt: str, api_key: str, model_name: str) -> str:
     try:
         from google import genai
         from google.genai import types
 
         client = genai.Client(api_key=api_key)
-        response = client.models.generate_content(
-            model=model_name,
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                temperature=0.2,
-                tools=[types.Tool(google_search=types.GoogleSearch())],
-            ),
-        )
-        text = (getattr(response, "text", None) or "").strip()
-        if not text:
-            raise ValueError("empty Gemini response")
-        return text
+
+        def generate_once(use_search: bool) -> str:
+            config_kwargs = {"temperature": 0.2}
+            if use_search:
+                config_kwargs["tools"] = [types.Tool(google_search=types.GoogleSearch())]
+            response = client.models.generate_content(
+                model=model_name,
+                contents=prompt,
+                config=types.GenerateContentConfig(**config_kwargs),
+            )
+            return extract_gemini_text(response)
+
+        attempts: list[tuple[bool, int]] = [(True, 0), (True, 1), (False, 0)]
+        last_error: Exception | None = None
+        for use_search, retry_idx in attempts:
+            try:
+                text = generate_once(use_search)
+                if text:
+                    return text
+                last_error = ValueError(f"empty Gemini response (search={'on' if use_search else 'off'})")
+            except Exception as exc:
+                last_error = exc
+            if retry_idx == 0:
+                time.sleep(1.0)
+        if last_error is not None:
+            raise last_error
+        raise ValueError("empty Gemini response")
     except ModuleNotFoundError:
         import google.generativeai as genai
 
         genai.configure(api_key=api_key)
         model = genai.GenerativeModel(model_name)
-        response = model.generate_content(prompt)
-        text = (getattr(response, "text", None) or "").strip()
-        if not text:
-            raise ValueError("empty Gemini response")
-        return text
+
+        last_error: Exception | None = None
+        for retry_idx in range(2):
+            try:
+                response = model.generate_content(prompt)
+                text = extract_gemini_text(response)
+                if text:
+                    return text
+                last_error = ValueError("empty Gemini response")
+            except Exception as exc:
+                last_error = exc
+            if retry_idx == 0:
+                time.sleep(1.0)
+        if last_error is not None:
+            raise last_error
+        raise ValueError("empty Gemini response")
 
 
 def generate_market_ai_analysis(output: dict, previous_ai_output: dict | None = None) -> dict:
