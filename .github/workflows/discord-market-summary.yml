@@ -74,6 +74,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git restore --source=HEAD --worktree --staged docs/data/latest.json docs/data/history.json
           git pull --rebase --autostash origin main
           if [ -f docs/data/discord_send_log_us.log ]; then git add docs/data/discord_send_log_us.log; fi
           git diff --cached --quiet || git commit -m "chore: archive discord market summary"
