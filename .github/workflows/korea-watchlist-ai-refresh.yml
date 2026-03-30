@@ -38,17 +38,11 @@ jobs:
           fi
           DAY="$(TZ=Asia/Seoul date +%u)"
           HOUR="$(TZ=Asia/Seoul date +%H)"
-          MINUTE="$(TZ=Asia/Seoul date +%M)"
           KST_NOW="$(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M KST')"
           echo "KST now: ${KST_NOW}"
           if [ "$DAY" -gt 5 ]; then
             echo "should_run=false" >> "$GITHUB_OUTPUT"
             echo "Skipping: weekend."
-            exit 0
-          fi
-          if [ "$MINUTE" != "00" ]; then
-            echo "should_run=false" >> "$GITHUB_OUTPUT"
-            echo "Skipping: not on the hour."
             exit 0
           fi
           if [ "$HOUR" -lt 8 ] || [ "$HOUR" -gt 16 ]; then
