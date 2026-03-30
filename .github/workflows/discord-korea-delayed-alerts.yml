@@ -7,7 +7,7 @@ on:
     - cron: "5 12 * * 1-5"
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: "discord-korea-delayed-alerts"
@@ -42,3 +42,12 @@ jobs:
           DISCORD_MARKET_SUMMARY: "true"
           DISCORD_SUMMARY_TITLE: "한국 시장 오후 요약"
         run: python scripts/send_discord_alerts.py
+
+      - name: Commit Discord log
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase --autostash origin main
+          if [ -f docs/data/discord_send_log_kr.log ]; then git add docs/data/discord_send_log_kr.log; fi
+          git diff --cached --quiet || git commit -m "chore: archive discord korea delayed alerts"
+          git push

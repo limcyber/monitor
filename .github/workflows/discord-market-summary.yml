@@ -9,7 +9,7 @@ on:
     - cron: "30 21 * * 1-5"
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: "discord-market-summary"
@@ -68,3 +68,13 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           DISCORD_MARKET_SUMMARY: "true"
         run: python scripts/send_discord_alerts.py
+
+      - name: Commit Discord log
+        if: github.event_name != 'schedule' || steps.summary_window.outputs.should_run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase --autostash origin main
+          if [ -f docs/data/discord_send_log_us.log ]; then git add docs/data/discord_send_log_us.log; fi
+          git diff --cached --quiet || git commit -m "chore: archive discord market summary"
+          git push

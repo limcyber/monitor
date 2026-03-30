@@ -73,6 +73,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git pull --rebase --autostash origin main
           git add docs/data/latest_ai.json docs/data/latest_watchlist_ai.json docs/data/ai_history.json docs/data/watchlist_ai_history.json
+          if [ -f docs/data/discord_send_log_us.log ]; then git add docs/data/discord_send_log_us.log; fi
           if git diff --cached --quiet; then
             echo "AI refresh result: no file changes."
           else

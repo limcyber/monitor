@@ -12,7 +12,10 @@ BASE_DIR = Path(__file__).resolve().parents[1]
 LATEST_PATH = BASE_DIR / "docs" / "data" / "latest.json"
 LATEST_KR_PATH = BASE_DIR / "docs" / "data" / "latest_kr.json"
 LATEST_AI_PATH = BASE_DIR / "docs" / "data" / "latest_ai.json"
+DISCORD_LOG_US_PATH = BASE_DIR / "docs" / "data" / "discord_send_log_us.log"
+DISCORD_LOG_KR_PATH = BASE_DIR / "docs" / "data" / "discord_send_log_kr.log"
 ET = ZoneInfo("America/New_York")
+DISCORD_WRAPPER = "#################################"
 
 
 def priority_label(priority: str) -> str:
@@ -70,6 +73,40 @@ def alert_heading() -> str:
 
 def ai_alert_heading() -> str:
     return os.environ.get("DISCORD_AI_ALERT_TITLE", "AI 시장 분석 알림").strip() or "AI 시장 분석 알림"
+
+
+def log_path_for_payload(is_korean_payload: bool) -> Path:
+    return DISCORD_LOG_KR_PATH if is_korean_payload else DISCORD_LOG_US_PATH
+
+
+def wrap_discord_message(content: str) -> str:
+    body = content.strip()
+    max_body_length = 1800 - (len(DISCORD_WRAPPER) * 2) - 2
+    if len(body) > max_body_length:
+        body = f"{body[: max_body_length - 3].rstrip()}..."
+    return "\n".join([DISCORD_WRAPPER, body, DISCORD_WRAPPER])
+
+
+def append_discord_log(path: Path, kind: str, is_korean_payload: bool, content: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    now_et = datetime.now(ET).strftime("%Y-%m-%d %H:%M ET")
+    source = "KR" if is_korean_payload else "US"
+    entry = "\n".join(
+        [
+            f"[{now_et}] source={source} kind={kind}",
+            content.rstrip(),
+            "",
+        ]
+    )
+    with path.open("a", encoding="utf-8") as f:
+        f.write(entry)
+
+
+def send_wrapped_message(webhook_url: str, log_path: Path, kind: str, is_korean_payload: bool, content: str) -> None:
+    wrapped = wrap_discord_message(content)
+    response = requests.post(webhook_url, json={"content": wrapped}, timeout=15)
+    response.raise_for_status()
+    append_discord_log(log_path, kind, is_korean_payload, wrapped)
 
 
 def build_test_message(kind: str, payload: dict) -> str:
@@ -142,8 +179,7 @@ def main() -> None:
     test_kind = os.environ.get("DISCORD_TEST_KIND", "").strip().lower()
     if test_kind:
         content = build_test_message(test_kind, payload)
-        response = requests.post(webhook_url, json={"content": content}, timeout=15)
-        response.raise_for_status()
+        send_wrapped_message(webhook_url, log_path_for_payload(is_korean_payload), f"test:{test_kind}", is_korean_payload, content)
         print(f"Sent Discord test message for kind={test_kind}.")
         return
 
@@ -171,15 +207,13 @@ def main() -> None:
         if len(content) > 1800:
             content = f"{content[:1790]}\n..."
 
-        response = requests.post(webhook_url, json={"content": content}, timeout=15)
-        response.raise_for_status()
+        send_wrapped_message(webhook_url, log_path_for_payload(is_korean_payload), "ai_alerts", is_korean_payload, content)
         print(f"Sent Discord AI message with {len(notifications)} AI notifications.")
         return
 
     if env_flag("DISCORD_MARKET_SUMMARY", default=False):
         content = build_market_summary(payload).replace("시장 상태 요약", summary_heading(), 1)
-        response = requests.post(webhook_url, json={"content": content}, timeout=15)
-        response.raise_for_status()
+        send_wrapped_message(webhook_url, log_path_for_payload(is_korean_payload), "market_summary", is_korean_payload, content)
         print("Sent Discord market summary.")
         return
 
@@ -199,11 +233,7 @@ def main() -> None:
         lines.append("")
 
     content = "\n".join(lines).strip()
-    if len(content) > 1800:
-        content = f"{content[:1790]}\n..."
-
-    response = requests.post(webhook_url, json={"content": content}, timeout=15)
-    response.raise_for_status()
+    send_wrapped_message(webhook_url, log_path_for_payload(is_korean_payload), "important_notifications", is_korean_payload, content)
     print(f"Sent Discord message with {len(notifications)} important notifications.")
 
 
