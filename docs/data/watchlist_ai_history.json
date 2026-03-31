@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-03-31 14:06 ET",
-  "count": 16,
+  "updated_at_et": "2026-03-31 16:08 ET",
+  "count": 17,
   "items": [
     {
       "generated_at_et": "2026-03-29 15:33 ET",
@@ -1762,6 +1762,13 @@
           }
         }
       ]
+    },
+    {
+      "generated_at_et": "2026-03-31 16:08 ET",
+      "market_data_as_of": "2026-03-31 15:35 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
     }
   ]
 }
