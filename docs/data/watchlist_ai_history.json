@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-03-30 18:06 ET",
-  "count": 11,
+  "updated_at_et": "2026-03-30 20:02 ET",
+  "count": 12,
   "items": [
     {
       "generated_at_et": "2026-03-29 15:33 ET",
@@ -1131,6 +1131,162 @@
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-03-30 20:02 ET",
+      "market_data_as_of": "2026-03-30 16:00 ET (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "기관 매도세와 밸류에이션 부담으로 하락 중이나, Mistral AI의 데이터센터 투자 확대 소식은 긍정적입니다. 단기적으로는 추가 하락 가능성을 염두에 두고 관망하는 것이 좋습니다.",
+          "close": 165.1699981689453,
+          "change_pct": -1.4028211816980884,
+          "score": 15,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.9750144314954815,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "델라웨어 법원의 판결 번복 및 사이버캡 생산 관련 리더십 이탈 소식이 주가에 부담을 주고 있습니다. 단기적인 불확실성이 해소될 때까지 관망하는 것이 좋겠습니다.",
+          "close": 355.2799987792969,
+          "change_pct": -1.8102390725044493,
+          "score": 13,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.0487757733910674,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "뉴멕시코주 법원의 배상 판결과 AI 투자 관련 우려로 시장에서 큰 폭의 하락을 경험했습니다. 항소 가능성이 있으나, 법적 리스크가 완전히 해소되기 전까지는 신중한 접근이 필요합니다.",
+          "close": 536.3800048828125,
+          "change_pct": 2.027701965635864,
+          "score": 12,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.403038345771589,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 40,
+          "ai_state": "중립",
+          "ai_action": "관망",
+          "ai_note": "삼성과의 차세대 HBM4 메모리 공급 협력 및 AI 데이터센터 투자 확대 소식은 긍정적이나, 경영진의 대규모 주식 매도와 시장 전반의 조정 국면이 부담으로 작용하고 있습니다. 단기 변동성을 고려하여 관망하는 것이 좋겠습니다.",
+          "close": 196.0399932861328,
+          "change_pct": -2.945696343986992,
+          "score": 36,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.1789895516045794,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 35,
+          "ai_state": "중립",
+          "ai_action": "관망",
+          "ai_note": "머크와의 AI 기반 정밀 의학 협력은 긍정적이나, 최근 애널리스트들의 목표 주가 하향 조정과 경영진의 주식 매도 물량이 부담으로 작용하고 있습니다. 추가적인 하락 가능성을 염두에 두고 관망하는 것이 좋겠습니다.",
+          "close": 42.369998931884766,
+          "change_pct": -0.5865790855592246,
+          "score": 9,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.9587512894686759,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 15,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "반도체 섹터 전반의 조정과 지정학적 리스크로 인해 하락세를 보이고 있습니다. 단기적으로는 시장의 방향성이 명확해질 때까지 관망하는 것이 좋겠습니다.",
+          "close": 309.7900085449219,
+          "change_pct": -4.232101513680508,
+          "score": 13,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "SOXX 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 1.4x (거래량 확인) / RSI 33 (하방 우세)"
+          ],
+          "volume_ratio_20d": 1.4454531859336923,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "로봇 배송 사업 확장 소식은 긍정적이나, 전반적인 시장 약세와 함께 주가 하락세를 보이고 있습니다. 현재로서는 뚜렷한 상승 모멘텀이 부족하므로 관망하는 것이 좋겠습니다.",
+          "close": 7.730000019073486,
+          "change_pct": -7.091342516728272,
+          "score": 9,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.0485581339889476,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 10,
+          "ai_state": "매우 약세",
+          "ai_action": "매도",
+          "ai_note": "최근 중기 데드크로스가 발생했으며, 시장 전반의 약세와 맞물려 큰 폭의 하락세를 보이고 있습니다. 추가 하락 가능성이 높아 매도 후 관망하는 것을 추천합니다.",
+          "close": 242.69500732421875,
+          "change_pct": -11.434876325462184,
+          "score": 6,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.8x (거래량 약함) / RSI 37 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.8221133763823685,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        }
+      ]
     }
   ]
 }
