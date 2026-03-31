@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-03-31 10:49 ET",
-  "count": 15,
+  "updated_at_et": "2026-03-31 14:06 ET",
+  "count": 16,
   "items": [
     {
       "generated_at_et": "2026-03-29 15:33 ET",
@@ -1600,6 +1600,162 @@
             "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.8x (거래량 약함) / RSI 37 (하방 우세)"
           ],
           "volume_ratio_20d": 0.8221133763823685,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-03-31 14:06 ET",
+      "market_data_as_of": "2026-03-31 11:55 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 25,
+          "ai_state": "관망",
+          "ai_action": "보유 관망",
+          "ai_note": "엔비디아는 최근 3.1% 상승했으나 시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 있습니다. 현재는 보유하며 시장 흐름을 지켜보는 것이 좋겠습니다.",
+          "close": 170.28700256347656,
+          "change_pct": 3.0980229165452178,
+          "score": 19,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 20,
+          "ai_state": "관망",
+          "ai_action": "보유 관망",
+          "ai_note": "테슬라는 2.16% 상승했으나 시장 대비 약한 흐름이며 20일선과 50일선 아래에 위치합니다. 현재는 보유하며 추가적인 방향성을 확인하는 것이 좋겠습니다.",
+          "close": 362.9601135253906,
+          "change_pct": 2.1617076031529514,
+          "score": 14,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 18,
+          "ai_state": "관망",
+          "ai_action": "보유 관망",
+          "ai_note": "메타는 3.97% 상승했으나 시장 대비 약한 모습을 보이며 20일선과 50일선 아래에 있습니다. 현재는 보유하며 시장 상황을 주시하는 것이 좋겠습니다.",
+          "close": 557.6500244140625,
+          "change_pct": 3.9654758450395677,
+          "score": 12,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 30,
+          "ai_state": "관망",
+          "ai_action": "보유 관망",
+          "ai_note": "AMD는 1.05% 상승했으나 20일선과 50일선 아래에 있습니다. 시장 대비 상대적으로 강한 흐름을 보이고 있으나, 20일선 돌파 여부를 확인하며 관망하는 것이 좋겠습니다.",
+          "close": 198.10009765625,
+          "change_pct": 1.0508592331516464,
+          "score": 34,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 15,
+          "ai_state": "관망",
+          "ai_action": "보유 관망",
+          "ai_note": "TEM은 2.67% 상승했으나 시장 대비 약한 흐름이며 20일선과 50일선 아래에 있습니다. 현재는 보유하며 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 43.5,
+          "change_pct": 2.6669839428881126,
+          "score": 11,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 22,
+          "ai_state": "관망",
+          "ai_action": "보유 관망",
+          "ai_note": "SOXX는 2.47% 상승했으나 중기 데드크로스가 발생했고 시장 대비 약한 흐름입니다. 20일선 돌파 여부를 확인하며 신중하게 접근하는 것이 좋겠습니다.",
+          "close": 317.42999267578125,
+          "change_pct": 2.4661815811117593,
+          "score": 17,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "SOXX 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 36 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 12,
+          "ai_state": "관망",
+          "ai_action": "보유 관망",
+          "ai_note": "SERV는 4.92% 상승했으나 시장 대비 약한 흐름이며 20일선과 50일선 아래에 있습니다. 현재는 보유하며 시장 상황을 지켜보는 것이 좋겠습니다.",
+          "close": 8.109999656677246,
+          "change_pct": 4.915907330739011,
+          "score": 8,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 10,
+          "ai_state": "관망",
+          "ai_action": "보유 관망",
+          "ai_note": "KORU는 소폭 하락했으며 중기 데드크로스가 발생했고 시장 대비 약한 흐름입니다. 현재는 보유하며 추세 전환 신호를 기다리는 것이 좋겠습니다.",
+          "close": 242.61000061035156,
+          "change_pct": -0.22618976948285408,
+          "score": 6,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 34 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0,
           "signals": {
             "short_cross": "none",
             "mid_cross": "bear"
