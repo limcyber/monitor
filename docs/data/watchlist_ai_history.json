@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-01 06:16 ET",
-  "count": 21,
+  "updated_at_et": "2026-04-01 10:52 ET",
+  "count": 22,
   "items": [
     {
       "generated_at_et": "2026-03-29 15:33 ET",
@@ -2378,6 +2378,162 @@
           "ai_state": "매우 약세",
           "ai_action": "전량 매도",
           "ai_note": "CEO 교체와 함께 실적은 성장세를 보이고 있으나, 20일선이 50일선 아래로 내려가는 데드크로스가 발생했습니다. RSI가 38로 하락 추세를 나타내고 있어 전량 매도를 권고합니다.",
+          "close": 275.8800048828125,
+          "change_pct": 13.4561608520825,
+          "score": 6,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 38 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.004640470497632866,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-04-01 10:52 ET",
+      "market_data_as_of": "2026-03-31 15:35 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "최근 시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 위치. 보유 중이라면 170달러 지지 여부를 확인하며 신중하게 대응하는 것이 좋음.",
+          "close": 174.33999633789062,
+          "change_pct": 5.551854616820728,
+          "score": 33,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.004909282595663078,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "시장 대비 약한 모습을 보이며 20일선 및 50일선 하회. 360달러 지지선을 이탈할 경우 추가 하락 가능성이 있어 주의 필요.",
+          "close": 372.3999938964844,
+          "change_pct": 4.818733161452915,
+          "score": 16,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0036489710380450545,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "시장 대비 약세이며 20일선과 50일선 아래에 위치. 560달러 지지선이 무너지면 매도 고려.",
+          "close": 570.4899291992188,
+          "change_pct": 6.359283344996891,
+          "score": 12,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.006445049289300426,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 40,
+          "ai_state": "중립",
+          "ai_action": "관망",
+          "ai_note": "시장 대비 상대적으로 선방하고 있으나 50일선 아래에 위치하며 거래량이 아직 약함. 205달러 돌파 시 긍정적 흐름 기대.",
+          "close": 203.5500030517578,
+          "change_pct": 3.830855959408064,
+          "score": 36,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.004218732625534916,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 15,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "시장 대비 약한 흐름과 20일선, 50일선 하회. 44달러 지지선 이탈 시 추가 하락 가능성 있음.",
+          "close": 45.33100128173828,
+          "change_pct": 6.988440935799201,
+          "score": 11,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0024925552956860325,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 35,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "최근 중기 데드크로스 발생 및 시장 대비 약세. 320달러 지지선이 중요하며, 이탈 시 비중 축소 고려.",
+          "close": 328.4700012207031,
+          "change_pct": 6.0298886860556955,
+          "score": 28,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "SOXX 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 43 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.006809017456305194,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 10,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "시장 대비 약세이며 20일선과 50일선 아래에 위치. 8달러 지지선이 무너지면 추가 하락 가능성 있음.",
+          "close": 8.354999542236328,
+          "change_pct": 8.08537544140593,
+          "score": 10,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.008430794188798453,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 15,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "최근 중기 데드크로스 발생 및 시장 대비 약세. 270달러 지지선 이탈 시 매도 고려.",
           "close": 275.8800048828125,
           "change_pct": 13.4561608520825,
           "score": 6,
