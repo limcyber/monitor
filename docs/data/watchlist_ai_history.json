@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-05 11:53 ET",
-  "count": 62,
+  "updated_at_et": "2026-04-05 13:19 ET",
+  "count": 63,
   "items": [
     {
       "generated_at_et": "2026-03-29 15:33 ET",
@@ -6665,6 +6665,160 @@
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-04-05 13:19 ET",
+      "market_data_as_of": "2026-04-02 16:00 ET (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 70,
+          "ai_state": "관망",
+          "ai_action": "보유 유지",
+          "ai_note": "NVIDIA는 4분기 매출 681.3억 달러를 기록하며 AI 인프라 지출 가속화에 힘입어 견조한 성장세를 보이고 있습니다. 단기적으로는 52주 최고가 대비 하락했지만, 장기적인 AI 성장 잠재력은 여전히 높습니다.",
+          "close": 177.4,
+          "change_pct": 0.9388335704125117,
+          "score": 35,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 20,
+          "ai_state": "회피",
+          "ai_action": "매도 고려",
+          "ai_note": "Tesla의 전기차 판매량이 2025년 9% 감소했으며, 중고차 시장의 EV 물량 증가가 수익성에 부담을 줄 수 있습니다. 현재 추세상 추가 하락 가능성이 있어 매도 후 관망하는 것이 좋습니다.",
+          "close": 360.5587,
+          "change_pct": -5.429709184121068,
+          "score": 14,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 25,
+          "ai_state": "회피",
+          "ai_action": "보유 유지",
+          "ai_note": "Meta는 소셜 미디어 중독 관련 소송에서 패소하며 3억 7,500만 달러의 손해배상 판결을 받았습니다. AI 관련 기술 개발은 지속하고 있으나, 법적 리스크와 시장의 부정적 반응을 고려하여 당분간 관망이 필요합니다.",
+          "close": 574.45,
+          "change_pct": -0.8252301555388586,
+          "score": 16,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 65,
+          "ai_state": "관망",
+          "ai_action": "보유 유지",
+          "ai_note": "AMD는 AI 칩 시장에서 경쟁력을 강화하고 있으며, 특히 데이터센터 CPU 및 GPU 수요 증가가 예상됩니다. 2026년 하반기 출시 예정인 Instinct MI450 칩이 NVIDIA와의 경쟁에서 중요한 역할을 할 것으로 보입니다.",
+          "close": 217.68,
+          "change_pct": 3.5535859604917786,
+          "score": 40,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 45,
+          "ai_state": "관망",
+          "ai_action": "보유 유지",
+          "ai_note": "Tempus는 AI 기반 정밀 의학 분야에서 꾸준한 성과를 보이고 있으며, Medtronic과의 협력을 통해 심장 질환 치료 개선에 기여했습니다. 다만, 현재 주가 흐름은 횡보세를 보이고 있어 추가적인 모멘텀을 기다리는 것이 좋습니다.",
+          "close": 47.39,
+          "change_pct": 0.7654714651228245,
+          "score": 16,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 50,
+          "ai_state": "관망",
+          "ai_action": "보유 유지",
+          "ai_note": "반도체 ETF인 SOXX는 Micron Technology의 호실적에도 불구하고 시장 전반의 변동성으로 인해 혼조세를 보이고 있습니다. AI 관련 수요는 견조하나, 지정학적 리스크와 거시 경제 불확실성을 고려하여 당분간 관망이 필요합니다.",
+          "close": 339.85,
+          "change_pct": 0.38695321734900645,
+          "score": 36,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 30,
+          "ai_state": "회피",
+          "ai_action": "매도 고려",
+          "ai_note": "Serve Robotics는 2025년 4분기 매출이 0.9백만 달러로 전년 대비 400% 증가했으나, 로봇 배송 시장 경쟁 심화와 수익성 확보에 대한 불확실성이 존재합니다. 현재 주가 하락 추세를 고려할 때 매도 후 시장 상황을 지켜보는 것이 현명합니다.",
+          "close": 8.45,
+          "change_pct": 0.4756260798292278,
+          "score": 11,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 15,
+          "ai_state": "회피",
+          "ai_action": "매도",
+          "ai_note": "KORU Medical Systems는 2025년 4분기 및 연간 매출 성장을 발표했으나, CEO 교체와 함께 부채 관련 조건 변경이 있었습니다. 현재 주가 흐름이 약세를 보이고 있어 매도하는 것이 좋습니다.",
+          "close": 280.04,
+          "change_pct": -8.47169309026594,
+          "score": 6,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 46 (중립)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        }
+      ]
     }
   ]
 }
