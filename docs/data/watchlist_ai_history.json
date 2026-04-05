@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-05 17:54 ET",
-  "count": 66,
+  "updated_at_et": "2026-04-05 19:04 ET",
+  "count": 67,
   "items": [
     {
       "generated_at_et": "2026-03-29 15:33 ET",
@@ -7119,6 +7119,160 @@
           "ai_state": "중립",
           "ai_action": "보유 유지",
           "ai_note": "KORU Medical Systems는 매출 성장을 기록하고 있으며, 신규 의약품 협력과 국제 시장 확대를 통해 성장 동력을 확보하고 있습니다. 다만, CEO 교체와 신용 시설 조정은 단기적인 불확실성을 줄 수 있습니다.",
+          "close": 280.04,
+          "change_pct": -8.47169309026594,
+          "score": 6,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 46 (중립)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-04-05 19:04 ET",
+      "market_data_as_of": "2026-04-02 16:00 ET (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "최근 AI 칩 경쟁 심화 소식과 함께 20일선 아래에 위치하며 약세를 보입니다. 보유 중이라면 20일선 돌파 시까지 관망하는 것이 좋습니다.",
+          "close": 177.4,
+          "change_pct": 0.9388335704125117,
+          "score": 35,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 15,
+          "ai_state": "매우 약세",
+          "ai_action": "매도 고려",
+          "ai_note": "시장 대비 약한 흐름과 20일선, 50일선 하향 돌파로 약세를 면치 못하고 있습니다. 추가 하락 가능성에 대비해 비중 축소 또는 매도를 고려할 시점입니다.",
+          "close": 360.5587,
+          "change_pct": -5.429709184121068,
+          "score": 14,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 있습니다. AI 관련 긍정적 뉴스에도 불구하고 기술적 지표가 약하므로 관망하며 추세를 지켜보는 것이 좋습니다.",
+          "close": 574.45,
+          "change_pct": -0.8252301555388586,
+          "score": 16,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 45,
+          "ai_state": "중립 약세",
+          "ai_action": "관망",
+          "ai_note": "시장 대비 강한 흐름과 50일선 위에 있지만, 거래량이 약한 점은 부담입니다. RSI는 60선을 상회하나 추가 상승을 위해서는 거래량 동반이 필요해 보입니다.",
+          "close": 217.68,
+          "change_pct": 3.5535859604917786,
+          "score": 40,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 15,
+          "ai_state": "매우 약세",
+          "ai_action": "매도 고려",
+          "ai_note": "시장 대비 약한 흐름과 20일선, 50일선 하향 돌파로 약세를 보입니다. 보유 중이라면 손절 라인을 설정하고 대응하는 것이 좋습니다.",
+          "close": 47.39,
+          "change_pct": 0.7654714651228245,
+          "score": 16,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 35,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "시장 대비 강한 흐름에도 불구하고 50일선 아래에 위치하며 거래량이 약한 점이 아쉽습니다. 반도체 섹터 전반의 흐름을 보며 신중하게 접근해야 합니다.",
+          "close": 339.85,
+          "change_pct": 0.38695321734900645,
+          "score": 36,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 10,
+          "ai_state": "매우 약세",
+          "ai_action": "매도 고려",
+          "ai_note": "시장 대비 약한 흐름과 20일선, 50일선 하향 돌파로 최악의 약세를 보이고 있습니다. 보유 중이라면 즉시 매도하여 손실을 최소화하는 것이 현명합니다.",
+          "close": 8.45,
+          "change_pct": 0.4756260798292278,
+          "score": 11,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 5,
+          "ai_state": "매우 약세",
+          "ai_action": "즉시 매도",
+          "ai_note": "최근 중기 데드크로스 발생과 시장 대비 약한 흐름, 20일선 하향 돌파로 매우 부정적인 신호가 나타나고 있습니다. 보유 중이라면 즉시 전량 매도해야 합니다.",
           "close": 280.04,
           "change_pct": -8.47169309026594,
           "score": 6,
