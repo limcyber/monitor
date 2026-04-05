@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-05 13:19 ET",
-  "count": 63,
+  "updated_at_et": "2026-04-05 15:25 ET",
+  "count": 64,
   "items": [
     {
       "generated_at_et": "2026-03-29 15:33 ET",
@@ -6804,6 +6804,160 @@
           "ai_state": "회피",
           "ai_action": "매도",
           "ai_note": "KORU Medical Systems는 2025년 4분기 및 연간 매출 성장을 발표했으나, CEO 교체와 함께 부채 관련 조건 변경이 있었습니다. 현재 주가 흐름이 약세를 보이고 있어 매도하는 것이 좋습니다.",
+          "close": 280.04,
+          "change_pct": -8.47169309026594,
+          "score": 6,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 46 (중립)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-04-05 15:25 ET",
+      "market_data_as_of": "2026-04-02 16:00 ET (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 75,
+          "ai_state": "강세",
+          "ai_action": "보유 유지",
+          "ai_note": "Marvell과의 파트너십 및 20억 달러 투자 발표로 AI 생태계 확장에 대한 긍정적 전망이 이어지고 있습니다. 로봇 공학 및 자율 주행 기술 협력 강화 소식도 긍정적입니다. 현재 추세는 강세이며, 보유 중이라면 추세를 따라가며 홀딩하는 것이 좋습니다.",
+          "close": 177.4,
+          "change_pct": 0.9388335704125117,
+          "score": 35,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "최근 사이버트럭 관련 사고 소식과 인도량 감소 추세가 부담입니다. 엘론 머스크의 보상 패키지 관련 이슈도 주가에 영향을 미치고 있습니다. 현재 추세는 약세이므로 신규 진입보다는 관망하며 추이를 지켜보는 것이 좋습니다.",
+          "close": 360.5587,
+          "change_pct": -5.429709184121068,
+          "score": 14,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "아동 착취 관련 소송에서 패소하며 3억 7,500만 달러의 민사 손해 배상 판결을 받은 소식이 부담입니다. AI 안경 출시 및 데이터 센터 실리콘 개발 등 신기술 투자는 긍정적이나, 규제 및 소송 리스크를 고려하여 관망하는 것이 좋습니다.",
+          "close": 574.45,
+          "change_pct": -0.8252301555388586,
+          "score": 16,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 65,
+          "ai_state": "중립",
+          "ai_action": "보유 유지",
+          "ai_note": "데이터센터 사업부의 성장 전망이 다소 둔화될 수 있다는 분석이 있으나, AI 칩 및 GPU 공급 계약 확대 등 긍정적인 소식도 이어지고 있습니다. 현재 추세는 중립적이므로 보유 중이라면 추세를 확인하며 유지하는 것이 좋습니다.",
+          "close": 217.68,
+          "change_pct": 3.5535859604917786,
+          "score": 40,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 55,
+          "ai_state": "중립",
+          "ai_action": "보유 유지",
+          "ai_note": "AI 기반 의료 솔루션 개발 및 임상 시험 결과 발표 등 긍정적인 소식이 있습니다. 다만, 최근 CEO의 주식 매도 소식이 있어 단기적인 변동성에 유의해야 합니다. 현재 추세는 중립적이므로 보유 중이라면 추세를 확인하며 유지하는 것이 좋습니다.",
+          "close": 47.39,
+          "change_pct": 0.7654714651228245,
+          "score": 16,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 45,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "반도체 섹터 전반의 변동성이 큰 가운데, 지정학적 리스크와 거시 경제 불확실성이 주가에 영향을 미치고 있습니다. AI 관련 수요는 견조하나, 단기적으로는 관망하며 시장 흐름을 지켜보는 것이 좋습니다.",
+          "close": 339.85,
+          "change_pct": 0.38695321734900645,
+          "score": 36,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 35,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "로봇 배달 서비스 확장 및 파트너십 강화 소식이 있으나, 수익성 개선에 대한 의문과 경쟁 심화 우려가 존재합니다. 최근 주가 하락 및 목표 주가 하향 조정 소식이 있어 신규 진입보다는 관망하는 것이 좋습니다.",
+          "close": 8.45,
+          "change_pct": 0.4756260798292278,
+          "score": 11,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 10,
+          "ai_state": "매우 약세",
+          "ai_action": "매도 고려",
+          "ai_note": "최근 중기 데드크로스가 발생했으며, 시장 대비 약한 흐름을 보이고 있습니다. 거래량도 매우 낮은 상태입니다. 보유 중이라면 손실을 최소화하기 위해 매도를 고려하는 것이 좋습니다.",
           "close": 280.04,
           "change_pct": -8.47169309026594,
           "score": 6,
