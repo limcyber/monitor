@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-07 01:59 ET",
-  "count": 72,
+  "updated_at_et": "2026-04-07 05:52 ET",
+  "count": 73,
   "items": [
     {
       "generated_at_et": "2026-03-29 15:33 ET",
@@ -7896,6 +7896,160 @@
           "ai_state": "회피",
           "ai_action": "비중 축소",
           "ai_note": "KORU는 최근 중기 데드크로스가 발생했으며, 시장 대비 약한 흐름을 보이고 있습니다. RSI도 40선으로 하락 추세가 우세하므로, 매수보다는 비중 축소를 권고합니다.",
+          "close": 300.32000732421875,
+          "change_pct": 6.417212861871113,
+          "score": 9,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 41 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0010777948978375595,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-04-07 05:52 ET",
+      "market_data_as_of": "2026-04-06 15:43 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 45,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "NVIDIA는 Marvell과의 파트너십을 통해 AI 생태계를 확장하고 있으며, 현대차그룹과의 차세대 자율주행 기술 협력을 강화하고 있습니다. 현재 20일선 아래에 있어 추가 하락 가능성을 염두에 두고 관망하는 것이 좋겠습니다.",
+          "close": 177.18499755859375,
+          "change_pct": -0.11556560784714565,
+          "score": 24,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.003090341046004197,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 20,
+          "ai_state": "회피",
+          "ai_action": "비중 축소",
+          "ai_note": "테슬라는 2025년 차량 판매량이 감소했으며, 2026년에도 약세를 보이고 있습니다. 현재 20일선과 50일선 아래에 있어 당분간 관망하며 시장 상황을 지켜보는 것이 좋겠습니다.",
+          "close": 351.9549865722656,
+          "change_pct": -2.394689218592072,
+          "score": 16,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.009318563561410214,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 30,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "메타는 새로운 오픈소스 AI 모델 출시를 준비 중이며, AI 분야에 대한 투자를 확대하고 있습니다. 최근 법원 판결로 인한 불확실성이 있으나, AI 기술 발전 가능성을 고려하여 보유 관점에서 접근하는 것이 좋겠습니다.",
+          "close": 574.1099853515625,
+          "change_pct": -0.06093315595604443,
+          "score": 18,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.004477941361950278,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 65,
+          "ai_state": "매수 고려",
+          "ai_action": "보유 / 추가 매수 고려",
+          "ai_note": "AMD는 AI 시장에서 점유율을 확대하고 있으며, 삼성 및 네이버 클라우드 등과의 협력을 강화하고 있습니다. 20일선과 50일선 위에 있어 긍정적인 추세이며, 현재 가격대에서 추가 매수를 고려해볼 수 있습니다.",
+          "close": 219.7899932861328,
+          "change_pct": 1.0528704763828944,
+          "score": 57,
+          "state": "애매",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.005057510231284888,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 40,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "Tempus는 Medtronic과의 협력을 통해 AI 기반 의료 솔루션 개발에 성과를 보이고 있으며, Merck와의 파트너십도 확대하고 있습니다. 현재 20일선 아래에 있어 단기적인 관망세가 필요해 보입니다.",
+          "close": 47.57500076293945,
+          "change_pct": 0.3903806196955184,
+          "score": 18,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.004033013495695479,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 45,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "반도체 ETF인 SOXX는 AI 관련주 강세에 힘입어 상승세를 보이고 있으나, 지정학적 리스크와 메모리 수요 불확실성으로 변동성이 있습니다. 현재 50일선 아래에 있어 추가적인 상승을 위해서는 50일선 돌파 여부를 확인하는 것이 좋겠습니다.",
+          "close": 343.17999267578125,
+          "change_pct": 1.0512079968800325,
+          "score": 40,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0019757552751035697,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 25,
+          "ai_state": "회피",
+          "ai_action": "비중 축소",
+          "ai_note": "Serve Robotics는 로봇 배송 사업을 확장하고 있으나, 수익성 개선에 대한 의문이 제기되고 있습니다. 현재 20일선과 50일선 아래에 있어 당분간은 관망하며 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 8.350000381469727,
+          "change_pct": -1.1834252077232543,
+          "score": 14,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.00324120222180681,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 15,
+          "ai_state": "회피",
+          "ai_action": "비중 축소",
+          "ai_note": "KORU Medical Systems는 매출 성장을 보이고 있으나, 최근 중기 데드크로스가 발생했습니다. 현재 20일선과 50일선 아래에 있어 당분간은 회피하는 것이 좋겠습니다.",
           "close": 300.32000732421875,
           "change_pct": 6.417212861871113,
           "score": 9,
