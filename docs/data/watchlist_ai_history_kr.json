@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-07 02:11 ET",
-  "count": 19,
+  "updated_at_et": "2026-04-07 19:56 ET",
+  "count": 20,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -2662,6 +2662,174 @@
           "ai_state": "강보합",
           "ai_action": "보유",
           "ai_note": "LIG넥스원이 'LIG 디펜스&에어로스페이스'로 사명을 변경하며 종합 방산기업으로 도약을 선언했습니다. 단기 골든크로스가 발생했으나 거래량이 보통 수준이며, 최근 상승폭이 커 추가 상승 여부는 지켜볼 필요가 있습니다. 추세를 확인하며 보유하는 것이 좋습니다.",
+          "close": 839000.0,
+          "change_pct": 3.580246913580254,
+          "score": 42,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "LIG넥스원 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.9x (거래량 보통) / RSI 62 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.9412895671857466,
+          "rsi14": 61.6822429906542,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-04-07 19:56 ET",
+      "market_data_as_of": "2026-04-07 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "최근 코스닥150 편입 기대감으로 상승했으나, 현재는 시장 대비 약한 흐름을 보이고 있습니다. 단기 반등 시 비중 축소를 고려해볼 수 있습니다.",
+          "close": 43350.0,
+          "change_pct": -6.974248927038628,
+          "score": 20,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.6146446477050704,
+          "rsi14": 19.483870967741936,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 15,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "최근 유상증자 결정으로 주가 하락이 있었으며, 재무 부담 우려가 있습니다. 두산로지스틱스솔루션 인수 관련 불확실성도 존재합니다.",
+          "close": 40450.0,
+          "change_pct": -1.461632155907433,
+          "score": 9,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.5601283317062296,
+          "rsi14": 23.21699544764796,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 75,
+          "ai_state": "강세",
+          "ai_action": "보유",
+          "ai_note": "1분기 역대 최대 실적을 달성하며 시장 기대치를 크게 상회했습니다. AI 반도체 수요 증가와 HBM 시장 선도가 실적을 견인하고 있으며, 향후에도 긍정적인 전망이 이어질 것으로 보입니다.",
+          "close": 194650.0,
+          "change_pct": 0.802692905230451,
+          "score": 41,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "삼성전자 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 1.0x (거래량 보통) / RSI 43 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.9742078115346083,
+          "rsi14": 42.93727689954105,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 65,
+          "ai_state": "강세",
+          "ai_action": "보유",
+          "ai_note": "중동 리스크 완화 기대감으로 프리마켓에서 강세를 보이며 100만원 돌파를 앞두고 있습니다. 차세대 HBM 시장 주도권 확보를 위한 기술 개발에 집중하고 있으며, 긍정적인 흐름이 예상됩니다.",
+          "close": 900000.0,
+          "change_pct": 1.5801354401805856,
+          "score": 14,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.6275113060654836,
+          "rsi14": 37.00000000000001,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 30,
+          "ai_state": "약보합",
+          "ai_action": "관망",
+          "ai_note": "최근 '탈팡' 관련 반사 수혜 기대감에도 불구하고 목표가가 하향 조정되는 등 일부 부정적인 증권사 리포트가 있습니다. 현재는 뚜렷한 방향성 없이 관망하는 것이 좋겠습니다.",
+          "close": 195300.0,
+          "change_pct": -0.7621951219512146,
+          "score": 11,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.8896434355680455,
+          "rsi14": 26.92307692307692,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 40,
+          "ai_state": "보합",
+          "ai_action": "관망",
+          "ai_note": "1분기 실적이 예상치를 하회할 전망이며, 하반기 신차 출시 및 AI 시대 주도주 성장 잠재력에 주목할 필요가 있습니다. 단기적으로는 관망하며 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 470000.0,
+          "change_pct": 0.2132196162046851,
+          "score": 15,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "현대차 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.6x (거래량 약함) / RSI 32 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.5687080533784543,
+          "rsi14": 32.476635514018696,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 55,
+          "ai_state": "보합",
+          "ai_action": "보유",
+          "ai_note": "풍산 탄약사업 인수 검토 소식이 있었으나, 중동 리스크 완화 기대감으로 방산주 전반이 약세를 보이며 주가도 하락했습니다. 칠레 장갑차 현대화 사업 등 해외 수주 기대감은 여전히 유효합니다.",
+          "close": 1539000.0,
+          "change_pct": 6.137931034482769,
+          "score": 43,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 1.0x (거래량 보통) / RSI 61 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.9672431815485103,
+          "rsi14": 61.03703703703703,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 60,
+          "ai_state": "강세",
+          "ai_action": "보유",
+          "ai_note": "이란전 이후 천궁-II 활약으로 주가가 상승세를 보이고 있으며, 글로벌 요격 미사일 수요 증가에 따른 실적 성장이 기대됩니다. 다만 공급 능력 제한에 대한 신중론도 존재합니다.",
           "close": 839000.0,
           "change_pct": 3.580246913580254,
           "score": 42,
