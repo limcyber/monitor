@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-08 19:27 ET",
-  "count": 84,
+  "updated_at_et": "2026-04-09 01:58 ET",
+  "count": 85,
   "items": [
     {
       "generated_at_et": "2026-03-29 15:33 ET",
@@ -3042,6 +3042,57 @@
     },
     {
       "generated_at_et": "2026-04-08 19:27 ET",
+      "market_data_as_of": "2026-04-08 12:40 ET (5분봉)",
+      "market": {
+        "score": 78,
+        "level": 5,
+        "state": "레벨 5/6 - 상승 우위",
+        "action": "매수 / 보유",
+        "cross_highlights": [
+          "S&P500 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 58 (상방 우세)",
+          "나스닥 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 56 (상방 우세)"
+        ],
+        "top_reasons": [
+          "S&P500이 200일선 위에 있습니다 (+10)",
+          "나스닥이 200일선 위에 있습니다 (+10)",
+          "S&P500의 50일선이 200일선 위에 있습니다 (+8)"
+        ],
+        "metrics": {
+          "vix_close": 20.950000762939453,
+          "tnx_close": 4.2729997634887695,
+          "pct_above_20dma": 73.558648111332,
+          "pct_above_50dma": 45.32803180914513
+        }
+      },
+      "ai_analysis": {
+        "status": "error",
+        "model": "gemini-2.5-flash",
+        "content": "AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'"
+      },
+      "ai_notifications": {
+        "count": 2,
+        "items": [
+          {
+            "id": "ai-tnx-shock",
+            "priority": "high",
+            "kind": "ai_macro_shock",
+            "scope": "market",
+            "title": "10년물 금리 급변",
+            "message": "10년물 금리가 직전 AI 갱신 대비 1.6% 움직였습니다. 성장주와 전체 밸류에이션 부담을 다시 확인할 필요가 있습니다."
+          },
+          {
+            "id": "ai-regime-shift-l2-to-l5",
+            "priority": "high",
+            "kind": "ai_regime_shift",
+            "scope": "market",
+            "title": "시장 레벨 급변",
+            "message": "시장 레벨이 2/6 -> 5/6(으)로 상향 이동했습니다. 전체 매매 전략을 다시 점검할 시점입니다."
+          }
+        ]
+      }
+    },
+    {
+      "generated_at_et": "2026-04-09 01:58 ET",
       "market_data_as_of": "2026-04-08 12:40 ET (5분봉)",
       "market": {
         "score": 78,
