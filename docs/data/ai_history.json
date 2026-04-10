@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-09 18:27 ET",
-  "count": 89,
+  "updated_at_et": "2026-04-09 20:05 ET",
+  "count": 90,
   "items": [
     {
       "generated_at_et": "2026-03-29 15:33 ET",
@@ -3312,6 +3312,40 @@
             "ticker": "TEM"
           }
         ]
+      }
+    },
+    {
+      "generated_at_et": "2026-04-09 20:05 ET",
+      "market_data_as_of": "2026-04-09 15:55 ET (5분봉)",
+      "market": {
+        "score": 80,
+        "level": 5,
+        "state": "레벨 5/6 - 상승 우위",
+        "action": "매수 / 보유",
+        "cross_highlights": [
+          "S&P500 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 62 (상방 우세)",
+          "나스닥 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 59 (상방 우세)"
+        ],
+        "top_reasons": [
+          "S&P500이 200일선 위에 있습니다 (+10)",
+          "나스닥이 200일선 위에 있습니다 (+10)",
+          "S&P500의 50일선이 200일선 위에 있습니다 (+8)"
+        ],
+        "metrics": {
+          "vix_close": 19.639999389648438,
+          "tnx_close": 4.293000221252441,
+          "pct_above_20dma": 73.558648111332,
+          "pct_above_50dma": 47.912524850894634
+        }
+      },
+      "ai_analysis": {
+        "status": "error",
+        "model": "gemini-2.5-flash",
+        "content": "AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'"
+      },
+      "ai_notifications": {
+        "count": 0,
+        "items": []
       }
     }
   ]
