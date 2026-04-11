@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-11 17:04 ET",
-  "count": 106,
+  "updated_at_et": "2026-04-11 19:03 ET",
+  "count": 107,
   "items": [
     {
       "generated_at_et": "2026-03-29 15:33 ET",
@@ -11642,6 +11642,168 @@
           "ai_state": "약세 관망",
           "ai_action": "관찰",
           "ai_note": "단기 골든크로스 발생했으나 거래량 약세, 최근 상승폭이 커 부담. 5월 중순 실적 발표 전까지는 추세 확인하며 접근.",
+          "close": 393.8800048828125,
+          "change_pct": -1.4018238583925702,
+          "score": 45,
+          "state": "약함",
+          "action": "관찰",
+          "cross_highlights": [
+            "KORU 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 59 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.006914951468266404,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-04-11 19:03 ET",
+      "market_data_as_of": "2026-04-10 15:50 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 75,
+          "ai_state": "강세",
+          "ai_action": "매수",
+          "ai_note": "AI 시장 리더십 강화 소식이 있으며, 38.5x의 P/E 비율은 높은 시장 기대를 반영합니다. 보유 중이라면 AI 관련 투자 흐름에 맞춰 홀딩을 고려해볼 만합니다.",
+          "close": 188.5500030517578,
+          "change_pct": 2.522972811295965,
+          "score": 54,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [
+            "NVDA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 68 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.007291308232940925,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "유럽 규제 승인 소식은 긍정적이나, 1분기 인도량 부진 및 중국 수요 약화 등 우려가 상존합니다. 보유 중이라면 실적 발표 이후 추세를 확인하며 대응하는 것이 좋습니다.",
+          "close": 347.510009765625,
+          "change_pct": 0.5468476000055178,
+          "score": 15,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0046007088414660325,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 65,
+          "ai_state": "중립",
+          "ai_action": "관망",
+          "ai_note": "AI 관련 긍정적 뉴스(Muse Spark 모델 출시, CoreWeave 계약 확대)가 있으나, 법적 리스크도 존재합니다. 보유 중이라면 AI 성장성과 법적 리스크를 균형 있게 고려하며 대응하세요.",
+          "close": 629.2100219726562,
+          "change_pct": 0.13049337276269668,
+          "score": 22,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "META 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 59 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.0064118538401205915,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 80,
+          "ai_state": "강세",
+          "ai_action": "매수",
+          "ai_note": "AI 및 데이터센터 기술에 대한 전략적 집중과 파트너십 강화 소식이 긍정적입니다. 보유 중이라면 AI 시장 성장에 따른 추가 상승을 기대해볼 수 있습니다.",
+          "close": 245.60000610351562,
+          "change_pct": 3.7863449699869767,
+          "score": 78,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [
+            "AMD 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 74 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.005710376438086628,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 40,
+          "ai_state": "약보합",
+          "ai_action": "관망",
+          "ai_note": "Gilead Sciences와의 협력 확대 소식이 있으나, 주가 하락세도 관찰됩니다. 보유 중이라면 실적 발표 및 파트너십 성과를 지켜보며 대응하는 것이 좋습니다.",
+          "close": 42.88999938964844,
+          "change_pct": -2.875906843641207,
+          "score": 14,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.024601060973852788,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 60,
+          "ai_state": "중립",
+          "ai_action": "관망",
+          "ai_note": "반도체 섹터 전반의 긍정적 흐름 속에서 AI 관련 수혜가 기대되나, 개별 종목 이슈에 따른 변동성도 있습니다. 보유 중이라면 섹터 전반의 흐름과 주요 종목 움직임을 함께 참고하세요.",
+          "close": 387.29998779296875,
+          "change_pct": 2.2898298598494904,
+          "score": 54,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [
+            "SOXX 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 72 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.012086727048200992,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "로봇 배송 확대 및 AI 기술 관련 뉴스가 있으나, 내부자 매도 물량이 관찰됩니다. 보유 중이라면 실적 발표와 경영진의 매도 추세를 주시하며 신중하게 대응해야 합니다.",
+          "close": 8.300000190734863,
+          "change_pct": 2.7227756077490284,
+          "score": 15,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.00356875634809089,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 35,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "매출 성장 및 긍정적 EBITDA 소식이 있으나, CEO 교체 및 시장의 전반적인 투자 심리 위축이 부담으로 작용할 수 있습니다. 보유 중이라면 신임 CEO의 경영 전략과 시장 상황을 함께 고려하여 대응하는 것이 좋습니다.",
           "close": 393.8800048828125,
           "change_pct": -1.4018238583925702,
           "score": 45,
