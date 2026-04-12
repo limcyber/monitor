@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-12 12:03 ET",
-  "count": 112,
+  "updated_at_et": "2026-04-12 14:04 ET",
+  "count": 113,
   "items": [
     {
       "generated_at_et": "2026-03-29 15:33 ET",
@@ -12459,6 +12459,168 @@
           "ai_state": "관망",
           "ai_action": "관찰",
           "ai_note": "단기 골든크로스 발생했으나 거래량 약함. 최근 급등으로 인한 단기 과열 우려. 눌림목 발생 시 접근 고려.",
+          "close": 393.8800048828125,
+          "change_pct": -1.4018238583925702,
+          "score": 45,
+          "state": "약함",
+          "action": "관찰",
+          "cross_highlights": [
+            "KORU 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 59 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.006914951468266404,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-04-12 14:04 ET",
+      "market_data_as_of": "2026-04-10 15:50 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 70,
+          "ai_state": "관찰",
+          "ai_action": "소규모 매수",
+          "ai_note": "최근 NVIDIA는 차세대 AI 칩 플랫폼인 Blackwell과 Vera Rubin을 출시하며 AI 시장에서의 입지를 더욱 강화하고 있습니다. 다만, AI 시장 전반의 조정으로 인해 단기적인 변동성이 있을 수 있으니, 분할 매수를 통해 접근하는 것이 좋습니다.",
+          "close": 188.5500030517578,
+          "change_pct": 2.522972811295965,
+          "score": 54,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [
+            "NVDA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 68 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.007291308232940925,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 30,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "테슬라는 1분기 인도량 감소와 재고 증가로 시장의 우려를 사고 있습니다. 다만, 장기적으로는 로보택시 및 에너지 저장 사업의 성장이 기대되므로, 단기적인 하락을 이용한 분할 매수 관점에서 접근할 수 있습니다.",
+          "close": 347.510009765625,
+          "change_pct": 0.5468476000055178,
+          "score": 15,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0046007088414660325,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 40,
+          "ai_state": "관찰",
+          "ai_action": "관찰",
+          "ai_note": "메타는 AI 클라우드 용량 확보를 위해 코어웨이브와 210억 달러 규모의 장기 계약을 체결했습니다. 하지만 최근 소셜 미디어 중독 관련 소송에서 배심원 평결을 받은 점은 부담 요인입니다. 신중한 접근이 필요합니다.",
+          "close": 629.2100219726562,
+          "change_pct": 0.13049337276269668,
+          "score": 22,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "META 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 59 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.0064118538401205915,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 85,
+          "ai_state": "양호",
+          "ai_action": "적극 매수",
+          "ai_note": "AMD는 데이터센터 사업의 견조한 실적을 바탕으로 AI 시장에서의 경쟁력을 강화하고 있습니다. 특히 2026년 하반기부터 출시될 Helios 랙스케일 플랫폼은 추가적인 성장 동력이 될 것으로 기대됩니다.",
+          "close": 245.60000610351562,
+          "change_pct": 3.7863449699869767,
+          "score": 78,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [
+            "AMD 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 74 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.005710376438086628,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 25,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "템퍼스는 메르크, 길리어드 등과의 협력을 통해 AI 기반 정밀 의학 분야를 확장하고 있습니다. 하지만 아직 뚜렷한 실적 개선이 나타나지 않고 있어, 추가적인 관찰이 필요합니다.",
+          "close": 42.88999938964844,
+          "change_pct": -2.875906843641207,
+          "score": 14,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.024601060973852788,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 60,
+          "ai_state": "관찰",
+          "ai_action": "소규모 매수",
+          "ai_note": "반도체 ETF인 SOXX는 AI 시장의 성장과 함께 긍정적인 흐름을 보이고 있습니다. 다만, 최근 AI 칩 수출 통제 가능성 등 지정학적 리스크는 주의해야 합니다.",
+          "close": 387.29998779296875,
+          "change_pct": 2.2898298598494904,
+          "score": 54,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [
+            "SOXX 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 72 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.012086727048200992,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 15,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "서브 로보틱스는 2,000대 이상의 자율주행 배달 로봇을 운영하며 사업을 확장하고 있습니다. 하지만 최근 경영진의 주식 매도 소식은 투자 심리에 부정적인 영향을 줄 수 있습니다. 신중한 접근이 필요합니다.",
+          "close": 8.300000190734863,
+          "change_pct": 2.7227756077490284,
+          "score": 15,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.00356875634809089,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 20,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "KORU 메디컬 시스템즈는 2025년 연간 매출 22% 성장을 기록하며 긍정적인 실적을 발표했습니다. 다만, 부채 관련 계약 조건 변경은 재무 건전성에 대한 우려를 남길 수 있습니다. 추가적인 실적 확인이 필요합니다.",
           "close": 393.8800048828125,
           "change_pct": -1.4018238583925702,
           "score": 45,
