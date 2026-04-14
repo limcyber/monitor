@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-13 19:06 ET",
-  "count": 121,
+  "updated_at_et": "2026-04-14 02:16 ET",
+  "count": 122,
   "items": [
     {
       "generated_at_et": "2026-03-29 15:33 ET",
@@ -4552,6 +4552,40 @@
             "message": "시장 레벨이 4/6 -> 6/6(으)로 상향 이동했습니다. 전체 매매 전략을 다시 점검할 시점입니다."
           }
         ]
+      }
+    },
+    {
+      "generated_at_et": "2026-04-14 02:16 ET",
+      "market_data_as_of": "2026-04-13 16:00 ET (Close)",
+      "market": {
+        "score": 85,
+        "level": 6,
+        "state": "레벨 6/6 - 강한 상승장",
+        "action": "매수 / 강한 보유",
+        "cross_highlights": [
+          "S&P500 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.5x (거래량 약함) / RSI 68 (상방 우세)",
+          "나스닥 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.5x (거래량 약함) / RSI 66 (상방 우세)"
+        ],
+        "top_reasons": [
+          "S&P500이 200일선 위에 있습니다 (+10)",
+          "나스닥이 200일선 위에 있습니다 (+10)",
+          "S&P500의 50일선이 200일선 위에 있습니다 (+8)"
+        ],
+        "metrics": {
+          "vix_close": 19.040000915527344,
+          "tnx_close": 4.296999931335449,
+          "pct_above_20dma": 71.57057654075547,
+          "pct_above_50dma": 49.90059642147117
+        }
+      },
+      "ai_analysis": {
+        "status": "error",
+        "model": "gemini-2.5-flash",
+        "content": "AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'"
+      },
+      "ai_notifications": {
+        "count": 0,
+        "items": []
       }
     }
   ]
