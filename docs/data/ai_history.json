@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-15 10:52 ET",
-  "count": 133,
+  "updated_at_et": "2026-04-15 12:00 ET",
+  "count": 134,
   "items": [
     {
       "generated_at_et": "2026-03-29 15:33 ET",
@@ -4960,6 +4960,37 @@
           "tnx_close": 4.269999980926514,
           "pct_above_20dma": 73.1981981981982,
           "pct_above_50dma": 52.02702702702703
+        }
+      },
+      "ai_analysis": {
+        "status": "error",
+        "model": "gemini-2.5-flash",
+        "content": "AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'"
+      },
+      "ai_notifications": {
+        "count": 0,
+        "items": []
+      }
+    },
+    {
+      "generated_at_et": "2026-04-15 12:00 ET",
+      "market_data_as_of": "2026-04-15 11:45 ET (5분봉)",
+      "market": {
+        "score": 92,
+        "level": 6,
+        "state": "레벨 6/6 - 강한 상승장",
+        "action": "매수 / 강한 보유",
+        "cross_highlights": [],
+        "top_reasons": [
+          "S&P500이 200일선 위에 있습니다 (+10)",
+          "나스닥이 200일선 위에 있습니다 (+10)",
+          "S&P500의 50일선이 200일선 위에 있습니다 (+8)"
+        ],
+        "metrics": {
+          "vix_close": 18.030000686645508,
+          "tnx_close": 4.284999847412109,
+          "pct_above_20dma": 71.17296222664015,
+          "pct_above_50dma": 51.0934393638171
         }
       },
       "ai_analysis": {
