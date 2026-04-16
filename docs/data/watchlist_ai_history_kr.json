@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-16 03:28 ET",
-  "count": 34,
+  "updated_at_et": "2026-04-16 19:38 ET",
+  "count": 35,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -5187,6 +5187,173 @@
           "ai_state": "강세",
           "ai_action": "매수 / 보유",
           "ai_note": "LIG넥스원은 사우디아라비아 등 중동 국가들의 무기 확보 소식과 함께 방산주가 강세를 보이며 52주 신고가를 경신했습니다. 특히 천궁-II의 경쟁력 입증은 향후 추가 수주 기대감을 높입니다. 보유 또는 매수를 고려할 만합니다.",
+          "close": 874000.0,
+          "change_pct": -2.127659574468088,
+          "score": 65,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.4703206391835121,
+          "rsi14": 60.91051805337519,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-04-16 19:38 ET",
+      "market_data_as_of": "2026-04-16 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 30,
+          "ai_state": "보류",
+          "ai_action": "관찰",
+          "ai_note": "최근 중기 데드크로스가 발생했고 거래량이 약해 현재는 매수 시점이 아닙니다. 보유 중이라면 단기 골든크로스 이후 추세를 지켜보며 대응하는 것이 좋습니다.",
+          "close": 54100.0,
+          "change_pct": 0.18518518518517713,
+          "score": 19,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "아이티센글로벌 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.7x (거래량 약함) / RSI 65 (상방 우세)",
+            "아이티센글로벌 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.7x (거래량 약함) / RSI 65 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.6674945883561985,
+          "rsi14": 65.12605042016807,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 10,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "시장 대비 약한 흐름을 보이며, 종가가 주요 이평선 아래에 있어 현재는 매수 추천이 어렵습니다.",
+          "close": 46000.0,
+          "change_pct": 3.370786516853941,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.7840474699263548,
+          "rsi14": 42.705167173252285,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 60,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "시장 대비 견조한 흐름을 보이며 20일선과 50일선 위에 있어 긍정적입니다. 보유 중이라면 시장 흐름을 보며 추가 상승을 기대할 수 있습니다.",
+          "close": 216250.0,
+          "change_pct": 2.4881516587677677,
+          "score": 58,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5609842485787956,
+          "rsi14": 66.82177757096323,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 60,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "시장 대비 강한 흐름을 보이며 20일선과 50일선 위에 있어 긍정적입니다. 보유 중이라면 시장 흐름을 보며 추가 상승을 기대할 수 있습니다.",
+          "close": 1147000.0,
+          "change_pct": 0.9683098591549255,
+          "score": 58,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.4211110589940132,
+          "rsi14": 65.97014925373134,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 20,
+          "ai_state": "보류",
+          "ai_action": "관찰",
+          "ai_note": "최근 단기 골든크로스가 나왔으나 거래량이 약하고 시장 대비 힘이 약하며 50일선 아래에 있어 현재는 매수 시점이 아닙니다. 보유 중이라면 거래량 증가 여부를 확인하며 대응하는 것이 좋습니다.",
+          "close": 219000.0,
+          "change_pct": 3.791469194312791,
+          "score": 9,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "NAVER 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.8x (거래량 약함) / RSI 56 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.8083307097644579,
+          "rsi14": 55.673222390317704,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 45,
+          "ai_state": "약보합",
+          "ai_action": "관찰",
+          "ai_note": "최근 단기 골든크로스가 나왔으나 시장 대비 약한 흐름을 보입니다. 보유 중이라면 50일선 지지 여부를 확인하며 신중하게 접근하는 것이 좋습니다.",
+          "close": 534000.0,
+          "change_pct": 5.118110236220463,
+          "score": 44,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "현대차 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 1.3x (거래량 확인) / RSI 58 (상방 우세)"
+          ],
+          "volume_ratio_20d": 1.3090622994825958,
+          "rsi14": 57.95918367346939,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 70,
+          "ai_state": "양호",
+          "ai_action": "선별 매수",
+          "ai_note": "시장 대비 강한 흐름을 보이며 20일선과 50일선 위에 있어 긍정적입니다. 현재 추세가 유지된다면 추가 상승을 기대해 볼 수 있습니다.",
+          "close": 1513000.0,
+          "change_pct": 0.2650762094102088,
+          "score": 70,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.4169247610741879,
+          "rsi14": 62.04013377926422,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 65,
+          "ai_state": "양호",
+          "ai_action": "선별 매수",
+          "ai_note": "시장 대비 견조한 흐름을 보이며 20일선과 50일선 위에 있어 긍정적입니다. 현재 추세가 유지된다면 추가 상승을 기대해 볼 수 있습니다.",
           "close": 874000.0,
           "change_pct": -2.127659574468088,
           "score": 65,
