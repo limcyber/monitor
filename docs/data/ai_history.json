@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-16 11:11 ET",
-  "count": 149,
+  "updated_at_et": "2026-04-16 12:52 ET",
+  "count": 150,
   "items": [
     {
       "generated_at_et": "2026-03-29 15:33 ET",
@@ -5494,6 +5494,46 @@
           "tnx_close": 4.269999980926514,
           "pct_above_20dma": 75.94433399602386,
           "pct_above_50dma": 54.87077534791253
+        }
+      },
+      "ai_analysis": {
+        "status": "error",
+        "model": "gemini-2.5-flash",
+        "content": "AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'"
+      },
+      "ai_notifications": {
+        "count": 1,
+        "items": [
+          {
+            "id": "ai-regime-shift-l6-to-l5",
+            "priority": "high",
+            "kind": "ai_regime_shift",
+            "scope": "market",
+            "title": "시장 레벨 급변",
+            "message": "시장 레벨이 6/6 -> 5/6(으)로 하향 이동했습니다. 전체 매매 전략을 다시 점검할 시점입니다."
+          }
+        ]
+      }
+    },
+    {
+      "generated_at_et": "2026-04-16 12:52 ET",
+      "market_data_as_of": "2026-04-16 12:50 ET (5분봉)",
+      "market": {
+        "score": 77,
+        "level": 5,
+        "state": "레벨 5/6 - 상승 우위",
+        "action": "매수 / 보유",
+        "cross_highlights": [],
+        "top_reasons": [
+          "S&P500이 200일선 위에 있습니다 (+10)",
+          "나스닥이 200일선 위에 있습니다 (+10)",
+          "S&P500의 50일선이 200일선 위에 있습니다 (+8)"
+        ],
+        "metrics": {
+          "vix_close": 18.729999542236328,
+          "tnx_close": 4.300999641418457,
+          "pct_above_20dma": 71.96819085487077,
+          "pct_above_50dma": 51.689860834990064
         }
       },
       "ai_analysis": {
