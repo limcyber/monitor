@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-16 05:11 ET",
-  "count": 145,
+  "updated_at_et": "2026-04-16 06:44 ET",
+  "count": 146,
   "items": [
     {
       "generated_at_et": "2026-03-29 15:33 ET",
@@ -5353,6 +5353,37 @@
     },
     {
       "generated_at_et": "2026-04-16 05:11 ET",
+      "market_data_as_of": "2026-04-15 16:00 ET (Close)",
+      "market": {
+        "score": 92,
+        "level": 6,
+        "state": "레벨 6/6 - 강한 상승장",
+        "action": "매수 / 강한 보유",
+        "cross_highlights": [],
+        "top_reasons": [
+          "S&P500이 200일선 위에 있습니다 (+10)",
+          "나스닥이 200일선 위에 있습니다 (+10)",
+          "S&P500의 50일선이 200일선 위에 있습니다 (+8)"
+        ],
+        "metrics": {
+          "vix_close": 18.020000457763672,
+          "tnx_close": 4.2820000648498535,
+          "pct_above_20dma": 71.96819085487077,
+          "pct_above_50dma": 50.695825049701796
+        }
+      },
+      "ai_analysis": {
+        "status": "error",
+        "model": "gemini-2.5-flash",
+        "content": "AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'"
+      },
+      "ai_notifications": {
+        "count": 0,
+        "items": []
+      }
+    },
+    {
+      "generated_at_et": "2026-04-16 06:44 ET",
       "market_data_as_of": "2026-04-15 16:00 ET (Close)",
       "market": {
         "score": 92,
