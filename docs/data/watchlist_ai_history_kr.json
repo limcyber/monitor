@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-15 19:39 ET",
-  "count": 31,
+  "updated_at_et": "2026-04-15 22:28 ET",
+  "count": 32,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -4694,6 +4694,173 @@
           "cross_highlights": [],
           "volume_ratio_20d": 0.7772523531547457,
           "rsi14": 62.68174474959612,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-04-15 22:28 ET",
+      "market_data_as_of": "2026-04-16 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 45,
+          "ai_state": "관망",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "AI 및 웹3 스타트업 발굴 프로그램 '유니콘 브릿지'를 2년 연속 진행하며 미래 성장 동력 확보에 나섰습니다. 다만, 최근 중기 데드크로스가 발생하여 추가 하락 가능성을 염두에 두고 관찰이 필요합니다.",
+          "close": 51500.0,
+          "change_pct": -4.629629629629628,
+          "score": 6,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "아이티센글로벌 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.4x (거래량 약함) / RSI 59 (상방 우세)",
+            "아이티센글로벌 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.4x (거래량 약함) / RSI 59 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.4281639198884672,
+          "rsi14": 58.77862595419847,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 30,
+          "ai_state": "관망",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "2000억 규모 유상증자를 결정하며 두산로지스틱스솔루션 인수를 통한 물류 로봇 시장 주도권 확보에 나섰습니다. 하지만 매출 대비 영업활동 현금 유출이 지속되고 있어 재무 부담이 확대될 수 있다는 점을 고려해야 합니다.",
+          "close": 45800.0,
+          "change_pct": 2.921348314606731,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.579094343157553,
+          "rsi14": 42.35474006116208,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 75,
+          "ai_state": "상승",
+          "ai_action": "보유 / 매수",
+          "ai_note": "AI 기반 프리미엄 TV 시장 공략을 강화하며 2026년형 TV 신제품을 유럽 시장에 공개했습니다. 또한, AI PC '갤럭시 북6'를 국내 출시하는 등 AI 기술을 전면에 내세우고 있습니다. 목표주가 상향 소식도 긍정적입니다.",
+          "close": 216500.0,
+          "change_pct": 2.6066350710900466,
+          "score": 58,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.29899620660691445,
+          "rsi14": 66.89879294336119,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 80,
+          "ai_state": "상승",
+          "ai_action": "보유 / 매수",
+          "ai_note": "연간 순이익 기준 삼성전자를 추월하며 국내 반도체 기업 중 최고 수익성을 기록했습니다. 이는 HBM 공급 독점과 AI 특화 메모리 시장에서의 강세 덕분입니다. 목표주가 상향 소식도 긍정적입니다.",
+          "close": 1156000.0,
+          "change_pct": 1.760563380281699,
+          "score": 58,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.28105592895039405,
+          "rsi14": 66.42120765832107,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 55,
+          "ai_state": "보합",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "최신 뉴스에서 특별한 모멘텀은 확인되지 않습니다. 다만, 시장 전반의 상승세와 함께 꾸준한 흐름을 보일 것으로 예상됩니다.",
+          "close": 219000.0,
+          "change_pct": 3.791469194312791,
+          "score": 9,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "NAVER 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.6x (거래량 약함) / RSI 56 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.5644430175538152,
+          "rsi14": 55.673222390317704,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 60,
+          "ai_state": "상승",
+          "ai_action": "보유 / 매수",
+          "ai_note": "현대 N 페스티벌 및 TCR 월드투어 등 모터스포츠 활동을 통해 브랜드 이미지를 강화하고 있습니다. 다만, 최근 주가 흐름은 시장 전반의 강세에 동반 상승하는 모습입니다.",
+          "close": 540000.0,
+          "change_pct": 6.299212598425208,
+          "score": 44,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "현대차 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 1.0x (거래량 보통) / RSI 59 (상방 우세)"
+          ],
+          "volume_ratio_20d": 1.020756831520423,
+          "rsi14": 58.964143426294825,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 85,
+          "ai_state": "강세",
+          "ai_action": "매수",
+          "ai_note": "NATO 대사단을 초청하여 미래 안보 비전을 공유하고, 유럽 시장 공략을 위한 현지화 전략을 제시했습니다. 또한, 노르웨이 천무 사업에서 공동개발, 공동생산 등 유럽식 수출 모델을 시험하며 방산 수출 확대에 대한 기대감이 높습니다. 목표주가 상향 소식도 긍정적입니다.",
+          "close": 1522000.0,
+          "change_pct": 0.8614976805831676,
+          "score": 70,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.31166187018059,
+          "rsi14": 62.60296540362438,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 80,
+          "ai_state": "강세",
+          "ai_action": "매수",
+          "ai_note": "미국과 이란 간 종전 협상 결렬 소식에 방산주가 강세를 보이며 주가가 상승했습니다. 사우디아라비아가 천궁-II 인도 일정을 앞당길 수 있는지 타진했다는 소식도 긍정적입니다. 사명 변경 후 글로벌 종합 방위산업체로 도약을 목표하고 있습니다.",
+          "close": 884000.0,
+          "change_pct": -1.007838745800671,
+          "score": 65,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.2681706354290384,
+          "rsi14": 61.88197767145135,
           "signals": {
             "short_cross": "none",
             "mid_cross": "none"
