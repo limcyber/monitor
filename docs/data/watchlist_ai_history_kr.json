@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-15 22:28 ET",
-  "count": 32,
+  "updated_at_et": "2026-04-16 01:28 ET",
+  "count": 33,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -4861,6 +4861,173 @@
           "cross_highlights": [],
           "volume_ratio_20d": 0.2681706354290384,
           "rsi14": 61.88197767145135,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-04-16 01:28 ET",
+      "market_data_as_of": "2026-04-16 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 30,
+          "ai_state": "관망",
+          "ai_action": "보유/관찰",
+          "ai_note": "최근 중기 데드크로스가 발생했으나 단기 골든크로스 신호도 있습니다. 거래량은 약한 편이며, 보유 중이라면 추세 전환 여부를 더 지켜보는 것이 좋습니다.",
+          "close": 54100.0,
+          "change_pct": 0.18518518518517713,
+          "score": 19,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "아이티센글로벌 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.7x (거래량 약함) / RSI 65 (상방 우세)",
+            "아이티센글로벌 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.7x (거래량 약함) / RSI 65 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.6674945883561985,
+          "rsi14": 65.12605042016807,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 10,
+          "ai_state": "회피",
+          "ai_action": "보류/관찰",
+          "ai_note": "시장 대비 약한 흐름을 보이며, 20일선과 50일선 아래에 위치해 있습니다. 현재로서는 매수 관점보다는 관망이 필요합니다.",
+          "close": 46000.0,
+          "change_pct": 3.370786516853941,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.7840474699263548,
+          "rsi14": 42.705167173252285,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 60,
+          "ai_state": "보유",
+          "ai_action": "보유/관찰",
+          "ai_note": "시장 대비 강한 흐름을 보이며 20일선과 50일선 위에 있습니다. 현재 추세가 유지된다면 보유하며 시장 흐름을 함께 지켜보는 것이 좋습니다.",
+          "close": 216250.0,
+          "change_pct": 2.4881516587677677,
+          "score": 58,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5609842485787956,
+          "rsi14": 66.82177757096323,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 60,
+          "ai_state": "보유",
+          "ai_action": "보유/관찰",
+          "ai_note": "시장 대비 강한 흐름을 보이며 20일선과 50일선 위에 있습니다. 현재 추세가 유지된다면 보유하며 시장 흐름을 함께 지켜보는 것이 좋습니다.",
+          "close": 1147000.0,
+          "change_pct": 0.9683098591549255,
+          "score": 58,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.4211110589940132,
+          "rsi14": 65.97014925373134,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 20,
+          "ai_state": "관망",
+          "ai_action": "보류/관찰",
+          "ai_note": "단기 골든크로스 신호가 있으나 거래량이 약하고 시장 대비 힘이 약합니다. 50일선 아래에 위치해 있어 추가적인 상승 모멘텀 확인이 필요합니다.",
+          "close": 219000.0,
+          "change_pct": 3.791469194312791,
+          "score": 9,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "NAVER 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.8x (거래량 약함) / RSI 56 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.8083307097644579,
+          "rsi14": 55.673222390317704,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 45,
+          "ai_state": "관망",
+          "ai_action": "보류/관찰",
+          "ai_note": "단기 골든크로스 신호와 함께 거래량이 확인되었으나 시장 대비 약한 흐름을 보입니다. 50일선 위에 있지만, 추세 전환을 위해서는 시장과의 동조화가 필요합니다.",
+          "close": 534000.0,
+          "change_pct": 5.118110236220463,
+          "score": 44,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "현대차 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 1.3x (거래량 확인) / RSI 58 (상방 우세)"
+          ],
+          "volume_ratio_20d": 1.3090622994825958,
+          "rsi14": 57.95918367346939,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 70,
+          "ai_state": "매수",
+          "ai_action": "선별 매수",
+          "ai_note": "시장 대비 강한 흐름을 보이며 20일선과 50일선 위에 있습니다. 현재 추세가 양호하므로 선별적인 매수 관점에서 접근할 수 있습니다.",
+          "close": 1513000.0,
+          "change_pct": 0.2650762094102088,
+          "score": 70,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.4169247610741879,
+          "rsi14": 62.04013377926422,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 65,
+          "ai_state": "매수",
+          "ai_action": "선별 매수",
+          "ai_note": "시장 대비 강한 흐름을 보이며 20일선과 50일선 위에 있습니다. 현재 추세가 양호하므로 선별적인 매수 관점에서 접근할 수 있습니다.",
+          "close": 874000.0,
+          "change_pct": -2.127659574468088,
+          "score": 65,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.4703206391835121,
+          "rsi14": 60.91051805337519,
           "signals": {
             "short_cross": "none",
             "mid_cross": "none"
