@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-16 22:24 ET",
-  "count": 32,
+  "updated_at_et": "2026-04-17 01:26 ET",
+  "count": 33,
   "items": [
     {
       "generated_at_et": "2026-03-29 20:11 ET",
@@ -1054,6 +1054,40 @@
           "KOSPI 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.9x (거래량 보통) / RSI 64 (상방 우세)",
           "KOSDAQ 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 1.2x (거래량 확인) / RSI 52 (중립)",
           "KOSDAQ 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 1.2x (거래량 확인) / RSI 52 (중립)"
+        ],
+        "top_reasons": [
+          "KOSPI가 200일선 위에 있습니다 (+15)",
+          "KOSDAQ이 200일선 위에 있습니다 (+12)",
+          "KOSPI의 50일선이 200일선 위에 있습니다 (+8)"
+        ],
+        "metrics": {
+          "vix_close": 17.940000534057617,
+          "tnx_close": null,
+          "pct_above_20dma": null,
+          "pct_above_50dma": null
+        }
+      },
+      "ai_analysis": {
+        "status": "error",
+        "model": "gemini-2.5-flash",
+        "content": "한국 시장 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'"
+      },
+      "ai_notifications": {
+        "count": 0,
+        "items": []
+      }
+    },
+    {
+      "generated_at_et": "2026-04-17 01:26 ET",
+      "market_data_as_of": "2026-04-17 15:30 KST (Close)",
+      "market": {
+        "score": 72,
+        "level": 5,
+        "state": "레벨 5/6 - 상승 우위",
+        "action": "매수 / 보유",
+        "cross_highlights": [
+          "KOSDAQ 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 19.7x (거래량 강함) / RSI 58 (상방 우세)",
+          "KOSDAQ 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 19.7x (거래량 강함) / RSI 58 (상방 우세)"
         ],
         "top_reasons": [
           "KOSPI가 200일선 위에 있습니다 (+15)",
