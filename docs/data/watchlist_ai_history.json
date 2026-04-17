@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-16 19:34 ET",
-  "count": 156,
+  "updated_at_et": "2026-04-16 21:54 ET",
+  "count": 157,
   "items": [
     {
       "generated_at_et": "2026-03-29 15:33 ET",
@@ -16952,6 +16952,168 @@
           "ai_state": "애매",
           "ai_action": "보류",
           "ai_note": "KORU Medical Systems는 1분기 실적 발표를 앞두고 있으며, EU MDR 인증 획득 등 긍정적인 소식도 있었으나, 현재 주가 흐름은 특별한 모멘텀을 보여주지 못하고 있습니다. 5월 6일 실적 발표 이후 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 470.4549865722656,
+          "change_pct": 5.511568453470339,
+          "score": 52,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-04-16 21:54 ET",
+      "market_data_as_of": "2026-04-16 15:37 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 70,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "AI 하드웨어 수요 강세와 양자 컴퓨팅 오픈 소스 모델 출시 등 긍정적 뉴스에도 불구하고, 최근 11일간의 상승세 이후 소폭 하락하며 관망세가 필요합니다. 만약 보유 중이라면, 최근의 긍정적 모멘텀이 지속되는지 확인하며 추세를 따라가는 것이 좋습니다.",
+          "close": 198.47999572753906,
+          "change_pct": -0.19610770816312906,
+          "score": 52,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.003600392231812314,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "유럽 최초로 자율주행 기능 승인을 받았으나, 로보택시 사고 및 판매량 감소 소식은 부담입니다. 보유 중이라면, 단기적인 하락 추세에 유의하며 추가 하락 시 손절을 고려할 수 있습니다.",
+          "close": 388.3299865722656,
+          "change_pct": -0.9235937037944231,
+          "score": 22,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "TSLA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 56 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.0037924094325349255,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 45,
+          "ai_state": "관망",
+          "ai_action": "보류",
+          "ai_note": "AI 기반 쇼핑 기능 강화 및 맞춤형 칩 개발 등 미래 성장 동력 확보 노력에도 불구하고, 아동 착취 관련 소송 패소 및 벌금 소식은 부정적입니다. 보유 중이라면, 소송 결과에 따른 추가 하락 가능성을 염두에 두고 대응하는 것이 좋습니다.",
+          "close": 674.9061279296875,
+          "change_pct": 0.49526649918154586,
+          "score": 52,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.00253482252761519,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 85,
+          "ai_state": "강세",
+          "ai_action": "매수",
+          "ai_note": "프랑스 AI 혁신 협력, 삼성과의 차세대 AI 메모리 솔루션 협업 등 AI 관련 긍정적 뉴스가 이어지고 있으며, 12일 연속 상승하며 20년래 최고 상승세를 기록 중입니다. 보유 중이라면, 현재의 강한 상승 추세를 유지하며 추가 상승을 기대해 볼 수 있습니다.",
+          "close": 276.07501220703125,
+          "change_pct": 6.956073698084531,
+          "score": 78,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "AMD 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 91 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.00686598550164501,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 40,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "혈액암 진단 키트 출시 및 AACR 학회 발표 등 긍정적 소식이 있으나, 최근 주가 하락 및 높은 변동성은 부담입니다. 보유 중이라면, 단기적인 하락 추세에 유의하며 지지선 이탈 시 손절을 고려하는 것이 좋습니다.",
+          "close": 53.810001373291016,
+          "change_pct": -4.609109167087455,
+          "score": 45,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "TEM 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 64 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.015820297346861405,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 75,
+          "ai_state": "강세",
+          "ai_action": "선별 매수",
+          "ai_note": "AI 인프라 투자 확대 및 지정학적 긴장 완화 등 긍정적 요인으로 반도체 섹터 전반에 강세가 나타나고 있으며, SOXX 역시 52주 최고치 근접 등 양호한 흐름을 보이고 있습니다. 보유 중이라면, 현재의 상승 추세를 유지하며 추가 상승을 기대해 볼 수 있습니다.",
+          "close": 405.5899963378906,
+          "change_pct": 0.9281867123607679,
+          "score": 78,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "SOXX 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 83 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.001765540923335421,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 35,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "자율주행 로봇 2,000대 돌파 및 화이트 캐슬과의 배달 서비스 협력 등 사업 확장 소식이 있으나, 최근 주가 하락 및 경영진의 주식 매도 소식은 부담입니다. 보유 중이라면, 추가 하락 가능성을 염두에 두고 신중하게 접근하는 것이 좋습니다.",
+          "close": 9.385000228881836,
+          "change_pct": -1.8305458478408698,
+          "score": 29,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SERV 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 53 (중립)"
+          ],
+          "volume_ratio_20d": 0.004728338359816321,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 40,
+          "ai_state": "관망",
+          "ai_action": "보류",
+          "ai_note": "EU MDR 인증 획득 및 1분기 실적 발표 예정 등 긍정적 이슈가 있으나, 현재 주가 흐름은 특별한 모멘텀 없이 관망세를 보이고 있습니다. 보유 중이라면, 실적 발표 결과를 확인하며 향후 방향성을 결정하는 것이 좋습니다.",
           "close": 470.4549865722656,
           "change_pct": 5.511568453470339,
           "score": 52,
