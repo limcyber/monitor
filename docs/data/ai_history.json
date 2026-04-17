@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-17 13:42 ET",
-  "count": 168,
+  "updated_at_et": "2026-04-17 14:48 ET",
+  "count": 169,
   "items": [
     {
       "generated_at_et": "2026-03-29 15:33 ET",
@@ -6184,6 +6184,47 @@
             "scope": "market",
             "title": "시장 폭 과열 진입",
             "message": "S&P 500의 20일선 위 종목 비율이 80.3%까지 올라왔습니다. 추격 매수는 더 신중하게 보는 편이 좋습니다."
+          }
+        ]
+      }
+    },
+    {
+      "generated_at_et": "2026-04-17 14:48 ET",
+      "market_data_as_of": "2026-04-17 14:05 ET (5분봉)",
+      "market": {
+        "score": 95,
+        "level": 6,
+        "state": "레벨 6/6 - 강한 상승장",
+        "action": "매수 / 강한 보유",
+        "cross_highlights": [],
+        "top_reasons": [
+          "S&P500이 200일선 위에 있습니다 (+10)",
+          "나스닥이 200일선 위에 있습니다 (+10)",
+          "S&P500의 50일선이 200일선 위에 있습니다 (+8)"
+        ],
+        "metrics": {
+          "vix_close": 17.43000030517578,
+          "tnx_close": 4.248000144958496,
+          "pct_above_20dma": 79.52286282306163,
+          "pct_above_50dma": 60.834990059642145
+        }
+      },
+      "ai_analysis": {
+        "status": "error",
+        "model": "gemini-2.5-flash",
+        "content": "AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'"
+      },
+      "ai_notifications": {
+        "count": 1,
+        "items": [
+          {
+            "id": "ai-judgment-divergence-negative-TSLA",
+            "priority": "medium",
+            "kind": "ai_sentiment_divergence",
+            "scope": "stock",
+            "title": "TSLA AI 판단 괴리",
+            "message": "TSLA 주가는 버티고 있지만 AI 판단 점수는 20점 악화됐습니다. 악재가 뒤늦게 가격에 반영될 수 있는지 확인이 필요합니다.",
+            "ticker": "TSLA"
           }
         ]
       }
