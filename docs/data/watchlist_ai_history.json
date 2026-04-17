@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-17 12:47 ET",
-  "count": 167,
+  "updated_at_et": "2026-04-17 13:42 ET",
+  "count": 168,
   "items": [
     {
       "generated_at_et": "2026-03-29 15:33 ET",
@@ -18121,6 +18121,168 @@
           "action": "보류 / 관찰",
           "cross_highlights": [],
           "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-04-17 13:42 ET",
+      "market_data_as_of": "2026-04-17 13:10 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 75,
+          "ai_state": "양호",
+          "ai_action": "매수",
+          "ai_note": "NVIDIA가 양자 컴퓨팅 가속을 위한 최초의 오픈 AI 모델인 Ising을 출시했습니다. 현재 강한 상승 추세에 있으며, 보유 중이라면 긍정적인 모멘텀을 활용하는 것이 좋습니다.",
+          "close": 200.32000732421875,
+          "change_pct": 0.9931944341231791,
+          "score": 52,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0008781502300860694,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 60,
+          "ai_state": "보통",
+          "ai_action": "보유",
+          "ai_note": "Tesla는 유럽에서 FSD 규제 승인을 얻었으나, 로보택시 출시 시점과 관련 거래 등 위험 요소도 존재합니다. 단기적으로는 긍정적이지만, 추가 상승 여부는 실적 발표를 지켜봐야 합니다.",
+          "close": 405.0,
+          "change_pct": 4.1398833520684075,
+          "score": 44,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "TSLA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 66 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.0018135861807310615,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 45,
+          "ai_state": "약함",
+          "ai_action": "보류",
+          "ai_note": "Meta는 AI 실리콘 개발을 위해 Broadcom과 파트너십을 맺었으나, 유럽에서의 규제 압박과 소송 리스크가 있습니다. 뉴멕시코 배심원단이 Meta에 3억 7,500만 달러의 민사상 손해배상을 명령했습니다. 보유 중이라면 단기 반등 시 매도 고려가 필요합니다.",
+          "close": 685.02392578125,
+          "change_pct": 1.2046524033985095,
+          "score": 52,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0005587210182530705,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 80,
+          "ai_state": "강세",
+          "ai_action": "매수",
+          "ai_note": "AMD는 MLPerf 추론 6.0에서 뛰어난 성능을 보여주었으며, 프랑스 정부와 AI 혁신을 위한 협력을 발표했습니다. 중기 골든크로스 신호와 함께 강한 상승 추세를 보이고 있어 매수 관점에서 긍정적입니다.",
+          "close": 279.19500732421875,
+          "change_pct": 0.336015785876409,
+          "score": 78,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "AMD 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 93 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.0016039467077851779,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 55,
+          "ai_state": "애매",
+          "ai_action": "보유",
+          "ai_note": "Tempus AI는 길리어드 사이언스와의 협력을 확장하고, 새로운 'Active Follow-Up' 워크플로우를 출시했습니다. 최근 긍정적인 뉴스가 있으나, RSI가 과열 구간에 있어 단기 조정을 염두에 두어야 합니다.",
+          "close": 55.880001068115234,
+          "change_pct": 2.68284260987548,
+          "score": 50,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "TEM 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 74 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.0011502752251981757,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 70,
+          "ai_state": "양호",
+          "ai_action": "선별 매수",
+          "ai_note": "반도체 섹터는 AI 인프라 구축과 지정학적 긴장 완화 기대감으로 강세를 보이고 있습니다. SOXX는 주요 반도체 기업들의 AI 관련 호재에 힘입어 상승 추세를 이어가고 있으며, 보유 시 긍정적 흐름을 유지하는 것이 좋습니다.",
+          "close": 414.3299865722656,
+          "change_pct": 2.0642872553876535,
+          "score": 78,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "SOXX 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 88 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.00044373652748293545,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 40,
+          "ai_state": "약함",
+          "ai_action": "보류",
+          "ai_note": "Serve Robotics는 2,000대의 자율주행 로봇을 배치하며 미국 최대 보도 배달망을 구축했습니다. 그러나 CFO 등 내부 임원들의 주식 매도가 관찰되고 있어 주의가 필요합니다. 보유 중이라면 단기적인 하락 가능성에 대비해야 합니다.",
+          "close": 9.585000038146973,
+          "change_pct": 1.4285738794351799,
+          "score": 34,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SERV 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 65 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.0008560559631673458,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 30,
+          "ai_state": "매우 약함",
+          "ai_action": "매도",
+          "ai_note": "KORU Medical Systems는 1분기 실적 발표를 앞두고 있으나, 현재까지 특별한 긍정적 뉴스는 확인되지 않았습니다. RSI가 과열 구간에 있고 거래량이 약한 점을 고려할 때, 보유 중이라면 매도 후 관망하는 것이 좋습니다.",
+          "close": 520.5599975585938,
+          "change_pct": 10.993602890958165,
+          "score": 43,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0005631948220828309,
           "signals": {
             "short_cross": "none",
             "mid_cross": "none"
