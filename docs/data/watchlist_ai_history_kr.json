@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-17 01:26 ET",
-  "count": 37,
+  "updated_at_et": "2026-04-17 03:29 ET",
+  "count": 38,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -5528,6 +5528,173 @@
           "ai_state": "상승",
           "ai_action": "선별 매수/보유",
           "ai_note": "시장 대비 강한 흐름 보이며 20일선, 50일선 위에 안착. 상승 추세 유지 가능성 높으며, 보유자는 추세 이탈 전까지 보유.",
+          "close": 883000.0,
+          "change_pct": 0.0,
+          "score": 66,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.24039621552261806,
+          "rsi14": 67.01208981001727,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-04-17 03:29 ET",
+      "market_data_as_of": "2026-04-17 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 35,
+          "ai_state": "관망",
+          "ai_action": "보류",
+          "ai_note": "아이티센글로벌은 AI 및 웹3 스타트업 발굴 프로그램을 2년 연속 진행하며 미래 성장 동력 확보에 나서고 있습니다. 다만, 최근 중기 데드크로스가 발생했고 거래량이 약한 점은 부담입니다.",
+          "close": 53200.0,
+          "change_pct": -0.5607476635513975,
+          "score": 7,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "아이티센글로벌 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.3x (거래량 약함) / RSI 65 (상방 우세)",
+            "아이티센글로벌 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.3x (거래량 약함) / RSI 65 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.3403068645776805,
+          "rsi14": 64.70588235294117,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 55,
+          "ai_state": "관망",
+          "ai_action": "보류",
+          "ai_note": "클로봇은 4거래일 연속 상승하며 12% 급등하는 모습을 보였습니다. 하지만 아직 50일선 아래에 위치해 있어 추가 상승 여부를 지켜볼 필요가 있습니다.",
+          "close": 49950.0,
+          "change_pct": 8.116883116883123,
+          "score": 24,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 2.193987642864258,
+          "rsi14": 51.42857142857142,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 75,
+          "ai_state": "양호",
+          "ai_action": "선별 매수",
+          "ai_note": "삼성전자는 AI TV 대중화를 선언하며 관련 기술 개발에 힘쓰고 있습니다. 노조의 총파업 가능성으로 인한 불확실성은 단기적으로 부담 요인이 될 수 있습니다.",
+          "close": 216500.0,
+          "change_pct": -0.45977011494252595,
+          "score": 68,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.41718783382536606,
+          "rsi14": 68.98016997167139,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 80,
+          "ai_state": "강세",
+          "ai_action": "보유",
+          "ai_note": "SK하이닉스는 역대급 실적 전망과 함께 임직원 성과급 지급 소식이 전해지며 투자자들의 관심을 받고 있습니다. 다만, 스페이스X의 대규모 상장이 자금 조달에 영향을 줄 수 있다는 우려도 있습니다.",
+          "close": 1133000.0,
+          "change_pct": -1.904761904761909,
+          "score": 69,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.4480351673197434,
+          "rsi14": 70.3125,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "네이버는 자체 비전 인코더를 개발하며 AI 모델의 독자성을 강화하고 있습니다. 그러나 거래량이 약하고 시장 대비 힘이 약한 모습은 단기적인 투자 매력을 떨어뜨립니다.",
+          "close": 216000.0,
+          "change_pct": -1.1441647597253968,
+          "score": 8,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "NAVER 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.7x (거래량 약함) / RSI 57 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.6948804095473519,
+          "rsi14": 57.075471698113205,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 40,
+          "ai_state": "관망",
+          "ai_action": "보류",
+          "ai_note": "현대차는 미국 전기차 시장에서 판매 증가세를 보이며 선전하고 있습니다. 하지만 노조의 총파업 예고는 불확실성을 높이는 요인입니다.",
+          "close": 535000.0,
+          "change_pct": 0.1872659176029856,
+          "score": 29,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "현대차 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.6x (거래량 약함) / RSI 65 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.5635615905871183,
+          "rsi14": 64.85260770975057,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 50,
+          "ai_state": "애매",
+          "ai_action": "보류",
+          "ai_note": "한화에어로스페이스는 NATO 대사단에 미래 안보 전략을 제시하고 유럽 시장 확대를 모색하고 있습니다. 다만, 미국-이란 종전 가능성 부각으로 인한 투자 심리 위축은 주가에 부담으로 작용하고 있습니다.",
+          "close": 1425000.0,
+          "change_pct": -6.188281764318626,
+          "score": 55,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.9566490415574281,
+          "rsi14": 59.183673469387756,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 70,
+          "ai_state": "강세",
+          "ai_action": "보유",
+          "ai_note": "LIG넥스원은 중동 지역 수출 확대와 함께 단거리공대공유도탄-II 체계 개발에 박차를 가하고 있습니다. 특히 천궁-II의 수요 증가와 실전 검증은 긍정적인 모멘텀으로 작용하고 있습니다.",
           "close": 883000.0,
           "change_pct": 0.0,
           "score": 66,
