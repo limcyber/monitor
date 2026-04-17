@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-17 07:44 ET",
-  "count": 163,
+  "updated_at_et": "2026-04-17 09:02 ET",
+  "count": 164,
   "items": [
     {
       "generated_at_et": "2026-03-29 15:33 ET",
@@ -17634,6 +17634,168 @@
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-04-17 09:02 ET",
+      "market_data_as_of": "2026-04-17 08:43 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 65,
+          "ai_state": "관망",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "NVIDIA가 양자 컴퓨팅 발전을 위한 최초의 오픈 AI 모델인 Ising을 출시했습니다. RSI가 92로 과열 구간에 진입했으므로, 단기적인 조정 가능성을 염두에 두고 관망하는 것이 좋겠습니다.",
+          "close": 199.0713,
+          "change_pct": 0.36364702510165436,
+          "score": 52,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 35,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "네덜란드에서 자율주행 기능 사용 승인을 받았으나, 유럽연합 집행위원회의 최종 승인이 필요합니다. RSI 63은 상승 추세지만, 거래량이 약한 점은 부담입니다. 보유자는 단기 반등 시 분할 매도를 고려할 수 있습니다.",
+          "close": 393.9973,
+          "change_pct": 1.3106984272343247,
+          "score": 29,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "TSLA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 63 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 60,
+          "ai_state": "관망",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "메모리 칩 비용 상승으로 Meta Quest 3 및 Quest 3S VR 헤드셋 가격을 인상했습니다. AI 인재 확보 경쟁이 치열한 가운데, 전 OpenAI CTO의 스타트업 창업 멤버 5명을 영입했습니다. RSI 96은 과열 상태이므로, 추가 상승보다는 조정을 기다리는 것이 좋겠습니다.",
+          "close": 678.6,
+          "change_pct": 0.25558894548325384,
+          "score": 52,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 85,
+          "ai_state": "강세",
+          "ai_action": "매수",
+          "ai_note": "삼성전자와 차세대 AI 메모리 솔루션 협력을 확대하고, 프랑스 정부와 AI 혁신 및 연구 협력을 발표하는 등 AI 분야에서 공격적인 행보를 보이고 있습니다. RSI 90은 과열 구간이지만, 강력한 중기 골든크로스 신호와 함께 시장 대비 강한 흐름을 유지하고 있어 매수 관점에서 접근 가능합니다.",
+          "close": 274.63,
+          "change_pct": -1.3045387904221384,
+          "score": 83,
+          "state": "강함",
+          "action": "매수 가능",
+          "cross_highlights": [
+            "AMD 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 90 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 55,
+          "ai_state": "관망",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "길리어드 사이언스와 협력을 확대하며 온콜로지 R&D를 강화하고 있습니다. RSI 74는 과열 구간이며, 최근 단기 골든크로스가 나왔으나 급등 후 숨 고르기 구간으로 보입니다. 보유자는 70선 이탈 시 손절을 고려할 수 있습니다.",
+          "close": 55.95,
+          "change_pct": 2.8114698319261944,
+          "score": 50,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "TEM 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 74 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 80,
+          "ai_state": "양호",
+          "ai_action": "선별 매수",
+          "ai_note": "반도체 섹터 전반의 강세와 함께 최근 중기 골든크로스가 나왔습니다. RSI 88은 과열 구간이지만, AI 및 HPC 관련 수혜가 지속될 것으로 예상되므로 선별적인 매수 접근이 유효합니다.",
+          "close": 409.59,
+          "change_pct": 0.8966591165200821,
+          "score": 78,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "SOXX 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 88 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 40,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "딜리전트 로보틱스를 인수하여 물리적 AI 자율주행 플랫폼을 확장합니다. RSI 65는 상승 추세지만, 거래량이 약하고 경영진의 매도 물량이 나오고 있어 주의가 필요합니다. 보유자는 9.5달러 지지선 이탈 시 매도를 고려할 수 있습니다.",
+          "close": 9.59,
+          "change_pct": 1.4814835297414675,
+          "score": 34,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SERV 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 65 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 45,
+          "ai_state": "관망",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "2026년 1분기 실적 발표를 앞두고 있으며, 2026년 매출 목표를 4750만~5000만 달러로 제시했습니다. RSI 77은 과열 구간이며, 50일선 위에 있지만 뚜렷한 상승 모멘텀은 부족합니다. 보유자는 480선 지지 여부를 확인하며 관망하는 것이 좋습니다.",
+          "close": 480.12,
+          "change_pct": 2.371002132196165,
+          "score": 43,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
     }
   ]
 }
