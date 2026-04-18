@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-18 11:31 ET",
-  "count": 187,
+  "updated_at_et": "2026-04-18 12:31 ET",
+  "count": 188,
   "items": [
     {
       "generated_at_et": "2026-03-29 15:33 ET",
@@ -20437,6 +20437,168 @@
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-04-18 12:31 ET",
+      "market_data_as_of": "2026-04-17 16:00 ET (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 75,
+          "ai_state": "강한 상승",
+          "ai_action": "매수",
+          "ai_note": "NVIDIA가 양자 컴퓨팅 분야로 사업을 확장하며 새로운 AI 모델 'Ising'을 출시했습니다. 이는 AI 및 가속 컴퓨팅 하드웨어 공급업체로서의 입지를 더욱 강화할 것으로 보입니다. 현재 주가는 분석가 목표가 대비 약 25% 낮아 매력적인 진입 기회를 제공할 수 있습니다.",
+          "close": 201.67999267578125,
+          "change_pct": 1.6788436953854902,
+          "score": 52,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.9390949792498752,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 55,
+          "ai_state": "보합",
+          "ai_action": "관망",
+          "ai_note": "최근 단기 골든크로스가 발생했으나, 전반적인 판매량 감소 추세는 여전히 부담입니다. 현재로서는 추가적인 상승 모멘텀을 확인하며 관망하는 것이 좋겠습니다.",
+          "close": 400.6199951171875,
+          "change_pct": 3.013628543234881,
+          "score": 45,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "TSLA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 1.3x (거래량 확인) / RSI 64 (상방 우세)"
+          ],
+          "volume_ratio_20d": 1.2742419021468157,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 60,
+          "ai_state": "혼조세",
+          "ai_action": "보유 후 관망",
+          "ai_note": "AI 파트너십 강화와 인프라 투자 소식에도 불구하고, 5월 20일부터 시작될 대규모 감원 계획은 단기적으로 주가에 부담을 줄 수 있습니다. 현재 보유 중이라면 감원 및 AI 투자 관련 뉴스를 주시하며 대응하는 것이 좋습니다.",
+          "close": 688.5499877929688,
+          "change_pct": 1.7255887777621215,
+          "score": 57,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.7782698498893978,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 80,
+          "ai_state": "강한 상승",
+          "ai_action": "매수",
+          "ai_note": "AMD는 Meta와의 AI GPU 공급 계약 확대와 삼성과의 차세대 AI 메모 솔루션 협력을 발표하며 AI 시장에서의 경쟁력을 강화하고 있습니다. 중기 골든크로스 신호와 함께 긍정적인 뉴스 흐름이 이어지고 있어 매수 관점에서 접근할 만합니다.",
+          "close": 278.3900146484375,
+          "change_pct": 0.04672064912309981,
+          "score": 78,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "AMD 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.9x (거래량 보통) / RSI 93 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.9492372286911229,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 65,
+          "ai_state": "상승세",
+          "ai_action": "관망 후 매수",
+          "ai_note": "최근 단기 골든크로스가 발생했으나, RSI 과열 구간 진입은 주의가 필요합니다. 여러 협력 계약 소식이 긍정적이나, 급격한 상승 후 숨 고르기 구간을 기다리는 것이 현명해 보입니다.",
+          "close": 55.869998931884766,
+          "change_pct": 2.6644630865990893,
+          "score": 61,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "TEM 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 1.2x (거래량 확인) / RSI 74 (과열 구간)"
+          ],
+          "volume_ratio_20d": 1.188317147799886,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 70,
+          "ai_state": "상승세",
+          "ai_action": "선별 매수",
+          "ai_note": "반도체 섹터 전반에 대한 긍정적인 전망과 함께 중기 골든크로스 신호가 나타나고 있습니다. 다만, 최근 거래량은 다소 약한 편이므로 개별 종목 선별에 집중하는 것이 좋겠습니다.",
+          "close": 415.7099914550781,
+          "change_pct": 2.404231790752931,
+          "score": 78,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "SOXX 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.5x (거래량 약함) / RSI 89 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.54664189683369,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 50,
+          "ai_state": "보합",
+          "ai_action": "관망",
+          "ai_note": "자율주행 로봇 사업 확장 및 파트너십 소식이 있으나, 최근 주가 움직임은 뚜렷한 방향성을 보이지 않고 있습니다. 단기 골든크로스 신호는 긍정적이나, 추가적인 상승 동력을 확인하며 관망하는 것이 좋겠습니다.",
+          "close": 9.569999694824219,
+          "change_pct": 1.2698400844561863,
+          "score": 50,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SERV 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 1.2x (거래량 확인) / RSI 65 (상방 우세)"
+          ],
+          "volume_ratio_20d": 1.1847636956668866,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 40,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "최근 급등 후 거래량이 약한 모습이며, 뚜렷한 상승 모멘텀이 부족합니다. 현재로서는 추가적인 상승보다는 조정 가능성을 염두에 두고 관망하는 것이 안전해 보입니다.",
+          "close": 514.7100219726562,
+          "change_pct": 9.74627334171776,
+          "score": 43,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.7236708000430001,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
     }
   ]
 }
