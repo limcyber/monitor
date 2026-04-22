@@ -1,42 +1,44 @@
 {
-  "generated_at_et": "2026-04-22 06:45 ET",
-  "market_data_as_of": "2026-04-21 16:00 ET (Close)",
+  "generated_at_et": "2026-04-22 09:10 ET",
+  "market_data_as_of": "2026-04-22 08:45 ET (5분봉)",
   "status": "ok",
   "error": null,
   "items": [
     {
       "ticker": "NVDA",
-      "ai_score": 75,
-      "ai_state": "강세",
-      "ai_action": "보유",
-      "ai_note": "NVIDIA는 양자 컴퓨터 발전을 위한 개방형 AI 모델인 Ising을 출시했습니다. 또한 Marvell과의 파트너십을 통해 AI 공장 및 AI-RAN 생태계를 강화하고 있습니다. 현재 주가는 199.88달러입니다.",
-      "close": 199.8800048828125,
-      "change_pct": -1.078883847432044,
-      "score": 63,
-      "state": "애매",
-      "action": "보류 / 관찰",
-      "cross_highlights": [],
-      "volume_ratio_20d": 0.6690191314856808,
+      "ai_score": 85,
+      "ai_state": "강한 상승",
+      "ai_action": "보유 / 추가 매수 고려",
+      "ai_note": "최근 중기 골든크로스 발생 및 50일선 지지 확인. RSI 과열 구간 진입했으나, 강한 상승 추세 유지 시 보유하며 추격 매수 고려 가능. 단기 급등 후 눌림목 발생 시 분할 매수도 유효.",
+      "close": 200.805,
+      "change_pct": 0.46277521242299446,
+      "score": 78,
+      "state": "양호",
+      "action": "선별 매수",
+      "cross_highlights": [
+        "NVDA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 91 (과열 구간)"
+      ],
+      "volume_ratio_20d": 0.0,
       "signals": {
         "short_cross": "none",
-        "mid_cross": "none"
+        "mid_cross": "bull"
       }
     },
     {
       "ticker": "TSLA",
-      "ai_score": 40,
-      "ai_state": "약세",
-      "ai_action": "관망",
-      "ai_note": "테슬라는 캘리포니아에서 하이브리드 차량에 대한 등록이 감소하고 있으며, 곧 실적 발표가 예정되어 있습니다. 현재 주가는 386.42달러입니다.",
-      "close": 386.4200134277344,
-      "change_pct": -1.549041164908438,
-      "score": 11,
+      "ai_score": 30,
+      "ai_state": "관망",
+      "ai_action": "보유 / 실적 발표 후 대응",
+      "ai_note": "실적 발표 임박으로 변동성 확대 예상. 현재 50일선 하회 및 약한 거래량은 부담 요인. 실적 발표 결과에 따라 추세 전환 가능성이 있으므로, 발표 후 추세를 확인하며 대응하는 것이 좋음.",
+      "close": 388.4856,
+      "change_pct": 0.5345444077657469,
+      "score": 6,
       "state": "회피",
       "action": "보류 / 관찰",
       "cross_highlights": [
-        "TSLA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.7x (거래량 약함) / RSI 56 (상방 우세)"
+        "TSLA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 53 (중립)"
       ],
-      "volume_ratio_20d": 0.7355238836774314,
+      "volume_ratio_20d": 0.0,
       "signals": {
         "short_cross": "bull",
         "mid_cross": "none"
@@ -44,17 +46,17 @@
     },
     {
       "ticker": "META",
-      "ai_score": 65,
-      "ai_state": "중립",
-      "ai_action": "보유",
-      "ai_note": "Meta는 미국 전역 직원의 컴퓨터에 AI 학습을 위한 추적 소프트웨어를 설치한다고 발표했습니다. 또한 Corning과 데이터센터 구축을 위한 대규모 계약을 체결했습니다. 현재 주가는 668.84달러입니다.",
-      "close": 668.8400268554688,
-      "change_pct": -0.3085281739606205,
-      "score": 57,
-      "state": "애매",
+      "ai_score": 40,
+      "ai_state": "관망",
+      "ai_action": "보유 / 실적 발표 후 대응",
+      "ai_note": "실적 발표를 앞두고 있어 보수적인 접근이 필요. 시장 대비 강한 흐름을 보이고 있으나, 거래량 부진은 아쉬운 부분. 실적 발표 이후 방향성을 확인하며 대응할 것.",
+      "close": 675.36,
+      "change_pct": 0.9748180256472949,
+      "score": 46,
+      "state": "약함",
       "action": "보류 / 관찰",
       "cross_highlights": [],
-      "volume_ratio_20d": 0.4341231807153892,
+      "volume_ratio_20d": 0.0,
       "signals": {
         "short_cross": "none",
         "mid_cross": "none"
@@ -62,19 +64,19 @@
     },
     {
       "ticker": "AMD",
-      "ai_score": 95,
-      "ai_state": "강세",
-      "ai_action": "매수",
-      "ai_note": "AMD는 Meta와 6기가와트 규모의 AMD GPU 공급 파트너십을 발표했으며, 삼성과 차세대 AI 메모리 솔루션 협력을 확대합니다. 최근 중기 골든크로스가 발생했으며, 현재 주가는 284.49달러입니다.",
-      "close": 284.489990234375,
-      "change_pct": 3.4697136220384506,
-      "score": 94,
-      "state": "강함",
-      "action": "매수 가능",
+      "ai_score": 85,
+      "ai_state": "강한 상승",
+      "ai_action": "보유 / 추가 매수 고려",
+      "ai_note": "NVDA와 유사하게 중기 골든크로스 및 50일선 지지 확인. RSI 과열 구간 진입했으나, 강한 상승 추세 지속 가능성 높음. 보유하며 눌림목 발생 시 추가 매수 고려.",
+      "close": 292.12,
+      "change_pct": 2.681995861906805,
+      "score": 78,
+      "state": "양호",
+      "action": "선별 매수",
       "cross_highlights": [
-        "AMD 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 1.1x (거래량 보통) / RSI 96 (과열 구간)"
+        "AMD 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 96 (과열 구간)"
       ],
-      "volume_ratio_20d": 1.0519395713652047,
+      "volume_ratio_20d": 0.0,
       "signals": {
         "short_cross": "none",
         "mid_cross": "bull"
@@ -82,39 +84,37 @@
     },
     {
       "ticker": "TEM",
-      "ai_score": 60,
+      "ai_score": 55,
       "ai_state": "중립",
-      "ai_action": "관망",
-      "ai_note": "Tempus AI는 5월 5일에 1분기 실적을 발표할 예정이며, 현재 분석가들의 '매수' 의견이 지배적입니다. 최근 단기 골든크로스가 나왔습니다. 현재 주가는 55.15달러입니다.",
-      "close": 55.150001525878906,
-      "change_pct": -2.8707243544575434,
-      "score": 54,
+      "ai_action": "보유 / 추세 확인",
+      "ai_note": "시장 대비 강한 흐름과 50일선, 20일선 지지 확인. RSI도 과열 구간은 아니나, 거래량 부진은 아쉬움. 뚜렷한 추세가 나타나기 전까지는 보유하며 관망하는 것이 좋음.",
+      "close": 56.03,
+      "change_pct": 1.5956454211667692,
+      "score": 52,
       "state": "애매",
       "action": "보류 / 관찰",
-      "cross_highlights": [
-        "TEM 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 1.0x (거래량 보통) / RSI 68 (상방 우세)"
-      ],
-      "volume_ratio_20d": 0.951792127536347,
+      "cross_highlights": [],
+      "volume_ratio_20d": 0.0,
       "signals": {
-        "short_cross": "bull",
+        "short_cross": "none",
         "mid_cross": "none"
       }
     },
     {
       "ticker": "SOXX",
-      "ai_score": 0,
-      "ai_state": "보통",
-      "ai_action": "선별 매수",
-      "ai_note": "SOXX는 반도체 섹터 ETF로, AI 및 HPC 관련 수혜가 기대됩니다. 최근 중기 골든크로스가 발생했으며, RSI가 100으로 과열 구간입니다. 현재 주가는 420.70달러입니다.",
-      "close": 420.70001220703125,
-      "change_pct": 0.7544065396127841,
+      "ai_score": 80,
+      "ai_state": "강한 상승",
+      "ai_action": "보유 / 추가 매수 고려",
+      "ai_note": "반도체 섹터 ETF로 중기 골든크로스 및 50일선 지지 확인. RSI 100은 과열 신호이나, 섹터 강세 지속 시 추가 상승 여력 있음. 보유하며 눌림목 발생 시 분할 매수 고려.",
+      "close": 427.01,
+      "change_pct": 1.4998782053430304,
       "score": 78,
       "state": "양호",
       "action": "선별 매수",
       "cross_highlights": [
-        "SOXX 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.5x (거래량 약함) / RSI 100 (과열 구간)"
+        "SOXX 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 100 (과열 구간)"
       ],
-      "volume_ratio_20d": 0.5208404968605482,
+      "volume_ratio_20d": 0.0,
       "signals": {
         "short_cross": "none",
         "mid_cross": "bull"
@@ -123,18 +123,18 @@
     {
       "ticker": "SERV",
       "ai_score": 45,
-      "ai_state": "약세",
-      "ai_action": "관망",
-      "ai_note": "Serve Robotics는 2,000대의 자율주행 로봇을 배치하며 미국 최대 규모의 보도 배달망을 구축했습니다. 하지만 최근 3개월간 주가가 36% 하락했으며, 경영진의 주식 매도가 있었습니다. 현재 주가는 9.74달러입니다.",
-      "close": 9.739999771118164,
-      "change_pct": -2.5025025598375716,
-      "score": 40,
+      "ai_state": "관망",
+      "ai_action": "보유 / 거래량 확인",
+      "ai_note": "단기 골든크로스 및 50일선 지지 확인되었으나, 거래량 부진이 발목을 잡고 있음. RSI 과열 구간 진입도 부담. 거래량 증가와 함께 추세가 강화되는지 확인 후 대응 필요.",
+      "close": 10.01,
+      "change_pct": 2.7720763370288948,
+      "score": 44,
       "state": "약함",
       "action": "보류 / 관찰",
       "cross_highlights": [
-        "SERV 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 1.5x (거래량 확인) / RSI 69 (상방 우세)"
+        "SERV 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 71 (과열 구간)"
       ],
-      "volume_ratio_20d": 1.48756537196183,
+      "volume_ratio_20d": 0.0,
       "signals": {
         "short_cross": "bull",
         "mid_cross": "none"
@@ -142,17 +142,17 @@
     },
     {
       "ticker": "KORU",
-      "ai_score": 50,
+      "ai_score": 55,
       "ai_state": "중립",
-      "ai_action": "관망",
-      "ai_note": "KORU Medical Systems는 1분기 실적 발표를 앞두고 있으며, CEO 교체가 예정되어 있습니다. 최근 단기 골든크로스가 나왔으나, 주가는 시장 대비 약한 모습을 보이고 있습니다. 현재 주가는 459.86달러입니다.",
-      "close": 459.8599853515625,
-      "change_pct": -6.901513516145119,
+      "ai_action": "보유 / 추세 확인",
+      "ai_note": "시장 대비 강한 흐름과 50일선, 20일선 지지 확인. RSI도 과열 구간은 아니나, 거래량 부진은 아쉬움. 뚜렷한 추세가 나타나기 전까지는 보유하며 관망하는 것이 좋음.",
+      "close": 502.1,
+      "change_pct": 8.740852128735632,
       "score": 52,
       "state": "애매",
       "action": "보류 / 관찰",
       "cross_highlights": [],
-      "volume_ratio_20d": 0.48356802986955466,
+      "volume_ratio_20d": 0.0,
       "signals": {
         "short_cross": "none",
         "mid_cross": "none"
