@@ -1,161 +1,7 @@
 {
-  "updated_at_et": "2026-04-21 22:48 ET",
+  "updated_at_et": "2026-04-22 01:19 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-04-04 16:01 ET",
-      "market_data_as_of": "2026-04-02 16:00 ET (Close)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 30,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "최근 20일선 아래로 하락하며 약세를 보이고 있습니다. 다음 실적 발표(5월 27일)를 기다리며 관망하는 것이 좋습니다.",
-          "close": 177.4,
-          "change_pct": 0.9388335704125117,
-          "score": 35,
-          "state": "약함",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 15,
-          "ai_state": "매우 약세",
-          "ai_action": "회피",
-          "ai_note": "시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 있습니다. 다음 실적 발표(4월 28일) 전까지는 회피하는 것이 좋습니다.",
-          "close": 360.5587,
-          "change_pct": -5.429709184121068,
-          "score": 14,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 15,
-          "ai_state": "매우 약세",
-          "ai_action": "회피",
-          "ai_note": "시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 있습니다. 다음 실적 발표(4월 29일) 전까지는 회피하는 것이 좋습니다.",
-          "close": 574.45,
-          "change_pct": -0.8252301555388586,
-          "score": 16,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 40,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "50일선 위에 있지만 거래량이 아직 약합니다. 다음 실적 발표(5월 5일)를 확인하며 추세를 지켜보는 것이 좋습니다.",
-          "close": 217.68,
-          "change_pct": 3.5535859604917786,
-          "score": 40,
-          "state": "약함",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 15,
-          "ai_state": "매우 약세",
-          "ai_action": "회피",
-          "ai_note": "시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 있습니다. 다음 실적 발표(5월 4일) 전까지는 회피하는 것이 좋습니다.",
-          "close": 47.39,
-          "change_pct": 0.7654714651228245,
-          "score": 16,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 35,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "50일선 아래에 있지만 시장 대비 잘 버티고 있습니다. 거래량이 아직 약하므로 다음 움직임을 관망하는 것이 좋습니다.",
-          "close": 339.85,
-          "change_pct": 0.38695321734900645,
-          "score": 36,
-          "state": "약함",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 10,
-          "ai_state": "매우 약세",
-          "ai_action": "회피",
-          "ai_note": "시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 있습니다. 다음 실적 발표(5월 20일) 전까지는 회피하는 것이 좋습니다.",
-          "close": 8.45,
-          "change_pct": 0.4756260798292278,
-          "score": 11,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 5,
-          "ai_state": "매우 약세",
-          "ai_action": "회피",
-          "ai_note": "최근 중기 데드크로스가 발생했으며 시장 대비 약한 흐름을 보이고 있습니다. 거래량도 약하므로 당분간 회피하는 것이 좋습니다.",
-          "close": 280.04,
-          "change_pct": -8.47169309026594,
-          "score": 6,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [
-            "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 46 (중립)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bear"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-04-04 17:52 ET",
       "market_data_as_of": "2026-04-02 16:00 ET (Close)",
@@ -22924,6 +22770,13 @@
           }
         }
       ]
+    },
+    {
+      "generated_at_et": "2026-04-22 01:19 ET",
+      "market_data_as_of": "2026-04-21 16:00 ET (Close)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
     }
   ]
 }
