@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-23 03:48 ET",
-  "count": 53,
+  "updated_at_et": "2026-04-23 19:42 ET",
+  "count": 54,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -7556,6 +7556,173 @@
           "ai_state": "강세",
           "ai_action": "매수 고려",
           "ai_note": "LIG넥스원은 함대공미사일 '해궁'의 첫 수출 계약 체결 등 방산 부문에서의 성과가 두드러지고 있습니다. RSI 지표가 상승 추세를 보이고 있어 추가 상승 여력이 있습니다.",
+          "close": 971000.0,
+          "change_pct": -4.803921568627456,
+          "score": 66,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.6199065191282631,
+          "rsi14": 62.09150326797386,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-04-23 19:42 ET",
+      "market_data_as_of": "2026-04-23 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 20,
+          "ai_state": "약함",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "최근 단기 및 중기 데드크로스가 발생했으며 거래량도 약해 현재 매수 시점은 아닙니다. 보유 중이라면 20일선 이탈 시 손절을 고려할 수 있습니다.",
+          "close": 46600.0,
+          "change_pct": -2.1008403361344574,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "아이티센글로벌 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.6x (거래량 약함) / RSI 50 (중립)",
+            "아이티센글로벌 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.6x (거래량 약함) / RSI 50 (중립)"
+          ],
+          "volume_ratio_20d": 0.6094410642573183,
+          "rsi14": 50.10183299389002,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 30,
+          "ai_state": "약함",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "단기 골든크로스가 나왔으나 거래량이 약하고 50일선 아래에 있어 추가 상승을 기대하기 어렵습니다. 관망하며 50일선 회복 및 거래량 증가를 지켜보는 것이 좋습니다.",
+          "close": 47700.0,
+          "change_pct": -1.446280991735538,
+          "score": 10,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "클로봇 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.5x (거래량 약함) / RSI 44 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.5388554601361759,
+          "rsi14": 43.89067524115755,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 85,
+          "ai_state": "강함",
+          "ai_action": "매수 가능",
+          "ai_note": "시장 대비 강한 흐름을 보이며 50일선과 20일선 위에 있어 긍정적입니다. 현재 추세가 유지된다면 추가 상승을 기대해 볼 수 있습니다.",
+          "close": 222500.0,
+          "change_pct": 2.298850574712641,
+          "score": 84,
+          "state": "강함",
+          "action": "매수 가능",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.085721776006929,
+          "rsi14": 76.57393850658858,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 75,
+          "ai_state": "양호",
+          "ai_action": "선별 매수",
+          "ai_note": "시장 대비 강한 흐름을 보이며 50일선과 20일선 위에 있어 양호한 상태입니다. RSI가 과매수 구간에 진입했으므로 단기 조정을 염두에 두고 접근하는 것이 좋습니다.",
+          "close": 1212000.0,
+          "change_pct": -0.8994276369582943,
+          "score": 75,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.0399733847144945,
+          "rsi14": 84.7107438016529,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 15,
+          "ai_state": "약함",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "거래량이 약하고 시장 대비 힘이 약하며 50일선 아래에 있어 현재 매수 매력은 떨어집니다. 50일선 회복 및 거래량 증가를 확인 후 접근하는 것이 좋습니다.",
+          "close": 215000.0,
+          "change_pct": 0.4672897196261738,
+          "score": 7,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.8120074244212636,
+          "rsi14": 73.84196185286103,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 35,
+          "ai_state": "회피",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "거래량이 약하고 시장 대비 힘이 약한 모습입니다. 50일선 위에 있지만, 뚜렷한 상승 모멘텀이 부족하므로 관망하는 것이 좋습니다.",
+          "close": 536000.0,
+          "change_pct": -0.9242144177449174,
+          "score": 26,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.8921961984483358,
+          "rsi14": 69.11764705882354,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 30,
+          "ai_state": "약함",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "최근 단기 데드크로스가 발생했고 시장 대비 힘이 약합니다. 20일선 아래에 있어 추가 하락 가능성이 있으므로, 20일선 회복 시까지 관망하는 것이 좋습니다.",
+          "close": 1416000.0,
+          "change_pct": 0.0,
+          "score": 38,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.7x (거래량 약함) / RSI 46 (중립)"
+          ],
+          "volume_ratio_20d": 0.6823241431580067,
+          "rsi14": 46.25850340136055,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 65,
+          "ai_state": "양호",
+          "ai_action": "선별 매수",
+          "ai_note": "시장 대비 강한 흐름을 보이며 50일선과 20일선 위에 있어 양호한 상태입니다. RSI가 60선을 넘어서며 상승 추세가 이어질 가능성이 있습니다.",
           "close": 971000.0,
           "change_pct": -4.803921568627456,
           "score": 66,
