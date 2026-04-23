@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-22 22:26 ET",
-  "count": 51,
+  "updated_at_et": "2026-04-23 01:28 ET",
+  "count": 52,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -7236,6 +7236,173 @@
       "status": "error",
       "error": "한국 종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-04-23 01:28 ET",
+      "market_data_as_of": "2026-04-23 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 25,
+          "ai_state": "약함",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "아이티센글로벌은 최근 AI 전환 솔루션 공개 소식이 있었으나, 주가는 약세를 보이고 있습니다. 단기 데드크로스 신호도 있어 추가 하락 가능성을 염두에 두고 관망하는 것이 좋겠습니다.",
+          "close": 46600.0,
+          "change_pct": -2.1008403361344574,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "아이티센글로벌 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.6x (거래량 약함) / RSI 50 (중립)",
+            "아이티센글로벌 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.6x (거래량 약함) / RSI 50 (중립)"
+          ],
+          "volume_ratio_20d": 0.6094410642573183,
+          "rsi14": 50.10183299389002,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 30,
+          "ai_state": "약함",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "클로봇은 DX 전문가 영입 소식이 있었으나, 주가는 약세를 보이고 있습니다. 거래량이 아직 약하고 50일선 아래에 있어 추가적인 상승 모멘텀을 기다리는 것이 좋겠습니다.",
+          "close": 47700.0,
+          "change_pct": -1.446280991735538,
+          "score": 10,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "클로봇 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.5x (거래량 약함) / RSI 44 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.5388554601361759,
+          "rsi14": 43.89067524115755,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 85,
+          "ai_state": "강함",
+          "ai_action": "매수 가능",
+          "ai_note": "삼성전자는 최근 반도체 기술 유출 관련 부정적인 뉴스가 있었으나, 주가는 견조한 흐름을 보이고 있습니다. 시장 대비 강한 모습을 보이며 50일선 위에 있어 매수 관점에서 접근 가능합니다.",
+          "close": 222500.0,
+          "change_pct": 2.298850574712641,
+          "score": 84,
+          "state": "강함",
+          "action": "매수 가능",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.085721776006929,
+          "rsi14": 76.57393850658858,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 78,
+          "ai_state": "양호",
+          "ai_action": "선별 매수",
+          "ai_note": "SK하이닉스는 1분기 사상 최대 실적을 기록하며 HBM 수요 강세를 바탕으로 호황이 지속될 전망입니다. 다만, 최근 주가 상승폭이 커 단기 조정 가능성도 염두에 두어야 합니다.",
+          "close": 1212000.0,
+          "change_pct": -0.8994276369582943,
+          "score": 75,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.0399733847144945,
+          "rsi14": 84.7107438016529,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 15,
+          "ai_state": "약함",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "NAVER는 최근 악성 댓글 방지를 위한 AI 도입 소식이 있었으나, 주가는 약세를 보이고 있습니다. 거래량이 약하고 시장 대비 힘이 약한 모습이므로 추가적인 상승 모멘텀을 기다리는 것이 좋겠습니다.",
+          "close": 215000.0,
+          "change_pct": 0.4672897196261738,
+          "score": 7,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.8120074244212636,
+          "rsi14": 73.84196185286103,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 35,
+          "ai_state": "회피",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "현대차는 1분기 영업이익이 예상치를 하회하며 관세 및 전쟁 영향으로 수익성이 악화되었습니다. 하이브리드차 판매 호조에도 불구하고 당분간 보수적인 관점에서 접근하는 것이 좋겠습니다.",
+          "close": 536000.0,
+          "change_pct": -0.9242144177449174,
+          "score": 26,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.8921961984483358,
+          "rsi14": 69.11764705882354,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 40,
+          "ai_state": "약함",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "한화에어로스페이스는 미국 노스롭그루먼과 장거리 미사일 공동 개발 소식이 있었으나, 주가는 약세를 보이고 있습니다. 단기 데드크로스 신호가 있어 추가 하락 가능성을 염두에 두고 관망하는 것이 좋겠습니다.",
+          "close": 1416000.0,
+          "change_pct": 0.0,
+          "score": 38,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.7x (거래량 약함) / RSI 46 (중립)"
+          ],
+          "volume_ratio_20d": 0.6823241431580067,
+          "rsi14": 46.25850340136055,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 70,
+          "ai_state": "양호",
+          "ai_action": "선별 매수",
+          "ai_note": "LIG넥스원은 사명 변경 후 주가가 상승세를 보이고 있으며, 말레이시아에 해궁 수출 계약을 체결하는 등 긍정적인 소식이 이어지고 있습니다. 방산주 전반의 강세와 함께 추가 상승을 기대해 볼 수 있습니다.",
+          "close": 971000.0,
+          "change_pct": -4.803921568627456,
+          "score": 66,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.6199065191282631,
+          "rsi14": 62.09150326797386,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
     }
   ]
 }
