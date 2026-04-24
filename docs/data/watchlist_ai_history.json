@@ -1,168 +1,7 @@
 {
-  "updated_at_et": "2026-04-24 13:28 ET",
+  "updated_at_et": "2026-04-24 14:05 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-04-10 06:17 ET",
-      "market_data_as_of": "2026-04-09 15:55 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 75,
-          "ai_state": "상승",
-          "ai_action": "보유 / 추가 매수",
-          "ai_note": "SiFive가 Nvidia로부터 4억 달러를 투자받았다는 소식이 있습니다. AI 인프라 수요 증가에 따른 긍정적 흐름이 지속될 것으로 보입니다. 단기 골든크로스 신호가 있으나 거래량이 약한 점은 유의해야 합니다.",
-          "close": 183.89500427246094,
-          "change_pct": 0.9968159178130431,
-          "score": 29,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "NVDA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 56 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.0040750725247615215,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 20,
-          "ai_state": "약세",
-          "ai_action": "보류 / 관찰",
-          "ai_note": "FSD 14.3 출시 및 해킹 단속 소식이 있으나, 시장 대비 약한 흐름과 20일, 50일선 아래 종가 등 기술적 지표가 좋지 않습니다. 저가 SUV 출시 루머는 긍정적이나 실현 가능성을 지켜봐야 합니다.",
-          "close": 345.0,
-          "change_pct": 0.5098324836125379,
-          "score": 3,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0030192224482591995,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 60,
-          "ai_state": "상승",
-          "ai_action": "보유 / 추가 매수",
-          "ai_note": "CoreWeave와 210억 달러 규모의 AI 클라우드 용량 계약을 체결하며 AI 인프라 투자를 확대하고 있습니다. Muse Spark AI 모델 출시도 긍정적입니다. 단기 골든크로스 신호가 있으나 거래량은 약합니다.",
-          "close": 628.6099853515625,
-          "change_pct": 2.6436110664568746,
-          "score": 17,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "META 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 55 (중립)"
-          ],
-          "volume_ratio_20d": 0.004273963592398119,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 70,
-          "ai_state": "상승",
-          "ai_action": "보유 / 추가 매수",
-          "ai_note": "AI 인프라 및 데이터센터 기술에 대한 전략적 초점이 강화되고 있으며, 여러 긍정적인 분석 보고서가 나오고 있습니다. 50일선 위에 있으며 시장 대비 강한 흐름을 보이고 있습니다.",
-          "close": 236.5500030517578,
-          "change_pct": 2.0403742464401686,
-          "score": 63,
-          "state": "애매",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.003913114200807021,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 15,
-          "ai_state": "약세",
-          "ai_action": "보류 / 관찰",
-          "ai_note": "진단 및 데이터 사업 성장은 긍정적이나, 주가는 시장 대비 약한 흐름을 보이고 있습니다. 20일, 50일선 아래 종가 등 기술적 지표가 좋지 않아 관망이 필요합니다.",
-          "close": 44.15999984741211,
-          "change_pct": -7.03157926860608,
-          "score": 3,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.007854738493915383,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 65,
-          "ai_state": "상승",
-          "ai_action": "보유 / 추가 매수",
-          "ai_note": "반도체 섹터 전반의 긍정적인 흐름과 함께 단기 골든크로스 신호가 나타났습니다. 시장 대비 강한 흐름을 보이며, AI 관련 수요 증가가 지속될 것으로 예상됩니다.",
-          "close": 378.32000732421875,
-          "change_pct": 2.138232602117096,
-          "score": 54,
-          "state": "애매",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "SOXX 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 65 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.004465345516597414,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 10,
-          "ai_state": "약세",
-          "ai_action": "보류 / 관찰",
-          "ai_note": "로봇 배송 사업 확장 소식은 있으나, 주가는 시장 대비 약한 흐름을 보이고 있습니다. 20일, 50일선 아래 종가 등 기술적 지표가 좋지 않아 관망이 필요합니다.",
-          "close": 8.085000038146973,
-          "change_pct": -3.405016144669548,
-          "score": 2,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.004653542354058018,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 35,
-          "ai_state": "약세",
-          "ai_action": "보류 / 관찰",
-          "ai_note": "4분기 및 연간 매출 성장과 긍정적인 조정 EBITDA는 좋으나, 중기 데드크로스 신호와 약한 거래량은 부담입니다. 단기 골든크로스가 나왔지만 추세 전환을 더 지켜봐야 합니다.",
-          "close": 397.6000061035156,
-          "change_pct": -1.8295853147919594,
-          "score": 40,
-          "state": "약함",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "KORU 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 50 (중립)",
-            "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 50 (중립)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "bear"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-04-10 10:33 ET",
       "market_data_as_of": "2026-04-09 15:55 ET (5분봉)",
@@ -22737,6 +22576,13 @@
           }
         }
       ]
+    },
+    {
+      "generated_at_et": "2026-04-24 14:05 ET",
+      "market_data_as_of": "2026-04-24 13:30 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
     }
   ]
 }
