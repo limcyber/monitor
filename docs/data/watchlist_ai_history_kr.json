@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-23 19:42 ET",
-  "count": 54,
+  "updated_at_et": "2026-04-23 22:27 ET",
+  "count": 55,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -7731,6 +7731,173 @@
           "cross_highlights": [],
           "volume_ratio_20d": 0.6199065191282631,
           "rsi14": 62.09150326797386,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-04-23 22:27 ET",
+      "market_data_as_of": "2026-04-22 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 15,
+          "ai_state": "약세",
+          "ai_action": "보유/관찰",
+          "ai_note": "최근 중기 데드크로스 발생 및 거래량 약세로 인해 추가 하락 가능성이 있습니다. 단기 반등 시 비중 축소를 고려해 볼 수 있습니다.",
+          "close": 46850.0,
+          "change_pct": -1.5756302521008458,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "아이티센글로벌 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.7x (거래량 약함) / RSI 51 (중립)",
+            "아이티센글로벌 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.7x (거래량 약함) / RSI 51 (중립)"
+          ],
+          "volume_ratio_20d": 0.7272678030422717,
+          "rsi14": 50.617283950617285,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "보유/관찰",
+          "ai_note": "단기 골든크로스에도 불구하고 거래량이 약하고 시장 대비 약한 흐름을 보입니다. 50일선 하향 돌파 시 추가 하락에 유의해야 합니다.",
+          "close": 47650.0,
+          "change_pct": -1.5495867768595017,
+          "score": 7,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "클로봇 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.6x (거래량 약함) / RSI 44 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.6421231570684758,
+          "rsi14": 43.82022471910113,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 75,
+          "ai_state": "강세",
+          "ai_action": "매수 고려",
+          "ai_note": "시장 대비 강한 흐름을 보이며 20일선과 50일선 위에 안착했습니다. 다만, 최근 노조 파업 이슈가 생산 및 실적에 미칠 영향은 주시해야 합니다.",
+          "close": 224500.0,
+          "change_pct": 3.218390804597693,
+          "score": 82,
+          "state": "강함",
+          "action": "매수 가능",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.3244285748311828,
+          "rsi14": 77.24039829302987,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 90,
+          "ai_state": "매우 강함",
+          "ai_action": "매수",
+          "ai_note": "역대급 실적 발표와 함께 목표주가 상향 리포트가 이어지고 있습니다. 메모리 사이클 장기화 전망과 HBM 수요 강세가 긍정적입니다.",
+          "close": 1225000.0,
+          "change_pct": 0.16353229762877675,
+          "score": 85,
+          "state": "강함",
+          "action": "매수 가능",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.2324868876166466,
+          "rsi14": 86.73684210526315,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "보유/관찰",
+          "ai_note": "시장 대비 약한 흐름을 보이며 50일선 아래에 위치해 있습니다. 단기 반등 시 매도 관점을 유지하는 것이 좋습니다.",
+          "close": 217500.0,
+          "change_pct": 1.6355140186915973,
+          "score": 23,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.1078092055012674,
+          "rsi14": 75.51020408163265,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 35,
+          "ai_state": "약세",
+          "ai_action": "보유/관찰",
+          "ai_note": "매출은 최대치를 기록했으나, 미국 관세 및 원자재 가격 상승으로 영업이익이 감소했습니다. 하이브리드차 판매 호조는 긍정적이나, 추가적인 상승 모멘텀은 제한적입니다.",
+          "close": 532000.0,
+          "change_pct": -1.6635859519408491,
+          "score": 32,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.1568872693727819,
+          "rsi14": 67.52873563218391,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 40,
+          "ai_state": "약세",
+          "ai_action": "보유/관찰",
+          "ai_note": "단기 데드크로스 발생 및 시장 대비 약한 흐름을 보입니다. 20일선 하향 돌파 시 추가 하락에 유의해야 합니다.",
+          "close": 1425000.0,
+          "change_pct": 0.6355932203389925,
+          "score": 38,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.8x (거래량 약함) / RSI 47 (중립)"
+          ],
+          "volume_ratio_20d": 0.8343291351381794,
+          "rsi14": 47.33333333333333,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 70,
+          "ai_state": "양호",
+          "ai_action": "선별 매수",
+          "ai_note": "시장 대비 강한 흐름을 유지하고 있으며, 20일선과 50일선 위에 있습니다. 최근 말레이시아에 함대공 유도탄 '해궁' 수출 계약을 체결하며 방산 부문의 성장이 기대됩니다.",
+          "close": 966000.0,
+          "change_pct": -5.294117647058827,
+          "score": 69,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.707640574763072,
+          "rsi14": 61.422413793103445,
           "signals": {
             "short_cross": "none",
             "mid_cross": "none"
