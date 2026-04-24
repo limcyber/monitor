@@ -1,41 +1,7 @@
 {
-  "updated_at_et": "2026-04-24 06:49 ET",
+  "updated_at_et": "2026-04-24 07:53 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-04-09 12:05 ET",
-      "market_data_as_of": "2026-04-08 12:40 ET (5분봉)",
-      "market": {
-        "score": 78,
-        "level": 5,
-        "state": "레벨 5/6 - 상승 우위",
-        "action": "매수 / 보유",
-        "cross_highlights": [
-          "S&P500 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 58 (상방 우세)",
-          "나스닥 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 56 (상방 우세)"
-        ],
-        "top_reasons": [
-          "S&P500이 200일선 위에 있습니다 (+10)",
-          "나스닥이 200일선 위에 있습니다 (+10)",
-          "S&P500의 50일선이 200일선 위에 있습니다 (+8)"
-        ],
-        "metrics": {
-          "vix_close": 20.950000762939453,
-          "tnx_close": 4.2729997634887695,
-          "pct_above_20dma": 73.558648111332,
-          "pct_above_50dma": 45.32803180914513
-        }
-      },
-      "ai_analysis": {
-        "status": "error",
-        "model": "gemini-2.5-flash",
-        "content": "AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'"
-      },
-      "ai_notifications": {
-        "count": 0,
-        "items": []
-      }
-    },
     {
       "generated_at_et": "2026-04-09 16:06 ET",
       "market_data_as_of": "2026-04-09 15:55 ET (5분봉)",
@@ -7221,6 +7187,40 @@
             "ticker": "KORU"
           }
         ]
+      }
+    },
+    {
+      "generated_at_et": "2026-04-24 07:53 ET",
+      "market_data_as_of": "2026-04-23 15:35 ET (5분봉)",
+      "market": {
+        "score": 100,
+        "level": 6,
+        "state": "레벨 6/6 - 강한 상승장",
+        "action": "매수 / 강한 보유",
+        "cross_highlights": [
+          "S&P500 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 85 (과열 구간)",
+          "나스닥 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 86 (과열 구간)"
+        ],
+        "top_reasons": [
+          "S&P500이 200일선 위에 있습니다 (+10)",
+          "나스닥이 200일선 위에 있습니다 (+10)",
+          "S&P500의 50일선이 200일선 위에 있습니다 (+8)"
+        ],
+        "metrics": {
+          "vix_close": 19.450000762939453,
+          "tnx_close": 4.322999954223633,
+          "pct_above_20dma": 64.61232604373758,
+          "pct_above_50dma": 54.67196819085487
+        }
+      },
+      "ai_analysis": {
+        "status": "error",
+        "model": "gemini-2.5-flash",
+        "content": "AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'"
+      },
+      "ai_notifications": {
+        "count": 0,
+        "items": []
       }
     }
   ]
