@@ -1,169 +1,7 @@
 {
-  "updated_at_et": "2026-04-25 05:27 ET",
+  "updated_at_et": "2026-04-25 06:11 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-04-11 13:50 ET",
-      "market_data_as_of": "2026-04-10 15:50 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 75,
-          "ai_state": "강세",
-          "ai_action": "매수",
-          "ai_note": "NVIDIA는 AI 시장 리더십을 공고히 하며, 파트너십 확대를 통해 AI 가속기 시장을 지배하고 있습니다. 최근 Marvell과의 파트너십 및 20억 달러 투자 소식은 긍정적입니다. 보유 중이라면 단기적인 과열 구간을 고려하여 일부 이익 실현 후 재진입 기회를 노리는 것도 좋습니다.",
-          "close": 188.5500030517578,
-          "change_pct": 2.522972811295965,
-          "score": 54,
-          "state": "애매",
-          "action": "관찰",
-          "cross_highlights": [
-            "NVDA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 68 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.007291308232940925,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 30,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "Tesla는 1분기 인도량 감소와 경쟁 심화로 어려움을 겪고 있습니다. 유럽 시장에서의 회복세는 긍정적이나, FSD 경쟁 심화와 높은 밸류에이션 부담이 존재합니다. 보유 중이라면 20일선 이탈 시 손절을 고려할 수 있습니다.",
-          "close": 347.510009765625,
-          "change_pct": 0.5468476000055178,
-          "score": 15,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0046007088414660325,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 60,
-          "ai_state": "중립",
-          "ai_action": "관망",
-          "ai_note": "Meta는 Muse Spark 모델 출시와 CoreWeave와의 파트너십 확대로 AI 모멘텀을 보여주고 있으나, 법적 리스크와 높은 AI 투자 비용이 부담입니다. 최근 엔지니어들의 AI 부서 강제 이동은 AI 집중을 보여주지만, 구조조정 우려도 있습니다. 보유 중이라면 50일선 지지 여부를 확인하며 대응하는 것이 좋습니다.",
-          "close": 629.2100219726562,
-          "change_pct": 0.13049337276269668,
-          "score": 22,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "META 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 59 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.0064118538401205915,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 85,
-          "ai_state": "강세",
-          "ai_action": "매수",
-          "ai_note": "AMD는 AI 및 데이터센터 시장에서 강력한 파트너십(Meta, Samsung 등)과 기술 혁신을 통해 성장을 가속화하고 있습니다. 1분기 실적 발표 예정이며, 긍정적인 전망이 우세합니다. 보유 중이라면 중기 골든크로스 신호를 바탕으로 추가 상승을 기대해 볼 수 있습니다.",
-          "close": 245.60000610351562,
-          "change_pct": 3.7863449699869767,
-          "score": 78,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [
-            "AMD 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 74 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.005710376438086628,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 40,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "Tempus AI는 Gilead 및 Merck와의 협력을 통해 AI 기반 정밀 의학 분야에서 성장을 모색하고 있습니다. 4분기 실적은 견조했으나, 최근 주가 하락과 CEO의 대규모 주식 매도 소식은 주의가 필요합니다. 보유 중이라면 20일선 이탈 시 비중 축소를 고려할 수 있습니다.",
-          "close": 42.88999938964844,
-          "change_pct": -2.875906843641207,
-          "score": 14,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.024601060973852788,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 65,
-          "ai_state": "중립",
-          "ai_action": "관망",
-          "ai_note": "반도체 ETF인 SOXX는 전반적인 반도체 산업의 성장세와 AI 수요 증가에 힘입어 상승세를 보이고 있습니다. 다만, 개별 종목의 변동성과 지정학적 리스크는 주의해야 합니다. 보유 중이라면 단기 과열 구간 진입 시 분할 매도를 고려할 수 있습니다.",
-          "close": 387.29998779296875,
-          "change_pct": 2.2898298598494904,
-          "score": 54,
-          "state": "애매",
-          "action": "관찰",
-          "cross_highlights": [
-            "SOXX 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 72 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.012086727048200992,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 25,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "Serve Robotics는 로봇 배송 시장 확대를 목표로 하고 있으나, 경쟁 심화와 수익성 확보에 대한 의문이 제기되고 있습니다. 최근 CEO 및 CFO의 주식 매도 소식은 투자 심리에 부정적인 영향을 줄 수 있습니다. 보유 중이라면 50일선 하향 돌파 시 손절을 고려해야 합니다.",
-          "close": 8.300000190734863,
-          "change_pct": 2.7227756077490284,
-          "score": 15,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.00356875634809089,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 45,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "KORU Medical Systems는 4분기 및 연간 매출 성장을 기록했으나, CEO 교체와 함께 신중한 2026년 가이던스를 제시했습니다. 경쟁 심화와 규제 환경 변화는 주의해야 할 요소입니다. 보유 중이라면 20일선 지지 여부를 확인하며 대응하는 것이 좋습니다.",
-          "close": 393.8800048828125,
-          "change_pct": -1.4018238583925702,
-          "score": 45,
-          "state": "약함",
-          "action": "관찰",
-          "cross_highlights": [
-            "KORU 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 59 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.006914951468266404,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-04-11 15:51 ET",
       "market_data_as_of": "2026-04-10 15:50 ET (5분봉)",
@@ -22548,6 +22386,13 @@
           }
         }
       ]
+    },
+    {
+      "generated_at_et": "2026-04-25 06:11 ET",
+      "market_data_as_of": "2026-04-24 15:10 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
     }
   ]
 }
