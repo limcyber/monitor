@@ -1,169 +1,7 @@
 {
-  "updated_at_et": "2026-04-25 01:44 ET",
+  "updated_at_et": "2026-04-25 03:05 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-04-11 07:49 ET",
-      "market_data_as_of": "2026-04-10 15:50 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 70,
-          "ai_state": "관찰",
-          "ai_action": "보유",
-          "ai_note": "NVIDIA와 Marvell의 파트너십 강화 소식이 있습니다. 최근 단기 골든크로스가 나왔으나 거래량이 약한 편입니다.",
-          "close": 188.5500030517578,
-          "change_pct": 2.522972811295965,
-          "score": 54,
-          "state": "애매",
-          "action": "관찰",
-          "cross_highlights": [
-            "NVDA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 68 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.007291308232940925,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 20,
-          "ai_state": "회피",
-          "ai_action": "관찰",
-          "ai_note": "테슬라의 유럽 시장 판매량 증가 소식이 있으나, 전반적인 시장 추세에서 약세를 보이고 있습니다.",
-          "close": 347.510009765625,
-          "change_pct": 0.5468476000055178,
-          "score": 15,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0046007088414660325,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 30,
-          "ai_state": "관찰",
-          "ai_action": "관찰",
-          "ai_note": "메타가 엔지니어들을 AI 엔지니어링 유닛으로 강제 이동시킨다는 소식이 있습니다. 이는 AI 개발에 대한 회사의 집중을 보여줍니다.",
-          "close": 629.2100219726562,
-          "change_pct": 0.13049337276269668,
-          "score": 22,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "META 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 59 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.0064118538401205915,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 85,
-          "ai_state": "양호",
-          "ai_action": "매우 선별적 접근",
-          "ai_note": "AMD는 Meta 및 Samsung과의 파트너십 확대 소식이 있습니다. 최근 중기 골든크로스가 나왔으며 RSI가 과열 구간에 진입했습니다.",
-          "close": 245.60000610351562,
-          "change_pct": 3.7863449699869767,
-          "score": 78,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [
-            "AMD 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 74 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.005710376438086628,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 25,
-          "ai_state": "회피",
-          "ai_action": "관찰",
-          "ai_note": "Tempus AI가 Gilead Sciences와 협력을 확대한다는 소식이 있습니다. 그러나 전반적인 추세는 약세를 보이고 있습니다.",
-          "close": 42.88999938964844,
-          "change_pct": -2.875906843641207,
-          "score": 14,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.024601060973852788,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 60,
-          "ai_state": "애매",
-          "ai_action": "관찰",
-          "ai_note": "반도체 ETF인 SOXX는 최근 단기 골든크로스가 나왔으나 RSI가 과열 구간에 있습니다. 전반적인 반도체 섹터의 움직임을 주시해야 합니다.",
-          "close": 387.29998779296875,
-          "change_pct": 2.2898298598494904,
-          "score": 54,
-          "state": "애매",
-          "action": "관찰",
-          "cross_highlights": [
-            "SOXX 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 72 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.012086727048200992,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 15,
-          "ai_state": "회피",
-          "ai_action": "관찰",
-          "ai_note": "Serve Robotics가 2,000대의 자율주행 로봇을 배치했다는 소식이 있습니다. 그러나 주가는 약세를 보이고 있으며, 경영진의 주식 매도 소식도 있습니다.",
-          "close": 8.300000190734863,
-          "change_pct": 2.7227756077490284,
-          "score": 15,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.00356875634809089,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 20,
-          "ai_state": "약함",
-          "ai_action": "관찰",
-          "ai_note": "KORU Medical Systems는 2026년 매출 목표를 상향했으나, CEO 교체 소식이 있습니다. 전반적인 추세는 약합니다.",
-          "close": 393.8800048828125,
-          "change_pct": -1.4018238583925702,
-          "score": 45,
-          "state": "약함",
-          "action": "관찰",
-          "cross_highlights": [
-            "KORU 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 59 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.006914951468266404,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-04-11 10:06 ET",
       "market_data_as_of": "2026-04-10 15:50 ET (5분봉)",
@@ -22709,6 +22547,13 @@
           }
         }
       ]
+    },
+    {
+      "generated_at_et": "2026-04-25 03:05 ET",
+      "market_data_as_of": "2026-04-24 15:10 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
     }
   ]
 }
