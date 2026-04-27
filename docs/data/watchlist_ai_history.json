@@ -1,169 +1,7 @@
 {
-  "updated_at_et": "2026-04-26 22:04 ET",
+  "updated_at_et": "2026-04-27 01:37 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-04-15 18:08 ET",
-      "market_data_as_of": "2026-04-15 16:00 ET (Close)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 85,
-          "ai_state": "강한 상승",
-          "ai_action": "매수",
-          "ai_note": "NVIDIA가 양자 컴퓨팅 가속을 위한 세계 최초의 오픈 소스 AI 모델인 Ising을 출시했습니다. 이는 AI 분야에서의 지속적인 혁신을 보여주며, 현재의 강한 상승 추세와 함께 매수 관점을 유지하는 것이 좋습니다.",
-          "close": 198.8699951171875,
-          "change_pct": 1.2009570384825752,
-          "score": 68,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [],
-          "volume_ratio_20d": 1.0743964864760576,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 60,
-          "ai_state": "혼조세",
-          "ai_action": "보유 및 관찰",
-          "ai_note": "Tesla의 AI5 칩 개발이 진전되고 있다는 소식이 있지만, EV 수요 및 비용 증가에 대한 우려도 상존합니다. 현재로서는 보유하며 추가적인 시장 반응을 관찰하는 것이 현명해 보입니다.",
-          "close": 391.95001220703125,
-          "change_pct": 7.619439612820611,
-          "score": 40,
-          "state": "약함",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 1.6428202727554992,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 75,
-          "ai_state": "상승세",
-          "ai_action": "선별 매수",
-          "ai_note": "Meta가 새로운 AI 모델인 Muse Spark를 출시했으며, CEO 마크 저커버그가 AI 연구에 직접 참여하는 등 AI 경쟁에 집중하고 있습니다. 이는 긍정적인 신호로, 선별적인 매수를 고려할 수 있습니다.",
-          "close": 671.5800170898438,
-          "change_pct": 1.3721002565265872,
-          "score": 59,
-          "state": "애매",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "META 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.8x (거래량 약함) / RSI 67 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.7673287372839055,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 80,
-          "ai_state": "강한 상승",
-          "ai_action": "매수",
-          "ai_note": "AMD가 차세대 AI 메모리 솔루션을 위한 삼성과의 협력을 확대하고 있으며, MI450 GPU 출시를 통해 NVIDIA와의 경쟁을 강화할 것으로 예상됩니다. 이는 긍정적인 추세이며 매수 관점을 유지합니다.",
-          "close": 258.1199951171875,
-          "change_pct": 1.1957453661307627,
-          "score": 78,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [
-            "AMD 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.7x (거래량 약함) / RSI 72 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.6970387616311954,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 70,
-          "ai_state": "양호",
-          "ai_action": "보유 및 관찰",
-          "ai_note": "Tempus AI가 Predicta Biosciences와 협력하여 혈액암 유전체 분석을 위한 GenoPredicta를 출시했습니다. AI 기반 헬스케어 분야의 성장 가능성은 높으나, 최근 내부자 매도 물량이 있었으므로 보유하며 추세를 관찰하는 것이 좋습니다.",
-          "close": 56.40999984741211,
-          "change_pct": 13.89057386973127,
-          "score": 75,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [
-            "TEM 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 2.4x (거래량 강함) / RSI 67 (상방 우세)"
-          ],
-          "volume_ratio_20d": 2.3640381801030306,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 82,
-          "ai_state": "강한 상승",
-          "ai_action": "매수",
-          "ai_note": "반도체 ETF인 SOXX는 AI 칩 수요 증가와 지정학적 긴장 완화에 힘입어 상승세를 보이고 있습니다. 주요 구성 종목들의 강세가 지속되는 한, 매수 관점을 유지하는 것이 유리합니다.",
-          "close": 401.8599853515625,
-          "change_pct": 0.15451977177682874,
-          "score": 78,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [
-            "SOXX 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.7x (거래량 약함) / RSI 72 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.6736073538773124,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 45,
-          "ai_state": "약세",
-          "ai_action": "보류",
-          "ai_note": "Serve Robotics가 2,000대의 자율주행 로봇을 배치하며 사업을 확장하고 있으나, 최근 내부자 매도 물량이 관찰되었습니다. 현재로서는 약세 추세를 보이고 있어 보류하는 것이 좋겠습니다.",
-          "close": 9.5600004196167,
-          "change_pct": 6.815649422920478,
-          "score": 43,
-          "state": "약함",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 1.2613935415066817,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 30,
-          "ai_state": "매우 약함",
-          "ai_action": "매도 고려",
-          "ai_note": "KORU Medical Systems는 신용 시설 계약을 연장했지만, 전반적인 뉴스 흐름이 약하고 특별한 상승 모멘텀이 보이지 않습니다. 현재 추세상 매도 또는 장기 보유 관점에서 신중한 접근이 필요합니다.",
-          "close": 445.0799865722656,
-          "change_pct": -4.011388543245021,
-          "score": 54,
-          "state": "애매",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "KORU 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.6x (거래량 약함) / RSI 65 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.596370942640458,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-04-15 19:07 ET",
       "market_data_as_of": "2026-04-15 16:00 ET (Close)",
@@ -22251,6 +22089,13 @@
           }
         }
       ]
+    },
+    {
+      "generated_at_et": "2026-04-27 01:37 ET",
+      "market_data_as_of": "2026-04-24 15:10 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
     }
   ]
 }
