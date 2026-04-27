@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-04-27 04:09 ET",
+  "updated_at_et": "2026-04-27 06:29 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-04-15 20:04 ET",
-      "market_data_as_of": "2026-04-15 16:00 ET (Close)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-04-15 23:51 ET",
       "market_data_as_of": "2026-04-15 16:00 ET (Close)",
@@ -22232,6 +22225,162 @@
           "ai_state": "약세",
           "ai_action": "보유 후 관망",
           "ai_note": "KORU는 한국 증시를 추종하는 ETF로, 최근 한국 증시의 강세 흐름에 힘입어 상승세를 보였습니다. 하지만 레버리지 상품의 특성상 변동성이 크므로, 단기적인 추세 변화에 유의하며 접근해야 합니다. 현재는 관망하며 추가적인 방향성을 확인하는 것이 좋습니다.",
+          "close": 525.0,
+          "change_pct": 7.042370253779495,
+          "score": 58,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.00057204873590917,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-04-27 06:29 ET",
+      "market_data_as_of": "2026-04-24 15:10 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 85,
+          "ai_state": "강한 매수",
+          "ai_action": "매수",
+          "ai_note": "최근 중기 골든크로스 발생 및 시장 강세 속에서 견조한 흐름을 보입니다. 현재 과열 구간 진입 가능성이 있으나, 추세가 강하므로 보유자는 홀딩하며 20일선 이탈 시 분할 매도 고려.",
+          "close": 208.88999938964844,
+          "change_pct": 4.633340026186961,
+          "score": 78,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "NVDA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 87 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.0059597382096983585,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 30,
+          "ai_state": "약세/관망",
+          "ai_action": "관망",
+          "ai_note": "실적 발표를 앞두고 있어 변동성이 예상됩니다. 현재 50일선 아래에 위치하며 거래량도 약하므로, 실적 발표 이후 추세를 확인하며 접근하는 것이 좋습니다.",
+          "close": 376.0885925292969,
+          "change_pct": 0.6337876754942462,
+          "score": 4,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.007075310436589049,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 60,
+          "ai_state": "중립/관망",
+          "ai_action": "관망",
+          "ai_note": "실적 발표를 앞두고 있으며, 시장 대비 견조한 흐름을 보이고 있습니다. 50일선 및 20일선 위에 위치하나, 실적 발표 결과에 따라 변동성이 커질 수 있으므로 관망하며 추이를 지켜보는 것이 좋습니다.",
+          "close": 677.594970703125,
+          "change_pct": 2.798292589833218,
+          "score": 57,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.004872399036785665,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 75,
+          "ai_state": "매수 고려",
+          "ai_action": "분할 매수",
+          "ai_note": "최근 급등으로 RSI가 과열 구간에 진입했습니다. 시장 대비 강한 흐름을 보이며 50일선과 20일선 위에 있으나, 단기 급등 부담으로 바로 추격 매수하기보다는 눌림목 발생 시 분할 매수를 고려하는 것이 좋습니다.",
+          "close": 344.8900146484375,
+          "change_pct": 12.956483089095073,
+          "score": 70,
+          "state": "양호",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0066471651179403745,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 55,
+          "ai_state": "중립/관망",
+          "ai_action": "관망",
+          "ai_note": "시장 대비 견조한 흐름을 보이며 50일선과 20일선 위에 있습니다. 아직 확실한 추세 전환 신호는 없으므로, 실적 발표 이후 추세를 확인하며 접근하는 것이 좋습니다.",
+          "close": 52.41999816894531,
+          "change_pct": 1.9051313538089643,
+          "score": 52,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0015561092203090162,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 80,
+          "ai_state": "강한 매수",
+          "ai_action": "매수",
+          "ai_note": "최근 중기 골든크로스 발생 및 시장 강세 속에서 견조한 흐름을 보입니다. RSI가 과열 구간에 진입했으나, 반도체 섹터 전반의 강세를 고려할 때 보유자는 홀딩하며 20일선 이탈 시 분할 매도 고려.",
+          "close": 461.2300109863281,
+          "change_pct": 4.58730407853245,
+          "score": 78,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "SOXX 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 100 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.011776114648149146,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 20,
+          "ai_state": "약세/관망",
+          "ai_action": "관망",
+          "ai_note": "거래량이 약하고 50일선 아래에 위치하여 현재 매수 추천은 어렵습니다. 실적 발표 이후 추세를 확인하며 접근하는 것이 좋습니다.",
+          "close": 9.1850004196167,
+          "change_pct": -1.448490124763524,
+          "score": 15,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0021330146468633696,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 60,
+          "ai_state": "중립/관망",
+          "ai_action": "관망",
+          "ai_note": "시장 대비 견조한 흐름을 보이며 50일선과 20일선 위에 있습니다. RSI가 다소 높은 편이나, 아직 확실한 추세 전환 신호는 없으므로 관망하며 추이를 지켜보는 것이 좋습니다.",
           "close": 525.0,
           "change_pct": 7.042370253779495,
           "score": 58,
