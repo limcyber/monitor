@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-27 19:51 ET",
-  "count": 61,
+  "updated_at_et": "2026-04-27 22:41 ET",
+  "count": 62,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -8735,6 +8735,172 @@
           "cross_highlights": [],
           "volume_ratio_20d": 0.540839172082892,
           "rsi14": 63.67614879649891,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-04-27 22:41 ET",
+      "market_data_as_of": "2026-04-24 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 40,
+          "ai_state": "약함",
+          "ai_action": "보류",
+          "ai_note": "최근 5일선이 20일선 아래로 내려가는 데드크로스가 발생했으며, 거래량은 강하나 RSI가 67로 과열 구간 진입 전입니다. 보유 중이라면 단기 반등 시 분할 매도를 고려해볼 수 있습니다.",
+          "close": 54000.0,
+          "change_pct": 16.756756756756765,
+          "score": 42,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "아이티센글로벌 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 2.1x (거래량 강함) / RSI 67 (상방 우세)"
+          ],
+          "volume_ratio_20d": 2.0606367695501797,
+          "rsi14": 67.22689075630252,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 45,
+          "ai_state": "약함",
+          "ai_action": "보류",
+          "ai_note": "5일선이 20일선을 상향 돌파하는 골든크로스가 나왔고 거래량도 강하지만, RSI가 75로 과열 구간에 진입했습니다. 50일선 아래에 위치해 있어 추가 상승 여부는 지켜봐야 합니다.",
+          "close": 54400.0,
+          "change_pct": 12.62939958592133,
+          "score": 43,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "클로봇 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 3.0x (거래량 강함) / RSI 75 (과열 구간)"
+          ],
+          "volume_ratio_20d": 2.950816409982522,
+          "rsi14": 74.86238532110092,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 65,
+          "ai_state": "양호",
+          "ai_action": "선별 매수",
+          "ai_note": "시장 대비 강한 흐름을 보이며 50일선과 20일선 위에 위치해 있습니다. RSI가 70으로 상승 추세가 이어질 가능성이 있습니다.",
+          "close": 224500.0,
+          "change_pct": 2.277904328018221,
+          "score": 66,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.8925839621454268,
+          "rsi14": 70.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 85,
+          "ai_state": "강함",
+          "ai_action": "매수 가능",
+          "ai_note": "시장 대비 강한 흐름을 보이며 50일선과 20일선 위에 있습니다. RSI가 87로 매우 높아 단기 과열에 대한 주의가 필요하나, 추세는 여전히 강합니다.",
+          "close": 1292000.0,
+          "change_pct": 5.728314238952548,
+          "score": 85,
+          "state": "강함",
+          "action": "매수 가능",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.0687809374691408,
+          "rsi14": 87.00787401574803,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 10,
+          "ai_state": "회피",
+          "ai_action": "보류",
+          "ai_note": "거래량이 약하고 시장 대비 힘이 약한 모습입니다. 50일선 아래에 위치하여 당분간 관망하는 것이 좋겠습니다.",
+          "close": 215000.0,
+          "change_pct": 0.4672897196261738,
+          "score": 7,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.6297630724730396,
+          "rsi14": 72.68408551068885,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 20,
+          "ai_state": "회피",
+          "ai_action": "보류",
+          "ai_note": "거래량이 약하고 시장 대비 약한 흐름을 보입니다. 50일선 위에 있지만, 뚜렷한 상승 모멘텀이 부족하여 관망이 필요합니다.",
+          "close": 524000.0,
+          "change_pct": 2.1442495126705596,
+          "score": 19,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.984470671294262,
+          "rsi14": 62.87878787878788,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 40,
+          "ai_state": "약함",
+          "ai_action": "보류",
+          "ai_note": "최근 5일선이 20일선 아래로 내려가는 데드크로스가 발생했으며, 거래량도 약하고 RSI가 40으로 하락 추세를 보입니다. 보유 중이라면 손절 또는 비중 축소를 고려해야 합니다.",
+          "close": 1454000.0,
+          "change_pct": -0.6151742993848242,
+          "score": 43,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.5x (거래량 약함) / RSI 40 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.5386632998061602,
+          "rsi14": 39.85330073349633,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 65,
+          "ai_state": "양호",
+          "ai_action": "선별 매수",
+          "ai_note": "시장 대비 강한 흐름을 보이며 50일선과 20일선 위에 위치해 있습니다. RSI가 63으로 상승 추세에 있으며, 추가 상승을 기대해볼 수 있습니다.",
+          "close": 950000.0,
+          "change_pct": -3.9433771486349856,
+          "score": 66,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5729138976738305,
+          "rsi14": 63.39869281045752,
           "signals": {
             "short_cross": "none",
             "mid_cross": "none"

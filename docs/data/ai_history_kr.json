@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-27 19:51 ET",
-  "count": 57,
+  "updated_at_et": "2026-04-27 22:41 ET",
+  "count": 58,
   "items": [
     {
       "generated_at_et": "2026-03-29 20:11 ET",
@@ -1868,6 +1868,37 @@
         ],
         "metrics": {
           "vix_close": 18.709999084472656,
+          "tnx_close": null,
+          "pct_above_20dma": null,
+          "pct_above_50dma": null
+        }
+      },
+      "ai_analysis": {
+        "status": "error",
+        "model": "gemini-2.5-flash",
+        "content": "한국 시장 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'"
+      },
+      "ai_notifications": {
+        "count": 0,
+        "items": []
+      }
+    },
+    {
+      "generated_at_et": "2026-04-27 22:41 ET",
+      "market_data_as_of": "2026-04-24 15:30 KST (Close)",
+      "market": {
+        "score": 99,
+        "level": 6,
+        "state": "레벨 6/6 - 강한 상승장",
+        "action": "매수 / 강한 보유",
+        "cross_highlights": [],
+        "top_reasons": [
+          "KOSPI가 200일선 위에 있습니다 (+15)",
+          "KOSDAQ이 200일선 위에 있습니다 (+12)",
+          "KOSPI의 50일선이 200일선 위에 있습니다 (+8)"
+        ],
+        "metrics": {
+          "vix_close": 18.020000457763672,
           "tnx_close": null,
           "pct_above_20dma": null,
           "pct_above_50dma": null
