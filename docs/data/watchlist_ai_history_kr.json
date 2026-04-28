@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-04-28 01:57 ET",
-  "count": 63,
+  "updated_at_et": "2026-04-28 19:54 ET",
+  "count": 64,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -8914,6 +8914,170 @@
       "status": "error",
       "error": "한국 종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-04-28 19:54 ET",
+      "market_data_as_of": "2026-04-27 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "매도",
+          "ai_note": "아이티센글로벌은 500억 규모 전환사채 발행을 검토 중이며, 이는 별도 기준 금융부채 부담 완화를 위한 것으로 보입니다. 단기 차입금 상환 및 만기 부채 대응에 자금이 활용될 예정입니다. 최근 주가는 변동성이 큰 모습을 보이며, 27일 VI가 발동되기도 했습니다.",
+          "close": 52000.0,
+          "change_pct": -3.703703703703709,
+          "score": 36,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "아이티센글로벌 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 1.6x (거래량 강함) / RSI 56 (상방 우세)"
+          ],
+          "volume_ratio_20d": 1.5570484794168011,
+          "rsi14": 56.40074211502783,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "매도",
+          "ai_note": "클로봇은 최근 LS티라유텍의 지분 전량 매각 소식이 있었으며, 이는 338억 원 규모의 현금 확보를 통한 재무 유연성 강화 목적입니다. 2025년 기준 당기순손실을 기록했으나, 최근 '경북 물류·이송 AI+로봇 플래그십' 실증 사업을 완료하며 기술력을 입증했습니다.",
+          "close": 52900.0,
+          "change_pct": -2.757352941176472,
+          "score": 16,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 4.560885753550623,
+          "rsi14": 66.86507936507937,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 70,
+          "ai_state": "강보합",
+          "ai_action": "보유",
+          "ai_note": "삼성전자는 가전 사업 재편에 나서며 일부 생산라인을 외주화하고 말레이시아 공장을 폐쇄합니다. 이는 수익성 개선 및 체질 강화를 위한 전략으로, 비스포크 시리즈 등 핵심 제품에 집중할 계획입니다. 최근 4나노 파운드리 공정 안정성 및 확장성에 대한 뉴스가 있었습니다.",
+          "close": 222000.0,
+          "change_pct": -1.1135857461024523,
+          "score": 68,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.749413394615442,
+          "rsi14": 59.82905982905983,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 75,
+          "ai_state": "강세",
+          "ai_action": "보유",
+          "ai_note": "SK하이닉스는 하이브리드 본딩 HBM 수율 개선 소식이 있으며, 이는 기술 경쟁력 강화에 긍정적입니다. 최근 교환사채 잔여 물량 1,327억 원에 대한 조기 상환을 결정했습니다. 다만, 단기 급등에 따른 신중론도 제기되고 있습니다.",
+          "close": 1300000.0,
+          "change_pct": 0.6191950464396356,
+          "score": 69,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.7396142677174314,
+          "rsi14": 83.45864661654136,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "매도",
+          "ai_note": "NAVER는 사우디 데이터센터 협력 소식에도 불구하고 주가가 하락 마감했습니다. AI 테마 강세 속에서 상대적 부진을 보였으며, 지식iN 서비스의 AI 위기론 등 부정적 뉴스도 투자 심리에 영향을 미쳤습니다.",
+          "close": 219500.0,
+          "change_pct": 2.0930232558139528,
+          "score": 23,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.0507233576819304,
+          "rsi14": 71.95121951219512,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 40,
+          "ai_state": "보통",
+          "ai_action": "보유",
+          "ai_note": "현대차는 조지아주 사바나의 HMGMA에서 전기차 생산에 '올인'하고 있으며, 로봇 및 AI를 활용한 첨단 공정을 공개했습니다. 또한, 차체와 배터리 소유권을 분리하여 배터리를 구독하는 실증 사업을 시작합니다.",
+          "close": 555000.0,
+          "change_pct": 5.916030534351147,
+          "score": 35,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 2.5579040560776263,
+          "rsi14": 62.11340206185567,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 35,
+          "ai_state": "약세",
+          "ai_action": "매도",
+          "ai_note": "한화에어로스페이스는 NATO 대사단에 미래 안보 비전을 제시했으며, 핀란드에 K9 자주포를 추가 공급하는 계약을 체결했습니다. 최근 공정위는 한화그룹 방산 계열사 간 기업결합 시정조치 이행 기간을 3년 연장했습니다.",
+          "close": 1395000.0,
+          "change_pct": -4.057771664374144,
+          "score": 37,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 1.2x (거래량 확인) / RSI 39 (하방 우세)"
+          ],
+          "volume_ratio_20d": 1.2208120399312645,
+          "rsi14": 39.27710843373494,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 68,
+          "ai_state": "강보합",
+          "ai_action": "보유",
+          "ai_note": "LIG넥스원은 말레이시아 국방부와 1400억 원 규모의 '해궁' 수출 계약을 체결하며 K-SAAM 첫 수출길을 열었습니다. 또한, 단거리공대공유도탄-II 체계 개발을 본격화하고 있습니다. 최근 실적 성장세가 뚜렷하며, 수주잔고 26조 돌파가 예상됩니다.",
+          "close": 933000.0,
+          "change_pct": -1.7894736842105297,
+          "score": 65,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.47519238527407126,
+          "rsi14": 60.63829787234043,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
     }
   ]
 }
