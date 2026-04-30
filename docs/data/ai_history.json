@@ -1,38 +1,7 @@
 {
-  "updated_at_et": "2026-04-30 18:44 ET",
+  "updated_at_et": "2026-04-30 19:44 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-04-18 11:31 ET",
-      "market_data_as_of": "2026-04-17 16:00 ET (Close)",
-      "market": {
-        "score": 95,
-        "level": 6,
-        "state": "레벨 6/6 - 강한 상승장",
-        "action": "매수 / 강한 보유",
-        "cross_highlights": [],
-        "top_reasons": [
-          "S&P500이 200일선 위에 있습니다 (+10)",
-          "나스닥이 200일선 위에 있습니다 (+10)",
-          "S&P500의 50일선이 200일선 위에 있습니다 (+8)"
-        ],
-        "metrics": {
-          "vix_close": 17.43000030517578,
-          "tnx_close": 4.245999813079834,
-          "pct_above_20dma": 79.52286282306163,
-          "pct_above_50dma": 59.84095427435388
-        }
-      },
-      "ai_analysis": {
-        "status": "error",
-        "model": "gemini-2.5-flash",
-        "content": "AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'"
-      },
-      "ai_notifications": {
-        "count": 0,
-        "items": []
-      }
-    },
     {
       "generated_at_et": "2026-04-18 12:31 ET",
       "market_data_as_of": "2026-04-17 16:00 ET (Close)",
@@ -7098,6 +7067,40 @@
     },
     {
       "generated_at_et": "2026-04-30 18:44 ET",
+      "market_data_as_of": "2026-04-30 16:00 ET (Close)",
+      "market": {
+        "score": 100,
+        "level": 6,
+        "state": "레벨 6/6 - 강한 상승장",
+        "action": "매수 / 강한 보유",
+        "cross_highlights": [
+          "S&P500 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 1.0x (거래량 보통) / RSI 80 (과열 구간)",
+          "나스닥 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.9x (거래량 보통) / RSI 80 (과열 구간)"
+        ],
+        "top_reasons": [
+          "S&P500이 200일선 위에 있습니다 (+10)",
+          "나스닥이 200일선 위에 있습니다 (+10)",
+          "S&P500의 50일선이 200일선 위에 있습니다 (+8)"
+        ],
+        "metrics": {
+          "vix_close": 16.989999771118164,
+          "tnx_close": 4.390000343322754,
+          "pct_above_20dma": 58.8469184890656,
+          "pct_above_50dma": 56.063618290258454
+        }
+      },
+      "ai_analysis": {
+        "status": "error",
+        "model": "gemini-2.5-flash",
+        "content": "AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'"
+      },
+      "ai_notifications": {
+        "count": 0,
+        "items": []
+      }
+    },
+    {
+      "generated_at_et": "2026-04-30 19:44 ET",
       "market_data_as_of": "2026-04-30 16:00 ET (Close)",
       "market": {
         "score": 100,
