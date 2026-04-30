@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-04-29 19:47 ET",
+  "updated_at_et": "2026-04-29 22:12 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-04-17 21:46 ET",
-      "market_data_as_of": "2026-04-17 16:00 ET (Close)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-04-18 00:27 ET",
       "market_data_as_of": "2026-04-17 16:00 ET (Close)",
@@ -23046,6 +23039,164 @@
           "ai_state": "양호",
           "ai_action": "선별 매수",
           "ai_note": "최근 중기 골든크로스 신호와 함께 시장 대비 강한 모습을 보입니다. RSI가 과열 구간에 진입했으나, 보유 중이라면 단기 고점 돌파 시 추가 상승을 기대해 볼 수 있습니다.",
+          "close": 523.0800170898438,
+          "change_pct": -0.5191952380946829,
+          "score": 73,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "KORU 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 64 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-04-29 22:12 ET",
+      "market_data_as_of": "2026-04-29 15:55 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 75,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "OpenAI의 성장 목표 미달 소식으로 하락했으나, 새로운 멀티모달 모델 출시 등 기술 혁신은 지속되고 있습니다. 단기 변동성에 유의하며 보유 관점을 유지하는 것이 좋습니다.",
+          "close": 209.02000427246094,
+          "change_pct": -1.946800174570229,
+          "score": 78,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "NVDA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 74 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.008176724315074884,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 40,
+          "ai_state": "하락",
+          "ai_action": "보유/관찰",
+          "ai_note": "유럽 자율주행 기능 승인 등 긍정적 뉴스도 있으나, 중국 시장 경쟁 심화와 높은 밸류에이션 부담으로 하락세를 보이고 있습니다. 당분간 관망하며 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 373.3432922363281,
+          "change_pct": -0.7118495972421313,
+          "score": 17,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.003416612692595624,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 60,
+          "ai_state": "혼조",
+          "ai_action": "보유",
+          "ai_note": "실적은 예상치를 상회했으나, AI 관련 투자 확대와 규제 이슈로 주가가 하락했습니다. 장기적인 AI 투자 방향성은 긍정적이나, 단기적인 비용 부담 증가에 유의해야 합니다.",
+          "close": 668.7899780273438,
+          "change_pct": -0.37984459828342976,
+          "score": 69,
+          "state": "양호",
+          "action": "관찰",
+          "cross_highlights": [
+            "META 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 65 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.01631487085270611,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 65,
+          "ai_state": "혼조",
+          "ai_action": "보유",
+          "ai_note": "Meta와의 GPU 공급 계약 확대 등 AI 관련 긍정적인 뉴스가 있으나, OpenAI 실망감으로 인한 전반적인 AI 섹터 하락에 영향을 받았습니다. 단기적인 변동성을 고려하여 보유 관점을 유지하는 것이 좋습니다.",
+          "close": 336.25,
+          "change_pct": 4.034531385065265,
+          "score": 68,
+          "state": "양호",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.008513140204455056,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 55,
+          "ai_state": "관망",
+          "ai_action": "보유/관찰",
+          "ai_note": "정밀 의학 분야에서의 AI 활용 확대 등 긍정적인 협력 소식이 있으나, 실적 발표를 앞두고 변동성이 예상됩니다. 실적 발표 이후 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 50.14500045776367,
+          "change_pct": -1.868880714039689,
+          "score": 16,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.011220874382617995,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 70,
+          "ai_state": "상승",
+          "ai_action": "보유",
+          "ai_note": "반도체 섹터 전반의 강세와 AI 관련 수요 증가로 인해 긍정적인 흐름을 보이고 있습니다. 단기 과열 구간 진입 가능성에 유의하며 보유를 유지하는 것이 좋습니다.",
+          "close": 449.4700012207031,
+          "change_pct": 2.452647529165475,
+          "score": 74,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.01153457881865431,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 0,
+          "ai_state": "보통",
+          "ai_action": "보유/관찰",
+          "ai_note": "자율주행 배송 로봇 사업 확장 등 긍정적 뉴스도 있으나, 전반적인 시장 흐름과 더불어 주가 하락세를 보이고 있습니다. 실적 발표를 기다리며 관망하는 것이 좋겠습니다.",
+          "close": 8.996000289916992,
+          "change_pct": -4.6023329927209256,
+          "score": 7,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.005861124377355208,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 50,
+          "ai_state": "보합",
+          "ai_action": "보유",
+          "ai_note": "의료 기술 분야에서 꾸준한 성장을 보이고 있으나, 현재 시장 전반의 관망세에 영향을 받아 큰 변동 없이 움직이고 있습니다. 실적 발표 이후 추세를 지켜보는 것이 좋겠습니다.",
           "close": 523.0800170898438,
           "change_pct": -0.5191952380946829,
           "score": 73,
