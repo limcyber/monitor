@@ -1,169 +1,7 @@
 {
-  "updated_at_et": "2026-04-30 22:25 ET",
+  "updated_at_et": "2026-05-01 01:52 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-04-18 13:31 ET",
-      "market_data_as_of": "2026-04-17 16:00 ET (Close)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 75,
-          "ai_state": "강한 상승",
-          "ai_action": "매수",
-          "ai_note": "NVIDIA는 200달러를 돌파하며 기술적으로 강한 모습을 보이고 있으며, AI 수요 강세와 긍정적인 분석가 전망이 주가를 견인하고 있습니다. 보유 중이라면, 단기 변동성에 유의하며 장기적인 AI 성장 모멘텀을 고려하여 보유를 유지하는 것이 좋습니다.",
-          "close": 201.67999267578125,
-          "change_pct": 1.6788436953854902,
-          "score": 52,
-          "state": "애매",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.9390949792498752,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 55,
-          "ai_state": "혼조세",
-          "ai_action": "보류 / 관찰",
-          "ai_note": "네덜란드에서 FSD 승인을 받았으나, 전반적인 판매량 감소 추세와 경쟁 심화는 부담입니다. 보유 중이라면, FSD 승인 확대 및 신규 모델 출시 등 추가적인 긍정적 모멘텀이 나타나기 전까지는 관망하는 것이 안전해 보입니다.",
-          "close": 400.6199951171875,
-          "change_pct": 3.013628543234881,
-          "score": 45,
-          "state": "약함",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "TSLA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 1.3x (거래량 확인) / RSI 64 (상방 우세)"
-          ],
-          "volume_ratio_20d": 1.2742419021468157,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 40,
-          "ai_state": "약세",
-          "ai_action": "보류 / 관찰",
-          "ai_note": "대규모 감원 계획과 AI 투자 확대는 효율성 증대를 목표로 하지만, 단기적으로는 불확실성을 야기할 수 있습니다. 보유 중이라면, 감원 및 AI 전략 실행 결과를 지켜보며 추세를 확인한 후 대응하는 것이 좋습니다.",
-          "close": 688.5499877929688,
-          "change_pct": 1.7255887777621215,
-          "score": 57,
-          "state": "애매",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.7782698498893978,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 85,
-          "ai_state": "강한 상승",
-          "ai_action": "매수",
-          "ai_note": "AI 칩 및 서버 수요 강세와 메타와의 대형 계약이 주가를 끌어올리고 있으며, 11일 연속 상승세를 기록 중입니다. 보유 중이라면, 단기 과열 가능성을 염두에 두되, AI 시장 성장 수혜를 고려하여 보유를 유지하는 것이 좋습니다.",
-          "close": 278.3900146484375,
-          "change_pct": 0.04672064912309981,
-          "score": 78,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [
-            "AMD 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.9x (거래량 보통) / RSI 93 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.9492372286911229,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 65,
-          "ai_state": "상승",
-          "ai_action": "선별 매수",
-          "ai_note": "AI 온콜로지 분야에서의 협력 및 신규 서비스 발표가 긍정적이며, 일부 분석가들의 투자의견 상향 조정이 있었습니다. 보유 중이라면, 기술적 지표와 함께 신규 파이프라인 및 파트너십 성과를 지속적으로 확인하며 분할 매수 관점에서 접근하는 것이 유효합니다.",
-          "close": 55.869998931884766,
-          "change_pct": 2.6644630865990893,
-          "score": 61,
-          "state": "애매",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "TEM 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 1.2x (거래량 확인) / RSI 74 (과열 구간)"
-          ],
-          "volume_ratio_20d": 1.188317147799886,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 70,
-          "ai_state": "상승",
-          "ai_action": "보유",
-          "ai_note": "반도체 섹터 전반의 AI 수요 강세와 엔비디아, AMD 등 주요 편입 종목의 강세가 ETF를 지지하고 있습니다. 보유 중이라면, 섹터 전반의 긍정적 흐름을 고려하여 계속 보유하는 것이 좋으나, 개별 종목의 과열 여부는 주시해야 합니다.",
-          "close": 415.7099914550781,
-          "change_pct": 2.404231790752931,
-          "score": 78,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [
-            "SOXX 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.5x (거래량 약함) / RSI 89 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.54664189683369,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 50,
-          "ai_state": "혼조세",
-          "ai_action": "보류 / 관찰",
-          "ai_note": "로봇 사업 확장 및 우버이츠와의 파트너십은 긍정적이나, 최근 경영진의 주식 매도 물량이 부담으로 작용할 수 있습니다. 보유 중이라면, 실적 발표와 경영진의 매도 추이를 지켜보며 추가적인 상승 모멘텀을 확인한 후 대응하는 것이 좋습니다.",
-          "close": 9.569999694824219,
-          "change_pct": 1.2698400844561863,
-          "score": 50,
-          "state": "애매",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "SERV 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 1.2x (거래량 확인) / RSI 65 (상방 우세)"
-          ],
-          "volume_ratio_20d": 1.1847636956668866,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 35,
-          "ai_state": "약세",
-          "ai_action": "보류 / 관찰",
-          "ai_note": "1분기 실적 발표 예정일이 다가오고 있으나, 현재까지 뚜렷한 상승 모멘텀을 보여주는 뉴스는 부족합니다. 보유 중이라면, 실적 발표 결과를 확인하고, 향후 사업 방향에 대한 명확한 가이드라인이 제시될 때까지는 관망하는 것이 안전합니다.",
-          "close": 514.7100219726562,
-          "change_pct": 9.74627334171776,
-          "score": 43,
-          "state": "약함",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.7236708000430001,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-04-18 14:37 ET",
       "market_data_as_of": "2026-04-17 16:00 ET (Close)",
@@ -23337,6 +23175,13 @@
           }
         }
       ]
+    },
+    {
+      "generated_at_et": "2026-05-01 01:52 ET",
+      "market_data_as_of": "2026-04-30 16:00 ET (Close)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
     }
   ]
 }
