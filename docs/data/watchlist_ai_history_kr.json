@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-05-03 22:39 ET",
-  "count": 74,
+  "updated_at_et": "2026-05-04 02:10 ET",
+  "count": 75,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -10233,6 +10233,168 @@
           "cross_highlights": [],
           "volume_ratio_20d": 0.10915641859638558,
           "rsi14": 50.69767441860465,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-05-04 02:10 ET",
+      "market_data_as_of": "2026-05-04 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 75,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "아이티센글로벌은 400억원 규모 전환사채 발행 소식에 주가가 상승했습니다. 신사업 투자 재원 확보 및 재무구조 개선 기대감으로 단기적으로는 긍정적이나, 급등 후 눌림목을 기다리는 것이 좋겠습니다.",
+          "close": 62600.0,
+          "change_pct": 15.711645101663585,
+          "score": 56,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "아이티센글로벌 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 1.4x (거래량 확인) / RSI 67 (상방 우세)"
+          ],
+          "volume_ratio_20d": 1.4434545050609042,
+          "rsi14": 67.00581395348837,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 30,
+          "ai_state": "관망",
+          "ai_action": "보류",
+          "ai_note": "클로봇은 전라남도와 지능형 로봇산업 육성 협약을 체결했습니다. 아직 뚜렷한 주가 상승 모멘텀은 보이지 않으므로, 추후 구체적인 성과를 지켜보며 대응하는 것이 좋겠습니다.",
+          "close": 50200.0,
+          "change_pct": 0.5005005005005003,
+          "score": 19,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.3389070009436951,
+          "rsi14": 66.289592760181,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 45,
+          "ai_state": "관망",
+          "ai_action": "보류",
+          "ai_note": "삼성전자 노조 파업 예고와 씨티그룹의 목표주가 하향 조정 소식이 있습니다. 단기적으로는 부담 요인이 될 수 있으나, 장기적인 관점에서 분할 매수 접근을 고려해볼 수 있습니다.",
+          "close": 229500.0,
+          "change_pct": 4.081632653061229,
+          "score": 41,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.9481222830044478,
+          "rsi14": 72.44094488188976,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 90,
+          "ai_state": "강세",
+          "ai_action": "매수",
+          "ai_note": "SK하이닉스는 AI 메모리 수요 확대 기대감으로 장중 12% 급등하며 사상 최고가를 경신했습니다. AI 반도체 시장 성장에 따른 수혜가 지속될 것으로 보입니다.",
+          "close": 1435000.0,
+          "change_pct": 11.586314152410582,
+          "score": 85,
+          "state": "강함",
+          "action": "매수 가능",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.084039809073535,
+          "rsi14": 90.72164948453609,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 35,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "네이버는 최근 채용 기조가 보수적으로 바뀌었다는 관측이 있습니다. 중동 전쟁 장기화로 인한 사업 우려도 존재하므로, 당분간 관망하며 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 209000.0,
+          "change_pct": -0.9478672985781977,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.8243329510658204,
+          "rsi14": 60.20408163265306,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 40,
+          "ai_state": "관망",
+          "ai_action": "보류",
+          "ai_note": "현대차그룹은 미국 전기차·하이브리드 어워즈에서 7관왕을 달성하며 북미 시장 경쟁력을 입증했습니다. 다만, 지난달 미국 판매량은 소폭 감소했으므로, 추가적인 상승 모멘텀을 확인하며 접근하는 것이 좋겠습니다.",
+          "close": 540000.0,
+          "change_pct": 1.6949152542372836,
+          "score": 30,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.6473890201311682,
+          "rsi14": 65.41353383458647,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 50,
+          "ai_state": "관망",
+          "ai_action": "보류",
+          "ai_note": "한화에어로스페이스는 1분기 실적이 시장 기대치를 하회했으나, 하반기 반등이 예상됩니다. 핀란드 K9 자주포 추가 수출 등 긍정적인 수주 모멘텀을 고려하여 중장기적인 관점에서 접근할 수 있습니다.",
+          "close": 1464000.0,
+          "change_pct": 3.316866619618919,
+          "score": 46,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.7222140302111578,
+          "rsi14": 41.269841269841265,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 65,
+          "ai_state": "강세",
+          "ai_action": "매수 가능",
+          "ai_note": "LIG넥스원은 천궁-II의 실전 성과와 미국 현지법인 설립 등으로 주목받고 있습니다. 지정학적 리스크 지속과 방산 시장 성장에 따른 수혜가 기대됩니다.",
+          "close": 943000.0,
+          "change_pct": 0.2125398512220933,
+          "score": 41,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.34304839441045026,
+          "rsi14": 50.46728971962617,
           "signals": {
             "short_cross": "none",
             "mid_cross": "none"
