@@ -1,58 +1,7 @@
 {
-  "updated_at_et": "2026-05-04 08:10 ET",
+  "updated_at_et": "2026-05-04 10:36 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-04-21 12:14 ET",
-      "market_data_as_of": "2026-04-21 11:53 ET (5분봉)",
-      "market": {
-        "score": 92,
-        "level": 6,
-        "state": "레벨 6/6 - 강한 상승장",
-        "action": "매수 / 강한 보유",
-        "cross_highlights": [
-          "나스닥 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 97 (과열 구간)"
-        ],
-        "top_reasons": [
-          "S&P500이 200일선 위에 있습니다 (+10)",
-          "나스닥이 200일선 위에 있습니다 (+10)",
-          "S&P500의 50일선이 200일선 위에 있습니다 (+8)"
-        ],
-        "metrics": {
-          "vix_close": 19.850000381469727,
-          "tnx_close": 4.297999858856201,
-          "pct_above_20dma": 73.558648111332,
-          "pct_above_50dma": 57.85288270377733
-        }
-      },
-      "ai_analysis": {
-        "status": "error",
-        "model": "gemini-2.5-flash",
-        "content": "AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'"
-      },
-      "ai_notifications": {
-        "count": 2,
-        "items": [
-          {
-            "id": "ai-vix-shock",
-            "priority": "high",
-            "kind": "ai_macro_shock",
-            "scope": "market",
-            "title": "변동성 급등",
-            "message": "VIX가 직전 AI 갱신 대비 +5.5% 급등했습니다. 리스크 오프 신호로 보고 방어적으로 대응하는 편이 좋습니다."
-          },
-          {
-            "id": "ai-judgment-divergence-negative-SERV",
-            "priority": "medium",
-            "kind": "ai_sentiment_divergence",
-            "scope": "stock",
-            "title": "SERV AI 판단 괴리",
-            "message": "SERV 주가는 버티고 있지만 AI 판단 점수는 15점 악화됐습니다. 악재가 뒤늦게 가격에 반영될 수 있는지 확인이 필요합니다.",
-            "ticker": "SERV"
-          }
-        ]
-      }
-    },
     {
       "generated_at_et": "2026-04-21 13:32 ET",
       "market_data_as_of": "2026-04-21 12:50 ET (5분봉)",
@@ -7215,6 +7164,40 @@
             "ticker": "SERV"
           }
         ]
+      }
+    },
+    {
+      "generated_at_et": "2026-05-04 10:36 ET",
+      "market_data_as_of": "2026-05-04 10:30 ET (5분봉)",
+      "market": {
+        "score": 100,
+        "level": 6,
+        "state": "레벨 6/6 - 강한 상승장",
+        "action": "매수 / 강한 보유",
+        "cross_highlights": [
+          "S&P500 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 76 (과열 구간)",
+          "나스닥 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 77 (과열 구간)"
+        ],
+        "top_reasons": [
+          "S&P500이 200일선 위에 있습니다 (+10)",
+          "나스닥이 200일선 위에 있습니다 (+10)",
+          "S&P500의 50일선이 200일선 위에 있습니다 (+8)"
+        ],
+        "metrics": {
+          "vix_close": 17.229999542236328,
+          "tnx_close": 4.415999889373779,
+          "pct_above_20dma": 55.666003976143145,
+          "pct_above_50dma": 56.461232604373755
+        }
+      },
+      "ai_analysis": {
+        "status": "error",
+        "model": "gemini-2.5-flash",
+        "content": "AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'"
+      },
+      "ai_notifications": {
+        "count": 0,
+        "items": []
       }
     }
   ]
