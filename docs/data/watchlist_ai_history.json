@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-05-05 05:28 ET",
+  "updated_at_et": "2026-05-05 07:01 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-04-22 03:10 ET",
-      "market_data_as_of": "2026-04-21 16:00 ET (Close)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-04-22 05:03 ET",
       "market_data_as_of": "2026-04-21 16:00 ET (Close)",
@@ -24151,6 +24144,167 @@
           "ai_state": "상승",
           "ai_action": "매수",
           "ai_note": "중기 골든크로스 발생 및 시장 대비 강한 흐름으로 매수 관점 유지. 50일선 지지 여부 확인하며 보유.",
+          "close": 619.9299926757812,
+          "change_pct": 2.862215472495344,
+          "score": 73,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "KORU 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 67 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-05-05 07:01 ET",
+      "market_data_as_of": "2026-05-04 15:47 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 75,
+          "ai_state": "양호",
+          "ai_action": "선별 매수",
+          "ai_note": "최근 중기 골든크로스 신호가 긍정적입니다. RSI는 52로 중립 구간에 있어 추가 상승 여력이 있습니다.",
+          "close": 198.6699981689453,
+          "change_pct": 0.11085977530174151,
+          "score": 75,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "NVDA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 52 (중립)"
+          ],
+          "volume_ratio_20d": 0.0027386919262374324,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 51,
+          "ai_state": "애매",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "시장을 상회하는 흐름을 보이나, 명확한 추세 전환 신호는 부족합니다. 50일선 지지 여부를 관찰하며 접근하는 것이 좋습니다.",
+          "close": 392.5799865722656,
+          "change_pct": 0.4503298743830264,
+          "score": 51,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 29,
+          "ai_state": "회피",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "단기 데드크로스 발생 및 RSI 34로 하방 압력이 감지됩니다. 시장 대비 약한 흐름이 지속될 수 있어 관망이 필요합니다.",
+          "close": 611.7949829101562,
+          "change_pct": 0.5002025314424952,
+          "score": 29,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "META 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 34 (하방 우세)",
+            "META 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 34 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.002335875406186689,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 68,
+          "ai_state": "양호",
+          "ai_action": "관찰",
+          "ai_note": "실적 발표를 앞두고 있어 변동성 확대 가능성이 있습니다. 발표 이후 추세를 확인하며 접근하는 것이 안전합니다.",
+          "close": 344.25,
+          "change_pct": -4.518224928951875,
+          "score": 68,
+          "state": "양호",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.005508474567397633,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 66,
+          "ai_state": "양호",
+          "ai_action": "관찰",
+          "ai_note": "중기 골든크로스 발생 및 RSI 62로 상승세가 엿보입니다. 실적 발표가 오늘 예정되어 있어 결과에 따라 주가 방향이 결정될 것입니다.",
+          "close": 56.08000183105469,
+          "change_pct": 1.963639692826713,
+          "score": 66,
+          "state": "양호",
+          "action": "관찰",
+          "cross_highlights": [
+            "TEM 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 62 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.004438373090805154,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 74,
+          "ai_state": "양호",
+          "ai_action": "선별 매수",
+          "ai_note": "시장을 상회하는 강한 흐름을 보이며 RSI 77로 과열 구간에 진입했습니다. 단기 눌림목 발생 시 매수 기회를 노려볼 수 있습니다.",
+          "close": 463.1199951171875,
+          "change_pct": -0.5646816710279112,
+          "score": 74,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0013142262366005186,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 60,
+          "ai_state": "애매",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "시장을 상회하는 흐름은 유지하나, RSI 54로 추가 상승 동력이 약합니다. 실적 발표 이후 추세를 지켜보는 것이 좋습니다.",
+          "close": 9.335000038146973,
+          "change_pct": -0.691484925756447,
+          "score": 60,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0015415351977752956,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 73,
+          "ai_state": "양호",
+          "ai_action": "선별 매수",
+          "ai_note": "최근 중기 골든크로스 신호와 함께 RSI 67로 상승세가 강합니다. 시장 대비 견조한 흐름을 보이며 추가 상승을 기대해 볼 수 있습니다.",
           "close": 619.9299926757812,
           "change_pct": 2.862215472495344,
           "score": 73,
