@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-05-05 19:41 ET",
+  "updated_at_et": "2026-05-05 22:06 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-04-22 15:03 ET",
-      "market_data_as_of": "2026-04-22 14:50 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-04-22 16:28 ET",
       "market_data_as_of": "2026-04-22 16:00 ET (Close)",
@@ -24146,6 +24139,167 @@
           "ai_state": "애매",
           "ai_action": "보류 / 관찰",
           "ai_note": "최근 급등하며 중기 골든크로스 신호가 나왔으나 RSI가 75로 과열 구간에 진입했습니다. 시장 대비 강한 흐름을 보이고 있지만, 단기 급등에 따른 차익 실현 매물이 나올 수 있으므로 추격 매수는 지양하고 관망하는 것이 좋습니다.",
+          "close": 731.6199951171875,
+          "change_pct": 17.667300148815947,
+          "score": 64,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "KORU 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 76 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-05-05 22:06 ET",
+      "market_data_as_of": "2026-05-05 15:55 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 75,
+          "ai_state": "상승",
+          "ai_action": "보유",
+          "ai_note": "NVIDIA는 최근 1900억 달러 규모의 AI 인프라 투자 소식과 함께 긍정적인 헤드라인을 이어가고 있습니다. 중기 골든크로스 신호가 유효하며, 현재 추세상 보유 관점을 유지하는 것이 좋습니다.",
+          "close": 196.25999450683594,
+          "change_pct": -1.1185012436974229,
+          "score": 70,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "NVDA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 47 (중립)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 65,
+          "ai_state": "보합",
+          "ai_action": "보유",
+          "ai_note": "테슬라는 유럽 시장에서의 FSD 도입 가속화 및 리스 프로모션 등 긍정적 소식이 있으나, 현금 소진 우려와 내부자 매도 등 혼재된 이슈로 인해 현재 보합세를 보입니다. 보유 관점을 유지하며 추이를 지켜보는 것이 좋습니다.",
+          "close": 390.2799987792969,
+          "change_pct": -0.5681411762364252,
+          "score": 67,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 35,
+          "ai_state": "하락",
+          "ai_action": "관망",
+          "ai_note": "메타는 대규모 AI 투자와 함께 대규모 감원 소식이 전해지고 있으나, 규제 및 법적 리스크가 주가에 부담을 주고 있습니다. 현재로서는 관망하며 추가적인 방향성을 확인하는 것이 좋겠습니다.",
+          "close": 604.7849731445312,
+          "change_pct": -0.921511811319653,
+          "score": 29,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "META 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 28 (과매도 구간)",
+            "META 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 28 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 70,
+          "ai_state": "상승",
+          "ai_action": "보유",
+          "ai_note": "AMD는 1분기 실적 호조와 함께 데이터센터 매출이 크게 증가하며 긍정적인 흐름을 보이고 있습니다. AI 인프라 수요 증가가 지속될 것으로 예상되므로 보유 관점을 유지하는 것이 좋습니다.",
+          "close": 353.8949890136719,
+          "change_pct": 3.6174328510989007,
+          "score": 68,
+          "state": "양호",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 82,
+          "ai_state": "강세",
+          "ai_action": "매수",
+          "ai_note": "Tempus AI는 1분기 매출이 전년 대비 36.1% 증가하며 긍정적인 실적을 발표했습니다. AI 기반 정밀 의학 협력 강화 소식도 긍정적이며, 현재 강세 추세를 고려할 때 매수 관점으로 접근할 수 있습니다.",
+          "close": 54.03499984741211,
+          "change_pct": -3.1804362698481636,
+          "score": 80,
+          "state": "강함",
+          "action": "매수 가능",
+          "cross_highlights": [
+            "TEM 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 45 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 78,
+          "ai_state": "상승",
+          "ai_action": "보유",
+          "ai_note": "반도체 ETF인 SOXX는 AI 칩 수요 증가와 공급망 낙관론에 힘입어 강세를 보이고 있습니다. 개별 종목들의 상승세가 ETF에도 긍정적인 영향을 미치고 있어 보유 관점을 유지하는 것이 좋습니다.",
+          "close": 481.3900146484375,
+          "change_pct": 4.18344310089136,
+          "score": 74,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 40,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "Serve Robotics는 2,000대 이상의 자율주행 로봇을 배치하며 사업을 확장하고 있으나, 주가는 최근 약세를 보이고 있습니다. 1분기 실적 발표를 앞두고 있으며, 결과 확인 후 관망하는 것이 좋겠습니다.",
+          "close": 9.145000457763672,
+          "change_pct": -2.1925124635538307,
+          "score": 42,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 60,
+          "ai_state": "애매",
+          "ai_action": "관망",
+          "ai_note": "KORU Medical Systems는 1분기 실적 발표를 앞두고 있으며, 최근 EU MDR 인증 획득 등 긍정적인 소식이 있었으나 주가는 아직 방향성을 명확히 잡지 못하고 있습니다. 실적 발표 후 추이를 지켜보는 것이 좋겠습니다.",
           "close": 731.6199951171875,
           "change_pct": 17.667300148815947,
           "score": 64,
