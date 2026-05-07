@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-05-06 19:48 ET",
-  "count": 82,
+  "updated_at_et": "2026-05-06 22:38 ET",
+  "count": 83,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -11533,6 +11533,170 @@
           "cross_highlights": [],
           "volume_ratio_20d": 0.7737870538151082,
           "rsi14": 54.81798715203426,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-05-06 22:38 ET",
+      "market_data_as_of": "2026-05-07 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 55,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "아이티센글로벌은 400억원 규모의 전환사채 발행 소식이 있습니다. 이는 재무구조 개선 및 신사업 투자 재원 확보 목적이며, 웹3, STO 등 신사업 확대에 대한 기대감이 있습니다. 다만, 거래량은 아직 약하므로 추세를 더 지켜보는 것이 좋겠습니다.",
+          "close": 57600.0,
+          "change_pct": -4.318936877076407,
+          "score": 49,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "아이티센글로벌 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.3x (거래량 약함) / RSI 55 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.2712812040507662,
+          "rsi14": 55.15759312320917,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 30,
+          "ai_state": "관망",
+          "ai_action": "보류",
+          "ai_note": "클로봇은 전라남도와 지능형 로봇산업 육성 협약을 체결하며 사업 확장에 나섰습니다. 하지만 현재 거래량이 약하고 시장 대비 힘이 약한 모습을 보이고 있어 추가적인 상승 모멘텀을 확인해야 합니다.",
+          "close": 49250.0,
+          "change_pct": -1.005025125628145,
+          "score": 26,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.2738389721346869,
+          "rsi14": 60.43956043956044,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 65,
+          "ai_state": "보유",
+          "ai_action": "보유",
+          "ai_note": "삼성전자가 시가총액 1조 달러를 돌파하며 글로벌 시장에서의 위상을 재확인했습니다. 다만, 노조 및 주주 갈등 이슈가 부각되고 있으며, 중국 가전 시장 철수 결정 등 사업 재편 움직임도 있어 단기적인 변동성에 유의해야 합니다.",
+          "close": 263000.0,
+          "change_pct": -1.1278195488721776,
+          "score": 64,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.6776262578428984,
+          "rsi14": 77.95698924731184,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 60,
+          "ai_state": "보유",
+          "ai_action": "보유",
+          "ai_note": "SK하이닉스는 HBM 리더십 확보에 기여한 경영진에게 성과급으로 자사주를 지급했습니다. 또한, 미래에셋증권은 목표가를 상향하며 긍정적인 전망을 제시했습니다. 다만, 청주공장 건설 관련 노사 갈등 우려가 있어 주시해야 합니다.",
+          "close": 1577000.0,
+          "change_pct": -1.499063085571517,
+          "score": 60,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.53354034750915,
+          "rsi14": 88.08290155440415,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 15,
+          "ai_state": "관망",
+          "ai_action": "보류",
+          "ai_note": "네이버는 AI 탭 출시 및 서비스 확대로 실적 개선 기대감이 있으나, 목표주가 대비 상승 여력이 제한적이라는 분석이 있습니다. 또한, 경력직 채용 축소 루머 등 내부적인 이슈도 있어 관망하는 것이 좋겠습니다.",
+          "close": 206250.0,
+          "change_pct": -0.8413461538461564,
+          "score": 11,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5663657864046843,
+          "rsi14": 44.02515723270441,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 65,
+          "ai_state": "보유",
+          "ai_action": "보유",
+          "ai_note": "현대차그룹은 중국 및 일본 시장 재공략에 나서며 새로운 성장 동력을 모색하고 있습니다. 다만, 미국 및 EU 시장에서의 현지화 문제와 노사 임금 협상 이슈가 있어 추이를 지켜볼 필요가 있습니다.",
+          "close": 566000.0,
+          "change_pct": 2.9090909090909056,
+          "score": 60,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "현대차 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 1.1x (거래량 보통) / RSI 65 (상방 우세)"
+          ],
+          "volume_ratio_20d": 1.1014838086246335,
+          "rsi14": 64.79591836734694,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 30,
+          "ai_state": "관망",
+          "ai_action": "보류",
+          "ai_note": "한화에어로스페이스는 한국항공우주산업(KAI) 지분 추가 매입을 통해 경영 참여를 공식화하며 방산 분야 통합을 추진하고 있습니다. 하지만 시장 대비 힘이 약한 모습을 보이고 있어 추가적인 상승 모멘텀을 확인해야 합니다.",
+          "close": 1378000.0,
+          "change_pct": -3.8381018841591064,
+          "score": 27,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.32660361310210256,
+          "rsi14": 35.28089887640449,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 45,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "LIG넥스원은 천궁-II의 실전 성과를 바탕으로 미국 현지법인을 설립하며 글로벌 시장 확대를 꾀하고 있습니다. 다만, 거래량이 아직 약하고 시장 대비 힘이 약한 모습을 보이고 있어 추세를 더 지켜보는 것이 좋겠습니다.",
+          "close": 952000.0,
+          "change_pct": -2.757916241062308,
+          "score": 40,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.23276313111051478,
+          "rsi14": 56.512141280353205,
           "signals": {
             "short_cross": "none",
             "mid_cross": "none"
