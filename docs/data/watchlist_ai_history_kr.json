@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-05-10 19:50 ET",
-  "count": 89,
+  "updated_at_et": "2026-05-10 22:53 ET",
+  "count": 90,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -12530,6 +12530,172 @@
           ],
           "volume_ratio_20d": 1.0292139189563654,
           "rsi14": 45.960502692998205,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-05-10 22:53 ET",
+      "market_data_as_of": "2026-05-11 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 65,
+          "ai_state": "관망",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "아이티센글로벌은 400억원 규모의 전환사채 발행 소식이 있습니다. 시장 대비 강한 흐름을 보이며 50일선과 20일선 위에 있어 추가 상승 가능성을 열어두고 관찰하는 것이 좋겠습니다.",
+          "close": 57600.0,
+          "change_pct": -0.8605851979345935,
+          "score": 58,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.20584088696064093,
+          "rsi14": 56.34005763688761,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 25,
+          "ai_state": "회피",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "클로봇은 학교 및 공공 체육시설로 청소로봇 공급을 확대한다는 소식이 있습니다. 다만 현재 거래량이 약하고 시장 대비 힘이 약한 모습이므로 당분간 관망하는 것이 좋겠습니다.",
+          "close": 48950.0,
+          "change_pct": -2.100000000000002,
+          "score": 19,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.35285643640970143,
+          "rsi14": 47.95180722891566,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 70,
+          "ai_state": "양호",
+          "ai_action": "보유",
+          "ai_note": "삼성전자는 미국 반도체주 강세와 AI 투자 기대감에 힘입어 장중 29만원선을 돌파했습니다. 다만 최근 급등으로 단기 과열 우려가 있으니, 보유자는 추세를 지켜보되 신규 진입은 분할 매수를 고려하는 것이 좋겠습니다.",
+          "close": 282000.0,
+          "change_pct": 5.027932960893855,
+          "score": 65,
+          "state": "양호",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5289329504459445,
+          "rsi14": 81.73076923076923,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 75,
+          "ai_state": "강세",
+          "ai_action": "보유",
+          "ai_note": "SK하이닉스는 장중 처음으로 190만 원을 돌파하며 신고가를 경신했습니다. AI 메모리 수요 확대 전망이 긍정적이나, 단기 급등에 따른 차익 실현 매물 출회 가능성도 있어 보유자는 분할 매도를 고려하며 추세를 관찰하는 것이 좋겠습니다.",
+          "close": 1847000.0,
+          "change_pct": 9.549228944246746,
+          "score": 60,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5604839976542897,
+          "rsi14": 97.6158940397351,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 15,
+          "ai_state": "약세",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "NAVER는 최근 단기 데드크로스가 발생했으며, 시장 대비 힘이 약한 모습입니다. 5일선이 20일선 아래로 내려갔고 RSI도 하방 우세이므로 당분간 관망하며 추세 전환을 기다리는 것이 좋겠습니다.",
+          "close": 210000.0,
+          "change_pct": -2.3255813953488413,
+          "score": 10,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "NAVER 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.4x (거래량 약함) / RSI 42 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.4192324012669511,
+          "rsi14": 42.168674698795186,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 55,
+          "ai_state": "관망",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "현대차는 최근 중기 골든크로스가 발생했으나 거래량이 약한 편입니다. 20일선과 50일선 위에 있어 긍정적이나, 뚜렷한 상승 모멘텀이 부족하므로 추세를 지켜보며 관망하는 것이 좋겠습니다.",
+          "close": 621000.0,
+          "change_pct": 1.3050570962479524,
+          "score": 53,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "현대차 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.7x (거래량 약함) / RSI 69 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.7261820639424398,
+          "rsi14": 68.77828054298642,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "한화에어로스페이스는 에스토니아에 천무를 추가 공급하는 계약을 체결했습니다. 하지만 현재 시장 대비 힘이 약하고 20일선과 50일선 아래에 있어 당분간 관망하는 것이 좋겠습니다.",
+          "close": 1347000.0,
+          "change_pct": 3.0604437643458215,
+          "score": 26,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.347073890577777,
+          "rsi14": 41.55555555555556,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 35,
+          "ai_state": "약세",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "LIG넥스원은 단거리공대공유도탄-II 체계개발 본격화 소식이 있습니다. 그러나 최근 단기 데드크로스가 나왔고 시장 대비 힘이 약한 모습이므로 당분간 관망하는 것이 좋겠습니다.",
+          "close": 854000.0,
+          "change_pct": 1.6666666666666607,
+          "score": 32,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "LIG넥스원 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.3x (거래량 약함) / RSI 48 (중립)"
+          ],
+          "volume_ratio_20d": 0.2558394097326384,
+          "rsi14": 48.04270462633452,
           "signals": {
             "short_cross": "bear",
             "mid_cross": "none"
