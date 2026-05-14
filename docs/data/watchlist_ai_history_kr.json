@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-05-13 22:52 ET",
-  "count": 99,
+  "updated_at_et": "2026-05-14 02:23 ET",
+  "count": 100,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -14206,6 +14206,177 @@
             "LIG넥스원 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.2x (거래량 약함) / RSI 33 (하방 우세)"
           ],
           "volume_ratio_20d": 0.16854381785443945,
+          "rsi14": 33.177570093457945,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-05-14 02:23 ET",
+      "market_data_as_of": "2026-05-14 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "보유/관찰",
+          "ai_note": "20일선 아래 위치하며 약세를 보이고 있습니다. 보유 중이라면 20일선 재돌파 시까지 관망하는 것이 좋습니다.",
+          "close": 52800.0,
+          "change_pct": -3.649635036496346,
+          "score": 16,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5402912624888845,
+          "rsi14": 58.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 10,
+          "ai_state": "매우 약세",
+          "ai_action": "보류",
+          "ai_note": "최근 단기 데드크로스 발생 및 약한 거래량으로 하락 추세입니다. 당분간 관망이 필요합니다.",
+          "close": 44850.0,
+          "change_pct": -3.2362459546925515,
+          "score": 1,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "클로봇 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.5x (거래량 약함) / RSI 42 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.45325148253945885,
+          "rsi14": 42.26579520697168,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 90,
+          "ai_state": "강세",
+          "ai_action": "매수 고려",
+          "ai_note": "시장 대비 강한 흐름을 보이며 20일선과 50일선 위에 안착했습니다. 상승 추세가 이어질 가능성이 있습니다.",
+          "close": 292500.0,
+          "change_pct": 2.992957746478875,
+          "score": 90,
+          "state": "강함",
+          "action": "매수 가능",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.0549825964824662,
+          "rsi14": 81.25,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 75,
+          "ai_state": "양호",
+          "ai_action": "선별 매수",
+          "ai_note": "시장 대비 견조한 흐름을 유지하며 20일선과 50일선 위에 있습니다. RSI 과열 구간 진입에 유의하며 접근합니다.",
+          "close": 1948500.0,
+          "change_pct": -1.3917004048582982,
+          "score": 74,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.8265599133649781,
+          "rsi14": 90.10503040353787,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 35,
+          "ai_state": "약세",
+          "ai_action": "보류/관찰",
+          "ai_note": "단기 데드크로스 발생 후 시장 대비 약한 모습을 보입니다. 20일선 회복 여부를 지켜보는 것이 좋습니다.",
+          "close": 210500.0,
+          "change_pct": 4.466501240694787,
+          "score": 35,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "NAVER 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 1.5x (거래량 확인) / RSI 47 (중립)",
+            "NAVER 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 1.5x (거래량 확인) / RSI 47 (중립)"
+          ],
+          "volume_ratio_20d": 1.4885043163399851,
+          "rsi14": 46.846846846846844,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 70,
+          "ai_state": "양호",
+          "ai_action": "관찰",
+          "ai_note": "최근 중기 골든크로스 발생 후 상승했으나 RSI 과열 구간입니다. 단기 조정을 염두에 두고 관찰합니다.",
+          "close": 696000.0,
+          "change_pct": -1.9718309859154903,
+          "score": 75,
+          "state": "양호",
+          "action": "관찰",
+          "cross_highlights": [
+            "현대차 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 1.0x (거래량 보통) / RSI 77 (과열 구간)"
+          ],
+          "volume_ratio_20d": 1.0452698208435753,
+          "rsi14": 76.8166089965398,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 15,
+          "ai_state": "매우 약세",
+          "ai_action": "보류",
+          "ai_note": "중기 데드크로스 발생 및 약한 거래량으로 하락 추세입니다. 당분간 매수 접근은 어렵습니다.",
+          "close": 1279000.0,
+          "change_pct": -0.5443234836702948,
+          "score": 9,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.5x (거래량 약함) / RSI 33 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.5125181960417471,
+          "rsi14": 32.7455919395466,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "보류/관찰",
+          "ai_note": "단기 데드크로스 발생 후 시장 대비 약한 흐름입니다. 20일선 회복 전까지는 관망하는 것이 좋습니다.",
+          "close": 876000.0,
+          "change_pct": 0.3436426116838476,
+          "score": 32,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "LIG넥스원 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.4x (거래량 약함) / RSI 33 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.3657780413465915,
           "rsi14": 33.177570093457945,
           "signals": {
             "short_cross": "bear",
