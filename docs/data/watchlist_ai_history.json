@@ -1,165 +1,7 @@
 {
-  "updated_at_et": "2026-05-14 14:14 ET",
+  "updated_at_et": "2026-05-14 16:11 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-04-29 18:51 ET",
-      "market_data_as_of": "2026-04-29 15:55 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 75,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "최근 NVIDIA는 양자 컴퓨터 가속을 위한 오픈 AI 모델 'Ising'을 출시했으며, 로봇 공학 소프트웨어 및 시뮬레이션 프레임워크를 발표했습니다. RSI 74로 과열 구간 진입 가능성이 있으므로, 단기적인 조정 가능성을 염두에 두고 보유하며 추이를 지켜보는 것이 좋겠습니다.",
-          "close": 209.02000427246094,
-          "change_pct": -1.946800174570229,
-          "score": 78,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [
-            "NVDA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 74 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.008176724315074884,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 20,
-          "ai_state": "하락",
-          "ai_action": "매도",
-          "ai_note": "최근 사이버캡 생산을 시작했으나, 자율주행의 상업적 수익성은 아직 불확실하며 중국 EV 업체와의 경쟁 심화가 부담입니다. RSI 63으로 과열 구간은 아니지만, 전반적인 하락 추세와 불확실성을 고려하여 매도 후 관망하는 것을 추천합니다.",
-          "close": 373.3432922363281,
-          "change_pct": -0.7118495972421313,
-          "score": 17,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.003416612692595624,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 65,
-          "ai_state": "혼조",
-          "ai_action": "관망",
-          "ai_note": "최근 1분기 실적은 예상치를 상회했으나, AI 인프라 투자 확대로 인한 자본 지출(CAPEX) 전망치 상향 조정으로 인해 주가가 하락했습니다. 단기적으로는 실적 발표 후 변동성이 클 수 있으므로, 관망하며 추세를 지켜보는 것이 좋겠습니다.",
-          "close": 668.7899780273438,
-          "change_pct": -0.37984459828342976,
-          "score": 69,
-          "state": "양호",
-          "action": "관찰",
-          "cross_highlights": [
-            "META 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 65 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.01631487085270611,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 70,
-          "ai_state": "상승",
-          "ai_action": "보유",
-          "ai_note": "AMD는 'Advancing AI 2026' 이벤트를 발표하고 Meta와 AI GPU 공급 파트너십을 확장하는 등 AI 분야에서 활발한 움직임을 보이고 있습니다. RSI 81로 과열 구간에 진입했으나, 강력한 상승 추세와 긍정적인 뉴스 흐름을 고려하여 보유하는 것을 추천합니다.",
-          "close": 336.25,
-          "change_pct": 4.034531385065265,
-          "score": 68,
-          "state": "양호",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.008513140204455056,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 15,
-          "ai_state": "하락",
-          "ai_action": "매도",
-          "ai_note": "최근 실적 발표를 앞두고 있으며, 시장 대비 약한 모습을 보이고 있습니다. RSI 60으로 과열 구간은 아니지만, 불확실성을 고려하여 매도 후 관망하는 것을 추천합니다.",
-          "close": 50.14500045776367,
-          "change_pct": -1.868880714039689,
-          "score": 16,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.011220874382617995,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 75,
-          "ai_state": "상승",
-          "ai_action": "보유",
-          "ai_note": "반도체 섹터 ETF인 SOXX는 AI 칩 시장 성장에 힘입어 강한 상승세를 보이고 있습니다. RSI 80으로 과열 구간에 진입했으나, 섹터 전반의 긍정적인 흐름을 고려하여 보유하는 것을 추천합니다.",
-          "close": 449.4700012207031,
-          "change_pct": 2.452647529165475,
-          "score": 74,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.01153457881865431,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 10,
-          "ai_state": "하락",
-          "ai_action": "매도",
-          "ai_note": "최근 2,000대의 자율주행 로봇을 배치하며 사업을 확장하고 있으나, 시장 대비 약한 모습을 보이고 있습니다. RSI 59로 과열 구간은 아니지만, 전반적인 하락 추세를 고려하여 매도 후 관망하는 것을 추천합니다.",
-          "close": 8.996000289916992,
-          "change_pct": -4.6023329927209256,
-          "score": 7,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.005861124377355208,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 70,
-          "ai_state": "상승",
-          "ai_action": "보유",
-          "ai_note": "KORU Medical Systems는 4분기 및 연간 매출 성장을 발표하며 긍정적인 실적을 기록했습니다. RSI 64로 과열 구간은 아니지만, 상승 추세를 고려하여 보유하는 것을 추천합니다.",
-          "close": 523.0800170898438,
-          "change_pct": -0.5191952380946829,
-          "score": 73,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [
-            "KORU 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 64 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-04-29 19:47 ET",
       "market_data_as_of": "2026-04-29 15:55 ET (5분봉)",
@@ -22978,6 +22820,13 @@
     {
       "generated_at_et": "2026-05-14 14:14 ET",
       "market_data_as_of": "2026-05-14 12:50 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
+    },
+    {
+      "generated_at_et": "2026-05-14 16:11 ET",
+      "market_data_as_of": "2026-05-14 14:50 ET (5분봉)",
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
