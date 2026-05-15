@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-05-14 23:25 ET",
-  "count": 102,
+  "updated_at_et": "2026-05-15 02:53 ET",
+  "count": 103,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -14717,6 +14717,174 @@
           "cross_highlights": [],
           "volume_ratio_20d": 0.1459875418559573,
           "rsi14": 35.55555555555557,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-05-15 02:53 ET",
+      "market_data_as_of": "2026-05-15 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 20,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "아이티센글로벌은 시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 있어 당분간 관망이 필요합니다.",
+          "close": 51500.0,
+          "change_pct": -3.0131826741996215,
+          "score": 13,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.9285900607282703,
+          "rsi14": 57.03479576399394,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 15,
+          "ai_state": "관망",
+          "ai_action": "보류",
+          "ai_note": "클로봇은 최근 단기 데드크로스 발생 및 시장 대비 약세로 인해 보류하며 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 45150.0,
+          "change_pct": -0.9868421052631526,
+          "score": 13,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "클로봇 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 1.3x (거래량 확인) / RSI 44 (하방 우세)"
+          ],
+          "volume_ratio_20d": 1.255613454474407,
+          "rsi14": 44.29223744292237,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 75,
+          "ai_state": "양호",
+          "ai_action": "보유",
+          "ai_note": "삼성전자는 시장 대비 강한 흐름을 보이며 20일선과 50일선 위에 있어 보유 관점을 유지합니다.",
+          "close": 276500.0,
+          "change_pct": -6.58783783783784,
+          "score": 74,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.9700153718382933,
+          "rsi14": 69.11764705882354,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 70,
+          "ai_state": "양호",
+          "ai_action": "보유",
+          "ai_note": "SK하이닉스는 시장 대비 견조한 흐름을 보이며 20일선과 50일선 위에 있어 보유를 추천합니다.",
+          "close": 1857000.0,
+          "change_pct": -5.736040609137061,
+          "score": 70,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.01859388149413,
+          "rsi14": 81.7907444668008,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 30,
+          "ai_state": "관망",
+          "ai_action": "보류",
+          "ai_note": "NAVER는 시장 대비 약세이며 20일선과 50일선 아래에 있어 당분간 보류하며 추세를 확인하는 것이 좋습니다.",
+          "close": 206000.0,
+          "change_pct": -3.2863849765258246,
+          "score": 26,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "NAVER 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.9x (거래량 보통) / RSI 41 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.9167379857876975,
+          "rsi14": 40.650406504065046,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 90,
+          "ai_state": "강세",
+          "ai_action": "매수",
+          "ai_note": "현대차는 최근 중기 골든크로스 발생과 강한 거래량, 높은 RSI 수치를 동반하며 시장 대비 강한 흐름을 보여 매수 관점으로 접근 가능합니다.",
+          "close": 714000.0,
+          "change_pct": 0.2808988764045006,
+          "score": 89,
+          "state": "강함",
+          "action": "매수 가능",
+          "cross_highlights": [
+            "현대차 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 1.8x (거래량 강함) / RSI 84 (과열 구간)"
+          ],
+          "volume_ratio_20d": 1.8190198508369797,
+          "rsi14": 83.70370370370371,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 10,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "한화에어로스페이스는 최근 중기 데드크로스 발생 및 시장 대비 약세로 인해 당분간 보류하며 추세를 지켜보는 것이 좋습니다.",
+          "close": 1234000.0,
+          "change_pct": -5.513016845329255,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.6x (거래량 약함) / RSI 30 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.6226546612838402,
+          "rsi14": 29.809725158562372,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 35,
+          "ai_state": "관망",
+          "ai_action": "보류",
+          "ai_note": "LIG넥스원은 시장 대비 약한 흐름을 보이며 20일선 아래에 있어 당분간 보류하며 추세를 확인하는 것이 좋습니다.",
+          "close": 858000.0,
+          "change_pct": -2.277904328018221,
+          "score": 34,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.47660772382517047,
+          "rsi14": 36.363636363636374,
           "signals": {
             "short_cross": "none",
             "mid_cross": "none"
