@@ -1,167 +1,7 @@
 {
-  "updated_at_et": "2026-05-15 11:58 ET",
+  "updated_at_et": "2026-05-15 13:40 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-04-30 14:50 ET",
-      "market_data_as_of": "2026-04-30 13:40 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 75,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "최근 중기 골든크로스 신호가 나왔으나 거래량이 약합니다. 시장 강세 속에서 보유하며 추세를 지켜보는 것이 좋겠습니다.",
-          "close": 200.50999450683594,
-          "change_pct": -4.17682460844161,
-          "score": 77,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [
-            "NVDA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 61 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.006799011211524225,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 20,
-          "ai_state": "매도",
-          "ai_action": "매도",
-          "ai_note": "거래량이 약하고 시장 대비 힘이 약한 모습입니다. 50일선 아래에 있어 추가 하락 가능성을 염두에 두고 매도를 고려할 시점입니다.",
-          "close": 378.8894958496094,
-          "change_pct": 1.633451785417539,
-          "score": 12,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0027470845913007014,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 35,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 있습니다. 중기 골든크로스 신호가 있으나 거래량이 약해 추가적인 확인이 필요합니다.",
-          "close": 609.22998046875,
-          "change_pct": -8.950564186614773,
-          "score": 36,
-          "state": "약함",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "META 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 45 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.015921254491259133,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 70,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "실적 발표를 앞두고 RSI가 과열 구간에 진입했습니다. 시장보다 강한 흐름을 보이지만, 발표 결과에 따라 변동성이 커질 수 있으니 보유하며 지켜보는 것이 좋겠습니다.",
-          "close": 353.05999755859375,
-          "change_pct": 4.731397140431026,
-          "score": 68,
-          "state": "양호",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.006542505598763102,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 65,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "중기 골든크로스 신호와 함께 시장 대비 강한 흐름을 보입니다. 실적 발표를 앞두고 있어 변동성을 고려하여 보유하며 추이를 지켜보는 것이 좋겠습니다.",
-          "close": 54.779998779296875,
-          "change_pct": 9.516190079911112,
-          "score": 64,
-          "state": "애매",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "TEM 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 68 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.0036423392899863054,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 75,
-          "ai_state": "매수",
-          "ai_action": "매수",
-          "ai_note": "시장 대비 강한 흐름을 보이며 20일선과 50일선 위에 있습니다. RSI가 과열 구간에 진입했으나, 전반적인 시장 강세와 함께 추가 상승을 기대해 볼 수 있습니다.",
-          "close": 460.2799987792969,
-          "change_pct": 2.28671943115053,
-          "score": 74,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0031392327265253564,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 45,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "거래량이 약하고 시장 대비 약한 흐름을 보입니다. 실적 발표를 앞두고 있어 변동성을 고려하여 보유하며 추이를 지켜보는 것이 좋겠습니다.",
-          "close": 9.345000267028809,
-          "change_pct": 3.9488376523783897,
-          "score": 49,
-          "state": "약함",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0011254451148008527,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 70,
-          "ai_state": "매수",
-          "ai_action": "매수",
-          "ai_note": "최근 중기 골든크로스 신호와 함께 시장 대비 강한 흐름을 보입니다. 거래량은 약하지만, 50일선 위에 있어 추가 상승 가능성을 염두에 두고 매수를 고려할 수 있습니다.",
-          "close": 566.1950073242188,
-          "change_pct": 8.547578310374204,
-          "score": 73,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [
-            "KORU 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 68 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.0007280076852289553,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-04-30 16:06 ET",
       "market_data_as_of": "2026-04-30 14:55 ET (5분봉)",
@@ -22374,6 +22214,13 @@
     {
       "generated_at_et": "2026-05-15 11:58 ET",
       "market_data_as_of": "2026-05-15 11:26 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
+    },
+    {
+      "generated_at_et": "2026-05-15 13:40 ET",
+      "market_data_as_of": "2026-05-15 13:10 ET (5분봉)",
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
