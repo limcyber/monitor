@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-05-15 02:53 ET",
-  "count": 103,
+  "updated_at_et": "2026-05-17 19:55 ET",
+  "count": 104,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -14885,6 +14885,174 @@
           "cross_highlights": [],
           "volume_ratio_20d": 0.47660772382517047,
           "rsi14": 36.363636363636374,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-05-17 19:55 ET",
+      "market_data_as_of": "2026-05-15 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 15,
+          "ai_state": "하락세",
+          "ai_action": "매도",
+          "ai_note": "아이티센글로벌은 1분기 매출 3.2조원을 기록하며 전년 대비 100% 성장했으나, 현재 주가는 약세를 보이고 있습니다. 보유 중이라면 단기 반등 시 매도 고려가 필요합니다.",
+          "close": 51200.0,
+          "change_pct": -3.5781544256120568,
+          "score": 13,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.1261115662349626,
+          "rsi14": 56.52173913043478,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 30,
+          "ai_state": "하락세",
+          "ai_action": "보유",
+          "ai_note": "클로봇은 1분기 매출이 전년 대비 65% 증가했으나, 최근 단기 데드크로스가 발생했습니다. 보유 중이라면 추가 하락 시 손절가를 고려해야 합니다.",
+          "close": 44900.0,
+          "change_pct": -1.5350877192982448,
+          "score": 27,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "클로봇 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 1.4x (거래량 확인) / RSI 44 (하방 우세)"
+          ],
+          "volume_ratio_20d": 1.4195731652569192,
+          "rsi14": 43.792325056433405,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 70,
+          "ai_state": "혼조세",
+          "ai_action": "보유",
+          "ai_note": "삼성전자는 노사 갈등으로 인한 파업 우려가 있으나, 반도체 업황 개선 기대감으로 주가는 혼조세를 보이고 있습니다. 보유 중이라면 파업 관련 뉴스 추이를 주시하며 대응하는 것이 좋습니다.",
+          "close": 270500.0,
+          "change_pct": -8.614864864864868,
+          "score": 75,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.3319459607173074,
+          "rsi14": 66.19718309859155,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 75,
+          "ai_state": "상승세",
+          "ai_action": "보유",
+          "ai_note": "SK하이닉스는 AI 메모리 수요 증가로 실적 개선이 기대되며 주가도 상승세를 보이고 있습니다. 보유 중이라면 추세가 유지되는지 확인하며 보유를 이어가는 것이 좋습니다.",
+          "close": 1819000.0,
+          "change_pct": -7.664974619289344,
+          "score": 70,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.5150201169079431,
+          "rsi14": 78.77906976744185,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 25,
+          "ai_state": "하락세",
+          "ai_action": "매도",
+          "ai_note": "네이버는 사상 최대 실적에도 불구하고 AI 경쟁력 약화 우려로 주가가 하락했습니다. 보유 중이라면 단기 반등 시 매도 고려가 필요합니다.",
+          "close": 203500.0,
+          "change_pct": -4.460093896713612,
+          "score": 26,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "NAVER 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 1.2x (거래량 확인) / RSI 39 (하방 우세)"
+          ],
+          "volume_ratio_20d": 1.150575610675208,
+          "rsi14": 39.0625,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 80,
+          "ai_state": "보통",
+          "ai_action": "보유",
+          "ai_note": "현대차는 로봇 사업 등 신사업에 대한 기대감으로 주가가 강세를 보이고 있습니다. 보유 중이라면 추세가 유지되는지 확인하며 보유를 이어가는 것이 좋습니다.",
+          "close": 700000.0,
+          "change_pct": -1.6853932584269704,
+          "score": 79,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "현대차 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 2.1x (거래량 강함) / RSI 80 (과열 구간)"
+          ],
+          "volume_ratio_20d": 2.134863894567177,
+          "rsi14": 80.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 10,
+          "ai_state": "하락세",
+          "ai_action": "매도",
+          "ai_note": "한화에어로스페이스는 최근 주가 조정을 겪고 있으나, 증권가에서는 매수 기회로 보고 있습니다. 보유 중이라면 중장기 성장성을 보고 보유를 이어갈 수 있으나, 단기 하락 시 손절 고려가 필요합니다.",
+          "close": 1216000.0,
+          "change_pct": -6.891271056661563,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 1.0x (거래량 보통) / RSI 29 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.9824103307897748,
+          "rsi14": 28.716904276985744,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 35,
+          "ai_state": "혼조세",
+          "ai_action": "보유",
+          "ai_note": "LIG넥스원은 방산 수요 증가로 실적 개선이 기대되나, 최근 주가는 혼조세를 보이고 있습니다. 보유 중이라면 목표가 상향 소식을 참고하여 보유를 이어갈 수 있습니다.",
+          "close": 834000.0,
+          "change_pct": -5.011389521640086,
+          "score": 33,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.6309152246318188,
+          "rsi14": 34.28571428571429,
           "signals": {
             "short_cross": "none",
             "mid_cross": "none"
