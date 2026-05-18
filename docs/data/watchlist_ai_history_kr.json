@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-05-17 19:55 ET",
-  "count": 104,
+  "updated_at_et": "2026-05-17 23:28 ET",
+  "count": 105,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -15053,6 +15053,176 @@
           "cross_highlights": [],
           "volume_ratio_20d": 0.6309152246318188,
           "rsi14": 34.28571428571429,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-05-17 23:28 ET",
+      "market_data_as_of": "2026-05-18 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 55,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "아이티센글로벌은 1분기 매출 3.2조원을 기록하며 전년 대비 100% 성장했습니다. 웹3 및 IT 서비스 부문의 고른 성장이 실적을 견인했으며, 영업이익은 193% 증가했습니다. 보유 중이라면 현재 추세는 긍정적이므로 추가 보유를 고려할 수 있습니다.",
+          "close": 47600.0,
+          "change_pct": -7.03125,
+          "score": 6,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "아이티센글로벌 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.4x (거래량 약함) / RSI 52 (중립)"
+          ],
+          "volume_ratio_20d": 0.4376547598388538,
+          "rsi14": 51.85694635488308,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 30,
+          "ai_state": "관망",
+          "ai_action": "보류",
+          "ai_note": "클로봇은 1분기 매출이 전년 대비 65% 증가했으나 영업손실을 기록했습니다. 최근 단기 데드크로스가 발생했으며 거래량도 약해 보유 중이라면 추세 전환 신호를 기다리는 것이 좋겠습니다.",
+          "close": 42800.0,
+          "change_pct": -4.677060133630285,
+          "score": 2,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "클로봇 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.3x (거래량 약함) / RSI 38 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.29751621293044717,
+          "rsi14": 38.347457627118644,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 75,
+          "ai_state": "매수",
+          "ai_action": "선별 매수",
+          "ai_note": "삼성전자는 2분기 실적 전망이 상향 조정되었으며, 목표 주가도 상향되었습니다. 시장 대비 강한 흐름을 보이고 있어 선별적인 매수를 고려해볼 만합니다.",
+          "close": 276000.0,
+          "change_pct": 2.0332717190388205,
+          "score": 69,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.4601819746830484,
+          "rsi14": 69.82456140350877,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 78,
+          "ai_state": "매수",
+          "ai_action": "선별 매수",
+          "ai_note": "SK하이닉스는 NAND 모멘텀 반영으로 목표 주가가 320만원으로 상향 조정되었습니다. 시장 대비 강한 흐름을 보이고 있으며, 보유 중이라면 긍정적인 추세를 이어갈 것으로 보입니다.",
+          "close": 1814000.0,
+          "change_pct": -0.2748763056624526,
+          "score": 69,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5179932971619208,
+          "rsi14": 78.62669245647969,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 40,
+          "ai_state": "관망",
+          "ai_action": "보류",
+          "ai_note": "NAVER는 최근 중국산 AI 부품 사용 논란과 이용률 저조로 인해 국가대표 AI 경쟁에서 탈락했습니다. 중기 골든크로스가 나왔으나 시장 대비 약한 흐름을 보이므로, 추가적인 상승 모멘텀을 확인 후 진입을 고려하는 것이 좋겠습니다.",
+          "close": 199300.0,
+          "change_pct": -2.063882063882061,
+          "score": 25,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "NAVER 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.5x (거래량 약함) / RSI 39 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.5466418580896477,
+          "rsi14": 38.63987635239567,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 70,
+          "ai_state": "매수",
+          "ai_action": "선별 매수",
+          "ai_note": "현대차는 인도 공과대학 7곳과 전기차 핵심 기술 공동 개발을 추진하며 전동화 전환에 박차를 가하고 있습니다. 최근 중기 골든크로스가 나왔고 시장 대비 강한 흐름을 보이므로 선별적인 매수를 고려할 수 있습니다.",
+          "close": 658000.0,
+          "change_pct": -6.000000000000005,
+          "score": 73,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "현대차 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.5x (거래량 약함) / RSI 74 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.5462434045073957,
+          "rsi14": 73.92739273927393,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 25,
+          "ai_state": "관망",
+          "ai_action": "보류",
+          "ai_note": "한화에어로스페이스는 에스토니아에 천무 다연장 정밀유도무기를 추가 공급하는 등 방산 부문에서 꾸준한 수주를 이어가고 있습니다. 최근 중기 데드크로스가 나왔고 시장 대비 약한 흐름을 보이므로, 보유 중이라면 추세 전환 신호를 기다리는 것이 좋겠습니다.",
+          "close": 1229000.0,
+          "change_pct": 1.0690789473684292,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.3x (거래량 약함) / RSI 25 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.2912195787310717,
+          "rsi14": 24.892703862660937,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 35,
+          "ai_state": "관망",
+          "ai_action": "보류",
+          "ai_note": "LIG넥스원은 중동 지역 방산 수출 확대 전망과 함께 목표 주가가 상향 조정되고 있습니다. 하지만 현재 시장 대비 약한 흐름을 보이고 있어, 보유 중이라면 추가적인 상승 모멘텀을 확인하는 것이 좋겠습니다.",
+          "close": 822000.0,
+          "change_pct": -1.4388489208633115,
+          "score": 21,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.3350724859460006,
+          "rsi14": 29.584352078239604,
           "signals": {
             "short_cross": "none",
             "mid_cross": "none"
