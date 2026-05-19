@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-05-18 04:00 ET",
-  "count": 106,
+  "updated_at_et": "2026-05-18 20:14 ET",
+  "count": 107,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -15236,6 +15236,176 @@
       "status": "error",
       "error": "한국 종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-05-18 20:14 ET",
+      "market_data_as_of": "2026-05-15 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "보유/관망",
+          "ai_note": "아이티센글로벌은 1분기 영업이익이 전년 대비 193% 증가하며 어닝 서프라이즈를 기록했습니다. 그러나 단기 데드크로스 신호가 있어 보유 후 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 49600.0,
+          "change_pct": -3.125,
+          "score": 11,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "아이티센글로벌 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.9x (거래량 보통) / RSI 55 (중립)"
+          ],
+          "volume_ratio_20d": 0.9113318162434947,
+          "rsi14": 54.87627365356622,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 15,
+          "ai_state": "약세",
+          "ai_action": "보유/관망",
+          "ai_note": "클로봇은 1분기 매출이 전년 대비 65% 증가했으나, 단기 데드크로스 신호가 감지되어 관망하는 것이 좋겠습니다.",
+          "close": 43950.0,
+          "change_pct": -2.1158129175946505,
+          "score": 17,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "클로봇 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.5x (거래량 약함) / RSI 40 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.5486844917858597,
+          "rsi14": 40.31180400890869,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 85,
+          "ai_state": "강세",
+          "ai_action": "매수 가능",
+          "ai_note": "삼성전자는 1분기 임직원 평균 보수가 역대 최고 수준으로 상승했습니다. 시장 대비 강한 흐름을 보이고 있어 매수 고려가 가능합니다.",
+          "close": 281000.0,
+          "change_pct": 3.8817005545286554,
+          "score": 85,
+          "state": "강함",
+          "action": "매수 가능",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.1495790479411832,
+          "rsi14": 70.84745762711864,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 88,
+          "ai_state": "강세",
+          "ai_action": "매수 가능",
+          "ai_note": "SK하이닉스는 AI 메모리 수요 증가로 해외법인 매출이 크게 늘며 강세를 보이고 있습니다. 시장 대비 우수한 흐름으로 매수 관점에서 접근할 수 있습니다.",
+          "close": 1840000.0,
+          "change_pct": 1.1544804837823053,
+          "score": 85,
+          "state": "강함",
+          "action": "매수 가능",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.2660140589968933,
+          "rsi14": 79.42857142857143,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "보유/관망",
+          "ai_note": "네이버는 사상 최대 실적에도 불구하고 AI 경쟁력 약화 우려로 주가가 하락했습니다. 중기 골든크로스 신호가 있으나 시장 대비 약한 흐름이므로 관망이 필요합니다.",
+          "close": 200000.0,
+          "change_pct": -1.7199017199017175,
+          "score": 25,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "NAVER 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 1.0x (거래량 보통) / RSI 39 (하방 우세)"
+          ],
+          "volume_ratio_20d": 1.0190264518886427,
+          "rsi14": 39.0625,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 80,
+          "ai_state": "양호",
+          "ai_action": "선별 매수",
+          "ai_note": "현대차는 수소 생태계 구축 지원 등 다양한 사업을 추진하며 시장 대비 양호한 흐름을 보이고 있습니다. 중기 골든크로스 신호와 함께 선별적인 매수 접근이 가능합니다.",
+          "close": 663000.0,
+          "change_pct": -5.285714285714283,
+          "score": 79,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "현대차 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 1.1x (거래량 보통) / RSI 75 (과열 구간)"
+          ],
+          "volume_ratio_20d": 1.0745613025833407,
+          "rsi14": 75.16778523489933,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 10,
+          "ai_state": "약세",
+          "ai_action": "보유/관망",
+          "ai_note": "한화에어로스페이스는 루마니아에서 유무인 통합체계 성능 시연을 성공적으로 마쳤으나, 중기 데드크로스 신호가 있어 보유 후 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 1227000.0,
+          "change_pct": 0.9046052631578982,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.8x (거래량 약함) / RSI 25 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.8124642440197396,
+          "rsi14": 24.56896551724138,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "보유/관망",
+          "ai_note": "LIG넥스원은 방공 수요 증가로 주목받고 있으나, 현재 시장 대비 약한 흐름을 보이고 있어 관망이 필요합니다.",
+          "close": 839000.0,
+          "change_pct": 0.5995203836930418,
+          "score": 33,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.6748208294247504,
+          "rsi14": 31.343283582089555,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
     }
   ]
 }
