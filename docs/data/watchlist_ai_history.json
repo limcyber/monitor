@@ -1,168 +1,7 @@
 {
-  "updated_at_et": "2026-05-20 10:02 ET",
+  "updated_at_et": "2026-05-20 13:37 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-05-04 12:26 ET",
-      "market_data_as_of": "2026-05-04 12:20 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 78,
-          "ai_state": "상승",
-          "ai_action": "매수",
-          "ai_note": "최근 중기 골든크로스 발생 및 시장 대비 강한 흐름을 보이고 있어 매수 관점에서 접근 가능합니다. 보유 중이라면 50일선 이탈 시 손절을 고려할 수 있습니다.",
-          "close": 196.38499450683594,
-          "change_pct": -1.0405656201369573,
-          "score": 75,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [
-            "NVDA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 50 (중립)"
-          ],
-          "volume_ratio_20d": 0.003475928291479887,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 60,
-          "ai_state": "중립",
-          "ai_action": "관망",
-          "ai_note": "시장 대비 강한 흐름과 50일선 지지력을 보이나, 뚜렷한 상승 신호는 부족합니다. 관망하며 추가적인 매수 신호를 기다리는 것이 좋습니다.",
-          "close": 388.6549987792969,
-          "change_pct": -0.5539656374669244,
-          "score": 56,
-          "state": "애매",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0029987396439373464,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 35,
-          "ai_state": "하락",
-          "ai_action": "보유/매도 고려",
-          "ai_note": "단기 데드크로스 발생 및 시장 대비 약한 흐름으로 인해 매수 관점에서는 불리합니다. 보유 중이라면 20일선 돌파 여부를 확인하며, 하락 추세 지속 시 매도를 고려할 수 있습니다.",
-          "close": 611.3150024414062,
-          "change_pct": 0.4213556371919891,
-          "score": 29,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "META 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 34 (하방 우세)",
-            "META 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 34 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.0037602915467235968,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 70,
-          "ai_state": "상승/관망",
-          "ai_action": "관망",
-          "ai_note": "시장 대비 강한 흐름과 50일선, 20일선 지지력을 보이나, 5월 5일 실적 발표를 앞두고 있어 변동성 확대 가능성이 있습니다. 실적 발표 이후 추세를 확인하며 접근하는 것이 좋습니다.",
-          "close": 340.3500061035156,
-          "change_pct": -5.599933977615867,
-          "score": 68,
-          "state": "양호",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.003628209025418001,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 65,
-          "ai_state": "상승/관망",
-          "ai_action": "관망",
-          "ai_note": "중기 골든크로스 발생 및 시장 대비 강한 흐름을 보이고 있습니다. 5월 4일 실적 발표가 예정되어 있어, 발표 결과에 따라 추세가 결정될 것으로 보입니다. 발표 이후 추세를 확인하며 접근하는 것이 좋습니다.",
-          "close": 54.540000915527344,
-          "change_pct": -0.8363619717684623,
-          "score": 64,
-          "state": "애매",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "TEM 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 59 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.0026593072794397943,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 75,
-          "ai_state": "상승",
-          "ai_action": "매수",
-          "ai_note": "시장 대비 강한 흐름과 50일선, 20일선 지지력을 바탕으로 상승 추세가 기대됩니다. 매수 관점에서 접근 가능하며, 20일선 이탈 시 손절을 고려할 수 있습니다.",
-          "close": 460.8699951171875,
-          "change_pct": -1.047773458467527,
-          "score": 74,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.006084470470266137,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 62,
-          "ai_state": "중립",
-          "ai_action": "관망",
-          "ai_note": "시장 대비 강한 흐름과 50일선, 20일선 지지력을 보이나, 뚜렷한 상승 신호는 부족합니다. 5월 20일 실적 발표를 앞두고 있어 관망하며 추세를 지켜보는 것이 좋습니다.",
-          "close": 9.277999877929688,
-          "change_pct": -1.2978696335272932,
-          "score": 60,
-          "state": "애매",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0026075839195163824,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 74,
-          "ai_state": "상승",
-          "ai_action": "매수",
-          "ai_note": "최근 중기 골든크로스 발생 및 시장 대비 강한 흐름을 보이고 있어 매수 관점에서 접근 가능합니다. 보유 중이라면 50일선 이탈 시 손절을 고려할 수 있습니다.",
-          "close": 623.7000122070312,
-          "change_pct": 3.48775797881149,
-          "score": 73,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [
-            "KORU 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 67 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.007149307357748736,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-05-04 13:59 ET",
       "market_data_as_of": "2026-05-04 13:55 ET (5분봉)",
@@ -19636,6 +19475,13 @@
     {
       "generated_at_et": "2026-05-20 10:02 ET",
       "market_data_as_of": "2026-05-19 15:20 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
+    },
+    {
+      "generated_at_et": "2026-05-20 13:37 ET",
+      "market_data_as_of": "2026-05-20 10:15 ET (5분봉)",
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
