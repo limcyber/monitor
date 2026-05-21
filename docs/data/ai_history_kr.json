@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-05-21 03:48 ET",
-  "count": 109,
+  "updated_at_et": "2026-05-21 19:01 ET",
+  "count": 110,
   "items": [
     {
       "generated_at_et": "2026-03-29 20:11 ET",
@@ -3562,6 +3562,39 @@
     },
     {
       "generated_at_et": "2026-05-21 03:48 ET",
+      "market_data_as_of": "2026-05-21 15:30 KST (Close)",
+      "market": {
+        "score": 66,
+        "level": 4,
+        "state": "레벨 4/6 - 살아나는 구간",
+        "action": "소규모 매수 / 보유",
+        "cross_highlights": [
+          "KOSDAQ 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 3.1x (거래량 강함) / RSI 30 (하방 우세)"
+        ],
+        "top_reasons": [
+          "KOSPI가 200일선 위에 있습니다 (+15)",
+          "KOSDAQ이 200일선 위에 있습니다 (+12)",
+          "KOSPI의 50일선이 200일선 위에 있습니다 (+8)"
+        ],
+        "metrics": {
+          "vix_close": 17.440000534057617,
+          "tnx_close": null,
+          "pct_above_20dma": null,
+          "pct_above_50dma": null
+        }
+      },
+      "ai_analysis": {
+        "status": "error",
+        "model": "gemini-2.5-flash",
+        "content": "한국 시장 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'"
+      },
+      "ai_notifications": {
+        "count": 0,
+        "items": []
+      }
+    },
+    {
+      "generated_at_et": "2026-05-21 19:01 ET",
       "market_data_as_of": "2026-05-21 15:30 KST (Close)",
       "market": {
         "score": 66,

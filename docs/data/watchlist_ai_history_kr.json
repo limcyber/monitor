@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-05-21 03:48 ET",
-  "count": 113,
+  "updated_at_et": "2026-05-21 19:01 ET",
+  "count": 114,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -16074,6 +16074,172 @@
           "ai_state": "약세",
           "ai_action": "관찰",
           "ai_note": "시장 대비 약한 흐름을 보이고 있으며 20일선 아래에 위치해 있습니다. 50일선 위에 있다는 점은 긍정적이나, 추가적인 상승 모멘텀이 확인될 때까지는 관찰이 필요합니다.",
+          "close": 860000.0,
+          "change_pct": 3.2412965186074505,
+          "score": 37,
+          "state": "약함",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.48678978658076666,
+          "rsi14": 36.15384615384615,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-05-21 19:01 ET",
+      "market_data_as_of": "2026-05-21 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 30,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "아이티센글로벌은 최근 단기 데드크로스가 발생했으며 거래량도 약해 현재는 관망하는 것이 좋습니다. 보유 중이라면 20일선 이탈 시 손절을 고려할 수 있습니다.",
+          "close": 46900.0,
+          "change_pct": 8.564814814814813,
+          "score": 31,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "아이티센글로벌 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.5x (거래량 약함) / RSI 38 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.501923507363526,
+          "rsi14": 37.61755485893417,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 10,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "클로봇은 시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 위치해 있어 현재는 매수 관점에서 접근하기 어렵습니다.",
+          "close": 41950.0,
+          "change_pct": 7.15197956577267,
+          "score": 12,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.621919986770568,
+          "rsi14": 27.31591448931117,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 70,
+          "ai_state": "양호",
+          "ai_action": "선별적 접근",
+          "ai_note": "삼성전자는 시장 대비 강한 흐름을 보이며 20일선과 50일선 위에 있어 긍정적입니다. 보유 중이라면 추세가 유지되는지 확인하며 홀딩하는 전략이 유효합니다.",
+          "close": 298000.0,
+          "change_pct": 7.971014492753614,
+          "score": 69,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.9227527711518367,
+          "rsi14": 71.95121951219512,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 70,
+          "ai_state": "양호",
+          "ai_action": "선별적 접근",
+          "ai_note": "SK하이닉스는 시장 대비 강한 흐름을 보이며 20일선과 50일선 위에 있어 긍정적입니다. RSI가 75 이상으로 과열 구간 진입 가능성이 있으므로 단기 차익 실현을 고려할 수 있습니다.",
+          "close": 1939000.0,
+          "change_pct": 11.117478510028644,
+          "score": 69,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.7761543970784631,
+          "rsi14": 75.75757575757575,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 20,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "NAVER는 최근 중기 데드크로스가 발생했고 시장 대비 약한 흐름을 보입니다. 20일선 아래에 위치해 있어 당분간 관망하는 것이 좋습니다.",
+          "close": 200500.0,
+          "change_pct": 4.699738903394257,
+          "score": 17,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "NAVER 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.8x (거래량 약함) / RSI 37 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.8050585279387227,
+          "rsi14": 37.08609271523179,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 70,
+          "ai_state": "양호",
+          "ai_action": "선별적 접근",
+          "ai_note": "현대차는 시장 대비 강한 흐름을 보이며 20일선과 50일선 위에 있어 긍정적입니다. 보유 중이라면 추세가 유지되는지 확인하며 홀딩하는 전략이 유효합니다.",
+          "close": 668000.0,
+          "change_pct": 12.837837837837828,
+          "score": 69,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.7575479935181524,
+          "rsi14": 63.93034825870647,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 10,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "한화에어로스페이스는 최근 중기 데드크로스가 발생했고 시장 대비 약한 흐름을 보입니다. 20일선 아래에 위치해 있어 당분간 관망하는 것이 좋습니다.",
+          "close": 1248000.0,
+          "change_pct": -0.08006405124099114,
+          "score": 12,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.6x (거래량 약함) / RSI 32 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.5859602625065101,
+          "rsi14": 31.623931623931625,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 40,
+          "ai_state": "약함",
+          "ai_action": "관찰",
+          "ai_note": "LIG넥스원은 시장 대비 약한 흐름을 보이며 20일선 아래에 위치해 있습니다. 50일선 위에 있지만, 20일선 돌파 여부를 확인하며 접근하는 것이 안전합니다.",
           "close": 860000.0,
           "change_pct": 3.2412965186074505,
           "score": 37,
