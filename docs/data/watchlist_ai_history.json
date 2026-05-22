@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-05-21 22:39 ET",
+  "updated_at_et": "2026-05-22 02:42 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-05-05 17:32 ET",
-      "market_data_as_of": "2026-05-05 15:55 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-05-05 18:49 ET",
       "market_data_as_of": "2026-05-05 15:55 ET (5분봉)",
@@ -19422,6 +19415,162 @@
           "ai_state": "보합",
           "ai_action": "관찰",
           "ai_note": "KORU Medical Systems는 최근 항암 치료 관련 데이터 발표 등 긍정적인 소식이 있었으나, 주가에는 큰 영향을 미치지 못하고 있습니다. 현재 뚜렷한 추세가 나타나지 않고 있으므로, 보유 중이라면 실적 발표 등 주요 이벤트에 주목하며 관망하는 것이 좋습니다.",
+          "close": 833.1500244140625,
+          "change_pct": 9.524123970608445,
+          "score": 65,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0013266334011173633,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-05-22 02:42 ET",
+      "market_data_as_of": "2026-05-21 15:20 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 65,
+          "ai_state": "관망",
+          "ai_action": "보유/관찰",
+          "ai_note": "실적 발표를 앞두고 있어 단기적으로는 보수적인 접근이 필요합니다. 현재 20일선과 50일선 위에 있어 추세는 유지 중이나, 발표 결과에 따라 변동성이 커질 수 있습니다.",
+          "close": 219.94000244140625,
+          "change_pct": -1.5796298205639658,
+          "score": 68,
+          "state": "양호",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.003654234129353445,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 75,
+          "ai_state": "매수 고려",
+          "ai_action": "선별 매수",
+          "ai_note": "최근 중기 골든크로스가 발생했으며, 시장 대비 강한 흐름을 보이고 있습니다. 거래량은 다소 약하지만 RSI가 60 이상으로 상승 추세를 지지하고 있어 추가 상승을 기대해 볼 수 있습니다.",
+          "close": 418.20989990234375,
+          "change_pct": 0.22764945465354458,
+          "score": 75,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "TSLA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 60 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.0022514428614605715,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 20,
+          "ai_state": "회피",
+          "ai_action": "보류",
+          "ai_note": "시장 대비 약한 흐름을 보이며 20일선 및 50일선 아래에 위치해 있습니다. 현재로서는 매수할 만한 뚜렷한 이유가 없어 관망하는 것이 좋습니다.",
+          "close": 606.6950073242188,
+          "change_pct": 0.270222750177207,
+          "score": 20,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.00168932524704858,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 70,
+          "ai_state": "매수 고려",
+          "ai_action": "선별 매수",
+          "ai_note": "시장 대비 강한 흐름을 유지하며 20일선과 50일선 위에 있습니다. RSI가 66 이상으로 상승 추세를 뒷받침하고 있어 관심 있게 지켜볼 만합니다.",
+          "close": 444.2650146484375,
+          "change_pct": -0.7406434655882199,
+          "score": 71,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0011808318362871478,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 25,
+          "ai_state": "회피",
+          "ai_action": "보류",
+          "ai_note": "시장 대비 약한 흐름을 보이며 20일선 및 50일선 아래에 위치해 있습니다. RSI가 21로 매우 낮아 현재로서는 매수 접근을 보류하는 것이 현명합니다.",
+          "close": 45.90999984741211,
+          "change_pct": 0.06538530644830676,
+          "score": 26,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.003174928462073675,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 73,
+          "ai_state": "매수 고려",
+          "ai_action": "선별 매수",
+          "ai_note": "시장 대비 강한 흐름을 보이며 20일선과 50일선 위에 있습니다. RSI가 64 이상으로 상승 추세를 지지하고 있어 추가 상승 가능성을 염두에 둘 수 있습니다.",
+          "close": 522.489990234375,
+          "change_pct": 0.4189795864023793,
+          "score": 73,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0022106309376923885,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 10,
+          "ai_state": "회피",
+          "ai_action": "보류",
+          "ai_note": "최근 중기 데드크로스가 발생했으며, 시장 대비 약한 흐름을 보이고 있습니다. RSI가 39로 하락 추세를 나타내고 있어 당분간 관망이 필요합니다.",
+          "close": 8.739999771118164,
+          "change_pct": 4.29593856516628,
+          "score": 10,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SERV 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 40 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0022833031224387744,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 65,
+          "ai_state": "매수 고려",
+          "ai_action": "선별 매수",
+          "ai_note": "시장 대비 강한 흐름을 보이며 20일선과 50일선 위에 있습니다. RSI가 59로 상승 추세를 지지하고 있어 관심 종목으로 유지하는 것이 좋습니다.",
           "close": 833.1500244140625,
           "change_pct": 9.524123970608445,
           "score": 65,
