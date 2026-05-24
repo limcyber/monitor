@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-05-22 03:41 ET",
-  "count": 116,
+  "updated_at_et": "2026-05-24 19:58 ET",
+  "count": 117,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -16413,6 +16413,172 @@
           "ai_state": "약함",
           "ai_action": "보류 / 관찰",
           "ai_note": "거래량이 아직 충분하지 않아 상승 모멘텀이 약합니다. 보유 중이라면 거래량 증가와 함께 추세가 강화되는지 확인하며 대응하는 것이 좋습니다.",
+          "close": 925000.0,
+          "change_pct": 7.308584686774933,
+          "score": 44,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.7040120092026473,
+          "rsi14": 48.13084112149532,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-05-24 19:58 ET",
+      "market_data_as_of": "2026-05-22 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "매도",
+          "ai_note": "아이티센글로벌은 1분기 사상 최대 실적을 기록했으나, 최근 단기 데드크로스가 발생하며 5일선이 20일선 아래로 하락했습니다. 보유 중이라면 51,000원 이탈 시 손절을 고려하십시오.",
+          "close": 51300.0,
+          "change_pct": 6.652806652806653,
+          "score": 36,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "아이티센글로벌 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.5x (거래량 약함) / RSI 46 (중립)"
+          ],
+          "volume_ratio_20d": 0.4771089759971317,
+          "rsi14": 46.067415730337075,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 15,
+          "ai_state": "매우 약세",
+          "ai_action": "관망",
+          "ai_note": "클로봇은 대규모 유상증자 소식과 함께 주가가 약세를 보이고 있습니다. 현재 20일선과 50일선 아래에 위치하며, RSI 지표도 30선에 근접하여 추가 하락 가능성이 있습니다.",
+          "close": 42000.0,
+          "change_pct": 0.23866348448686736,
+          "score": 3,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.30165672437474544,
+          "rsi14": 29.667519181585675,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 70,
+          "ai_state": "강세",
+          "ai_action": "보유",
+          "ai_note": "삼성전자는 2분기 역대 최고 영업이익이 예상되며, AI 반도체 수요 증가로 실적 개선 기대감이 높습니다. 다만, 최근 노사 합의로 인한 성과급 지급이 주가에 미칠 영향은 지켜볼 필요가 있습니다.",
+          "close": 294000.0,
+          "change_pct": -1.8363939899833093,
+          "score": 69,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.3730176447050368,
+          "rsi14": 72.20543806646526,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 75,
+          "ai_state": "강세",
+          "ai_action": "보유",
+          "ai_note": "SK하이닉스는 HBM 시장에서의 경쟁 우위를 바탕으로 높은 실적이 기대됩니다. 최근 억대 성과급 지급 소식은 주가에 긍정적인 영향을 줄 수 있으나, 과도한 상승 후에는 차익 실현 매물 출회 가능성도 염두에 두어야 합니다.",
+          "close": 1940000.0,
+          "change_pct": 0.0,
+          "score": 69,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.38172234556638546,
+          "rsi14": 76.20192307692308,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 35,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "NAVER는 최근 중기 데드크로스가 발생했으며, 시장 대비 약한 모습을 보이고 있습니다. 배달의민족 인수설 등 다양한 사업 검토 중이나, 구체적인 결정 사항은 없는 상태입니다. 20일선 돌파 여부를 확인하며 관망하는 것이 좋겠습니다.",
+          "close": 205000.0,
+          "change_pct": 2.7568922305764465,
+          "score": 8,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "NAVER 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.6x (거래량 약함) / RSI 46 (중립)"
+          ],
+          "volume_ratio_20d": 0.5615337308577599,
+          "rsi14": 45.774647887323944,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 55,
+          "ai_state": "중립",
+          "ai_action": "관망",
+          "ai_note": "현대차는 역대 최대 실적을 기록했으나, 노사 간 성과급 및 신규 채용 관련 갈등이 지속되고 있습니다. 로봇 및 AI 도입에 따른 고용 구조 변화에 대한 노조의 우려가 커지고 있어, 임단협 결과 추이를 지켜볼 필요가 있습니다.",
+          "close": 657000.0,
+          "change_pct": -1.3513513513513487,
+          "score": 59,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.3044147142272611,
+          "rsi14": 66.40625,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "매도",
+          "ai_note": "한화에어로스페이스는 최근 중기 데드크로스가 발생했으며, 시장 대비 약한 흐름을 보이고 있습니다. 에스토니아 및 폴란드에 천무 유도미사일 공급 계약 등 긍정적인 뉴스도 있으나, 기술적 지지선 이탈 시 추가 하락에 유의해야 합니다.",
+          "close": 1249000.0,
+          "change_pct": 0.08012820512821595,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.6x (거래량 약함) / RSI 32 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.5561193423990257,
+          "rsi14": 31.97424892703863,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 40,
+          "ai_state": "중립",
+          "ai_action": "관망",
+          "ai_note": "LIG넥스원은 사명을 LIG D&A로 변경하고 항공·우주 분야로 사업 확장을 선언했습니다. 최근 방산 계약 소식도 있으나, KAI 인수 관련 재무 부담 우려가 제기되고 있어 신중한 접근이 필요합니다. 925,000원 지지 여부를 확인하며 관망하는 것이 좋겠습니다.",
           "close": 925000.0,
           "change_pct": 7.308584686774933,
           "score": 44,
