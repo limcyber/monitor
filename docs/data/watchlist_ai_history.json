@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-05-24 15:10 ET",
+  "updated_at_et": "2026-05-24 16:29 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-05-08 11:06 ET",
-      "market_data_as_of": "2026-05-08 11:00 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-05-08 12:49 ET",
       "market_data_as_of": "2026-05-08 12:24 ET (5분봉)",
@@ -19693,6 +19686,160 @@
           "ai_state": "보통",
           "ai_action": "보유",
           "ai_note": "한국 시장 관련 ETF로, 최근 한국 증시의 강세와 함께 움직이고 있습니다. 다만, 지정학적 리스크 및 환율 변동성에 유의해야 합니다.",
+          "close": 824.9500122070312,
+          "change_pct": -1.674611179138108,
+          "score": 65,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0006031503535491771,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-05-24 16:29 ET",
+      "market_data_as_of": "2026-05-22 14:20 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 60,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "실적 발표를 앞두고 변동성이 커질 수 있으니 관망하는 것이 좋습니다. 최근 $800억 규모 자사주 매입 승인 소식이 있었으나, 주가는 단기적으로 하락했습니다.",
+          "close": 215.51010131835938,
+          "change_pct": -1.8221918311569163,
+          "score": 40,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0019138122596955055,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 75,
+          "ai_state": "매수 고려",
+          "ai_action": "선별 매수",
+          "ai_note": "최근 실적 발표 이후 주가가 상승세를 보이고 있으며, 시장 대비 견조한 흐름을 유지하고 있습니다. 다만, 최근 모델 Y 관련 리콜 소식이 있었습니다.",
+          "close": 427.3299865722656,
+          "change_pct": 2.268752023519527,
+          "score": 71,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0008729632838714305,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 30,
+          "ai_state": "회피",
+          "ai_action": "보류",
+          "ai_note": "최근 뉴멕시코주에서 개인정보 보호 및 아동 착취 관련 소송에서 패소하며 3.75억 달러 배상 판결을 받았습니다. 또한, 대규모 감원 소식도 있었습니다.",
+          "close": 610.3599853515625,
+          "change_pct": 0.4906286747659694,
+          "score": 21,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0008950337670022906,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 80,
+          "ai_state": "강한 매수",
+          "ai_action": "매수",
+          "ai_note": "최근 1분기 실적에서 데이터센터 부문이 전년 대비 57% 성장하며 좋은 흐름을 보였습니다. 또한, 메타와의 GPU 공급 계약 소식도 긍정적입니다.",
+          "close": 472.31500244140625,
+          "change_pct": 5.054606705803244,
+          "score": 74,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0027584402077647156,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 25,
+          "ai_state": "회피",
+          "ai_action": "보류",
+          "ai_note": "최근 1분기 실적 발표에서 예상보다 넓은 손실을 기록했으며, 주가는 하락세를 보였습니다. 다만, AI 관련 신규 테스트 출시 소식은 있습니다.",
+          "close": 46.849998474121094,
+          "change_pct": 0.7743531569305961,
+          "score": 16,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.00032262977956917614,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 70,
+          "ai_state": "매수 고려",
+          "ai_action": "선별 매수",
+          "ai_note": "반도체 섹터 전반의 강세와 함께 상승세를 보이고 있습니다. 특히 AI 관련 칩 수요 증가가 긍정적인 영향을 미치고 있습니다.",
+          "close": 540.3599853515625,
+          "change_pct": 2.9825928081323783,
+          "score": 74,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0009626328743745004,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 15,
+          "ai_state": "매우 약함",
+          "ai_action": "매도",
+          "ai_note": "최근 1분기 실적에서 예상보다 넓은 손실을 기록했으며, 주가는 하락세를 보였습니다. 또한, 중기 데드크로스 신호가 발생했습니다.",
+          "close": 8.744999885559082,
+          "change_pct": -0.7378039836738792,
+          "score": 13,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SERV 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 41 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0011487731359169201,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 55,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "한국 증시 전반의 상승세에 힘입어 견조한 흐름을 보이고 있습니다. 다만, 레버리지 ETF이므로 변동성에 유의해야 합니다.",
           "close": 824.9500122070312,
           "change_pct": -1.674611179138108,
           "score": 65,
