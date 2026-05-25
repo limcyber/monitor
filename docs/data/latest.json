@@ -1,6 +1,6 @@
 {
-  "generated_at_et": "2026-05-25 11:26 ET",
-  "market_data_as_of": "2026-05-25 11:10 ET (5분봉)",
+  "generated_at_et": "2026-05-25 13:19 ET",
+  "market_data_as_of": "2026-05-25 11:30 ET (5분봉)",
   "market": {
     "state": "레벨 6/6 - 강한 상승장",
     "score": 96,
@@ -47,16 +47,16 @@
       "ndx_dma200": 23087.006656640624,
       "rut_close": 2869.225,
       "rut_change_pct": 0.9064709866794862,
-      "vix_close": 16.559999465942383,
-      "vix_change_pct": -0.8383310814437883,
+      "vix_close": 16.59000015258789,
+      "vix_change_pct": -0.6586862594382348,
       "tnx_close": 4.558000087738037,
       "tnx_change_pct": -0.6105512023398041,
       "brent_close": 100.20999908447266,
       "brent_change_pct": -3.160034950116608,
       "pct_above_20dma": 57.65407554671968,
       "pct_above_50dma": 56.85884691848907,
-      "vix_percentile": 35.0597609561753,
-      "dxy_20d_zscore": 0.7320538517367167,
+      "vix_percentile": 36.254980079681275,
+      "dxy_20d_zscore": 0.7592372953592789,
       "tnx_20d_zscore": 0.9586029595318861,
       "spx_rsi14": 71.05097353974466,
       "ndx_rsi14": 69.6785879362813,
@@ -64,9 +64,9 @@
       "qqq_volume_ratio_20d": 0.0
     },
     "change_tags": [
-      "점수 +7",
+      "점수 0",
       "레벨 변화 없음",
-      "VIX 일간 -0.84%"
+      "VIX 일간 -0.66%"
     ],
     "position_tags": [
       "총 노출 80~100%",
@@ -6443,7 +6443,7 @@
         ]
       },
       "change_tags": [
-        "점수 -1"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 3~6%",
@@ -9402,7 +9402,7 @@
         17.440000534057617,
         16.760000228881836,
         16.700000762939453,
-        16.559999465942383
+        16.59000015258789
       ],
       "hyg_close": [
         80.80999755859375,
@@ -9597,7 +9597,7 @@
         99.11000061035156,
         99.19000244140625,
         99.29299926757812,
-        98.97699737548828
+        98.99099731445312
       ],
       "brent_close": [
         70.8499984741211,
@@ -9667,27 +9667,8 @@
     }
   },
   "notifications": {
-    "count": 2,
-    "items": [
-      {
-        "id": "stock-earnings-near-NVDA-2026-05-25",
-        "priority": "medium",
-        "kind": "stock_earnings_near",
-        "scope": "stock",
-        "title": "NVDA 실적 임박",
-        "message": "NVDA 실적이 2026-05-27입니다. 신규 진입보다 대기가 낫습니다.",
-        "ticker": "NVDA"
-      },
-      {
-        "id": "stock-dead-cross-SERV-2026-05-25",
-        "priority": "medium",
-        "kind": "stock_dead_cross",
-        "scope": "stock",
-        "title": "SERV 데드크로스",
-        "message": "SERV 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 40 (하방 우세) 매수보다 대기나 비중 조절 쪽이 낫습니다.",
-        "ticker": "SERV"
-      }
-    ]
+    "count": 0,
+    "items": []
   },
   "history": {
     "market": [
