@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-05-26 10:12 ET",
+  "updated_at_et": "2026-05-26 13:41 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-05-09 12:28 ET",
-      "market_data_as_of": "2026-05-08 15:00 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-05-09 13:28 ET",
       "market_data_as_of": "2026-05-08 15:00 ET (5분봉)",
@@ -19877,6 +19870,164 @@
           "action": "선별 매수",
           "cross_highlights": [],
           "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-05-26 13:41 ET",
+      "market_data_as_of": "2026-05-26 12:25 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 65,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "NVIDIA는 800억 달러 규모의 자사주 매입을 승인했으며, 2029년까지 15조 달러 규모의 기업이 될 것이라는 예측이 있습니다. 최근 실적 발표에서 데이터센터 매출이 크게 증가했으며, AI 인프라 수요가 견조한 것으로 나타났습니다. 보유 중이라면, 단기적인 변동성에 흔들리지 않고 장기적인 AI 성장 스토리를 믿고 보유하는 것이 좋습니다.",
+          "close": 213.1300048828125,
+          "change_pct": -1.021686216288742,
+          "score": 35,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.008477050332655613,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 75,
+          "ai_state": "매수",
+          "ai_action": "선별 매수",
+          "ai_note": "SpaceX IPO 상장 소식과 AI/로보틱스 테마에 대한 투자자들의 관심이 Tesla 주가를 끌어올리고 있습니다. 볼보가 유럽 및 아시아 태평양 지역에서 Tesla 슈퍼차저 스테이션 접근을 확대하기로 한 점도 긍정적입니다. 보유 중이라면, AI 및 로보틱스 관련 모멘텀을 활용하여 추가 상승을 기대하며 보유하는 것을 고려해볼 수 있습니다.",
+          "close": 429.44000244140625,
+          "change_pct": 0.8051436814051183,
+          "score": 71,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.00511819722893128,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 40,
+          "ai_state": "관망",
+          "ai_action": "보류",
+          "ai_note": "Meta는 AI에 대한 투자를 늘리면서도 8,000명의 직원을 감축했습니다. 또한, 소셜 미디어 중독 재판에서 패소하며 3억 7,500만 달러의 민사상 손해배상 판결을 받았습니다. 보유 중이라면, AI 성장 기대감과 규제 리스크 사이에서 균형을 잡으며 신중하게 접근하는 것이 좋습니다.",
+          "close": 609.9299926757812,
+          "change_pct": -0.05407811171675991,
+          "score": 4,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "META 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 53 (중립)"
+          ],
+          "volume_ratio_20d": 0.004046251257479387,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 80,
+          "ai_state": "매수",
+          "ai_action": "선별 매수",
+          "ai_note": "AMD는 AI 인프라 수요 증가에 힘입어 1분기 매출이 전년 대비 38% 증가했으며, 특히 EPYC 서버 프로세서와 Instinct AI 가속기에 대한 수요가 견조합니다. Nvidia CEO의 발언은 AMD 제품에 대한 수요가 가속화될 수 있음을 시사합니다. 보유 중이라면, AI 시장 성장에 따른 수혜를 기대하며 보유를 유지하는 것이 좋습니다.",
+          "close": 494.8800048828125,
+          "change_pct": 5.854419059585236,
+          "score": 74,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.004281973952996816,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 30,
+          "ai_state": "관망",
+          "ai_action": "보류",
+          "ai_note": "Tempus AI는 2026년 미국 임상종양학회 연례 회의에서 37개의 초록이 발표될 예정이며, 전이성 환자를 위한 ArteraAI 전립선 검사를 출시했습니다. 그러나 최근 분기 손실이 예상보다 컸으며 주가는 하락했습니다. 보유 중이라면, 신약 개발 및 AI 기술의 성과를 지켜보며 신중하게 대응하는 것이 좋습니다.",
+          "close": 47.72999954223633,
+          "change_pct": 3.3564296812852668,
+          "score": 5,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "TEM 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 30 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.005408608211437758,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 70,
+          "ai_state": "매수",
+          "ai_action": "선별 매수",
+          "ai_note": "SOXX ETF는 반도체 섹터 전반의 강세를 반영하며, 특히 AI 관련 칩 수요 증가에 힘입어 상승세를 보이고 있습니다. 다만, 메모리 반도체 가격 사이클 변동성에 유의할 필요가 있습니다. 보유 중이라면, 반도체 섹터의 전반적인 상승 추세를 활용하여 보유를 유지하는 것이 좋습니다.",
+          "close": 564.8499755859375,
+          "change_pct": 5.12161197417198,
+          "score": 74,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0051929064986771965,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 25,
+          "ai_state": "관망",
+          "ai_action": "보류",
+          "ai_note": "Serve Robotics는 Diligent Robotics를 인수하여 물리적 AI 플랫폼을 확장하고 있으며, 1분기 매출이 전년 대비 578% 증가했습니다. 그러나 연초 대비 주가는 하락세를 보이고 있습니다. 보유 중이라면, 인수합병 및 매출 성과를 주시하며 향후 성장 가능성을 판단하는 것이 좋습니다.",
+          "close": 9.145000457763672,
+          "change_pct": 5.114950094879633,
+          "score": 17,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SERV 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 50 (중립)"
+          ],
+          "volume_ratio_20d": 0.009690531716902873,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 55,
+          "ai_state": "애매",
+          "ai_action": "보류",
+          "ai_note": "KORU는 1분기 매출이 전년 대비 22% 증가하며 예상치를 상회했으나, 올해 수익성은 불투명합니다. 최근 CEO의 대규모 자사주 매입이 있었으나, 주가는 연초 대비 하락세를 보이고 있습니다. 보유 중이라면, 실적 개선 추이와 CEO의 투자 의지를 고려하여 신중하게 대응하는 것이 좋습니다.",
+          "close": 989.9000244140625,
+          "change_pct": 26.85334213931143,
+          "score": 60,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0005828963634553126,
           "signals": {
             "short_cross": "none",
             "mid_cross": "none"
