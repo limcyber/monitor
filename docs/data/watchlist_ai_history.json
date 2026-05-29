@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-05-29 09:53 ET",
+  "updated_at_et": "2026-05-29 13:28 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-05-10 19:43 ET",
-      "market_data_as_of": "2026-05-08 15:00 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-05-10 22:29 ET",
       "market_data_as_of": "2026-05-08 15:00 ET (5분봉)",
@@ -19423,6 +19416,168 @@
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-05-29 13:28 ET",
+      "market_data_as_of": "2026-05-29 10:25 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 65,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "최근 5일선이 20일선 아래로 내려가는 단기 데드크로스가 발생했으나, 거래량은 약하고 RSI는 51로 중립 구간입니다. 시장 대비 강한 흐름을 보이고 있어 보유 관점에서 접근하는 것이 좋습니다.",
+          "close": 215.91000366210938,
+          "change_pct": 0.7747975085691472,
+          "score": 69,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "NVDA 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 51 (중립)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 75,
+          "ai_state": "매수",
+          "ai_action": "선별 매수",
+          "ai_note": "시장 대비 강한 흐름을 유지하고 있으며, 50일선과 20일선 위에 있어 긍정적입니다. 현재 특별한 하락 신호가 없어 선별 매수를 고려할 수 있습니다.",
+          "close": 430.04998779296875,
+          "change_pct": -2.7256317901351523,
+          "score": 78,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 25,
+          "ai_state": "회피",
+          "ai_action": "보류",
+          "ai_note": "최근 20일선이 50일선 아래로 내려가는 중기 데드크로스가 발생했으며, 거래량은 약하고 RSI는 59로 상방 우세이나 추세 전환이 불확실합니다. 시장 대비 약한 흐름을 보이고 있어 보류하는 것이 좋습니다.",
+          "close": 624.8499755859375,
+          "change_pct": -1.6433444257728969,
+          "score": 23,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "META 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 59 (상방 우세)",
+            "META 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 59 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 78,
+          "ai_state": "매수",
+          "ai_action": "선별 매수",
+          "ai_note": "시장 대비 강한 흐름을 보이며 50일선과 20일선 위에 있어 긍정적입니다. RSI가 65로 높아 매수 진입 시점은 신중하게 판단해야 합니다.",
+          "close": 511.510009765625,
+          "change_pct": -1.2700528380715892,
+          "score": 79,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 20,
+          "ai_state": "회피",
+          "ai_action": "보류",
+          "ai_note": "최근 20일선이 50일선 아래로 내려가는 중기 데드크로스가 발생했고, 거래량은 약하며 RSI는 48로 중립 구간입니다. 50일선 위에 있지만 추세 전환 신호가 없어 보류가 필요합니다.",
+          "close": 49.04999923706055,
+          "change_pct": -4.367326259471104,
+          "score": 22,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "TEM 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 48 (중립)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 72,
+          "ai_state": "매수",
+          "ai_action": "선별 매수",
+          "ai_note": "시장 대비 강한 흐름을 유지하고 있으며, 50일선과 20일선 위에 있어 긍정적입니다. RSI가 65 이상으로 높아 추가 상승 여력은 제한적일 수 있으나 보유 관점에서는 유효합니다.",
+          "close": 572.72998046875,
+          "change_pct": 0.5724638582083275,
+          "score": 74,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 28,
+          "ai_state": "회피",
+          "ai_action": "보류",
+          "ai_note": "최근 20일선이 50일선 아래로 내려가는 중기 데드크로스가 발생했고, 거래량은 약하며 RSI는 52로 중립 구간입니다. 단기 골든크로스가 나왔으나 중기 추세가 약해 보류하는 것이 좋습니다.",
+          "close": 8.9350004196167,
+          "change_pct": -5.848254635269312,
+          "score": 24,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SERV 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 52 (중립)",
+            "SERV 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 52 (중립)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 55,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "시장 대비 강한 흐름을 보이고 있으며, 50일선과 20일선 위에 있어 긍정적입니다. 다만 최근 상승폭이 커서 추가 매수보다는 보유하며 추세를 지켜보는 것이 좋습니다.",
+          "close": 1094.219970703125,
+          "change_pct": -0.5372123434009057,
+          "score": 60,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
     }
   ]
 }
