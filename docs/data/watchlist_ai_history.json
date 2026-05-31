@@ -1,169 +1,7 @@
 {
-  "updated_at_et": "2026-05-31 05:44 ET",
+  "updated_at_et": "2026-05-31 07:29 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-05-12 19:53 ET",
-      "market_data_as_of": "2026-05-12 15:15 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 85,
-          "ai_state": "강세",
-          "ai_action": "매수",
-          "ai_note": "최근 5일선이 20일선을 상향 돌파하는 단기 골든크로스가 발생했습니다. 거래량은 약하지만 RSI는 64로 상승 추세에 있습니다. 50일선 위에 있으며 시장 대비 강한 흐름을 보이고 있어 추가 상승 기대됩니다.",
-          "close": 221.0,
-          "change_pct": 0.7108993534623576,
-          "score": 76,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [
-            "NVDA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 64 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.007935273864506452,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 88,
-          "ai_state": "매우 강세",
-          "ai_action": "매수",
-          "ai_note": "20일선이 50일선을 상향 돌파하는 중기 골든크로스가 발생했으며, RSI는 69로 상방 우세를 나타냅니다. 시장 대비 강한 흐름을 유지하고 있어 추가 상승 가능성이 높습니다.",
-          "close": 432.2001953125,
-          "change_pct": -2.8763606039325817,
-          "score": 83,
-          "state": "강함",
-          "action": "소규모 매수",
-          "cross_highlights": [
-            "TSLA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 69 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.005588239472970442,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 30,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "최근 뉴멕시코주 배심원단이 Meta에 3억 7,500만 달러의 손해배상금을 지급하라고 명령하는 판결이 나왔습니다. 이는 Meta가 안전보다 이익을 우선시했다는 검찰 측 주장을 받아들인 결과입니다. 현재 20일선과 50일선 아래에 있어 당분간 관망하는 것이 좋겠습니다.",
-          "close": 600.5449829101562,
-          "change_pct": 0.28136753161167594,
-          "score": 27,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.005020476562556728,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 70,
-          "ai_state": "중립",
-          "ai_action": "선별적 매수",
-          "ai_note": "최근 애널리스트들의 목표주가 상향 조정 소식이 있었으나, 주가는 내부자 매도 물량으로 인해 하락했습니다. 50일선과 20일선 위에 있으며 시장 대비 강한 흐름을 보이고 있으나, 최근 상승폭이 커 추격 매수는 부담될 수 있습니다.",
-          "close": 441.06500244140625,
-          "change_pct": -3.8634246111268755,
-          "score": 65,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.005135830573485498,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 25,
-          "ai_state": "매우 약세",
-          "ai_action": "매도",
-          "ai_note": "최근 5일선이 20일선을 하향 돌파하는 단기 데드크로스가 발생했으며, RSI는 32로 하락 추세입니다. 시장 대비 약한 흐름을 보이고 있어 당분간 하락세가 이어질 것으로 보입니다.",
-          "close": 46.59000015258789,
-          "change_pct": -3.858850530775071,
-          "score": 27,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "TEM 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 32 (하방 우세)",
-            "TEM 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 32 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.0031424568010858848,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 75,
-          "ai_state": "강세",
-          "ai_action": "매수",
-          "ai_note": "반도체 섹터 전반에 대한 투자자들의 차익 실현 움직임이 있으나, AI 관련 수요는 여전히 견조합니다. 50일선과 20일선 위에 있으며 시장 대비 강한 흐름을 유지하고 있어 추가 상승을 기대해 볼 수 있습니다.",
-          "close": 510.6499938964844,
-          "change_pct": -4.15008924541228,
-          "score": 74,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.014172894770574561,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 30,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "최근 5일선이 20일선을 하향 돌파하는 단기 데드크로스가 발생했으며, RSI는 37로 하락 추세입니다. 시장 대비 약한 흐름을 보이고 있어 당분간 관망하는 것이 좋겠습니다.",
-          "close": 8.619999885559082,
-          "change_pct": -2.5988755479855463,
-          "score": 29,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "SERV 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 37 (하방 우세)",
-            "SERV 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 37 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.001994178983817969,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 72,
-          "ai_state": "강세",
-          "ai_action": "매수",
-          "ai_note": "최근 1분기 실적 발표에서 매출이 22% 성장하며 예상치를 상회했습니다. 50일선과 20일선 위에 있으며 시장 대비 강한 흐름을 유지하고 있어 추가 상승 가능성이 있습니다.",
-          "close": 766.9199829101562,
-          "change_pct": -21.988835003927186,
-          "score": 69,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.014842315983345008,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-05-12 22:30 ET",
       "market_data_as_of": "2026-05-12 15:15 ET (5분봉)",
@@ -19998,6 +19836,168 @@
           "ai_state": "애매",
           "ai_action": "보류",
           "ai_note": "KORU는 한국 증시에 투자하는 레버리지 ETF로, 최근 한국 증시의 강세와 함께 주목받고 있습니다. 다만, 최근 급등으로 인해 단기 과열 가능성도 있습니다. 보유 중이라면 급격한 변동성에 대비하여 익절 구간을 설정하는 것이 좋습니다.",
+          "close": 1082.3900146484375,
+          "change_pct": -1.6125358053719063,
+          "score": 60,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0005931869971980848,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-05-31 07:29 ET",
+      "market_data_as_of": "2026-05-29 13:49 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 75,
+          "ai_state": "강한 상승",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "NVIDIA는 대만 AI 허브에 1,500억 달러를 투자하며 입지를 강화하고 있습니다. 최근 5일선이 20일선 아래로 내려가는 단기 데드크로스가 발생했으나, RSI는 50.86으로 중립 구간에 있어 추가 하락 가능성은 낮아 보입니다.",
+          "close": 216.1199951171875,
+          "change_pct": 0.8728098563302256,
+          "score": 69,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "NVDA 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 51 (중립)"
+          ],
+          "volume_ratio_20d": 0.00331196725245614,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 80,
+          "ai_state": "강한 상승",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "테슬라는 유럽에서 FSD(Full Self-Driving) 시스템 승인을 확대하며 기술력을 입증하고 있습니다. 현재 50일선과 20일선 위에 있어 추세는 양호하나, 최근 하락세를 보이고 있어 관찰이 필요합니다.",
+          "close": 437.9599914550781,
+          "change_pct": -0.9364430199686802,
+          "score": 79,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0025782897366540135,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 30,
+          "ai_state": "약세 전환",
+          "ai_action": "보유 보류",
+          "ai_note": "메타는 AI 학습 데이터 저작권 침해 소송에 직면했으며, 소셜 미디어 중독 관련 소송에서도 배심원 평결이 있었습니다. 최근 20일선이 50일선 아래로 내려가는 중기 데드크로스가 발생하여 당분간 관망하는 것이 좋겠습니다.",
+          "close": 626.4199829101562,
+          "change_pct": -1.3962120329254923,
+          "score": 23,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "META 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 60 (상방 우세)",
+            "META 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 60 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.006318204772317507,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 85,
+          "ai_state": "강한 상승",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "AMD는 대만 생태계에 100억 달러 이상을 투자하며 AI 인프라 확장에 적극적입니다. 50일선과 20일선 위에 있어 추세는 견고하며, 시장 대비 강한 모습을 보이고 있습니다.",
+          "close": 504.4800109863281,
+          "change_pct": -2.626959633202397,
+          "score": 79,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0036446981060749358,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 25,
+          "ai_state": "약세 전환",
+          "ai_action": "보유 보류",
+          "ai_note": "Tempus AI는 종양 진단 관련 FDA 승인을 받았으나, 최근 주가는 하락세를 보이고 있습니다. 20일선이 50일선 아래로 내려가는 중기 데드크로스가 발생하여 추가 하락 가능성을 염두에 두어야 합니다.",
+          "close": 50.15999984741211,
+          "change_pct": -2.2031605536063537,
+          "score": 22,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "TEM 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 51 (중립)"
+          ],
+          "volume_ratio_20d": 0.003850935088818433,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 70,
+          "ai_state": "강한 상승",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "SOXX ETF는 AI 및 반도체 수요 강세에 힘입어 상승세를 이어가고 있습니다. 50일선과 20일선 위에 있어 추세는 긍정적이며, 반도체 업황 회복 수혜를 받을 것으로 예상됩니다.",
+          "close": 565.8499755859375,
+          "change_pct": -0.635677964321435,
+          "score": 74,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.004772884303532453,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 35,
+          "ai_state": "약세 전환",
+          "ai_action": "보유 보류",
+          "ai_note": "Serve Robotics는 로봇 배달 사업 확장을 위해 Diligent Robotics를 인수했으나, 최근 주가는 약세를 보이고 있습니다. 20일선이 50일선 아래로 내려가는 중기 데드크로스가 발생하여 당분간 관망하는 것이 좋습니다.",
+          "close": 9.375,
+          "change_pct": -1.2117995141386007,
+          "score": 29,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SERV 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 60 (상방 우세)",
+            "SERV 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 60 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.0031598228110962,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 55,
+          "ai_state": "관망",
+          "ai_action": "보유 보류",
+          "ai_note": "KORU ETF는 최근 큰 폭의 상승 후 조정을 받고 있으며, ETF 유출이 감지되고 있습니다. 현재 50일선 위에 있지만, 단기적으로는 변동성이 클 수 있어 관찰이 필요합니다.",
           "close": 1082.3900146484375,
           "change_pct": -1.6125358053719063,
           "score": 60,
