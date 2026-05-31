@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-05-29 02:55 ET",
-  "count": 128,
+  "updated_at_et": "2026-05-31 19:11 ET",
+  "count": 129,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -18091,6 +18091,171 @@
       "status": "error",
       "error": "한국 종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-05-31 19:11 ET",
+      "market_data_as_of": "2026-05-29 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 25,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "아이티센글로벌은 1분기 사상 최대 실적을 기록하며 웹3 및 AI 사업에서 고른 성장을 보였습니다. 다만, 최근 주가는 하락세를 보이고 있어 추가적인 상승 모멘텀을 기다리며 관망하는 것이 좋겠습니다.",
+          "close": 44550.0,
+          "change_pct": -2.8353326063249695,
+          "score": 23,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "아이티센글로벌 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.7x (거래량 약함) / RSI 29 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.7186995269010941,
+          "rsi14": 28.794992175273862,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 60,
+          "ai_state": "매수 고려",
+          "ai_action": "매수",
+          "ai_note": "클로봇은 최근 반도체 공장에 20억원 규모의 사족 보행 로봇을 납품하는 계약을 체결하며 긍정적인 소식이 있었습니다. 주가도 최근 급등세를 보였으나, 추가적인 상승 여력이 있는지 지켜보며 분할 매수를 고려해볼 만합니다.",
+          "close": 43150.0,
+          "change_pct": 3.3532934131736525,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.7293946394988606,
+          "rsi14": 34.32494279176201,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 75,
+          "ai_state": "매수",
+          "ai_action": "매수",
+          "ai_note": "삼성전자는 차량용 메모리 시장에서 마이크론을 제치고 세계 1위에 올랐으며, HBM4E 12단 샘플 출하 소식도 긍정적입니다. 시장 대비 강한 흐름을 보이고 있어 꾸준히 보유하거나 추가 매수를 고려할 수 있습니다.",
+          "close": 313500.0,
+          "change_pct": 4.6744574290484175,
+          "score": 69,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.519479438386186,
+          "rsi14": 65.1006711409396,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 70,
+          "ai_state": "매수",
+          "ai_action": "매수",
+          "ai_note": "SK하이닉스는 미국 ADR 상장을 공식화하며 글로벌 시장 진출을 가속화하고 있습니다. 최근 노사 협상에서 주택대출 5억원 지원이 쟁점으로 부상했으나, 전반적인 시장 흐름과 회사의 기술력을 고려할 때 긍정적인 전망을 유지하며 보유하는 것이 좋습니다.",
+          "close": 2312500.0,
+          "change_pct": 1.0266491917868104,
+          "score": 69,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.555076196586826,
+          "rsi14": 75.66571077427284,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 40,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "NAVER는 AI 검색 경쟁력 강화를 위해 창작자 생태계 지원에 1조원을 투자한다는 소식이 있습니다. 최근 단기 골든크로스가 나왔으나 중기 데드크로스가 발생한 점은 부담이며, 추세를 지켜보며 관망하는 것이 좋겠습니다.",
+          "close": 239500.0,
+          "change_pct": 16.82926829268292,
+          "score": 31,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "NAVER 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 4.6x (거래량 강함) / RSI 62 (상방 우세)",
+            "NAVER 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 4.6x (거래량 강함) / RSI 62 (상방 우세)"
+          ],
+          "volume_ratio_20d": 4.592082226262944,
+          "rsi14": 61.904761904761905,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 70,
+          "ai_state": "매수",
+          "ai_action": "매수",
+          "ai_note": "현대차는 휴머노이드 로봇 '아틀라스' 도입을 본격화하며 미래 공장 구축에 속도를 내고 있습니다. 시장 대비 강한 흐름을 유지하고 있어 꾸준히 보유하거나 추가 매수를 고려할 수 있습니다.",
+          "close": 723000.0,
+          "change_pct": 6.794682422452003,
+          "score": 65,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.7710319975113727,
+          "rsi14": 63.888888888888886,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 15,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "한화에어로스페이스는 독일, 영국 등과 방산 협력을 논의하며 유럽 시장 확대를 모색하고 있습니다. 다만, 최근 주가가 약세를 보이고 있어 시장 흐름을 좀 더 지켜보며 관망하는 것이 좋겠습니다.",
+          "close": 1179000.0,
+          "change_pct": -1.749999999999996,
+          "score": 2,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.4448603384914876,
+          "rsi14": 31.92090395480227,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 20,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "LIG넥스원은 천궁-II 등 유도무기 수출 확대에 따라 후속 군수 지원 및 부품 공급 시장 성장이 기대됩니다. 하지만 최근 주가 하락폭이 크므로, 추세 전환 신호가 나타날 때까지 관망하는 것이 좋겠습니다.",
+          "close": 809500.0,
+          "change_pct": -5.432242990654201,
+          "score": 9,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.49803606347374985,
+          "rsi14": 45.74616457461646,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
     }
   ]
 }
