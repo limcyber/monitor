@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-06-01 23:41 ET",
-  "count": 132,
+  "updated_at_et": "2026-06-02 21:44 ET",
+  "count": 133,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -18579,6 +18579,171 @@
           "ai_state": "회피",
           "ai_action": "관찰",
           "ai_note": "LIG넥스원은 시장 대비 힘이 약하고 20일선, 50일선 아래에 있어 매수 시점은 아닙니다. RSI 30선 부근으로 반등 가능성 있으나 추세 전환 확인 필요.",
+          "close": 743000.0,
+          "change_pct": -4.252577319587624,
+          "score": 12,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.2799296850759675,
+          "rsi14": 32.38341968911918,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-06-02 21:44 ET",
+      "market_data_as_of": "2026-06-02 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 20,
+          "ai_state": "하락세",
+          "ai_action": "매도",
+          "ai_note": "최근 1분기 사상 최대 실적을 기록했으나, 현재 주가는 하락세를 보이고 있습니다. 보유 중이라면 손절 또는 비중 축소를 고려해볼 수 있습니다.",
+          "close": 42150.0,
+          "change_pct": -4.0955631399317465,
+          "score": 14,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "아이티센글로벌 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.3x (거래량 약함) / RSI 30 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.29703045734931177,
+          "rsi14": 29.951690821256037,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 45,
+          "ai_state": "횡보",
+          "ai_action": "관망",
+          "ai_note": "로봇 관련주로 분류되며, 스마트팩토리 및 물류 자동화 솔루션 공급 이력이 있습니다. 최근 주가는 뚜렷한 방향성 없이 횡보 중이며, 추가적인 모멘텀 확인이 필요합니다.",
+          "close": 47100.0,
+          "change_pct": 4.783092324805338,
+          "score": 51,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.2572851493115207,
+          "rsi14": 48.9841986455982,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 75,
+          "ai_state": "상승세",
+          "ai_action": "보유",
+          "ai_note": "최근 HBM5 기술 선언과 함께 시가총액이 세계 10위권으로 상승했습니다. 낸드플래시 시장 점유율 1위 수성 등 긍정적인 뉴스가 이어지고 있어 추가 상승이 기대됩니다.",
+          "close": 358000.0,
+          "change_pct": 2.5787965616045794,
+          "score": 69,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.6444765279170589,
+          "rsi14": 73.23529411764706,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 70,
+          "ai_state": "상승세",
+          "ai_action": "보유",
+          "ai_note": "최태원 회장이 향후 5년간 생산능력을 두 배로 늘리겠다고 밝히는 등 HBM 시장에서의 경쟁력 강화 움직임이 있습니다. 다만 최근 공장 화재 이슈가 있었으나 생산 차질은 없다고 밝혔습니다.",
+          "close": 2326000.0,
+          "change_pct": -1.5658061785865374,
+          "score": 69,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.4167350617403623,
+          "rsi14": 72.96538821328345,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 60,
+          "ai_state": "상승 후 조정",
+          "ai_action": "보유 후 관망",
+          "ai_note": "AI 및 클라우드 사업 기대감으로 최근 주가가 강세를 보였으나, 현재는 숨고르기 구간입니다. 단기 차익 실현 매물과 함께 조정이 나타나고 있으나, 장기적인 성장 가능성은 여전히 유효합니다.",
+          "close": 259500.0,
+          "change_pct": -4.41988950276243,
+          "score": 36,
+          "state": "약함",
+          "action": "관찰",
+          "cross_highlights": [
+            "NAVER 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 2.1x (거래량 강함) / RSI 70 (과열 구간)",
+            "NAVER 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 2.1x (거래량 강함) / RSI 70 (과열 구간)"
+          ],
+          "volume_ratio_20d": 2.062107675753189,
+          "rsi14": 70.41942604856511,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 72,
+          "ai_state": "상승세",
+          "ai_action": "보유",
+          "ai_note": "미국 시장에서 하이브리드차 판매가 급증하며 역대 최고 실적을 기록하는 등 견조한 흐름을 보이고 있습니다. 조지아 신공장 가동 본격화 등 성장 모멘텀이 지속될 것으로 예상됩니다.",
+          "close": 721500.0,
+          "change_pct": -3.8000000000000034,
+          "score": 68,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5548437478094685,
+          "rsi14": 59.02031063321385,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 15,
+          "ai_state": "하락세",
+          "ai_action": "매도",
+          "ai_note": "대전공장 폭발 사고로 인한 생산 차질 우려와 함께 중대재해처벌법 적용 가능성이 제기되고 있습니다. 수출에 차질이 발생할 수 있다는 점을 고려하여 보유 중이라면 매도를 고려하는 것이 좋습니다.",
+          "close": 1085000.0,
+          "change_pct": -4.657293497363801,
+          "score": 11,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5269576756327681,
+          "rsi14": 25.67237163814181,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 25,
+          "ai_state": "하락세",
+          "ai_action": "매도",
+          "ai_note": "최근 방산 특화 AI 플랫폼 개발 등 기술 개발 소식이 있으나, 주가는 하락세를 보이고 있습니다. LIG D&A의 AI 플랫폼 개발은 긍정적이나, 현재 주가 흐름을 고려할 때 보유 비중 축소를 고려할 수 있습니다.",
           "close": 743000.0,
           "change_pct": -4.252577319587624,
           "score": 12,
