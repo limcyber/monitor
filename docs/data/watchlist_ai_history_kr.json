@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-06-03 23:43 ET",
-  "count": 136,
+  "updated_at_et": "2026-06-04 20:04 ET",
+  "count": 137,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -19249,6 +19249,175 @@
           ],
           "volume_ratio_20d": 0.009923391052857063,
           "rsi14": 30.71253071253072,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-06-04 20:04 ET",
+      "market_data_as_of": "2026-06-04 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 15,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "최근 중기 데드크로스 발생 및 거래량 약세, RSI 하방 우세로 현재는 관망이 필요합니다.",
+          "close": 43650.0,
+          "change_pct": 0.8083140877598094,
+          "score": 13,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "아이티센글로벌 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.4x (거래량 약함) / RSI 31 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.36101276570149904,
+          "rsi14": 31.447587354409322,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 55,
+          "ai_state": "약함",
+          "ai_action": "관찰",
+          "ai_note": "단기 골든크로스 발생했으나 거래량이 아직 약하고 RSI가 중립 구간에 있어 추가적인 상승 모멘텀 확인이 필요합니다.",
+          "close": 47350.0,
+          "change_pct": -0.10548523206751481,
+          "score": 49,
+          "state": "약함",
+          "action": "관찰",
+          "cross_highlights": [
+            "클로봇 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.9x (거래량 보통) / RSI 52 (중립)"
+          ],
+          "volume_ratio_20d": 0.8890306425311838,
+          "rsi14": 52.34741784037559,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 75,
+          "ai_state": "양호",
+          "ai_action": "선별적 접근",
+          "ai_note": "시장 대비 강한 흐름을 보이며 20일선 및 50일선 위에 있어 긍정적입니다. RSI 71로 과열 구간 진입 가능성 주의.",
+          "close": 358500.0,
+          "change_pct": -0.554785020804438,
+          "score": 74,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.7276447547386582,
+          "rsi14": 71.976401179941,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 75,
+          "ai_state": "양호",
+          "ai_action": "선별적 접근",
+          "ai_note": "시장 대비 강한 흐름을 보이며 20일선 및 50일선 위에 있어 긍정적입니다. RSI 67로 상승 추세 유지 중.",
+          "close": 2306000.0,
+          "change_pct": -2.2881355932203418,
+          "score": 74,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.44148064793799335,
+          "rsi14": 67.40506329113924,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 60,
+          "ai_state": "애매",
+          "ai_action": "관찰",
+          "ai_note": "단기 및 중기 골든크로스 발생했으나 RSI 73으로 과열 구간 진입, 최근 상승폭이 커 부담이 될 수 있습니다.",
+          "close": 267500.0,
+          "change_pct": -4.634581105169344,
+          "score": 55,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [
+            "NAVER 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.9x (거래량 보통) / RSI 73 (과열 구간)",
+            "NAVER 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.9x (거래량 보통) / RSI 73 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.9377996570849549,
+          "rsi14": 73.01255230125523,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 70,
+          "ai_state": "양호",
+          "ai_action": "선별적 접근",
+          "ai_note": "시장 대비 강한 흐름을 보이며 20일선 및 50일선 위에 있어 긍정적입니다. RSI 50 근처에서 안정적인 흐름.",
+          "close": 708000.0,
+          "change_pct": -2.8806584362139898,
+          "score": 68,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.322285844516495,
+          "rsi14": 49.72826086956522,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 10,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "시장 대비 약한 흐름과 20일선, 50일선 하향 돌파, RSI 25로 하락 추세가 강해 현재는 관망이 필요합니다.",
+          "close": 1074000.0,
+          "change_pct": 0.37383177570093906,
+          "score": 11,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.8896665669218186,
+          "rsi14": 25.117370892018783,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 10,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "최근 중기 데드크로스 발생, 시장 대비 약한 흐름, RSI 31로 하락 우세하여 현재는 관망이 필요합니다.",
+          "close": 723000.0,
+          "change_pct": -0.4132231404958664,
+          "score": 9,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "LIG넥스원 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.5x (거래량 약함) / RSI 31 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.5423147584650663,
+          "rsi14": 31.25,
           "signals": {
             "short_cross": "none",
             "mid_cross": "bear"
