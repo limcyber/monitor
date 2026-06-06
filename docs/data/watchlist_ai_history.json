@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-06-06 08:49 ET",
+  "updated_at_et": "2026-06-06 10:25 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-05-16 22:27 ET",
-      "market_data_as_of": "2026-05-15 16:00 ET (Close)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: Extra data: line 59 column 1 (char 1612)",
-      "items": []
-    },
     {
       "generated_at_et": "2026-05-17 02:00 ET",
       "market_data_as_of": "2026-05-15 16:00 ET (Close)",
@@ -21037,6 +21030,168 @@
           "ai_state": "약세",
           "ai_action": "관망",
           "ai_note": "KORU는 시장 대비 약한 흐름을 보이며 종가가 20일선 아래에 있습니다. 비록 50일선 위에 있지만, RSI가 46.9로 하락 추세가 이어질 가능성이 있습니다. 보유 중이라면 20일선 회복 여부를 확인하며 신중하게 대응하는 것이 좋습니다.",
+          "close": 663.010009765625,
+          "change_pct": -36.83814036330602,
+          "score": 33,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.04708294030396833,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-06-06 10:25 ET",
+      "market_data_as_of": "2026-06-05 14:15 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 40,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "최근 AI 칩 경쟁 심화 소식과 함께 주가 하락세가 나타나고 있습니다. 20일선 아래에서 거래량이 동반되지 않는 약한 흐름을 보이고 있어 추가 하락 가능성을 염두에 두고 관망하는 것이 좋겠습니다.",
+          "close": 206.3699951171875,
+          "change_pct": -5.620602002693353,
+          "score": 45,
+          "state": "약함",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.006299725043856103,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "최근 단기 데드크로스가 발생했으며, 시장 전반의 약세와 함께 주가 하락이 이어지고 있습니다. 거래량이 동반되지 않는 하락이므로 추세 전환 신호를 기다리며 관망하는 것이 좋습니다.",
+          "close": 392.94000244140625,
+          "change_pct": -6.096309958524682,
+          "score": 31,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "TSLA 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 38 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.007761020979845,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 20,
+          "ai_state": "매우 약세",
+          "ai_action": "관망",
+          "ai_note": "AI 인프라 투자 자금 마련을 위한 대규모 유상증자 가능성 뉴스가 주가 하락을 부추기고 있습니다. 중장기 데드크로스까지 발생하며 기술적 지표도 좋지 않아 당분간 관망이 필요해 보입니다.",
+          "close": 589.85498046875,
+          "change_pct": -6.009692371417652,
+          "score": 19,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "META 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.1x (거래량 약함) / RSI 42 (하방 우세)",
+            "META 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.1x (거래량 약함) / RSI 42 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.07638698280620632,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 65,
+          "ai_state": "중립",
+          "ai_action": "선별적 접근",
+          "ai_note": "AI 가속기 및 데이터센터 시장에서의 경쟁력 강화 소식이 있으나, 최근 시장 전반의 약세와 함께 주가도 하락했습니다. 50일선 위에서 지지력을 확인하며 반등 신호를 기다리는 것이 좋겠습니다.",
+          "close": 471.44000244140625,
+          "change_pct": -9.89296799655721,
+          "score": 69,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0057922050091579235,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "AI 기반 의료 플랫폼 업그레이드 소식에도 불구하고 주가는 약세를 보이고 있습니다. 단기 골든크로스 시도가 있었으나 중기 데드크로스가 발생하며 추세가 불안정하므로, 20일선 및 50일선 돌파 여부를 확인하며 관망하는 것이 좋겠습니다.",
+          "close": 46.51499938964844,
+          "change_pct": -10.993109675469693,
+          "score": 19,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "TEM 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 55 (중립)",
+            "TEM 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 55 (중립)"
+          ],
+          "volume_ratio_20d": 0.009512715656581638,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 70,
+          "ai_state": "강세",
+          "ai_action": "매수 고려",
+          "ai_note": "반도체 섹터 전반의 강세와 함께 긍정적인 흐름을 보이고 있습니다. 20일선과 50일선 위에 안착하며 지지력을 확보하고 있어, 추가 상승 가능성을 염두에 두고 분할 매수를 고려해볼 수 있습니다.",
+          "close": 551.5399780273438,
+          "change_pct": -8.491504374091896,
+          "score": 74,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.037854604431550434,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 15,
+          "ai_state": "매우 약세",
+          "ai_action": "관망",
+          "ai_note": "로봇 배달 서비스 확장 소식에도 불구하고 주가는 약세를 면치 못하고 있습니다. 최근 단기 데드크로스가 발생했으며, RSI 지표도 하방 우세를 나타내고 있어 당분간 관망하며 추세 전환을 기다리는 것이 좋겠습니다.",
+          "close": 7.684999942779541,
+          "change_pct": -8.674985411559488,
+          "score": 11,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "SERV 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 44 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.010158462581161555,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "한국 증시의 전반적인 강세에도 불구하고 이 종목은 시장 대비 약한 모습을 보이고 있습니다. 20일선 아래에서 거래량이 동반되지 않는 흐름이므로, 50일선 지지 여부를 확인하며 관망하는 것이 좋겠습니다.",
           "close": 663.010009765625,
           "change_pct": -36.83814036330602,
           "score": 33,
