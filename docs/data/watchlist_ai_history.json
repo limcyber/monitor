@@ -1,163 +1,7 @@
 {
-  "updated_at_et": "2026-06-08 16:37 ET",
+  "updated_at_et": "2026-06-08 18:20 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-05-18 23:45 ET",
-      "market_data_as_of": "2026-05-18 15:10 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 75,
-          "ai_state": "관망",
-          "ai_action": "보유 및 분할 매도 고려",
-          "ai_note": "엔비디아는 시장 대비 강한 흐름을 보이고 있으나, 최근 하락세에 따라 220달러 지지선 확인이 중요합니다. 보유 중이라면 230달러 이상에서 분할 매도를 고려해 볼 수 있습니다.",
-          "close": 220.42999267578125,
-          "change_pct": -2.170253190787952,
-          "score": 79,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 80,
-          "ai_state": "매수",
-          "ai_action": "소규모 분할 매수",
-          "ai_note": "테슬라는 20일선과 50일선 골든크로스 이후 상승 추세를 이어가고 있습니다. 400달러 지지선을 확인하며 소규모 분할 매수를 고려할 수 있습니다.",
-          "close": 409.143310546875,
-          "change_pct": -3.1017146623725456,
-          "score": 83,
-          "state": "강함",
-          "action": "소규모 매수",
-          "cross_highlights": [
-            "TSLA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 62 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 35,
-          "ai_state": "관망",
-          "ai_action": "매수 보류",
-          "ai_note": "메타는 시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 위치해 있습니다. 600달러 저항선을 돌파하는지 관망하며 매수 시점을 조절하는 것이 좋습니다.",
-          "close": 612.0800170898438,
-          "change_pct": -0.35002579608137685,
-          "score": 30,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 70,
-          "ai_state": "관망",
-          "ai_action": "보유 및 추세 확인",
-          "ai_note": "AMD는 시장 대비 강한 흐름을 유지하고 있으나, 최근 하락세로 410달러 지지선이 중요합니다. 보유 중이라면 420달러 돌파 시 추가 상승을 기대해 볼 수 있습니다.",
-          "close": 416.125,
-          "change_pct": -1.8804541355203486,
-          "score": 74,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 25,
-          "ai_state": "관망",
-          "ai_action": "매수 보류",
-          "ai_note": "TEM은 시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 위치해 있습니다. 45달러 저항선을 돌파하는지 관망하며 매수 시점을 조절하는 것이 좋습니다.",
-          "close": 43.57500076293945,
-          "change_pct": -0.8081027538588526,
-          "score": 19,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 70,
-          "ai_state": "관망",
-          "ai_action": "보유 및 추세 확인",
-          "ai_note": "SOXX는 시장 대비 강한 흐름을 보이고 있으나, 최근 하락세로 480달러 지지선 확인이 중요합니다. 보유 중이라면 500달러 돌파 시 추가 상승을 기대해 볼 수 있습니다.",
-          "close": 491.7449951171875,
-          "change_pct": -3.2987875125658817,
-          "score": 74,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 20,
-          "ai_state": "주의",
-          "ai_action": "보유 및 실적 발표 후 대응",
-          "ai_note": "SERV는 실적 발표를 앞두고 있어 변동성이 커질 수 있습니다. 현재 8달러 지지선이 중요하며, 실적 발표 이후 추세를 확인하며 대응하는 것이 좋습니다.",
-          "close": 8.109999656677246,
-          "change_pct": -1.5776713355815652,
-          "score": 17,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "SERV 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 31 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 65,
-          "ai_state": "관망",
-          "ai_action": "보유 및 추세 확인",
-          "ai_note": "KORU는 시장 대비 강한 흐름을 보이고 있으나, 최근 하락세로 700달러 지지선 확인이 중요합니다. 보유 중이라면 720달러 돌파 시 추가 상승을 기대해 볼 수 있습니다.",
-          "close": 701.3699951171875,
-          "change_pct": -6.6507879192084784,
-          "score": 66,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-05-19 03:39 ET",
       "market_data_as_of": "2026-05-18 15:10 ET (5분봉)",
@@ -20975,6 +20819,13 @@
     },
     {
       "generated_at_et": "2026-06-08 16:37 ET",
+      "market_data_as_of": "2026-06-08 15:20 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
+    },
+    {
+      "generated_at_et": "2026-06-08 18:20 ET",
       "market_data_as_of": "2026-06-08 15:20 ET (5분봉)",
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
