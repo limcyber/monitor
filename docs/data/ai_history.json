@@ -1,38 +1,7 @@
 {
-  "updated_at_et": "2026-06-09 16:28 ET",
+  "updated_at_et": "2026-06-09 18:06 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-05-19 20:06 ET",
-      "market_data_as_of": "2026-05-19 15:20 ET (5분봉)",
-      "market": {
-        "score": 50,
-        "level": 3,
-        "state": "레벨 3/6 - 중립 / 혼조",
-        "action": "보유 / 비중 축소",
-        "cross_highlights": [],
-        "top_reasons": [
-          "50일선 위 종목 비율이 낮아 중간 흐름도 약합니다 (0)",
-          "대형주 몇 종목에만 힘이 몰리고 있습니다 (-2)",
-          "S&P500이 200일선 위에 있습니다 (+10)"
-        ],
-        "metrics": {
-          "vix_close": 18.020000457763672,
-          "tnx_close": 4.666999816894531,
-          "pct_above_20dma": 42.34592445328032,
-          "pct_above_50dma": 47.713717693836976
-        }
-      },
-      "ai_analysis": {
-        "status": "error",
-        "model": "gemini-2.5-flash",
-        "content": "AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'"
-      },
-      "ai_notifications": {
-        "count": 0,
-        "items": []
-      }
-    },
     {
       "generated_at_et": "2026-05-20 00:43 ET",
       "market_data_as_of": "2026-05-19 15:20 ET (5분봉)",
@@ -6577,6 +6546,40 @@
             "ticker": "TSLA"
           }
         ]
+      }
+    },
+    {
+      "generated_at_et": "2026-06-09 18:06 ET",
+      "market_data_as_of": "2026-06-09 14:35 ET (5분봉)",
+      "market": {
+        "score": 53,
+        "level": 3,
+        "state": "레벨 3/6 - 중립 / 혼조",
+        "action": "보유 / 비중 축소",
+        "cross_highlights": [
+          "S&P500 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 51 (중립)",
+          "나스닥 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 46 (중립)"
+        ],
+        "top_reasons": [
+          "S&P500과 나스닥이 함께 단기 데드크로스라 공격 점수를 높게 주기 어렵습니다 (상한 72)",
+          "S&P500이 20일선 아래라 단기 흐름이 약합니다 (-2)",
+          "S&P500이 200일선 위에 있습니다 (+10)"
+        ],
+        "metrics": {
+          "vix_close": 19.979999542236328,
+          "tnx_close": 4.533999919891357,
+          "pct_above_20dma": 62.02783300198808,
+          "pct_above_50dma": 55.666003976143145
+        }
+      },
+      "ai_analysis": {
+        "status": "error",
+        "model": "gemini-2.5-flash",
+        "content": "AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'"
+      },
+      "ai_notifications": {
+        "count": 0,
+        "items": []
       }
     }
   ]
