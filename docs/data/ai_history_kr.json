@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-06-08 20:03 ET",
-  "count": 137,
+  "updated_at_et": "2026-06-09 01:02 ET",
+  "count": 138,
   "items": [
     {
       "generated_at_et": "2026-03-29 20:11 ET",
@@ -4458,6 +4458,39 @@
         "top_reasons": [
           "해외 변동성이 높아 국내장도 흔들릴 수 있습니다 (-3)",
           "원달러가 많이 올라 외국인 수급 부담이 큽니다 (-6)",
+          "KOSPI가 200일선 위에 있습니다 (+15)"
+        ],
+        "metrics": {
+          "vix_close": 18.920000076293945,
+          "tnx_close": null,
+          "pct_above_20dma": null,
+          "pct_above_50dma": null
+        }
+      },
+      "ai_analysis": {
+        "status": "error",
+        "model": "gemini-2.5-flash",
+        "content": "한국 시장 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'"
+      },
+      "ai_notifications": {
+        "count": 0,
+        "items": []
+      }
+    },
+    {
+      "generated_at_et": "2026-06-09 01:02 ET",
+      "market_data_as_of": "2026-06-09 15:30 KST (Close)",
+      "market": {
+        "score": 42,
+        "level": 3,
+        "state": "레벨 3/6 - 중립 / 혼조",
+        "action": "보유 / 비중 축소",
+        "cross_highlights": [
+          "KOSDAQ 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.7x (거래량 약함) / RSI 37 (하방 우세)"
+        ],
+        "top_reasons": [
+          "해외 변동성이 높아 국내장도 흔들릴 수 있습니다 (-3)",
+          "KOSDAQ이 200일선 아래에 있습니다 (0)",
           "KOSPI가 200일선 위에 있습니다 (+15)"
         ],
         "metrics": {
