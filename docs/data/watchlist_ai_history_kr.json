@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-06-14 19:06 ET",
-  "count": 149,
+  "updated_at_et": "2026-06-14 23:59 ET",
+  "count": 150,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -21291,6 +21291,13 @@
           }
         }
       ]
+    },
+    {
+      "generated_at_et": "2026-06-14 23:59 ET",
+      "market_data_as_of": "2026-06-12 15:30 KST (Close)",
+      "status": "error",
+      "error": "한국 종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
     }
   ]
 }
