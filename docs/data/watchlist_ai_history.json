@@ -1,161 +1,7 @@
 {
-  "updated_at_et": "2026-06-15 15:10 ET",
+  "updated_at_et": "2026-06-15 17:59 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-05-24 15:10 ET",
-      "market_data_as_of": "2026-05-22 14:20 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 55,
-          "ai_state": "보류",
-          "ai_action": "보유 / 관찰",
-          "ai_note": "실적 발표가 임박하여 변동성이 예상됩니다. 최근 실적은 좋았으나, 주가 하락 가능성도 염두에 두고 관망하는 것이 좋겠습니다.",
-          "close": 215.51010131835938,
-          "change_pct": -1.8221918311569163,
-          "score": 40,
-          "state": "약함",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0019138122596955055,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 70,
-          "ai_state": "양호",
-          "ai_action": "선별 매수",
-          "ai_note": "시장 대비 강한 흐름을 보이고 있으며, AI 관련 사업 확장 기대감이 있습니다. 다만, 경쟁 심화 및 규제 이슈는 지속적으로 모니터링해야 합니다.",
-          "close": 427.3299865722656,
-          "change_pct": 2.268752023519527,
-          "score": 71,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0008729632838714305,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 30,
-          "ai_state": "약함",
-          "ai_action": "보류 / 관찰",
-          "ai_note": "최근 법적 이슈와 대규모 감원 소식이 주가에 부담을 주고 있습니다. AI 투자 확대는 긍정적이나, 단기적으로는 불확실성이 높습니다.",
-          "close": 610.3599853515625,
-          "change_pct": 0.4906286747659694,
-          "score": 21,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0008950337670022906,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 75,
-          "ai_state": "강세",
-          "ai_action": "매수",
-          "ai_note": "AI 시장 성장에 따른 수혜가 기대되며, 최근 실적 발표도 긍정적이었습니다. 경쟁사 대비 가격 경쟁력과 기술력을 바탕으로 꾸준한 상승이 예상됩니다.",
-          "close": 472.31500244140625,
-          "change_pct": 5.054606705803244,
-          "score": 74,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0027584402077647156,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 20,
-          "ai_state": "매우 약함",
-          "ai_action": "회피",
-          "ai_note": "최근 실적 발표에서 매출은 예상치를 상회했으나, 손실 폭이 확대되었습니다. AI 관련 사업 확장에도 불구하고 수익성 개선이 시급한 상황입니다.",
-          "close": 46.849998474121094,
-          "change_pct": 0.7743531569305961,
-          "score": 16,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.00032262977956917614,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 72,
-          "ai_state": "양호",
-          "ai_action": "선별 매수",
-          "ai_note": "반도체 섹터 전반의 강세와 AI 수요 증가에 힘입어 상승세를 이어가고 있습니다. 다만, 메모리 반도체 업황 변동성에 유의해야 합니다.",
-          "close": 540.3599853515625,
-          "change_pct": 2.9825928081323783,
-          "score": 74,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0009626328743745004,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 15,
-          "ai_state": "매우 약함",
-          "ai_action": "회피",
-          "ai_note": "로봇 사업 확장 및 파트너십 강화 소식이 있으나, 아직 수익성 개선이 더딥니다. 중기 데드크로스 발생으로 단기적인 하락 압력이 예상됩니다.",
-          "close": 8.744999885559082,
-          "change_pct": -0.7378039836738792,
-          "score": 13,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "SERV 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 41 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.0011487731359169201,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 60,
-          "ai_state": "보통",
-          "ai_action": "보유",
-          "ai_note": "한국 시장 관련 ETF로, 최근 한국 증시의 강세와 함께 움직이고 있습니다. 다만, 지정학적 리스크 및 환율 변동성에 유의해야 합니다.",
-          "close": 824.9500122070312,
-          "change_pct": -1.674611179138108,
-          "score": 65,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0006031503535491771,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-05-24 16:29 ET",
       "market_data_as_of": "2026-05-22 14:20 ET (5분봉)",
@@ -22287,6 +22133,162 @@
           "ai_note": "최근 급등 후 단기 데드크로스가 발생했습니다. 50일선과 20일선 위에 있지만, RSI가 중립 구간에 있어 추가 상승보다는 숨 고르기 구간에 진입할 가능성이 있습니다. 보유 중이라면 급격한 하락 시 손절을 고려할 수 있습니다.",
           "close": 995.6199951171875,
           "change_pct": 20.6987669992839,
+          "score": 54,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "KORU 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 49 (중립)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-06-15 17:59 ET",
+      "market_data_as_of": "2026-06-15 15:56 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 75,
+          "ai_state": "강한 상승",
+          "ai_action": "매수",
+          "ai_note": "NVIDIA는 250억 달러 규모의 채권 발행 계획을 발표했으며, 이는 AI 수요 증가에 대한 강력한 시장 신뢰를 보여줍니다. 현재 주가는 과소평가된 것으로 보이며, 보유 중이라면 계속 보유하는 것을 추천합니다.",
+          "close": 212.27499389648438,
+          "change_pct": 3.4528931092056014,
+          "score": 41,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0041416241774019005,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 60,
+          "ai_state": "중립",
+          "ai_action": "보유",
+          "ai_note": "Tesla의 FSD가 덴마크에서 승인받는 등 유럽으로 확장되고 있으며, 이는 긍정적인 뉴스입니다. 하지만 최근 실적 발표에서 예상치를 상회했음에도 불구하고 주가는 약세를 보이고 있어, 현재로서는 보유하며 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 410.05999755859375,
+          "change_pct": 0.8931439480915015,
+          "score": 41,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.006815236871755172,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 70,
+          "ai_state": "상승",
+          "ai_action": "매수",
+          "ai_note": "Meta는 페이스북에 AI 모드를 출시하며 사용자 경험 향상에 집중하고 있습니다. 이는 사용자 참여 증대 및 수익화 기회 확대로 이어질 수 있습니다. 현재 주가 흐름도 긍정적이므로 매수를 고려해볼 만합니다.",
+          "close": 592.7949829101562,
+          "change_pct": 4.553071242491447,
+          "score": 8,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.007413843274470457,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 85,
+          "ai_state": "강한 상승",
+          "ai_action": "매수",
+          "ai_note": "AMD는 AI 메모리 최적화 기업 MEXT 인수를 발표하며 AI 역량 강화에 나섰습니다. 이는 데이터센터 성능 향상에 기여할 것으로 기대되며, 주가도 6% 이상 상승했습니다. 강력한 상승 추세이므로 매수를 추천합니다.",
+          "close": 548.0,
+          "change_pct": 7.1212135493105455,
+          "score": 76,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "AMD 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 57 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.004287433097858093,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 45,
+          "ai_state": "약보합",
+          "ai_action": "보유",
+          "ai_note": "Tempus AI는 AI 기반 심방세동 예측 모델의 다기관 검증 결과를 발표했습니다. 이는 긍정적인 뉴스이나, 최근 주가는 하락세를 보이고 있어 현재로서는 보유하며 관망하는 것이 좋겠습니다.",
+          "close": 52.529998779296875,
+          "change_pct": 9.849433531013684,
+          "score": 47,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.017284551413682812,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 70,
+          "ai_state": "상승",
+          "ai_action": "보유",
+          "ai_note": "반도체 섹터 ETF인 SOXX는 AI 수요 증가에 힘입어 강한 상승세를 보이고 있습니다. 주요 보유 종목인 AMD, NVDA 등의 강세가 긍정적인 영향을 미치고 있습니다. 현재 추세가 좋으므로 보유를 추천합니다.",
+          "close": 628.3300170898438,
+          "change_pct": 5.380296367269399,
+          "score": 74,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.006805748631554123,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "매도",
+          "ai_note": "Serve Robotics는 1분기 매출이 전년 동기 대비 578% 증가하는 등 성장세를 보이고 있으나, 현재 주가는 약세를 면치 못하고 있습니다. 수익 개선이 더디고 경쟁 심화 우려가 있어 매도를 고려해볼 만합니다.",
+          "close": 7.210000038146973,
+          "change_pct": 3.443332212047645,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.004535877707027448,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 50,
+          "ai_state": "애매",
+          "ai_action": "보유",
+          "ai_note": "KORU는 한국 증시 상승세에 힘입어 강세를 보이고 있으나, 레버리지 ETF 특성상 변동성이 매우 큽니다. 메모리 반도체 수요 증가는 긍정적이나, 단기 급등 후 조정 가능성도 있어 보유하며 신중하게 접근하는 것이 좋겠습니다.",
+          "close": 995.5,
+          "change_pct": 20.68422002075645,
           "score": 54,
           "state": "애매",
           "action": "보류 / 관찰",
