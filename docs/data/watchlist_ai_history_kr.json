@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-06-16 20:13 ET",
-  "count": 153,
+  "updated_at_et": "2026-06-17 02:08 ET",
+  "count": 154,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -21797,6 +21797,171 @@
           ],
           "volume_ratio_20d": 3.48976558638055,
           "rsi14": 57.77027027027027,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "bear"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-06-17 02:08 ET",
+      "market_data_as_of": "2026-06-17 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 20,
+          "ai_state": "하락 관찰",
+          "ai_action": "보류",
+          "ai_note": "최근 중기 데드크로스 발생 및 시장 대비 약세. RSI 과매도 구간 진입. 보유 시 손절가 설정 후 관망.",
+          "close": 33800.0,
+          "change_pct": -3.9772727272727293,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "아이티센글로벌 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.6x (거래량 약함) / RSI 22 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.6048418744748771,
+          "rsi14": 22.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 25,
+          "ai_state": "하락 관찰",
+          "ai_action": "보류",
+          "ai_note": "시장 대비 약세이며 20일선, 50일선 하회. RSI 37.5로 하락 추세. 추가 하락 가능성 염두.",
+          "close": 36750.0,
+          "change_pct": -3.034300791556732,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.14731509898003745,
+          "rsi14": 37.5,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 65,
+          "ai_state": "상승 유지",
+          "ai_action": "보유",
+          "ai_note": "시장 대비 견조한 흐름 유지, 20일선 및 50일선 상회. RSI 56으로 상승 여력. 보유 중이라면 추세 유지 확인하며 보유.",
+          "close": 335750.0,
+          "change_pct": -2.1137026239067103,
+          "score": 66,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.20140816177707838,
+          "rsi14": 56.136606189967985,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 68,
+          "ai_state": "상승 유지",
+          "ai_action": "보유",
+          "ai_note": "시장 대비 강한 흐름, 20일선 및 50일선 상회. RSI 56으로 상승 추세. 보유 중이라면 추세 유지 확인하며 보유.",
+          "close": 2414000.0,
+          "change_pct": 1.3434089000839533,
+          "score": 69,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.21917566369496783,
+          "rsi14": 56.06813342796309,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 63,
+          "ai_state": "상승 유지",
+          "ai_action": "보유",
+          "ai_note": "시장 대비 견조하며 20일선 및 50일선 상회. RSI 60으로 상승 추세. 보유 중이라면 추세 유지 확인하며 보유.",
+          "close": 243000.0,
+          "change_pct": 0.4132231404958775,
+          "score": 65,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.11424844441988805,
+          "rsi14": 60.22201665124884,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 30,
+          "ai_state": "하락 관찰",
+          "ai_action": "보류",
+          "ai_note": "시장 대비 약세이며 20일선 하회. RSI 40.4로 하락 추세. 보유 시 손절가 설정 후 관망.",
+          "close": 623000.0,
+          "change_pct": -2.6562500000000044,
+          "score": 34,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.20974891228752193,
+          "rsi14": 40.46052631578948,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 40,
+          "ai_state": "상승 관찰",
+          "ai_action": "보류",
+          "ai_note": "최근 급등 후 50일선 하회. 거래량은 약하나 RSI 50.6으로 상승 여력 존재. 보유 시 단기 고점 경계.",
+          "close": 1251000.0,
+          "change_pct": 5.748098055790374,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5468133099896688,
+          "rsi14": 50.676982591876204,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 35,
+          "ai_state": "혼조 관찰",
+          "ai_action": "보류",
+          "ai_note": "단기 골든크로스, 중기 데드크로스 발생. 거래량 약함. RSI 60으로 상승 우세하나 추세 불확실. 보유 시 중기 추세 확인 필요.",
+          "close": 997000.0,
+          "change_pct": -0.4990019960079861,
+          "score": 20,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "LIG넥스원 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.6x (거래량 약함) / RSI 61 (상방 우세)",
+            "LIG넥스원 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.6x (거래량 약함) / RSI 61 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.5665164496651232,
+          "rsi14": 60.97122302158273,
           "signals": {
             "short_cross": "bull",
             "mid_cross": "bear"
