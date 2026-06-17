@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-06-15 23:50 ET",
-  "count": 152,
+  "updated_at_et": "2026-06-16 20:13 ET",
+  "count": 153,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -21630,6 +21630,175 @@
           "rsi14": 40.99099099099099,
           "signals": {
             "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-06-16 20:13 ET",
+      "market_data_as_of": "2026-06-16 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 10,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "아이티센글로벌은 최근 중기 데드크로스가 발생했으며, 시장 대비 약한 흐름을 보이고 있습니다. 20일선 아래 종가로 인해 현재는 매수 관점에서 접근하기 어렵습니다.",
+          "close": 35400.0,
+          "change_pct": -15.513126491646778,
+          "score": 10,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "아이티센글로벌 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 2.3x (거래량 강함) / RSI 22 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 2.302731519409182,
+          "rsi14": 21.78217821782178,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 13,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "클로봇은 시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 위치해 있습니다. 현재로서는 특별한 매수 신호가 없어 관망하는 것이 좋습니다.",
+          "close": 37050.0,
+          "change_pct": -2.242744063324542,
+          "score": 13,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.35162261048114124,
+          "rsi14": 37.90035587188612,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 68,
+          "ai_state": "양호",
+          "ai_action": "매우 선별적 접근",
+          "ai_note": "삼성전자는 시장 대비 강한 흐름을 보이며 20일선과 50일선 위에 위치해 있습니다. 보유 중이라면 시장 흐름을 보며 추가적인 상승을 기대해 볼 수 있습니다.",
+          "close": 341750.0,
+          "change_pct": 1.4094955489614147,
+          "score": 68,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.43671930719179314,
+          "rsi14": 59.14438502673797,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 69,
+          "ai_state": "양호",
+          "ai_action": "매우 선별적 접근",
+          "ai_note": "SK하이닉스는 시장 대비 강한 흐름을 보이며 20일선과 50일선 위에 위치해 있습니다. 현재 RSI가 60 이상으로 상승 추세에 힘이 실리고 있어 긍정적입니다.",
+          "close": 2380000.0,
+          "change_pct": 4.020979020979021,
+          "score": 69,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5058121479920635,
+          "rsi14": 60.47254150702426,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 69,
+          "ai_state": "양호",
+          "ai_action": "매우 선별적 접근",
+          "ai_note": "NAVER는 최근 중기 골든크로스가 발생했으며, 시장 대비 강한 흐름을 보이고 있습니다. 50일선 위에 위치하며 RSI 60으로 상방 우세 신호가 나타나고 있어 관심 있게 볼 만합니다.",
+          "close": 241500.0,
+          "change_pct": -2.620967741935487,
+          "score": 69,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [
+            "NAVER 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.6x (거래량 약함) / RSI 60 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.5824778350132469,
+          "rsi14": 59.566620562471186,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 32,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "현대차는 최근 단기 데드크로스가 발생했으며, 시장 대비 약한 흐름을 보이고 있습니다. 20일선 아래 종가로 인해 현재는 매수 관점에서 접근하기 어렵습니다.",
+          "close": 640000.0,
+          "change_pct": -1.081916537867078,
+          "score": 32,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "현대차 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.6x (거래량 약함) / RSI 42 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.6156125941662463,
+          "rsi14": 41.69491525423729,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 20,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "한화에어로스페이스는 50일선 아래에 위치해 있으며, 20일선 위에 있습니다. 현재로서는 명확한 매수 신호가 없어 관망하는 것이 좋습니다.",
+          "close": 1191000.0,
+          "change_pct": 9.87084870848709,
+          "score": 20,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.3294134755356197,
+          "rsi14": 43.53448275862069,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 51,
+          "ai_state": "애매",
+          "ai_action": "관찰",
+          "ai_note": "LIG넥스원은 최근 단기 골든크로스가 나왔으나 중기 데드크로스도 동시에 발생하여 혼조세를 보입니다. 거래량과 RSI는 상승 우세를 나타내지만, 최근 급등으로 인한 부담감이 있어 추격 매수는 신중해야 합니다.",
+          "close": 1005000.0,
+          "change_pct": 18.934911242603558,
+          "score": 51,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [
+            "LIG넥스원 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 3.5x (거래량 강함) / RSI 58 (상방 우세)",
+            "LIG넥스원 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 3.5x (거래량 강함) / RSI 58 (상방 우세)"
+          ],
+          "volume_ratio_20d": 3.48976558638055,
+          "rsi14": 57.77027027027027,
+          "signals": {
+            "short_cross": "bull",
             "mid_cross": "bear"
           }
         }
