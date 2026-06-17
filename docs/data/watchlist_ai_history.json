@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-06-17 17:54 ET",
+  "updated_at_et": "2026-06-17 19:18 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-05-25 23:51 ET",
-      "market_data_as_of": "2026-05-25 11:30 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-05-26 03:38 ET",
       "market_data_as_of": "2026-05-25 11:30 ET (5분봉)",
@@ -22001,6 +21994,160 @@
           "ai_state": "관망",
           "ai_action": "보유",
           "ai_note": "최근 급등 후 50일선과 20일선 위에 있어 시장 대비 강한 편입니다. 다만 단기 급등 부담이 있어 현재는 보유하며 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 924.5050048828125,
+          "change_pct": 0.594645171714836,
+          "score": 56,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-06-17 19:18 ET",
+      "market_data_as_of": "2026-06-17 15:50 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 45,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "최근 엔비디아 CEO가 AI가 미국 제조업 부활에 도움을 줄 것이라고 언급하며, AI 투자 중심에서의 중요성을 재확인했습니다. 다만, 단기적으로는 AI 설비 투자 붐이 지속 가능성에 대한 우려도 제기되고 있어, 현재 추세에서는 보유하며 관망하는 것이 좋겠습니다.",
+          "close": 204.17999267578125,
+          "change_pct": -1.5573072317139114,
+          "score": 28,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "매도 고려",
+          "ai_note": "스페이스X IPO 관련 뉴스가 많지만, 테슬라 자체의 펀더멘털은 시장 대비 약한 모습을 보이고 있습니다. 미국 상원의원들이 테슬라의 'Full Self-Driving' 안전 데이터 검토를 요청하는 등 규제 관련 이슈도 부담입니다.",
+          "close": 395.11309814453125,
+          "change_pct": -2.3592411978401895,
+          "score": 33,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "매도 고려",
+          "ai_note": "이탈리아에서 미성년자에 대한 알고리즘 피해를 주장하는 집단 소송이 제기되었으며, 이는 법적 리스크를 부각시킵니다. 또한, 8,000명 규모의 감원과 AI 투자 확대 소식은 비용 부담 증가를 시사합니다.",
+          "close": 569.489990234375,
+          "change_pct": -5.118213727474341,
+          "score": 16,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 75,
+          "ai_state": "강세",
+          "ai_action": "매수 고려",
+          "ai_note": "AMD는 서버 프로세서 및 AI 가속기 수요 증가로 견조한 실적을 기록하고 있으며, 향후 35% 이상의 연간 매출 성장을 전망하고 있습니다. 최근 골든크로스 신호와 함께 시장 대비 강한 흐름을 보여 매수 관점에서 긍정적입니다.",
+          "close": 512.6400756835938,
+          "change_pct": 1.0546368050925459,
+          "score": 76,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [
+            "AMD 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 49 (중립)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 40,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "Tempus AI는 심방세동 위험 예측 AI 모델의 검증 결과를 발표하는 등 AI 기술 개발에 집중하고 있습니다. 다만, 최근 실적 발표 이후 주가가 하락한 점을 감안할 때, 현재는 관망하며 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 48.7400016784668,
+          "change_pct": -3.599682842939278,
+          "score": 32,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 70,
+          "ai_state": "강세",
+          "ai_action": "매수 고려",
+          "ai_note": "반도체 ETF인 SOXX는 AI 인프라 투자 붐에 힘입어 견조한 흐름을 보이고 있습니다. 최근 52주 신고가를 경신했으나, 단기 급등에 대한 경계감도 존재하므로 선별적인 접근이 유효합니다.",
+          "close": 601.7100219726562,
+          "change_pct": 1.7708598726772218,
+          "score": 74,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "매도 고려",
+          "ai_note": "Serve Robotics는 4분기 및 연간 실적 발표에서 매출 성장을 기록했으나, 최근 공매도 리포트와 함께 주가 하락 압력을 받고 있습니다. 신규 사업 확장 소식에도 불구하고, 현재로서는 부정적인 모멘텀이 강합니다.",
+          "close": 6.724999904632568,
+          "change_pct": 2.515243342869833,
+          "score": 11,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 55,
+          "ai_state": "중립",
+          "ai_action": "보유",
+          "ai_note": "한국 시장 관련 ETF인 KORU는 최근 한국 증시의 강세와 함께 주목받고 있습니다. 다만, 최근 급등에 따른 차익 실현 매물 출회 가능성도 있어, 현재는 보유하며 추세를 지켜보는 것이 좋겠습니다.",
           "close": 924.5050048828125,
           "change_pct": 0.594645171714836,
           "score": 56,
