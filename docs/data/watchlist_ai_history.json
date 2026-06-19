@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-06-18 18:29 ET",
+  "updated_at_et": "2026-06-18 20:10 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-05-27 02:12 ET",
-      "market_data_as_of": "2026-05-26 15:00 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-05-27 06:34 ET",
       "market_data_as_of": "2026-05-26 15:00 ET (5분봉)",
@@ -21855,6 +21848,162 @@
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-06-18 20:10 ET",
+      "market_data_as_of": "2026-06-18 15:50 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 65,
+          "ai_state": "관망",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "NVIDIA XR AI가 공개 베타에 진입했으며, Blackwell Ultra는 높은 수요를 유지하고 있습니다. 다만, 20일선 아래에 있어 추가 상승을 기다리는 것이 좋습니다.",
+          "close": 211.34249877929688,
+          "change_pct": 3.2702199278821897,
+          "score": 33,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0071776365948054985,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 40,
+          "ai_state": "관망",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "Grok FSD 통합 및 'Banish' 기능이 약 3개월 내 출시될 예정입니다. 하지만 20일선 아래에 있어 현재는 관망하는 것이 좋습니다.",
+          "close": 399.1650085449219,
+          "change_pct": 0.702609523134945,
+          "score": 31,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0054129473749336575,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "Meta는 AI에 투자하며 수천 명의 직원을 감축하고 있습니다. 워싱턴주 대법원에서 3,500만 달러의 벌금이 확정되었으며, 20일선 아래에 있어 주의가 필요합니다.",
+          "close": 578.9349975585938,
+          "change_pct": 2.000595533114513,
+          "score": 5,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.018117522734114603,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 85,
+          "ai_state": "강세",
+          "ai_action": "선별 매수",
+          "ai_note": "MEXT 인수 및 Rackspace와의 파트너십으로 AI 데이터센터 시장에서의 입지를 강화하고 있습니다. 최근 단기 골든크로스가 나왔으며, 50일선 위에 있어 긍정적입니다.",
+          "close": 536.1599731445312,
+          "change_pct": 4.620666870561818,
+          "score": 76,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "AMD 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 53 (중립)"
+          ],
+          "volume_ratio_20d": 0.013762121728938074,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 55,
+          "ai_state": "중립",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "FDA 승인된 심전도 AI 모델의 다기관 검증 결과를 발표했습니다. 하지만 거래량이 아직 약하고 20일선 아래에 있어 추가적인 상승 모멘텀을 기다리는 것이 좋습니다.",
+          "close": 50.814998626708984,
+          "change_pct": 4.150435895026172,
+          "score": 47,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.01246666556259255,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 75,
+          "ai_state": "양호",
+          "ai_action": "선별 매수",
+          "ai_note": "반도체 섹터는 AI 붐으로 인해 강세를 보이고 있으며, SOXX는 50일선 및 20일선 위에 있어 긍정적인 추세를 유지하고 있습니다.",
+          "close": 642.0499877929688,
+          "change_pct": 7.056510213336575,
+          "score": 74,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.01707911584644431,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "자율주행 세탁 서비스 출시 등 사업 확장을 시도하고 있으나, 1분기 매출은 크게 성장했으나 여전히 적자를 기록 중입니다. 20일선과 50일선 아래에 있어 주의가 필요합니다.",
+          "close": 7.040200233459473,
+          "change_pct": 5.234681214405157,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.015631392246914844,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 60,
+          "ai_state": "애매",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "AI 인프라 구축에 따른 메모리 반도체 수요 증가로 수혜를 보고 있으나, 최근 급등 후 변동성이 커진 상태입니다. 단기 골든크로스가 나왔으나 거래량이 약하고 RSI가 중립 수준입니다.",
+          "close": 1104.68994140625,
+          "change_pct": 20.810357820596437,
+          "score": 62,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "KORU 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 50 (중립)"
+          ],
+          "volume_ratio_20d": 0.004937754290397858,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        }
+      ]
     }
   ]
 }
