@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-06-19 02:15 ET",
-  "count": 158,
+  "updated_at_et": "2026-06-21 20:08 ET",
+  "count": 159,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -22310,6 +22310,170 @@
       "status": "error",
       "error": "한국 종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-06-21 20:08 ET",
+      "market_data_as_of": "2026-06-19 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "보유/관망",
+          "ai_note": "아이티센글로벌은 1분기 호실적을 기록했으나, 시장 대비 약한 흐름을 보이고 있습니다. 단기적으로는 20일선 및 50일선 아래에 위치하며 약세 추세가 지속될 수 있으니, 추가 반등 시 매도 관점을 유지하는 것이 좋습니다.",
+          "close": 31200.0,
+          "change_pct": -5.882352941176472,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.585083996908685,
+          "rsi14": 25.62620423892099,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "보유/관망",
+          "ai_note": "클로봇은 최근 DLS 인수 추진 및 유상증자 이슈가 있으나, 주가는 약세를 면치 못하고 있습니다. 20일선과 50일선 아래에 위치하며 거래량도 동반되지 않아 당분간 관망하며 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 33550.0,
+          "change_pct": -5.4929577464788775,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5284148227952865,
+          "rsi14": 30.095238095238088,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 75,
+          "ai_state": "강세",
+          "ai_action": "매수/보유",
+          "ai_note": "삼성전자는 평택캠퍼스 마지막 반도체 공장 착공 소식과 함께 인도 주거단지 HVAC 솔루션 공급 등 사업 다각화에 나서고 있습니다. 20일선과 50일선 위에 위치하며 RSI 지표도 양호하여 추가 상승 가능성이 있습니다. 다만 단기 급등 후 조정 가능성도 염두에 두어야 합니다.",
+          "close": 354000.0,
+          "change_pct": -2.344827586206899,
+          "score": 74,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.437221320850845,
+          "rsi14": 58.04347826086956,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 80,
+          "ai_state": "강세",
+          "ai_action": "매수/보유",
+          "ai_note": "SK하이닉스는 미국 ADR 상장 임박 및 HBM 시장 선점 기대감으로 강세를 보이고 있습니다. 20일선과 50일선 위에 위치하며 RSI 지표도 과열권에 진입하지 않아 추가 상승 여력이 있습니다. 다만 단기 급등에 따른 피로감은 고려해야 합니다.",
+          "close": 2764000.0,
+          "change_pct": 2.9422718808193693,
+          "score": 76,
+          "state": "양호",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.4139914569007621,
+          "rsi14": 62.91192330736968,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 35,
+          "ai_state": "약세",
+          "ai_action": "보유/관망",
+          "ai_note": "NAVER는 시장 대비 약한 흐름을 보이고 있으며, 20일선 아래에 위치하고 있습니다. 현재로서는 뚜렷한 상승 모멘텀이 부족하므로, 50일선 회복 여부를 관찰하며 보수적으로 접근하는 것이 좋습니다.",
+          "close": 229500.0,
+          "change_pct": -2.3404255319148914,
+          "score": 34,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5516045647230403,
+          "rsi14": 48.84910485933504,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 45,
+          "ai_state": "약세",
+          "ai_action": "보유/관망",
+          "ai_note": "현대차는 보스턴다이내믹스 지분 100% 확보 기대감에도 불구하고 시장 대비 약한 흐름을 보이고 있습니다. 20일선 아래에 위치하며 RSI 지표도 낮아 추가 하락 가능성이 있습니다. 50일선 돌파 여부를 확인하며 신중하게 접근해야 합니다.",
+          "close": 613000.0,
+          "change_pct": 1.9966722129783676,
+          "score": 44,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.182370741218464,
+          "rsi14": 30.902777777777786,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "보유/관망",
+          "ai_note": "한화에어로스페이스는 최근 단기 골든크로스 신호가 있었으나, 시장 대비 약한 흐름을 보이고 있습니다. 20일선과 50일선 아래에 위치하며 거래량도 동반되지 않아 당분간 관망하며 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 1122000.0,
+          "change_pct": -5.634987384356604,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 1.8x (거래량 강함) / RSI 45 (중립)"
+          ],
+          "volume_ratio_20d": 1.835009921296672,
+          "rsi14": 45.10556621880998,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "보유/관망",
+          "ai_note": "LIG넥스원은 유럽 합작사 설립 추진 등 긍정적인 소식이 있으나, 주가는 약세를 보이고 있습니다. 50일선 아래에 위치하며 거래량이 동반되지 않아 당분간 관망하며 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 852000.0,
+          "change_pct": -3.6199095022624417,
+          "score": 12,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "LIG넥스원 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.7x (거래량 약함) / RSI 54 (중립)"
+          ],
+          "volume_ratio_20d": 0.7159076468300648,
+          "rsi14": 54.06698564593301,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        }
+      ]
     }
   ]
 }
