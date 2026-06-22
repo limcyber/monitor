@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-06-21 20:08 ET",
-  "count": 159,
+  "updated_at_et": "2026-06-22 02:26 ET",
+  "count": 160,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -22468,6 +22468,172 @@
           ],
           "volume_ratio_20d": 0.7159076468300648,
           "rsi14": 54.06698564593301,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-06-22 02:26 ET",
+      "market_data_as_of": "2026-06-22 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 15,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "아이티센글로벌은 웹3 사업 상용화 및 금 코인 발행 계획이 있으나, 현재 주가는 시장 대비 약세를 보이고 있습니다. 단기적으로는 관망하며 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 28950.0,
+          "change_pct": -7.211538461538458,
+          "score": 11,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.7438828723712705,
+          "rsi14": 23.309608540925268,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 20,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "클로봇은 반도체 공장에 로봇 공급 계약을 체결하는 등 사업 확장을 하고 있으나, 주가는 시장 대비 약세를 보이고 있습니다. 긍정적인 뉴스가 주가에 반영되기까지 시간이 필요해 보입니다.",
+          "close": 32550.0,
+          "change_pct": -2.980625931445602,
+          "score": 11,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.38894515552182846,
+          "rsi14": 26.425855513307994,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 65,
+          "ai_state": "양호",
+          "ai_action": "소규모 매수",
+          "ai_note": "삼성전자는 최근 SK하이닉스에 시총 1위 자리를 내주었으나, 여전히 견조한 흐름을 보이고 있습니다. 차세대 HBM 판매 및 장기 공급 계약 전략으로 호황기에 대비하는 모습입니다.",
+          "close": 348500.0,
+          "change_pct": -1.5536723163841804,
+          "score": 66,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.6549293987196914,
+          "rsi14": 49.877149877149876,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 75,
+          "ai_state": "매수",
+          "ai_action": "소규모 매수",
+          "ai_note": "SK하이닉스가 AI 데이터센터 HBM 수요에 힘입어 삼성전자를 제치고 시총 1위로 올라섰습니다. 목표주가 430만원 제시 등 긍정적인 증권사 리포트가 이어지고 있어 추가 상승 기대감이 있습니다.",
+          "close": 2874000.0,
+          "change_pct": 3.97973950795949,
+          "score": 60,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.721412283698044,
+          "rsi14": 64.60834762721555,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 30,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "네이버는 엔비디아와 AI 팩토리 구축 파트너십을 체결했으나, 대규모 투자 자금 조달 계획이 불확실합니다. 목표 주가 상향 조정 움직임도 있으나, 재무적 불확실성 해소 여부를 지켜봐야 합니다.",
+          "close": 222500.0,
+          "change_pct": -3.05010893246187,
+          "score": 32,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "NAVER 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.2x (거래량 약함) / RSI 35 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.16968241624894745,
+          "rsi14": 35.151515151515156,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 25,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "현대차는 판매 부진에도 불구하고 증권가에서 목표주가를 상향 조정하고 있습니다. 보스턴다이내믹스 지분 100% 확보 추진 등 미래 성장성에 대한 기대감이 반영된 것으로 보입니다.",
+          "close": 582500.0,
+          "change_pct": -4.975530179445354,
+          "score": 21,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5083592354368549,
+          "rsi14": 21.26929674099486,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 35,
+          "ai_state": "관망",
+          "ai_action": "소규모 매수",
+          "ai_note": "한화에어로스페이스는 국내 방산 기업 최초로 S&P 신용등급 A-를 획득하며 글로벌 경쟁력을 강화했습니다. 수주 잔고도 탄탄하여 향후 안정적인 매출 성장이 기대됩니다.",
+          "close": 1134000.0,
+          "change_pct": 1.0695187165775444,
+          "score": 19,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.5x (거래량 약함) / RSI 50 (중립)"
+          ],
+          "volume_ratio_20d": 0.4531264994036368,
+          "rsi14": 49.59839357429719,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 30,
+          "ai_state": "관망",
+          "ai_action": "관찰",
+          "ai_note": "LIG넥스원은 독일 라인메탈과 유럽 및 NATO 시장을 겨냥한 합작사 설립을 추진하며 방산 사업 확장에 나서고 있습니다. 다층 방공 솔루션 제공 역량 강화가 기대됩니다.",
+          "close": 851000.0,
+          "change_pct": -0.11737089201877549,
+          "score": 21,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "LIG넥스원 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.4x (거래량 약함) / RSI 56 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.3941683532647343,
+          "rsi14": 56.21890547263682,
           "signals": {
             "short_cross": "bull",
             "mid_cross": "none"
