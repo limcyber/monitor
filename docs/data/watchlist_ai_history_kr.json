@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-06-24 20:09 ET",
-  "count": 166,
+  "updated_at_et": "2026-06-25 01:02 ET",
+  "count": 167,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -23463,6 +23463,170 @@
           "cross_highlights": [],
           "volume_ratio_20d": 0.5613940280873231,
           "rsi14": 57.54560530679934,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-06-25 01:02 ET",
+      "market_data_as_of": "2026-06-25 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 15,
+          "ai_state": "하락세",
+          "ai_action": "매도",
+          "ai_note": "아이티센글로벌은 캐나다 BTQ와 양자보안 동맹을 체결했으나, 주가는 하락세를 보이고 있습니다.. 보유 중이라면 단기 반등 시 매도 고려가 좋습니다.",
+          "close": 22550.0,
+          "change_pct": -9.072580645161288,
+          "score": 12,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.2639086807077782,
+          "rsi14": 19.52309985096869,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 25,
+          "ai_state": "상승 후 조정",
+          "ai_action": "보유",
+          "ai_note": "클로봇은 두산로지스틱스솔루션 인수 소식에 급등했으나, 현재는 조정 국면입니다.. 보유 중이라면 단기 급등 후 조정 시 비중 조절을 고려해볼 수 있습니다.",
+          "close": 30950.0,
+          "change_pct": -6.917293233082711,
+          "score": 14,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5012641400195016,
+          "rsi14": 27.272727272727266,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 75,
+          "ai_state": "강세",
+          "ai_action": "보유",
+          "ai_note": "삼성전자는 1분기 D램 시장 점유율 1위를 유지하며 강세를 보이고 있습니다.. 보유 중이라면 단기 고점 논란에도 불구하고 HBM 시장 성장과 주주환원 강화 기대감으로 보유를 유지하는 것이 좋습니다.",
+          "close": 358000.0,
+          "change_pct": 5.139500734214386,
+          "score": 69,
+          "state": "양호",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.6825512161651898,
+          "rsi14": 55.87044534412956,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 80,
+          "ai_state": "강세",
+          "ai_action": "보유",
+          "ai_note": "SK하이닉스는 HBM 시장 선두를 유지하며 강세를 보이고 있으며, 미국 ADR 상장을 앞두고 있습니다.. 보유 중이라면 ADR 상장 모멘텀을 고려하여 보유를 유지하는 것이 좋습니다.",
+          "close": 2867000.0,
+          "change_pct": 9.385730637161394,
+          "score": 69,
+          "state": "양호",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.6197561241905036,
+          "rsi14": 68.30500689021589,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "매도",
+          "ai_note": "NAVER는 최근 장중 약세를 보였으며, 단기 데드크로스가 나왔습니다.. 보유 중이라면 단기 반등 시 매도 고려가 필요합니다.",
+          "close": 203500.0,
+          "change_pct": 2.0561685055165535,
+          "score": 18,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "NAVER 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.2x (거래량 약함) / RSI 34 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.15318883985182963,
+          "rsi14": 33.56510745891276,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "매도",
+          "ai_note": "현대차는 2분기 매출 성장이 예상되나, 원가 부담으로 영업이익은 감소할 수 있습니다.. 또한 노조의 파업 찬반투표 가결 소식도 부담 요인입니다. 보유 중이라면 단기 반등 시 매도하는 것이 좋습니다.",
+          "close": 506500.0,
+          "change_pct": -0.4911591355599265,
+          "score": 11,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.46596106858659253,
+          "rsi14": 19.527559055118104,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 25,
+          "ai_state": "하락세",
+          "ai_action": "매도",
+          "ai_note": "한화에어로스페이스는 대전 사업장 폭발 사고로 인한 부정적 이슈가 있습니다.. 보유 중이라면 사고 관련 추가 이슈 발생 여부를 주시하며 단기 반등 시 매도하는 것이 좋습니다.",
+          "close": 1081000.0,
+          "change_pct": -1.188299817184646,
+          "score": 15,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.5x (거래량 약함) / RSI 53 (중립)"
+          ],
+          "volume_ratio_20d": 0.47405168570367445,
+          "rsi14": 53.29218106995885,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 35,
+          "ai_state": "약보합",
+          "ai_action": "보유",
+          "ai_note": "LIG넥스원은 사명을 LIG D&A로 변경하고 항공·우주 분야로 사업 확장을 모색하고 있습니다.. 보유 중이라면 방산 및 우주항공 분야의 성장성을 고려하여 보유를 유지할 수 있습니다.",
+          "close": 792000.0,
+          "change_pct": -3.8834951456310662,
+          "score": 17,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.30041033292119357,
+          "rsi14": 55.254777070063696,
           "signals": {
             "short_cross": "none",
             "mid_cross": "none"
