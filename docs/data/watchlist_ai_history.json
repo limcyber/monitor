@@ -1,169 +1,7 @@
 {
-  "updated_at_et": "2026-06-27 13:00 ET",
+  "updated_at_et": "2026-06-27 14:42 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-06-05 18:39 ET",
-      "market_data_as_of": "2026-06-05 14:15 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 45,
-          "ai_state": "약함",
-          "ai_action": "관찰",
-          "ai_note": "NVIDIA는 AI 수요와 신규 파트너십으로 하방이 제한되고 있으나, 섹터 약세와 밸류에이션 우려로 하락 중입니다. 보유 중이라면 단기 반등 시 분할 매도를 고려할 수 있습니다.",
-          "close": 206.3699951171875,
-          "change_pct": -5.620602002693353,
-          "score": 45,
-          "state": "약함",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.006299725043856103,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 31,
-          "ai_state": "회피",
-          "ai_action": "관찰",
-          "ai_note": "JP모건이 투자의견을 중립으로 상향했으나, 로보틱스와 '물리적 AI'에 대한 가치 평가가 여전히 높다는 점은 부담입니다. 현재로서는 관망하며 추가 하락 시 지지선을 확인하는 것이 좋습니다.",
-          "close": 392.94000244140625,
-          "change_pct": -6.096309958524682,
-          "score": 31,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "TSLA 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 38 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.007761020979845,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 19,
-          "ai_state": "회피",
-          "ai_action": "관찰",
-          "ai_note": "AI 인프라 확장을 위한 대규모 주식 발행 가능성이 제기되며 주가가 하락했습니다. 단기적으로는 불확실성이 크므로, 추세를 확인하며 접근하는 것이 안전합니다.",
-          "close": 589.85498046875,
-          "change_pct": -6.009692371417652,
-          "score": 19,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "META 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.1x (거래량 약함) / RSI 42 (하방 우세)",
-            "META 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.1x (거래량 약함) / RSI 42 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.07638698280620632,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 69,
-          "ai_state": "양호",
-          "ai_action": "매우 선별적 접근",
-          "ai_note": "AI 수요 기대감과 견조한 분기 실적으로 긍정적이나, 반도체 섹터 전반의 약세와 일부 부정적 증권사 리포트로 하락했습니다. 시장 대비 강한 모습을 보이고 있어 관심 종목으로 유지하되, 변동성에 유의하며 접근해야 합니다.",
-          "close": 471.44000244140625,
-          "change_pct": -9.89296799655721,
-          "score": 69,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0057922050091579235,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 19,
-          "ai_state": "회피",
-          "ai_action": "관찰",
-          "ai_note": "정밀 의학 분야에서 AI를 활용하는 템퍼스 AI는 최근 주가 하락세를 보이고 있습니다. 현재로서는 뚜렷한 상승 모멘텀이 부족하므로 관망하는 것이 좋습니다.",
-          "close": 46.51499938964844,
-          "change_pct": -10.993109675469693,
-          "score": 19,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "TEM 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 55 (중립)",
-            "TEM 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 55 (중립)"
-          ],
-          "volume_ratio_20d": 0.009512715656581638,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 74,
-          "ai_state": "양호",
-          "ai_action": "매우 선별적 접근",
-          "ai_note": "반도체 섹터 전반의 약세에도 불구하고, SOXX ETF는 상대적으로 견조한 흐름을 보이고 있습니다. AI 관련주들의 움직임을 주시하며 선별적으로 접근하는 것이 유효해 보입니다.",
-          "close": 551.5399780273438,
-          "change_pct": -8.491504374091896,
-          "score": 74,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.037854604431550434,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 11,
-          "ai_state": "회피",
-          "ai_action": "관찰",
-          "ai_note": "서브 로보틱스는 로봇 운영 범위를 확장하고 있으며, 도어대시와의 협력도 강화하고 있습니다. 그러나 최근 주가 하락세를 보이고 있어, 추세 전환 신호를 기다리는 것이 좋습니다.",
-          "close": 7.684999942779541,
-          "change_pct": -8.674985411559488,
-          "score": 11,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "SERV 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 44 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.010158462581161555,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 33,
-          "ai_state": "회피",
-          "ai_action": "관찰",
-          "ai_note": "Direxion Daily MSCI South Korea Bull 3X Shares ETF(KORU)는 최근 대규모 자금 유출이 감지되었습니다. 현재로서는 투자 매력이 떨어지므로 관망하는 것이 바람직합니다.",
-          "close": 663.010009765625,
-          "change_pct": -36.83814036330602,
-          "score": 33,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.04708294030396833,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-06-05 20:00 ET",
       "market_data_as_of": "2026-06-05 14:15 ET (5분봉)",
@@ -19331,6 +19169,13 @@
     },
     {
       "generated_at_et": "2026-06-27 13:00 ET",
+      "market_data_as_of": "2026-06-26 15:15 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
+    },
+    {
+      "generated_at_et": "2026-06-27 14:42 ET",
       "market_data_as_of": "2026-06-26 15:15 ET (5분봉)",
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
