@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-06-28 20:05 ET",
-  "count": 171,
+  "updated_at_et": "2026-06-29 01:28 ET",
+  "count": 172,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -23971,6 +23971,172 @@
           ],
           "volume_ratio_20d": 0.9853092491254005,
           "rsi14": 52.977099236641216,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-06-29 01:28 ET",
+      "market_data_as_of": "2026-06-29 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "보유 / 비중 축소",
+          "ai_note": "아이티센글로벌은 AI 및 웹3 스타트업 발굴을 위한 오픈 이노베이션 프로그램을 드레이퍼 스타트업 하우스와 공동 개최합니다. 하지만 금 거래 사업 의존도가 높아 실적 변동성 우려가 있습니다.",
+          "close": 24700.0,
+          "change_pct": 14.883720930232558,
+          "score": 11,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5960925317168992,
+          "rsi14": 15.682967959527815,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "보유 / 비중 축소",
+          "ai_note": "클로봇은 에이테크경주와 9.7억원 규모의 제조 자동화 시스템 구축 계약을 체결하며 스마트 제조 사업을 확대하고 있습니다. 또한 두산 로지스틱스 솔루션 인수를 통해 물류 자동화 시장 경쟁력을 강화하고 있습니다.",
+          "close": 31150.0,
+          "change_pct": 8.726003490401402,
+          "score": 12,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.38598610177853004,
+          "rsi14": 39.7979797979798,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 40,
+          "ai_state": "중립",
+          "ai_action": "보유 / 비중 축소",
+          "ai_note": "삼성전자의 2분기 영업이익이 시장 컨센서스를 하회할 전망이며, HBM4E 12단 샘플 출하 소식이 있습니다. 최근 미국 기술주 조정과 차익실현 매물로 주가가 하락했습니다.",
+          "close": 323000.0,
+          "change_pct": -4.860088365243009,
+          "score": 45,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "삼성전자 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.4x (거래량 약함) / RSI 50 (중립)"
+          ],
+          "volume_ratio_20d": 0.3859940443237167,
+          "rsi14": 50.22421524663677,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 75,
+          "ai_state": "강세",
+          "ai_action": "매수 / 비중 확대",
+          "ai_note": "SK하이닉스는 HBM 시장에서 독보적인 지위를 유지하며, 목표주가가 상향 조정되고 있습니다. 다만, 미국 기술주 조정과 차익실현 매물로 단기 하락세를 보이고 있습니다.",
+          "close": 2565000.0,
+          "change_pct": -4.040404040404044,
+          "score": 69,
+          "state": "양호",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.3759709966066987,
+          "rsi14": 58.2703213610586,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "보유 / 비중 축소",
+          "ai_note": "네이버는 대화형 검색 'AI탭'을 정식 출시하며 AI 서비스 상용화에 박차를 가하고 있습니다. 하지만 BNK투자증권은 시장이 아직 보수적으로 평가하고 있다는 분석을 내놓았습니다.",
+          "close": 200500.0,
+          "change_pct": 2.0875763747454146,
+          "score": 20,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.12214974989731865,
+          "rsi14": 25.70937231298366,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "보유 / 비중 축소",
+          "ai_note": "현대차는 파업권을 확보한 노조에 임금협상 재개를 요청하며 이번 주 교섭 재개를 시도하고 있습니다. 또한 현대차그룹은 새만금 프로젝트를 중심으로 정부의 '3대 메가프로젝트' 사업 지원에 나섭니다.",
+          "close": 481000.0,
+          "change_pct": 0.10405827263266776,
+          "score": 11,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.32504319878909205,
+          "rsi14": 22.084805653710248,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 35,
+          "ai_state": "약세",
+          "ai_action": "보유 / 비중 축소",
+          "ai_note": "한화에어로스페이스는 스페인 자주포 소송 타결로 최대 수혜가 예상되며, 에스토니아에 천무를 추가 공급했습니다. 다만, 대전 사업장에서 발생한 폭발 사고로 노동부 특별감독에 착수했습니다.",
+          "close": 1024000.0,
+          "change_pct": 1.285855588526208,
+          "score": 12,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.2x (거래량 약함) / RSI 51 (중립)"
+          ],
+          "volume_ratio_20d": 0.2314131011075533,
+          "rsi14": 50.775193798449614,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 45,
+          "ai_state": "중립",
+          "ai_action": "보유 / 비중 축소",
+          "ai_note": "LIG넥스원은 5000억 원 규모의 유상증자를 통해 생산시설을 확대하고, 육군 주관 신속 시범 사업 계약을 체결했습니다. 또한 함대공유도탄-II 체계개발 및 위성통신·항공 분야 협력을 강화하고 있습니다.",
+          "close": 747000.0,
+          "change_pct": 1.6326530612244872,
+          "score": 13,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "LIG넥스원 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.2x (거래량 약함) / RSI 52 (중립)"
+          ],
+          "volume_ratio_20d": 0.21486693479602767,
+          "rsi14": 51.72413793103448,
           "signals": {
             "short_cross": "bear",
             "mid_cross": "none"
