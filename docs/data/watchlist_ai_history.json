@@ -1,169 +1,7 @@
 {
-  "updated_at_et": "2026-06-30 06:28 ET",
+  "updated_at_et": "2026-06-30 08:29 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-06-08 07:50 ET",
-      "market_data_as_of": "2026-06-05 14:15 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 55,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "엔비디아는 한국 기업들과 AI 인프라 구축 협력을 강화하고 있습니다. 최근 52주 신고가를 경신했으나, 반도체 섹터 전반의 조정 가능성을 염두에 두고 현 보유 상태를 유지하는 것이 좋습니다.",
-          "close": 206.3699951171875,
-          "change_pct": -5.620602002693353,
-          "score": 45,
-          "state": "약함",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.006299725043856103,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 30,
-          "ai_state": "매도",
-          "ai_action": "매도",
-          "ai_note": "테슬라는 로보택시 시연을 연기했으며, 스페이스X 관련 이슈로 주가 변동성이 커지고 있습니다. 단기 데드크로스 신호와 함께 시장 대비 약한 흐름을 보이므로, 보유 중이라면 매도를 고려할 시점입니다.",
-          "close": 392.94000244140625,
-          "change_pct": -6.096309958524682,
-          "score": 31,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "TSLA 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 38 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.007761020979845,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 25,
-          "ai_state": "매도",
-          "ai_action": "매도",
-          "ai_note": "메타는 AI 관련 소송 및 규제 이슈에 직면해 있으며, 최근 중장기 데드크로스가 발생했습니다. 시장 대비 약한 흐름을 보이고 있어, 보유 중이라면 매도를 고려하는 것이 좋습니다.",
-          "close": 589.85498046875,
-          "change_pct": -6.009692371417652,
-          "score": 19,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "META 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.1x (거래량 약함) / RSI 42 (하방 우세)",
-            "META 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.1x (거래량 약함) / RSI 42 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.07638698280620632,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 70,
-          "ai_state": "매수",
-          "ai_action": "소규모 매수",
-          "ai_note": "AMD는 영국에 대규모 AI 투자 계획을 발표하며 기술 리더십을 강화하고 있습니다. 시장 대비 강한 흐름을 보이고 있으며, 50일선 위에 있어 긍정적입니다. 소규모 매수로 접근하는 것을 추천합니다.",
-          "close": 471.44000244140625,
-          "change_pct": -9.89296799655721,
-          "score": 69,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0057922050091579235,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 20,
-          "ai_state": "매도",
-          "ai_action": "매도",
-          "ai_note": "템퍼스 AI는 FDA 승인 소식이 있었으나, 최근 중기 데드크로스가 발생하며 주가 흐름이 좋지 않습니다. 시장 대비 약한 모습을 보이므로, 보유 중이라면 매도를 고려해야 합니다.",
-          "close": 46.51499938964844,
-          "change_pct": -10.993109675469693,
-          "score": 19,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "TEM 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 55 (중립)",
-            "TEM 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 55 (중립)"
-          ],
-          "volume_ratio_20d": 0.009512715656581638,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 75,
-          "ai_state": "매수",
-          "ai_action": "매수",
-          "ai_note": "반도체 ETF인 SOXX는 AI 관련 긍정적인 모멘텀과 함께 강한 상승세를 보이고 있습니다. 20일선과 50일선 위에 있어 추세가 양호하며, 시장 대비 강한 흐름을 유지하고 있어 매수를 추천합니다.",
-          "close": 551.5399780273438,
-          "change_pct": -8.491504374091896,
-          "score": 74,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.037854604431550434,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 15,
-          "ai_state": "매도",
-          "ai_action": "매도",
-          "ai_note": "서브 로보틱스는 매출 성장은 보이나, 최근 단기 데드크로스가 발생하며 주가 흐름이 약합니다. 시장 대비 약한 모습을 보이고 있어, 보유 중이라면 매도를 고려하는 것이 좋습니다.",
-          "close": 7.684999942779541,
-          "change_pct": -8.674985411559488,
-          "score": 11,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "SERV 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 44 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.010158462581161555,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 35,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "KORU는 최근 큰 폭의 하락을 경험했으나, 연초 대비 높은 상승률을 기록하고 있습니다. 메모리 반도체 업황에 대한 우려가 있으므로, 현재는 관망하며 추세를 지켜보는 것이 좋습니다.",
-          "close": 663.010009765625,
-          "change_pct": -36.83814036330602,
-          "score": 33,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.04708294030396833,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-06-08 11:34 ET",
       "market_data_as_of": "2026-06-08 09:15 ET (5분봉)",
@@ -19150,6 +18988,13 @@
     },
     {
       "generated_at_et": "2026-06-30 06:28 ET",
+      "market_data_as_of": "2026-06-29 14:34 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
+    },
+    {
+      "generated_at_et": "2026-06-30 08:29 ET",
       "market_data_as_of": "2026-06-29 14:34 ET (5분봉)",
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
