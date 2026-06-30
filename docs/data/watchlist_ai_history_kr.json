@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-06-29 20:01 ET",
-  "count": 173,
+  "updated_at_et": "2026-06-30 01:00 ET",
+  "count": 174,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -24150,6 +24150,174 @@
       "status": "error",
       "error": "한국 종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-06-30 01:00 ET",
+      "market_data_as_of": "2026-06-30 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 15,
+          "ai_state": "하락세",
+          "ai_action": "매도",
+          "ai_note": "최근 캐나다 기업 BTQ와 양자보안 동맹을 맺었으나, 주가는 하락세를 보이고 있습니다. 단기적으로는 추가 하락 가능성을 염두에 두고 매도 후 관망하는 것이 좋겠습니다.",
+          "close": 23850.0,
+          "change_pct": -0.41753653444676075,
+          "score": 11,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.22527076890684739,
+          "rsi14": 14.259597806215723,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "보유 후 관망",
+          "ai_note": "두산로지스틱스솔루션 인수 소식에 주가가 상승했으나, 최근 다시 약세를 보이고 있습니다. 현재는 관망하며 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 31150.0,
+          "change_pct": -3.1104199066874005,
+          "score": 12,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.31059837045372857,
+          "rsi14": 44.74226804123712,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 45,
+          "ai_state": "혼조세",
+          "ai_action": "보유",
+          "ai_note": "최근 온디바이스 AI 최적화 UFS 5.0 개발 소식이 있었으나, D램 가격 담합 의혹으로 집단소송에 휘말렸습니다. 현재는 혼조세로 보유하며 시장 상황을 지켜보는 것이 좋겠습니다.",
+          "close": 324500.0,
+          "change_pct": 0.4643962848297267,
+          "score": 40,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "삼성전자 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.3x (거래량 약함) / RSI 55 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.2731252626815039,
+          "rsi14": 55.365853658536594,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 70,
+          "ai_state": "상승세",
+          "ai_action": "보유",
+          "ai_note": "HBM 시장 선도 기업으로 AI 붐의 수혜를 받고 있으며, 1분기 역대급 실적을 기록했습니다. 다만, D램 가격 담합 의혹으로 집단소송에 휘말린 점은 부담 요인입니다. 현재는 상승세이므로 보유를 유지하되, 소송 결과 추이를 지켜보는 것이 좋겠습니다.",
+          "close": 2572000.0,
+          "change_pct": -2.13089802130898,
+          "score": 69,
+          "state": "양호",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.2774812840581116,
+          "rsi14": 63.491246138002055,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 30,
+          "ai_state": "혼조세",
+          "ai_action": "보유 후 관망",
+          "ai_note": "AI 검색 상용화 및 커머스·핀테크 생태계 확장에 대한 기대감이 있으나, 목표가 하향 조정이 있었습니다. 현재는 혼조세이므로 보유 후 관망하며 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 201500.0,
+          "change_pct": -1.225490196078427,
+          "score": 20,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.08323810710645654,
+          "rsi14": 36.186348862405204,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 20,
+          "ai_state": "하락세",
+          "ai_action": "매도",
+          "ai_note": "신규 채용 규모를 줄이고 미래차 정비 거점을 개관하는 등 사업 재편 움직임이 있으나, 주가는 하락세를 보이고 있습니다. 현재는 하락세이므로 매도 후 관망하는 것이 좋겠습니다.",
+          "close": 491000.0,
+          "change_pct": -1.2072434607645843,
+          "score": 9,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "현대차 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.2x (거래량 약함) / RSI 29 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.23578369927513168,
+          "rsi14": 29.291044776119406,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 15,
+          "ai_state": "하락세",
+          "ai_action": "매도",
+          "ai_note": "에스토니아 천무 추가 공급 등 방산 사업은 순항 중이나, 최근 대전 사업장에서 발생한 폭발 사고로 특별 감독에 착수했습니다. 현재는 하락세이므로 매도 후 관망하는 것이 좋겠습니다.",
+          "close": 980000.0,
+          "change_pct": -3.9215686274509776,
+          "score": 12,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.2x (거래량 약함) / RSI 45 (중립)"
+          ],
+          "volume_ratio_20d": 0.1721029692431721,
+          "rsi14": 45.25139664804469,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 25,
+          "ai_state": "하락세",
+          "ai_action": "매도",
+          "ai_note": "신형 함대함 유도탄 '타이거 샤크'를 공개하며 기술력을 과시했으나, 주가는 하락세를 보이고 있습니다. 현재는 하락세이므로 매도 후 관망하는 것이 좋겠습니다.",
+          "close": 721000.0,
+          "change_pct": -3.2214765100671117,
+          "score": 12,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "LIG넥스원 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.2x (거래량 약함) / RSI 44 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.17509741786920757,
+          "rsi14": 44.20168067226891,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        }
+      ]
     }
   ]
 }
