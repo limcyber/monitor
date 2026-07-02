@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-07-01 19:12 ET",
-  "count": 177,
+  "updated_at_et": "2026-07-01 22:58 ET",
+  "count": 178,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -24655,6 +24655,172 @@
           ],
           "volume_ratio_20d": 0.4870908019085165,
           "rsi14": 50.561797752808985,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-07-01 22:58 ET",
+      "market_data_as_of": "2026-07-02 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 10,
+          "ai_state": "매도",
+          "ai_action": "매도",
+          "ai_note": "아이티센글로벌은 시장 대비 약한 흐름과 20일, 50일선 하향 돌파로 매도 의견입니다. 보유 시 손절가 이탈 시 비중 축소 고려.",
+          "close": 22650.0,
+          "change_pct": -3.205128205128205,
+          "score": 11,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.30678823715698994,
+          "rsi14": 13.391304347826079,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 15,
+          "ai_state": "매도",
+          "ai_action": "매도",
+          "ai_note": "클로봇은 시장 대비 약세 및 20일, 50일선 하향 돌파가 확인되어 매도 의견입니다. 보유 시 추가 하락에 대비해야 합니다.",
+          "close": 29550.0,
+          "change_pct": -4.677419354838708,
+          "score": 12,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.20134793949613272,
+          "rsi14": 35.06493506493507,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 30,
+          "ai_state": "매도",
+          "ai_action": "매도",
+          "ai_note": "삼성전자는 최근 단기 데드크로스 발생 및 시장 대비 약한 흐름으로 매도 의견입니다. 보유 시 20일선 돌파 여부 확인 후 대응하는 것이 좋습니다.",
+          "close": 298750.0,
+          "change_pct": -5.007949125596189,
+          "score": 32,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "삼성전자 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.5x (거래량 약함) / RSI 45 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.47768516887347645,
+          "rsi14": 44.668911335577995,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 60,
+          "ai_state": "보유",
+          "ai_action": "보유",
+          "ai_note": "SK하이닉스는 시장 대비 상대적 강세와 50일선 지지 가능성으로 보유 의견입니다. 다만, 시장 전반의 약세가 지속될 경우 추가 하락 가능성에 유의해야 합니다.",
+          "close": 2395000.0,
+          "change_pct": -6.4453125,
+          "score": 61,
+          "state": "애매",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.4142204343197246,
+          "rsi14": 55.9437166424066,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 20,
+          "ai_state": "매도",
+          "ai_action": "매도",
+          "ai_note": "NAVER는 시장 대비 약한 흐름과 20일, 50일선 하향 돌파로 매도 의견입니다. 보유 시 20일선 회복 여부를 관찰하며 대응하는 것이 좋습니다.",
+          "close": 200000.0,
+          "change_pct": 1.317122593718345,
+          "score": 23,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.19349993251314812,
+          "rsi14": 17.808219178082197,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 10,
+          "ai_state": "매도",
+          "ai_action": "매도",
+          "ai_note": "현대차는 중기 데드크로스 발생 및 시장 대비 약한 흐름으로 매도 의견입니다. 보유 시 20일선 돌파 여부를 확인하며 신중하게 접근해야 합니다.",
+          "close": 490000.0,
+          "change_pct": 0.512820512820511,
+          "score": 9,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "현대차 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.4x (거래량 약함) / RSI 27 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.3619160859767198,
+          "rsi14": 27.413127413127413,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 35,
+          "ai_state": "보유",
+          "ai_action": "보유",
+          "ai_note": "한화에어로스페이스는 시장 대비 양호한 흐름을 보이나 거래량이 아직 약합니다. 보유 시 50일선 돌파 여부를 확인하며 추세를 지켜보는 것이 좋습니다.",
+          "close": 1142000.0,
+          "change_pct": 4.674610449129246,
+          "score": 29,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5749919468283137,
+          "rsi14": 55.4421768707483,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 25,
+          "ai_state": "매도",
+          "ai_action": "매도",
+          "ai_note": "LIG넥스원은 단기 데드크로스 발생 및 20일, 50일선 하향 돌파로 매도 의견입니다. 보유 시 20일선 회복 여부를 관찰하며 대응하는 것이 좋습니다.",
+          "close": 766000.0,
+          "change_pct": -0.5194805194805197,
+          "score": 25,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "LIG넥스원 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.2x (거래량 약함) / RSI 50 (중립)"
+          ],
+          "volume_ratio_20d": 0.2357146311924655,
+          "rsi14": 49.51456310679612,
           "signals": {
             "short_cross": "bear",
             "mid_cross": "none"
