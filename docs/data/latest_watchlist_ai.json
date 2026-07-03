@@ -1,6 +1,6 @@
 {
-  "generated_at_et": "2026-07-03 08:25 ET",
-  "market_data_as_of": "2026-07-02 15:58 ET (5분봉)",
+  "generated_at_et": "2026-07-03 13:54 ET",
+  "market_data_as_of": "2026-07-03 11:30 ET (5분봉)",
   "status": "ok",
   "error": null,
   "items": [
@@ -9,16 +9,16 @@
       "ai_score": 15,
       "ai_state": "회피",
       "ai_action": "보류",
-      "ai_note": "최근 중기 데드크로스 발생 및 시장 대비 약세로 관망이 필요합니다. 보유 중이라면 20일선 이탈 시 손절 고려.",
-      "close": 194.82000732421875,
-      "change_pct": -1.396899727329659,
+      "ai_note": "최근 중기 데드크로스 발생 및 RSI 40으로 하방 우세. 시장 대비 약한 흐름이므로 관망하며 추가 하락 시 분할 매수 고려.",
+      "close": 194.88,
+      "change_pct": -1.3665359884769024,
       "score": 5,
       "state": "회피",
       "action": "보류 / 관찰",
       "cross_highlights": [
         "NVDA 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 40 (하방 우세)"
       ],
-      "volume_ratio_20d": 0.01690424205190236,
+      "volume_ratio_20d": 0.0,
       "signals": {
         "short_cross": "none",
         "mid_cross": "bear"
@@ -26,12 +26,12 @@
     },
     {
       "ticker": "TSLA",
-      "ai_score": 20,
+      "ai_score": 25,
       "ai_state": "회피",
       "ai_action": "보류",
-      "ai_note": "단기 골든크로스에도 불구하고 중기 데드크로스 및 시장 대비 약세로 추가 하락 가능성을 염두에 두어야 합니다. 보유 시 20일선 지지 여부 확인 필요.",
-      "close": 394.06500244140625,
-      "change_pct": -7.344224370579422,
+      "ai_note": "단기 골든크로스에도 불구하고 중기 데드크로스 발생 및 RSI 48로 중립. 시장 대비 약한 흐름이므로 관망하며 추세 전환 확인 후 진입 고려.",
+      "close": 393.14,
+      "change_pct": -7.561718484841318,
       "score": 11,
       "state": "회피",
       "action": "보류 / 관찰",
@@ -39,7 +39,7 @@
         "TSLA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 48 (중립)",
         "TSLA 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 48 (중립)"
       ],
-      "volume_ratio_20d": 0.019013948403549915,
+      "volume_ratio_20d": 0.0,
       "signals": {
         "short_cross": "bull",
         "mid_cross": "bear"
@@ -48,16 +48,16 @@
     {
       "ticker": "META",
       "ai_score": 30,
-      "ai_state": "애매",
+      "ai_state": "회피",
       "ai_action": "보류",
-      "ai_note": "거래량 부진과 50일선 하회는 부담 요인입니다. 20일선 위에서 거래량 동반 상승 시 재진입 고려.",
-      "close": 583.6199951171875,
-      "change_pct": -4.778838542481479,
+      "ai_note": "거래량 약세와 50일선 하회로 인해 매수세 약함. 20일선 지지 여부 확인하며 추세 전환 시점 포착 필요.",
+      "close": 582.7514,
+      "change_pct": -4.920555133048799,
       "score": 20,
       "state": "회피",
       "action": "보류 / 관찰",
       "cross_highlights": [],
-      "volume_ratio_20d": 0.021328688197945842,
+      "volume_ratio_20d": 0.0,
       "signals": {
         "short_cross": "none",
         "mid_cross": "none"
@@ -65,17 +65,17 @@
     },
     {
       "ticker": "AMD",
-      "ai_score": 60,
+      "ai_score": 65,
       "ai_state": "관망",
       "ai_action": "관망",
-      "ai_note": "시장 대비 강한 흐름과 50일선 지지는 긍정적이나, 아직 시장 대비 약한 모습은 변수입니다. 20일선 돌파 및 거래량 증가 시 매수 고려.",
-      "close": 516.0999145507812,
-      "change_pct": -4.581439526018372,
-      "score": 56,
+      "ai_note": "시장 대비 강한 흐름과 20, 50일선 상회. RSI 54로 상승 여력 있으나, 거래량 동반한 상승 확인 후 매수 진입 고려.",
+      "close": 517.75,
+      "change_pct": -4.276365307278063,
+      "score": 61,
       "state": "애매",
       "action": "보류 / 관찰",
       "cross_highlights": [],
-      "volume_ratio_20d": 0.013064542114148476,
+      "volume_ratio_20d": 0.0,
       "signals": {
         "short_cross": "none",
         "mid_cross": "none"
@@ -83,19 +83,19 @@
     },
     {
       "ticker": "TEM",
-      "ai_score": 75,
-      "ai_state": "양호",
+      "ai_score": 80,
+      "ai_state": "관심",
       "ai_action": "선별 매수",
-      "ai_note": "중기 골든크로스 및 시장 대비 강한 흐름은 긍정적입니다. 20일선 지지 확인하며 분할 매수 접근 가능.",
-      "close": 60.29999923706055,
-      "change_pct": -2.110388424127463,
+      "ai_note": "중기 골든크로스 및 RSI 67로 강한 상승 추세. 시장 대비 강한 흐름 유지 시 분할 매수 진입 고려. 손절선은 50일선 하회 시.",
+      "close": 60.2537,
+      "change_pct": -2.185549525113528,
       "score": 78,
       "state": "양호",
       "action": "선별 매수",
       "cross_highlights": [
         "TEM 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 67 (상방 우세)"
       ],
-      "volume_ratio_20d": 0.018941896582677413,
+      "volume_ratio_20d": 0.0,
       "signals": {
         "short_cross": "none",
         "mid_cross": "bull"
@@ -104,16 +104,16 @@
     {
       "ticker": "SOXX",
       "ai_score": 40,
-      "ai_state": "애매",
+      "ai_state": "회피",
       "ai_action": "보류",
-      "ai_note": "시장 대비 약세와 20일선 하회는 부담입니다. 20일선 회복 및 거래량 증가 시 매수 고려.",
-      "close": 565.9099731445312,
-      "change_pct": -5.634490307603135,
+      "ai_note": "시장 대비 약한 흐름과 20일선 하회. 50일선 지지 여부 확인하며 추세 전환 시점 포착 필요.",
+      "close": 567.74,
+      "change_pct": -5.329333259376002,
       "score": 34,
       "state": "회피",
       "action": "보류 / 관찰",
       "cross_highlights": [],
-      "volume_ratio_20d": 0.039983544467870835,
+      "volume_ratio_20d": 0.0,
       "signals": {
         "short_cross": "none",
         "mid_cross": "none"
@@ -124,14 +124,14 @@
       "ai_score": 5,
       "ai_state": "회피",
       "ai_action": "보류",
-      "ai_note": "시장 대비 약세와 주요 이평선 하회는 매우 부정적입니다. 추세 전환 신호 확인 전까지 관망 필수.",
-      "close": 6.315000057220459,
-      "change_pct": -3.2924984024495285,
+      "ai_note": "시장 대비 약한 흐름과 20, 50일선 하회, RSI 35로 약세. 추세 전환 신호 확인 전까지 관망.",
+      "close": 6.31,
+      "change_pct": -3.3690689546671093,
       "score": 0,
       "state": "회피",
       "action": "보류 / 관찰",
       "cross_highlights": [],
-      "volume_ratio_20d": 0.007115637415252679,
+      "volume_ratio_20d": 0.0,
       "signals": {
         "short_cross": "none",
         "mid_cross": "none"
@@ -142,16 +142,16 @@
       "ai_score": 10,
       "ai_state": "회피",
       "ai_action": "보류",
-      "ai_note": "중기 데드크로스 및 시장 대비 약세로 추가 하락 가능성이 높습니다. 추세 전환 신호 확인 전까지 절대 접근 금지.",
-      "close": 526.5999755859375,
-      "change_pct": -12.234801584120703,
+      "ai_note": "중기 데드크로스 발생 및 RSI 39로 하방 우세. 시장 대비 약한 흐름이므로 추세 전환 확인 전까지 관망.",
+      "close": 536.52,
+      "change_pct": -10.581491763849971,
       "score": 0,
       "state": "회피",
       "action": "보류 / 관찰",
       "cross_highlights": [
-        "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 38 (하방 우세)"
+        "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 39 (하방 우세)"
       ],
-      "volume_ratio_20d": 0.01238512086144754,
+      "volume_ratio_20d": 0.0,
       "signals": {
         "short_cross": "none",
         "mid_cross": "bear"
