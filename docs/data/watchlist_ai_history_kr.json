@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-07-02 19:02 ET",
-  "count": 180,
+  "updated_at_et": "2026-07-02 22:42 ET",
+  "count": 181,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -25155,6 +25155,172 @@
           "rsi14": 49.837133550488595,
           "signals": {
             "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-07-02 22:42 ET",
+      "market_data_as_of": "2026-07-03 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 15,
+          "ai_state": "하락 추세",
+          "ai_action": "매도",
+          "ai_note": "아이티센글로벌은 시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 위치합니다. 현재 RSI 지표도 낮아 추가 하락 가능성이 있습니다. 보유 중이라면 손절 또는 비중 축소를 고려해야 합니다.",
+          "close": 20750.0,
+          "change_pct": -3.488372093023251,
+          "score": 8,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.10706967870037842,
+          "rsi14": 13.344887348353552,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 15,
+          "ai_state": "하락 추세",
+          "ai_action": "매도",
+          "ai_note": "클로봇 역시 시장 대비 약한 흐름이며, 20일선과 50일선 아래에서 거래되고 있습니다. 낮은 RSI 지표는 매도 압력이 지속될 수 있음을 시사합니다. 보유 시 비중 축소를 권장합니다.",
+          "close": 27550.0,
+          "change_pct": -4.6712802768166135,
+          "score": 10,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.22537693677978993,
+          "rsi14": 28.118393234672297,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "삼성전자는 최근 단기 데드크로스가 발생했으며, 20일선 아래에 위치합니다. 거래량과 RSI 지표 모두 하방 우세를 나타내고 있어 당분간 관망하는 것이 좋습니다. 보유 중이라면 단기 반등 시 비중 축소를 고려할 수 있습니다.",
+          "close": 286500.0,
+          "change_pct": 0.17482517482516613,
+          "score": 22,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "삼성전자 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.3x (거래량 약함) / RSI 39 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.34933588907084206,
+          "rsi14": 38.60045146726862,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 45,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "SK하이닉스는 단기 데드크로스 발생 후 20일선 아래에서 거래되고 있으며, 시장 대비 약한 모습을 보입니다. RSI 지표도 하방 우세를 나타내므로 추가적인 하락 가능성을 염두에 두고 관망하는 것이 좋습니다. 보유 시에는 신중한 대응이 필요합니다.",
+          "close": 2056000.0,
+          "change_pct": -5.989940557841789,
+          "score": 40,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "SK하이닉스 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.5x (거래량 약함) / RSI 45 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.4576722766275028,
+          "rsi14": 44.871794871794876,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 20,
+          "ai_state": "하락 추세",
+          "ai_action": "매도",
+          "ai_note": "NAVER는 20일선과 50일선 아래에서 거래되고 있으며, 낮은 RSI 지표는 매도 압력이 강함을 시사합니다. 시장 전반의 약세 흐름 속에서 추가 하락 가능성이 있습니다. 보유 중이라면 매도 또는 비중 축소를 고려해야 합니다.",
+          "close": 192700.0,
+          "change_pct": -3.601800900450225,
+          "score": 23,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.17334801679063574,
+          "rsi14": 15.044247787610615,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 10,
+          "ai_state": "하락 추세",
+          "ai_action": "매도",
+          "ai_note": "현대차는 최근 중기 데드크로스가 발생했으며, 20일선 아래에서 거래되고 있습니다. 매우 낮은 RSI 지표는 과매도 구간임을 나타내지만, 시장 전반의 약세와 맞물려 추가 하락 가능성이 있습니다. 보유 시에는 손절을 고려하는 것이 좋습니다.",
+          "close": 461000.0,
+          "change_pct": -4.356846473029041,
+          "score": 8,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "현대차 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.3x (거래량 약함) / RSI 12 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.30061511921530926,
+          "rsi14": 11.728395061728392,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 30,
+          "ai_state": "관망",
+          "ai_action": "관망",
+          "ai_note": "한화에어로스페이스는 시장 대비 상대적으로 잘 버티고 있으나, 거래량이 약하고 50일선 아래에 위치합니다. 현재로서는 적극적인 매수보다는 관망하며 시장 흐름을 지켜보는 것이 좋습니다. 보유 중이라면 추세 전환 신호 확인 후 대응하는 것이 안전합니다.",
+          "close": 1113000.0,
+          "change_pct": -0.26881720430107503,
+          "score": 29,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.36962691276883797,
+          "rsi14": 52.593917710196784,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 25,
+          "ai_state": "관망",
+          "ai_action": "관망",
+          "ai_note": "LIG넥스원은 20일선과 50일선 아래에 위치하지만 시장 대비 강한 흐름을 보이고 있습니다. RSI 지표는 하방 우세를 나타내므로, 당분간 관망하며 20일선 돌파 여부를 확인하는 것이 좋습니다. 보유 중이라면 추세 전환 시까지 보유를 유지할 수 있습니다.",
+          "close": 755000.0,
+          "change_pct": -0.9186351706036766,
+          "score": 27,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.39908485689337114,
+          "rsi14": 41.906474820143885,
+          "signals": {
+            "short_cross": "none",
             "mid_cross": "none"
           }
         }
