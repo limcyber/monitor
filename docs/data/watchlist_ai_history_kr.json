@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-07-08 00:12 ET",
-  "count": 189,
+  "updated_at_et": "2026-07-08 03:26 ET",
+  "count": 190,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -26184,6 +26184,176 @@
           "cross_highlights": [],
           "volume_ratio_20d": 0.22767503583017498,
           "rsi14": 35.05434782608695,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-07-08 03:26 ET",
+      "market_data_as_of": "2026-07-08 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 15,
+          "ai_state": "하락세",
+          "ai_action": "관망",
+          "ai_note": "아이티센글로벌은 AI 및 웹3 스타트업 지원 소식이 있었으나, 현재 20일선 아래에 위치하며 약세를 보이고 있습니다. 보유 중이라면 단기 반등 시 분할 매도를 고려해 볼 수 있습니다.",
+          "close": 19810.0,
+          "change_pct": -6.776470588235295,
+          "score": 14,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.23221423870925817,
+          "rsi14": 19.034354688950785,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 10,
+          "ai_state": "하락세",
+          "ai_action": "회피",
+          "ai_note": "클로봇은 스마트 제조 자동화 계약 소식이 있었으나, 시장 대비 약한 흐름을 보이며 20일선 아래에 있습니다. M&A 관련 자금 조달 이슈도 있어 당분간 관망이 필요해 보입니다.",
+          "close": 24700.0,
+          "change_pct": -6.439393939393945,
+          "score": 11,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.36034486959161754,
+          "rsi14": 24.223920738556274,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 20,
+          "ai_state": "하락세",
+          "ai_action": "관망",
+          "ai_note": "삼성전자는 PCIe 6.0 eSSD 양산 소식에도 불구하고 단기 데드크로스가 발생하며 약세를 보이고 있습니다. 2분기 역대급 실적 발표에도 불구하고 주가는 하락했으며, AI 파운드리 경쟁력 확보가 중요해 보입니다. 보유 중이라면 20일선 회복 여부를 지켜보며 대응하는 것이 좋습니다.",
+          "close": 281500.0,
+          "change_pct": -4.898648648648651,
+          "score": 19,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "삼성전자 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.6x (거래량 약함) / RSI 35 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.6282911247441372,
+          "rsi14": 34.65909090909091,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 55,
+          "ai_state": "혼조세",
+          "ai_action": "관망",
+          "ai_note": "SK하이닉스는 채권 시장에서의 큰손 역할과 AI 메모리 전략 강화 소식이 있습니다. 다만 단기 데드크로스가 나왔으며, 미국 ADR 상장 관련 이슈도 있습니다. 시장 대비 강한 흐름을 보이고 있으나, 20일선 돌파 여부를 확인하며 신중하게 접근하는 것이 좋습니다.",
+          "close": 2186000.0,
+          "change_pct": -0.6815084052703368,
+          "score": 56,
+          "state": "애매",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "SK하이닉스 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.7x (거래량 약함) / RSI 39 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.6946706667136485,
+          "rsi14": 38.71551334237901,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 15,
+          "ai_state": "하락세",
+          "ai_action": "회피",
+          "ai_note": "NAVER는 AI 안전성 체계 2.0 발표 소식이 있었으나, 최근 중기 데드크로스가 발생하며 20일선과 50일선 아래에 위치하고 있습니다. 하반기 AI 팩토리 및 디지털 자산 관련 모멘텀을 기대해 볼 수 있으나, 현재는 약세 흐름이 지속되고 있습니다.",
+          "close": 192600.0,
+          "change_pct": -2.332657200811361,
+          "score": 16,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "NAVER 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.4x (거래량 약함) / RSI 18 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.3961278366968417,
+          "rsi14": 17.878787878787875,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 10,
+          "ai_state": "하락세",
+          "ai_action": "회피",
+          "ai_note": "현대차는 V2G 시범 서비스 본격화 소식이 있었으나, 최근 중기 데드크로스가 발생하며 20일선과 50일선 아래에 위치하고 있습니다. 전기차 시장 경쟁 심화 속에서 기술력 확보가 중요해 보입니다.",
+          "close": 463500.0,
+          "change_pct": -3.3368091762252305,
+          "score": 12,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "현대차 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.5x (거래량 약함) / RSI 21 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.48585467369462043,
+          "rsi14": 20.682302771855007,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 25,
+          "ai_state": "하락세",
+          "ai_action": "관망",
+          "ai_note": "한화에어로스페이스는 국산 무인기용 항공엔진 최초 공개 및 NATO 방위산업포럼 참가 소식이 있었으나, 현재 20일선과 50일선 아래에 위치하며 약세를 보이고 있습니다. 보유 중이라면 단기 반등 시 분할 매도를 고려해 볼 수 있습니다.",
+          "close": 1015000.0,
+          "change_pct": -9.536541889483063,
+          "score": 24,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.4x (거래량 약함) / RSI 36 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.41939027385782746,
+          "rsi14": 35.5,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 15,
+          "ai_state": "하락세",
+          "ai_action": "회피",
+          "ai_note": "LIG넥스원은 함대공유도탄-II 조립·점검장 준공 소식이 있었으나, 현재 20일선과 50일선 아래에 위치하며 약세를 보이고 있습니다. 이라크 수출 관련 이슈가 있으나, 현재로서는 관망이 필요합니다.",
+          "close": 711000.0,
+          "change_pct": -11.01376720901126,
+          "score": 14,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5795635946089346,
+          "rsi14": 29.930394431554518,
           "signals": {
             "short_cross": "none",
             "mid_cross": "none"
