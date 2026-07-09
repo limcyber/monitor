@@ -1,163 +1,7 @@
 {
-  "updated_at_et": "2026-07-09 08:19 ET",
+  "updated_at_et": "2026-07-09 11:40 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-06-20 06:45 ET",
-      "market_data_as_of": "2026-06-19 11:30 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 45,
-          "ai_state": "관찰",
-          "ai_action": "관찰",
-          "ai_note": "NVIDIA는 데이터센터 이더넷 스위칭 매출에서 시스코를 추월하며 네트워킹 분야에서 강세를 보이고 있습니다. 그러나 최근 실적 발표 이후 주가가 하락세를 보이고 있어 추가적인 하락 가능성을 염두에 두고 관찰하는 것이 좋습니다.",
-          "close": 210.2,
-          "change_pct": 2.711950290271159,
-          "score": 33,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 40,
-          "ai_state": "관찰",
-          "ai_action": "관찰",
-          "ai_note": "테슬라는 자율주행 기능에 음성 인터페이스를 추가할 계획이며, 사이버캡 출시도 임박했습니다. 하지만 유럽에서는 과속 문제로 자율주행 기술에 대한 규제 조사가 진행 중이며, 이는 잠재적 위험 요인이 될 수 있습니다.",
-          "close": 399.91,
-          "change_pct": 0.8905583212329704,
-          "score": 31,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 35,
-          "ai_state": "관찰",
-          "ai_action": "관찰",
-          "ai_note": "메타는 AI 인프라 확장에 집중하며 인도에 데이터센터 파트너십을 맺고 페이스북 크리에이터를 위한 새로운 AI 기능을 출시하고 있습니다. 그러나 핵심 AI 임원이 회사를 떠나고 AI 챗봇 보안 문제가 발생하며 투자자들의 우려를 사고 있습니다.",
-          "close": 577.0,
-          "change_pct": 1.6596748698897823,
-          "score": 20,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 75,
-          "ai_state": "매우 선별적 접근",
-          "ai_action": "매우 선별적 접근",
-          "ai_note": "AMD는 HPE와의 파트너십, 인스팅트 MI430X GPU 시리즈 출시 등 AI 및 데이터센터 기술에 대한 전략적 집중을 강화하고 있습니다. 최근 단기 골든크로스가 발생했으며, 시장보다 강한 흐름을 보이고 있어 긍정적입니다.",
-          "close": 537.31,
-          "change_pct": 4.845071120346733,
-          "score": 76,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [
-            "AMD 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 53 (중립)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 45,
-          "ai_state": "관찰",
-          "ai_action": "관찰",
-          "ai_note": "Tempus AI는 FDA 승인을 받은 종양 분석 플랫폼을 출시하고, AI 기반 심방세동 예측 모델을 검증하는 등 의료 AI 분야에서 성과를 내고 있습니다. 다만, 최근 실적 발표 이후 주가가 하락한 점은 부담 요인입니다.",
-          "close": 50.84,
-          "change_pct": 4.201678716960733,
-          "score": 47,
-          "state": "약함",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 70,
-          "ai_state": "매우 선별적 접근",
-          "ai_action": "매우 선별적 접근",
-          "ai_note": "SOXX는 AI 인프라 투자 붐 속에서 강세를 보이며 시장 대비 우수한 성과를 내고 있습니다. 20일선과 50일선 위에 위치하며 기술적으로도 양호한 흐름을 보여주고 있습니다.",
-          "close": 638.0,
-          "change_pct": 6.381208340016298,
-          "score": 74,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 25,
-          "ai_state": "관찰",
-          "ai_action": "관찰",
-          "ai_note": "Serve Robotics는 1,000대 이상의 자율주행 배달 로봇을 배치하며 미국 내 최대 규모의 보도 배달망을 구축했습니다. 그러나 최근 공매도 리포트가 발행되는 등 부정적인 이슈가 있어 주의가 필요합니다.",
-          "close": 6.99,
-          "change_pct": 4.4843040390672995,
-          "score": 11,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 55,
-          "ai_state": "애매",
-          "ai_action": "관찰",
-          "ai_note": "한국 시장의 AI 랠리가 지속되면서 KORU ETF도 주목받고 있으나, 최근 단기 골든크로스가 나왔음에도 거래량이 약한 점은 아쉬운 부분입니다. 시장 대비 강한 흐름을 보이고 있어 추가 상승 가능성은 있으나, 변동성에 유의해야 합니다.",
-          "close": 1090.74,
-          "change_pct": 19.28477371803814,
-          "score": 62,
-          "state": "애매",
-          "action": "관찰",
-          "cross_highlights": [
-            "KORU 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 50 (중립)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-06-20 08:24 ET",
       "market_data_as_of": "2026-06-19 11:30 ET (5분봉)",
@@ -16082,6 +15926,13 @@
           }
         }
       ]
+    },
+    {
+      "generated_at_et": "2026-07-09 11:40 ET",
+      "market_data_as_of": "2026-07-09 10:15 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
     }
   ]
 }
