@@ -1,163 +1,7 @@
 {
-  "updated_at_et": "2026-07-09 13:49 ET",
+  "updated_at_et": "2026-07-09 15:25 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-06-20 10:38 ET",
-      "market_data_as_of": "2026-06-19 11:30 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 40,
-          "ai_state": "관찰",
-          "ai_action": "관찰",
-          "ai_note": "최근 엔비디아는 AI 칩 시장에서의 경쟁 심화와 함께 새로운 AI 플랫폼 'Vera Rubin'의 생산이 시작되었다는 소식이 있습니다. 현재 주가는 20일선 아래에 있어 바로 진입하기보다는 시장 흐름을 지켜보는 것이 좋겠습니다.",
-          "close": 210.2,
-          "change_pct": 2.711950290271159,
-          "score": 33,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 35,
-          "ai_state": "관찰",
-          "ai_action": "관찰",
-          "ai_note": "테슬라는 미국과 유럽에서 FSD(Full Self-Driving)의 안전성 및 마케팅 관련 조사가 강화되고 있다는 뉴스가 있습니다. 이는 투자자 신뢰에 영향을 줄 수 있으므로, 규제 동향을 주시하며 관망하는 것이 좋겠습니다.",
-          "close": 399.91,
-          "change_pct": 0.8905583212329704,
-          "score": 31,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 30,
-          "ai_state": "관찰",
-          "ai_action": "관찰",
-          "ai_note": "메타는 AI 관련 투자와 함께 새로운 AI 도구 출시 소식이 있으나, 시장 대비 약한 흐름을 보이고 있습니다. 20일선과 50일선 아래에 있어 당분간은 관망하며 추세를 지켜보는 것이 좋겠습니다.",
-          "close": 577.0,
-          "change_pct": 1.6596748698897823,
-          "score": 20,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 75,
-          "ai_state": "매우 선별적 접근",
-          "ai_action": "소규모 매수",
-          "ai_note": "AMD는 TSMC의 2nm 공정 기반 차세대 EPYC CPU 생산 소식과 함께 영국 AI 혁신 투자 등 긍정적인 뉴스가 이어지고 있습니다. 최근 단기 골든크로스가 발생했으며, 시장 대비 강한 흐름을 보여 소규모 매수를 고려해볼 만합니다.",
-          "close": 537.31,
-          "change_pct": 4.845071120346733,
-          "score": 76,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [
-            "AMD 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 53 (중립)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 45,
-          "ai_state": "약함",
-          "ai_action": "관찰",
-          "ai_note": "Tempus AI는 AI 기반 심방세동 예측 모델 검증 및 디지털 병리 컨소시엄 출범 등 기술 개발 소식이 있습니다. 다만, 거래량이 아직 약하고 시장 대비 강한 흐름을 보이지 않아 조금 더 기다리는 것이 좋겠습니다.",
-          "close": 50.84,
-          "change_pct": 4.201678716960733,
-          "score": 47,
-          "state": "약함",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 70,
-          "ai_state": "매우 선별적 접근",
-          "ai_action": "소규모 매수",
-          "ai_note": "반도체 ETF인 SOXX는 AI 붐과 함께 강한 흐름을 보이고 있으며, 시장 대비 더 잘 버티는 모습을 보여줍니다. 20일선과 50일선 위에 있어 긍정적이며, 선별적으로 접근하기 좋은 시점입니다.",
-          "close": 638.0,
-          "change_pct": 6.381208340016298,
-          "score": 74,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 15,
-          "ai_state": "회피",
-          "ai_action": "관찰",
-          "ai_note": "Serve Robotics는 AI 기반 로봇 출시 및 사업 확장 소식이 있으나, 시장 대비 약한 흐름을 보이고 있습니다. 20일선과 50일선 아래에 있어 당분간은 관망하는 것이 좋겠습니다.",
-          "close": 6.99,
-          "change_pct": 4.4843040390672995,
-          "score": 11,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 60,
-          "ai_state": "애매",
-          "ai_action": "관찰",
-          "ai_note": "KORU Medical Systems는 1분기 실적 발표 및 학회 발표 등 소식이 있습니다. 최근 단기 골든크로스가 나왔으나, 급등 후 바로 따라 사기에는 부담이 될 수 있으므로 추세를 지켜보는 것이 좋겠습니다.",
-          "close": 1090.74,
-          "change_pct": 19.28477371803814,
-          "score": 62,
-          "state": "애매",
-          "action": "관찰",
-          "cross_highlights": [
-            "KORU 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 50 (중립)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-06-20 12:12 ET",
       "market_data_as_of": "2026-06-19 11:30 ET (5분봉)",
@@ -15781,6 +15625,13 @@
     {
       "generated_at_et": "2026-07-09 13:49 ET",
       "market_data_as_of": "2026-07-09 12:45 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
+    },
+    {
+      "generated_at_et": "2026-07-09 15:25 ET",
+      "market_data_as_of": "2026-07-09 14:30 ET (5분봉)",
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
