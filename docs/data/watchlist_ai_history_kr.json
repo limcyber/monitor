@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-07-08 19:03 ET",
-  "count": 191,
+  "updated_at_et": "2026-07-08 22:42 ET",
+  "count": 192,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -26524,6 +26524,174 @@
           "cross_highlights": [],
           "volume_ratio_20d": 0.5795635946089346,
           "rsi14": 29.930394431554518,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-07-08 22:42 ET",
+      "market_data_as_of": "2026-07-09 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 15,
+          "ai_state": "관망",
+          "ai_action": "보유 유지",
+          "ai_note": "아이티센글로벌은 웹3 사업 철수는 루머이며 3분기 금 토큰 공개로 증명하겠다는 뉴스가 있습니다. 현재 20일선 아래에 있어 추가 상승을 위해서는 돌파가 필요합니다.",
+          "close": 20400.0,
+          "change_pct": 4.028556858745547,
+          "score": 14,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.1025630811911392,
+          "rsi14": 23.76093294460641,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 10,
+          "ai_state": "관망",
+          "ai_action": "보유 유지",
+          "ai_note": "클로봇은 유상증자 발행가 하향 조정으로 규모가 축소되었으며, M&A 자금 조달에 어려움이 예상됩니다. 현재 20일선 아래에 있어 관망이 필요합니다.",
+          "close": 26200.0,
+          "change_pct": 6.938775510204076,
+          "score": 12,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.3481044976456271,
+          "rsi14": 32.41597873170761,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 20,
+          "ai_state": "관망",
+          "ai_action": "보유 유지",
+          "ai_note": "삼성전자는 AI 자율 제조 공장 전환에 속도를 내고 있으며, 하반기 어닝 서프라이즈 전망이 있습니다. 다만 현재 20일선 아래에 있어 추세를 지켜봐야 합니다.",
+          "close": 285500.0,
+          "change_pct": 2.8828828828828756,
+          "score": 16,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.2025226673456007,
+          "rsi14": 37.196261682242984,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 60,
+          "ai_state": "매수 고려",
+          "ai_action": "매수",
+          "ai_note": "SK하이닉스는 미국 나스닥 상장을 앞두고 있으며, AI 메모리 시장 리더십을 알리고 기업 가치를 제고할 것으로 기대됩니다. ADR 공모에 7배가 넘는 청약이 몰리며 높은 관심을 확인했습니다. 50일선 위에 있고 시장 대비 강한 흐름을 보입니다.",
+          "close": 2222000.0,
+          "change_pct": 7.032755298651261,
+          "score": 57,
+          "state": "애매",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "SK하이닉스 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.3x (거래량 약함) / RSI 39 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.25718170286065545,
+          "rsi14": 38.65159128978224,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 15,
+          "ai_state": "관망",
+          "ai_action": "보유 유지",
+          "ai_note": "네이버는 AI 안전성 체계를 업데이트하고 있으며, 데이터센터 구축 발표 후 주가 하락이 과도하다는 분석이 있습니다. 현재 20일선 아래에 있어 돌파 여부를 확인해야 합니다.",
+          "close": 191700.0,
+          "change_pct": -0.518941359626357,
+          "score": 16,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "NAVER 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.2x (거래량 약함) / RSI 19 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.1663950451057695,
+          "rsi14": 19.21824104234527,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 10,
+          "ai_state": "관망",
+          "ai_action": "보유 유지",
+          "ai_note": "현대차는 신형 그랜저에 차세대 하이브리드 시스템을 탑재하며 정숙성과 효율성을 높였습니다. 하지만 현재 20일선 아래에 있어 추가적인 상승 모멘텀이 필요합니다.",
+          "close": 452000.0,
+          "change_pct": -2.2702702702702693,
+          "score": 12,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "현대차 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.2x (거래량 약함) / RSI 16 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.2039600460309315,
+          "rsi14": 15.598290598290603,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 25,
+          "ai_state": "관망",
+          "ai_action": "보유 유지",
+          "ai_note": "한화에어로스페이스는 항공엔진 국산화를 위한 협력 생태계를 강화하고 있으며, NATO 방산포럼에 참가하는 등 유럽 시장 공략에 나서고 있습니다. 최근 단기 데드크로스가 나왔으나, 50일선 위에 있어 추이를 지켜볼 필요가 있습니다.",
+          "close": 992000.0,
+          "change_pct": -4.707012487992312,
+          "score": 19,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.2x (거래량 약함) / RSI 38 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.18989774521218952,
+          "rsi14": 38.309352517985616,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 15,
+          "ai_state": "관망",
+          "ai_action": "보유 유지",
+          "ai_note": "LIG넥스원은 함대공유도탄-II 조립·점검장 준공 소식이 있으며, KF-21/FA-50 항공 무장 개발 및 통합 MOU를 체결했습니다. 현재 20일선 아래에 있어 돌파 여부를 확인해야 합니다.",
+          "close": 696000.0,
+          "change_pct": -2.5210084033613467,
+          "score": 14,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.19784142100204674,
+          "rsi14": 31.159420289855078,
           "signals": {
             "short_cross": "none",
             "mid_cross": "none"
