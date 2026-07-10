@@ -1,163 +1,7 @@
 {
-  "updated_at_et": "2026-07-10 17:54 ET",
+  "updated_at_et": "2026-07-10 18:53 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-06-21 14:21 ET",
-      "market_data_as_of": "2026-06-19 11:30 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 45,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "NVIDIA는 로보택시 플랫폼 생태계를 확장하고 있으며, 여러 파트너와 협력하여 로보택시를 대규모로 출시할 계획입니다. 현재 20일선 아래에 있어 바로 매수하기보다는 추세를 지켜보는 것이 좋습니다.",
-          "close": 210.2,
-          "change_pct": 2.711950290271159,
-          "score": 33,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 40,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "Tesla는 2026년 1분기 생산 및 인도량 데이터를 발표했으며, 에너지 저장 장치 배포도 함께 공개했습니다. 20일선 아래에 위치해 있어 추가적인 상승 모멘텀을 확인하며 보유하는 전략이 유효합니다.",
-          "close": 399.91,
-          "change_pct": 0.8905583212329704,
-          "score": 31,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 30,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "Meta는 AI 안경을 포함한 다양한 AI 기술에 투자하고 있으며, 인도 데이터센터 파트너십도 발표했습니다. 현재 20일선 및 50일선 아래에 있어 시장 대비 약한 모습을 보이고 있으므로, 추세를 관망하며 보유하는 것이 좋습니다.",
-          "close": 577.0,
-          "change_pct": 1.6596748698897823,
-          "score": 20,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 78,
-          "ai_state": "매수 고려",
-          "ai_action": "분할 매수",
-          "ai_note": "AMD는 AI 및 데이터센터 기술에 집중하며 HPE와 협력하고, 새로운 GPU 시리즈를 출시하는 등 긍정적인 소식이 이어지고 있습니다. 최근 단기 골든크로스가 발생했으며, 시장 대비 강한 흐름을 보여 분할 매수를 고려할 만합니다.",
-          "close": 537.31,
-          "change_pct": 4.845071120346733,
-          "score": 76,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [
-            "AMD 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 53 (중립)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 48,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "Tempus AI는 심장 박동 예측 소프트웨어 검증 연구 결과를 발표하고, 디지털 병리 오픈소스 컨소시엄을 출범시키는 등 AI 의료 분야에서 활동을 이어가고 있습니다. 거래량이 아직 약하고 시장 대비 힘이 약한 모습이므로, 추가적인 거래량 증가와 함께 추세를 지켜보는 것이 좋습니다.",
-          "close": 50.84,
-          "change_pct": 4.201678716960733,
-          "score": 47,
-          "state": "약함",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 75,
-          "ai_state": "매수 고려",
-          "ai_action": "선별적 접근",
-          "ai_note": "반도체 ETF인 SOXX는 2026년 S&P 500을 능가하는 성과를 보이고 있으며, AI 붐으로 인한 수혜가 기대됩니다. 20일선과 50일선 위에 있어 긍정적이며, 시장 대비 강한 흐름을 보여 선별적으로 접근하는 것이 좋습니다.",
-          "close": 638.0,
-          "change_pct": 6.381208340016298,
-          "score": 74,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 25,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "Serve Robotics는 2026년 1분기 매출이 전년 대비 크게 성장했으며, 로봇 운영 대수도 증가했습니다. 하지만 시장 대비 약한 모습을 보이고 있으며 20일선과 50일선 아래에 있어, 추세를 확인하며 보유하는 것이 좋습니다.",
-          "close": 6.99,
-          "change_pct": 4.4843040390672995,
-          "score": 11,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 60,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "KORU는 최근 단기 골든크로스가 발생했으나, 최근 급등으로 인해 바로 추격 매수하기에는 부담이 있습니다. 시장 대비 강한 흐름을 보이고 있으므로, 조정 시 분할 매수를 고려하거나 현재 보유 중이라면 추세를 지켜보는 것이 좋습니다.",
-          "close": 1090.74,
-          "change_pct": 19.28477371803814,
-          "score": 62,
-          "state": "애매",
-          "action": "관찰",
-          "cross_highlights": [
-            "KORU 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 50 (중립)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-06-21 16:10 ET",
       "market_data_as_of": "2026-06-19 11:30 ET (5분봉)",
@@ -14606,6 +14450,13 @@
           }
         }
       ]
+    },
+    {
+      "generated_at_et": "2026-07-10 18:53 ET",
+      "market_data_as_of": "2026-07-10 15:15 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
     }
   ]
 }
