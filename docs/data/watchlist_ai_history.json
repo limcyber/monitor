@@ -1,163 +1,7 @@
 {
-  "updated_at_et": "2026-07-10 09:06 ET",
+  "updated_at_et": "2026-07-10 11:43 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-06-21 03:56 ET",
-      "market_data_as_of": "2026-06-19 11:30 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 40,
-          "ai_state": "관찰",
-          "ai_action": "관찰",
-          "ai_note": "최근 AI 칩 경쟁 심화 소식과 함께 채권 발행 소식이 있습니다. 20일선 아래에 있어 당분간 관망하는 것이 좋겠습니다.",
-          "close": 210.2,
-          "change_pct": 2.711950290271159,
-          "score": 33,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 35,
-          "ai_state": "관찰",
-          "ai_action": "관찰",
-          "ai_note": "유럽 및 미국 규제 당국의 FSD 안전 데이터 조사 소식이 있습니다. 20일선과 50일선 아래에 있어 추가 하락 가능성을 염두에 두고 관찰해야 합니다.",
-          "close": 399.91,
-          "change_pct": 0.8905583212329704,
-          "score": 31,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 25,
-          "ai_state": "관찰",
-          "ai_action": "관찰",
-          "ai_note": "AI 사업부 리더십 교체와 AI 투자 확대 소식이 있습니다. 20일선과 50일선 아래에 있어 시장 대비 약한 모습을 보이고 있어 추가적인 반등 신호를 기다리는 것이 좋습니다.",
-          "close": 577.0,
-          "change_pct": 1.6596748698897823,
-          "score": 20,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 75,
-          "ai_state": "매우 선별적 접근",
-          "ai_action": "소규모 매수",
-          "ai_note": "Rackspace와의 AI 컴퓨팅 계약 및 MEXT 인수 소식으로 긍정적인 흐름을 보이고 있습니다. 최근 단기 골든크로스가 나왔고 시장 대비 강한 모습을 보이므로 소규모로 접근해 볼 만합니다.",
-          "close": 537.31,
-          "change_pct": 4.845071120346733,
-          "score": 76,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [
-            "AMD 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 53 (중립)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 45,
-          "ai_state": "약함",
-          "ai_action": "관찰",
-          "ai_note": "심장 질환 예측 AI 모델 검증 및 디지털 병리 컨소시엄 출범 소식이 있습니다. 거래량이 아직 약하고 20일선 아래에 있어 조금 더 기다리는 것이 좋겠습니다.",
-          "close": 50.84,
-          "change_pct": 4.201678716960733,
-          "score": 47,
-          "state": "약함",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 70,
-          "ai_state": "양호",
-          "ai_action": "소규모 매수 / 보유",
-          "ai_note": "반도체 섹터 전반의 강세와 AI 인프라 투자 확대 소식이 긍정적입니다. 20일선과 50일선 위에 있어 시장 흐름에 맞춰 소규모 매수 또는 보유 관점을 유지하는 것이 좋습니다.",
-          "close": 638.0,
-          "change_pct": 6.381208340016298,
-          "score": 74,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 15,
-          "ai_state": "회피",
-          "ai_action": "관찰",
-          "ai_note": "로봇 사업 확장 및 분기별 매출 성장 소식이 있으나, 시장 대비 약한 모습을 보이고 있습니다. 20일선과 50일선 아래에 있어 당분간 관망하는 것이 좋겠습니다.",
-          "close": 6.99,
-          "change_pct": 4.4843040390672995,
-          "score": 11,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 60,
-          "ai_state": "애매",
-          "ai_action": "관찰",
-          "ai_note": "최근 단기 골든크로스가 나왔으나, 급등 후 부담스러운 가격대입니다. 시장보다 잘 버티고 50일선 위에 있지만, 추가 상승을 위해서는 숨 고르기가 필요해 보입니다.",
-          "close": 1090.74,
-          "change_pct": 19.28477371803814,
-          "score": 62,
-          "state": "애매",
-          "action": "관찰",
-          "cross_highlights": [
-            "KORU 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 50 (중립)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-06-21 07:12 ET",
       "market_data_as_of": "2026-06-19 11:30 ET (5분봉)",
@@ -14738,6 +14582,13 @@
     {
       "generated_at_et": "2026-07-10 09:06 ET",
       "market_data_as_of": "2026-07-09 14:30 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
+    },
+    {
+      "generated_at_et": "2026-07-10 11:43 ET",
+      "market_data_as_of": "2026-07-10 09:25 ET (5분봉)",
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
