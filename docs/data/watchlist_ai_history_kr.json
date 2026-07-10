@@ -1,6 +1,6 @@
 {
-  "updated_at_et": "2026-07-09 20:01 ET",
-  "count": 194,
+  "updated_at_et": "2026-07-10 00:48 ET",
+  "count": 195,
   "items": [
     {
       "generated_at_et": "2026-03-29 02:47 ET",
@@ -26867,6 +26867,174 @@
           "cross_highlights": [],
           "volume_ratio_20d": 0.6703266790545408,
           "rsi14": 30.424528301886795,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-07-10 00:48 ET",
+      "market_data_as_of": "2026-07-10 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 15,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "아이티센글로벌은 AI 및 웹3 사업 성장으로 역대급 실적을 기록했으나, 현재 20일선 아래에 있어 추가 상승을 기다리는 것이 좋습니다.",
+          "close": 21300.0,
+          "change_pct": 6.234413965087282,
+          "score": 14,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.12753235953996173,
+          "rsi14": 29.05168088309081,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 12,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "클로봇은 한국원자력환경공단에 융합로봇을 실증하는 사업에 선정되었으나, 시장 대비 약한 흐름을 보이고 있어 관망이 필요합니다.",
+          "close": 26450.0,
+          "change_pct": 5.168986083499005,
+          "score": 12,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.2062538943073915,
+          "rsi14": 34.01910443424451,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 20,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "삼성전자는 46조원 규모의 아산 프로젝트를 본격 가동하며 HBM 생산 기지 역할을 강화하지만, 현재 시장 대비 약한 흐름을 보이고 있어 관망이 필요합니다.",
+          "close": 286000.0,
+          "change_pct": 2.877697841726623,
+          "score": 18,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.16871684447817317,
+          "rsi14": 37.38317757009346,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 60,
+          "ai_state": "매수 고려",
+          "ai_action": "매수",
+          "ai_note": "SK하이닉스가 나스닥 상장을 통해 40조원의 투자 실탄을 확보하며 증설에 나설 예정입니다. 단기 데드크로스가 나왔으나 시장 대비 강한 흐름을 보이고 있어 매수를 고려할 수 있습니다.",
+          "close": 2203000.0,
+          "change_pct": 0.7776761207685334,
+          "score": 57,
+          "state": "애매",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "SK하이닉스 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.3x (거래량 약함) / RSI 34 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.2625743589876046,
+          "rsi14": 33.830171635049695,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 18,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "NAVER는 AI 수익화에 대한 기대감이 있으나, 중기 데드크로스가 발생하여 현재는 관망하며 추세를 지켜보는 것이 좋습니다.",
+          "close": 191900.0,
+          "change_pct": 4.067245119305851,
+          "score": 16,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "NAVER 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.2x (거래량 약함) / RSI 28 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.20426806857197496,
+          "rsi14": 28.093158660844253,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 15,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "현대차는 노사 갈등으로 파업 가능성이 있으며, 중기 데드크로스가 발생하여 현재는 관망하는 것이 좋습니다.",
+          "close": 460500.0,
+          "change_pct": 3.367003367003374,
+          "score": 12,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "현대차 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.2x (거래량 약함) / RSI 23 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.19924817372036666,
+          "rsi14": 23.042505592841152,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 15,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "한화에어로스페이스는 스페인 자주포 사업 현지화에 속도를 내고 있으나, 단기 데드크로스가 발생하여 현재는 관망하는 것이 좋습니다.",
+          "close": 955000.0,
+          "change_pct": 0.20986358866736943,
+          "score": 13,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.2x (거래량 약함) / RSI 36 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.16376636540501316,
+          "rsi14": 35.690235690235696,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 20,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "LIG넥스원은 이라크 천궁-II 수출 관련 계약 파기설을 부인하며 정상 진행을 강조하고 있으나, 20일선 아래에 있어 관망이 필요합니다.",
+          "close": 720000.0,
+          "change_pct": 3.746397694524495,
+          "score": 17,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.13671618552933504,
+          "rsi14": 35.38812785388127,
           "signals": {
             "short_cross": "none",
             "mid_cross": "none"
