@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-07-11 18:11 ET",
+  "updated_at_et": "2026-07-11 19:22 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-06-23 17:11 ET",
-      "market_data_as_of": "2026-06-23 14:25 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-06-23 18:43 ET",
       "market_data_as_of": "2026-06-23 14:25 ET (5분봉)",
@@ -14648,6 +14641,166 @@
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-07-11 19:22 ET",
+      "market_data_as_of": "2026-07-10 15:15 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 75,
+          "ai_state": "강세",
+          "ai_action": "매수",
+          "ai_note": "NVIDIA CEO Jensen Huang은 AI의 가장 큰 영향이 생명 과학에 있을 것이라고 말했습니다. 최근 유럽에 35개의 새로운 NVIDIA AI 슈퍼컴퓨터가 개발 중이라는 소식이 있습니다. 보유 중이라면 AI 슈퍼컴퓨터 개발 및 생명 과학 분야에서의 잠재적 성장을 기대하며 보유를 유지하는 것이 좋습니다.",
+          "close": 209.9949951171875,
+          "change_pct": 3.5580414149934736,
+          "score": 52,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.005813828639560298,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 65,
+          "ai_state": "중립",
+          "ai_action": "관찰",
+          "ai_note": "Tesla는 2분기 인도량에서 예상치를 상회하는 480,126대를 보고했습니다. 또한, 운전대 없는 사이버캡 로보택시를 테스트 중이라는 소식이 있습니다. 하지만 AI에 대한 우려로 인해 일부 분석가들은 'Market Perform' 등급을 부여했습니다. 보유 중이라면 로보택시 및 AI 관련 뉴스에 주목하며 추세를 관찰하는 것이 좋겠습니다.",
+          "close": 409.6549987792969,
+          "change_pct": 0.7637464222257861,
+          "score": 52,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.004130758179369723,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 70,
+          "ai_state": "강세",
+          "ai_action": "소규모 매수",
+          "ai_note": "Meta는 AI 인프라스트럭처 지출에 대한 우려에도 불구하고 최근 10일간 약 22% 상승했습니다. 특히, 자체 AI 칩인 Iris의 생산 마일스톤 달성 및 강력한 모델인 Muse Spark 1.1 출시 소식이 긍정적으로 작용했습니다. 보유 중이라면 AI 비용 구조 개선 및 모델 경쟁력 강화 소식을 바탕으로 추가 상승을 기대해 볼 수 있습니다.",
+          "close": 669.4899291992188,
+          "change_pct": 6.019185074125999,
+          "score": 59,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [
+            "META 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 69 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.00953373174735465,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 80,
+          "ai_state": "강세",
+          "ai_action": "매수",
+          "ai_note": "AMD는 1분기 매출이 전년 대비 38% 증가했으며, 데이터센터 매출은 57% 성장했습니다. Meta와의 파트너십을 통해 6기가와트 규모의 Instinct GPU를 공급할 예정입니다. 다만, 일부 분석가는 현재 주가가 AI 스토리를 충분히 반영하고 있다고 보며 'Market Perform' 등급을 제시하기도 했습니다. 보유 중이라면 AI 및 데이터센터 부문의 지속적인 성장을 기대하며 보유를 유지하되, 단기적인 가격 변동성에 유",
+          "close": 552.8300170898438,
+          "change_pct": 1.1175824396648215,
+          "score": 69,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0037643540079290417,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 40,
+          "ai_state": "약세",
+          "ai_action": "관찰",
+          "ai_note": "Tempus AI는 7월 30일에 2분기 실적 발표를 앞두고 있습니다. 2분기 예상 매출은 약 3억 8천만 달러로 전년 동기 대비 20.6% 증가할 것으로 예상됩니다. 그러나 CEO의 배우자가 약 191만 달러 상당의 주식을 매도했다는 소식이 있습니다. 보유 중이라면 실적 발표와 내부자 거래 동향을 주시하며 신중하게 접근하는 것이 좋겠습니다.",
+          "close": 57.900001525878906,
+          "change_pct": -5.853656055481449,
+          "score": 78,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [
+            "TEM 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 62 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.002401477629233461,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 45,
+          "ai_state": "약세",
+          "ai_action": "관찰",
+          "ai_note": "반도체 섹터 ETF인 SOXX는 최근 변동성이 커지고 있습니다. 특히, 일부 분석가는 Nvidia, Micron, AMD에 대한 공매도 포지션을 취하고 있다는 소식이 있습니다. 보유 중이라면 반도체 섹터 전반의 흐름과 개별 종목 뉴스를 함께 살피며 대응하는 것이 좋겠습니다.",
+          "close": 580.25,
+          "change_pct": -0.24927147612215927,
+          "score": 48,
+          "state": "약함",
+          "action": "관찰",
+          "cross_highlights": [
+            "SOXX 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 41 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.004148117599410531,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 20,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "Serve Robotics는 1분기 매출이 전년 동기 대비 578% 증가하며 성장세를 보이고 있습니다. 또한, 세탁물 배달 서비스로 사업 영역을 확장하고 있습니다. 하지만 주가는 YTD 37% 하락했으며, 일부에서는 AI 기회에 대한 의문을 제기하고 있습니다. 보유 중이라면 사업 확장 소식과 주가 하락세를 함께 고려하여 신중한 대응이 필요합니다.",
+          "close": 5.974999904632568,
+          "change_pct": -1.0761598945526751,
+          "score": 14,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0002836626936321103,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 15,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "한국 증시 ETF인 KORU는 최근 SK하이닉스의 미국 상장 이슈로 주목받고 있습니다. 하지만 레버리지 ETF이므로 단기적인 변동성에 유의해야 합니다. 보유 중이라면 SK하이닉스 상장 관련 뉴스와 한국 증시 전반의 흐름을 주시하며 단기적인 관점에서 접근하는 것이 좋겠습니다.",
+          "close": 559.4099731445312,
+          "change_pct": -1.8423962546339157,
+          "score": 9,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 26 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.002392377163574414,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        }
+      ]
     }
   ]
 }
