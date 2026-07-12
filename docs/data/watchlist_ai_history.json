@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-07-12 09:01 ET",
+  "updated_at_et": "2026-07-12 10:39 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-06-24 13:28 ET",
-      "market_data_as_of": "2026-06-24 11:55 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-06-24 15:10 ET",
       "market_data_as_of": "2026-06-24 13:50 ET (5분봉)",
@@ -14966,6 +14959,166 @@
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-07-12 10:39 ET",
+      "market_data_as_of": "2026-07-10 15:15 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 75,
+          "ai_state": "강세",
+          "ai_action": "매수",
+          "ai_note": "NVIDIA는 AI 생태계의 허브로서 장기적인 성장 기회가 많습니다. 최근 주가 하락은 매수 기회로 볼 수 있습니다.",
+          "close": 209.9949951171875,
+          "change_pct": 3.5580414149934736,
+          "score": 52,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.005813828639560298,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 55,
+          "ai_state": "혼조세",
+          "ai_action": "관망",
+          "ai_note": "2분기 인도량은 증가했으나 주가는 하락했습니다. 경쟁 심화와 시장 포화 우려가 있습니다.",
+          "close": 409.6549987792969,
+          "change_pct": 0.7637464222257861,
+          "score": 52,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.004130758179369723,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 65,
+          "ai_state": "강세",
+          "ai_action": "소규모 매수",
+          "ai_note": "클라우드 사업 진출 계획은 긍정적 신호입니다. AI 전략 변화에 대한 유연성을 보여주며, 주가 상승 여력이 있습니다.",
+          "close": 669.4899291992188,
+          "change_pct": 6.019185074125999,
+          "score": 59,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [
+            "META 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 69 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.00953373174735465,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 70,
+          "ai_state": "강세",
+          "ai_action": "매수",
+          "ai_note": "AI 및 데이터센터 부문 성장이 견조하며, 목표 주가 상향 조정이 이어지고 있습니다. 다만, 현재 주가 수준은 합리적이라는 분석도 있습니다.",
+          "close": 552.8300170898438,
+          "change_pct": 1.1175824396648215,
+          "score": 69,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0037643540079290417,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 45,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "최근 CEO 관련 주식 매도 소식이 있었습니다. 2분기 실적 발표를 앞두고 관망하는 것이 좋겠습니다.",
+          "close": 57.900001525878906,
+          "change_pct": -5.853656055481449,
+          "score": 78,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [
+            "TEM 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 62 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.002401477629233461,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 50,
+          "ai_state": "혼조세",
+          "ai_action": "관망",
+          "ai_note": "반도체 섹터 전반의 변동성이 커지고 있습니다. 마이클 버리의 엔비디아, 마이크론, AMD 공매도 포지션은 주의가 필요합니다.",
+          "close": 580.25,
+          "change_pct": -0.24927147612215927,
+          "score": 48,
+          "state": "약함",
+          "action": "관찰",
+          "cross_highlights": [
+            "SOXX 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 41 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.004148117599410531,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "관찰",
+          "ai_note": "매출 성장은 긍정적이나, 주가 하락세가 지속되고 있습니다. 새로운 사업 확장 소식은 있으나 아직 주가에 큰 영향을 주지 못하고 있습니다.",
+          "close": 5.974999904632568,
+          "change_pct": -1.0761598945526751,
+          "score": 14,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0002836626936321103,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 10,
+          "ai_state": "매우 약세",
+          "ai_action": "회피",
+          "ai_note": "레버리지 ETF 특성상 급격한 하락을 경험했습니다. 메모리 반도체 업황 둔화 우려가 지속되고 있어 당분간 관망이 필요합니다.",
+          "close": 559.4099731445312,
+          "change_pct": -1.8423962546339157,
+          "score": 9,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 26 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.002392377163574414,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        }
+      ]
     }
   ]
 }
