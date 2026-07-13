@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-07-12 20:59 ET",
+  "updated_at_et": "2026-07-13 00:33 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-06-25 14:30 ET",
-      "market_data_as_of": "2026-06-25 13:05 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-06-25 16:32 ET",
       "market_data_as_of": "2026-06-25 15:15 ET (5분봉)",
@@ -15565,6 +15558,166 @@
           "ai_state": "매우 약세",
           "ai_action": "관망",
           "ai_note": "최근 중기 데드크로스가 발생했고 시장 대비 매우 약한 흐름을 보입니다. RSI 26으로 과매도 구간이며 20일선 아래에 있어 회피해야 합니다.",
+          "close": 559.4099731445312,
+          "change_pct": -1.8423962546339157,
+          "score": 9,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 26 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.002392377163574414,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-07-13 00:33 ET",
+      "market_data_as_of": "2026-07-10 15:15 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 55,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "시장 대비 강한 흐름을 보이며 50일선과 20일선 위에 안착했습니다. 단기 골든크로스 신호는 없으나, 추세 유지 시 추가 상승 기대됩니다.",
+          "close": 209.9949951171875,
+          "change_pct": 3.5580414149934736,
+          "score": 52,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.005813828639560298,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 55,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "시장 대비 강한 흐름을 보이며 50일선과 20일선 위에 있습니다. RSI가 52로 중립 구간에 있어 추가적인 방향성 확인이 필요합니다.",
+          "close": 409.6549987792969,
+          "change_pct": 0.7637464222257861,
+          "score": 52,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.004130758179369723,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 65,
+          "ai_state": "매수 고려",
+          "ai_action": "소량 매수",
+          "ai_note": "최근 단기 골든크로스가 발생했고 RSI가 69로 상승 추세입니다. 시장 대비 강한 흐름을 보이며 50일선 위에 있어 긍정적입니다.",
+          "close": 669.4899291992188,
+          "change_pct": 6.019185074125999,
+          "score": 59,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [
+            "META 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 69 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.00953373174735465,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 70,
+          "ai_state": "매수 고려",
+          "ai_action": "선별적 접근",
+          "ai_note": "시장 대비 강한 흐름을 보이며 50일선과 20일선 위에 있습니다. RSI가 52로 추가 상승 여력이 있습니다.",
+          "close": 552.8300170898438,
+          "change_pct": 1.1175824396648215,
+          "score": 69,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0037643540079290417,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 80,
+          "ai_state": "매수",
+          "ai_action": "매수",
+          "ai_note": "최근 중기 골든크로스가 발생했고 RSI가 62로 상승 추세입니다. 시장 대비 강한 흐름과 50일선 지지를 바탕으로 추가 상승이 기대됩니다.",
+          "close": 57.900001525878906,
+          "change_pct": -5.853656055481449,
+          "score": 78,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [
+            "TEM 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 62 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.002401477629233461,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 45,
+          "ai_state": "약세 관망",
+          "ai_action": "관망",
+          "ai_note": "최근 단기 데드크로스가 발생했고 RSI가 41로 하락 추세입니다. 시장 대비 약한 흐름을 보이며 20일선 아래에 있어 당분간 관망이 필요합니다.",
+          "close": 580.25,
+          "change_pct": -0.24927147612215927,
+          "score": 48,
+          "state": "약함",
+          "action": "관찰",
+          "cross_highlights": [
+            "SOXX 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 41 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.004148117599410531,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 15,
+          "ai_state": "회피",
+          "ai_action": "관망",
+          "ai_note": "시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 있습니다. RSI가 32로 과매도 구간에 진입했으나, 추세 반전 신호가 없어 관망이 필요합니다.",
+          "close": 5.974999904632568,
+          "change_pct": -1.0761598945526751,
+          "score": 14,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0002836626936321103,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 10,
+          "ai_state": "회피",
+          "ai_action": "관망",
+          "ai_note": "최근 중기 데드크로스가 발생했고 RSI가 26으로 과매도 구간입니다. 시장 대비 약한 흐름을 보이며 20일선 아래에 있어 당분간 매수를 피하는 것이 좋습니다.",
           "close": 559.4099731445312,
           "change_pct": -1.8423962546339157,
           "score": 9,
