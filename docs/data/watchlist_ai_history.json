@@ -1,167 +1,7 @@
 {
-  "updated_at_et": "2026-07-14 10:43 ET",
+  "updated_at_et": "2026-07-14 12:08 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-06-27 08:49 ET",
-      "market_data_as_of": "2026-06-26 15:15 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 25,
-          "ai_state": "하락세",
-          "ai_action": "관망",
-          "ai_note": "AI 칩 경쟁 심화와 밸류에이션 부담으로 주가가 하락 중입니다. 단기적으로는 변동성이 클 수 있으니 추세를 지켜보는 것이 좋습니다.",
-          "close": 194.50999450683594,
-          "change_pct": -0.6283901868854747,
-          "score": 16,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "NVDA 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 40 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 40,
-          "ai_state": "횡보",
-          "ai_action": "관망",
-          "ai_note": "로보택시 관련 기대감과 실물 인도 데이터에 대한 우려가 혼재하며 주가가 뚜렷한 방향 없이 움직이고 있습니다.",
-          "close": 380.80999755859375,
-          "change_pct": 1.5168486125696212,
-          "score": 16,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "TSLA 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 46 (중립)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 45,
-          "ai_state": "약보합",
-          "ai_action": "관망",
-          "ai_note": "AI 투자 확대에 대한 우려와 긍정적인 사용자 참여 지표가 혼재하며 주가가 등락을 반복하고 있습니다.",
-          "close": 550.2000122070312,
-          "change_pct": 1.3502343389343974,
-          "score": 18,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 70,
-          "ai_state": "상승세",
-          "ai_action": "선별적 매수",
-          "ai_note": "AI 및 데이터센터 시장에서의 경쟁력 강화와 긍정적인 애널리스트 평가에 힘입어 주가가 상승세를 보이고 있습니다.",
-          "close": 521.2302856445312,
-          "change_pct": -2.129245267990487,
-          "score": 74,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 65,
-          "ai_state": "상승세",
-          "ai_action": "매수 고려",
-          "ai_note": "희귀암 연구 협력 및 AI 기반 의료 솔루션 개발 소식이 주가에 긍정적인 영향을 미치고 있습니다.",
-          "close": 55.66999816894531,
-          "change_pct": 1.457990254480701,
-          "score": 60,
-          "state": "애매",
-          "action": "관찰",
-          "cross_highlights": [
-            "TEM 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 68 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 60,
-          "ai_state": "혼조세",
-          "ai_action": "관망",
-          "ai_note": "반도체 섹터 전반의 변동성이 커지고 있으며, 개별 기업의 실적 발표에 따라 ETF 흐름도 영향을 받고 있습니다.",
-          "close": 595.3300170898438,
-          "change_pct": -4.777670270949419,
-          "score": 69,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 35,
-          "ai_state": "하락세",
-          "ai_action": "관망",
-          "ai_note": "자율주행 배송 로봇 사업 확장 소식에도 불구하고, 경쟁 심화 및 수익성 개선에 대한 우려로 주가가 약세를 보이고 있습니다.",
-          "close": 5.882400035858154,
-          "change_pct": -0.29830608855576646,
-          "score": 11,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 15,
-          "ai_state": "급락 후 반등 시도",
-          "ai_action": "관망",
-          "ai_note": "최근 급락 이후 반등을 시도하고 있으나, 메모리 반도체 업황에 대한 불확실성이 남아있어 신중한 접근이 필요합니다.",
-          "close": 752.5501098632812,
-          "change_pct": -9.231798057260953,
-          "score": 19,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "KORU 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 55 (중립)"
-          ],
-          "volume_ratio_20d": 0.0013496915447276123,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-06-27 10:23 ET",
       "market_data_as_of": "2026-06-26 15:15 ET (5분봉)",
@@ -16189,6 +16029,13 @@
     {
       "generated_at_et": "2026-07-14 10:43 ET",
       "market_data_as_of": "2026-07-14 08:52 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
+    },
+    {
+      "generated_at_et": "2026-07-14 12:08 ET",
+      "market_data_as_of": "2026-07-14 12:05 ET (5분봉)",
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
