@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-07-13 22:10 ET",
+  "updated_at_et": "2026-07-14 01:26 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-03-29 02:47 ET",
-      "market_data_as_of": "2026-03-27 15:30 KST (Close)",
-      "status": "disabled",
-      "error": "GOOGLE_API_KEY가 없어 한국 종목 AI 분석을 건너뛰었습니다.",
-      "items": []
-    },
     {
       "generated_at_et": "2026-03-29 02:48 ET",
       "market_data_as_of": "2026-03-27 15:30 KST (Close)",
@@ -27394,6 +27387,170 @@
       "status": "error",
       "error": "한국 종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-07-14 01:26 ET",
+      "market_data_as_of": "2026-07-14 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "보유/관망",
+          "ai_note": "아이티센글로벌은 최근 3분기 매출 및 영업이익 사상 최대치를 기록했으나, 시장 전반의 약세 흐름과 20일, 50일 이평선 하향 돌파로 인해 당분간 관망이 필요해 보입니다.",
+          "close": 19130.0,
+          "change_pct": -3.8210155857214656,
+          "score": 14,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.2544150095998291,
+          "rsi14": 33.469387755102034,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 15,
+          "ai_state": "약세",
+          "ai_action": "보유/관망",
+          "ai_note": "클로봇은 로봇 소프트웨어 분야에서 주목받고 있으나, 최근 로봇주 전반의 약세와 함께 주가 하락이 나타나고 있습니다. 단기적으로는 시장 흐름을 지켜보는 것이 좋겠습니다.",
+          "close": 23100.0,
+          "change_pct": -5.714285714285716,
+          "score": 12,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.43702596275115113,
+          "rsi14": 23.973900180932674,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 40,
+          "ai_state": "혼조세",
+          "ai_action": "보유/관망",
+          "ai_note": "삼성전자는 2분기 글로벌 스마트폰 시장 1위 탈환 소식이 있었으나, 임원 성과급 지급을 위한 자사주 처분과 메모리 가격 상승으로 인한 부담이 혼재되어 있습니다. 20일, 50일 이평선 하향 돌파는 단기적 부담 요인입니다.",
+          "close": 257500.0,
+          "change_pct": 1.1787819253438192,
+          "score": 14,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.8119855492368606,
+          "rsi14": 31.637168141592923,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "보유/관망",
+          "ai_note": "SK하이닉스는 미국 ADR 상장 흥행에도 불구하고 국내 주가는 급락했습니다. 반도체 고점론과 수급 부담이 작용하고 있으며, 당분간 변동성이 클 수 있어 관망이 필요합니다.",
+          "close": 1759000.0,
+          "change_pct": -4.66124661246613,
+          "score": 14,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.042315005534029,
+          "rsi14": 30.355515041020965,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 35,
+          "ai_state": "약세",
+          "ai_action": "보유/관망",
+          "ai_note": "NAVER는 AI 인프라 투자 확대 소식에도 불구하고, 이익률 둔화 전망과 중기 데드크로스 발생으로 약세를 보이고 있습니다. 목표가 상향 조정 리포트도 있으나, 추세 전환을 확인하며 접근하는 것이 좋겠습니다.",
+          "close": 184100.0,
+          "change_pct": -2.0744680851063846,
+          "score": 16,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "NAVER 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.6x (거래량 약함) / RSI 35 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.5776670652489603,
+          "rsi14": 35.483870967741936,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "보유/관망",
+          "ai_note": "현대차는 노조 파업으로 인한 생산 차질 우려와 함께 주가가 하락했습니다. 하반기 신차 출시를 앞두고 있으나, 파업 장기화 시 실적에 부정적인 영향을 줄 수 있어 주의가 필요합니다.",
+          "close": 415000.0,
+          "change_pct": -6.531531531531531,
+          "score": 14,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.8119880899902353,
+          "rsi14": 25.392670157068054,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "보유/관망",
+          "ai_note": "한화에어로스페이스는 중동 지역 지정학적 리스크 부각과 함께 주가가 5% 이상 하락하며 90만원 선이 붕괴되었습니다. 단기적으로는 위험 회피 심리가 작용할 수 있어 관망이 필요합니다.",
+          "close": 884000.0,
+          "change_pct": -5.555555555555558,
+          "score": 13,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.6x (거래량 약함) / RSI 33 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.6150978248752684,
+          "rsi14": 32.95454545454545,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "보유/관망",
+          "ai_note": "LIG넥스원은 최근 사명 변경과 함께 사업 영역 확장을 발표했으나, 방산주 전반의 약세 흐름과 20일, 50일 이평선 하향 돌파로 인해 당분간 약세를 보일 수 있습니다.",
+          "close": 664000.0,
+          "change_pct": -8.413793103448274,
+          "score": 14,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.6680986451726731,
+          "rsi14": 33.93574297188755,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
     }
   ]
 }
