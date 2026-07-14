@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-07-14 05:22 ET",
+  "updated_at_et": "2026-07-14 07:03 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-06-27 02:26 ET",
-      "market_data_as_of": "2026-06-26 15:15 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-06-27 05:10 ET",
       "market_data_as_of": "2026-06-26 15:15 ET (5분봉)",
@@ -15871,6 +15864,166 @@
           "ai_state": "회피",
           "ai_action": "보유",
           "ai_note": "한국 증시 ETF인 KORU는 최근 중기 데드크로스가 발생했으며, 거래량은 확인되었으나 RSI는 과매도 구간에 있습니다. 시장 대비 약한 모습을 보이고 있어 당분간 회피하는 것이 좋습니다.",
+          "close": 419.19000244140625,
+          "change_pct": -24.741471734038377,
+          "score": 10,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 1.5x (거래량 확인) / RSI 23 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 1.4700379630817568,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-07-14 07:03 ET",
+      "market_data_as_of": "2026-07-13 16:00 ET (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 30,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "단기 골든크로스에도 불구하고 거래량 약세와 50일선 하회로 인해 추가 상승은 제한적일 수 있습니다. 보유 중이라면 50일선 재돌파 시까지 관망하는 것이 좋습니다.",
+          "close": 203.52999877929688,
+          "change_pct": -3.521998340020871,
+          "score": 22,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "NVDA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.8x (거래량 약함) / RSI 45 (중립)"
+          ],
+          "volume_ratio_20d": 0.7830768306628035,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 25,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "시장 대비 약한 흐름과 20일선, 50일선 하회로 인해 당분간 반등이 어렵습니다. 보유 중이라면 20일선 회복 전까지는 신중한 대응이 필요합니다.",
+          "close": 394.760009765625,
+          "change_pct": -3.188149815738972,
+          "score": 20,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.7086478866258237,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 60,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "시장 대비 강한 흐름과 20일선, 50일선 상회는 긍정적이나, 뚜렷한 상승 신호는 부족합니다. 보유 중이라면 50일선 지지 여부를 확인하며 보유를 이어갈 수 있습니다.",
+          "close": 656.72998046875,
+          "change_pct": -1.8648916026568707,
+          "score": 57,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.886468137144453,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 70,
+          "ai_state": "매수 고려",
+          "ai_action": "소량 매수",
+          "ai_note": "시장 대비 강한 흐름과 20일선, 50일선 상회는 긍정적입니다. 다만 RSI가 중립 구간에 있어 급등보다는 완만한 상승을 기대하며 소량 접근을 고려할 수 있습니다.",
+          "close": 534.3900146484375,
+          "change_pct": -4.212299805152253,
+          "score": 68,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.7528807776106853,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 75,
+          "ai_state": "매수 고려",
+          "ai_action": "소량 매수",
+          "ai_note": "최근 중기 골든크로스와 시장 대비 강한 흐름이 긍정적입니다. RSI도 상방 우세를 보이고 있어 추가 상승 가능성이 있습니다. 소량 매수로 접근하며 50일선 이탈 시 손절을 고려할 수 있습니다.",
+          "close": 55.93000030517578,
+          "change_pct": -3.949852747967608,
+          "score": 75,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [
+            "TEM 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.7x (거래량 약함) / RSI 64 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.6503425483276655,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 20,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "최근 단기 데드크로스와 시장 대비 약한 흐름, 낮은 RSI는 하락 압력을 시사합니다. 당분간 관망하며 추세 전환 신호를 기다리는 것이 좋습니다.",
+          "close": 553.6099853515625,
+          "change_pct": -4.77002102433941,
+          "score": 20,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "SOXX 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.8x (거래량 약함) / RSI 35 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.8033863625316687,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 15,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "시장 대비 약한 흐름과 20일선, 50일선 하회, 낮은 RSI는 부정적인 신호입니다. 당분간 관망하며 추세 반전을 기다려야 합니다.",
+          "close": 5.789999961853027,
+          "change_pct": -2.1959478507692975,
+          "score": 13,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.6331881949869056,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 10,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "최근 중기 데드크로스와 시장 대비 약한 흐름, 과매도 구간 진입은 큰 하락 위험을 시사합니다. 당분간 절대 접근하지 말고 추세 전환을 기다려야 합니다.",
           "close": 419.19000244140625,
           "change_pct": -24.741471734038377,
           "score": 10,
