@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-07-14 16:35 ET",
+  "updated_at_et": "2026-07-14 17:51 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-06-27 14:42 ET",
-      "market_data_as_of": "2026-06-26 15:15 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-06-27 16:04 ET",
       "market_data_as_of": "2026-06-26 15:15 ET (5분봉)",
@@ -16037,6 +16030,164 @@
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-07-14 17:51 ET",
+      "market_data_as_of": "2026-07-14 15:55 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 65,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "AI 칩 시장의 선두 주자로서 강력한 수요를 계속 보고 있지만, 구글의 자체 칩 개발과 같은 경쟁 심화 뉴스가 있습니다. 현재 보유 중이라면 단기 변동성에 대비하며 장기적인 AI 성장 추세를 믿고 보유하는 것을 고려할 수 있습니다.",
+          "close": 211.88999938964844,
+          "change_pct": 4.107502903990556,
+          "score": 39,
+          "state": "약함",
+          "action": "관찰",
+          "cross_highlights": [
+            "NVDA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 61 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.014150833245917692,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 30,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "캘리포니아의 EV 보조금 확대와 테슬라 세미 트럭 관련 긍정적 뉴스도 있지만, 전반적인 시장 추세와 단기 데드크로스 신호가 우려됩니다. 현재 보유 중이라면 손절선을 명확히 설정하고 시장 상황을 주시하는 것이 좋습니다.",
+          "close": 396.2449951171875,
+          "change_pct": 0.37617421086906244,
+          "score": 19,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "TSLA 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 54 (중립)"
+          ],
+          "volume_ratio_20d": 0.005836392710005061,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 60,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "AI 인프라 확장에 대한 긍정적 전망과 함께, AI 기반 채용 시스템 관련 소송 등 부정적인 헤드라인이 혼재합니다. 현재 보유 중이라면 AI 투자 성과와 법적 리스크 사이의 균형을 주시하며 보유를 유지하되, 소송 결과에 따라 대응 전략을 세우는 것이 좋습니다.",
+          "close": 660.97998046875,
+          "change_pct": 0.6471457260054603,
+          "score": 57,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.01322129121001843,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 70,
+          "ai_state": "양호",
+          "ai_action": "선별적 매수",
+          "ai_note": "AI 인프라 수요 증가와 서버 시장에서의 강력한 성장이 긍정적이나, 밸류에이션 부담과 일부 투자자들의 차익 실현 움직임이 관찰됩니다. 현재 보유 중이라면 단기적인 시장 조정에 흔들리지 않고 장기적인 성장 스토리에 집중하는 것이 좋습니다.",
+          "close": 548.1799926757812,
+          "change_pct": 2.5805081774246563,
+          "score": 66,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.006407912615255259,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 75,
+          "ai_state": "양호",
+          "ai_action": "선별적 매수",
+          "ai_note": "정밀 의학 분야에서 AI 플랫폼을 확장하며 긍정적인 소식이 있으나, CEO 관련 주식 매도 뉴스가 부담으로 작용할 수 있습니다. 현재 보유 중이라면 회사의 기술력과 시장 확장성을 믿고 보유하되, 경영진의 움직임을 예의주시하는 것이 좋습니다.",
+          "close": 58.709999084472656,
+          "change_pct": 4.970496628156851,
+          "score": 74,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.01712322624540979,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 45,
+          "ai_state": "관망",
+          "ai_action": "관찰",
+          "ai_note": "반도체 섹터 전반의 변동성이 높은 가운데, AI 수요와 밸류에이션 부담이 공존합니다. 현재 보유 중이라면 섹터 내 개별 종목의 강도 차이를 확인하며, 과대평가된 종목은 경계하는 것이 좋습니다.",
+          "close": 568.405029296875,
+          "change_pct": 2.6724669599153206,
+          "score": 39,
+          "state": "약함",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.02231834472334233,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 20,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "배달 로봇 사업 확장과 도어대시와의 파트너십 등 긍정적인 뉴스가 있으나, 아직 수익성 확보와 성장성에 대한 의문이 남아있습니다. 현재 보유 중이라면 흑자 전환 시점과 로봇 활용률 증가 추이를 면밀히 관찰하며 대응해야 합니다.",
+          "close": 5.835000038146973,
+          "change_pct": 0.7772033953441282,
+          "score": 13,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.006282448358185844,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 15,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "SK하이닉스의 HBM4 생산 및 엔비디아 공급 관련 뉴스로 급등했지만, 레버리지 ETF의 특성상 변동성이 매우 큽니다. 현재 보유 중이라면 단기 급등 후 급락 가능성에 대비하여 익절 또는 손절 원칙을 철저히 지키는 것이 중요합니다.",
+          "close": 482.7900085449219,
+          "change_pct": 15.172119023140485,
+          "score": 9,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 38 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.01514501316420966,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        }
+      ]
     }
   ]
 }
