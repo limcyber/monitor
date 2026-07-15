@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-07-15 16:10 ET",
+  "updated_at_et": "2026-07-15 17:28 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-06-28 17:35 ET",
-      "market_data_as_of": "2026-06-26 15:15 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-06-28 18:56 ET",
       "market_data_as_of": "2026-06-26 15:15 ET (5분봉)",
@@ -16459,6 +16452,164 @@
           "ai_state": "매우 약세",
           "ai_action": "회피",
           "ai_note": "최근 중기 데드크로스가 발생했으며, 시장 대비 매우 약한 흐름을 보이고 있습니다. 거래량 약세와 낮은 RSI는 부정적인 신호입니다.",
+          "close": 21.440000534057617,
+          "change_pct": -95.54576791931349,
+          "score": 9,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 23 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-07-15 17:28 ET",
+      "market_data_as_of": "2026-07-15 15:10 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 65,
+          "ai_state": "관찰",
+          "ai_action": "보유",
+          "ai_note": "최근 중국향 H200 칩 선적 소식이 있었으나, 거래량이 약한 단기 골든크로스가 발생했습니다. 시장 대비 강한 흐름을 보이고 있어 보유하며 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 211.625,
+          "change_pct": -0.08262655771305027,
+          "score": 49,
+          "state": "약함",
+          "action": "관찰",
+          "cross_highlights": [
+            "NVDA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 62 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.010431601976202848,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 30,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "단기 골든크로스가 나왔으나 시장 대비 약한 흐름을 보이고 있습니다. 20일선과 50일선 아래에 종가가 위치해 있어 추가 하락 가능성을 염두에 두고 관망하는 것이 좋겠습니다.",
+          "close": 395.20001220703125,
+          "change_pct": -0.24735738474102043,
+          "score": 19,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "TSLA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 56 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.00403329072148581,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 60,
+          "ai_state": "관찰",
+          "ai_action": "보유",
+          "ai_note": "AI 인프라 투자 확대 및 자체 칩 개발 소식이 긍정적이나, AI 기반 해고 관련 소송 이슈가 있습니다. 시장 대비 강한 흐름을 보이고 있어 보유하며 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 677.739990234375,
+          "change_pct": 2.5263240896362893,
+          "score": 57,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.004261863928150776,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 65,
+          "ai_state": "관찰",
+          "ai_action": "보유",
+          "ai_note": "AI 서버 수요 증가와 차세대 EPYC 프로세서 생산 소식이 긍정적입니다. 시장 대비 강한 흐름을 보이고 있어 보유하며 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 526.5700073242188,
+          "change_pct": -3.933372989351891,
+          "score": 51,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0052884169359133735,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 70,
+          "ai_state": "양호",
+          "ai_action": "매우 선별적 접근",
+          "ai_note": "AI 기반 신약 개발 협력 및 AI 모델 검증 소식이 있습니다. 시장 대비 강한 흐름을 보이고 있어 관심 있게 지켜볼 만합니다.",
+          "close": 56.939998626708984,
+          "change_pct": -2.9486954086049955,
+          "score": 70,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0011232105772416732,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 25,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "반도체 섹터 전반의 약세와 지정학적 리스크 우려가 있습니다. 20일선과 50일선 아래에 종가가 위치해 있어 당분간 관망하는 것이 좋겠습니다.",
+          "close": 552.1099853515625,
+          "change_pct": -2.7838424486456015,
+          "score": 22,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 20,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "로봇 사업 확장 및 분기별 매출 성장이 있으나, 시장 대비 약한 흐름을 보이고 있습니다. 20일선과 50일선 아래에 종가가 위치해 있어 당분간 관망하는 것이 좋겠습니다.",
+          "close": 5.729700088500977,
+          "change_pct": -1.5515477748624051,
+          "score": 14,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0011118977287965489,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 15,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "SK하이닉스의 NVIDIA향 HBM4 출하 소식으로 단기 급등했으나, 변동성이 매우 큰 종목입니다. 최근 중기 데드크로스가 나왔고 RSI가 과매도 구간에 있어 주의가 필요합니다.",
           "close": 21.440000534057617,
           "change_pct": -95.54576791931349,
           "score": 9,
