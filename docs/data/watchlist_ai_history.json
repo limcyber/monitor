@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-07-16 16:03 ET",
+  "updated_at_et": "2026-07-16 17:30 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-06-30 08:29 ET",
-      "market_data_as_of": "2026-06-29 14:34 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-06-30 11:11 ET",
       "market_data_as_of": "2026-06-30 09:20 ET (5분봉)",
@@ -16303,6 +16296,166 @@
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-07-16 17:30 ET",
+      "market_data_as_of": "2026-07-16 15:50 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 45,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "엔비디아는 일본 기업들과 AI 개발 협력을 강화하고 있으나, 최근 주가 하락과 함께 거래량이 약한 모습을 보이고 있습니다. 50일선 아래에 위치하여 추가 하락 가능성을 염두에 두고 관망하는 것이 좋습니다.",
+          "close": 206.2449951171875,
+          "change_pct": -2.943531709558822,
+          "score": 22,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "NVDA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 59 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 30,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "테슬라는 헤드라이트 리콜 이슈와 함께 주가 하락세를 보이고 있으며, 시장 대비 약한 흐름을 이어가고 있습니다. 20일선 아래에 위치하여 당분간 관망하며 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 390.5480041503906,
+          "change_pct": -0.9917323402703127,
+          "score": 21,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "TSLA 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 55 (중립)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 60,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "메타는 AI 이미지 기능 관련 논란이 있었으나, 나스닥 상승과 함께 주가는 견조한 흐름을 보이고 있습니다. 50일선 위에 위치하며 시장 대비 강한 모습을 보이고 있어 보유하며 추세를 지켜볼 만합니다.",
+          "close": 662.58251953125,
+          "change_pct": -2.7487455188463072,
+          "score": 57,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 40,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "AMD는 AI 가속기 시장에서 경쟁력을 강화하고 있으나, 최근 단기 데드크로스가 발생하며 주가 하락 압력을 받고 있습니다. 20일선 아래에 위치하여 당분간 관망하며 추가적인 지지선 확인이 필요합니다.",
+          "close": 497.80010986328125,
+          "change_pct": -5.922799999538608,
+          "score": 33,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "AMD 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 45 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 55,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "Tempus AI는 2분기 실적 발표를 앞두고 있으며, CEO 관련 주식 매도 소식이 있었습니다. 50일선 위에 위치하나 거래량이 약하고 시장 대비 약한 흐름을 보여 당분간 관망하는 것이 좋습니다.",
+          "close": 53.319801330566406,
+          "change_pct": -6.864975841805398,
+          "score": 64,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 25,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "반도체 ETF인 SOXX는 최근 시장 대비 약한 흐름을 보이고 있으며, 20일선과 50일선 아래에 위치하고 있습니다. RSI 지표도 낮아 당분간 관망하며 시장 반등 시점을 기다리는 것이 좋습니다.",
+          "close": 526.5499877929688,
+          "change_pct": -5.172264074787658,
+          "score": 21,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 20,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "Serve Robotics는 1분기 매출이 크게 성장했으나, 시장 대비 약한 흐름을 보이고 있으며 20일선과 50일선 아래에 위치합니다. RSI 지표도 낮아 당분간 관망하며 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 5.255000114440918,
+          "change_pct": -8.608693661897082,
+          "score": 11,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 15,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "KORU는 최근 중기 데드크로스가 발생했으며, RSI 지표가 과매도 구간에 진입했습니다. 시장 대비 매우 약한 흐름을 보이고 있어 당분간 관찰하며 회피하는 것이 좋겠습니다.",
+          "close": 18.184999465942383,
+          "change_pct": -16.849571247753936,
+          "score": 9,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 24 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        }
+      ]
     }
   ]
 }
