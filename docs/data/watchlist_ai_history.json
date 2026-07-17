@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-07-17 18:11 ET",
+  "updated_at_et": "2026-07-17 19:13 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-07-02 00:37 ET",
-      "market_data_as_of": "2026-07-01 14:15 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-07-02 04:08 ET",
       "market_data_as_of": "2026-07-01 14:15 ET (5분봉)",
@@ -16906,6 +16899,166 @@
           "ai_state": "매도",
           "ai_action": "매도",
           "ai_note": "KORU ETF, SK하이닉스 HBM4 생산 및 엔비디아 공급 소식에 급등했으나, 전반적인 시장 약세와 함께 변동성이 큽니다. 시장 대비 약한 흐름과 20일선 아래 종가로 인해 매도 관점에서 접근하는 것이 좋겠습니다.",
+          "close": 18.670000076293945,
+          "change_pct": 0.10724106258854782,
+          "score": 11,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0048285885753675695,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-07-17 19:13 ET",
+      "market_data_as_of": "2026-07-17 15:45 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 65,
+          "ai_state": "관망",
+          "ai_action": "보유 중 분할 매도 고려",
+          "ai_note": "최근 일본 기업들과 AI 공장 건설 협력을 발표했으나, 반도체 섹터 전반의 약세와 함께 주가도 하락세를 보이고 있습니다. 보유 중이라면 단기 고점 인식 후 분할 매도를 고려해볼 수 있습니다.",
+          "close": 203.35499572753906,
+          "change_pct": -1.9503366865884386,
+          "score": 22,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0074678156719474795,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "비중 축소",
+          "ai_note": "로보택시 사업 확장 소식에도 불구하고, 전반적인 시장 약세와 함께 주가 흐름이 좋지 않습니다. 단기 데드크로스 신호도 관찰되어 비중 축소를 권고합니다.",
+          "close": 381.84991455078125,
+          "change_pct": -2.3551585601471636,
+          "score": 18,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "TSLA 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 51 (중립)"
+          ],
+          "volume_ratio_20d": 0.004073375751700182,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 75,
+          "ai_state": "중립/관망",
+          "ai_action": "소량 분할 매수 고려",
+          "ai_note": "AI 인프라 구축을 위해 막대한 자본을 투자 중이며, 앤트로픽과의 데이터센터 파워 임대 협상 소식이 긍정적입니다. 다만, 시장 전반의 약세와 경쟁 심화 가능성을 고려하여 소량 분할 매수를 고려하는 것이 좋습니다.",
+          "close": 643.7750244140625,
+          "change_pct": -3.1247109729833022,
+          "score": 83,
+          "state": "강함",
+          "action": "아주 소규모 / 대기",
+          "cross_highlights": [
+            "META 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 67 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.010701195476401724,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 55,
+          "ai_state": "관망",
+          "ai_action": "보유 중 분할 매도 고려",
+          "ai_note": "AI 관련 기술 발표를 앞두고 있으나, 최근 내부자 매도 물량이 나오고 있으며 주가도 약세를 보이고 있습니다. 신규 진입보다는 보유 중이라면 분할 매도를 고려하는 것이 현명해 보입니다.",
+          "close": 497.8450012207031,
+          "change_pct": -0.6178387043596412,
+          "score": 20,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "AMD 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 46 (중립)"
+          ],
+          "volume_ratio_20d": 0.008913270253057295,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 40,
+          "ai_state": "약세",
+          "ai_action": "비중 축소",
+          "ai_note": "의료 AI 분야에서 긍정적인 연구 협력 소식이 있으나, 주가는 약세를 면치 못하고 있습니다. 단기 데드크로스 신호와 함께 시장 전반의 약세가 부담으로 작용하여 비중 축소를 권고합니다.",
+          "close": 52.584999084472656,
+          "change_pct": -1.8753518664931468,
+          "score": 62,
+          "state": "애매",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "TEM 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 44 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.007166250603202472,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "비중 축소",
+          "ai_note": "반도체 섹터 전반의 약세로 인해 베어마켓에 진입했으며, 주요 기술주들의 주가 하락이 두드러집니다. 당분간 관망하며 시장 흐름을 지켜보는 것이 좋습니다.",
+          "close": 523.8900146484375,
+          "change_pct": -1.2459915837064073,
+          "score": 20,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.03227369521810134,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "비중 축소",
+          "ai_note": "로봇 배송 사업에서 긍정적인 매출 성장세를 보이고 있으나, 높은 공매도 비율과 시장 전반의 약세가 주가에 부담을 주고 있습니다. 비중 축소를 권고합니다.",
+          "close": 5.130000114440918,
+          "change_pct": -2.6565439656981216,
+          "score": 11,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.00480616350598991,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 35,
+          "ai_state": "약세",
+          "ai_action": "비중 축소",
+          "ai_note": "한국 증시의 반등과 함께 단기적으로 상승했으나, 레버리지 ETF 특성상 변동성이 크고 시장 전반의 불확실성이 남아있습니다. 비중 축소 후 관망하는 것이 좋습니다.",
           "close": 18.670000076293945,
           "change_pct": 0.10724106258854782,
           "score": 11,
