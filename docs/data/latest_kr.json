@@ -1,5 +1,5 @@
 {
-  "generated_at_et": "2026-07-17 00:26 ET",
+  "generated_at_et": "2026-07-17 02:39 ET",
   "market_data_as_of": "2026-07-16 15:30 KST (Close)",
   "market": {
     "state": "레벨 1/6 - 방어 우선",
@@ -51,13 +51,13 @@
       "kospi200_change_pct": 2.3048020814766312,
       "semicon_close": 132230.0,
       "semicon_change_pct": -9.493497604380563,
-      "brent_close": 85.06999969482422,
-      "brent_change_pct": 0.9972649939607114,
-      "usdkrw_close": 1480.5799560546875,
-      "usdkrw_change_pct": -0.3781452901243987,
+      "brent_close": 84.25,
+      "brent_change_pct": 0.023740522699111644,
+      "usdkrw_close": 1480.1300048828125,
+      "usdkrw_change_pct": -0.4084205684622977,
       "vix_close": 16.729999542236328,
       "vix_change_pct": 6.7645147465313915,
-      "usdkrw_20d_zscore": -1.8668850572491822,
+      "usdkrw_20d_zscore": -1.882310493454605,
       "vix_percentile": 44.84126984126984,
       "kospi_rsi14": 30.35328360090297,
       "kosdaq_rsi14": 42.970174058536145,
@@ -66,9 +66,9 @@
       "kosdaq_kospi_ratio_change_20d": 0.0872696020227659
     },
     "change_tags": [
-      "점수 -16",
-      "레벨 변화: 레벨 2/6 - 약화 / 주의 -> 레벨 1/6 - 방어 우선",
-      "원달러 일간 -0.38%"
+      "점수 0",
+      "레벨 변화 없음",
+      "원달러 일간 -0.41%"
     ],
     "position_tags": [
       "총 노출 0~5%",
@@ -1213,7 +1213,7 @@
       "market_label": "KOSDAQ",
       "display_label": "아이티센글로벌 (124500.KQ)",
       "change_tags": [
-        "점수 -2"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -2261,7 +2261,7 @@
       "market_label": "KOSDAQ",
       "display_label": "클로봇 (466100.KQ)",
       "change_tags": [
-        "점수 -4"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -3309,7 +3309,7 @@
       "market_label": "KOSPI",
       "display_label": "삼성전자 (005930.KS)",
       "change_tags": [
-        "점수 -4"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -4359,7 +4359,7 @@
       "market_label": "KOSPI",
       "display_label": "SK하이닉스 (000660.KS)",
       "change_tags": [
-        "점수 -3"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -5411,7 +5411,7 @@
       "market_label": "KOSPI",
       "display_label": "NAVER (035420.KS)",
       "change_tags": [
-        "점수 +9"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -6458,7 +6458,7 @@
       "market_label": "KOSPI",
       "display_label": "현대차 (005380.KS)",
       "change_tags": [
-        "점수 -2"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -7507,7 +7507,7 @@
       "market_label": "KOSPI",
       "display_label": "한화에어로스페이스 (012450.KS)",
       "change_tags": [
-        "점수 +5"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -9094,7 +9094,7 @@
         84.7300033569336,
         84.94999694824219,
         84.2300033569336,
-        85.06999969482422
+        84.25
       ],
       "usdkrw_close": [
         1485.800048828125,
@@ -9159,7 +9159,7 @@
         1497.699951171875,
         1487.8800048828125,
         1486.199951171875,
-        1480.5799560546875
+        1480.1300048828125
       ],
       "vix_close": [
         17.479999542236328,
@@ -9294,25 +9294,8 @@
     }
   },
   "notifications": {
-    "count": 2,
-    "items": [
-      {
-        "id": "kr-market-cross-dead-KOSPI 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.9x (거래량 보통) / RSI 30 (하방 우세)-2026-07-17",
-        "priority": "high",
-        "kind": "kr_market_dead_cross",
-        "scope": "market",
-        "title": "KOSPI 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.9x (거래량 보통) / RSI 30 (하방 우세)",
-        "message": "KOSPI 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.9x (거래량 보통) / RSI 30 (하방 우세). 신규 매수보다 대기나 방어 쪽이 낫습니다."
-      },
-      {
-        "id": "kr-market-level-하락-2026-07-17",
-        "priority": "high",
-        "kind": "kr_market_level_change",
-        "scope": "market",
-        "title": "한국 시장 레벨 하락",
-        "message": "레벨 2/6 -> 1/6. 지금은 '신규 진입 자제 / 방어' 기준으로 보는 편이 좋습니다."
-      }
-    ]
+    "count": 0,
+    "items": []
   },
   "history": {
     "market": [
