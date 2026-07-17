@@ -1,5 +1,5 @@
 {
-  "generated_at_et": "2026-07-16 19:40 ET",
+  "generated_at_et": "2026-07-16 21:11 ET",
   "market_data_as_of": "2026-07-15 15:30 KST (Close)",
   "market": {
     "state": "레벨 2/6 - 약화 / 주의",
@@ -49,13 +49,13 @@
       "kospi200_change_pct": 2.3048020814766312,
       "semicon_close": 132230.0,
       "semicon_change_pct": -9.493497604380563,
-      "brent_close": 84.94000244140625,
-      "brent_change_pct": -0.01176516444376663,
-      "usdkrw_close": 1479.010009765625,
-      "usdkrw_change_pct": -0.48378022086332795,
+      "brent_close": 85.0199966430664,
+      "brent_change_pct": 0.08240105631418526,
+      "usdkrw_close": 1477.300048828125,
+      "usdkrw_change_pct": -0.5988361348506555,
       "vix_close": 16.729999542236328,
       "vix_change_pct": 6.7645147465313915,
-      "usdkrw_20d_zscore": -1.9203312082302713,
+      "usdkrw_20d_zscore": -1.9773453133208794,
       "vix_percentile": 44.84126984126984,
       "kospi_rsi14": 29.94436417440285,
       "kosdaq_rsi14": 43.087197042976406,
@@ -64,9 +64,9 @@
       "kosdaq_kospi_ratio_change_20d": 0.031083565040765926
     },
     "change_tags": [
-      "점수 +16",
-      "레벨 변화: 레벨 1/6 - 방어 우선 -> 레벨 2/6 - 약화 / 주의",
-      "원달러 일간 -0.48%"
+      "점수 0",
+      "레벨 변화 없음",
+      "원달러 일간 -0.60%"
     ],
     "position_tags": [
       "총 노출 0~15%",
@@ -1209,7 +1209,7 @@
       "market_label": "KOSDAQ",
       "display_label": "아이티센글로벌 (124500.KQ)",
       "change_tags": [
-        "점수 +2"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -2257,7 +2257,7 @@
       "market_label": "KOSDAQ",
       "display_label": "클로봇 (466100.KQ)",
       "change_tags": [
-        "점수 +4"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -3304,7 +3304,7 @@
       "market_label": "KOSPI",
       "display_label": "삼성전자 (005930.KS)",
       "change_tags": [
-        "점수 +4"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -4354,7 +4354,7 @@
       "market_label": "KOSPI",
       "display_label": "SK하이닉스 (000660.KS)",
       "change_tags": [
-        "점수 +3"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -5405,7 +5405,7 @@
       "market_label": "KOSPI",
       "display_label": "NAVER (035420.KS)",
       "change_tags": [
-        "점수 -9"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -6453,7 +6453,7 @@
       "market_label": "KOSPI",
       "display_label": "현대차 (005380.KS)",
       "change_tags": [
-        "점수 +2"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -7500,7 +7500,7 @@
       "market_label": "KOSPI",
       "display_label": "한화에어로스페이스 (012450.KS)",
       "change_tags": [
-        "점수 -5"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 0~2%",
@@ -9088,7 +9088,7 @@
         83.30000305175781,
         84.7300033569336,
         84.94999694824219,
-        84.94000244140625
+        85.0199966430664
       ],
       "usdkrw_close": [
         1485.800048828125,
@@ -9153,7 +9153,7 @@
         1497.699951171875,
         1487.8800048828125,
         1486.199951171875,
-        1479.010009765625
+        1477.300048828125
       ],
       "vix_close": [
         17.479999542236328,
@@ -9288,26 +9288,8 @@
     }
   },
   "notifications": {
-    "count": 2,
-    "items": [
-      {
-        "id": "kr-stock-dead-cross-035420.KS-2026-07-16",
-        "priority": "medium",
-        "kind": "kr_stock_dead_cross",
-        "scope": "stock",
-        "title": "NAVER 데드크로스",
-        "message": "NAVER 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.7x (거래량 약함) / RSI 44 (하방 우세). 매수보다 대기나 비중 조절 쪽이 낫습니다.",
-        "ticker": "035420.KS"
-      },
-      {
-        "id": "kr-market-level-회복-2026-07-16",
-        "priority": "medium",
-        "kind": "kr_market_level_change",
-        "scope": "market",
-        "title": "한국 시장 레벨 회복",
-        "message": "레벨 1/6 -> 2/6. 지금은 '비중 축소' 기준으로 보는 편이 좋습니다."
-      }
-    ]
+    "count": 0,
+    "items": []
   },
   "history": {
     "market": [
