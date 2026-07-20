@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-07-20 17:39 ET",
+  "updated_at_et": "2026-07-20 18:51 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-07-05 15:48 ET",
-      "market_data_as_of": "2026-07-03 11:30 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-07-05 16:50 ET",
       "market_data_as_of": "2026-07-03 11:30 ET (5분봉)",
@@ -18122,6 +18115,166 @@
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-07-20 18:51 ET",
+      "market_data_as_of": "2026-07-20 16:00 ET (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 75,
+          "ai_state": "강세",
+          "ai_action": "매수",
+          "ai_note": "일본 정부 및 산업 리더들과 함께 세계 최초의 국가 AI 인프라를 구축한다는 소식이 있습니다. AI 분야의 선두 주자로서 지속적인 성장이 기대됩니다.",
+          "close": 203.27999877929688,
+          "change_pct": 0.23174460152899368,
+          "score": 22,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.6107300357249142,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "2017-2023년 모델 Y 및 모델 3 차량의 잠재적 문제 해결을 위한 리콜에 대한 NHTSA의 지적이 있었습니다. 2분기 실적 발표를 앞두고 있어 주시할 필요가 있습니다.",
+          "close": 369.57000732421875,
+          "change_pct": -2.9592451218471427,
+          "score": 15,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "TSLA 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.8x (거래량 약함) / RSI 36 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.8092266323796216,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 85,
+          "ai_state": "강세",
+          "ai_action": "매수",
+          "ai_note": "Meta가 자체 클라우드 부문을 이끌기 위해 전 AWS 엔지니어를 고용하고 Anthropic과 최대 100억 달러 규모의 컴퓨팅 리스 계약을 추진 중이라는 소식이 있습니다. AI 인프라 투자를 수익화할 잠재력이 큽니다.",
+          "close": 645.8499755859375,
+          "change_pct": -0.02477270897792705,
+          "score": 83,
+          "state": "강함",
+          "action": "아주 소규모 / 대기",
+          "cross_highlights": [
+            "META 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.5x (거래량 약함) / RSI 66 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.47410936796534714,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 65,
+          "ai_state": "중립",
+          "ai_action": "보유",
+          "ai_note": "Microsoft Azure가 AMD의 Helios 시스템을 대규모로 배포하여 AI 추론을 지원한다는 소식이 있습니다. 이는 향후 성장에 긍정적이나, 실제 매출로 이어지기까지는 시간이 걸릴 수 있습니다.",
+          "close": 503.57000732421875,
+          "change_pct": 1.5753585212098908,
+          "score": 35,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "AMD 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.8x (거래량 약함) / RSI 44 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.8058672416957329,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "매도",
+          "ai_note": "Personalis 인수를 발표했으나, 주가는 하락세를 보이고 있습니다. 3분기 실적 발표를 앞두고 있어 추가적인 하락 가능성을 염두에 두어야 합니다.",
+          "close": 48.40999984741211,
+          "change_pct": -7.737757344836993,
+          "score": 38,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "TEM 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 1.7x (거래량 강함) / RSI 35 (하방 우세)"
+          ],
+          "volume_ratio_20d": 1.742027408945521,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "매도",
+          "ai_note": "반도체 섹터 전반의 약세와 함께 SOXX ETF도 약세를 보이고 있습니다. 특히 Micron의 실적 부진이 영향을 미치고 있으며, 당분간 회복이 어려워 보입니다.",
+          "close": 524.1400146484375,
+          "change_pct": 0.44652595786689453,
+          "score": 17,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.59958799653952,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 15,
+          "ai_state": "약세",
+          "ai_action": "매도",
+          "ai_note": "자율주행 배달 로봇 사업을 영위하고 있으나, 현재 시장 상황과 경쟁 심화로 인해 주가 부진이 이어지고 있습니다. 단기적인 반등 가능성은 낮아 보입니다.",
+          "close": 5.190000057220459,
+          "change_pct": 1.964634609720517,
+          "score": 11,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.652635290046053,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 10,
+          "ai_state": "매우 약세",
+          "ai_action": "매도",
+          "ai_note": "한국 증시 관련 ETF로, 최근 한국 규제 당국의 고위험 ETF 규제 소식과 함께 큰 폭의 하락세를 보였습니다. 추가 하락 가능성이 높습니다.",
+          "close": 18.40999984741211,
+          "change_pct": 0.8214655895404599,
+          "score": 11,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.7123761964610471,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
     }
   ]
 }
