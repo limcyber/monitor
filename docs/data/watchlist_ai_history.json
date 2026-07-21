@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-07-21 17:58 ET",
+  "updated_at_et": "2026-07-21 18:56 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-07-06 20:12 ET",
-      "market_data_as_of": "2026-07-06 16:00 ET (Close)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-07-07 00:30 ET",
       "market_data_as_of": "2026-07-06 16:00 ET (Close)",
@@ -17959,6 +17952,166 @@
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-07-21 18:56 ET",
+      "market_data_as_of": "2026-07-21 15:40 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 65,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "AI 시장의 선두 주자로서 여전히 강력한 위치를 유지하고 있으나, 경쟁 심화와 시장의 높은 기대치로 인해 단기적인 변동성에 유의해야 합니다. 보유 중이라면 현재 추세를 유지하며 다음 실적 발표를 기다리는 것이 좋습니다.",
+          "close": 207.02499389648438,
+          "change_pct": 1.8422841104271503,
+          "score": 30,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.005637561590550018,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 35,
+          "ai_state": "약세",
+          "ai_action": "비중 축소",
+          "ai_note": "2분기 실적 발표를 앞두고 있으며, 시장은 EPS 증가를 예상하지만 성장 둔화 우려도 존재합니다. 단기 데드크로스 신호와 함께 거래량이 약한 점을 고려할 때, 비중 축소가 현명한 선택일 수 있습니다.",
+          "close": 377.95001220703125,
+          "change_pct": 2.267501343922862,
+          "score": 19,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "TSLA 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 36 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.004622513582678505,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 85,
+          "ai_state": "강세",
+          "ai_action": "매수",
+          "ai_note": "최근 중기 골든크로스 발생과 시장 대비 강한 흐름을 보이고 있습니다. 인스타그램의 10대 대상 중독성 관련 소송은 단기적 리스크 요인이 될 수 있으나, AI 투자 확대 등 긍정적 모멘텀이 더 강해 보입니다. 소규모 매수로 접근하는 것을 추천합니다.",
+          "close": 647.89501953125,
+          "change_pct": 0.31664380624263355,
+          "score": 83,
+          "state": "강함",
+          "action": "아주 소규모 / 대기",
+          "cross_highlights": [
+            "META 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 66 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.0030267207413846066,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 70,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "마이크로소프트와의 파트너십 확대 및 AI 시장에서의 경쟁력 강화 소식이 긍정적입니다. 다만, 경쟁사인 엔비디아와의 격차 축소 및 시장 기대치 반영 여부를 지켜볼 필요가 있습니다. 현재 보유 중이라면 추세를 유지하며 다음 실적 발표를 기다리는 것이 좋습니다.",
+          "close": 541.6950073242188,
+          "change_pct": 7.57094335355315,
+          "score": 57,
+          "state": "애매",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "AMD 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 44 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.004832504427107955,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "비중 축소",
+          "ai_note": "Personalis 인수 소식이 있었으나, 시장은 희석 우려로 부정적인 반응을 보였습니다. 단기 데드크로스 신호와 약한 거래량을 고려할 때, 현재로서는 비중 축소가 바람직합니다.",
+          "close": 48.40999984741211,
+          "change_pct": 0.0,
+          "score": 33,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "TEM 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 35 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.005294791769957936,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "비중 축소",
+          "ai_note": "반도체 섹터 전반의 약세와 마이크론의 부진이 ETF에 영향을 미치고 있습니다. 종가가 20일선과 50일선 아래에 있는 점을 감안할 때, 추가 하락 가능성에 대비하여 비중 축소를 고려해야 합니다.",
+          "close": 552.35498046875,
+          "change_pct": 5.383097079362931,
+          "score": 22,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.012224395092711777,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 15,
+          "ai_state": "매우 약세",
+          "ai_action": "회피",
+          "ai_note": "로봇 효율성 증대에 집중하는 전략은 긍정적이나, 주가는 최근 3개월간 큰 폭으로 하락했습니다. 시장 대비 약한 흐름과 낮은 RSI 지표를 고려할 때, 현재는 회피하는 것이 좋습니다.",
+          "close": 5.380000114440918,
+          "change_pct": 3.660887381997724,
+          "score": 13,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.003235796888614184,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 10,
+          "ai_state": "매우 약세",
+          "ai_action": "회피",
+          "ai_note": "SK하이닉스 랠리에 힘입어 상승했으나, 3배 레버리지 ETF의 구조적 위험성을 내포하고 있습니다. 시장 대비 약한 흐름과 낮은 RSI 지표를 고려할 때, 현재는 회피하는 것이 좋습니다.",
+          "close": 21.825000762939453,
+          "change_pct": 18.549706376056218,
+          "score": 11,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0015918577837611683,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
     }
   ]
 }
