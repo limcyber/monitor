@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-07-21 10:31 ET",
+  "updated_at_et": "2026-07-21 12:17 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-07-06 12:14 ET",
-      "market_data_as_of": "2026-07-06 11:55 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-07-06 14:24 ET",
       "market_data_as_of": "2026-07-06 14:10 ET (5분봉)",
@@ -18115,6 +18108,13 @@
     {
       "generated_at_et": "2026-07-21 10:31 ET",
       "market_data_as_of": "2026-07-21 08:55 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
+    },
+    {
+      "generated_at_et": "2026-07-21 12:17 ET",
+      "market_data_as_of": "2026-07-21 11:05 ET (5분봉)",
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
