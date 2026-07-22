@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-07-21 21:55 ET",
+  "updated_at_et": "2026-07-22 01:13 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-07-07 07:22 ET",
-      "market_data_as_of": "2026-07-06 16:00 ET (Close)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-07-07 09:30 ET",
       "market_data_as_of": "2026-07-07 09:08 ET (5분봉)",
@@ -18252,6 +18245,166 @@
           "ai_state": "회피",
           "ai_action": "비중 축소",
           "ai_note": "KORU는 한국 증시 관련 레버리지 ETF로, 최근 SK하이닉스 관련 뉴스로 변동성이 있었습니다. 하지만 전반적인 시장 추세와 약한 RSI 지표를 고려할 때, 현재는 매수보다는 관망하며 추세를 지켜보는 것이 좋습니다.",
+          "close": 21.825000762939453,
+          "change_pct": 18.549706376056218,
+          "score": 11,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0015918577837611683,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-07-22 01:13 ET",
+      "market_data_as_of": "2026-07-21 15:40 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 45,
+          "ai_state": "관망",
+          "ai_action": "보유 / 분할 매도",
+          "ai_note": "최근 5일선과 20일선이 데드크로스하며 거래량 약세가 지속되고 있습니다. 보유 중이라면 단기 반등 시 분할 매도를 고려해 볼 수 있습니다.",
+          "close": 207.02499389648438,
+          "change_pct": 1.8422841104271503,
+          "score": 30,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.005637561590550018,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "회피",
+          "ai_note": "5일선이 20일선 아래로 내려가는 단기 데드크로스 발생, RSI 36으로 하방 압력이 강합니다. 현재로서는 진입을 피하는 것이 좋습니다.",
+          "close": 377.95001220703125,
+          "change_pct": 2.267501343922862,
+          "score": 19,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "TSLA 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 36 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.004622513582678505,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 80,
+          "ai_state": "강세",
+          "ai_action": "소량 보유 / 관망",
+          "ai_note": "20일선이 50일선을 상향 돌파하는 중기 골든크로스 발생, RSI 66으로 상승 추세가 강합니다. 소량 보유 중이라면 추세를 지켜보며 관망하는 전략이 유효합니다.",
+          "close": 647.89501953125,
+          "change_pct": 0.31664380624263355,
+          "score": 83,
+          "state": "강함",
+          "action": "아주 소규모 / 대기",
+          "cross_highlights": [
+            "META 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 66 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.0030267207413846066,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 50,
+          "ai_state": "중립",
+          "ai_action": "보유 / 관망",
+          "ai_note": "최근 5일선이 20일선 아래로 내려가는 데드크로스가 나왔으나, 50일선과 20일선 위에 있어 지지력을 보이고 있습니다. 보유 중이라면 관망하며 추가 방향성을 확인하는 것이 좋습니다.",
+          "close": 541.6950073242188,
+          "change_pct": 7.57094335355315,
+          "score": 57,
+          "state": "애매",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "AMD 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 44 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.004832504427107955,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "회피",
+          "ai_note": "단기 데드크로스 발생 및 RSI 35로 약세를 보이고 있습니다. 시장 대비 힘이 약한 모습이므로 현재는 진입을 피하는 것이 좋습니다.",
+          "close": 48.40999984741211,
+          "change_pct": 0.0,
+          "score": 33,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "TEM 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 35 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.005294791769957936,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "회피",
+          "ai_note": "20일선과 50일선 아래에 위치하며 시장 대비 약한 흐름을 보이고 있습니다. RSI 33으로 하방 압력이 높아 현재는 진입을 피해야 합니다.",
+          "close": 552.35498046875,
+          "change_pct": 5.383097079362931,
+          "score": 22,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.012224395092711777,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 15,
+          "ai_state": "매우 약세",
+          "ai_action": "회피",
+          "ai_note": "20일선과 50일선 아래에 위치하며 RSI 25로 매우 약한 흐름입니다. 시장 대비 힘이 약한 모습이므로 진입을 피하는 것이 좋습니다.",
+          "close": 5.380000114440918,
+          "change_pct": 3.660887381997724,
+          "score": 13,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.003235796888614184,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 10,
+          "ai_state": "매우 약세",
+          "ai_action": "회피",
+          "ai_note": "20일선과 50일선 아래에 위치하며 RSI 29로 약세를 보이고 있습니다. 시장 대비 힘이 약한 모습이므로 현재는 진입을 피하는 것이 좋습니다.",
           "close": 21.825000762939453,
           "change_pct": 18.549706376056218,
           "score": 11,
