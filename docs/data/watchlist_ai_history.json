@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-07-22 22:06 ET",
+  "updated_at_et": "2026-07-23 01:37 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-07-08 08:01 ET",
-      "market_data_as_of": "2026-07-07 15:25 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-07-08 10:53 ET",
       "market_data_as_of": "2026-07-08 09:05 ET (5분봉)",
@@ -18217,6 +18210,166 @@
           "ai_state": "약세",
           "ai_action": "관망",
           "ai_note": "Direxion Daily MSCI South Korea Bull 3X Shares의 200일 이동평균선 하회는 부정적인 신호이며, 최근 주가 변동성이 큽니다.",
+          "close": 20.670000076293945,
+          "change_pct": -4.878046425551341,
+          "score": 11,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0011829874950496616,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-07-23 01:37 ET",
+      "market_data_as_of": "2026-07-22 15:35 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 70,
+          "ai_state": "관찰",
+          "ai_action": "관찰",
+          "ai_note": "AI 칩 수요 강세와 파트너십 소식이 긍정적이나, 시장 전반의 변동성에 유의해야 합니다. 보유 중이라면 단기적인 시장 흐름을 주시하며 대응하는 것이 좋습니다.",
+          "close": 212.46499633789062,
+          "change_pct": 2.4965040375173775,
+          "score": 52,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.010317486387625538,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 20,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "최근 실적 발표에서 부정적인 지표들이 나왔으며, 시장 대비 약한 모습을 보이고 있습니다. 당분간 관망하며 추세 전환 신호를 기다리는 것이 좋겠습니다.",
+          "close": 374.28680419921875,
+          "change_pct": -1.2253420331747922,
+          "score": 15,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "TSLA 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 33 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.004497190711638992,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 75,
+          "ai_state": "양호",
+          "ai_action": "소규모 매수",
+          "ai_note": "AI 관련 투자와 신규 기능 출시 소식이 긍정적이나, 실적 발표를 앞두고 변동성이 있을 수 있습니다. 보유 중이라면 실적 발표 후 추세를 확인하며 대응하는 것이 좋습니다.",
+          "close": 625.27001953125,
+          "change_pct": -2.8797281958418797,
+          "score": 82,
+          "state": "강함",
+          "action": "소규모 매수",
+          "cross_highlights": [
+            "META 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 53 (중립)"
+          ],
+          "volume_ratio_20d": 0.0042817861210337595,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 70,
+          "ai_state": "양호",
+          "ai_action": "매우 선별적 접근",
+          "ai_note": "AI 칩 파트너십 확대 소식이 긍정적이나, 경쟁 심화 가능성도 존재합니다. 단기적인 시장 흐름을 주시하며 접근하는 것이 좋겠습니다.",
+          "close": 554.289794921875,
+          "change_pct": 1.8110321581723543,
+          "score": 67,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [
+            "AMD 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 52 (중립)"
+          ],
+          "volume_ratio_20d": 0.00970156210301593,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 30,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "인수 관련 소식과 함께 주가 변동성이 나타나고 있으며, 시장 전반의 투자 심리 위축도 영향을 미치고 있습니다. 당분간 관망하며 추가적인 방향성을 확인하는 것이 좋겠습니다.",
+          "close": 46.53499984741211,
+          "change_pct": -4.991832824979614,
+          "score": 23,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "TEM 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 26 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.012723803254564658,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 25,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "반도체 섹터 전반의 약세와 개별 종목 이슈가 영향을 미치고 있습니다. 시장 전반의 반등 신호가 나타나기 전까지는 보수적인 접근이 필요합니다.",
+          "close": 557.031005859375,
+          "change_pct": 0.7854318693649498,
+          "score": 20,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0038195088137442114,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 35,
+          "ai_state": "관찰",
+          "ai_action": "관찰",
+          "ai_note": "사업 확장 소식이 있으나, 아직 수익성 개선에 대한 불확실성이 존재합니다. 시장 전반의 흐름과 함께 개별적인 모멘텀을 주시하며 접근하는 것이 좋겠습니다.",
+          "close": 5.244999885559082,
+          "change_pct": -2.509297881229966,
+          "score": 11,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.008979263308920031,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 15,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "시장 대비 약한 흐름을 보이고 있으며, 투자자들의 관심이 낮은 편입니다. 뚜렷한 반등 모멘텀이 나타나기 전까지는 관망하는 것이 좋겠습니다.",
           "close": 20.670000076293945,
           "change_pct": -4.878046425551341,
           "score": 11,
