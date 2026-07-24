@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-07-24 08:14 ET",
+  "updated_at_et": "2026-07-24 10:19 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-07-09 23:34 ET",
-      "market_data_as_of": "2026-07-09 14:30 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-07-10 03:28 ET",
       "market_data_as_of": "2026-07-09 14:30 ET (5분봉)",
@@ -18942,6 +18935,164 @@
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-07-24 10:19 ET",
+      "market_data_as_of": "2026-07-24 08:52 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 75,
+          "ai_state": "강세",
+          "ai_action": "보유 유지",
+          "ai_note": "NVIDIA는 KAIST와 AI 연구소를 설립하며 AI 생태계를 확장하고 있습니다. 최근 실적도 시장 기대치를 상회했으며, 주주 환원 정책 강화로 긍정적인 흐름을 이어갈 것으로 보입니다.",
+          "close": 208.1807,
+          "change_pct": -0.2774930648012486,
+          "score": 38,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "Tesla는 2분기 실적 발표를 앞두고 있으며, 시장 기대치에 미치지 못할 경우 주가 하락 압력이 커질 수 있습니다. 현재로서는 신규 진입보다는 추이를 지켜보는 것이 좋습니다.",
+          "close": 321.6096,
+          "change_pct": 0.6004559241559626,
+          "score": 9,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 70,
+          "ai_state": "강세",
+          "ai_action": "보유 유지",
+          "ai_note": "Meta는 AI 데이터센터 구축에 막대한 투자를 지속하며 미래 성장 동력을 확보하고 있습니다. 2분기 실적 발표에서 AI 투자 성과가 가시화된다면 주가 상승 모멘텀을 받을 수 있습니다.",
+          "close": 604.35,
+          "change_pct": -0.28872721604149554,
+          "score": 42,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "META 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 51 (중립)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 65,
+          "ai_state": "중립",
+          "ai_action": "보유 유지",
+          "ai_note": "AMD는 2028년까지의 CPU 로드맵을 공개하며 기술 리더십을 강화하고 있습니다. 최근 실적도 긍정적이었으나, 경쟁 심화와 시장 상황을 고려하여 신중한 접근이 필요합니다.",
+          "close": 545.99,
+          "change_pct": 1.1673363468091669,
+          "score": 44,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "AMD 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 49 (중립)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 40,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "Tempus AI는 정밀 종양학 역량 확장을 위해 Personalis를 인수하며 사업 확장을 모색하고 있습니다. 하지만 최근 주가는 하락세를 보이고 있어, 추가적인 시장 동향을 지켜볼 필요가 있습니다.",
+          "close": 46.3,
+          "change_pct": 0.6303014323977285,
+          "score": 25,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 35,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "반도체 ETF인 SOXX는 최근 마이크론의 실적 부진으로 하락 압력을 받고 있습니다. 시장 전반의 반도체 업황 둔화 우려가 해소되기 전까지는 보수적인 접근이 필요합니다.",
+          "close": 549.0,
+          "change_pct": -0.40635481352189196,
+          "score": 15,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "SOXX 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 41 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 45,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "Serve Robotics는 2분기 실적 발표를 앞두고 있으며, 사업 확장과 함께 효율성 증대에 집중하고 있습니다. 다만, 최근 주가 하락세를 고려할 때 신중한 접근이 요구됩니다.",
+          "close": 5.0764,
+          "change_pct": 0.7222229845729844,
+          "score": 9,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 20,
+          "ai_state": "매우 약세",
+          "ai_action": "비중 축소",
+          "ai_note": "KORU Medical Systems는 2분기 실적 발표를 앞두고 있으며, CEO 교체와 함께 사업 재편을 진행 중입니다. 현재로서는 뚜렷한 상승 모멘텀이 보이지 않아 비중 축소를 고려할 수 있습니다.",
+          "close": 20.35,
+          "change_pct": -7.542027313128141,
+          "score": 8,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
     }
   ]
 }
