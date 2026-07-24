@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-07-24 13:22 ET",
+  "updated_at_et": "2026-07-24 14:54 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-07-10 09:06 ET",
-      "market_data_as_of": "2026-07-09 14:30 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-07-10 11:43 ET",
       "market_data_as_of": "2026-07-10 09:25 ET (5분봉)",
@@ -19236,6 +19229,164 @@
           "action": "회피 / 비중 축소",
           "cross_highlights": [],
           "volume_ratio_20d": 0.008949460998087135,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-07-24 14:54 ET",
+      "market_data_as_of": "2026-07-24 13:50 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 70,
+          "ai_state": "관망",
+          "ai_action": "보유 유지",
+          "ai_note": "NVIDIA는 1.5억 달러 규모의 칩 패키징 계약을 Amkor와 체결하며 긍정적인 소식을 전했습니다. 현재 시장 상황을 고려할 때 보유를 유지하며 추가적인 시장 움직임을 지켜보는 것이 좋습니다.",
+          "close": 210.25999450683594,
+          "change_pct": 0.7185284726336283,
+          "score": 39,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0007726561205343927,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 20,
+          "ai_state": "하락세",
+          "ai_action": "비중 축소",
+          "ai_note": "테슬라는 2분기 실적 발표를 앞두고 있으며, 높은 자본 지출 계획으로 인해 주가 하락이 있었습니다. 현재 추세와 시장 상황을 고려하여 비중 축소를 권고합니다.",
+          "close": 309.3700866699219,
+          "change_pct": -3.228100876684703,
+          "score": 9,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0027179442806627378,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 65,
+          "ai_state": "관망",
+          "ai_action": "보유 유지",
+          "ai_note": "메타는 2분기 실적 발표를 앞두고 있으며, AI 투자 확대와 함께 견조한 매출 성장이 예상됩니다. 다만, AI 투자 비용 증가가 수익성에 부담을 줄 수 있으므로, 실적 발표 후 추이를 지켜보며 보유를 유지하는 것이 좋겠습니다.",
+          "close": 601.5599975585938,
+          "change_pct": -0.7490477165841836,
+          "score": 42,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "META 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 50 (중립)"
+          ],
+          "volume_ratio_20d": 0.0006782175026288113,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 55,
+          "ai_state": "혼조세",
+          "ai_action": "보유 유지",
+          "ai_note": "AMD는 Anthropic과의 AI 파트너십을 통해 50억 달러 규모의 하드웨어 공급 계약을 체결했습니다. 단기적인 시장 변동성은 있으나, AI 분야에서의 지속적인 성장이 기대되므로 보유를 유지하며 관망하는 것이 좋습니다.",
+          "close": 534.385009765625,
+          "change_pct": -0.9829703444167892,
+          "score": 42,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "AMD 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 46 (중립)"
+          ],
+          "volume_ratio_20d": 0.001190172836503114,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 30,
+          "ai_state": "하락세",
+          "ai_action": "비중 축소",
+          "ai_note": "Tempus AI는 전국적으로 약물유전체학 검사 솔루션인 OneOme를 출시했습니다. 하지만 최근 주가 하락세가 뚜렷하며, 일부 애널리스트는 'Underperform' 등급을 유지하고 있어 비중 축소를 고려할 시점입니다.",
+          "close": 44.040000915527344,
+          "change_pct": -4.281672414414928,
+          "score": 24,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0012360094086687043,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 25,
+          "ai_state": "하락세",
+          "ai_action": "비중 축소",
+          "ai_note": "반도체 ETF인 SOXX는 마이크론의 주가 하락에 영향을 받으며 약세를 보이고 있습니다. 또한, 마이클 버리가 SOXX에 대한 공매도 포지션을 취한 것으로 알려져 있어, 당분간 하락세가 지속될 가능성이 있습니다. 비중 축소를 권고합니다.",
+          "close": 535.0499877929688,
+          "change_pct": -2.9370152253508697,
+          "score": 15,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "SOXX 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 39 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0003598387671450452,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 35,
+          "ai_state": "하락세",
+          "ai_action": "비중 축소",
+          "ai_note": "Serve Robotics는 2분기 실적 발표를 앞두고 있으며, 최근 효율성 증대에 집중하고 있습니다. 하지만 연초 대비 주가가 크게 하락한 상황이므로, 신중한 접근이 필요하며 비중 축소를 고려하는 것이 좋습니다.",
+          "close": 4.949999809265137,
+          "change_pct": -1.7857173267676107,
+          "score": 9,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 15,
+          "ai_state": "하락세",
+          "ai_action": "비중 축소",
+          "ai_note": "KORU Medical Systems는 2분기 실적 발표를 8월 5일로 예정하고 있습니다. 현재 시장에서 특별한 호재가 부각되지 않고 있으며, 전반적인 시장 약세 흐름에 따라 비중 축소 의견을 유지합니다.",
+          "close": 18.799999237060547,
+          "change_pct": -14.584284227353528,
+          "score": 8,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0003389127276065155,
           "signals": {
             "short_cross": "none",
             "mid_cross": "none"
