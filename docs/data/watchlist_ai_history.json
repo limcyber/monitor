@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-07-26 18:27 ET",
+  "updated_at_et": "2026-07-26 19:28 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-07-12 13:53 ET",
-      "market_data_as_of": "2026-07-10 15:15 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: 배열 형식 응답이 아닙니다.",
-      "items": []
-    },
     {
       "generated_at_et": "2026-07-12 14:54 ET",
       "market_data_as_of": "2026-07-10 15:15 ET (5분봉)",
@@ -20498,6 +20491,162 @@
           "ai_state": "약세",
           "ai_action": "관망",
           "ai_note": "2분기 실적 발표를 앞두고 있으며, 최근 CEO 교체 소식이 있었습니다. 현재 뚜렷한 상승 모멘텀은 없으나, 실적 발표 이후 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 18.00830078125,
+          "change_pct": -18.18127853711128,
+          "score": 8,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0017024506329763993,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-07-26 19:28 ET",
+      "market_data_as_of": "2026-07-24 15:05 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 40,
+          "ai_state": "약세 관망",
+          "ai_action": "보유 물량 축소 고려",
+          "ai_note": "최근 AI 칩 수요 둔화 우려가 헤드라인을 장식하고 있으며, 50일선 아래에서 거래되는 점은 부담입니다. 보유 중이라면 단기 반등 시 비중 축소를 고려해볼 만합니다.",
+          "close": 205.3800048828125,
+          "change_pct": -1.619079188044703,
+          "score": 38,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.004182799816112153,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 15,
+          "ai_state": "매우 약세",
+          "ai_action": "신규 진입 절대 금지",
+          "ai_note": "시장 전반의 약세와 더불어 테슬라 자체적인 경쟁 심화 및 수요 불안정 뉴스가 주가 하락을 부추기고 있습니다. RSI 지표도 과매도 구간에 진입했으나, 추세 전환 신호는 아직 보이지 않습니다.",
+          "close": 308.8299865722656,
+          "change_pct": -3.3970458213284593,
+          "score": 9,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0028064122797662717,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 45,
+          "ai_state": "약세 관망",
+          "ai_action": "보유 물량 축소 고려",
+          "ai_note": "메타버스 관련 투자 및 규제 이슈가 혼재하며 주가에 부담을 주고 있습니다. 20일선과 50일선 아래에서 거래 중이며, 중기 골든크로스 신호가 약한 거래량으로 나왔으나 시장 약세로 힘을 받지 못하고 있습니다. 보유 시 비중 축소를 고려합니다.",
+          "close": 600.280029296875,
+          "change_pct": -0.9602287615069094,
+          "score": 42,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "META 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 50 (중립)"
+          ],
+          "volume_ratio_20d": 0.0017103566833384758,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 35,
+          "ai_state": "약세 관망",
+          "ai_action": "보유 물량 축소 고려",
+          "ai_note": "AI 칩 경쟁 심화와 시장 전반의 약세 속에서 AMD 역시 힘을 쓰지 못하고 있습니다. 20일선 아래에서 거래되며 RSI도 하락 추세에 있어, 보유 중이라면 비중 축소를 고려하는 것이 좋습니다.",
+          "close": 521.3800048828125,
+          "change_pct": -3.392687927470295,
+          "score": 36,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.003196672199268306,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 25,
+          "ai_state": "매우 약세",
+          "ai_action": "신규 진입 절대 금지",
+          "ai_note": "시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에서 거래 중입니다. RSI 지표도 낮은 수준에 머물러 있어, 현재로서는 매수 관점을 유지하기 어렵습니다.",
+          "close": 43.31999969482422,
+          "change_pct": -5.846552325236742,
+          "score": 24,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.004010515917196379,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 10,
+          "ai_state": "매우 약세",
+          "ai_action": "신규 진입 절대 금지",
+          "ai_note": "반도체 섹터 전반의 약세와 함께 SOXX ETF 역시 중기 데드크로스 발생 후 하락세를 이어가고 있습니다. 거래량과 RSI 모두 하방 압력을 시사하며, 당분간 관망이 필요합니다.",
+          "close": 524.5800170898438,
+          "change_pct": -4.836364127572823,
+          "score": 13,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "SOXX 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 37 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.006258737167153061,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 10,
+          "ai_state": "매우 약세",
+          "ai_action": "신규 진입 절대 금지",
+          "ai_note": "시장 대비 현저히 약한 흐름을 보이며 20일선과 50일선 아래에서 거래 중입니다. RSI 지표가 극도로 낮은 수준으로, 현재로서는 매수 고려 대상이 아닙니다.",
+          "close": 4.885000228881836,
+          "change_pct": -3.075391550483342,
+          "score": 8,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.007421605743922343,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 10,
+          "ai_state": "매우 약세",
+          "ai_action": "신규 진입 절대 금지",
+          "ai_note": "급격한 하락세를 보이며 시장 대비 매우 약한 모습을 나타내고 있습니다. 20일선과 50일선 아래에서 거래 중이며, RSI 지표도 낮은 수준에 머물러 있어 매수 관점은 부적절합니다.",
           "close": 18.00830078125,
           "change_pct": -18.18127853711128,
           "score": 8,
