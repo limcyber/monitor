@@ -1,41 +1,7 @@
 {
-  "updated_at_et": "2026-07-27 11:21 ET",
+  "updated_at_et": "2026-07-27 13:15 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-07-12 20:59 ET",
-      "market_data_as_of": "2026-07-10 15:15 ET (5분봉)",
-      "market": {
-        "score": 67,
-        "level": 4,
-        "state": "레벨 4/6 - 살아나는 구간",
-        "action": "소규모 매수 / 보유",
-        "cross_highlights": [
-          "나스닥 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 47 (중립)",
-          "나스닥 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 47 (중립)"
-        ],
-        "top_reasons": [
-          "S&P500이 200일선 위에 있습니다 (+10)",
-          "나스닥이 200일선 위에 있습니다 (+10)",
-          "S&P500의 50일선이 200일선 위에 있습니다 (+8)"
-        ],
-        "metrics": {
-          "vix_close": 15.25,
-          "tnx_close": 4.568999767303467,
-          "pct_above_20dma": 62.82306163021869,
-          "pct_above_50dma": 68.389662027833
-        }
-      },
-      "ai_analysis": {
-        "status": "error",
-        "model": "gemini-2.5-flash",
-        "content": "AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'"
-      },
-      "ai_notifications": {
-        "count": 0,
-        "items": []
-      }
-    },
     {
       "generated_at_et": "2026-07-13 00:33 ET",
       "market_data_as_of": "2026-07-10 15:15 ET (5분봉)",
@@ -7317,6 +7283,57 @@
             "scope": "market",
             "title": "시장 폭 과매도 진입",
             "message": "S&P 500의 20일선 위 종목 비율이 0.0%로 매우 낮습니다. 저점 매수 후보를 준비할 구간인지 점검할 만합니다."
+          }
+        ]
+      }
+    },
+    {
+      "generated_at_et": "2026-07-27 13:15 ET",
+      "market_data_as_of": "2026-07-27 11:55 ET (5분봉)",
+      "market": {
+        "score": 28,
+        "level": 2,
+        "state": "레벨 2/6 - 약화 / 주의",
+        "action": "비중 축소",
+        "cross_highlights": [
+          "S&P500 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 40 (하방 우세)",
+          "나스닥 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 33 (하방 우세)"
+        ],
+        "top_reasons": [
+          "S&P500과 나스닥이 함께 단기 데드크로스라 공격 점수를 높게 주기 어렵습니다 (상한 72)",
+          "소형주가 대형주보다 약해 공격적인 분위기가 아닙니다 (-2)",
+          "달러와 금리가 함께 높아 성장주와 위험자산에 부담입니다 (0)"
+        ],
+        "metrics": {
+          "vix_close": 19.520000457763672,
+          "tnx_close": 4.644999980926514,
+          "pct_above_20dma": 58.64811133200796,
+          "pct_above_50dma": 64.81113320079523
+        }
+      },
+      "ai_analysis": {
+        "status": "error",
+        "model": "gemini-2.5-flash",
+        "content": "AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'"
+      },
+      "ai_notifications": {
+        "count": 2,
+        "items": [
+          {
+            "id": "ai-vix-shock",
+            "priority": "high",
+            "kind": "ai_macro_shock",
+            "scope": "market",
+            "title": "변동성 급등",
+            "message": "VIX가 직전 AI 갱신 대비 +10.2% 급등했습니다. 리스크 오프 신호로 보고 방어적으로 대응하는 편이 좋습니다."
+          },
+          {
+            "id": "ai-regime-shift-l1-to-l2",
+            "priority": "high",
+            "kind": "ai_regime_shift",
+            "scope": "market",
+            "title": "시장 레벨 급변",
+            "message": "시장 레벨이 1/6 -> 2/6(으)로 상향 이동했습니다. 전체 매매 전략을 다시 점검할 시점입니다."
           }
         ]
       }
