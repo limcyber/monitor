@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-07-27 04:52 ET",
+  "updated_at_et": "2026-07-27 08:13 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-07-12 18:12 ET",
-      "market_data_as_of": "2026-07-10 15:15 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-07-12 19:23 ET",
       "market_data_as_of": "2026-07-10 15:15 ET (5분봉)",
@@ -20788,6 +20781,162 @@
           "ai_state": "매우 약함",
           "ai_action": "회피",
           "ai_note": "시장 전반의 약세와 함께 주가도 하락세를 보이고 있습니다. 현재 20일선 및 50일선 아래에 위치하며 RSI 지표도 낮아 회피하는 것이 좋습니다.",
+          "close": 18.00830078125,
+          "change_pct": -18.18127853711128,
+          "score": 8,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0017024506329763993,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-07-27 08:13 ET",
+      "market_data_as_of": "2026-07-24 15:05 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 40,
+          "ai_state": "약보합",
+          "ai_action": "관망",
+          "ai_note": "최근 거래량이 약하고 50일선 아래에 있어 추가 하락 가능성이 있습니다. 보유 중이라면 50일선 회복 시까지 관망하는 것이 좋습니다.",
+          "close": 205.3800048828125,
+          "change_pct": -1.619079188044703,
+          "score": 38,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.004182799816112153,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 10,
+          "ai_state": "하락",
+          "ai_action": "비중 축소",
+          "ai_note": "시장 대비 약한 흐름과 20일선, 50일선 아래에 위치하여 추가 하락이 예상됩니다. 보유 시 비중 축소를 고려해야 합니다.",
+          "close": 308.8299865722656,
+          "change_pct": -3.3970458213284593,
+          "score": 9,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0028064122797662717,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 45,
+          "ai_state": "약보합",
+          "ai_action": "관망",
+          "ai_note": "20일선과 50일선 아래에 있지만, 중기 골든크로스 신호가 있습니다. 시장 대비 약한 흐름이므로 20일선 회복 전까지는 관망이 필요합니다.",
+          "close": 600.280029296875,
+          "change_pct": -0.9602287615069094,
+          "score": 42,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "META 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 50 (중립)"
+          ],
+          "volume_ratio_20d": 0.0017103566833384758,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 35,
+          "ai_state": "하락",
+          "ai_action": "비중 축소",
+          "ai_note": "시장 대비 약한 흐름을 보이며 20일선 아래에 있습니다. 50일선 위에 있다는 점은 긍정적이나, 20일선 회복 전까지는 비중 축소를 고려하는 것이 좋습니다.",
+          "close": 521.3800048828125,
+          "change_pct": -3.392687927470295,
+          "score": 36,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.003196672199268306,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 25,
+          "ai_state": "하락",
+          "ai_action": "비중 축소",
+          "ai_note": "시장 대비 약한 흐름과 20일선, 50일선 아래에 위치하여 추가 하락 가능성이 높습니다. 보유 시 비중 축소를 고려해야 합니다.",
+          "close": 43.31999969482422,
+          "change_pct": -5.846552325236742,
+          "score": 24,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.004010515917196379,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 15,
+          "ai_state": "하락",
+          "ai_action": "비중 축소",
+          "ai_note": "최근 중기 데드크로스 발생과 시장 대비 약한 흐름으로 추가 하락이 예상됩니다. 보유 시 비중 축소를 적극 고려해야 합니다.",
+          "close": 524.5800170898438,
+          "change_pct": -4.836364127572823,
+          "score": 13,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "SOXX 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 37 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.006258737167153061,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 10,
+          "ai_state": "하락",
+          "ai_action": "비중 축소",
+          "ai_note": "시장 대비 약한 흐름과 20일선, 50일선 아래에 위치하여 추가 하락 가능성이 높습니다. 보유 시 비중 축소를 고려해야 합니다.",
+          "close": 4.885000228881836,
+          "change_pct": -3.075391550483342,
+          "score": 8,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.007421605743922343,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 10,
+          "ai_state": "하락",
+          "ai_action": "비중 축소",
+          "ai_note": "시장 대비 매우 약한 흐름과 20일선, 50일선 아래에 위치하여 추가 하락이 예상됩니다. 보유 시 비중 축소를 적극 고려해야 합니다.",
           "close": 18.00830078125,
           "change_pct": -18.18127853711128,
           "score": 8,
