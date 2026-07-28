@@ -1,167 +1,7 @@
 {
-  "updated_at_et": "2026-07-28 12:56 ET",
+  "updated_at_et": "2026-07-28 14:09 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-07-14 00:44 ET",
-      "market_data_as_of": "2026-07-13 16:00 ET (Close)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 45,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "TSMC가 엔비디아의 AI 가속 컴퓨팅을 반도체 설계 및 제조에 적용하여 턴어라운드 시간, 에너지 효율성, 수율 및 팹 생산성을 개선하고 있습니다. 최근 배당금 증액 및 자사주 매입 프로그램 개시 소식이 있었으나, AI 지출 둔화 우려와 경쟁 심화 가능성도 존재합니다.",
-          "close": 203.52999877929688,
-          "change_pct": -3.521998340020871,
-          "score": 22,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "NVDA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.8x (거래량 약함) / RSI 45 (중립)"
-          ],
-          "volume_ratio_20d": 0.7830768306628035,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 30,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "테슬라의 FSD(Full Self-Driving) 기능이 향상되고 있으며, 사이버캡 및 로보택시 서비스 준비가 진행 중입니다. 하지만 시장 전반의 약세와 경쟁 심화로 인해 주가 흐름은 불안정할 수 있습니다.",
-          "close": 394.760009765625,
-          "change_pct": -3.188149815738972,
-          "score": 20,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.7086478866258237,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 60,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "메타는 AI 인프라 투자를 확대하며 루이지애나 하이페리온 데이터센터를 확장하고 있습니다. 그러나 AI 관련 막대한 지출과 규제 관련 불확실성이 주가에 부담을 줄 수 있습니다.",
-          "close": 656.72998046875,
-          "change_pct": -1.8648916026568707,
-          "score": 57,
-          "state": "애매",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.886468137144453,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 70,
-          "ai_state": "매수 고려",
-          "ai_action": "분할 매수",
-          "ai_note": "AMD는 AI 및 데이터센터 기술에 집중하며 HPE와 협력하고 있으며, EPYC 서버 프로세서와 Instinct AI 가속기의 강력한 수요로 사상 최대 분기 실적을 기록했습니다. 5C 파트너십을 통해 엔비디아의 직접적인 경쟁자로 부상하고 있으며, 분석가들은 서버 칩에 대한 '이례적인' 수요를 예상하며 목표 주가를 상향 조정하고 있습니다.",
-          "close": 534.3900146484375,
-          "change_pct": -4.212299805152253,
-          "score": 68,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.7528807776106853,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 55,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "템퍼스 AI는 차세대 렌즈(Lens) 플랫폼을 출시하며 신약 개발 및 연구 가속화를 목표로 하고 있습니다. 다만, CEO 관련 주식 매도 소식이 있었으며, 2분기 실적 발표를 앞두고 있어 주가 변동성에 유의해야 합니다.",
-          "close": 55.93000030517578,
-          "change_pct": -3.949852747967608,
-          "score": 75,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [
-            "TEM 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.7x (거래량 약함) / RSI 64 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.6503425483276655,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 35,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "반도체 ETF인 SOXX는 최근 대규모 자금 유입을 기록하며 투자자들의 관심이 집중되고 있습니다. 그러나 최근 칩 주식의 변동성이 커지고 있으며, 마이클 버리의 엔비디아, 마이크론, AMD에 대한 공매도 포지션 공개는 시장에 부담을 줄 수 있습니다.",
-          "close": 553.6099853515625,
-          "change_pct": -4.77002102433941,
-          "score": 20,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "SOXX 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.8x (거래량 약함) / RSI 35 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.8033863625316687,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 25,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "서브 로보틱스는 도어대시(DoorDash)와의 협력을 통해 수요가 급증하고 있으며, 로봇 활용도를 높이기 위해 신규 로봇 투입을 잠정 중단했습니다. 하지만 최근 주가 하락세가 지속되고 있어 추가적인 모멘텀 확인이 필요합니다.",
-          "close": 5.789999961853027,
-          "change_pct": -2.1959478507692975,
-          "score": 13,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.6331881949869056,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 15,
-          "ai_state": "회피",
-          "ai_action": "보유",
-          "ai_note": "한국 증시 ETF인 KORU는 최근 AI 밸류에이션 우려로 인한 반도체 주식 매도세에 영향을 받았습니다. 대규모 투자자들의 매도세가 감지되었으며, 현재로서는 뚜렷한 반등 모멘텀이 보이지 않습니다.",
-          "close": 419.19000244140625,
-          "change_pct": -24.741471734038377,
-          "score": 10,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 1.5x (거래량 확인) / RSI 23 (과매도 구간)"
-          ],
-          "volume_ratio_20d": 1.4700379630817568,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bear"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-07-14 03:05 ET",
       "market_data_as_of": "2026-07-13 16:00 ET (Close)",
@@ -21380,6 +21220,163 @@
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-07-28 14:09 ET",
+      "market_data_as_of": "2026-07-28 13:45 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 65,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "Nvidia는 OpenAI에 2,500억 달러 규모의 백스톱을 제공하는 논의 중이라는 소식이 나왔으나, 이는 순환 거래에 대한 우려를 불러일으키며 주가가 하락했습니다. 하지만 AI 수요는 계속 증가하고 있어 장기적인 성장 전망은 긍정적입니다.",
+          "close": 197.25,
+          "change_pct": 0.3765739727494166,
+          "score": 30,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.005882337590412142,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 20,
+          "ai_state": "회피",
+          "ai_action": "비중 축소",
+          "ai_note": "테슬라는 일론 머스크의 공격적인 투자 계획에 대한 우려로 인해 2,140억 달러의 시가총액 증발을 겪었습니다. 현재는 로보택시 서비스 확장 등 새로운 모멘텀이 필요해 보입니다.",
+          "close": 306.989990234375,
+          "change_pct": -0.7211729440284365,
+          "score": 12,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.005539509146359417,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 40,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "메타는 소셜 미디어 중독 디자인으로 인해 4개 주로부터 최대 1조 4천억 달러의 벌금 소송에 직면했습니다. 또한 블랙록과 데이터센터 개발을 위한 전략적 협력을 발표했습니다.",
+          "close": 593.594970703125,
+          "change_pct": -0.04631054209233154,
+          "score": 59,
+          "state": "애매",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "META 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 48 (중립)",
+            "META 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 48 (중립)"
+          ],
+          "volume_ratio_20d": 0.002798922434059886,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 75,
+          "ai_state": "매수",
+          "ai_action": "매수 / 비중 확대",
+          "ai_note": "AMD는 3분기 기록적인 실적을 발표했으며, 특히 EPYC 서버 프로세서와 Instinct AI 가속기에 대한 강력한 수요가 성장을 견인했습니다. 또한 한국 과학기술정보통신부와 AI 생태계 발전을 위한 파트너십을 체결했습니다.",
+          "close": 458.0199890136719,
+          "change_pct": -7.46136423528605,
+          "score": 19,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.008814225921844599,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 50,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "Tempus AI는 Personalis 인수를 통해 정밀 종양학 역량을 강화하고 있으며, OneOme 약물유전체학 테스트 솔루션을 전국적으로 출시했습니다. 다만, 인수 관련 우려로 주가가 하락하는 모습도 보였습니다.",
+          "close": 42.279998779296875,
+          "change_pct": -1.4681917276987089,
+          "score": 24,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.005661918441866553,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 30,
+          "ai_state": "회피",
+          "ai_action": "비중 축소",
+          "ai_note": "반도체 ETF인 SOXX는 마이크로 부시의 공매도 소식과 함께 전반적인 반도체 섹터의 약세로 인해 압박을 받고 있습니다. AI 지출 지속 가능성에 대한 우려가 투자 심리를 위축시키고 있습니다.",
+          "close": 491.3599853515625,
+          "change_pct": -4.817619289488939,
+          "score": 11,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "SOXX 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 33 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.006349599738834121,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 45,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "Serve Robotics는 1분기 로봇 서비스 매출이 10배 증가하며 효율성 개선에 집중하고 있습니다. 또한 화이트 캐슬과의 협력을 통해 자율 배달 서비스를 확장하고 있으며, 2분기 실적 발표를 앞두고 있습니다.",
+          "close": 4.605000019073486,
+          "change_pct": -3.6610916956817396,
+          "score": 11,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.006645789336924681,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 15,
+          "ai_state": "회피",
+          "ai_action": "비중 축소",
+          "ai_note": "한국 관련 레버리지 ETF인 KORU는 글로벌 반도체 섹터의 약세와 AI 지출 지속 가능성에 대한 우려로 인해 급락했습니다. 특히 삼성전자와 SK하이닉스의 부진이 지수 하락을 주도했습니다.",
+          "close": 14.460000038146973,
+          "change_pct": -15.979077237760054,
+          "score": 11,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.006425276639982505,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
     }
   ]
 }
