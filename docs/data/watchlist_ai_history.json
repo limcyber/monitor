@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-08-03 14:46 ET",
+  "updated_at_et": "2026-08-03 16:21 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-07-19 10:58 ET",
-      "market_data_as_of": "2026-07-17 15:45 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-07-19 11:58 ET",
       "market_data_as_of": "2026-07-17 15:45 ET (5분봉)",
@@ -21171,6 +21164,166 @@
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-08-03 16:21 ET",
+      "market_data_as_of": "2026-08-03 15:40 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 65,
+          "ai_state": "관망",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "데이터 센터 매출이 NVIDIA 수익의 92%를 차지하며 AI 성장에 대한 Jensen Huang의 베팅이 주목받고 있습니다. 최근 5일선이 20일선 아래로 내려가는 단기 데드크로스가 발생했으나, 시장 대비 강한 흐름을 유지하고 있어 추가적인 추세 확인이 필요합니다.",
+          "close": 207.17999267578125,
+          "change_pct": 3.2029851436021106,
+          "score": 60,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "NVDA 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 46 (중립)"
+          ],
+          "volume_ratio_20d": 0.0067016367767006,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 위치해 있습니다. 최근 1000만 대 차량 생산 돌파 소식이 있었으나, AI 및 로보택시 투자로 인한 자본 지출 증가와 마진 압박이 주가에 부담을 주고 있습니다.",
+          "close": 322.5,
+          "change_pct": 3.627778302404394,
+          "score": 2,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.005466491175434881,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 35,
+          "ai_state": "관망",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "2분기 매출은 성장했으나 주당 순이익과 잉여 현금 흐름은 감소했습니다. AI 관련 투자가 수익성에 영향을 미치고 있으나, 잉여 컴퓨팅 용량을 데이터 센터에 임대하는 사업을 추진 중이며 이는 잠재적 성장 동력이 될 수 있습니다. 단기적으로는 20일선과 50일선 아래에 있어 추가 상승 모멘텀이 필요합니다.",
+          "close": 593.4400024414062,
+          "change_pct": 6.597686231442412,
+          "score": 32,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.005655767734338776,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 15,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "최근 중기 데드크로스가 발생했으며 시장 대비 약한 모습을 보입니다. 2분기 실적 발표를 앞두고 기대치가 높으나, 일부 분석가들은 밸류에이션 부담을 지적하며 신중한 입장을 보이고 있습니다. AI 가속기 수요와 데이터 센터 매출 성장이 관건입니다.",
+          "close": 484.43499755859375,
+          "change_pct": 1.7399986912339571,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "AMD 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 40 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.004897380093929932,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 10,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "최근 중기 데드크로스가 발생했으며 과매도 구간에 진입했습니다. 2분기 실적은 예상치를 상회했으나, Personalis 인수와 함께 정밀 종양학 플랫폼 확장에 집중하고 있습니다. 단기적으로는 RSI 지표가 낮아 반등 가능성을 염두에 둘 수 있으나, 추세 전환 신호가 필요합니다.",
+          "close": 46.66999816894531,
+          "change_pct": 6.382492147784169,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "TEM 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 26 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.007224951507462163,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 25,
+          "ai_state": "관망",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "반도체 섹터 전반의 약세 속에서 중기 데드크로스가 발생했습니다. 최근 긍정적인 실적 발표에도 불구하고 밸류에이션 부담과 지정학적 리스크가 주가에 영향을 미치고 있습니다. 단기적으로는 과매도 구간에서 벗어나려는 움직임을 보이고 있어 추가적인 기술적 반등을 기대해 볼 수 있습니다.",
+          "close": 507.4599914550781,
+          "change_pct": 0.5090171586043635,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SOXX 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 36 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0076985234690681425,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 30,
+          "ai_state": "관망",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "최근 13% 급등하며 과매도 구간에서 벗어나려는 움직임을 보였으나, 연초 대비 주가는 여전히 하락세입니다. 효율성 증대에 집중하며 헬스케어 자동화 분야로 사업 확장을 모색하고 있습니다. 2분기 실적 발표에서 가이던스 재확인이 중요하며, 거래량 증가 여부를 주시해야 합니다.",
+          "close": 5.617099761962891,
+          "change_pct": 17.51254216342606,
+          "score": 13,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.030418562711244754,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 10,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 위치해 있습니다. 최근 CEO 교체 소식이 있었으나, 투자자들의 관심이 낮은 편입니다. 현재로서는 뚜렷한 상승 모멘텀이 보이지 않아 관망하는 것이 좋습니다.",
+          "close": 15.84000015258789,
+          "change_pct": 5.670449596053073,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0023048786894234925,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
     }
   ]
 }
