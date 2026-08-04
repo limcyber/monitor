@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-08-03 02:19 ET",
+  "updated_at_et": "2026-08-03 20:05 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-04-21 01:25 ET",
-      "market_data_as_of": "2026-04-21 15:30 KST (Close)",
-      "status": "error",
-      "error": "한국 종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-04-21 03:46 ET",
       "market_data_as_of": "2026-04-21 15:30 KST (Close)",
@@ -26983,6 +26976,172 @@
           "cross_highlights": [],
           "volume_ratio_20d": 0.3431081393946547,
           "rsi14": 46.67832167832168,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-08-03 20:05 ET",
+      "market_data_as_of": "2026-07-31 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 45,
+          "ai_state": "약세 전환",
+          "ai_action": "관망",
+          "ai_note": "최근 단기 데드크로스가 발생했으며, 5일선이 20일선 아래로 내려갔습니다. 거래량은 1.2배 증가했고 RSI는 49로 중립 구간에 있습니다. 보유 중이라면 50일선 이탈 시 손절을 고려해볼 수 있습니다.",
+          "close": 21050.0,
+          "change_pct": 14.030335861321785,
+          "score": 37,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "아이티센글로벌 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 1.2x (거래량 확인) / RSI 49 (중립)"
+          ],
+          "volume_ratio_20d": 1.1658610824730766,
+          "rsi14": 49.4818652849741,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 40,
+          "ai_state": "약세 유지",
+          "ai_action": "관망",
+          "ai_note": "종가가 20일선과 50일선 아래에 위치하며 약세 흐름을 이어가고 있습니다. 거래량은 1.3배 증가했으나 RSI는 42로 하락세가 우세합니다. 현재 구간에서는 추가 하락 가능성을 염두에 두고 관망하는 것이 좋습니다.",
+          "close": 23200.0,
+          "change_pct": 13.725490196078427,
+          "score": 36,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.3560405136899527,
+          "rsi14": 42.33128834355829,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 30,
+          "ai_state": "약세 전환",
+          "ai_action": "관망",
+          "ai_note": "최근 중기 데드크로스가 발생하며 20일선이 50일선 아래로 내려왔습니다. 거래량은 1.8배로 강하게 유입되었으나 RSI는 45로 중립 구간입니다. 외국인 투자자들이 376만 주를 공매도하며 하락 베팅에 나선 점은 부담 요인입니다.",
+          "close": 262500.0,
+          "change_pct": 26.811594202898558,
+          "score": 28,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "삼성전자 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 1.8x (거래량 강함) / RSI 45 (중립)"
+          ],
+          "volume_ratio_20d": 1.820888916905074,
+          "rsi14": 45.39877300613497,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 20,
+          "ai_state": "약세 유지",
+          "ai_action": "관망",
+          "ai_note": "중기 데드크로스가 발생했으며, 20일선이 50일선 아래로 내려왔습니다. 거래량은 1.5배로 강하게 유입되었으나 RSI는 39로 하락세가 우세합니다. 중국 CXMT의 상장으로 범용 DRAM 마진 압박이 예상되는 점도 부담입니다.",
+          "close": 1718000.0,
+          "change_pct": 29.954614220877463,
+          "score": 11,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "SK하이닉스 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 1.5x (거래량 강함) / RSI 39 (하방 우세)"
+          ],
+          "volume_ratio_20d": 1.5466173915143495,
+          "rsi14": 39.32532347504621,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 45,
+          "ai_state": "약세 유지",
+          "ai_action": "관망",
+          "ai_note": "종가가 50일선 아래에 위치하며 약세 흐름을 보이고 있습니다. 거래량은 1.4배 증가했고 RSI는 56으로 중립 구간에 있습니다. 현재 구간에서는 50일선 돌파 여부를 확인하며 신중하게 접근하는 것이 좋습니다.",
+          "close": 208000.0,
+          "change_pct": 6.831022085259364,
+          "score": 39,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.4254416727617165,
+          "rsi14": 56.59037095501184,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 25,
+          "ai_state": "약세 유지",
+          "ai_action": "관망",
+          "ai_note": "시장에서 상대적으로 힘이 약한 모습을 보이며, 종가가 20일선과 50일선 아래에 위치합니다. 거래량은 1.1배로 소폭 증가했으며 RSI는 35로 하락세가 강합니다. 현대차·기아는 7월 미국 판매 역대 최대를 기록했으나 국내 판매는 감소했습니다.",
+          "close": 388000.0,
+          "change_pct": 10.541310541310533,
+          "score": 13,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.1481252661036463,
+          "rsi14": 35.05376344086021,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 30,
+          "ai_state": "약세 유지",
+          "ai_action": "관망",
+          "ai_note": "종가가 20일선과 50일선 아래에 위치하며 약세 흐름을 보이고 있습니다. 거래량은 1.1배로 소폭 증가했으며 RSI는 46으로 중립 구간입니다. 최근 4548억원 규모의 eVTOL 부품 공급 계약을 해지하며 사업 재편에 나섰습니다.",
+          "close": 917000.0,
+          "change_pct": 6.0115606936416155,
+          "score": 16,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.1357403991882433,
+          "rsi14": 46.03174603174603,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 30,
+          "ai_state": "약세 유지",
+          "ai_action": "관망",
+          "ai_note": "시장에서 상대적으로 힘이 약한 모습을 보이며, 종가가 20일선과 50일선 아래에 위치합니다. 거래량은 0.75배로 감소했으며 RSI는 45로 중립 구간입니다. LIG D&A는 일본 IERAE와 무인체계 및 우주 사이버보안 협력을 강화하고 있습니다.",
+          "close": 699000.0,
+          "change_pct": 9.048361934477377,
+          "score": 28,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.750082967677999,
+          "rsi14": 45.71917808219178,
           "signals": {
             "short_cross": "none",
             "mid_cross": "none"
