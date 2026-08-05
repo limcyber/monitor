@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-08-05 11:09 ET",
+  "updated_at_et": "2026-08-05 12:58 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-07-20 21:56 ET",
-      "market_data_as_of": "2026-07-20 16:00 ET (Close)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-07-21 01:17 ET",
       "market_data_as_of": "2026-07-20 16:00 ET (Close)",
@@ -21320,6 +21313,168 @@
           "action": "보류 / 관찰",
           "cross_highlights": [],
           "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-08-05 12:58 ET",
+      "market_data_as_of": "2026-08-05 11:25 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 75,
+          "ai_state": "강한 상승",
+          "ai_action": "매수",
+          "ai_note": "SpaceX가 AI 워크로드를 위해 NVIDIA의 Vera Rubin 플랫폼을 사용할 것이라는 소식이 있습니다. 단기 골든크로스 신호와 함께 거래량은 약하지만 RSI는 상방 우세를 보입니다.",
+          "close": 219.05499267578125,
+          "change_pct": 3.357077546671272,
+          "score": 65,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "NVDA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 59 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.006561451925219352,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 15,
+          "ai_state": "약한 하락",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "최근 실적 발표 후 투자자들이 더 많은 것을 기대했으나, 주가는 하락했습니다. 현재 시장보다 힘이 약한 모습입니다.",
+          "close": 322.1300048828125,
+          "change_pct": -1.5946238348480302,
+          "score": 8,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.003969296297735761,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 30,
+          "ai_state": "약한 하락",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "인도 정부와의 규제 문제 및 CSAM 콘텐츠 관련 사과 소식이 있습니다. 시장 대비 약한 흐름을 보이고 있습니다.",
+          "close": 586.0750122070312,
+          "change_pct": -0.3172075767307381,
+          "score": 33,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.005579335078129619,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 40,
+          "ai_state": "혼조세",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "데이터센터 매출은 크게 성장했으나, 게이밍 매출 감소와 경쟁 심화 우려가 있습니다. 최근 중기 데드크로스 신호가 나왔습니다.",
+          "close": 483.4649963378906,
+          "change_pct": -6.771379458277405,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "AMD 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 47 (중립)"
+          ],
+          "volume_ratio_20d": 0.008740457653870564,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 10,
+          "ai_state": "하락",
+          "ai_action": "회피",
+          "ai_note": "최근 중기 데드크로스 신호가 나왔으며, 시장 대비 약한 흐름을 보이고 있습니다.",
+          "close": 47.38999938964844,
+          "change_pct": 0.722635830183127,
+          "score": 2,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "TEM 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 35 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0009924668320676678,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 15,
+          "ai_state": "하락",
+          "ai_action": "회피",
+          "ai_note": "반도체 ETF가 최근 관세 이슈로 하락했으나, 마이크론 목표가 상향으로 반등 조짐을 보입니다. 그러나 최근 중기 데드크로스 신호가 나왔습니다.",
+          "close": 532.6500244140625,
+          "change_pct": -1.7631539756149839,
+          "score": 1,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SOXX 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 50 (중립)"
+          ],
+          "volume_ratio_20d": 0.0061328526894312224,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 25,
+          "ai_state": "약한 상승",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "2분기 실적 발표를 앞두고 있으며, 로봇 사업 확장 소식이 있습니다. 최근 단기 골든크로스 신호가 나왔으나 거래량은 약합니다.",
+          "close": 5.574999809265137,
+          "change_pct": -2.0210939683452223,
+          "score": 6,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SERV 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 55 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.009780428630238813,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 5,
+          "ai_state": "매우 약한 상승",
+          "ai_action": "회피",
+          "ai_note": "한국 증시의 높은 변동성과 칩 섹터의 약세가 부담입니다. 최근 중기 데드크로스 신호가 나왔습니다.",
+          "close": 18.815000534057617,
+          "change_pct": -1.5951898106088658,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0028855148291564913,
           "signals": {
             "short_cross": "none",
             "mid_cross": "none"
