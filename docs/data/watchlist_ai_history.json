@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-08-04 22:11 ET",
+  "updated_at_et": "2026-08-05 01:27 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-07-20 14:49 ET",
-      "market_data_as_of": "2026-07-20 14:20 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-07-20 16:16 ET",
       "market_data_as_of": "2026-07-20 16:00 ET (Close)",
@@ -21158,6 +21151,166 @@
           "ai_state": "하락",
           "ai_action": "관망",
           "ai_note": "최근 급등 후 시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 있습니다. 단기 급등에 따른 조정 가능성이 있으므로 관망하는 것이 좋습니다.",
+          "close": 19.29010009765625,
+          "change_pct": 21.55072612955271,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.00223580900476996,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-08-05 01:27 ET",
+      "market_data_as_of": "2026-08-04 15:00 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 75,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "SK 그룹과의 파트너십 확대 소식이 있으며, AI 팩토리 및 차세대 메모리 분야 협력을 강화합니다. 최근 일본 및 한국에서 AI 인프라 구축 파트너십을 발표하며 기술 리더십을 공고히 하고 있습니다. 단기 데드크로스 신호가 있으나, 전반적인 시장 강세와 AI 수요 증가로 보유 관점을 유지합니다.",
+          "close": 212.97999572753906,
+          "change_pct": 3.0681360610806507,
+          "score": 58,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "NVDA 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 50 (중립)"
+          ],
+          "volume_ratio_20d": 0.0072540654553828405,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "2분기 차량 인도량이 전년 대비 25% 증가했으나, FSD 월 구독료 인상 계획 등은 아직 시장의 큰 호응을 얻지 못하고 있습니다. 최근 20일선 및 50일선 아래에 위치하며 약세를 보이고 있어 추가 하락 가능성을 염두에 두고 관망하는 것이 좋습니다.",
+          "close": 328.82000732421875,
+          "change_pct": 2.0926543197184566,
+          "score": 3,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.004629039330748952,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 40,
+          "ai_state": "관망",
+          "ai_action": "보류",
+          "ai_note": "직원 감시 프로그램 중단 소식이 있었으나, 전반적으로 시장 대비 약한 흐름을 보이고 있습니다. 20일선 및 50일선 아래에 위치하며 추가적인 상승 모멘텀이 부족해 보입니다. 현재로서는 적극적인 매수보다는 관망하며 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 588.8300170898438,
+          "change_pct": -0.23888133096020558,
+          "score": 32,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0024807418236640244,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 85,
+          "ai_state": "강세",
+          "ai_action": "보유",
+          "ai_note": "데이터센터 부문 매출이 전년 동기 대비 107% 증가하며 사상 최대 실적을 기록했습니다. 마이크로소프트 CEO의 CPU 중요성 강조 발언은 긍정적이며, AI 시장 성장에 따른 수혜가 기대됩니다. 최근 단기 골든크로스 신호가 나타났으며, 시장 강세와 함께 보유를 유지하는 것이 좋겠습니다.",
+          "close": 529.1900024414062,
+          "change_pct": 9.1923874311711,
+          "score": 14,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "AMD 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 50 (중립)"
+          ],
+          "volume_ratio_20d": 0.00868118750190733,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "2분기 실적은 예상치보다 좋았으나, CEO의 대규모 주식 매도 소식이 있었습니다. 최근 중기 데드크로스 신호가 발생했으며, 거래량도 약한 편입니다. 현재로서는 추가 하락 가능성을 염두에 두고 관망하는 것이 좋겠습니다.",
+          "close": 47.61000061035156,
+          "change_pct": 3.3876251881358233,
+          "score": 2,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "TEM 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 30 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.003931643586671696,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 50,
+          "ai_state": "중립",
+          "ai_action": "보류",
+          "ai_note": "반도체 ETF인 SOXX는 최근 4거래일간 큰 폭의 상승을 보였으나, 여전히 7월의 하락폭을 완전히 회복하지 못했습니다. 중국 DUV 공정 관련 이슈와 지정학적 긴장감이 부담으로 작용할 수 있습니다. 단기 반등 후 숨 고르기 구간으로 보이며, 추세 전환을 확인하며 접근하는 것이 좋겠습니다.",
+          "close": 545.0599975585938,
+          "change_pct": 7.362906835425442,
+          "score": 6,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SOXX 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 48 (중립)"
+          ],
+          "volume_ratio_20d": 0.011038678373341312,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 35,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "2분기 실적 발표 예정이며, 1분기 매출은 전년 동기 대비 크게 성장했습니다. 하지만 주가는 최근 52주 최저가 근처에서 움직이고 있으며, 효율성 증대에 집중한다는 발표는 성장에 대한 우려를 일부 반영하는 것으로 보입니다. 당분간 관망하며 실적 발표를 지켜보는 것이 좋겠습니다.",
+          "close": 5.75,
+          "change_pct": 1.7699097866309854,
+          "score": 4,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.003542126731212704,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 10,
+          "ai_state": "매우 약세",
+          "ai_action": "매도",
+          "ai_note": "암호화폐 KORU는 최근 급격한 하락세를 보이며 거래량이 매우 저조합니다. 시장 전반의 약세와 지정학적 긴장감이 투자 심리를 위축시키고 있습니다. 현재로서는 명확한 반등 신호가 없으므로, 보유 중이라면 손절을 고려하거나 신규 진입은 피하는 것이 좋겠습니다.",
           "close": 19.29010009765625,
           "change_pct": 21.55072612955271,
           "score": 0,
