@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-08-05 19:57 ET",
+  "updated_at_et": "2026-08-05 22:45 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-04-22 22:26 ET",
-      "market_data_as_of": "2026-04-21 15:30 KST (Close)",
-      "status": "error",
-      "error": "한국 종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-04-23 01:28 ET",
       "market_data_as_of": "2026-04-23 15:30 KST (Close)",
@@ -26826,6 +26819,176 @@
           ],
           "volume_ratio_20d": 0.6633845233144661,
           "rsi14": 53.99610136452241,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-08-05 22:45 ET",
+      "market_data_as_of": "2026-08-06 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 40,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "최근 단기 골든크로스 발생 및 거래량 증가가 긍정적이나, 50일선 하향 돌파는 부담 요인입니다. 현재 추세 유지 시 분할 매수 고려, 이탈 시 손절 고려.",
+          "close": 25050.0,
+          "change_pct": 6.823027718550101,
+          "score": 37,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "아이티센글로벌 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 1.5x (거래량 강함) / RSI 62 (상방 우세)"
+          ],
+          "volume_ratio_20d": 1.5254972381193599,
+          "rsi14": 62.282091917591124,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 60,
+          "ai_state": "매수 고려",
+          "ai_action": "매수",
+          "ai_note": "정부 로봇 산업 육성 정책 발표와 함께 DLS 인수 마무리 기대감으로 급등했습니다. 단기 급등 부담은 있으나, 추세가 강해 추가 상승 가능성 있습니다. 33,000원 돌파 시 매수 고려.",
+          "close": 32550.0,
+          "change_pct": 14.612676056338024,
+          "score": 56,
+          "state": "애매",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "클로봇 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 2.7x (거래량 강함) / RSI 67 (상방 우세)"
+          ],
+          "volume_ratio_20d": 2.709256413357801,
+          "rsi14": 66.66666666666666,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 20,
+          "ai_state": "회피",
+          "ai_action": "매도",
+          "ai_note": "주주환원 확대 검토 소식에도 불구하고 시장 대비 약한 흐름을 보이고 있습니다. 20일선 및 50일선 하향 돌파는 부정적 신호이며, 반등 시 매도 고려.",
+          "close": 236500.0,
+          "change_pct": -3.861788617886175,
+          "score": 18,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.17048725693126224,
+          "rsi14": 45.45454545454545,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 15,
+          "ai_state": "회피",
+          "ai_action": "매도",
+          "ai_note": "중기 데드크로스 발생 및 시장 대비 약한 흐름이 지속되고 있습니다. 주주환원 확대 검토 소식에도 불구하고 주가 반등이 미미하며, 추가 하락 가능성에 대비하여 매도 고려.",
+          "close": 1547000.0,
+          "change_pct": -7.254196642685851,
+          "score": 9,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "SK하이닉스 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.2x (거래량 약함) / RSI 41 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.16013329823257436,
+          "rsi14": 41.449275362318836,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 45,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "AI 데이터센터 인프라 투자 확대 소식은 긍정적이나, 거래량이 아직 약합니다. 230,000원 돌파 및 거래량 증가 시 매수 고려, 이탈 시 손절 고려.",
+          "close": 228500.0,
+          "change_pct": -0.21834061135370675,
+          "score": 47,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.2166196721154872,
+          "rsi14": 64.33358153387937,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 25,
+          "ai_state": "회피",
+          "ai_action": "매도",
+          "ai_note": "",
+          "close": 399500.0,
+          "change_pct": -1.2360939431396822,
+          "score": 20,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.16739845333759532,
+          "rsi14": 43.73464373464373,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 40,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "단기 골든크로스 발생했으나 거래량이 약하고, UAM 사업 계약 해지 소식은 부담입니다. 105,000원 지지 여부 확인 후 추세 전환 시 매수 고려, 이탈 시 손절 고려.",
+          "close": 1034000.0,
+          "change_pct": 2.6812313803376453,
+          "score": 44,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.1x (거래량 약함) / RSI 58 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.09643732360659901,
+          "rsi14": 57.83132530120482,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 35,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "단기 골든크로스 발생했으나 거래량이 약하고, 방위사업청 직원 뇌물 공여 혐의 관련 방산업체 임직원 구속 소식은 부담입니다. 79,000원 지지 여부 확인 후 추세 전환 시 매수 고려, 이탈 시 손절 고려.",
+          "close": 787000.0,
+          "change_pct": -1.3784461152882233,
+          "score": 40,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "LIG넥스원 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.1x (거래량 약함) / RSI 54 (중립)"
+          ],
+          "volume_ratio_20d": 0.146829197422114,
+          "rsi14": 53.68217054263566,
           "signals": {
             "short_cross": "bull",
             "mid_cross": "none"
