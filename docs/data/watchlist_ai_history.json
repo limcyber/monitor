@@ -1,167 +1,7 @@
 {
-  "updated_at_et": "2026-08-07 07:20 ET",
+  "updated_at_et": "2026-08-07 08:05 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-07-22 13:47 ET",
-      "market_data_as_of": "2026-07-22 12:50 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 75,
-          "ai_state": "강세",
-          "ai_action": "보유 / 분할 매수",
-          "ai_note": "AI 칩 시장 지배력 강화 소식과 함께 공급망 확장 뉴스가 긍정적입니다. 50일선과 20일선 위에 있어 추세가 견조하며, RSI 63은 추가 상승 여력을 시사합니다.",
-          "close": 213.61000061035156,
-          "change_pct": 3.048872366692068,
-          "score": 52,
-          "state": "애매",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0014492585224099355,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 20,
-          "ai_state": "약세",
-          "ai_action": "회피 / 관망",
-          "ai_note": "단기 데드크로스 발생 및 RSI 34로 하방 압력이 높습니다. 로보택시 확장 기대감과 밸류에이션 우려가 상존하며, 실적 발표를 앞두고 변동성이 클 수 있습니다.",
-          "close": 377.29998779296875,
-          "change_pct": -0.430159901385041,
-          "score": 19,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [
-            "TSLA 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 34 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.0006008940559649765,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 85,
-          "ai_state": "매우 강세",
-          "ai_action": "소량 보유 / 분할 매수",
-          "ai_note": "중기 골든크로스 발생 및 시장 대비 강한 흐름을 보이고 있습니다. RSI 54는 중립 구간이나, AI 수익화 기대감과 긍정적 분석이 주가 상승을 뒷받침할 수 있습니다.",
-          "close": 629.7249755859375,
-          "change_pct": -2.1877606787823023,
-          "score": 83,
-          "state": "강함",
-          "action": "아주 소규모 / 대기",
-          "cross_highlights": [
-            "META 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 54 (중립)"
-          ],
-          "volume_ratio_20d": 0.0005294383155245372,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 70,
-          "ai_state": "강세",
-          "ai_action": "보유 / 분할 매수",
-          "ai_note": "Anthropic과의 대규모 파트너십 및 투자 소식이 긍정적입니다. 시장 대비 강한 흐름과 50일선, 20일선 위에 있어 추세가 양호하나, 단기 데드크로스 신호는 주의가 필요합니다.",
-          "close": 554.6500244140625,
-          "change_pct": 1.8771985151022852,
-          "score": 67,
-          "state": "양호",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [
-            "AMD 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 52 (중립)"
-          ],
-          "volume_ratio_20d": 0.0008118975287910266,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 25,
-          "ai_state": "약세",
-          "ai_action": "회피 / 관망",
-          "ai_note": "단기 데드크로스 및 RSI 26으로 과매도 구간에 진입했습니다. Personalis 인수 관련 우려와 주가 하락세가 지속되고 있어 추가 하락 가능성을 염두에 두어야 합니다.",
-          "close": 47.33000183105469,
-          "change_pct": -3.368717285835865,
-          "score": 23,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [
-            "TEM 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 26 (과매도 구간)"
-          ],
-          "volume_ratio_20d": 2.2367929641749467e-05,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 30,
-          "ai_state": "약세",
-          "ai_action": "회피 / 관망",
-          "ai_note": "반도체 섹터 전반의 약세와 Micron의 부진이 영향을 미치고 있습니다. 20일선 및 50일선 아래에 있으며 RSI 41로 하방 압력이 높습니다.",
-          "close": 558.0391235351562,
-          "change_pct": 0.9678338797737052,
-          "score": 20,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0007601952927253838,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 15,
-          "ai_state": "매우 약세",
-          "ai_action": "회피",
-          "ai_note": "시장 대비 약한 흐름과 20일선, 50일선 아래에 있어 추세가 좋지 않습니다. 로보틱스 섹터 내에서도 투자 매력이 낮아 보이며, 추가 하락 가능성이 있습니다.",
-          "close": 5.355000019073486,
-          "change_pct": -0.46468577761414886,
-          "score": 14,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0002615848287174888,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 10,
-          "ai_state": "매우 약세",
-          "ai_action": "회피",
-          "ai_note": "시장 대비 약한 흐름과 20일선, 50일선 아래에 있어 추세가 매우 좋지 않습니다. Direxion Daily MSCI South Korea Bull 3X Shares ETF로, 한국 시장의 전반적인 약세가 영향을 미치고 있습니다.",
-          "close": 21.1200008392334,
-          "change_pct": -2.8071731056288463,
-          "score": 11,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.00035164173311098476,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-07-22 15:00 ET",
       "market_data_as_of": "2026-07-22 14:00 ET (5분봉)",
@@ -22588,6 +22428,13 @@
           }
         }
       ]
+    },
+    {
+      "generated_at_et": "2026-08-07 08:05 ET",
+      "market_data_as_of": "2026-08-06 10:41 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
     }
   ]
 }
