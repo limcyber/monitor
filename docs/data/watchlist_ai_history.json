@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-08-10 01:18 ET",
+  "updated_at_et": "2026-08-10 02:49 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-07-28 08:49 ET",
-      "market_data_as_of": "2026-07-27 15:00 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-07-28 11:13 ET",
       "market_data_as_of": "2026-07-28 10:30 ET (5분봉)",
@@ -20753,6 +20746,169 @@
           "ai_state": "매우 약세",
           "ai_action": "매도 고려",
           "ai_note": "시장 대비 약한 흐름을 보이며 20일선 및 50일선 아래에 있습니다. 2분기 실적은 개선되었으나 연간 매출 가이던스를 하향 조정했습니다. 보유 중이라면 손절 또는 비중 축소를 고려해 볼 수 있습니다.",
+          "close": 17.35770034790039,
+          "change_pct": 3.258185005107639,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.7113306716513188,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-08-10 02:49 ET",
+      "market_data_as_of": "2026-08-07 16:00 ET (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 85,
+          "ai_state": "강세",
+          "ai_action": "매수",
+          "ai_note": "최근 중기 골든크로스 발생 및 거래량 증가 추세. 스페이스X의 AI 하드웨어 도입 소식은 수요 증가를 뒷받침합니다. 보유 중이라면 추세 유지 시 홀딩을 고려해볼 수 있습니다.",
+          "close": 223.9600067138672,
+          "change_pct": 2.2695105237842794,
+          "score": 80,
+          "state": "강함",
+          "action": "매수 가능",
+          "cross_highlights": [
+            "NVDA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.8x (거래량 약함) / RSI 66 (상방 우세)",
+            "NVDA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.8x (거래량 약함) / RSI 66 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.7817886325486875,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "20일선 아래에서 거래 중이며, 최근 분기별 차량 인도량 감소가 있었습니다. AI 및 로보틱스 전환 노력에도 불구하고 현재는 매수 신호가 약합니다.",
+          "close": 328.5799865722656,
+          "change_pct": 2.832281108985857,
+          "score": 12,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.9672375940608465,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "AI 투자 증가로 인한 현금 흐름 감소 우려와 함께, 아동 보호 관련 소송 및 벌금 소식이 부담으로 작용하고 있습니다.",
+          "close": 592.0999755859375,
+          "change_pct": 0.3729362740847675,
+          "score": 33,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5832822173037784,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 75,
+          "ai_state": "강세",
+          "ai_action": "매수 고려",
+          "ai_note": "AI 추론 시장 강화를 위한 Taalas 인수 소식은 긍정적입니다. 데이터센터 부문 매출 성장세가 지속되고 있으며, 경쟁사 대비 좋은 흐름을 보이고 있습니다.",
+          "close": 483.3599853515625,
+          "change_pct": -1.2099438854038969,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "AMD 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.9x (거래량 보통) / RSI 47 (중립)"
+          ],
+          "volume_ratio_20d": 0.8508912012461578,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 40,
+          "ai_state": "중립",
+          "ai_action": "관망",
+          "ai_note": "2분기 실적은 매출 및 이익 모두 개선되었으나, 중기 데드크로스 신호가 관찰됩니다. AI 기반 정밀 종양학 플랫폼 강화 노력은 긍정적입니다.",
+          "close": 52.04999923706055,
+          "change_pct": 12.85776331854187,
+          "score": 27,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "TEM 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 1.0x (거래량 보통) / RSI 58 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.9946411506703083,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 35,
+          "ai_state": "중립",
+          "ai_action": "관망",
+          "ai_note": "최근 반도체 섹터 전반의 조정이 있었으나, AI 수요는 여전히 강합니다. 단기 골든크로스 신호가 있으나 거래량은 약한 편입니다.",
+          "close": 543.27001953125,
+          "change_pct": 2.0187034488323485,
+          "score": 16,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SOXX 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.5x (거래량 약함) / RSI 54 (중립)"
+          ],
+          "volume_ratio_20d": 0.4831593129574736,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 15,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "2분기 매출은 성장했으나, 20일선 아래에서 거래 중이며 가이던스 하향 조정 소식이 있습니다. 로봇 활용도 및 생산성 향상에 집중하고 있습니다.",
+          "close": 5.085000038146973,
+          "change_pct": -10.475348735453839,
+          "score": 10,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SERV 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 2.7x (거래량 강함) / RSI 48 (중립)"
+          ],
+          "volume_ratio_20d": 2.719085036915015,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 10,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "2분기 실적은 개선되었으나, 국제 시장 타이밍 지연으로 인한 연간 매출 가이던스 축소 소식이 주가에 부정적인 영향을 미쳤습니다.",
           "close": 17.35770034790039,
           "change_pct": 3.258185005107639,
           "score": 0,
