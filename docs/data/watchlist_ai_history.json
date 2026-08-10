@@ -1,164 +1,7 @@
 {
-  "updated_at_et": "2026-08-10 19:04 ET",
+  "updated_at_et": "2026-08-10 19:58 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-07-29 15:50 ET",
-      "market_data_as_of": "2026-07-29 14:35 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 30,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "최근 AI 메모리 및 칩 관련 하락세 속에서 일부 회복세를 보이고 있으나, 순환 금융 거래에 대한 우려가 투자자들 사이에서 제기되고 있습니다. 20일선 아래에서 거래되고 있으며 RSI가 41로 하락 추세에 있습니다.",
-          "close": 193.10000610351562,
-          "change_pct": -1.7352747944846647,
-          "score": 18,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 25,
-          "ai_state": "약세",
-          "ai_action": "비중 축소",
-          "ai_note": "최근 텍사스 태양광 프로젝트 계약 소식이 있었으나, 주가는 7일간 17.8%, 30일간 25.35% 하락하며 압박을 받고 있습니다. 20일선 아래에서 거래 중이며 RSI가 17로 매우 낮습니다.",
-          "close": 302.1300048828125,
-          "change_pct": -2.292864727346733,
-          "score": 12,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 60,
-          "ai_state": "중립",
-          "ai_action": "보유 유지",
-          "ai_note": "텍사스에 새로운 데이터 센터 건설을 위한 블랙록과의 합작 투자를 발표했습니다. 최근 중기 골든크로스가 나왔으나 단기 데드크로스도 발생하여 혼조세를 보이고 있으며, RSI는 48로 중립 구간입니다.",
-          "close": 594.2949829101562,
-          "change_pct": 0.07156242889234665,
-          "score": 59,
-          "state": "애매",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [
-            "META 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 48 (중립)",
-            "META 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 48 (중립)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 35,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "코어 사이언티픽과 2.5기가와트 규모의 AI 인프라 파트너십을 발표했으나, AI 칩 전반의 약세와 맞물려 주가는 하락했습니다. 20일선과 50일선 아래에서 거래 중이며 RSI는 37입니다.",
-          "close": 439.8599853515625,
-          "change_pct": -11.130422365243886,
-          "score": 19,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 20,
-          "ai_state": "약세",
-          "ai_action": "비중 축소",
-          "ai_note": "별도 최신 뉴스가 확인되지 않았으며, 시장 대비 약한 흐름을 보이고 있습니다. 20일선과 50일선 아래에서 거래 중이며 RSI는 25로 낮은 편입니다.",
-          "close": 42.04499816894531,
-          "change_pct": -2.0158510406495966,
-          "score": 24,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 15,
-          "ai_state": "약세",
-          "ai_action": "비중 축소",
-          "ai_note": "마이크론의 급락으로 인해 반도체 ETF 전반에 하락 압력이 가해지고 있습니다. 최근 중기 데드크로스가 발생했으며, RSI는 31로 하락 우세 구간입니다.",
-          "close": 476.0,
-          "change_pct": -7.793034498349005,
-          "score": 9,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [
-            "SOXX 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 31 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 20,
-          "ai_state": "약세",
-          "ai_action": "비중 축소",
-          "ai_note": "최근 이사회 임원 선임 소식이 있었으나, 주가는 하락세를 보이고 있습니다. 20일선과 50일선 아래에서 거래 중이며 RSI는 19로 매우 낮은 수준입니다.",
-          "close": 4.439899921417236,
-          "change_pct": -7.115068482491749,
-          "score": 11,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.004379404121979203,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 10,
-          "ai_state": "매우 약세",
-          "ai_action": "비중 축소",
-          "ai_note": "SK 하이닉스 실적 부진으로 인한 한국 증시 전반의 하락세와 함께 ETF가 큰 폭으로 하락하며 월간 최악의 하락률을 기록하고 있습니다. RSI는 27로 매우 낮은 수준입니다.",
-          "close": 13.34000015258789,
-          "change_pct": -22.486921195576283,
-          "score": 11,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-07-29 16:44 ET",
       "market_data_as_of": "2026-07-29 15:55 ET (5분봉)",
@@ -20983,6 +20826,13 @@
           }
         }
       ]
+    },
+    {
+      "generated_at_et": "2026-08-10 19:58 ET",
+      "market_data_as_of": "2026-08-10 15:05 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
     }
   ]
 }
