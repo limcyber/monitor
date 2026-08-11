@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-08-11 13:51 ET",
+  "updated_at_et": "2026-08-11 14:51 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-07-30 18:57 ET",
-      "market_data_as_of": "2026-07-30 15:15 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-07-30 20:00 ET",
       "market_data_as_of": "2026-07-30 15:15 ET (5분봉)",
@@ -21500,6 +21493,170 @@
           "action": "보류 / 관찰",
           "cross_highlights": [],
           "volume_ratio_20d": 0.0008648737051739556,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-08-11 14:51 ET",
+      "market_data_as_of": "2026-08-11 14:35 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 75,
+          "ai_state": "양호",
+          "ai_action": "선별 매수",
+          "ai_note": "최근 중기 및 단기 골든크로스가 발생했으나 거래량이 약합니다. 보유 중이라면 20일선 지지 여부를 확인하며 추세를 이어가는 것이 좋습니다.",
+          "close": 216.75999450683594,
+          "change_pct": -0.36313883421731363,
+          "score": 75,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "NVDA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 54 (중립)",
+            "NVDA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 54 (중립)"
+          ],
+          "volume_ratio_20d": 0.0007362399624527974,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 10,
+          "ai_state": "회피",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "20일선과 50일선 아래에 있어 현재 매수 시점은 아닙니다. 시장 전반의 상승 추세 속에서 반등 시점을 기다리는 것이 좋습니다.",
+          "close": 331.30999755859375,
+          "change_pct": 0.1299542642153817,
+          "score": 8,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0007739083321572586,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 45,
+          "ai_state": "약함",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "시장 대비 약한 흐름을 보이며 20일선 아래에 있습니다. 시장 강세에도 불구하고 종목 자체의 힘이 약하므로 추가적인 반등 신호를 기다려야 합니다.",
+          "close": 602.8599853515625,
+          "change_pct": 1.3346336767116718,
+          "score": 46,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0006385962489316453,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 5,
+          "ai_state": "회피",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "최근 중기 데드크로스가 발생했고 20일선 및 50일선 아래에 있습니다. RSI도 하락세를 나타내므로 당분간 관망하는 것이 좋습니다.",
+          "close": 472.3299865722656,
+          "change_pct": 0.5899116253671455,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "AMD 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 37 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0010998712121570635,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 30,
+          "ai_state": "혼조세",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "단기 골든크로스가 나왔으나 중기 데드크로스가 발생하여 혼조세입니다. 거래량도 약하므로 추세 전환을 좀 더 지켜볼 필요가 있습니다.",
+          "close": 54.935001373291016,
+          "change_pct": -0.22702505790461736,
+          "score": 29,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "TEM 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 68 (상방 우세)",
+            "TEM 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 68 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 15,
+          "ai_state": "회피",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "단기 골든크로스에도 불구하고 거래량이 약하고 50일선 아래에 있습니다. 시장 강세에도 불구하고 상승 모멘텀이 부족하므로 관망이 필요합니다.",
+          "close": 531.4349975585938,
+          "change_pct": 0.3862904198361772,
+          "score": 16,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SOXX 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 44 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0009838958098796285,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 10,
+          "ai_state": "회피",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "단기 골든크로스가 나왔으나 20일선 및 50일선 아래에 있고 거래량도 약합니다. 하락 추세가 지속될 가능성이 있어 매수를 보류하는 것이 좋습니다.",
+          "close": 4.896599769592285,
+          "change_pct": -0.47561598249581394,
+          "score": 9,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SERV 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 43 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0014232235523632655,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 5,
+          "ai_state": "회피",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "20일선과 50일선 아래에 있어 현재 매수 시점은 아닙니다. 큰 폭의 상승 후 조정을 보이고 있어 추가 하락 가능성을 염두에 두어야 합니다.",
+          "close": 17.389999389648438,
+          "change_pct": 5.971965577994065,
+          "score": 3,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0002498904549585075,
           "signals": {
             "short_cross": "none",
             "mid_cross": "none"
