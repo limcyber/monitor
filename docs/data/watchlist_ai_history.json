@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-08-11 19:31 ET",
+  "updated_at_et": "2026-08-11 21:14 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-07-31 07:37 ET",
-      "market_data_as_of": "2026-07-30 15:15 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-07-31 09:46 ET",
       "market_data_as_of": "2026-07-31 09:01 ET (5분봉)",
@@ -21830,6 +21823,170 @@
       "status": "error",
       "error": "종목 AI 분석 실패: Extra data: line 59 column 1 (char 1995)",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-08-11 21:14 ET",
+      "market_data_as_of": "2026-08-11 15:40 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 90,
+          "ai_state": "강한 상승",
+          "ai_action": "매수",
+          "ai_note": "NVIDIA는 주요 금융 기관들과 5천억 달러 규모의 AI 인프라 파이낸싱 파트너십을 발표하며 월스트리트의 긍정적인 평가를 받고 있습니다. 이는 AI 생태계 전반에 걸쳐 회사의 역할을 확장하고 장기적인 수익 기회를 창출할 수 있습니다. 단기적으로는 1% 이상 상승한 모습을 보였으며, 보유 중이라면 긍정적인 추세를 이어갈 것으로 보입니다.",
+          "close": 217.9499969482422,
+          "change_pct": 0.18386296983374795,
+          "score": 80,
+          "state": "강함",
+          "action": "매수 가능",
+          "cross_highlights": [
+            "NVDA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 55 (중립)",
+            "NVDA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 55 (중립)"
+          ],
+          "volume_ratio_20d": 0.0034593456984517183,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "현재 20일선 아래에 위치하며 약세를 보이고 있습니다. 특별한 호재나 악재 뉴스가 없어 추세를 지켜보며 관망하는 것이 좋겠습니다.",
+          "close": 332.4100036621094,
+          "change_pct": 0.4624029124512319,
+          "score": 8,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.004910873315033295,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 45,
+          "ai_state": "중립",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "최근 AI 모델 출시와 함께 오픈소스 AI에 대한 비전을 제시했으나, 아동 안전 문제와 관련된 법적 이슈로 인해 주가에 부담이 될 수 있습니다. 현재 20일선 아래에 있어 추가적인 상승 모멘텀을 확인해야 합니다.",
+          "close": 600.719970703125,
+          "change_pct": 0.9749189739092445,
+          "score": 46,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0050626136443434906,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 75,
+          "ai_state": "상승",
+          "ai_action": "매수 가능",
+          "ai_note": "AI 인프라 수요 증가와 장기적인 실적 기대감으로 상승세를 보이고 있으며, 최근 Taalas 인수와 Helios AI 시스템 출시로 경쟁력을 강화하고 있습니다. 다만, 일부 기관의 매도 물량과 밸류에이션 부담은 주의해야 합니다. 보유 중이라면 긍정적인 추세를 유지하며 추가 상승을 기대해볼 수 있습니다.",
+          "close": 475.1400146484375,
+          "change_pct": 1.1883501829065946,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "AMD 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 37 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.004428303788928966,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 35,
+          "ai_state": "약세",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "최근 Personalis 인수 발표 후 주가가 하락했으나, AI 기반 정밀 종양학 플랫폼 강화 기대감은 여전히 유효합니다. 단기적으로는 20일선 아래에 위치하며 약세를 보이고 있어 관망이 필요합니다.",
+          "close": 56.349998474121094,
+          "change_pct": 2.3428933321019585,
+          "score": 29,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "TEM 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 70 (과열 구간)",
+            "TEM 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 70 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.006807668884042176,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 40,
+          "ai_state": "중립",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "반도체 섹터 ETF로, 최근 거래량이 약하고 50일선 아래에 위치하여 특별한 모멘텀이 보이지 않습니다. 시장 전반의 흐름을 주시하며 반도체 섹터의 방향성을 확인하는 것이 좋겠습니다.",
+          "close": 533.3900146484375,
+          "change_pct": 0.7555865976536014,
+          "score": 16,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SOXX 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 45 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.005645906592127303,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "보유 / 관찰",
+          "ai_note": "Uber가 지분을 전량 매각하며 주가에 부정적인 영향을 미쳤습니다. 20일선 아래에 위치하며 약세를 보이고 있어 당분간은 관망하는 것이 좋겠습니다.",
+          "close": 4.925000190734863,
+          "change_pct": 0.10162834071913984,
+          "score": 9,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SERV 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 44 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0075713981170052805,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 15,
+          "ai_state": "매우 약세",
+          "ai_action": "회피",
+          "ai_note": "최근 한국 증시의 하락세와 반도체 주 약세의 영향을 받아 급락했습니다. 20일선 및 50일선 아래에 위치하며 매우 약한 추세를 보이고 있어 당분간은 투자를 피하는 것이 좋겠습니다.",
+          "close": 17.53499984741211,
+          "change_pct": 6.855575932119318,
+          "score": 3,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0011917872672265655,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
     }
   ]
 }
