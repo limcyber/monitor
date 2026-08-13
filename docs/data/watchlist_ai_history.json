@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-08-13 12:24 ET",
+  "updated_at_et": "2026-08-13 13:26 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-08-02 05:32 ET",
-      "market_data_as_of": "2026-07-31 16:00 ET (Close)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: Extra data: line 59 column 1 (char 1906)",
-      "items": []
-    },
     {
       "generated_at_et": "2026-08-02 07:11 ET",
       "market_data_as_of": "2026-07-31 16:00 ET (Close)",
@@ -22226,6 +22219,175 @@
             "KORU 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 57 (상방 우세)"
           ],
           "volume_ratio_20d": 0.0007216750626781877,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-08-13 13:26 ET",
+      "market_data_as_of": "2026-08-13 13:05 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 85,
+          "ai_state": "강한 상승",
+          "ai_action": "매수",
+          "ai_note": "NVIDIA는 AI 인프라 자금 조달을 위해 월스트리트와 협력하고 있으며, CEO가 AI 부채 우려를 완화하면서 주가가 상승했습니다. 중기 골든크로스 신호와 함께 거래량은 약하지만 RSI는 64로 상승 추세를 지지합니다. 보유 중이라면 추세가 유지되는지 확인하며 홀딩하는 것이 좋습니다.",
+          "close": 225.4499969482422,
+          "change_pct": 0.6068992960760689,
+          "score": 78,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "NVDA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 64 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.002792306122668156,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 30,
+          "ai_state": "혼조세",
+          "ai_action": "보류",
+          "ai_note": "Tesla는 로보택시 사업에 대한 기대감으로 주목받고 있으나, 최근 2만대 이상의 차량 리콜 소식이 있었습니다. 단기 골든크로스 신호가 있으나 거래량이 약하고 RSI가 64로 과열 구간 진입 가능성이 있어 관망이 필요합니다.",
+          "close": 335.57000732421875,
+          "change_pct": 2.4609927386224584,
+          "score": 16,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "TSLA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 64 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.00639702636397818,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 40,
+          "ai_state": "약한 상승",
+          "ai_action": "보류",
+          "ai_note": "Meta는 AI 분야에 대한 투자를 확대하고 있으며, 호주 10대 계정 75만 개를 삭제하는 등 플랫폼 규제 강화 움직임도 보입니다. 중기 데드크로스 신호와 약한 거래량, RSI 48로 인해 신중한 접근이 필요합니다.",
+          "close": 588.6699829101562,
+          "change_pct": 1.6964684699655619,
+          "score": 10,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "META 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 48 (중립)"
+          ],
+          "volume_ratio_20d": 0.0024877693716307465,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 25,
+          "ai_state": "약한 하락",
+          "ai_action": "보류",
+          "ai_note": "AMD는 AI 칩 스타트업 인수 및 데이터센터 파트너십을 발표했으나, 최근 실적 발표 후 주가가 하락했습니다. 중기 데드크로스 신호와 약한 거래량, RSI 45로 인해 추가 하락 가능성을 염두에 두어야 합니다.",
+          "close": 494.20001220703125,
+          "change_pct": 2.3336756263171665,
+          "score": 4,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "AMD 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 45 (중립)"
+          ],
+          "volume_ratio_20d": 0.0027017668975448527,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 35,
+          "ai_state": "혼조세",
+          "ai_action": "보류",
+          "ai_note": "Tempus AI는 유전체학 회사 Personalis를 인수하며 AI 정밀 종양학 플랫폼을 강화했습니다. 단기 골든크로스와 중기 데드크로스가 동시에 나타나고 있으며, 거래량은 약하고 RSI는 79로 과열 구간에 있어 변동성이 클 수 있습니다.",
+          "close": 54.119998931884766,
+          "change_pct": -0.8972746255086372,
+          "score": 29,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "TEM 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 79 (과열 구간)",
+            "TEM 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 79 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.001192838811231434,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 45,
+          "ai_state": "약한 상승",
+          "ai_action": "보류",
+          "ai_note": "iShares Semiconductor ETF(SOXX)는 최근 반도체 섹터의 변동성 속에서 움직이고 있으며, 마이클 버리가 약세 베팅을 하고 있다는 소식도 있습니다. 단기 골든크로스 신호가 있으나 50일선 아래에 있고 거래량이 약하며 RSI 58로 상승 추세가 강하지 않습니다.",
+          "close": 560.4199829101562,
+          "change_pct": 2.526481024621541,
+          "score": 42,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SOXX 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 58 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.003910793846646814,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 10,
+          "ai_state": "하락",
+          "ai_action": "매도",
+          "ai_note": "Serve Robotics는 2026년 매출 가이던스를 대폭 하향 조정하고 우버와의 파트너십을 재조정했습니다. 단기 데드크로스 신호와 약한 거래량, RSI 51로 인해 하락 추세가 이어질 가능성이 높습니다.",
+          "close": 4.855000019073486,
+          "change_pct": 0.5176003263422269,
+          "score": 2,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SERV 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 51 (중립)"
+          ],
+          "volume_ratio_20d": 0.020416047452670727,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 20,
+          "ai_state": "하락",
+          "ai_action": "보류",
+          "ai_note": "KORU Medical Systems는 2분기 실적을 발표하며 수익성 개선을 보였으나, 연간 매출 가이던스를 축소했습니다. 단기 골든크로스와 중기 데드크로스가 동시에 나타나고 있으며, 거래량은 약하고 RSI 58로 상승 동력이 약합니다.",
+          "close": 21.809999465942383,
+          "change_pct": 7.332676149093098,
+          "score": 26,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "KORU 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 58 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.003114615331335305,
           "signals": {
             "short_cross": "bull",
             "mid_cross": "none"
