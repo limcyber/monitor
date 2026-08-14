@@ -1,169 +1,7 @@
 {
-  "updated_at_et": "2026-08-13 21:42 ET",
+  "updated_at_et": "2026-08-14 00:05 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-05-05 00:15 ET",
-      "market_data_as_of": "2026-05-04 15:30 KST (Close)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "124500.KQ",
-          "ai_score": 75,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "아이티센글로벌은 400억원 규모 전환사채 발행 소식과 함께 신사업 투자 확대 계획을 밝혔습니다. 이는 재무구조 개선 및 디지털 전환 가속화에 긍정적입니다. 다만, 최근 단기 급등 후 숨 고르기 구간으로, 추가 상승 여부는 신사업 성과와 시장 반응을 지켜봐야 합니다.",
-          "close": 61900.0,
-          "change_pct": 14.417744916820707,
-          "score": 56,
-          "state": "애매",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "아이티센글로벌 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 1.7x (거래량 강함) / RSI 66 (상방 우세)"
-          ],
-          "volume_ratio_20d": 1.6954924528061326,
-          "rsi14": 66.32047477744807,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "466100.KQ",
-          "ai_score": 30,
-          "ai_state": "관망",
-          "ai_action": "보류",
-          "ai_note": "클로봇은 전라남도와 지능형 로봇산업 육성 협약을 체결했으나, 주가는 소폭 상승에 그쳤습니다. 대규모 증자 및 재무적 투자자 이탈 가능성 등은 부담 요인으로 작용하고 있습니다. 현재로서는 뚜렷한 매수 신호가 없어 관망이 필요합니다.",
-          "close": 50800.0,
-          "change_pct": 1.7017017017016967,
-          "score": 19,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.44896487918120154,
-          "rsi14": 67.18061674008811,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "005930.KS",
-          "ai_score": 60,
-          "ai_state": "관망",
-          "ai_action": "보류",
-          "ai_note": "삼성전자는 1분기 실적 발표 후 주가가 상승했으나, 중국 TV 사업 철수설 등은 부담으로 작용하고 있습니다. AI 데이터센터 투자 확대에 따른 메모리 반도체 품귀 현상 수혜가 기대되나, 단기적으로는 불확실성 요인을 주시하며 보수적인 접근이 필요합니다.",
-          "close": 232500.0,
-          "change_pct": 5.442176870748305,
-          "score": 57,
-          "state": "애매",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 1.3818205329764597,
-          "rsi14": 73.68421052631578,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "000660.KS",
-          "ai_score": 90,
-          "ai_state": "강세",
-          "ai_action": "매수",
-          "ai_note": "SK하이닉스는 차세대 D램 투자 확대 및 HBM 시장 선두 유지 전망으로 주가가 급등하며 시총 1천조원을 돌파했습니다. 메모리 반도체 품귀 현상 지속 전망과 함께 AI 관련 수요 증가는 긍정적 요인입니다. 다만, 단기 급등 후 과열 가능성도 있어 분할 매수 관점에서 접근하는 것이 좋습니다.",
-          "close": 1447000.0,
-          "change_pct": 12.519440124416793,
-          "score": 85,
-          "state": "강함",
-          "action": "매수 가능",
-          "cross_highlights": [],
-          "volume_ratio_20d": 1.481053951903008,
-          "rsi14": 90.94567404426559,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "035420.KS",
-          "ai_score": 20,
-          "ai_state": "약세",
-          "ai_action": "보류",
-          "ai_note": "네이버는 사상 최대 실적에도 불구하고 AI 개발 경쟁력 약화 및 핵심 인력 이탈 우려로 주가가 하락했습니다. AI 수익화 원년으로 삼겠다는 입장이지만, 시장의 신뢰를 회복하기까지 시간이 필요해 보입니다. 현재로서는 관망하며 추세를 지켜보는 것이 좋습니다.",
-          "close": 209000.0,
-          "change_pct": -0.9478672985781977,
-          "score": 0,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 1.193819341183825,
-          "rsi14": 60.20408163265306,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "005380.KS",
-          "ai_score": 35,
-          "ai_state": "관망",
-          "ai_action": "보류",
-          "ai_note": "현대차는 4월 글로벌 판매량이 감소했으나, 친환경차 포트폴리오 강화 및 자율주행 반도체 개발 논의 등은 긍정적입니다. 안전공업 사태로 인한 일시적 판매 감소는 회복될 것으로 보이나, 시장 전반의 불확실성을 고려하여 보수적인 접근이 필요합니다.",
-          "close": 539000.0,
-          "change_pct": 1.5065913370998052,
-          "score": 29,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.8446234159633742,
-          "rsi14": 65.23929471032746,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "012450.KS",
-          "ai_score": 65,
-          "ai_state": "관망",
-          "ai_action": "보류",
-          "ai_note": "한화에어로스페이스는 한국항공우주산업(KAI) 지분을 5% 이상 확보하며 경영참여를 선언했습니다. 이는 방산 사업 통합 및 인수 포석으로 해석되며 긍정적입니다. 다만, KAI 인수 관련 불확실성 및 시장 반응을 지켜보며 신중하게 접근해야 합니다.",
-          "close": 1465000.0,
-          "change_pct": 3.387438249823571,
-          "score": 62,
-          "state": "애매",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 2.1602328542318023,
-          "rsi14": 41.42480211081794,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "079550.KS",
-          "ai_score": 50,
-          "ai_state": "관망",
-          "ai_action": "보류",
-          "ai_note": "LIG넥스원은 중동 방공망 긴급 쇼핑 수혜 기대감으로 주가가 강세를 보이고 있으며, 천궁-II의 실전 성과가 긍정적입니다. 미국 현지법인 설립 등 글로벌 시장 확장은 긍정적이나, 지정학적 리스크 및 경쟁 심화 가능성을 고려하여 추세를 지켜보는 것이 좋습니다.",
-          "close": 983000.0,
-          "change_pct": 4.463336875664181,
-          "score": 41,
-          "state": "약함",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.7506866749184087,
-          "rsi14": 54.7008547008547,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-05-05 03:14 ET",
       "market_data_as_of": "2026-05-04 15:30 KST (Close)",
@@ -26880,6 +26718,170 @@
       "status": "error",
       "error": "한국 종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-08-14 00:05 ET",
+      "market_data_as_of": "2026-08-14 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 65,
+          "ai_state": "관망",
+          "ai_action": "보유 / 비중 축소",
+          "ai_note": "아이티센글로벌은 시장 대비 강한 흐름을 보이며 50일선과 20일선 위에 안착했습니다. 다만, 거래량 증가가 동반되지 않아 추가 상승 여부는 지켜볼 필요가 있습니다. 현재 보유 중이라면 추세가 꺾이기 전까지는 보유하되, 급격한 하락 시 비중 축소를 고려하십시오.",
+          "close": 27100.0,
+          "change_pct": -0.18416206261510082,
+          "score": 59,
+          "state": "애매",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.0102676138706503,
+          "rsi14": 63.25270200720536,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 70,
+          "ai_state": "상승세",
+          "ai_action": "보유 / 비중 축소",
+          "ai_note": "클로봇은 로봇 관련주로 분류되며 최근 10% 이상 급등하며 3만원선을 회복했습니다. 높은 거래량과 함께 상승 추세를 이어가고 있어 긍정적입니다. 현재 보유 중이라면 상승 추세를 유지하는지 확인하며, 단기 급등에 따른 차익 실현 매물 출현 가능성에 유의하십시오.",
+          "close": 31350.0,
+          "change_pct": 9.043478260869575,
+          "score": 63,
+          "state": "애매",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 3.5497629560555466,
+          "rsi14": 62.84501061571125,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 40,
+          "ai_state": "약세",
+          "ai_action": "회피 / 비중 축소",
+          "ai_note": "삼성전자는 AI 전문가 영입 소식에도 불구하고, 거래량이 약하고 50일선 아래에 머물러 약세를 보이고 있습니다. 최근 단기 골든크로스가 나왔으나 강한 상승 모멘텀은 부족합니다. 현재 보유 중이라면 추가 하락에 대비하여 비중 축소를 고려하는 것이 좋습니다.",
+          "close": 270250.0,
+          "change_pct": 0.8395522388059629,
+          "score": 31,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "삼성전자 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.3x (거래량 약함) / RSI 54 (중립)"
+          ],
+          "volume_ratio_20d": 0.3271152003547089,
+          "rsi14": 54.29326287978864,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "회피 / 비중 축소",
+          "ai_note": "SK하이닉스는 미국 메모리 주 강세에 동반 상승했으나, 여전히 50일선 아래에 있으며 거래량이 약합니다. 솔리다임 상장 추진 관련 중복상장 논란도 부담 요인입니다. 현재 보유 중이라면 반등 시 비중 축소를 고려하십시오.",
+          "close": 1646000.0,
+          "change_pct": 3.327055869428741,
+          "score": 16,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.38604283409779916,
+          "rsi14": 44.74009900990099,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 55,
+          "ai_state": "관망",
+          "ai_action": "보유 / 비중 축소",
+          "ai_note": "NAVER는 외국인 및 기관의 동시 순매수로 주가가 상승했으나, 전반적인 시장 흐름과 큰 차이를 보이지 않고 있습니다. AI 관련 사업 확장 소식은 긍정적이나, 아직 확실한 추세 전환 신호는 부족합니다. 현재 보유 중이라면 시장 상황을 관망하며 대응하는 것이 좋습니다.",
+          "close": 226500.0,
+          "change_pct": 0.0,
+          "score": 57,
+          "state": "애매",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.336153297341965,
+          "rsi14": 50.74183976261128,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 50,
+          "ai_state": "약보합",
+          "ai_action": "회피 / 비중 축소",
+          "ai_note": "현대차는 하이브리드 신차 및 수출 호조 기대감으로 상승세를 보이고 있습니다. 최근 주가 조정으로 밸류에이션 매력도 높아졌다는 평가입니다. 다만, 거래량이 아직 약하고 50일선 아래에 있어 추세 전환을 확신하기는 이릅니다. 보유 중이라면 단기 반등 시 비중 축소를 고려하십시오.",
+          "close": 445000.0,
+          "change_pct": 6.332138590203096,
+          "score": 41,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "현대차 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.9x (거래량 보통) / RSI 62 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.8980712160454114,
+          "rsi14": 62.0,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 45,
+          "ai_state": "약세",
+          "ai_action": "회피 / 비중 축소",
+          "ai_note": "한화에어로스페이스는 AI 5차원 센서 독자 개발 소식이 있었으나, 주가는 하락세를 보이고 있습니다. 거래량이 약하고 시장 대비 강한 흐름을 보이지 못하고 있습니다. 현재 보유 중이라면 추가 하락에 대비하여 비중 축소를 고려하는 것이 좋습니다.",
+          "close": 1148000.0,
+          "change_pct": -3.122362869198314,
+          "score": 47,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.2899551823535988,
+          "rsi14": 70.44334975369458,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 40,
+          "ai_state": "약세",
+          "ai_action": "회피 / 비중 축소",
+          "ai_note": "LIG넥스원은 한국형 전자전기 연구개발 참여 소식이 있었으나, 주가는 약세를 보이고 있습니다. 거래량이 약하고 시장 대비 강한 흐름을 보이지 못하고 있습니다. 잠수함 사업 특혜 의혹 관련 부정적 이슈도 부담입니다. 현재 보유 중이라면 비중 축소를 고려하십시오.",
+          "close": 812000.0,
+          "change_pct": -2.9868578255675016,
+          "score": 47,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.24758044257002776,
+          "rsi14": 59.006211180124225,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
     }
   ]
 }
