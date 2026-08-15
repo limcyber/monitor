@@ -1,170 +1,7 @@
 {
-  "updated_at_et": "2026-08-15 18:12 ET",
+  "updated_at_et": "2026-08-15 18:44 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-08-07 07:20 ET",
-      "market_data_as_of": "2026-08-06 10:41 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 85,
-          "ai_state": "강세",
-          "ai_action": "매수 고려",
-          "ai_note": "최근 중단기 골든크로스 발생 및 시장 대비 강한 흐름을 보입니다. 현재 추세가 유지된다면 추가 상승 가능성이 있습니다.",
-          "close": 219.4405059814453,
-          "change_pct": 0.10058605944454069,
-          "score": 80,
-          "state": "강함",
-          "action": "매수 가능",
-          "cross_highlights": [
-            "NVDA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 63 (상방 우세)",
-            "NVDA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 63 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.002837286115204072,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 15,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "시장 대비 약한 흐름을 보이며 20일선 및 50일선 아래에 위치합니다. 단기 반등 시 매도 고려가 필요합니다.",
-          "close": 321.05499267578125,
-          "change_pct": -0.15394033151269193,
-          "score": 11,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.002181413332868424,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 25,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "시장 대비 약한 흐름을 보이며 20일선 및 50일선 아래에 위치합니다. 추세 전환 신호가 나타나기 전까지는 관망하는 것이 좋습니다.",
-          "close": 592.8051147460938,
-          "change_pct": 0.6853431868110826,
-          "score": 33,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0017743026460163994,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 10,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "최근 중기 데드크로스가 발생했으며 시장 대비 약한 모습을 보입니다. 추세가 회복될 때까지는 매수를 자제하는 것이 좋습니다.",
-          "close": 486.6700134277344,
-          "change_pct": 0.9584121464079054,
-          "score": 0,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "AMD 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 49 (중립)"
-          ],
-          "volume_ratio_20d": 0.002906736858355078,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 5,
-          "ai_state": "매우 약세",
-          "ai_action": "매도 고려",
-          "ai_note": "중기 데드크로스 발생 및 20일선, 50일선 아래에 위치하며 하방 압력이 강합니다. 보유 중이라면 손절 또는 매도를 고려해야 합니다.",
-          "close": 46.33000183105469,
-          "change_pct": -0.7922889204284411,
-          "score": 3,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "TEM 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 34 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.0020704371920081126,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 10,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "중기 데드크로스가 발생했으며 거래량도 약합니다. 시장 흐름을 지켜보며 추세 전환을 확인한 후 진입을 고려해야 합니다.",
-          "close": 538.0449829101562,
-          "change_pct": 1.3840155519460717,
-          "score": 6,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "SOXX 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 54 (중립)"
-          ],
-          "volume_ratio_20d": 0.002287345042092584,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 20,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "단기 골든크로스가 나왔으나 50일선 아래에 위치하며 거래량이 약합니다. 급등 후 조정 가능성을 염두에 두고 관망하는 것이 좋습니다.",
-          "close": 5.800000190734863,
-          "change_pct": 2.473504365671775,
-          "score": 12,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "SERV 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 62 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 5,
-          "ai_state": "매우 약세",
-          "ai_action": "매도 고려",
-          "ai_note": "시장 대비 약한 흐름을 보이며 20일선 및 50일선 아래에 위치합니다. 추가 하락 가능성이 있어 보유 중이라면 매도를 고려하는 것이 좋습니다.",
-          "close": 17.450000762939453,
-          "change_pct": -5.368762160769414,
-          "score": 0,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.003065730155780156,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-08-07 08:05 ET",
       "market_data_as_of": "2026-08-06 10:41 ET (5분봉)",
@@ -23142,6 +22979,13 @@
           }
         }
       ]
+    },
+    {
+      "generated_at_et": "2026-08-15 18:44 ET",
+      "market_data_as_of": "2026-08-14 15:30 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
     }
   ]
 }
