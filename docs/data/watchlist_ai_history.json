@@ -1,170 +1,7 @@
 {
-  "updated_at_et": "2026-08-16 18:12 ET",
+  "updated_at_et": "2026-08-16 18:43 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-08-08 18:19 ET",
-      "market_data_as_of": "2026-08-07 16:00 ET (Close)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 95,
-          "ai_state": "강한 상승",
-          "ai_action": "매수",
-          "ai_note": "SK그룹과 AI 공장 및 차세대 메모리 파트너십 확대 발표. AI 수요 증가에 따른 지속적인 강세 예상. 단기 급등 후 눌림목 매수 고려.",
-          "close": 223.9600067138672,
-          "change_pct": 2.2695105237842794,
-          "score": 80,
-          "state": "강함",
-          "action": "매수 가능",
-          "cross_highlights": [
-            "NVDA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.8x (거래량 약함) / RSI 66 (상방 우세)",
-            "NVDA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.8x (거래량 약함) / RSI 66 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.7817886325486875,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 30,
-          "ai_state": "약세",
-          "ai_action": "보류",
-          "ai_note": "최근 3거래일간 횡보하며 20일선 저항 확인. 테슬라 관련 긍정적 뉴스 부재 시 추가 하락 가능성 있음. 320달러 지지선 이탈 시 손절 고려.",
-          "close": 328.5799865722656,
-          "change_pct": 2.832281108985857,
-          "score": 12,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.9672375940608465,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 40,
-          "ai_state": "중립",
-          "ai_action": "보류",
-          "ai_note": "AI 인재 영입 및 데이터센터 투자 지속. 뉴멕시코주에서 5.67억 달러 벌금 부과 소식은 부담. 350달러 지지선 확인 후 매수 고려.",
-          "close": 592.0999755859375,
-          "change_pct": 0.3729362740847675,
-          "score": 33,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.5832822173037784,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 85,
-          "ai_state": "강한 상승",
-          "ai_action": "매수",
-          "ai_note": "데이터센터 매출 두 배 성장 및 AI 칩 시장 경쟁력 강화. 2분기 실적 호조 및 긍정적 가이던스 제시. 180달러 지지선 부근에서 분할 매수 접근.",
-          "close": 483.3599853515625,
-          "change_pct": -1.2099438854038969,
-          "score": 0,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "AMD 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.9x (거래량 보통) / RSI 47 (중립)"
-          ],
-          "volume_ratio_20d": 0.8508912012461578,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 50,
-          "ai_state": "중립",
-          "ai_action": "보류",
-          "ai_note": "정밀 의학 및 AI 플랫폼 확장 위한 Personalis 인수 발표. 단기 급등 후 차익 실현 매물 출회 가능성. 50달러 지지선 확인 후 추세 전환 시 매수 고려.",
-          "close": 52.04999923706055,
-          "change_pct": 12.85776331854187,
-          "score": 27,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "TEM 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 1.0x (거래량 보통) / RSI 58 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.9946411506703083,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 60,
-          "ai_state": "상승",
-          "ai_action": "보유",
-          "ai_note": "반도체 섹터 전반의 AI 수요 증가 수혜. 다만, 최근 7월 조정폭이 컸던 점은 부담. 50일선 저항 돌파 시 추가 상승 기대. 550달러 돌파 시 보유 관점 유지.",
-          "close": 543.27001953125,
-          "change_pct": 2.0187034488323485,
-          "score": 16,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "SOXX 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.5x (거래량 약함) / RSI 54 (중립)"
-          ],
-          "volume_ratio_20d": 0.4831593129574736,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 20,
-          "ai_state": "약세",
-          "ai_action": "보류",
-          "ai_note": "2분기 실적 부진 및 연간 가이던스 하향 조정. 효율성 증대에 집중하며 확장 전략 수정. 4달러 지지선 이탈 시 추가 하락 가능성. 손절 고려.",
-          "close": 5.085000038146973,
-          "change_pct": -10.475348735453839,
-          "score": 10,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "SERV 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 2.7x (거래량 강함) / RSI 48 (중립)"
-          ],
-          "volume_ratio_20d": 2.719085036915015,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 15,
-          "ai_state": "약세",
-          "ai_action": "보류",
-          "ai_note": "7년 만에 흑자 전환 성공했으나, 연간 매출 가이던스 하향 조정. 국제 시장 타이밍 지연이 주된 요인. 3달러 지지선 확인 후 반등 시 매도 고려.",
-          "close": 17.35770034790039,
-          "change_pct": 3.258185005107639,
-          "score": 0,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.7113306716513188,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-08-08 18:55 ET",
       "market_data_as_of": "2026-08-07 16:00 ET (Close)",
@@ -23562,6 +23399,13 @@
     },
     {
       "generated_at_et": "2026-08-16 18:12 ET",
+      "market_data_as_of": "2026-08-14 15:30 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
+    },
+    {
+      "generated_at_et": "2026-08-16 18:43 ET",
       "market_data_as_of": "2026-08-14 15:30 ET (5분봉)",
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
