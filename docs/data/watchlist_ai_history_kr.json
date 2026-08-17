@@ -1,171 +1,7 @@
 {
-  "updated_at_et": "2026-08-16 21:04 ET",
+  "updated_at_et": "2026-08-16 22:56 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-05-06 01:55 ET",
-      "market_data_as_of": "2026-05-06 15:30 KST (Close)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "124500.KQ",
-          "ai_score": 55,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "아이티센글로벌은 400억 규모의 전환사채 발행을 통해 재무구조 개선 및 신성장 동력 확보에 나섰습니다. 현재 거래량이 약해 추가적인 상승을 위해서는 거래량 증가가 필요해 보입니다.",
-          "close": 60700.0,
-          "change_pct": -1.9386106623586419,
-          "score": 49,
-          "state": "약함",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "아이티센글로벌 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.8x (거래량 약함) / RSI 62 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.8132704086784878,
-          "rsi14": 61.620795107033636,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "466100.KQ",
-          "ai_score": 30,
-          "ai_state": "회피",
-          "ai_action": "보류",
-          "ai_note": "클로봇은 전라남도와 지능형 로봇산업 육성을 위한 업무협약을 체결했습니다. 하지만 현재 거래량이 약하고 시장 대비 힘이 약한 모습이므로 관망하는 것이 좋겠습니다.",
-          "close": 50000.0,
-          "change_pct": -1.5748031496062964,
-          "score": 28,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.46762868725460216,
-          "rsi14": 63.65638766519823,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "005930.KS",
-          "ai_score": 88,
-          "ai_state": "강세",
-          "ai_action": "매수 고려",
-          "ai_note": "삼성전자는 애플과의 파운드리 협력 논의 소식에 시가총액 1,500조원을 돌파하며 강세를 보이고 있습니다. RSI 지표가 과열 구간에 진입했으나, 시장 전반의 강세와 함께 추가 상승 여력이 있습니다.",
-          "close": 267500.0,
-          "change_pct": 15.053763440860223,
-          "score": 85,
-          "state": "강함",
-          "action": "매수 가능",
-          "cross_highlights": [],
-          "volume_ratio_20d": 1.4045948128411803,
-          "rsi14": 81.77083333333333,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "000660.KS",
-          "ai_score": 78,
-          "ai_state": "양호",
-          "ai_action": "보유",
-          "ai_note": "SK하이닉스는 AI 반도체 수요 증가에 힘입어 매출 500대 기업 톱5에 진입했습니다. 다만 RSI 지표가 과열권에 있어 단기적인 조정 가능성을 염두에 두고 보유하는 것이 좋겠습니다.",
-          "close": 1598000.0,
-          "change_pct": 10.435383552176924,
-          "score": 76,
-          "state": "양호",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 1.013628695343989,
-          "rsi14": 92.3076923076923,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "035420.KS",
-          "ai_score": 15,
-          "ai_state": "약세",
-          "ai_action": "보류",
-          "ai_note": "네이버는 AI 탭 출시 등 AI 서비스 강화에 나서고 있으나, 시장 대비 약한 흐름을 보이고 있습니다. 현재로서는 뚜렷한 매수 신호가 없어 관망이 필요합니다.",
-          "close": 208500.0,
-          "change_pct": -0.23923444976076125,
-          "score": 1,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.6413833002380516,
-          "rsi14": 57.44680851063829,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "005380.KS",
-          "ai_score": 65,
-          "ai_state": "중립",
-          "ai_action": "관망",
-          "ai_note": "현대차는 노사 임금협상에 본격 돌입했으며, EU·미국 무역협상 결과에 따른 저가차 시장 축소 우려도 있습니다. 중기 골든크로스가 발생했으나, 추가 상승을 위해서는 거래량 동반이 필요합니다.",
-          "close": 547000.0,
-          "change_pct": 1.4842300556586308,
-          "score": 60,
-          "state": "애매",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "현대차 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 1.1x (거래량 보통) / RSI 64 (상방 우세)"
-          ],
-          "volume_ratio_20d": 1.1296160985797248,
-          "rsi14": 64.34108527131784,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "012450.KS",
-          "ai_score": 40,
-          "ai_state": "약세",
-          "ai_action": "보류",
-          "ai_note": "한화에어로스페이스는 KAI 지분을 5% 이상 확보하며 경영 참여를 선언했습니다. 하지만 최근 주가 흐름이 약세를 보이고 있어, 시장 대비 힘이 약한 점을 고려하여 관망하는 것이 좋겠습니다.",
-          "close": 1436000.0,
-          "change_pct": -1.9795221843003419,
-          "score": 40,
-          "state": "약함",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.5319454651836981,
-          "rsi14": 39.15211970074813,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "079550.KS",
-          "ai_score": 45,
-          "ai_state": "약세",
-          "ai_action": "보류",
-          "ai_note": "LIG넥스원은 UAE 방산 제조 허브 설립 추진 등 방산 부문에서 꾸준한 성장세를 보이고 있습니다. 다만 현재 거래량이 약하고 시장 대비 힘이 약한 모습이므로, 추가적인 매수보다는 관망하는 것이 좋겠습니다.",
-          "close": 973000.0,
-          "change_pct": -1.0172939979654072,
-          "score": 41,
-          "state": "약함",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.40268217619395336,
-          "rsi14": 54.12262156448203,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-05-06 19:48 ET",
       "market_data_as_of": "2026-05-04 15:30 KST (Close)",
@@ -26574,6 +26410,170 @@
       "status": "error",
       "error": "한국 종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-08-16 22:56 ET",
+      "market_data_as_of": "2026-08-14 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 65,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "시장 대비 강한 흐름을 보이며 50일선과 20일선 위에 안착했습니다. 최근 거래량 증가와 함께 상승 추세가 이어질지 주목하며 보유 관점을 유지합니다.",
+          "close": 27000.0,
+          "change_pct": -0.5524861878453025,
+          "score": 59,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.459692412426388,
+          "rsi14": 62.928827444956475,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 70,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "시장 대비 강한 흐름과 함께 높은 거래량으로 급등했습니다. RSI 지표도 과열 구간에 진입했으므로, 단기 차익 실현 매물 출회 가능성을 염두에 두고 보유하되, 추세가 꺾이면 익절을 고려합니다.",
+          "close": 32700.0,
+          "change_pct": 13.73913043478261,
+          "score": 63,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 4.350038914906755,
+          "rsi14": 64.85943775100402,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 40,
+          "ai_state": "관망",
+          "ai_action": "관찰",
+          "ai_note": "단기 골든크로스가 발생했으나 거래량이 약하고 50일선 아래에 위치해 있습니다. 시장 흐름을 좀 더 지켜보며 50일선 돌파 및 거래량 증가 여부를 확인 후 진입을 고려합니다.",
+          "close": 274500.0,
+          "change_pct": 2.425373134328357,
+          "score": 32,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "삼성전자 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.7x (거래량 약함) / RSI 55 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.7250220598398228,
+          "rsi14": 55.29715762273902,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "관찰",
+          "ai_note": "거래량이 약하고 시장 대비 힘이 약한 모습입니다. 50일선 아래에 위치하며 추세 전환 신호가 부족하므로 관망하며 추가 하락 가능성에 대비합니다.",
+          "close": 1645000.0,
+          "change_pct": 3.264281230382915,
+          "score": 16,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.7852478745654324,
+          "rsi14": 44.70588235294118,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 60,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "시장 대비 강한 흐름을 보이며 50일선과 20일선 위에 안착했습니다. 최근 외국인 및 기관의 동시 순매수가 관찰되며 주가 상승을 견인하고 있어 보유 관점을 유지합니다.",
+          "close": 228000.0,
+          "change_pct": 0.6622516556291425,
+          "score": 57,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.549116217772011,
+          "rsi14": 51.461988304093566,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 65,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "강한 거래량을 동반한 단기 골든크로스가 발생하며 상승 추세를 보이고 있습니다. RSI 지표도 상방 우세를 나타내고 있어 긍정적이나, 20일선과의 이격도를 고려하여 추세 지속 여부를 확인하며 보유합니다. 현대차는 베트남에서 조립한 자동차를 멕시코로 첫 수출하며 글로벌 판매망을 확대하고 있습니다.",
+          "close": 453000.0,
+          "change_pct": 8.24372759856631,
+          "score": 57,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [
+            "현대차 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 1.5x (거래량 강함) / RSI 64 (상방 우세)"
+          ],
+          "volume_ratio_20d": 1.5457415395763423,
+          "rsi14": 63.66120218579235,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 45,
+          "ai_state": "약세",
+          "ai_action": "관찰",
+          "ai_note": "거래량이 약하고 RSI 지표가 과열 구간에 진입했으나, 50일선 위에 위치하며 시장 대비 강한 흐름을 보이고 있습니다. 단기적으로는 숨 고르기 후 재상승을 기대하며 관망합니다. 한화에어로스페이스는 방사청과 K9 자주포의 탄도수정신관 개발 사업 우선협상대상자로 선정되었습니다.",
+          "close": 1160000.0,
+          "change_pct": -2.1097046413502074,
+          "score": 42,
+          "state": "약함",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.7648101463602911,
+          "rsi14": 71.85929648241206,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 50,
+          "ai_state": "관망",
+          "ai_action": "관찰",
+          "ai_note": "거래량이 약하지만 50일선 위에 위치하며 시장 대비 강한 흐름을 보이고 있습니다. LIG넥스원은 정밀유도무기, 감시정찰 등 방산 분야에서 경쟁력을 확대하고 있으며, K-방산 수출 확대에 기여할 것으로 기대됩니다. 추세 전환을 위한 거래량 증가를 기다리며 관망합니다.",
+          "close": 815000.0,
+          "change_pct": -2.628434886499398,
+          "score": 47,
+          "state": "약함",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5076099905822096,
+          "rsi14": 59.28237129485179,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
     }
   ]
 }
