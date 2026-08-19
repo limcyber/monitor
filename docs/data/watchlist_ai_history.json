@@ -1,168 +1,7 @@
 {
-  "updated_at_et": "2026-08-19 05:25 ET",
+  "updated_at_et": "2026-08-19 05:56 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-08-12 12:24 ET",
-      "market_data_as_of": "2026-08-12 11:40 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 75,
-          "ai_state": "관망",
-          "ai_action": "매수 고려",
-          "ai_note": "최근 중기 골든크로스 발생, 50일선 위에서 지지받는 모습. 시장 대비 강한 흐름을 보이며 RSI 61로 상승세. 단기 급등 후 눌림목 구간에서 거래량 확인하며 접근 고려.",
-          "close": 223.27780151367188,
-          "change_pct": 2.656460466056032,
-          "score": 78,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [
-            "NVDA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 61 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.00448484726251885,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 25,
-          "ai_state": "하락",
-          "ai_action": "보유 관망",
-          "ai_note": "20일선 및 50일선 아래에서 하락 추세. RSI 53으로 중립 구간이나, 시장 대비 약한 모습. 추가 하락 가능성에 대비하여 관망 유지.",
-          "close": 324.489990234375,
-          "change_pct": -2.4999271011243995,
-          "score": 20,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.003882733953423651,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 20,
-          "ai_state": "하락",
-          "ai_action": "보유 관망",
-          "ai_note": "시장 대비 약한 흐름과 20일선, 50일선 아래 위치. RSI 42로 하락 압력 존재. 반등 시 매도 고려.",
-          "close": 583.0294799804688,
-          "change_pct": -2.685691558929104,
-          "score": 22,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.006249823789821553,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 20,
-          "ai_state": "하락",
-          "ai_action": "보유 관망",
-          "ai_note": "최근 중기 데드크로스 발생, 20일선 및 50일선 아래에서 약세. 거래량 동반 없는 하락으로 추가 하락 가능성. 반등 시 매도 고려.",
-          "close": 486.8999938964844,
-          "change_pct": 2.652215040059791,
-          "score": 19,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "AMD 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 41 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.0029573454338521522,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 35,
-          "ai_state": "혼조",
-          "ai_action": "보유 관망",
-          "ai_note": "단기 골든크로스 발생했으나 중기 데드크로스 영향으로 혼조세. RSI 69로 과매수 구간 진입 가능성. 거래량 약세로 추세 전환 불확실, 관망 유지.",
-          "close": 54.54999923706055,
-          "change_pct": -2.0470451028197556,
-          "score": 29,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "TEM 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 69 (상방 우세)",
-            "TEM 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 69 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.005037315419361047,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 30,
-          "ai_state": "혼조",
-          "ai_action": "보유 관망",
-          "ai_note": "단기 골든크로스에도 불구하고 50일선 아래 위치, 거래량 약세. RSI 50으로 중립 구간. 시장 흐름에 따라 변동성 예상, 관망 필요.",
-          "close": 549.280029296875,
-          "change_pct": 2.822915901394518,
-          "score": 22,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "SOXX 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 50 (중립)"
-          ],
-          "volume_ratio_20d": 0.0027633278351150326,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 20,
-          "ai_state": "하락",
-          "ai_action": "보유 관망",
-          "ai_note": "20일선 및 50일선 아래에서 약세 흐름. RSI 50으로 중립 구간이나, 추세 전환 신호 부재. 추가 하락 가능성 염두에 두고 관망.",
-          "close": 5.058599948883057,
-          "change_pct": 3.236731641404833,
-          "score": 18,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0053584837344523685,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 25,
-          "ai_state": "하락",
-          "ai_action": "보유 관망",
-          "ai_note": "50일선 아래 위치, 거래량 약세. RSI 46으로 하락 압력 존재. 20일선 위에서 지지 여부 확인 필요하나, 현재로서는 관망 유지.",
-          "close": 19.959999084472656,
-          "change_pct": 13.151926162682571,
-          "score": 18,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.002134206937399436,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-08-12 13:26 ET",
       "market_data_as_of": "2026-08-12 12:38 ET (5분봉)",
@@ -23570,6 +23409,13 @@
     },
     {
       "generated_at_et": "2026-08-19 05:25 ET",
+      "market_data_as_of": "2026-08-18 15:45 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
+    },
+    {
+      "generated_at_et": "2026-08-19 05:56 ET",
       "market_data_as_of": "2026-08-18 15:45 ET (5분봉)",
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
