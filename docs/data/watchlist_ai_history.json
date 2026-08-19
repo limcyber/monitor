@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-08-19 11:36 ET",
+  "updated_at_et": "2026-08-19 12:21 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-08-13 01:28 ET",
-      "market_data_as_of": "2026-08-12 15:45 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-08-13 02:56 ET",
       "market_data_as_of": "2026-08-12 15:45 ET (5분봉)",
@@ -23105,6 +23098,168 @@
             "KORU 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 56 (상방 우세)"
           ],
           "volume_ratio_20d": 0.002424436672473847,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-08-19 12:21 ET",
+      "market_data_as_of": "2026-08-19 12:00 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 85,
+          "ai_state": "강한 매수",
+          "ai_action": "매수",
+          "ai_note": "최근 중기 골든크로스 발생 및 시장 대비 강한 흐름을 보이며 RSI 75로 과열 구간 진입. 보유 중이라면 익절 구간을 고려하며 분할 매도 고려.",
+          "close": 219.93260192871094,
+          "change_pct": 0.08764741546021249,
+          "score": 78,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "NVDA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 75 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.005072370729577424,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 40,
+          "ai_state": "관망",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "단기 골든크로스 발생했으나 거래량 약세 및 RSI 75 과열 구간 진입으로 추가 상승 여력 제한적. 보유 중이라면 단기 이익 실현 고려.",
+          "close": 347.20001220703125,
+          "change_pct": 3.0664699259577155,
+          "score": 31,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "TSLA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 75 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.0036242301273289256,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 15,
+          "ai_state": "약세",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "중기 데드크로스 발생 및 시장 대비 약한 흐름. RSI 55로 중립 구간이나 하방 압력 예상. 보유 중이라면 손절 고려.",
+          "close": 553.6500244140625,
+          "change_pct": 1.835680066514822,
+          "score": 5,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "META 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 55 (중립)"
+          ],
+          "volume_ratio_20d": 0.00666812196883994,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "시장 대비 약한 흐름과 20일선, 50일선 하회. 단기 골든크로스에도 불구하고 거래량 부재로 상승 동력 부족. 보유 중이라면 손절 고려.",
+          "close": 468.2699890136719,
+          "change_pct": -3.327902134082028,
+          "score": 7,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "AMD 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 46 (중립)"
+          ],
+          "volume_ratio_20d": 0.004094313586120833,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 55,
+          "ai_state": "중립",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "시장 대비 강한 흐름을 보이며 20일선, 50일선 위에 위치. RSI 74로 과열 구간 진입. 보유 중이라면 익절 구간 고려.",
+          "close": 59.470001220703125,
+          "change_pct": 20.482172782289922,
+          "score": 52,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.023691653284384762,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 10,
+          "ai_state": "약세",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "시장 대비 약한 흐름과 20일선, 50일선 하회. 보유 중이라면 손절 고려.",
+          "close": 523.0,
+          "change_pct": -1.5788807499494073,
+          "score": 6,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0038977549148791167,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 5,
+          "ai_state": "약세",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "시장 대비 약한 흐름과 20일선, 50일선 하회. 보유 중이라면 손절 고려.",
+          "close": 4.715000152587891,
+          "change_pct": 3.626372635961994,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.002481223844482078,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 25,
+          "ai_state": "관망",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "단기 골든크로스 발생했으나 거래량 약세 및 50일선 하회. 보유 중이라면 손절 고려.",
+          "close": 19.28969955444336,
+          "change_pct": 8.126117653901321,
+          "score": 10,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "KORU 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 56 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.0023941601849160597,
           "signals": {
             "short_cross": "bull",
             "mid_cross": "none"
