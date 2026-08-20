@@ -1,174 +1,7 @@
 {
-  "updated_at_et": "2026-08-20 15:09 ET",
+  "updated_at_et": "2026-08-20 15:53 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-08-15 05:47 ET",
-      "market_data_as_of": "2026-08-14 15:30 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 85,
-          "ai_state": "강세",
-          "ai_action": "매수 고려",
-          "ai_note": "최근 중기 골든크로스 발생 및 시장 대비 강한 흐름을 보이고 있습니다. 다만 RSI 과열 구간 진입 및 거래량 약세는 주의가 필요하며, 보유 중이라면 20일선 이탈 시 분할 매도 고려.",
-          "close": 225.27999877929688,
-          "change_pct": -0.008878949041268847,
-          "score": 83,
-          "state": "강함",
-          "action": "매수 가능",
-          "cross_highlights": [
-            "NVDA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 76 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 20,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "단기 골든크로스가 발생했으나 거래량이 동반되지 않고 RSI 과열 구간에 진입했습니다. 50일선 아래에 위치하며 추세 전환을 확신하기 어려우므로 관망하며 추가 지표 확인 필요.",
-          "close": 341.9200134277344,
-          "change_pct": 0.5765448940821205,
-          "score": 16,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "TSLA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 70 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 5,
-          "ai_state": "매우 약세",
-          "ai_action": "회피",
-          "ai_note": "최근 중기 데드크로스가 발생했고 시장 대비 약한 흐름을 보입니다. 20일선 아래에 위치하며 단기 반등 시에도 매도 관점으로 접근하는 것이 유리합니다.",
-          "close": 591.3300170898438,
-          "change_pct": -0.6117877863616616,
-          "score": 7,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "META 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 49 (중립)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 10,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "중기 데드크로스 발생 및 약한 거래량으로 인해 상승 모멘텀이 부족합니다. 50일선 아래에 위치하며 추세 전환을 위한 명확한 신호가 나올 때까지 관망하는 것이 좋습니다.",
-          "close": 508.67999267578125,
-          "change_pct": 5.31458611439799,
-          "score": 5,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "AMD 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 52 (중립)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 35,
-          "ai_state": "혼조세",
-          "ai_action": "관망",
-          "ai_note": "단기 골든크로스와 중기 데드크로스가 동시에 발생하며 방향성이 불확실합니다. 거래량 약세와 RSI 과열 구간 진입은 주의가 필요하며, 50일선 돌파 여부를 확인하며 접근해야 합니다.",
-          "close": 52.2599983215332,
-          "change_pct": -3.7391832008857873,
-          "score": 39,
-          "state": "약함",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "TEM 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 72 (과열 구간)",
-            "TEM 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 72 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 40,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "50일선 아래에 위치하며 거래량이 약합니다. 시장 대비 강한 흐름을 보인다는 점은 긍정적이나, 명확한 상승 추세 전환 신호가 나타나기 전까지는 관망하며 지켜보는 것이 좋습니다.",
-          "close": 548.4500122070312,
-          "change_pct": -0.4158002084376,
-          "score": 40,
-          "state": "약함",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 1,
-          "ai_state": "매우 약세",
-          "ai_action": "회피",
-          "ai_note": "단기 데드크로스 발생 및 시장 대비 약한 흐름을 보이고 있습니다. 20일선 아래에 위치하며 추가 하락 가능성이 있으므로 현재 구간에서는 매수를 피하는 것이 좋습니다.",
-          "close": 4.918700218200684,
-          "change_pct": -0.4311708253655344,
-          "score": 1,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "SERV 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 52 (중립)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 30,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "단기 골든크로스가 발생했으나 거래량 약세와 50일선 아래 위치로 인해 상승 동력이 제한적입니다. 최근 급등 후 숨 고르기 구간으로 보이며, 50일선 안착 여부를 확인하며 접근해야 합니다.",
-          "close": 21.469999313354492,
-          "change_pct": 0.94028608973451,
-          "score": 26,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "KORU 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 59 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-08-15 06:14 ET",
       "market_data_as_of": "2026-08-14 15:30 ET (5분봉)",
@@ -22944,6 +22777,13 @@
           }
         }
       ]
+    },
+    {
+      "generated_at_et": "2026-08-20 15:53 ET",
+      "market_data_as_of": "2026-08-20 15:25 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
     }
   ]
 }
