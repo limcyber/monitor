@@ -1,5 +1,5 @@
 {
-  "generated_at_et": "2026-08-20 19:34 ET",
+  "generated_at_et": "2026-08-20 19:55 ET",
   "market_data_as_of": "2026-08-19 15:30 KST (Close)",
   "market": {
     "state": "레벨 4/6 - 살아나는 구간",
@@ -51,13 +51,13 @@
       "kospi200_change_pct": -7.177595782297219,
       "semicon_close": 127070.0,
       "semicon_change_pct": 7.577040298002036,
-      "brent_close": 93.31999969482422,
-      "brent_change_pct": 1.8554866811610227,
-      "usdkrw_close": 1393.8299560546875,
-      "usdkrw_change_pct": 0.31883774023202527,
+      "brent_close": 93.27999877929688,
+      "brent_change_pct": 1.8118270933764835,
+      "usdkrw_close": 1392.43994140625,
+      "usdkrw_change_pct": 0.21879350358220417,
       "vix_close": 16.010000228881836,
       "vix_change_pct": 7.521825787340108,
-      "usdkrw_20d_zscore": -1.5748396961612803,
+      "usdkrw_20d_zscore": -1.635117812148815,
       "vix_percentile": 25.793650793650798,
       "kospi_rsi14": 62.18299287651576,
       "kosdaq_rsi14": 68.1444205897583,
@@ -66,9 +66,9 @@
       "kosdaq_kospi_ratio_change_20d": 0.14962913395516164
     },
     "change_tags": [
-      "점수 +8",
-      "레벨 변화: 레벨 3/6 - 중립 / 혼조 -> 레벨 4/6 - 살아나는 구간",
-      "원달러 일간 +0.32%"
+      "점수 0",
+      "레벨 변화 없음",
+      "원달러 일간 +0.22%"
     ],
     "position_tags": [
       "총 노출 30~50%",
@@ -1214,8 +1214,7 @@
       "market_label": "KOSDAQ",
       "display_label": "아이티센글로벌 (124500.KQ)",
       "change_tags": [
-        "점수 0",
-        "행동 변화: 회피 / 비중 축소 -> 매우 선별적 접근"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -2263,8 +2262,7 @@
       "market_label": "KOSDAQ",
       "display_label": "클로봇 (466100.KQ)",
       "change_tags": [
-        "점수 +1",
-        "행동 변화: 회피 / 비중 축소 -> 관찰"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -3313,8 +3311,7 @@
       "market_label": "KOSPI",
       "display_label": "삼성전자 (005930.KS)",
       "change_tags": [
-        "점수 -8",
-        "행동 변화: 회피 / 비중 축소 -> 관찰"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -4364,8 +4361,7 @@
       "market_label": "KOSPI",
       "display_label": "SK하이닉스 (000660.KS)",
       "change_tags": [
-        "점수 -2",
-        "행동 변화: 회피 / 비중 축소 -> 관찰"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -5416,8 +5412,7 @@
       "market_label": "KOSPI",
       "display_label": "NAVER (035420.KS)",
       "change_tags": [
-        "점수 +1",
-        "행동 변화: 회피 / 비중 축소 -> 매우 선별적 접근"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -6469,9 +6464,7 @@
       "market_label": "KOSPI",
       "display_label": "현대차 (005380.KS)",
       "change_tags": [
-        "점수 +13",
-        "상태 변화: 회피 -> 약함",
-        "행동 변화: 회피 / 비중 축소 -> 관찰"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -7518,8 +7511,7 @@
       "market_label": "KOSPI",
       "display_label": "한화에어로스페이스 (012450.KS)",
       "change_tags": [
-        "점수 +6",
-        "행동 변화: 회피 / 비중 축소 -> 관찰"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -8565,8 +8557,7 @@
       "market_label": "KOSPI",
       "display_label": "LIG넥스원 (079550.KS)",
       "change_tags": [
-        "점수 0",
-        "행동 변화: 회피 / 비중 축소 -> 관찰"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -9104,7 +9095,7 @@
         90.87000274658203,
         91.0199966430664,
         91.62000274658203,
-        93.31999969482422
+        93.27999877929688
       ],
       "usdkrw_close": [
         1505.43994140625,
@@ -9169,7 +9160,7 @@
         1414.72998046875,
         1413.5799560546875,
         1389.4000244140625,
-        1393.8299560546875
+        1392.43994140625
       ],
       "vix_close": [
         16.700000762939453,
@@ -9304,34 +9295,8 @@
     }
   },
   "notifications": {
-    "count": 3,
-    "items": [
-      {
-        "id": "kr-market-level-회복-2026-08-20",
-        "priority": "medium",
-        "kind": "kr_market_level_change",
-        "scope": "market",
-        "title": "한국 시장 레벨 회복",
-        "message": "레벨 3/6 -> 4/6. 지금은 '소규모 매수 / 보유' 기준으로 보는 편이 좋습니다."
-      },
-      {
-        "id": "kr-market-cross-golden-KOSPI 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.9x (거래량 보통) / RSI 62 (상방 우세)-2026-08-20",
-        "priority": "low",
-        "kind": "kr_market_golden_cross",
-        "scope": "market",
-        "title": "KOSPI 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.9x (거래량 보통) / RSI 62 (상방 우세)",
-        "message": "KOSPI 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.9x (거래량 보통) / RSI 62 (상방 우세). 다만 시장 상태를 함께 보고 선별해서 보는 편이 좋습니다."
-      },
-      {
-        "id": "kr-stock-golden-cross-035420.KS-2026-08-20",
-        "priority": "low",
-        "kind": "kr_stock_golden_cross",
-        "scope": "stock",
-        "title": "NAVER 골든크로스",
-        "message": "NAVER 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.7x (거래량 약함) / RSI 62 (상방 우세). 다만 시장 상태를 함께 보고 선별해서 보는 편이 좋습니다.",
-        "ticker": "035420.KS"
-      }
-    ]
+    "count": 0,
+    "items": []
   },
   "history": {
     "market": [
