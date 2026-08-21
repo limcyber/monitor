@@ -1,173 +1,7 @@
 {
-  "updated_at_et": "2026-08-20 23:54 ET",
+  "updated_at_et": "2026-08-21 00:34 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-05-21 19:01 ET",
-      "market_data_as_of": "2026-05-21 15:30 KST (Close)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "124500.KQ",
-          "ai_score": 30,
-          "ai_state": "회피",
-          "ai_action": "관찰",
-          "ai_note": "아이티센글로벌은 최근 단기 데드크로스가 발생했으며 거래량도 약해 현재는 관망하는 것이 좋습니다. 보유 중이라면 20일선 이탈 시 손절을 고려할 수 있습니다.",
-          "close": 46900.0,
-          "change_pct": 8.564814814814813,
-          "score": 31,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "아이티센글로벌 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.5x (거래량 약함) / RSI 38 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.501923507363526,
-          "rsi14": 37.61755485893417,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "466100.KQ",
-          "ai_score": 10,
-          "ai_state": "회피",
-          "ai_action": "관찰",
-          "ai_note": "클로봇은 시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 위치해 있어 현재는 매수 관점에서 접근하기 어렵습니다.",
-          "close": 41950.0,
-          "change_pct": 7.15197956577267,
-          "score": 12,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.621919986770568,
-          "rsi14": 27.31591448931117,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "005930.KS",
-          "ai_score": 70,
-          "ai_state": "양호",
-          "ai_action": "선별적 접근",
-          "ai_note": "삼성전자는 시장 대비 강한 흐름을 보이며 20일선과 50일선 위에 있어 긍정적입니다. 보유 중이라면 추세가 유지되는지 확인하며 홀딩하는 전략이 유효합니다.",
-          "close": 298000.0,
-          "change_pct": 7.971014492753614,
-          "score": 69,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.9227527711518367,
-          "rsi14": 71.95121951219512,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "000660.KS",
-          "ai_score": 70,
-          "ai_state": "양호",
-          "ai_action": "선별적 접근",
-          "ai_note": "SK하이닉스는 시장 대비 강한 흐름을 보이며 20일선과 50일선 위에 있어 긍정적입니다. RSI가 75 이상으로 과열 구간 진입 가능성이 있으므로 단기 차익 실현을 고려할 수 있습니다.",
-          "close": 1939000.0,
-          "change_pct": 11.117478510028644,
-          "score": 69,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.7761543970784631,
-          "rsi14": 75.75757575757575,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "035420.KS",
-          "ai_score": 20,
-          "ai_state": "회피",
-          "ai_action": "관찰",
-          "ai_note": "NAVER는 최근 중기 데드크로스가 발생했고 시장 대비 약한 흐름을 보입니다. 20일선 아래에 위치해 있어 당분간 관망하는 것이 좋습니다.",
-          "close": 200500.0,
-          "change_pct": 4.699738903394257,
-          "score": 17,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "NAVER 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.8x (거래량 약함) / RSI 37 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.8050585279387227,
-          "rsi14": 37.08609271523179,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "005380.KS",
-          "ai_score": 70,
-          "ai_state": "양호",
-          "ai_action": "선별적 접근",
-          "ai_note": "현대차는 시장 대비 강한 흐름을 보이며 20일선과 50일선 위에 있어 긍정적입니다. 보유 중이라면 추세가 유지되는지 확인하며 홀딩하는 전략이 유효합니다.",
-          "close": 668000.0,
-          "change_pct": 12.837837837837828,
-          "score": 69,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.7575479935181524,
-          "rsi14": 63.93034825870647,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "012450.KS",
-          "ai_score": 10,
-          "ai_state": "회피",
-          "ai_action": "관찰",
-          "ai_note": "한화에어로스페이스는 최근 중기 데드크로스가 발생했고 시장 대비 약한 흐름을 보입니다. 20일선 아래에 위치해 있어 당분간 관망하는 것이 좋습니다.",
-          "close": 1248000.0,
-          "change_pct": -0.08006405124099114,
-          "score": 12,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "한화에어로스페이스 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.6x (거래량 약함) / RSI 32 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.5859602625065101,
-          "rsi14": 31.623931623931625,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "079550.KS",
-          "ai_score": 40,
-          "ai_state": "약함",
-          "ai_action": "관찰",
-          "ai_note": "LIG넥스원은 시장 대비 약한 흐름을 보이며 20일선 아래에 위치해 있습니다. 50일선 위에 있지만, 20일선 돌파 여부를 확인하며 접근하는 것이 안전합니다.",
-          "close": 860000.0,
-          "change_pct": 3.2412965186074505,
-          "score": 37,
-          "state": "약함",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.48678978658076666,
-          "rsi14": 36.15384615384615,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-05-21 23:25 ET",
       "market_data_as_of": "2026-05-20 15:30 KST (Close)",
@@ -24764,6 +24598,170 @@
       "status": "error",
       "error": "한국 종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-08-21 00:34 ET",
+      "market_data_as_of": "2026-08-21 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 75,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "최근 가상자산 관련주 강세와 함께 주가 급등세를 보이고 있습니다. 트럼프 전 대통령의 가상자산 규제 법안 촉구 소식이 긍정적으로 작용하는 것으로 보입니다. 다만, 미국 상원 법안 통과 여부는 아직 불확실하므로 추이를 지켜보는 것이 좋겠습니다.",
+          "close": 31200.0,
+          "change_pct": -0.4784688995215336,
+          "score": 64,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 2.3443042964130862,
+          "rsi14": 74.34052757793765,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 30,
+          "ai_state": "관망",
+          "ai_action": "관찰",
+          "ai_note": "상반기 매출 및 매출총이익이 증가했으나, 인수 준비 및 R&D 투자로 인한 영업손실은 지속되고 있습니다. 두산로지스틱스솔루션 인수를 통해 물류 자동화 사업 확장을 계획하고 있으나, 아직 실질적인 성과로 이어지기까지는 시간이 필요해 보입니다.",
+          "close": 27300.0,
+          "change_pct": -7.300509337860783,
+          "score": 26,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.35295460487973424,
+          "rsi14": 58.99122807017544,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 85,
+          "ai_state": "매수 고려",
+          "ai_action": "매수",
+          "ai_note": "삼성전자가 최대 150조원 규모의 주주환원책을 발표할 것으로 예상되며, 이는 한국 기업 역사상 최대 규모입니다. AI 메모리 호황으로 인한 현금 창출력 증대가 배경이며, 주주 가치 제고에 대한 기대감이 높습니다. 보유 중이라면, 긍정적인 뉴스 흐름을 바탕으로 추가 상승을 기대하며 보유하는 전략이 유효해 보입니다.",
+          "close": 278250.0,
+          "change_pct": 2.6752767527675303,
+          "score": 30,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5492715677863615,
+          "rsi14": 55.294117647058826,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 60,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "SK하이닉스가 40조원 규모의 자사주 매입·소각을 포함한 주주환원책을 발표했으나, 외국인 매도세와 거래량 감소가 나타나고 있습니다. 주주환원 자체보다는 실제 수급 회복과 이익 지속성을 확인하며 신중하게 접근할 필요가 있습니다.",
+          "close": 1745000.0,
+          "change_pct": 3.1933767001774083,
+          "score": 19,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "SK하이닉스 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.5x (거래량 약함) / RSI 51 (중립)"
+          ],
+          "volume_ratio_20d": 0.5470040933348891,
+          "rsi14": 51.17493472584856,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 80,
+          "ai_state": "매수 고려",
+          "ai_action": "매수",
+          "ai_note": "하나증권에서 NAVER에 대해 'BUY' 투자의견과 목표가 400,000원을 제시하며, 네오클라우드 산업의 성장성과 NAVER의 가능성을 재확인했습니다. 엔비디아의 지분 투자와 브룩필드의 자금 지원 가시성이 높아 긍정적인 전망이 나오고 있습니다. 보유 중이라면, AI 관련 성장 모멘텀을 바탕으로 추가 상승을 기대하며 보유하는 것이 좋습니다.",
+          "close": 219500.0,
+          "change_pct": 0.0,
+          "score": 70,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [
+            "NAVER 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.4x (거래량 약함) / RSI 56 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.44199042742863376,
+          "rsi14": 56.353591160220994,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 25,
+          "ai_state": "관망",
+          "ai_action": "관찰",
+          "ai_note": "현대차 노조가 10년 만에 전면 파업에 돌입하며 생산 차질이 예상됩니다. 이는 실적에 부정적인 영향을 미칠 수 있으며, 미국 조지아 공장 증설 계획에도 변수가 될 수 있습니다. 파업 장기화 여부 및 노사 협상 결과를 지켜볼 필요가 있습니다.",
+          "close": 417500.0,
+          "change_pct": 0.0,
+          "score": 26,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.3499806260140014,
+          "rsi14": 60.8058608058608,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 70,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "한화에어로스페이스가 미국 육군 차륜형 자주포 사업의 시제품 업체로 단독 선정되며 목표주가가 상향 조정되었습니다. 이는 K9 자주포의 글로벌 경쟁력 강화와 미국 시장 진출 확대에 긍정적인 신호입니다. 보유 중이라면, 향후 양산 계약 가능성을 염두에 두고 추가 상승을 기대하며 보유하는 전략이 유효합니다.",
+          "close": 1085000.0,
+          "change_pct": -7.026563838903166,
+          "score": 54,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.4770834274865293,
+          "rsi14": 65.61338289962825,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 15,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "LIG넥스원 임원이 뇌물 혐의로 구속 기소된 악재가 주가에 부정적인 영향을 미치고 있습니다. 또한, 과거 입찰 담합 이력도 부담으로 작용할 수 있습니다. 현재로서는 부정적인 이슈가 해소될 때까지 관망하는 것이 바람직해 보입니다.",
+          "close": 684000.0,
+          "change_pct": -13.087674714104192,
+          "score": 15,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 1.172946042755466,
+          "rsi14": 48.78444084278768,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
     }
   ]
 }
