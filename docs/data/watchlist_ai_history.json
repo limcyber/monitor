@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-08-22 12:47 ET",
+  "updated_at_et": "2026-08-22 13:13 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-08-16 16:12 ET",
-      "market_data_as_of": "2026-08-14 15:30 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-08-16 16:44 ET",
       "market_data_as_of": "2026-08-14 15:30 ET (5분봉)",
@@ -20902,6 +20895,162 @@
           "ai_state": "약세",
           "ai_action": "관망",
           "ai_note": "글로벌 칩 주가 하락세와 함께 약세를 보이고 있으며, SK하이닉스 실적 부진의 영향도 받고 있습니다. 단기 반등 시 매도 관점으로 접근하는 것이 좋습니다.",
+          "close": 20.389999389648438,
+          "change_pct": 0.2951277234016114,
+          "score": 33,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0268143560361239,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-08-22 13:13 ET",
+      "market_data_as_of": "2026-08-21 15:59 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 85,
+          "ai_state": "상승",
+          "ai_action": "선별 매수",
+          "ai_note": "AI 칩 수요 강세 지속 전망 속에서 시장 대비 견조한 흐름을 보이고 있습니다. 50일선과 20일선 위에 안착하며 상승 추세 유지 중이며, 보유 시 단기 조정을 활용한 추가 매수 고려.",
+          "close": 214.85000610351562,
+          "change_pct": -0.922296492371455,
+          "score": 78,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.02433740543965483,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 45,
+          "ai_state": "횡보",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "최근 5.18% 상승했으나 거래량이 약해 추세 전환을 단정하기 어렵습니다. 50일선 아래에 위치하며 시장 대비 약한 모습을 보이고 있어, 뚜렷한 거래량 동반 상승 전까지 관망하는 것이 좋습니다.",
+          "close": 363.010009765625,
+          "change_pct": 5.180657905673414,
+          "score": 40,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.04669234565608817,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 15,
+          "ai_state": "하락",
+          "ai_action": "회피",
+          "ai_note": "최근 중기 데드크로스 발생 및 RSI 31로 하방 압력이 강합니다. 시장 대비 약한 흐름과 20일선 아래 종가로 인해 당분간 매수 접근은 신중해야 합니다.",
+          "close": 549.989990234375,
+          "change_pct": 0.7621371149044931,
+          "score": 5,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "META 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 31 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.02043904218646681,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 20,
+          "ai_state": "하락",
+          "ai_action": "회피",
+          "ai_note": "최근 단기 데드크로스 발생 및 20일선, 50일선 아래 종가로 약세 전환 가능성이 있습니다. 거래량 동반 반등 없이는 추가 하락 가능성을 염두에 두어야 합니다.",
+          "close": 473.4100036621094,
+          "change_pct": 0.8413948534332638,
+          "score": 7,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "AMD 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 47 (중립)"
+          ],
+          "volume_ratio_20d": 0.021590201488966156,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 55,
+          "ai_state": "과열",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "최근 급등으로 RSI가 82를 넘어서며 과열 신호가 나타나고 있습니다. 50일선 위에 있지만 단기 급등에 따른 조정 가능성이 있으므로, 추격 매수보다는 눌림목을 기다리는 것이 좋습니다.",
+          "close": 72.7699966430664,
+          "change_pct": 9.182288037624753,
+          "score": 48,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0680961061885308,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 25,
+          "ai_state": "하락",
+          "ai_action": "회피",
+          "ai_note": "시장 대비 약한 흐름과 20일선, 50일선 아래 종가로 인해 하락 추세가 이어질 수 있습니다. 반도체 섹터 전반의 흐름을 주시하며, 명확한 지지선 돌파 전까지는 관망이 필요합니다.",
+          "close": 520.0900268554688,
+          "change_pct": -0.43265029886020434,
+          "score": 8,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.024256527815442862,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 20,
+          "ai_state": "하락",
+          "ai_action": "회피",
+          "ai_note": "20일선과 50일선 아래에 위치하며 약세를 보이고 있습니다. RSI 33으로 추가 하락 가능성이 있으며, 뚜렷한 거래량 동반 상승이 나타나기 전까지는 매수 접근을 자제해야 합니다.",
+          "close": 4.96999979019165,
+          "change_pct": 4.852321311805241,
+          "score": 18,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0486872553089985,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 35,
+          "ai_state": "횡보",
+          "ai_action": "보류 / 관찰",
+          "ai_note": "50일선 아래에 위치하며 거래량이 약한 흐름을 보이고 있습니다. RSI 60으로 중립 구간에 있으나, 시장 대비 견조한 흐름을 유지하기 위해서는 거래량 증가와 함께 50일선 돌파가 필요합니다.",
           "close": 20.389999389648438,
           "change_pct": 0.2951277234016114,
           "score": 33,
