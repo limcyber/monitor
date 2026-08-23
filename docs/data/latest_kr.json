@@ -1,5 +1,5 @@
 {
-  "generated_at_et": "2026-08-23 19:37 ET",
+  "generated_at_et": "2026-08-23 19:55 ET",
   "market_data_as_of": "2026-08-21 15:30 KST (Close)",
   "market": {
     "state": "레벨 4/6 - 살아나는 구간",
@@ -49,13 +49,13 @@
       "kospi200_change_pct": -7.177595782297219,
       "semicon_close": 127065.0,
       "semicon_change_pct": -0.00393483906507841,
-      "brent_close": 93.45999908447266,
-      "brent_change_pct": -0.9852741934414877,
-      "usdkrw_close": 1385.719970703125,
-      "usdkrw_change_pct": -0.3645459211652602,
+      "brent_close": 93.51000213623047,
+      "brent_change_pct": -0.9322992468569491,
+      "usdkrw_close": 1385.8299560546875,
+      "usdkrw_change_pct": -0.3566378007104465,
       "vix_close": 15.130000114440918,
       "vix_change_pct": -5.496565283324662,
-      "usdkrw_20d_zscore": -1.7859474158394777,
+      "usdkrw_20d_zscore": -1.7813872908093027,
       "vix_percentile": 11.904761904761903,
       "kospi_rsi14": 55.91023252634809,
       "kosdaq_rsi14": 66.69103808610723,
@@ -2258,8 +2258,7 @@
       "market_label": "KOSDAQ",
       "display_label": "클로봇 (466100.KQ)",
       "change_tags": [
-        "점수 +10",
-        "상태 변화: 회피 -> 약함"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -3306,8 +3305,7 @@
       "market_label": "KOSPI",
       "display_label": "삼성전자 (005930.KS)",
       "change_tags": [
-        "점수 -12",
-        "상태 변화: 약함 -> 회피"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -6456,7 +6454,7 @@
       "market_label": "KOSPI",
       "display_label": "현대차 (005380.KS)",
       "change_tags": [
-        "점수 +4"
+        "점수 0"
       ],
       "position_tags": [
         "권장 비중 2~5%",
@@ -9089,7 +9087,7 @@
         91.62000274658203,
         93.77999877929688,
         94.38999938964844,
-        93.45999908447266
+        93.51000213623047
       ],
       "usdkrw_close": [
         1503.1099853515625,
@@ -9154,7 +9152,7 @@
         1413.5799560546875,
         1389.4000244140625,
         1390.7900390625,
-        1385.719970703125
+        1385.8299560546875
       ],
       "vix_close": [
         16.59000015258789,
@@ -9289,18 +9287,8 @@
     }
   },
   "notifications": {
-    "count": 1,
-    "items": [
-      {
-        "id": "kr-stock-golden-cross-035420.KS-2026-08-23",
-        "priority": "low",
-        "kind": "kr_stock_golden_cross",
-        "scope": "stock",
-        "title": "NAVER 골든크로스",
-        "message": "NAVER 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.7x (거래량 약함) / RSI 58 (상방 우세). 다만 시장 상태를 함께 보고 선별해서 보는 편이 좋습니다.",
-        "ticker": "035420.KS"
-      }
-    ]
+    "count": 0,
+    "items": []
   },
   "history": {
     "market": [
