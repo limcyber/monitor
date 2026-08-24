@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-08-24 14:28 ET",
+  "updated_at_et": "2026-08-24 15:10 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-08-18 18:14 ET",
-      "market_data_as_of": "2026-08-18 15:45 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-08-18 18:47 ET",
       "market_data_as_of": "2026-08-18 15:45 ET (5분봉)",
@@ -20234,6 +20227,164 @@
           "action": "보류 / 관찰",
           "cross_highlights": [],
           "volume_ratio_20d": 0.002609964490240944,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-08-24 15:10 ET",
+      "market_data_as_of": "2026-08-24 14:50 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 75,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "최근 NVIDIA Groq 3 LPX가 출시되어 에이전트 AI 추론 시장을 공략하고 있으며, SpaceXAI도 Vera CPU를 채택했습니다. 다만, 최근 S&P500 및 나스닥 지수 하락세에 영향을 받아 주가도 하락 중이므로, 단기적 조정 후 재진입을 고려하는 것이 좋습니다.",
+          "close": 209.39999389648438,
+          "change_pct": -2.47764870248417,
+          "score": 71,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.004935444937647515,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 40,
+          "ai_state": "약세",
+          "ai_action": "보유/관찰",
+          "ai_note": "중국에서 570만 대 규모의 리콜이 있었으나 OTA(무선 업데이트)로 해결되어 비용 부담은 크지 않을 것으로 보입니다. 하지만 전반적인 시장 약세와 함께 주가도 하락세를 보이고 있어, 추가적인 하락 가능성을 염두에 두고 관망하는 것이 좋겠습니다.",
+          "close": 350.19000244140625,
+          "change_pct": -3.491700220921501,
+          "score": 44,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.012815649775434802,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 55,
+          "ai_state": "관망",
+          "ai_action": "보유/관찰",
+          "ai_note": "아동 안전 소송과 관련된 재판이 진행 중이며, AI 챗봇에서 자해 관련 대화 시 부모에게 알림을 주는 등 안전 기능 강화 소식이 있습니다. 최근 중기 데드크로스가 발생했으므로, 소송 결과 및 추가적인 기술 개발 동향을 지켜보며 신중하게 접근해야 합니다.",
+          "close": 560.7100219726562,
+          "change_pct": 1.9658114345625144,
+          "score": 6,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "META 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 38 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.004242250794046583,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 65,
+          "ai_state": "관망",
+          "ai_action": "선별 매수",
+          "ai_note": "AI 및 데이터센터 기술에 집중하며 HPE와 협력하고, Instinct MI430X GPU 시리즈를 출시하는 등 긍정적인 뉴스가 이어지고 있습니다. 2분기 매출이 전년 대비 50% 증가하는 등 견조한 실적을 보였으나, 최근 시장 전반의 하락세에 영향을 받아 주가도 조정을 받고 있습니다. AI 관련 모멘텀은 유효하나, 단기적 시장 흐름을 고려하여 선별적으로 접근하는 것이 좋습니다.",
+          "close": 457.79998779296875,
+          "change_pct": -3.2646618504027947,
+          "score": 2,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "AMD 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 33 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0024097604654225264,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 45,
+          "ai_state": "약세",
+          "ai_action": "보유/관찰",
+          "ai_note": "최근 폐동맥 고혈압 진단을 위한 AI 제품이 FDA 승인을 받았다는 긍정적인 소식이 있습니다. 그러나 최근 주가 급등 후 이사 매도 물량이 나오면서 주가 변동성이 커지고 있어, 추가적인 추세 확인 후 접근하는 것이 안전합니다.",
+          "close": 66.95999908447266,
+          "change_pct": -7.8827942832336735,
+          "score": 43,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0036898131327895477,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "보유/관찰",
+          "ai_note": "반도체 섹터 전반의 약세와 함께 SOXX ETF 역시 하락세를 보이고 있습니다. 최근 단기 데드크로스가 발생했으며, 시장 전반의 하락 추세가 지속될 경우 추가 하락 가능성이 있습니다. 반도체 섹터의 회복 시점을 기다리며 관망하는 것이 좋습니다.",
+          "close": 507.9700012207031,
+          "change_pct": -2.322851044287433,
+          "score": 18,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SOXX 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 36 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0014174411798994883,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 15,
+          "ai_state": "약세",
+          "ai_action": "보유/관찰",
+          "ai_note": "Grubhub과의 파트너십 확대 등 긍정적인 뉴스가 있었으나, 2026년 매출 전망 하향 조정으로 주가가 급락했습니다. 현재 RSI 지표가 과매도 구간에 근접해 있어 반등 가능성도 있으나, 실적 우려가 해소되기 전까지는 신중한 접근이 필요합니다.",
+          "close": 4.675000190734863,
+          "change_pct": -6.1244945214953495,
+          "score": 4,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.005866499116205903,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "보유/관찰",
+          "ai_note": "2분기 매출은 성장했으나, 국제 성장세 둔화로 연간 가이던스를 하향 조정했습니다. 또한, 최근 한국 반도체 주식의 약세가 미국 증시에도 영향을 미치면서 KORU 역시 하락세를 보이고 있습니다. 실적 개선 및 반도체 섹터 회복을 기다리며 관망하는 것이 좋습니다.",
+          "close": 19.109100341796875,
+          "change_pct": -6.143910761567939,
+          "score": 33,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0005289555689071649,
           "signals": {
             "short_cross": "none",
             "mid_cross": "none"
