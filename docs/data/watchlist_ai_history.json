@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-08-24 16:56 ET",
+  "updated_at_et": "2026-08-24 17:23 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-08-18 20:46 ET",
-      "market_data_as_of": "2026-08-18 15:45 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-08-18 22:13 ET",
       "market_data_as_of": "2026-08-18 15:45 ET (5분봉)",
@@ -20523,6 +20516,164 @@
           "ai_state": "약세 관망",
           "ai_action": "보류",
           "ai_note": "50일선 아래에서 약세를 보이고 있으며 거래량도 부족합니다. 시장 상황을 좀 더 지켜보며 반등 신호를 기다리는 것이 좋겠습니다. 보유자는 추세 전환 여부를 확인하며 대응하는 것이 좋습니다.",
+          "close": 18.800100326538086,
+          "change_pct": -7.6615925198960095,
+          "score": 33,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-08-24 17:23 ET",
+      "market_data_as_of": "2026-08-24 15:55 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 75,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "NVIDIA, SK그룹과 AI 공장 및 차세대 메모리 파트너십 확대 발표. 스페이스X AI가 NVIDIA Vera CPU를 도입하여 Grok AI 인프라 가속화 예정. 최근 긍정적인 뉴스 흐름에도 불구하고, 시장 전반의 변동성을 고려하여 현 보유 상태를 유지하며 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 208.61000061035156,
+          "change_pct": -2.8455665870043,
+          "score": 71,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 40,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "네바다주에서 유료 로보택시 서비스 허가 소식이 있었으나, 전반적인 시장 약세와 함께 주가도 하락세를 보이고 있습니다. 거래량 약세와 함께 추가적인 하락 가능성을 염두에 두고 관망하는 것이 좋겠습니다.",
+          "close": 350.1400146484375,
+          "change_pct": -3.5054762764213487,
+          "score": 44,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 55,
+          "ai_state": "혼조세",
+          "ai_action": "보유",
+          "ai_note": "인스타그램, 페이스북, 왓츠앱에서 10대 보호 기능 강화 소식이 있었으나, 아동 안전 소송 및 AI 규제 관련 부정적인 뉴스도 존재합니다. 현재로서는 보유를 유지하되, 관련 뉴스 추이를 면밀히 살펴보는 것이 좋겠습니다.",
+          "close": 559.1099853515625,
+          "change_pct": 1.6748427947995692,
+          "score": 6,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "META 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 37 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "AI 추론 시장 확대를 위한 Taalas 인수 소식과 에너지 효율 목표 달성 등 긍정적인 뉴스가 있으나, 전반적인 반도체 섹터 약세와 함께 주가도 하락했습니다. 단기 데드크로스 신호와 함께 추가 하락 가능성을 고려하여 보류하는 것이 좋겠습니다.",
+          "close": 455.9649963378906,
+          "change_pct": -3.652404366003037,
+          "score": 2,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "AMD 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 33 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 45,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "폐렴 진단을 위한 AI 제품 FDA 승인 소식은 긍정적이나, 최근 급등 후 차익 실현 매물이 나올 수 있습니다. 현재로서는 보유를 유지하며 시장 반응을 지켜보는 것이 좋겠습니다.",
+          "close": 66.25499725341797,
+          "change_pct": -8.852668829080578,
+          "score": 43,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "반도체 섹터 전반의 약세와 함께 하락세를 보이고 있습니다. 마이클 버리의 AI 버블 경고 등 부정적인 전망이 나오고 있어, 추가 하락 가능성을 염두에 두고 보류하는 것이 좋겠습니다.",
+          "close": 506.0199890136719,
+          "change_pct": -2.697817346143694,
+          "score": 3,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SOXX 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 36 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 35,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "그럽허브와의 파트너십 확대 및 로봇 배달 서비스 확장 소식이 있었으나, 2분기 매출 성장에도 불구하고 주가는 하락했습니다. 현재로서는 추가적인 하락 가능성을 고려하여 보류하는 것이 좋겠습니다.",
+          "close": 4.675000190734863,
+          "change_pct": -6.1244945214953495,
+          "score": 4,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "2분기 매출은 성장했으나, 국제 성장 둔화로 연간 가이던스를 하향 조정했습니다. 반도체 섹터 전반의 약세와 함께 주가도 하락세를 보이고 있어, 당분간 보류하는 것이 좋겠습니다.",
           "close": 18.800100326538086,
           "change_pct": -7.6615925198960095,
           "score": 33,
