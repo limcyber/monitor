@@ -1,171 +1,7 @@
 {
-  "updated_at_et": "2026-08-24 07:02 ET",
+  "updated_at_et": "2026-08-24 07:50 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-08-18 13:20 ET",
-      "market_data_as_of": "2026-08-18 13:10 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 90,
-          "ai_state": "강한 상승",
-          "ai_action": "매수 유지",
-          "ai_note": "AI 인프라 투자 확대 소식과 함께 강력한 상승세를 보이고 있습니다. 4.25GW 규모의 AI 컴퓨팅 용량 확보 계획은 긍정적이며, 보유 중이라면 추세가 유지되는 한 홀딩하는 것이 좋습니다.",
-          "close": 219.99000549316406,
-          "change_pct": -2.2310071268942466,
-          "score": 83,
-          "state": "강함",
-          "action": "매수 가능",
-          "cross_highlights": [
-            "NVDA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 78 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.00138111683840863,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 30,
-          "ai_state": "약세 관망",
-          "ai_action": "보류",
-          "ai_note": "SpaceX와의 합병 가능성 등 투자자들의 관심이 분산되고 있으며, 밸류에이션 부담도 존재합니다. 단기적인 반등 시도를 보일 수 있으나, 추세 전환 신호가 명확해지기 전까지는 관망하는 것이 좋습니다.",
-          "close": 338.93890380859375,
-          "change_pct": -0.10642027626459605,
-          "score": 21,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "TSLA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 78 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.0013815385098608387,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 10,
-          "ai_state": "매우 약세",
-          "ai_action": "매도 고려",
-          "ai_note": "아동 안전 문제 관련 소송에서 불리한 판결이 이어지고 있으며, 잠재적 손해배상액이 상당합니다. 법적 리스크가 해소되기 전까지는 보유 비중 축소를 고려해야 합니다.",
-          "close": 550.9199829101562,
-          "change_pct": -3.172397265652316,
-          "score": 5,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "META 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 41 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.0030997772005624826,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 40,
-          "ai_state": "약세 보합",
-          "ai_action": "보류",
-          "ai_note": "AI 시장 경쟁 심화 속에서 NVIDIA 대비 상대적으로 약한 모습을 보이고 있습니다. 단기 골든크로스 신호가 있으나 거래량 동반 여부를 확인하며 신중하게 접근해야 합니다.",
-          "close": 478.9599914550781,
-          "change_pct": -5.343875206506299,
-          "score": 5,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "AMD 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 60 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.001290630289530434,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 25,
-          "ai_state": "약세 관망",
-          "ai_action": "보류",
-          "ai_note": "거래량이 약하고 50일선 아래에 위치해 있어 상승 모멘텀이 부족합니다. 뚜렷한 상승 추세가 확인되기 전까지는 보수적인 접근이 필요합니다.",
-          "close": 49.68000030517578,
-          "change_pct": -3.7955056305936985,
-          "score": 15,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.001353256661000714,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 20,
-          "ai_state": "약세",
-          "ai_action": "보류",
-          "ai_note": "반도체 섹터 전반의 약세 흐름 속에 50일선 저항에 부딪히고 있습니다. 100일선 지지 여부를 확인하며 반등 가능성을 탐색해야 합니다.",
-          "close": 527.2000122070312,
-          "change_pct": -5.708968233816436,
-          "score": 8,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.002420629607565352,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 5,
-          "ai_state": "매우 약세",
-          "ai_action": "매도",
-          "ai_note": "단기 데드크로스 발생 및 시장 대비 약한 흐름을 보이고 있습니다. 추가 하락 가능성을 염두에 두고 보유 중이라면 손절을 고려하는 것이 좋습니다.",
-          "close": 4.574999809265137,
-          "change_pct": -6.632658770957112,
-          "score": 0,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "SERV 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 54 (중립)"
-          ],
-          "volume_ratio_20d": 0.00040563021412413523,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 15,
-          "ai_state": "약세",
-          "ai_action": "보류",
-          "ai_note": "거래량이 약하고 시장 대비 약한 흐름을 보이고 있습니다. 단기 골든크로스 신호가 있으나, 50일선 돌파 여부를 확인하며 신중하게 접근해야 합니다.",
-          "close": 18.37969970703125,
-          "change_pct": -21.921414646557135,
-          "score": 9,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "KORU 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 62 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.0035723963209533583,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-08-18 13:51 ET",
       "market_data_as_of": "2026-08-18 13:40 ET (5분봉)",
@@ -20441,6 +20277,13 @@
           }
         }
       ]
+    },
+    {
+      "generated_at_et": "2026-08-24 07:50 ET",
+      "market_data_as_of": "2026-08-21 15:59 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
     }
   ]
 }
