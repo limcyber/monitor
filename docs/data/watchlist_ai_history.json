@@ -1,171 +1,7 @@
 {
-  "updated_at_et": "2026-08-24 13:55 ET",
+  "updated_at_et": "2026-08-24 14:28 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-08-18 17:44 ET",
-      "market_data_as_of": "2026-08-18 15:45 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 75,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "엔비디아는 최근 4조 달러 시총 돌파 소식이 있었으나, 2.48% 하락 마감했습니다. 과열 구간 진입 가능성이 있으므로 단기적으로는 관망하며 추세를 지켜보는 것이 좋겠습니다.",
-          "close": 219.4199981689453,
-          "change_pct": -2.4843324627168095,
-          "score": 83,
-          "state": "강함",
-          "action": "매수 가능",
-          "cross_highlights": [
-            "NVDA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 77 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.002912422986230376,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 30,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "테슬라는 최근 사이버캡 테스트 소식이 있었으나, 0.74% 하락 마감했습니다. 거래량이 약하고 50일선 아래에 있어 추가 하락 가능성을 염두에 두고 보수적으로 접근하는 것이 좋습니다.",
-          "close": 336.7921142578125,
-          "change_pct": -0.7391316314124041,
-          "score": 21,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "TSLA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 75 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.001769546102060884,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 10,
-          "ai_state": "회피",
-          "ai_action": "매도",
-          "ai_note": "메타는 최근 소송 관련 합의 소식에도 불구하고 4.13% 하락했습니다. 여러 소송과 규제 이슈가 지속되고 있어 당분간은 회피하는 것이 좋겠습니다.",
-          "close": 545.4912109375,
-          "change_pct": -4.126537598567859,
-          "score": 5,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "META 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 40 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.007967171284372587,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 15,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "AMD는 최근 AI 시장 성장 관련 긍정적인 전망에도 불구하고 4.35% 하락했습니다. 20일선과 50일선 아래에 있어 단기적인 하락 추세가 우려되므로 관망하며 추세를 지켜보는 것이 좋겠습니다.",
-          "close": 484.010009765625,
-          "change_pct": -4.345847872406128,
-          "score": 6,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "AMD 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 61 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.004822363855192786,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 35,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "템퍼스 AI는 2분기 실적 호조와 함께 인수합병 소식이 있었으나, 3.95% 하락했습니다. 현재 50일선 아래에 있어 추가 하락 가능성을 염두에 두고 보수적으로 접근하는 것이 좋습니다.",
-          "close": 49.599998474121094,
-          "change_pct": -3.950427845931137,
-          "score": 30,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0025135305400287734,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 20,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "SOXX는 반도체 섹터 전반의 약세와 함께 5.27% 하락했습니다. 50일선 돌파에 실패하며 하락 추세가 이어지고 있어 당분간은 관망하는 것이 좋겠습니다.",
-          "close": 529.6799926757812,
-          "change_pct": -5.2654175666237535,
-          "score": 14,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.00276817691461222,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 5,
-          "ai_state": "회피",
-          "ai_action": "매도",
-          "ai_note": "SERV는 2분기 실적 부진과 향후 수요 감소 전망으로 인해 7.14% 급락했습니다. 현재 단기 데드크로스가 발생했으며, 추가 하락 가능성이 높아 회피하는 것이 좋겠습니다.",
-          "close": 4.550000190734863,
-          "change_pct": -7.142855057563491,
-          "score": 0,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "SERV 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 53 (중립)"
-          ],
-          "volume_ratio_20d": 0.004630821999805919,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 10,
-          "ai_state": "회피",
-          "ai_action": "매도",
-          "ai_note": "KORU는 한국 증시 전반의 약세와 반도체 섹터 하락으로 인해 22.71% 급락했습니다. 현재 50일선 아래에 있으며, 단기적인 하락 추세가 강하게 나타나고 있어 회피하는 것이 좋겠습니다.",
-          "close": 18.19499969482422,
-          "change_pct": -22.706036588033772,
-          "score": 9,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "KORU 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 62 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.0037093163101690066,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-08-18 18:14 ET",
       "market_data_as_of": "2026-08-18 15:45 ET (5분봉)",
@@ -20240,6 +20076,164 @@
           "action": "보류 / 관찰",
           "cross_highlights": [],
           "volume_ratio_20d": 0.0011344021101484926,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-08-24 14:28 ET",
+      "market_data_as_of": "2026-08-24 14:00 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 75,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "NVIDIA Groq 3 LPX가 양산에 들어갔으며, 에이전트 AI 추론 시장에서 경쟁사 대비 4배 빠른 응답 속도를 제공합니다. 시장은 여전히 강한 수요를 예상하며, 보유 중이라면 추세를 지켜보는 것이 좋습니다.",
+          "close": 209.80499267578125,
+          "change_pct": -2.2890315373414682,
+          "score": 71,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.004084196391303931,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 40,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "중국에서 570만 대 이상의 차량에 대한 리콜이 진행 중이나, OTA 업데이트로 해결되어 비용 부담은 크지 않을 것으로 보입니다. 하지만 전반적인 추세가 약하므로 관망하는 것이 좋습니다.",
+          "close": 354.0249938964844,
+          "change_pct": -2.43482109125871,
+          "score": 45,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.701382462606556,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "아동 안전 문제와 관련된 소송 및 벌금이 계속되고 있으며, 최근 뉴멕시코 법원에서 5억 6,700만 달러의 벌금이 부과되었습니다. 또한, 소셜 미디어 중독 관련 소송도 진행 중입니다. 현재로서는 매수보다는 관망이 적절해 보입니다.",
+          "close": 556.9450073242188,
+          "change_pct": 1.2811388611344343,
+          "score": 5,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "META 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 36 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0025518062809776194,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 65,
+          "ai_state": "중립",
+          "ai_action": "보유",
+          "ai_note": "2분기 매출이 전년 대비 50% 증가하며 AI 시장에서의 성장을 이어가고 있습니다. 특히 데이터센터 부문이 강세를 보이고 있습니다. AI 시장의 성장세를 고려할 때 보유를 유지하되, 시장 전반의 변동성을 주시하는 것이 좋습니다.",
+          "close": 458.125,
+          "change_pct": -3.1959852086634988,
+          "score": 2,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "AMD 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 33 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.002415208762816994,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 45,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "최근 FDA로부터 폐고혈압 진단을 위한 AI 도구 ECG-PH에 대한 510(k) 승인을 받았습니다. 이는 긍정적인 뉴스이나, 주가 추세는 약세를 보이고 있어 추가적인 상승 모멘텀을 확인해야 합니다.",
+          "close": 67.05000305175781,
+          "change_pct": -7.758975375182731,
+          "score": 43,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0058290696236743406,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "반도체 섹터 전반의 약세가 지속되고 있으며, SOXX ETF 역시 하락세를 보이고 있습니다. 최근 단기 데드크로스가 발생한 점을 고려할 때, 추가 하락 가능성을 염두에 두고 관망하는 것이 좋습니다.",
+          "close": 506.4599914550781,
+          "change_pct": -2.6132096253987047,
+          "score": 18,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SOXX 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 36 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0010893238260254688,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 10,
+          "ai_state": "매우 약세",
+          "ai_action": "매도",
+          "ai_note": "Uber와의 결별 후 Grubhub 및 DoorDash와의 파트너십을 통해 로봇 배달 사업을 확장하고 있습니다. 그러나 주가 추세는 매우 약하며, 최근 경영진의 주식 매도 소식도 있습니다. 현재로서는 매도 의견을 유지합니다.",
+          "close": 4.606500148773193,
+          "change_pct": -7.499997366863087,
+          "score": 4,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.006088845327469867,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 35,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "2분기 매출은 전년 대비 18.2% 증가했으나, 연간 가이던스를 하향 조정했습니다. 국제 매출 성장이 예상보다 더디기 때문입니다. 회복세를 확인하기 전까지는 보류하는 것이 좋습니다.",
+          "close": 18.74799919128418,
+          "change_pct": -7.917491997754644,
+          "score": 33,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.002609964490240944,
           "signals": {
             "short_cross": "none",
             "mid_cross": "none"
