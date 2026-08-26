@@ -1,169 +1,7 @@
 {
-  "updated_at_et": "2026-08-26 06:26 ET",
+  "updated_at_et": "2026-08-26 06:59 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-08-20 07:25 ET",
-      "market_data_as_of": "2026-08-19 15:55 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 88,
-          "ai_state": "강한 상승",
-          "ai_action": "매수",
-          "ai_note": "AI 팩토리 파트너십 확대 및 차세대 메모리 투자 소식으로 강한 상승세입니다. 8월 26일 실적 발표를 앞두고 있으며, 시장은 긍정적인 전망을 하고 있습니다.",
-          "close": 217.66000366210938,
-          "change_pct": -0.9465740325192651,
-          "score": 72,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [
-            "NVDA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 72 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.045233405058849874,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 45,
-          "ai_state": "관망",
-          "ai_action": "보류 / 관찰",
-          "ai_note": "사상 최초로 핸들, 페달 없는 사이버캡 공개 임박 소식에 주목받고 있습니다. 다만, 로보택시 모멘텀 둔화 우려도 존재합니다.",
-          "close": 351.1199951171875,
-          "change_pct": 4.230118504630487,
-          "score": 16,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "TSLA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.1x (거래량 약함) / RSI 77 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.0503707591534919,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 30,
-          "ai_state": "약세",
-          "ai_action": "보류 / 관찰",
-          "ai_note": "아동 유해성 관련 소송과 AI 기술 투자 소식이 혼재되어 있습니다. 2분기 실적은 예상치를 상회했으나, AI 관련 비용 증가가 부담입니다.",
-          "close": 546.1900024414062,
-          "change_pct": 0.46352007844185916,
-          "score": 5,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "META 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.1x (거래량 약함) / RSI 52 (중립)"
-          ],
-          "volume_ratio_20d": 0.06767016273912704,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 75,
-          "ai_state": "상승",
-          "ai_action": "선별 매수",
-          "ai_note": "AI 에너지 효율성 목표 초과 달성 및 신규 칩 출시 소식으로 주목받고 있습니다. 다만, 밸류에이션 부담과 기술주 전반의 조정 가능성은 염두에 두어야 합니다.",
-          "close": 466.80999755859375,
-          "change_pct": -3.6293103817598427,
-          "score": 7,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "AMD 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 46 (중립)"
-          ],
-          "volume_ratio_20d": 0.022696946169423457,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 60,
-          "ai_state": "혼조세",
-          "ai_action": "보류 / 관찰",
-          "ai_note": "Personalis 인수 소식으로 주목받고 있으나, 희석 및 실행 위험에 대한 우려도 있습니다. AI 의료 분야에서의 성장 잠재력은 긍정적입니다.",
-          "close": 61.20000076293945,
-          "change_pct": 23.987034048182032,
-          "score": 52,
-          "state": "애매",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.18093637128363615,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 25,
-          "ai_state": "약세",
-          "ai_action": "보류 / 관찰",
-          "ai_note": "반도체 섹터 전반의 조정과 금리 상승 우려로 하락했습니다. AI 수요는 견조하나, 밸류에이션 부담이 작용하고 있습니다.",
-          "close": 519.5700073242188,
-          "change_pct": -2.224356310503639,
-          "score": 6,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.02847919598086033,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 15,
-          "ai_state": "약세",
-          "ai_action": "보류 / 관찰",
-          "ai_note": "Grubhub과의 파트너십 확대 소식이 있으나, Uber Eats 관계 종료 및 가이던스 하향 조정으로 압박받고 있습니다.",
-          "close": 4.784999847412109,
-          "change_pct": 5.1648274027718655,
-          "score": 0,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.021843690978636737,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 35,
-          "ai_state": "관망",
-          "ai_action": "보류 / 관찰",
-          "ai_note": "한국 증시 전반의 반도체 섹터 약세 흐름에 영향을 받고 있습니다. 최근 20일선 아래로 하락하며 단기적인 약세 흐름을 보이고 있습니다.",
-          "close": 19.135000228881836,
-          "change_pct": 7.258968975435187,
-          "score": 25,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "KORU 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 56 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.007879101550355608,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-08-20 07:50 ET",
       "market_data_as_of": "2026-08-19 15:55 ET (5분봉)",
@@ -21098,6 +20936,13 @@
           }
         }
       ]
+    },
+    {
+      "generated_at_et": "2026-08-26 06:59 ET",
+      "market_data_as_of": "2026-08-25 15:40 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
     }
   ]
 }
