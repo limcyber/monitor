@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-08-30 17:18 ET",
+  "updated_at_et": "2026-08-30 19:39 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-08-21 01:02 ET",
-      "market_data_as_of": "2026-08-20 15:55 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-08-21 01:55 ET",
       "market_data_as_of": "2026-08-20 15:55 ET (5분봉)",
@@ -20533,6 +20526,166 @@
           "ai_state": "중립",
           "ai_action": "관망",
           "ai_note": "KORU는 최근 SK 하이닉스와 NVIDIA의 협력 소식으로 상승세를 보였으나, 레버리지 ETF 특성상 변동성이 클 수 있습니다. 보유 중이라면, 단기 변동성에 유의하며 추세를 지켜보는 것이 좋습니다.",
+          "close": 21.037500381469727,
+          "change_pct": 2.67203814771777,
+          "score": 32,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-08-30 19:39 ET",
+      "market_data_as_of": "2026-08-27 11:30 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 75,
+          "ai_state": "관망",
+          "ai_action": "선별 매수",
+          "ai_note": "최근 단기 데드크로스가 나왔으나, 시장 대비 강한 흐름을 보이며 20일선 위에 있어 추가 상승 가능성을 열어둡니다. 보유 중이라면 20일선 이탈 시 분할 매도를 고려해볼 수 있습니다.",
+          "close": 225.42999267578125,
+          "change_pct": 7.521696431469582,
+          "score": 72,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "NVDA 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 51 (중립)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 40,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "거래량이 약하고 50일선 아래에 있어 현재로서는 매수 추천이 어렵습니다. 시장 흐름을 관망하며 50일선 회복 여부를 지켜보는 것이 좋겠습니다.",
+          "close": 352.4100036621094,
+          "change_pct": 1.9056145388697043,
+          "score": 40,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 20,
+          "ai_state": "하락",
+          "ai_action": "보류",
+          "ai_note": "시장 대비 약한 흐름과 20일선, 50일선 아래에 위치하여 매수 관점에서는 부정적입니다. 추세 전환 신호가 나오기 전까지는 관망이 필요합니다.",
+          "close": 570.9849853515625,
+          "change_pct": -0.8947528666309768,
+          "score": 22,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 5,
+          "ai_state": "하락",
+          "ai_action": "보류",
+          "ai_note": "최근 단기 데드크로스가 발생했고 시장 대비 약한 모습을 보입니다. 20일선 아래에 있어 당분간 하락 추세가 이어질 가능성이 높으므로 관망해야 합니다.",
+          "close": 475.2799987792969,
+          "change_pct": -1.1748058932754768,
+          "score": 4,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "AMD 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 47 (중립)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 80,
+          "ai_state": "강세",
+          "ai_action": "매수",
+          "ai_note": "최근 중기 골든크로스가 발생했고 RSI가 과열 구간에 진입했습니다. 시장 대비 강한 흐름을 보이며 50일선 위에 있어 추가 상승을 기대할 수 있습니다.",
+          "close": 70.7249984741211,
+          "change_pct": 3.2783221482716174,
+          "score": 78,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [
+            "TEM 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 71 (과열 구간)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 20,
+          "ai_state": "하락",
+          "ai_action": "보류",
+          "ai_note": "최근 단기 데드크로스가 발생했고 RSI가 하방 우세 구간에 있습니다. 시장 대비 약한 흐름을 보이며 20일선 아래에 있어 당분간 관망이 필요합니다.",
+          "close": 521.97998046875,
+          "change_pct": 1.27666972118754,
+          "score": 19,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SOXX 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 41 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 15,
+          "ai_state": "하락",
+          "ai_action": "보류",
+          "ai_note": "시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 위치해 있습니다. 매수 관점에서는 부정적이므로 추세 전환을 기다려야 합니다.",
+          "close": 4.934999942779541,
+          "change_pct": 3.2426720955605504,
+          "score": 18,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0031128729587383383,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "보류",
+          "ai_note": "거래량이 약하고 시장 대비 약한 흐름을 보이며 50일선 아래에 있습니다. 현재로서는 매수 추천이 어렵고, 50일선 회복 여부를 지켜봐야 합니다.",
           "close": 21.037500381469727,
           "change_pct": 2.67203814771777,
           "score": 32,
