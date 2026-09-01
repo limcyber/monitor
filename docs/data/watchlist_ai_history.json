@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-09-01 15:04 ET",
+  "updated_at_et": "2026-09-01 17:52 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-08-21 08:30 ET",
-      "market_data_as_of": "2026-08-20 15:55 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-08-21 09:26 ET",
       "market_data_as_of": "2026-08-21 09:15 ET (5분봉)",
@@ -21141,6 +21134,162 @@
           "ai_state": "약세 관망",
           "ai_action": "비중 축소",
           "ai_note": "20일선 및 50일선 하향 돌파, 시장 대비 강한 흐름에도 불구하고 하락세. 거래량 부족으로 반등 모멘텀 약함. 보유 시 손절 고려.",
+          "close": 18.864999771118164,
+          "change_pct": -9.995226168241988,
+          "score": 28,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.011311590941372922,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-09-01 17:52 ET",
+      "market_data_as_of": "2026-09-01 14:45 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 70,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "시장 대비 강한 흐름을 보이며 50일선 위에 있습니다. 단기 데드크로스 신호는 없으나, 시장 전반의 약세 흐름을 고려하여 현 보유 상태를 유지하며 관망하는 것이 좋습니다.",
+          "close": 216.5800018310547,
+          "change_pct": -1.9023448552695776,
+          "score": 73,
+          "state": "양호",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.00735287254743929,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 40,
+          "ai_state": "약세",
+          "ai_action": "비중 축소",
+          "ai_note": "50일선 아래에서 약세를 보이고 있으며 거래량도 아직 약합니다. 시장 전반의 하락 추세를 감안할 때 추가 하락 가능성이 있으므로 비중 축소를 고려해야 합니다.",
+          "close": 353.3900146484375,
+          "change_pct": -3.957058588274054,
+          "score": 45,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.010172752977050078,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 30,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "최근 단기 골든크로스가 나왔으나 거래량이 약하고 50일선 아래에 있습니다. 시장 전반의 약세 속에서 뚜렷한 상승 모멘텀이 부족하므로 현 보유 상태를 유지하며 추세를 지켜보는 것이 좋습니다.",
+          "close": 577.010009765625,
+          "change_pct": 0.8159455377975133,
+          "score": 22,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "META 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 49 (중립)"
+          ],
+          "volume_ratio_20d": 0.004695704322692706,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "비중 축소",
+          "ai_note": "20일선과 50일선 아래에서 시장 대비 약한 흐름을 보이고 있습니다. 현재로서는 매수 진입보다는 비중 축소를 고려하는 것이 합리적입니다.",
+          "close": 454.5199890136719,
+          "change_pct": -3.4415389541596397,
+          "score": 18,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.004936060514620005,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 75,
+          "ai_state": "강세",
+          "ai_action": "보유",
+          "ai_note": "최근 중기 골든크로스가 발생했고 50일선 위에 있으며 시장 대비 강한 흐름을 보입니다. RSI 지표도 상방 우세를 나타내고 있어 긍정적인 흐름이 예상되나, 시장 전반의 약세를 고려하여 보유 후 추세를 확인하는 것이 좋습니다.",
+          "close": 61.54999923706055,
+          "change_pct": -2.3790642635223125,
+          "score": 78,
+          "state": "양호",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "TEM 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 57 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.010730902418954167,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 15,
+          "ai_state": "매우 약세",
+          "ai_action": "비중 축소",
+          "ai_note": "20일선과 50일선 아래에서 시장 대비 약한 흐름을 보이고 있으며 RSI 지표도 과매도 구간에 근접했습니다. 현재로서는 매수 진입보다는 비중 축소를 고려해야 합니다.",
+          "close": 496.1499938964844,
+          "change_pct": -2.913669066896285,
+          "score": 16,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.010431843785093868,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 15,
+          "ai_state": "매우 약세",
+          "ai_action": "비중 축소",
+          "ai_note": "20일선과 50일선 아래에서 약세를 보이고 있습니다. 현재로서는 매수 진입보다는 비중 축소를 고려하는 것이 합리적입니다.",
+          "close": 4.664999961853027,
+          "change_pct": -4.2094441175232316,
+          "score": 17,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.003193867161349673,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "비중 축소",
+          "ai_note": "20일선과 50일선 아래에서 약세를 보이고 있습니다. 시장 전반의 하락 추세를 감안할 때 추가 하락 가능성이 있으므로 비중 축소를 고려해야 합니다.",
           "close": 18.864999771118164,
           "change_pct": -9.995226168241988,
           "score": 28,
