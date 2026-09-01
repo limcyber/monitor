@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-08-31 20:59 ET",
+  "updated_at_et": "2026-09-01 02:07 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-08-21 05:58 ET",
-      "market_data_as_of": "2026-08-20 15:55 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-08-21 06:31 ET",
       "market_data_as_of": "2026-08-20 15:55 ET (5분봉)",
@@ -20992,6 +20985,162 @@
           "ai_state": "약세",
           "ai_action": "관망",
           "ai_note": "거래량 약세 및 50일선 하향 돌파. RSI 57로 반등 가능성 있으나 추세 전환 확인 필요.",
+          "close": 20.69499969482422,
+          "change_pct": -0.36110140243843514,
+          "score": 44,
+          "state": "약함",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.001607005139210597,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-09-01 02:07 ET",
+      "market_data_as_of": "2026-08-31 13:43 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 75,
+          "ai_state": "강세",
+          "ai_action": "매수",
+          "ai_note": "NVIDIA는 2분기 매출이 전년 대비 106% 증가하며 AI 시장의 성장세를 견인하고 있습니다. 단기 데드크로스 신호가 있으나, 강력한 실적과 AI 인프라 투자 확대 추세로 볼 때 매수 관점을 유지합니다.",
+          "close": 219.5749969482422,
+          "change_pct": 0.9308176824077474,
+          "score": 77,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [
+            "NVDA 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 52 (중립)"
+          ],
+          "volume_ratio_20d": 0.0035491853257050617,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 50,
+          "ai_state": "중립",
+          "ai_action": "관망",
+          "ai_note": "TSLA는 시장 대비 강한 흐름을 보이고 있으나, 뚜렷한 상승 모멘텀 부재로 관망이 필요합니다. 현재로서는 특별한 악재나 호재 없이 횡보하는 추세입니다.",
+          "close": 367.3800048828125,
+          "change_pct": 5.341936883960563,
+          "score": 52,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.007387070655376149,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "매도",
+          "ai_note": "메타는 소셜 미디어 중독 관련 소송에서 170억 달러 규모의 합의를 발표했습니다. 20일선 아래에 위치하며 약세 추세를 보이고 있어 당분간 회피하는 것이 좋습니다.",
+          "close": 571.8800048828125,
+          "change_pct": -1.062249479424049,
+          "score": 22,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.002366766589004458,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 40,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "AMD는 사우디아라비아 AI 인프라 확장 및 유럽 차세대 슈퍼컴퓨터 구축 협력을 발표했으나, 최근 캐시 우드의 매도 물량 출회로 인해 투자 심리가 위축되었습니다. 시장보다 약한 흐름을 보이며 20일선 아래에 있어 관망이 필요합니다.",
+          "close": 468.489990234375,
+          "change_pct": 0.6250276528279697,
+          "score": 20,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.002531257740948002,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 80,
+          "ai_state": "강세",
+          "ai_action": "매수",
+          "ai_note": "TEM은 최근 중기 골든크로스가 발생했으며, 시장 대비 강한 흐름을 보이고 있습니다. AI 기반 정밀 의료 분야에서의 기술 개발 및 FDA 승인 소식이 긍정적인 추세를 뒷받침합니다. 매수 관점으로 접근 가능합니다.",
+          "close": 64.2300033569336,
+          "change_pct": 0.29669337709234966,
+          "score": 78,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [
+            "TEM 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 59 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.0043899178183376165,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "매도",
+          "ai_note": "SOXX는 반도체 섹터 ETF로, 시장 대비 약한 흐름을 보이고 있으며 20일선과 50일선 아래에 있습니다. 현재로서는 뚜렷한 상승 모멘텀이 없어 회피하는 것이 좋습니다.",
+          "close": 509.42999267578125,
+          "change_pct": 0.15925397474929603,
+          "score": 20,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.00278755464219556,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 15,
+          "ai_state": "약세",
+          "ai_action": "매도",
+          "ai_note": "SERV는 20일선 아래에 위치하며 약세 추세를 보이고 있습니다. 로봇 배송 서비스 확장 소식이 있으나, 현재 주가 흐름상 매도 후 관망하는 것이 좋습니다.",
+          "close": 4.920000076293945,
+          "change_pct": -2.186881290778231,
+          "score": 19,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.004578292425355577,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 45,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "KORU는 한국 증시 레버리지 ETF로, 최근 SK하이닉스와 엔비디아의 협력 소식에 반짝 상승했으나 변동성이 큰 편입니다. 현재 50일선 아래에 위치하며 거래량이 약해 관망이 필요합니다.",
           "close": 20.69499969482422,
           "change_pct": -0.36110140243843514,
           "score": 44,
