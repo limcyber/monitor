@@ -1,175 +1,7 @@
 {
-  "updated_at_et": "2026-09-02 22:51 ET",
+  "updated_at_et": "2026-09-03 03:46 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-06-15 19:01 ET",
-      "market_data_as_of": "2026-06-15 15:30 KST (Close)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "124500.KQ",
-          "ai_score": 15,
-          "ai_state": "하락",
-          "ai_action": "매도",
-          "ai_note": "최근 중기 데드크로스 발생 및 RSI 과매도 구간 진입으로 하락 추세가 예상됩니다. 보유 시 손절 고려.",
-          "close": 42450.0,
-          "change_pct": -2.8604118993134975,
-          "score": 0,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "아이티센글로벌 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.7x (거래량 약함) / RSI 27 (과매도 구간)"
-          ],
-          "volume_ratio_20d": 0.7025116604957963,
-          "rsi14": 26.506024096385545,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "466100.KQ",
-          "ai_score": 20,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "시장 대비 약한 흐름을 보이며, 20일선 및 50일선 아래에 위치해 있습니다. 추가 하락 가능성 염두.",
-          "close": 37800.0,
-          "change_pct": 3.703703703703698,
-          "score": 0,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.3682281063155551,
-          "rsi14": 42.461005199306754,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "005930.KS",
-          "ai_score": 75,
-          "ai_state": "상승",
-          "ai_action": "매수",
-          "ai_note": "시장 대비 강한 흐름을 보이며 50일선 및 20일선 위에 안착했습니다. RSI 59로 추가 상승 기대.",
-          "close": 337250.0,
-          "change_pct": 4.573643410852712,
-          "score": 68,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.47486066458672155,
-          "rsi14": 59.49098621420997,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "000660.KS",
-          "ai_score": 65,
-          "ai_state": "강보합",
-          "ai_action": "보유",
-          "ai_note": "시장 대비 강한 흐름을 보이며 50일선 및 20일선 위에 위치합니다. 단기 급등 후 숨 고르기 구간으로 보이며, 보유 관점 유지.",
-          "close": 2305000.0,
-          "change_pct": 7.20930232558139,
-          "score": 60,
-          "state": "애매",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.4917784122279885,
-          "rsi14": 61.36079900124844,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "035420.KS",
-          "ai_score": 70,
-          "ai_state": "상승",
-          "ai_action": "매수",
-          "ai_note": "최근 중기 골든크로스 발생 및 50일선 위에 위치하여 상승 추세가 기대됩니다. RSI 60 이상으로 추가 상승 가능성.",
-          "close": 249500.0,
-          "change_pct": 1.0121457489878471,
-          "score": 70,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [
-            "NAVER 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.4x (거래량 약함) / RSI 61 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.4346990803558444,
-          "rsi14": 60.8189855746859,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "005380.KS",
-          "ai_score": 30,
-          "ai_state": "하락",
-          "ai_action": "매도",
-          "ai_note": "최근 단기 데드크로스 발생 및 20일선 아래로 하락하여 약세 전환 가능성이 있습니다. 보유 시 손절 고려.",
-          "close": 646500.0,
-          "change_pct": 6.507413509060966,
-          "score": 33,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "현대차 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.5x (거래량 약함) / RSI 49 (중립)"
-          ],
-          "volume_ratio_20d": 0.47816029309418384,
-          "rsi14": 48.67807153965786,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "012450.KS",
-          "ai_score": 15,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "시장 대비 약한 흐름을 보이며, 20일선 및 50일선 아래에 위치해 있습니다. 추가 하락 가능성 염두.",
-          "close": 1098000.0,
-          "change_pct": 1.855287569573294,
-          "score": 0,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.42238890657711486,
-          "rsi14": 28.60892388451444,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "079550.KS",
-          "ai_score": 25,
-          "ai_state": "하락",
-          "ai_action": "매도",
-          "ai_note": "최근 중기 데드크로스 발생 및 50일선 아래로 하락하여 약세 전환 가능성이 있습니다. RSI 42로 추가 하락 가능성.",
-          "close": 855000.0,
-          "change_pct": 10.751295336787559,
-          "score": 0,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "LIG넥스원 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.7x (거래량 약함) / RSI 42 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.7482494364709839,
-          "rsi14": 42.29074889867841,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bear"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-06-15 23:50 ET",
       "market_data_as_of": "2026-06-12 15:30 KST (Close)",
@@ -23186,6 +23018,179 @@
           ],
           "volume_ratio_20d": 0.6053780938491828,
           "rsi14": 30.945558739255006,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-09-03 03:46 ET",
+      "market_data_as_of": "2026-09-03 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 75,
+          "ai_state": "양호",
+          "ai_action": "관망",
+          "ai_note": "아이티센글로벌은 최근 중기 골든크로스 신호가 나왔으나 거래량이 약합니다. 시장 전반의 흐름을 보며 추격 매수보다는 눌림목 공략을 고려해볼 수 있습니다.",
+          "close": 33000.0,
+          "change_pct": -2.2222222222222254,
+          "score": 73,
+          "state": "양호",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "아이티센글로벌 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.3x (거래량 약함) / RSI 61 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.32948573346737803,
+          "rsi14": 61.016949152542374,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 20,
+          "ai_state": "회피",
+          "ai_action": "관망",
+          "ai_note": "클로봇은 중기 골든크로스에도 불구하고 시장 대비 약한 흐름과 낮은 RSI를 보입니다. 현재 구간에서는 적극적인 매수보다는 시장 반등 시 추세를 확인하며 접근하는 것이 좋습니다.",
+          "close": 23350.0,
+          "change_pct": -0.849256900212314,
+          "score": 23,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "클로봇 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.5x (거래량 약함) / RSI 33 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.4833395463575104,
+          "rsi14": 32.69230769230769,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 30,
+          "ai_state": "약함",
+          "ai_action": "관망",
+          "ai_note": "삼성전자는 시장 대비 약한 흐름을 보이며 거래량도 부진합니다. 현재로서는 특별한 매수 모멘텀이 보이지 않으므로, 20일선 회복 여부를 지켜보며 신중하게 접근해야 합니다.",
+          "close": 253750.0,
+          "change_pct": 1.2974051896207595,
+          "score": 27,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.3130077500880377,
+          "rsi14": 44.422700587084144,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 25,
+          "ai_state": "약함",
+          "ai_action": "관망",
+          "ai_note": "SK하이닉스는 시장 대비 약한 흐름과 50일선 하향 돌파가 우려됩니다. 거래량 증가와 함께 50일선 위로 안착하는 모습을 보일 때까지 관망하는 것이 현명합니다.",
+          "close": 1633000.0,
+          "change_pct": 1.239925604463732,
+          "score": 19,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.32328357596516794,
+          "rsi14": 52.51256281407036,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 40,
+          "ai_state": "약함",
+          "ai_action": "관망",
+          "ai_note": "NAVER는 단기 데드크로스 발생 후 시장 대비 약한 흐름을 보이고 있습니다. RSI 또한 낮은 수준에 머물러 있어, 20일선 돌파 및 거래량 증가를 확인하며 보수적으로 접근해야 합니다.",
+          "close": 208500.0,
+          "change_pct": -0.23923444976076125,
+          "score": 38,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "NAVER 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.3x (거래량 약함) / RSI 35 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.2748188129397372,
+          "rsi14": 35.0,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 15,
+          "ai_state": "회피",
+          "ai_action": "관망",
+          "ai_note": "현대차는 단기 데드크로스 이후 시장 대비 약한 흐름을 보이고 있습니다. 20일선 회복 여부와 거래량 증가를 확인하기 전까지는 적극적인 매수를 자제하는 것이 좋습니다.",
+          "close": 385000.0,
+          "change_pct": 1.85185185185186,
+          "score": 15,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "현대차 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.5x (거래량 약함) / RSI 39 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.47468009918647863,
+          "rsi14": 38.72053872053872,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 70,
+          "ai_state": "양호",
+          "ai_action": "관망",
+          "ai_note": "한화에어로스페이스는 중기 골든크로스 신호가 나왔으나 단기 데드크로스와 약한 거래량이 부담입니다. 시장 전반의 흐름을 보며 20일선 지지 여부를 확인한 후 접근하는 것이 좋습니다.",
+          "close": 1067000.0,
+          "change_pct": 4.09756097560976,
+          "score": 67,
+          "state": "양호",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "한화에어로스페이스 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.3x (거래량 약함) / RSI 37 (하방 우세)",
+            "한화에어로스페이스 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.3x (거래량 약함) / RSI 37 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.2869982318699868,
+          "rsi14": 36.711711711711715,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 25,
+          "ai_state": "회피",
+          "ai_action": "관망",
+          "ai_note": "LIG넥스원은 중기 골든크로스에도 불구하고 시장 대비 약한 흐름과 과매도 구간 진입 가능성을 보입니다. 20일선 회복 및 거래량 증가를 확인하며 신중하게 접근해야 합니다.",
+          "close": 671000.0,
+          "change_pct": 2.442748091603053,
+          "score": 24,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "LIG넥스원 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.2x (거래량 약함) / RSI 24 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.2457926993794087,
+          "rsi14": 23.734177215189874,
           "signals": {
             "short_cross": "none",
             "mid_cross": "bull"
