@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-09-07 01:31 ET",
+  "updated_at_et": "2026-09-07 07:11 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-08-22 15:00 ET",
-      "market_data_as_of": "2026-08-21 15:59 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-08-22 15:17 ET",
       "market_data_as_of": "2026-08-21 15:59 ET (5분봉)",
@@ -21684,6 +21677,166 @@
           "ai_state": "중립",
           "ai_action": "관망",
           "ai_note": "최근 급등 후 변동성이 큰 모습을 보이고 있습니다. 한국 증시 및 반도체 섹터의 전반적인 흐름에 따라 움직일 가능성이 높으므로, 25달러 지지선 확인 후 접근하는 것이 안전합니다.",
+          "close": 23.229999542236328,
+          "change_pct": 12.276456948358415,
+          "score": 58,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-09-07 07:11 ET",
+      "market_data_as_of": "2026-09-04 15:50 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 85,
+          "ai_state": "강세",
+          "ai_action": "소규모 매수",
+          "ai_note": "최근 5일선이 20일선을 상향 돌파하는 단기 골든크로스가 발생했으나 거래량은 약합니다. 보유 중이라면 230달러 지지 여부를 확인하며 추세를 이어갈지 관망하는 것이 좋습니다.",
+          "close": 230.38999938964844,
+          "change_pct": 0.8492022181316949,
+          "score": 81,
+          "state": "강함",
+          "action": "소규모 매수",
+          "cross_highlights": [
+            "NVDA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 54 (중립)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 60,
+          "ai_state": "중립",
+          "ai_action": "관찰",
+          "ai_note": "시장 대비 강한 흐름을 보이고 있으나, 뚜렷한 상승 신호는 없습니다. 350달러 지지선을 기준으로 추세를 관찰하며 추가적인 매수 신호를 기다리는 것이 좋습니다.",
+          "close": 355.0400085449219,
+          "change_pct": -5.667291986340272,
+          "score": 56,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 65,
+          "ai_state": "중립",
+          "ai_action": "관찰",
+          "ai_note": "최근 5일선이 20일선을 상향 돌파하는 단기 골든크로스가 나왔고 RSI가 70에 근접했으나 거래량은 약합니다. 610달러 지지 여부를 확인하며 상승 추세를 이어갈지 지켜보는 것이 좋습니다.",
+          "close": 616.1500244140625,
+          "change_pct": 0.8957280087584785,
+          "score": 54,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [
+            "META 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 70 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "관찰",
+          "ai_note": "20일선과 50일선 아래에 위치하며 약세를 보이고 있습니다. 470달러 저항선을 돌파하는지 여부를 확인하며 신중하게 접근해야 합니다.",
+          "close": 474.95001220703125,
+          "change_pct": 4.1191705528922595,
+          "score": 24,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 78,
+          "ai_state": "강세",
+          "ai_action": "선별적 매수",
+          "ai_note": "20일선이 50일선을 상향 돌파하는 중기 골든크로스가 발생했으며 RSI도 60 이상으로 상방 우세를 보입니다. 64달러 지지선을 확인하며 추가 상승을 기대할 수 있습니다.",
+          "close": 64.56999969482422,
+          "change_pct": -0.1391957349020312,
+          "score": 75,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [
+            "TEM 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 63 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "관찰",
+          "ai_note": "20일선과 50일선 아래에 위치하며 약세를 보이고 있습니다. 515달러 저항선을 돌파하는지 여부를 확인하며 신중하게 접근해야 합니다.",
+          "close": 519.0,
+          "change_pct": 3.3452782526104397,
+          "score": 22,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 25,
+          "ai_state": "약세",
+          "ai_action": "관찰",
+          "ai_note": "5일선이 20일선을 하향 돌파하는 단기 데드크로스가 나왔고 50일선 아래에 위치합니다. 4.9달러 지지 여부를 확인하며 추가 하락 가능성을 염두에 두어야 합니다.",
+          "close": 4.949999809265137,
+          "change_pct": 2.484469719556559,
+          "score": 22,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "SERV 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 51 (중립)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 60,
+          "ai_state": "중립",
+          "ai_action": "관찰",
+          "ai_note": "20일선과 50일선 위에 위치하며 시장 대비 강한 흐름을 보이고 있습니다. 23달러 지지선을 기준으로 추세를 관찰하며 추가적인 상승 신호를 기다리는 것이 좋습니다.",
           "close": 23.229999542236328,
           "change_pct": 12.276456948358415,
           "score": 58,
