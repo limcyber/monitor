@@ -1,165 +1,7 @@
 {
-  "updated_at_et": "2026-09-20 22:38 ET",
+  "updated_at_et": "2026-09-21 04:25 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-08-25 07:19 ET",
-      "market_data_as_of": "2026-08-24 15:55 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 85,
-          "ai_state": "강한 상승",
-          "ai_action": "매수",
-          "ai_note": "SK 그룹과의 파트너십 확대 및 SpaceXAI의 Vera CPU 채택 소식은 AI 인프라 수요 증가를 시사합니다. 단기적으로는 20일선 지지 여부를 확인하며 보유 관점을 유지하는 것이 좋습니다.",
-          "close": 208.61000061035156,
-          "change_pct": -2.8455665870043,
-          "score": 71,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 55,
-          "ai_state": "중립",
-          "ai_action": "보유",
-          "ai_note": "네바다주의 로보택시 서비스 허가 소식에도 불구하고, 사이버트럭 가격 인상 및 솔라 루프 사업 중단 등 상반된 뉴스가 혼재합니다. 50일선 지지 여부를 확인하며 관망하는 것이 좋겠습니다.",
-          "close": 350.1400146484375,
-          "change_pct": -3.5054762764213487,
-          "score": 44,
-          "state": "약함",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 40,
-          "ai_state": "약보합",
-          "ai_action": "보유 / 관찰",
-          "ai_note": "인스타그램 등에서 10대 보호를 위한 새로운 기능 도입 소식과 함께, 소셜 미디어 중독 관련 재판이 진행 중입니다. AI 에이전트 플랫폼 'Hatch' 출시 예정은 긍정적이나, 규제 및 소송 리스크를 고려하여 관망하는 것이 좋겠습니다.",
-          "close": 559.1099853515625,
-          "change_pct": 1.6748427947995692,
-          "score": 6,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "META 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 37 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 65,
-          "ai_state": "상승 / 약세 전환 가능",
-          "ai_action": "선별 매수 / 보유",
-          "ai_note": "2분기 호실적 발표 및 AI 시장 공략 강화 소식에도 불구하고, 채권 발행으로 인한 재무 부담 우려가 있습니다. OpenAI 및 Meta와의 파트너십은 긍정적이나, Nvidia 실적 발표를 앞두고 변동성에 유의하며 보유 관점을 유지하는 것이 좋습니다.",
-          "close": 455.9649963378906,
-          "change_pct": -3.652404366003037,
-          "score": 2,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "AMD 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 33 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 70,
-          "ai_state": "강한 상승",
-          "ai_action": "매수",
-          "ai_note": "폐동맥 고혈압 진단을 위한 AI 제품 FDA 승인 소식은 긍정적입니다. 다만, Personalis 인수 관련 희석 및 실행 위험 우려로 단기 변동성이 있을 수 있으므로, 20일선 지지 여부를 확인하며 추격 매수보다는 분할 매수를 고려하는 것이 좋습니다.",
-          "close": 66.25499725341797,
-          "change_pct": -8.852668829080578,
-          "score": 43,
-          "state": "약함",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 30,
-          "ai_state": "하락 / 약세",
-          "ai_action": "보류 / 관찰",
-          "ai_note": "반도체 섹터 전반의 약세와 함께 50일선 저항에 부딪히는 모습입니다. Nvidia 실적 발표를 앞두고 불확실성이 존재하므로, 100일선 지지 여부를 확인하며 관망하는 것이 좋겠습니다.",
-          "close": 506.0199890136719,
-          "change_pct": -2.697817346143694,
-          "score": 3,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "SOXX 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 36 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 25,
-          "ai_state": "하락 / 약세",
-          "ai_action": "보류 / 관찰",
-          "ai_note": "2분기 실적 발표 후 주가가 하락했으며, 로봇 배송 네트워크 확장 소식에도 불구하고 전반적인 시장 약세의 영향을 받고 있습니다. 20일선 및 50일선 하향 돌파 시 추가 하락 가능성이 있으므로, 추세 전환 신호 확인 전까지는 관망하는 것이 좋습니다.",
-          "close": 4.675000190734863,
-          "change_pct": -6.1244945214953495,
-          "score": 4,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 35,
-          "ai_state": "하락 / 약세",
-          "ai_action": "보류 / 관찰",
-          "ai_note": "2분기 매출 성장에도 불구하고, 연간 가이던스 하향 조정 및 국제 성장 둔화 우려가 있습니다. 반도체 섹터 전반의 약세와 맞물려 추가 하락 가능성이 있으므로, 50일선 지지 여부를 확인하며 신중하게 접근하는 것이 좋겠습니다.",
-          "close": 18.800100326538086,
-          "change_pct": -7.6615925198960095,
-          "score": 33,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-08-25 07:52 ET",
       "market_data_as_of": "2026-08-24 15:55 ET (5분봉)",
@@ -23960,6 +23802,13 @@
           }
         }
       ]
+    },
+    {
+      "generated_at_et": "2026-09-21 04:25 ET",
+      "market_data_as_of": "2026-09-18 14:10 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
     }
   ]
 }
