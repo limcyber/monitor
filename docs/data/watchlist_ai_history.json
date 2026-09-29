@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-09-29 14:10 ET",
+  "updated_at_et": "2026-09-29 18:28 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-08-29 11:42 ET",
-      "market_data_as_of": "2026-08-27 11:30 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: Extra data: line 59 column 1 (char 1868)",
-      "items": []
-    },
     {
       "generated_at_et": "2026-08-29 15:02 ET",
       "market_data_as_of": "2026-08-27 11:30 ET (5분봉)",
@@ -25128,6 +25121,166 @@
             "KORU 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 43 (하방 우세)"
           ],
           "volume_ratio_20d": 0.0010315715538941797,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-09-29 18:28 ET",
+      "market_data_as_of": "2026-09-29 16:00 ET (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 85,
+          "ai_state": "강함",
+          "ai_action": "보유 / 비중 확대",
+          "ai_note": "NVIDIA는 역사상 최대 규모인 1,500억 달러의 자사주 매입 프로그램 증가를 발표했습니다. 이는 AI 및 가속 컴퓨팅 분야의 선두주자로서의 자신감을 보여줍니다. 현재 추세는 긍정적이며, 보유자는 계속 보유하며 추가 상승을 기대할 수 있습니다.",
+          "close": 227.2100067138672,
+          "change_pct": -0.7209621131189281,
+          "score": 79,
+          "state": "양호",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.8390432421609684,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 40,
+          "ai_state": "약함",
+          "ai_action": "관망 / 비중 축소",
+          "ai_note": "Tesla는 Semi 트럭 출시가 투자자들을 흥분시키지 못하면서 주가가 하락했습니다. 또한 FSD(완전 자율 주행) 관련 소식도 엇갈리고 있어, 현재로서는 관망하며 추세를 지켜보는 것이 좋습니다.",
+          "close": 352.8399963378906,
+          "change_pct": -1.2896952613532298,
+          "score": 45,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.7638174350915212,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 88,
+          "ai_state": "강함",
+          "ai_action": "보유 / 비중 확대",
+          "ai_note": "Meta는 새로운 AI 모델인 Muse Spark를 출시하며 주가가 7% 상승했습니다. 또한 기업용 AI 솔루션 사업을 확장하며 장기적인 성장 동력을 확보했습니다. 보유자는 계속 보유하며 추가 상승을 기대할 수 있습니다.",
+          "close": 738.7899780273438,
+          "change_pct": 3.2377495134637835,
+          "score": 83,
+          "state": "강함",
+          "action": "아주 소규모 / 대기",
+          "cross_highlights": [
+            "META 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.9x (거래량 보통) / RSI 66 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.9292375110989531,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 80,
+          "ai_state": "강함",
+          "ai_action": "보유 / 비중 확대",
+          "ai_note": "AMD는 AI 모델 및 연구 기업인 World Labs를 82억 달러에 인수하며 AI 전략을 강화했습니다. 이는 AI 하드웨어, 소프트웨어 및 시스템 개발 능력을 향상시킬 것으로 기대됩니다. 보유자는 계속 보유하며 추가 상승을 기대할 수 있습니다.",
+          "close": 607.5700073242188,
+          "change_pct": -0.049350649872248464,
+          "score": 83,
+          "state": "강함",
+          "action": "아주 소규모 / 대기",
+          "cross_highlights": [
+            "AMD 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.7x (거래량 약함) / RSI 69 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.7130205436602364,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 70,
+          "ai_state": "양호",
+          "ai_action": "보유 / 관망",
+          "ai_note": "Tempus AI는 심부정맥 진단을 위한 ECG-MR AI 제품에 대해 FDA 승인을 받았습니다. 이는 의료 AI 분야에서의 기술력을 입증하는 긍정적인 소식입니다. 보유자는 계속 보유하며 추세를 지켜볼 수 있습니다.",
+          "close": 82.58000183105469,
+          "change_pct": -2.938410844142092,
+          "score": 74,
+          "state": "양호",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.9052425850086266,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 75,
+          "ai_state": "중립",
+          "ai_action": "보유 / 관망",
+          "ai_note": "반도체 ETF인 SOXX는 전반적인 반도체 섹터의 흐름을 따르고 있습니다. 최근 AI 관련 수요는 긍정적이지만, 금리 인상 우려와 밸류에이션 부담이 공존하고 있어 당분간은 관망하는 것이 좋습니다.",
+          "close": 567.4400024414062,
+          "change_pct": 1.1858315366930938,
+          "score": 78,
+          "state": "양호",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "SOXX 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.7x (거래량 약함) / RSI 61 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.6963569499665239,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 25,
+          "ai_state": "회피",
+          "ai_action": "회피 / 비중 축소",
+          "ai_note": "Serve Robotics는 2분기 실적을 발표했으나, 매출 성장은 둔화되었습니다. 로봇 배송 시장은 성장 가능성이 있지만, 아직 수익성 확보에는 시간이 더 필요해 보입니다. 현재로서는 회피하는 것이 좋습니다.",
+          "close": 4.630000114440918,
+          "change_pct": 4.51467931946401,
+          "score": 23,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.9872235694227154,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 55,
+          "ai_state": "중립",
+          "ai_action": "관망",
+          "ai_note": "KORU는 한국 증시의 변동성에 영향을 받는 레버리지 ETF입니다. 최근 반도체 섹터의 부진으로 하락했으나, 한국 증시의 장기적인 성장 가능성은 여전히 존재합니다. 단기적인 변동성을 고려하여 관망하는 것이 좋습니다.",
+          "close": 21.5049991607666,
+          "change_pct": 5.4166645240159905,
+          "score": 67,
+          "state": "양호",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "KORU 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.6x (거래량 약함) / RSI 44 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.5567264574655563,
           "signals": {
             "short_cross": "bear",
             "mid_cross": "none"
