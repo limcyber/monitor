@@ -1,167 +1,7 @@
 {
-  "updated_at_et": "2026-09-29 21:24 ET",
+  "updated_at_et": "2026-09-30 02:59 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-08-29 17:51 ET",
-      "market_data_as_of": "2026-08-27 11:30 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 75,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "최근 단기 데드크로스 발생했으나, 시장 대비 강한 흐름 유지 중. 50일선 및 20일선 지지 확인. 추가 상승 시 70점대 유지하며 보유.",
-          "close": 225.42999267578125,
-          "change_pct": 7.521696431469582,
-          "score": 72,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [
-            "NVDA 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 51 (중립)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 45,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "거래량 약세 지속. 시장 대비 강한 흐름은 긍정적이나, 50일선 하회는 부담. 추세 전환 신호 확인 전까지 보유하며 관망.",
-          "close": 352.4100036621094,
-          "change_pct": 1.9056145388697043,
-          "score": 40,
-          "state": "약함",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 20,
-          "ai_state": "하락",
-          "ai_action": "보유",
-          "ai_note": "시장 대비 약한 흐름과 20, 50일선 하회는 부정적. RSI 42로 하락 압력 존재. 반등 시 20일선 돌파 여부 확인 후 대응.",
-          "close": 570.9849853515625,
-          "change_pct": -0.8947528666309768,
-          "score": 22,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 10,
-          "ai_state": "하락",
-          "ai_action": "보유",
-          "ai_note": "최근 단기 데드크로스 발생 및 시장 대비 약세. 20일선 하회는 추가 하락 가능성 시사. 47점대 RSI는 중립 구간이나, 추세 전환 신호 부재 시 보유.",
-          "close": 475.2799987792969,
-          "change_pct": -1.1748058932754768,
-          "score": 4,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "AMD 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 47 (중립)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 80,
-          "ai_state": "상승",
-          "ai_action": "매수",
-          "ai_note": "중기 골든크로스 발생 및 RSI 70 이상 과열 구간 진입. 시장 대비 강한 흐름 유지. 단기 과열 부담 있으나, 추세 강점 고려 시 매수 유지.",
-          "close": 70.7249984741211,
-          "change_pct": 3.2783221482716174,
-          "score": 78,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [
-            "TEM 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 71 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 25,
-          "ai_state": "하락",
-          "ai_action": "보유",
-          "ai_note": "단기 데드크로스 발생 및 RSI 41 하방 우세. 시장 대비 약세 지속. 20일선 하회는 추가 하락 가능성. 반등 시 20일선 돌파 여부 확인 필요.",
-          "close": 521.97998046875,
-          "change_pct": 1.27666972118754,
-          "score": 19,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "SOXX 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 41 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 15,
-          "ai_state": "하락",
-          "ai_action": "보유",
-          "ai_note": "시장 대비 약세 및 20, 50일선 하회. RSI 46 중립 구간이나, 추세 전환 신호 부재. 추가 하락 시 손절 고려.",
-          "close": 4.934999942779541,
-          "change_pct": 3.2426720955605504,
-          "score": 18,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0031128729587383383,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 30,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "거래량 약세 및 시장 대비 약한 흐름. 50일선 하회는 부담. RSI 58 중립 상단으로, 추세 전환 시도 가능성 있으나, 거래량 동반 확인 필요. 보유 후 관망.",
-          "close": 21.037500381469727,
-          "change_pct": 2.67203814771777,
-          "score": 32,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-08-29 19:46 ET",
       "market_data_as_of": "2026-08-27 11:30 ET (5분봉)",
@@ -25440,6 +25280,13 @@
           }
         }
       ]
+    },
+    {
+      "generated_at_et": "2026-09-30 02:59 ET",
+      "market_data_as_of": "2026-09-29 16:00 ET (Close)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
     }
   ]
 }
