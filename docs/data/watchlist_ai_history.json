@@ -1,167 +1,7 @@
 {
-  "updated_at_et": "2026-09-30 02:59 ET",
+  "updated_at_et": "2026-09-30 09:25 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-08-29 19:46 ET",
-      "market_data_as_of": "2026-08-27 11:30 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 75,
-          "ai_state": "상승",
-          "ai_action": "보유",
-          "ai_note": "최근 2분기 실적 발표에서 매출이 전분기 대비 18%, 전년 대비 106% 증가하며 AI 칩 시장 지배력을 재확인했습니다. 단기 데드크로스 신호가 있으나, AI 팩토리 구축 및 AI 에이전트 관련 신기술 발표 등 장기적인 성장 모멘텀은 여전히 강합니다. 보유 중이라면 추세가 꺾이기 전까지는 보유를 유지하는 것이 좋습니다.",
-          "close": 225.42999267578125,
-          "change_pct": 7.521696431469582,
-          "score": 72,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [
-            "NVDA 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 51 (중립)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 45,
-          "ai_state": "횡보",
-          "ai_action": "관망",
-          "ai_note": "최근 2분기 실적은 차량 인도량 증가에도 불구하고 마진율 하락으로 부진했습니다. 사이버트럭 가격 인상 소식도 있으나, 전반적인 시장 추세와 거래량 약세를 고려할 때 관망하며 추가적인 방향성을 확인하는 것이 좋겠습니다.",
-          "close": 352.4100036621094,
-          "change_pct": 1.9056145388697043,
-          "score": 40,
-          "state": "약함",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 30,
-          "ai_state": "하락",
-          "ai_action": "보유",
-          "ai_note": "최근 소셜 미디어 중독 관련 소송 합의 소식이 있었으나, 2분기 실적에서 광고 단가 상승에도 불구하고 운영 마진이 하락하며 주가에 부담을 주고 있습니다. 단기적으로는 약세 흐름이 예상되나, AI 관련 투자 및 데이터센터 구축 계획 등은 긍정적 요인입니다. 보유 중이라면 손절선을 설정하고 추세를 지켜보는 것이 좋습니다.",
-          "close": 570.9849853515625,
-          "change_pct": -0.8947528666309768,
-          "score": 22,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 60,
-          "ai_state": "상승",
-          "ai_action": "선별 매수",
-          "ai_note": "AI 및 데이터센터 시장에서의 성장세가 지속되며 2분기 실적도 견조했습니다. 특히 AI 추론 시장 공략을 위한 신규 GPU 및 플랫폼 발표는 긍정적입니다. 최근 단기 데드크로스 신호가 있었으나, AI 수요 증가 전망을 고려하면 선별적인 매수 접근이 유효해 보입니다.",
-          "close": 475.2799987792969,
-          "change_pct": -1.1748058932754768,
-          "score": 4,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "AMD 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 47 (중립)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 80,
-          "ai_state": "강한 상승",
-          "ai_action": "보유",
-          "ai_note": "2분기 실적에서 진단 및 데이터/애플리케이션 부문 모두 견조한 성장세를 보였습니다. 특히 FDA 승인을 받은 AI 기반 진단 제품 출시는 긍정적인 모멘텀을 제공합니다. 중기 골든크로스 신호와 높은 RSI는 상승 추세를 지지하며, 보유 중이라면 추세가 유지되는 한 보유를 권장합니다.",
-          "close": 70.7249984741211,
-          "change_pct": 3.2783221482716174,
-          "score": 78,
-          "state": "양호",
-          "action": "선별 매수",
-          "cross_highlights": [
-            "TEM 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 71 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 25,
-          "ai_state": "하락",
-          "ai_action": "관망",
-          "ai_note": "반도체 섹터 전반의 약세 흐름과 함께 최근 단기 데드크로스 신호가 나타났습니다. AI 관련 수요는 여전히 강하지만, 거시 경제 불확실성과 섹터 내 개별 종목들의 부진이 ETF에 영향을 미치고 있습니다. 당분간 관망하며 섹터 전반의 방향성을 확인하는 것이 좋겠습니다.",
-          "close": 521.97998046875,
-          "change_pct": 1.27666972118754,
-          "score": 19,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [
-            "SOXX 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 41 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 15,
-          "ai_state": "약한 하락",
-          "ai_action": "보류",
-          "ai_note": "로봇 배달 서비스 확장 소식이 있으나, 2분기 실적 발표 이후 주가 하락세가 이어지고 있습니다. 시장 대비 약한 흐름과 20일선 및 50일선 아래에 위치한 종가 등은 부정적인 신호입니다. 당분간 보류하며 추세 전환을 기다리는 것이 좋겠습니다.",
-          "close": 4.934999942779541,
-          "change_pct": 3.2426720955605504,
-          "score": 18,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0031128729587383383,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 35,
-          "ai_state": "횡보",
-          "ai_action": "관망",
-          "ai_note": "한국 시장 레버리지 ETF로, 최근 한국 증시의 변동성과 반도체 섹터의 부진이 영향을 미치고 있습니다. 특히 암호화폐 시장에서의 KORU 관련 파생상품 거래량이 급증하는 등 특이 동향이 관찰됩니다. 한국 증시의 방향성이 명확해질 때까지 관망하는 것이 좋겠습니다.",
-          "close": 21.037500381469727,
-          "change_pct": 2.67203814771777,
-          "score": 32,
-          "state": "회피",
-          "action": "보류 / 관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-08-29 22:48 ET",
       "market_data_as_of": "2026-08-27 11:30 ET (5분봉)",
@@ -25287,6 +25127,166 @@
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-09-30 09:25 ET",
+      "market_data_as_of": "2026-09-29 16:00 ET (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 85,
+          "ai_state": "강함",
+          "ai_action": "매수 / 비중 확대",
+          "ai_note": "NVIDIA는 AI 및 가속 컴퓨팅 분야의 선두주자로서, 1,500억 달러 규모의 사상 최대 자사주 매입 프로그램 확대를 발표했습니다. 이는 AI 플랫폼 전환에 대한 자신감을 보여주며, 주가 상승 모멘텀을 이어갈 것으로 보입니다.",
+          "close": 227.2100067138672,
+          "change_pct": -0.7209621131189281,
+          "score": 79,
+          "state": "양호",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.8390432421609684,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 40,
+          "ai_state": "약함",
+          "ai_action": "보유 / 비중 축소",
+          "ai_note": "Tesla는 최근 디자인 결함 관련 소송과 함께 세미 트럭 인도 소식이 있었으나, 시장 반응은 미미합니다. 투자자들은 머스크의 보상 패키지 투표와 AI 기업으로서의 성장 가능성을 주시하고 있습니다.",
+          "close": 352.8399963378906,
+          "change_pct": -1.2896952613532298,
+          "score": 45,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.7638174350915212,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 75,
+          "ai_state": "양호",
+          "ai_action": "보유 / 대기",
+          "ai_note": "Meta는 소셜 미디어 중독 관련 소송에서 170억 달러 규모의 합의를 발표했으며, AI 데이터센터 관련 세금 회피 의혹도 제기되었습니다. 최근 중기 골든크로스 발생과 함께 AI 사업 확장에 대한 기대감이 있습니다.",
+          "close": 738.7899780273438,
+          "change_pct": 3.2377495134637835,
+          "score": 83,
+          "state": "강함",
+          "action": "아주 소규모 / 대기",
+          "cross_highlights": [
+            "META 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.9x (거래량 보통) / RSI 66 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.9292375110989531,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 80,
+          "ai_state": "강함",
+          "ai_action": "매수 / 비중 확대",
+          "ai_note": "AMD는 AI 컴퓨팅 강화를 위해 World Labs를 82억 달러에 인수하며 AI 모델 연구 역량을 강화했습니다. 이는 AI 하드웨어 및 소프트웨어 개발에 대한 강력한 의지를 보여주며, 향후 성장 동력이 될 것으로 기대됩니다.",
+          "close": 607.5700073242188,
+          "change_pct": -0.049350649872248464,
+          "score": 83,
+          "state": "강함",
+          "action": "아주 소규모 / 대기",
+          "cross_highlights": [
+            "AMD 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.7x (거래량 약함) / RSI 69 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.7130205436602364,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 65,
+          "ai_state": "중립",
+          "ai_action": "보유 / 관망",
+          "ai_note": "Tempus AI는 심장 질환 관련 AI 도구에 대한 FDA 승인을 받았으며, 대규모 유전체 데이터셋 구축을 위한 이니셔티브를 진행 중입니다. 다만, 최근 분석가들의 중립 의견이 있어 추세를 지켜볼 필요가 있습니다.",
+          "close": 82.58000183105469,
+          "change_pct": -2.938410844142092,
+          "score": 74,
+          "state": "양호",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.9052425850086266,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 70,
+          "ai_state": "양호",
+          "ai_action": "보유 / 비중 축소",
+          "ai_note": "SOXX ETF는 반도체 섹터 전반의 강세를 반영하고 있으며, 특히 AI 관련 칩 수요 증가에 힘입어 상승세를 보이고 있습니다. 다만, 개별 종목의 변동성을 고려하여 비중 조절이 필요합니다.",
+          "close": 567.4400024414062,
+          "change_pct": 1.1858315366930938,
+          "score": 78,
+          "state": "양호",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "SOXX 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.7x (거래량 약함) / RSI 61 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.6963569499665239,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 30,
+          "ai_state": "회피",
+          "ai_action": "회피 / 비중 축소",
+          "ai_note": "Serve Robotics는 2분기 매출이 전년 대비 크게 성장했으나, 여전히 적자를 기록하고 있습니다. Grubhub 등과의 파트너십 확대는 긍정적이나, 수익성 개선 및 거래량 증가가 필요합니다.",
+          "close": 4.630000114440918,
+          "change_pct": 4.51467931946401,
+          "score": 23,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.9872235694227154,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 50,
+          "ai_state": "중립",
+          "ai_action": "보유 / 관망",
+          "ai_note": "KORU는 한국 증시를 추종하는 레버리지 ETF로, 최근 반도체 섹터의 변동성과 지정학적 리스크로 인해 혼조세를 보이고 있습니다. 단기 데드크로스 신호가 발생했으나, 50일선 지지 여부를 확인하며 대응하는 것이 좋습니다.",
+          "close": 21.5049991607666,
+          "change_pct": 5.4166645240159905,
+          "score": 67,
+          "state": "양호",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "KORU 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.6x (거래량 약함) / RSI 44 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.5567264574655563,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        }
+      ]
     }
   ]
 }
