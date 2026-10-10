@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-10-10 08:48 ET",
+  "updated_at_et": "2026-10-10 13:33 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-09-05 20:27 ET",
-      "market_data_as_of": "2026-09-04 15:50 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-09-06 00:55 ET",
       "market_data_as_of": "2026-09-04 15:50 ET (5분봉)",
@@ -24750,6 +24743,164 @@
           "ai_state": "회피",
           "ai_action": "보류 / 관찰",
           "ai_note": "최근 5일선이 20일선을 하향 돌파하는 단기 데드크로스가 발생했고 RSI도 30선으로 하락했습니다. 시장 대비 약한 흐름을 보이고 있어 당분간 관망하는 것이 좋습니다.",
+          "close": 17.844999313354492,
+          "change_pct": 1.1048141588597682,
+          "score": 17,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "KORU 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 37 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0007511269018070018,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-10-10 13:33 ET",
+      "market_data_as_of": "2026-10-09 15:02 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 75,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "SpaceX가 엔비디아 AI 칩 구매를 위해 최대 400억 달러를 조달할 것으로 알려졌으나, AI 지출이 부채로 조달되고 정점에 달할 수 있다는 우려도 있습니다.. 현재 추세는 시장 대비 강한 편이나, 225달러 아래로 하락 시 분할 매수 간격을 넓히는 것을 고려해볼 수 있습니다.",
+          "close": 229.73500061035156,
+          "change_pct": -0.32323634631969966,
+          "score": 78,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0018356148459668026,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 85,
+          "ai_state": "강세",
+          "ai_action": "매수",
+          "ai_note": "3분기 인도량 예상치를 상회하며 유럽 판매 회복세를 보이고 있으며, 50만 달러 목표가 제시 등 긍정적인 분석이 있습니다.. 단기 골든크로스 신호와 함께 거래량은 약하나 RSI는 상방 우세를 보여 매수 관점을 유지합니다.",
+          "close": 383.8800048828125,
+          "change_pct": 2.3680013020833224,
+          "score": 81,
+          "state": "강함",
+          "action": "매수 가능",
+          "cross_highlights": [
+            "TSLA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 56 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.0023241478109326777,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 70,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "소셜 미디어 중독 관련 소송에서 170억 달러 규모의 합의를 발표했습니다.. 시장 대비 강한 흐름을 보이고 있으나, AI 관련 투자와 개인 정보 보호 이슈 등 복합적인 요인을 고려하여 관망세를 유지하는 것이 좋습니다.",
+          "close": 719.3800048828125,
+          "change_pct": -0.20946465271285408,
+          "score": 78,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.00120581090676624,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 80,
+          "ai_state": "강세",
+          "ai_action": "선별 매수",
+          "ai_note": "서버 프로세서 및 AI 가속기 수요 증가로 3분기 실적이 예상치를 상회했으며, 향후 연평균 35% 이상의 매출 성장을 전망합니다.. 삼성과의 파운드리 및 메모리 파트너십 논의는 긍정적이나, 공급망 리스크를 고려하여 선별적인 매수 접근이 유효합니다.",
+          "close": 610.9849853515625,
+          "change_pct": -1.5619977184093026,
+          "score": 78,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0018960643388695564,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 55,
+          "ai_state": "약세 전환 가능성",
+          "ai_action": "보류",
+          "ai_note": "모더나 및 머크와의 협력 강화 등 긍정적인 소식이 있으나, 최근 단기 데드크로스 신호가 발생했습니다.. RSI는 하방 우세를 보이고 있어, 추세 전환 신호가 확인될 때까지 보류하는 것이 좋습니다.",
+          "close": 71.30000305175781,
+          "change_pct": 2.9157106063122162,
+          "score": 62,
+          "state": "애매",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "TEM 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 42 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.002265992283576415,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 70,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "AI 둔화 우려에도 불구하고 반도체 ETF는 견조한 흐름을 보이고 있습니다.. 50일선 및 20일선 위에 위치하며 시장 대비 강한 흐름을 유지하고 있으나, 전반적인 시장 상황을 고려하여 보유 관점을 유지합니다.",
+          "close": 559.9099731445312,
+          "change_pct": -0.5982914318035548,
+          "score": 73,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0031750469741091505,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 15,
+          "ai_state": "매우 약세",
+          "ai_action": "회피",
+          "ai_note": "Uber와의 관계 종료 및 시장 대비 약한 흐름을 보이고 있습니다.. 20일선 및 50일선 아래에 위치하며 RSI도 하락세를 보여 당분간 회피하는 것이 좋습니다.",
+          "close": 4.392399787902832,
+          "change_pct": -1.2943825580032264,
+          "score": 11,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.00013268995002826647,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 10,
+          "ai_state": "매우 약세",
+          "ai_action": "회피",
+          "ai_note": "최근 단기 데드크로스 신호가 발생했으며, 시장 대비 약한 흐름을 보이고 있습니다.. RSI가 37로 낮고 20일선 아래에 위치하므로, 추세가 명확히 반전되기 전까지는 관망하는 것이 좋습니다.",
           "close": 17.844999313354492,
           "change_pct": 1.1048141588597682,
           "score": 17,
