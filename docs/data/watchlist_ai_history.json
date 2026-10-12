@@ -1,167 +1,7 @@
 {
-  "updated_at_et": "2026-10-12 03:46 ET",
+  "updated_at_et": "2026-10-12 13:11 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-09-07 01:31 ET",
-      "market_data_as_of": "2026-09-04 15:50 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 85,
-          "ai_state": "강세",
-          "ai_action": "소규모 매수",
-          "ai_note": "최근 단기 골든크로스 발생과 함께 AI 시장의 전반적인 강세 흐름이 긍정적입니다. 보유 중이라면 추세 유지 여부를 관찰하며, 230달러 지지선 이탈 시 비중 축소를 고려할 수 있습니다.",
-          "close": 230.38999938964844,
-          "change_pct": 0.8492022181316949,
-          "score": 81,
-          "state": "강함",
-          "action": "소규모 매수",
-          "cross_highlights": [
-            "NVDA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 54 (중립)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 55,
-          "ai_state": "중립",
-          "ai_action": "관망",
-          "ai_note": "사이버캡 발표 후 불확실성으로 주가가 하락했으나, 장기적인 로보택시 사업 비전은 유효합니다. 현재 가격은 고평가 논란이 있으므로, 350달러 돌파 여부를 확인하며 신중하게 접근하는 것이 좋습니다.",
-          "close": 355.0400085449219,
-          "change_pct": -5.667291986340272,
-          "score": 56,
-          "state": "애매",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 60,
-          "ai_state": "약한 강세",
-          "ai_action": "소규모 매수",
-          "ai_note": "단기 골든크로스 신호가 나왔으나 거래량이 동반되지 않은 점은 아쉽습니다. 700달러 이상 안착 시 추가 상승을 기대할 수 있으며, 600달러 지지선 이탈 시 손절을 고려해야 합니다.",
-          "close": 616.1500244140625,
-          "change_pct": 0.8957280087584785,
-          "score": 54,
-          "state": "애매",
-          "action": "관찰",
-          "cross_highlights": [
-            "META 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 70 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 40,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "20일선과 50일선 아래에 위치하며 약세를 보이고 있습니다. 반도체 섹터 전반의 흐름을 주시하며, 150달러 회복 시 매수 관점으로 전환할 수 있습니다.",
-          "close": 474.95001220703125,
-          "change_pct": 4.1191705528922595,
-          "score": 24,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 70,
-          "ai_state": "양호",
-          "ai_action": "선별적 매수",
-          "ai_note": "중기 골든크로스 발생 후 상승 추세가 이어지고 있습니다. 65달러 지지선이 유지된다면 추가 상승 가능성이 있으며, 보유 중이라면 70달러 돌파 여부를 주목하십시오.",
-          "close": 64.56999969482422,
-          "change_pct": -0.1391957349020312,
-          "score": 75,
-          "state": "양호",
-          "action": "매우 선별적 접근",
-          "cross_highlights": [
-            "TEM 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 63 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 35,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "20일선과 50일선 아래에 위치하며 약세를 보이고 있습니다. 반도체 섹터의 전반적인 회복세를 기다리며, 500달러 회복 시 매수 관점으로 전환할 수 있습니다.",
-          "close": 519.0,
-          "change_pct": 3.3452782526104397,
-          "score": 22,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 30,
-          "ai_state": "약세",
-          "ai_action": "관망",
-          "ai_note": "단기 데드크로스 발생 후 하락 추세가 이어지고 있습니다. 5달러 지지선 이탈 시 추가 하락 가능성이 있으므로, 6달러 회복 전까지는 관망하는 것이 좋습니다.",
-          "close": 4.949999809265137,
-          "change_pct": 2.484469719556559,
-          "score": 22,
-          "state": "회피",
-          "action": "관찰",
-          "cross_highlights": [
-            "SERV 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 51 (중립)"
-          ],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 50,
-          "ai_state": "중립",
-          "ai_action": "관망",
-          "ai_note": "최근 급등 후 변동성이 큰 모습을 보이고 있습니다. 한국 증시 및 반도체 섹터의 전반적인 흐름에 따라 움직일 가능성이 높으므로, 25달러 지지선 확인 후 접근하는 것이 안전합니다.",
-          "close": 23.229999542236328,
-          "change_pct": 12.276456948358415,
-          "score": 58,
-          "state": "애매",
-          "action": "관찰",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-09-07 07:11 ET",
       "market_data_as_of": "2026-09-04 15:50 ET (5분봉)",
@@ -24749,6 +24589,13 @@
     },
     {
       "generated_at_et": "2026-10-12 03:46 ET",
+      "market_data_as_of": "2026-10-09 15:02 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
+    },
+    {
+      "generated_at_et": "2026-10-12 13:11 ET",
       "market_data_as_of": "2026-10-09 15:02 ET (5분봉)",
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
