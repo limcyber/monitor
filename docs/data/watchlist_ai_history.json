@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-10-19 07:01 ET",
+  "updated_at_et": "2026-10-19 13:37 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-09-13 03:34 ET",
-      "market_data_as_of": "2026-09-11 13:48 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-09-13 09:00 ET",
       "market_data_as_of": "2026-09-11 13:48 ET (5분봉)",
@@ -24519,6 +24512,170 @@
             "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 24 (과매도 구간)"
           ],
           "volume_ratio_20d": 0.011254816552720048,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-10-19 13:37 ET",
+      "market_data_as_of": "2026-10-19 12:30 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 30,
+          "ai_state": "회피",
+          "ai_action": "매도",
+          "ai_note": "최근 단기 데드크로스 발생 및 RSI 40으로 하방 우세. 시장 대비 약세이므로 보유 시 손절가 설정 후 관망.",
+          "close": 218.34500122070312,
+          "change_pct": 1.9684286376387972,
+          "score": 31,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "NVDA 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 40 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0061069647055057,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 45,
+          "ai_state": "약세",
+          "ai_action": "매도",
+          "ai_note": "단기 데드크로스 발생했으나 RSI 59로 상방 우세. 시장 대비 약세이므로 추가 하락 시 비중 축소 고려.",
+          "close": 368.5450134277344,
+          "change_pct": 3.8974436624535036,
+          "score": 46,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "TSLA 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 59 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.003645256920801715,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 40,
+          "ai_state": "약세",
+          "ai_action": "매도",
+          "ai_note": "단기 데드크로스 및 RSI 39로 하방 우세. 시장 대비 약세이므로 반등 시 매도 고려.",
+          "close": 703.2291259765625,
+          "change_pct": -0.8600920539513113,
+          "score": 43,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "META 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 39 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0012242759689599168,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 40,
+          "ai_state": "약세",
+          "ai_action": "매도",
+          "ai_note": "단기 데드크로스 및 RSI 35로 하방 우세. 시장 대비 약세이므로 추가 하락 시 비중 축소 고려.",
+          "close": 546.780029296875,
+          "change_pct": 3.4099346187943302,
+          "score": 41,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "AMD 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 35 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0028193855334464136,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 25,
+          "ai_state": "회피",
+          "ai_action": "매도",
+          "ai_note": "시장 대비 약세이며 20일선 및 50일선 아래 위치. 반등 시 매도 고려.",
+          "close": 64.97000122070312,
+          "change_pct": 0.38627934994541757,
+          "score": 25,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0010672146964232276,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 20,
+          "ai_state": "회피",
+          "ai_action": "매도",
+          "ai_note": "단기 데드크로스 및 RSI 28로 과매도 구간 진입. 시장 대비 약세이므로 반등 시 매도 고려.",
+          "close": 508.1400146484375,
+          "change_pct": 2.989521385127758,
+          "score": 23,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "SOXX 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 28 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.005489114301041588,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 10,
+          "ai_state": "회피",
+          "ai_action": "매도",
+          "ai_note": "시장 대비 매우 약세이며 20일선 및 50일선 아래 위치. 반등 시 매도 고려.",
+          "close": 3.1006999015808105,
+          "change_pct": -4.003099589137616,
+          "score": 11,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.008254347850137683,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 10,
+          "ai_state": "회피",
+          "ai_action": "매도",
+          "ai_note": "중기 데드크로스 발생 및 RSI 25로 과매도 구간. 시장 대비 약세이므로 반등 시 매도 고려.",
+          "close": 12.204999923706055,
+          "change_pct": 14.70864219816903,
+          "score": 9,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 25 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.003368864953347673,
           "signals": {
             "short_cross": "none",
             "mid_cross": "bear"
