@@ -1,172 +1,7 @@
 {
-  "updated_at_et": "2026-10-24 20:25 ET",
+  "updated_at_et": "2026-10-25 01:01 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-09-18 13:45 ET",
-      "market_data_as_of": "2026-09-18 10:55 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 70,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "단기 데드크로스 발생했으나 시장 대비 강한 흐름 유지 중. 보유자는 20일선 이탈 시 분할 매도 고려.",
-          "close": 219.1999969482422,
-          "change_pct": -0.06382756997623806,
-          "score": 74,
-          "state": "양호",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [
-            "NVDA 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 52 (중립)"
-          ],
-          "volume_ratio_20d": 0.0020631230674030042,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 80,
-          "ai_state": "매수 고려",
-          "ai_action": "보유",
-          "ai_note": "중기 골든크로스 발생 후 상승세. RSI 59로 추가 상승 여력 있음. 보유자는 홀딩, 신규 매수는 눌림목 활용.",
-          "close": 368.360107421875,
-          "change_pct": 0.5898675977166645,
-          "score": 78,
-          "state": "양호",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [
-            "TSLA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 59 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.00874384279117676,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 85,
-          "ai_state": "강세",
-          "ai_action": "보유",
-          "ai_note": "중기 골든크로스 및 과열 구간 진입. 시장 대비 강한 흐름 유지. 보유자는 추세 유지, 단기 과열 경계.",
-          "close": 678.1026000976562,
-          "change_pct": -0.6166401600434135,
-          "score": 83,
-          "state": "강함",
-          "action": "아주 소규모 / 대기",
-          "cross_highlights": [
-            "META 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 84 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.004682236856551739,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 70,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "시장 대비 강한 흐름 유지 중. 단기/중기 신호는 없으나 긍정적. 보유자는 20일선 지지 확인하며 홀딩.",
-          "close": 543.52001953125,
-          "change_pct": -0.28802716007773066,
-          "score": 68,
-          "state": "양호",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.003720140651293929,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 75,
-          "ai_state": "매수 고려",
-          "ai_action": "보유",
-          "ai_note": "단기 골든크로스 발생했으나 최근 급등으로 인한 부담 존재. 보유자는 20일선 이탈 시 익절 고려.",
-          "close": 77.46499633789062,
-          "change_pct": -3.602543865695318,
-          "score": 72,
-          "state": "양호",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [
-            "TEM 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 69 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.002354626553944515,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 40,
-          "ai_state": "약세",
-          "ai_action": "비중 축소",
-          "ai_note": "단기 데드크로스 발생, 50일선 하회. 거래량 약세. 보유자는 20일선 저항 확인 후 비중 축소 고려.",
-          "close": 524.9299926757812,
-          "change_pct": 1.1231010140701825,
-          "score": 38,
-          "state": "약함",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [
-            "SOXX 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 56 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.002486236110560272,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 15,
-          "ai_state": "매도",
-          "ai_action": "매도",
-          "ai_note": "시장 대비 약세, 20일선 및 50일선 하회. RSI 24로 약세 지속 가능성. 보유자는 손절 고려.",
-          "close": 4.260000228881836,
-          "change_pct": -0.9302316297383983,
-          "score": 15,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0018704783269898602,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 25,
-          "ai_state": "매도",
-          "ai_action": "매도",
-          "ai_note": "단기 데드크로스 발생, 시장 대비 약세. 중기 골든크로스 신호와 상충. 보유자는 20일선 저항 확인 후 비중 축소 고려.",
-          "close": 19.260000228881836,
-          "change_pct": -5.634491068730152,
-          "score": 24,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [
-            "KORU 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 46 (중립)",
-            "KORU 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 46 (중립)"
-          ],
-          "volume_ratio_20d": 0.0039354668392803955,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "bull"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-09-18 16:13 ET",
       "market_data_as_of": "2026-09-18 14:10 ET (5분봉)",
@@ -24994,6 +24829,13 @@
           }
         }
       ]
+    },
+    {
+      "generated_at_et": "2026-10-25 01:01 ET",
+      "market_data_as_of": "2026-10-23 15:30 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
     }
   ]
 }
