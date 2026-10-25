@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-10-25 16:12 ET",
+  "updated_at_et": "2026-10-25 18:42 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-09-19 05:38 ET",
-      "market_data_as_of": "2026-09-18 14:10 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: Extra data: line 59 column 1 (char 1577)",
-      "items": []
-    },
     {
       "generated_at_et": "2026-09-19 09:36 ET",
       "market_data_as_of": "2026-09-18 14:10 ET (5분봉)",
@@ -24951,6 +24944,164 @@
           "ai_state": "회피",
           "ai_action": "회피",
           "ai_note": "3배 레버리지 ETF인 KORU는 최근 급격한 하락세를 보이며 높은 변동성을 나타내고 있습니다. 한국 증시의 불확실성과 레버리지 위험을 고려할 때, 현재는 매우 위험한 구간이므로 회피해야 합니다.",
+          "close": 10.569999694824219,
+          "change_pct": 3.7291474984204376,
+          "score": 9,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "KORU 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 14 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.0026323339700975307,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-10-25 18:42 ET",
+      "market_data_as_of": "2026-10-23 15:30 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 30,
+          "ai_state": "회피",
+          "ai_action": "관망",
+          "ai_note": "시장 대비 약한 흐름과 20일선, 50일선 하향 돌파는 부담 요인입니다. 보유 중이라면 20일선 재돌파 시까지 관망하는 것이 좋습니다.",
+          "close": 211.5749969482422,
+          "change_pct": -0.29923648533747293,
+          "score": 32,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.004242005542713135,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 75,
+          "ai_state": "관심",
+          "ai_action": "소량 매수 / 대기",
+          "ai_note": "최근 단기 골든크로스 발생 및 시장 대비 강한 흐름이 긍정적입니다. 다만 거래량 약세는 주의해야 하며, 보유 중이라면 20일선 지지 여부를 확인하며 분할 매수 접근을 고려할 수 있습니다.",
+          "close": 372.6700134277344,
+          "change_pct": -0.5098972750811281,
+          "score": 81,
+          "state": "강함",
+          "action": "아주 소규모 / 대기",
+          "cross_highlights": [
+            "TSLA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 47 (중립)"
+          ],
+          "volume_ratio_20d": 0.008280053450102076,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 25,
+          "ai_state": "회피",
+          "ai_action": "관망",
+          "ai_note": "단기 데드크로스 발생 및 시장 대비 약한 흐름은 부정적입니다. 보유 중이라면 20일선 회복 전까지는 관망하며 추세를 지켜보는 것이 좋습니다.",
+          "close": 644.1500244140625,
+          "change_pct": -0.7243509823100069,
+          "score": 29,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "META 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 25 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.0036284063203279623,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 30,
+          "ai_state": "회피",
+          "ai_action": "관망",
+          "ai_note": "시장 대비 약한 흐름과 20일선, 50일선 하향 돌파는 부담 요인입니다. 보유 중이라면 20일선 재돌파 시까지 관망하는 것이 좋습니다.",
+          "close": 515.530029296875,
+          "change_pct": 1.4962764023948694,
+          "score": 30,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.00424794115866404,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 25,
+          "ai_state": "회피",
+          "ai_action": "관망",
+          "ai_note": "20일선 및 50일선 하향 돌파는 부정적 신호입니다. 보유 중이라면 20일선 회복 전까지는 관망하며 추세를 지켜보는 것이 좋습니다.",
+          "close": 67.95999908447266,
+          "change_pct": 6.5036790814405165,
+          "score": 26,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.01050156723500616,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 20,
+          "ai_state": "회피",
+          "ai_action": "관망",
+          "ai_note": "시장 대비 약한 흐름과 20일선, 50일선 하향 돌파는 부담 요인입니다. 보유 중이라면 20일선 재돌파 시까지 관망하는 것이 좋습니다.",
+          "close": 478.25,
+          "change_pct": 0.5381650960615048,
+          "score": 24,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.007582181049025142,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 10,
+          "ai_state": "회피",
+          "ai_action": "관망",
+          "ai_note": "시장 대비 약한 흐름과 20일선, 50일선 하향 돌파는 매우 부정적입니다. 보유 중이라면 손절 또는 비중 축소를 고려해야 합니다.",
+          "close": 2.7899999618530273,
+          "change_pct": -3.125005174014095,
+          "score": 11,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.006123684430275758,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 10,
+          "ai_state": "회피",
+          "ai_action": "관망",
+          "ai_note": "중기 데드크로스 발생 및 시장 대비 약한 흐름은 부정적입니다. 보유 중이라면 20일선 회복 전까지는 관망하며 추세를 지켜보는 것이 좋습니다.",
           "close": 10.569999694824219,
           "change_pct": 3.7291474984204376,
           "score": 9,
