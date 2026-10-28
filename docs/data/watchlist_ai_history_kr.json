@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-10-27 19:27 ET",
+  "updated_at_et": "2026-10-27 23:54 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-07-23 22:52 ET",
-      "market_data_as_of": "2026-07-24 15:30 KST (Close)",
-      "status": "error",
-      "error": "한국 종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-07-24 01:48 ET",
       "market_data_as_of": "2026-07-24 15:30 KST (Close)",
@@ -24351,6 +24344,175 @@
           "ai_state": "회피",
           "ai_action": "관찰",
           "ai_note": "LIG넥스원은 최근 중기 데드크로스 발생과 함께 20일선 및 50일선 아래에 위치하며 약세를 보이고 있습니다. RSI 또한 하방 우세 구간에 있어 당분간 관망하며 추세 전환을 기다리는 것이 좋겠습니다.",
+          "close": 660000.0,
+          "change_pct": -6.382978723404253,
+          "score": 16,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "LIG넥스원 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.7x (거래량 약함) / RSI 40 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.6515266836023604,
+          "rsi14": 40.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-10-27 23:54 ET",
+      "market_data_as_of": "2026-09-15 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 65,
+          "ai_state": "관찰",
+          "ai_action": "보유",
+          "ai_note": "아이티센글로벌은 최근 AI 에이전트 관리 플랫폼 '에이전트고 2026'이 GS인증 1등급을 획득하며 기술력을 인정받았습니다. 다만, 단기 데드크로스 신호가 있어 추가 하락 가능성도 염두에 두어야 합니다.",
+          "close": 30650.0,
+          "change_pct": -4.517133956386288,
+          "score": 56,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [
+            "아이티센글로벌 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.5x (거래량 약함) / RSI 27 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.5447113292441889,
+          "rsi14": 26.903553299492387,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 30,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "클로봇은 휴머노이드 로봇 기술을 선보이며 사업 확장을 모색하고 있으나, 중기 데드크로스 신호와 함께 거래량이 약한 편입니다. 현재로서는 관망하며 추세 전환을 기다리는 것이 좋겠습니다.",
+          "close": 22900.0,
+          "change_pct": 1.777777777777767,
+          "score": 15,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "클로봇 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 1.0x (거래량 보통) / RSI 31 (하방 우세)"
+          ],
+          "volume_ratio_20d": 1.0212892137703773,
+          "rsi14": 30.909090909090907,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 45,
+          "ai_state": "약함",
+          "ai_action": "관찰",
+          "ai_note": "삼성전자는 3분기 역대급 실적 발표를 앞두고 있으며, 반도체 초호황으로 연간 영업이익 370조원 달성 기대감이 높습니다. 하지만 단기 데드크로스 신호가 발생하여 당분간은 관망하는 것이 좋겠습니다.",
+          "close": 247000.0,
+          "change_pct": -0.8032128514056214,
+          "score": 24,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "삼성전자 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.4x (거래량 약함) / RSI 40 (하방 우세)",
+            "삼성전자 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.4x (거래량 약함) / RSI 40 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.4123012900595574,
+          "rsi14": 39.86013986013985,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 75,
+          "ai_state": "강함",
+          "ai_action": "보유",
+          "ai_note": "SK하이닉스는 3분기 매출 100조원을 돌파하며 역대급 실적을 기록했고, 2029년까지 D램 및 HBM 물량 완판 전망으로 중장기 성장성이 높습니다. 현재 20일선 위에 있으며, RSI 지표도 안정적인 흐름을 보여 보유 관점을 유지하는 것이 좋습니다.",
+          "close": 1682000.0,
+          "change_pct": -0.8839127872716568,
+          "score": 41,
+          "state": "약함",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5496446668493946,
+          "rsi14": 49.565217391304344,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 50,
+          "ai_state": "관찰",
+          "ai_action": "관찰",
+          "ai_note": "NAVER는 AI 데이터센터 사업에 대한 투자가 확정되며 긍정적인 전망이 나오고 있습니다. 하지만 시장 대비 힘이 약한 모습이며, 20일선 아래에 위치해 있어 추가적인 상승 모멘텀을 확인하며 접근하는 것이 좋겠습니다.",
+          "close": 206000.0,
+          "change_pct": 0.9803921568627416,
+          "score": 28,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.3515749792345537,
+          "rsi14": 35.1063829787234,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 35,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "현대차는 수소 상용차 기술을 공개하며 미래 모빌리티 경쟁력을 강화하고 있습니다. 그러나 시장 대비 힘이 약하고 20일선 아래에 위치해 있어 당분간은 관망하는 것이 좋겠습니다.",
+          "close": 368000.0,
+          "change_pct": -0.9421265141319024,
+          "score": 16,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.40285040670356237,
+          "rsi14": 27.528089887640448,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 40,
+          "ai_state": "약함",
+          "ai_action": "관찰",
+          "ai_note": "한화에어로스페이스는 우주항공 분야에 투자를 확대하며 사업 경쟁력을 강화하고 있습니다. 다만, 20일선 아래에 위치해 있어 추가적인 상승 추세를 확인한 후 매수하는 것이 좋겠습니다.",
+          "close": 1069000.0,
+          "change_pct": -5.9806508355320975,
+          "score": 44,
+          "state": "약함",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.8302750433752897,
+          "rsi14": 47.945205479452056,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 25,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "LIG넥스원은 방산 비리 이슈로 인해 방산업체 지정 취소 검토 및 입찰 참가 제한 가능성이 제기되며 주가에 부정적인 영향을 받고 있습니다. 현재 20일선과 50일선 아래에 위치해 있어 당분간은 회피하는 것이 좋겠습니다.",
           "close": 660000.0,
           "change_pct": -6.382978723404253,
           "score": 16,
