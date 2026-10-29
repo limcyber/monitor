@@ -1,172 +1,7 @@
 {
-  "updated_at_et": "2026-10-28 19:56 ET",
+  "updated_at_et": "2026-10-29 00:12 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-09-21 16:04 ET",
-      "market_data_as_of": "2026-09-21 11:55 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 75,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "시장 대비 강한 흐름을 보이며 20일선과 50일선 위에 안착했습니다. 현재 RSI 54로 추가 상승 여력이 있습니다. 보유 중이라면 추세 유지 여부를 관망하며 대응하는 것이 좋습니다.",
-          "close": 224.9199981689453,
-          "change_pct": 1.1922408987026456,
-          "score": 78,
-          "state": "양호",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0007380627456238612,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 80,
-          "ai_state": "매수 고려",
-          "ai_action": "소량 매수",
-          "ai_note": "최근 20일선이 50일선을 상향 돌파하는 중기 골든크로스가 발생했습니다. RSI 54로 아직 과열 구간은 아니며, 시장 대비 강한 흐름을 보이고 있어 소량 매수를 고려해볼 만합니다.",
-          "close": 375.4988098144531,
-          "change_pct": 3.0825544621958523,
-          "score": 83,
-          "state": "강함",
-          "action": "아주 소규모 / 대기",
-          "cross_highlights": [
-            "TSLA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 54 (중립)"
-          ],
-          "volume_ratio_20d": 0.001417423388159929,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 78,
-          "ai_state": "매수 고려",
-          "ai_action": "소량 매수",
-          "ai_note": "중기 골든크로스 발생과 함께 RSI 86으로 과열 구간에 진입했습니다. 시장 대비 강한 흐름을 보이고 있으나, 단기 급등에 따른 조정 가능성도 염두에 두어야 합니다. 소량 매수 후 추세 확인이 필요합니다.",
-          "close": 721.6400146484375,
-          "change_pct": 8.395045384669553,
-          "score": 78,
-          "state": "양호",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [
-            "META 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 86 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.004187931202847726,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 70,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "중기 골든크로스가 발생했으나 RSI 78로 과열 구간에 있습니다. 최근 급등으로 인해 단기적으로 부담스러울 수 있으므로, 현재 보유 중이라면 추세가 꺾이지 않는지 관망하며 대응하는 것이 좋습니다.",
-          "close": 609.4749755859375,
-          "change_pct": 8.869809512356564,
-          "score": 69,
-          "state": "양호",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [
-            "AMD 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 78 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.002379814916914337,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 70,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "단기 골든크로스가 발생했고 RSI 72로 과열 구간에 있습니다. 시장 대비 강한 흐름을 보이지만, 단기 급등에 따른 조정 가능성을 고려하여 보유 중이라면 추세 유지 여부를 확인하며 대응하는 것이 좋습니다.",
-          "close": 78.22000122070312,
-          "change_pct": 0.4881871797153714,
-          "score": 72,
-          "state": "양호",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [
-            "TEM 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 72 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.0007977330452382396,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 55,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "단기 골든크로스가 발생했으나 RSI 64로 상방 우세 구간입니다. 시장 대비 강한 흐름을 보이고 있으나, 아직 추세가 확실하지 않으므로 관망하며 추가적인 상승 신호를 기다리는 것이 좋습니다.",
-          "close": 554.6599731445312,
-          "change_pct": 4.050118281590209,
-          "score": 54,
-          "state": "애매",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [
-            "SOXX 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 64 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.0013377491453757816,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 15,
-          "ai_state": "매도",
-          "ai_action": "매도",
-          "ai_note": "시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 위치해 있습니다. RSI 34로 하락 추세가 강하므로, 보유 중이라면 손절 또는 비중 축소를 고려하는 것이 좋습니다.",
-          "close": 4.425000190734863,
-          "change_pct": 0.3401438512873556,
-          "score": 17,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 6.961142853345053e-05,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 65,
-          "ai_state": "관망",
-          "ai_action": "보유",
-          "ai_note": "중기 골든크로스가 발생했으나 단기 데드크로스도 동시에 나왔습니다. RSI 53으로 중립 구간이며, 시장 대비 강한 흐름을 보이고 있어 추세 전환 여부를 관망하며 대응하는 것이 좋습니다.",
-          "close": 22.280000686645508,
-          "change_pct": 11.17764305780331,
-          "score": 68,
-          "state": "양호",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [
-            "KORU 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 53 (중립)",
-            "KORU 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 53 (중립)"
-          ],
-          "volume_ratio_20d": 0.0009447621755848197,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "bull"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-09-21 19:26 ET",
       "market_data_as_of": "2026-09-21 11:55 ET (5분봉)",
@@ -24694,6 +24529,160 @@
           "ai_state": "매우 약세",
           "ai_action": "보유/관망",
           "ai_note": "20일선과 50일선 아래로 하락하며 약세를 보이고 있습니다. RSI도 30선대로 낮아 추가적인 하락 가능성을 염두에 두고 관망하는 것이 좋습니다.",
+          "close": 13.46500015258789,
+          "change_pct": 13.532888215616602,
+          "score": 1,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.00156560652402938,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-10-29 00:12 ET",
+      "market_data_as_of": "2026-10-28 13:18 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 35,
+          "ai_state": "약세",
+          "ai_action": "보유/관망",
+          "ai_note": "최근 20일선 아래로 하락하며 약세를 보이고 있습니다. 단기 반등 시 매도 고려.",
+          "close": 217.17999267578125,
+          "change_pct": -0.34872430811747623,
+          "score": 37,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0024099471740723416,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 80,
+          "ai_state": "강세",
+          "ai_action": "매수 고려",
+          "ai_note": "최근 5일선이 20일선을 상향 돌파하는 단기 골든크로스가 발생했습니다. 거래량은 약하지만 RSI가 60선을 상회하며 상승 추세 유지 중.",
+          "close": 401.7850036621094,
+          "change_pct": -1.3927717842193155,
+          "score": 81,
+          "state": "강함",
+          "action": "매수 가능",
+          "cross_highlights": [
+            "TSLA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 61 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.0017788564834226085,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "보유/관망",
+          "ai_note": "시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 위치합니다. 추가 하락 가능성에 유의하며 관망.",
+          "close": 612.280029296875,
+          "change_pct": -1.2754112632247017,
+          "score": 30,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0035028127513762946,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 45,
+          "ai_state": "약세",
+          "ai_action": "보유/관망",
+          "ai_note": "20일선 아래에 위치하며 약세를 보이고 있습니다. 50일선 지지 여부를 확인하며 추후 방향성 결정.",
+          "close": 569.4749755859375,
+          "change_pct": 1.6447659407580195,
+          "score": 49,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.002395328325866317,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 35,
+          "ai_state": "중립",
+          "ai_action": "보유/관망",
+          "ai_note": "20일선과 50일선 위에 있지만 거래량이 아직 약합니다. 거래량 증가와 함께 상승 추세가 확인될 때까지 관망.",
+          "close": 76.99500274658203,
+          "change_pct": 6.715178265055632,
+          "score": 33,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.002157602839387235,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "보유/관망",
+          "ai_note": "20일선과 50일선 아래에 위치하며 약세를 보입니다. 시장 전반의 반등이 동반되지 않는 한 추가 하락 가능성.",
+          "close": 516.97998046875,
+          "change_pct": 1.1583733687701825,
+          "score": 21,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0016740122022305649,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 5,
+          "ai_state": "매우 약세",
+          "ai_action": "보유/관망",
+          "ai_note": "시장 대비 매우 약한 흐름이며 20일선과 50일선 아래에 있습니다. RSI가 17로 과매도 구간에 진입했으나, 추세 전환 신호 부재로 관망.",
+          "close": 2.9749999046325684,
+          "change_pct": 1.190470977242053,
+          "score": 2,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 10,
+          "ai_state": "매우 약세",
+          "ai_action": "보유/관망",
+          "ai_note": "20일선과 50일선 아래에 위치하며 약세를 보입니다. 급등 후 조정을 받고 있으며, 추세 전환을 기다리며 관망.",
           "close": 13.46500015258789,
           "change_pct": 13.532888215616602,
           "score": 1,
