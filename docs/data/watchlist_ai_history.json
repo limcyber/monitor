@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-10-29 17:54 ET",
+  "updated_at_et": "2026-10-29 21:28 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-09-22 08:43 ET",
-      "market_data_as_of": "2026-09-21 11:55 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-09-22 13:27 ET",
       "market_data_as_of": "2026-09-22 12:50 ET (5분봉)",
@@ -24369,6 +24362,163 @@
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
       "items": []
+    },
+    {
+      "generated_at_et": "2026-10-29 21:28 ET",
+      "market_data_as_of": "2026-10-29 15:45 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 20,
+          "ai_state": "약세",
+          "ai_action": "보유/관찰",
+          "ai_note": "최근 CEO가 중국 정보기관의 표적이 되었다는 보도가 있었으나, 회사는 이를 부인했습니다. 현재 시장 대비 약한 모습을 보이며 20일선과 50일선 아래에 있어 추가 하락 가능성을 염두에 두어야 합니다.",
+          "close": 213.0050048828125,
+          "change_pct": -1.1027021757624267,
+          "score": 23,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.002605315871255961,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 75,
+          "ai_state": "중립",
+          "ai_action": "선별 매수",
+          "ai_note": "로보택시 사업 확장 및 사이버캡 관련 뉴스가 꾸준히 나오고 있습니다. 시장 대비 강한 흐름을 유지하고 있으며 20일선과 50일선 위에 있어 긍정적인 흐름을 기대해볼 수 있습니다.",
+          "close": 403.5400085449219,
+          "change_pct": -0.1682234114412262,
+          "score": 79,
+          "state": "양호",
+          "action": "선별 매수",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0014145431085945737,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 30,
+          "ai_state": "약세",
+          "ai_action": "보유/관찰",
+          "ai_note": "최근 소셜 미디어 중독 소송 합의 및 AI 챗봇 'Muse' 출시 관련 뉴스가 있습니다. 시장 대비 약한 모습을 보이며 20일선과 50일선 아래에 있어 주의가 필요합니다.",
+          "close": 627.3400268554688,
+          "change_pct": 2.4245353977803363,
+          "score": 25,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0038614742222174677,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 55,
+          "ai_state": "중립",
+          "ai_action": "보유/관찰",
+          "ai_note": "메타와의 파트너십 강화 및 AI 관련 신제품 출시 소식이 있습니다. 20일선 아래에 있지만 50일선 위에 있어 추가적인 흐름을 지켜볼 필요가 있습니다.",
+          "close": 563.6199951171875,
+          "change_pct": -2.562064736475411,
+          "score": 49,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0022527286718859564,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 40,
+          "ai_state": "약세",
+          "ai_action": "보유/관찰",
+          "ai_note": "EU IVDR Class C 인증 획득 및 Bristol Myers Squibb과의 협력 확대 소식이 있습니다. 단기 골든크로스와 중기 데드크로스가 혼재되어 있으며 거래량이 약해 추가적인 상승을 위해서는 거래량 동반이 필요합니다.",
+          "close": 77.42500305175781,
+          "change_pct": 1.0638329655568768,
+          "score": 35,
+          "state": "약함",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "TEM 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 59 (상방 우세)",
+            "TEM 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 59 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.0017089326581859658,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 10,
+          "ai_state": "매우 약세",
+          "ai_action": "보유/관찰",
+          "ai_note": "반도체 섹터 전반의 약세와 함께 중기 데드크로스가 발생했습니다. 20일선과 50일선 모두 하향 돌파하여 당분간 관망하는 것이 좋습니다.",
+          "close": 511.45001220703125,
+          "change_pct": -2.009807676228581,
+          "score": 4,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [
+            "SOXX 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 37 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0015575602394106772,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 5,
+          "ai_state": "매우 약세",
+          "ai_action": "보유/관찰",
+          "ai_note": "최근 실적 발표 및 로봇 배송 확대 관련 뉴스가 있으나, 주가는 약세를 면치 못하고 있습니다. 시장 대비 매우 약한 모습을 보이며 20일선과 50일선 아래에 있어 추가 하락 가능성이 높습니다.",
+          "close": 2.8299999237060547,
+          "change_pct": -6.291392662928708,
+          "score": 2,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0030570402509451943,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 0,
+          "ai_state": "매우 약세",
+          "ai_action": "보유/관찰",
+          "ai_note": "3배 레버리지 상품으로 변동성이 매우 크며, 최근 한국 증시 전반의 약세와 함께 큰 폭의 하락을 보였습니다. 20일선과 50일선 모두 하향 돌파하여 현재로서는 진입을 고려하기 어렵습니다.",
+          "close": 12.517800331115723,
+          "change_pct": -9.159647505909774,
+          "score": 0,
+          "state": "회피",
+          "action": "보류 / 관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.001749752966129606,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
     }
   ]
 }
