@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-10-30 22:36 ET",
+  "updated_at_et": "2026-10-31 05:07 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-09-23 08:50 ET",
-      "market_data_as_of": "2026-09-22 16:00 ET (Close)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-09-23 13:37 ET",
       "market_data_as_of": "2026-09-23 11:25 ET (5분봉)",
@@ -24782,6 +24775,165 @@
           "ai_state": "급락",
           "ai_action": "관망",
           "ai_note": "레버리지 ETF 특성상 시장 하락 시 변동성이 매우 크며, 최근 큰 폭의 하락세를 보이고 있습니다. 현재 20일선과 50일선 아래에 위치하며 시장 대비 매우 약한 흐름을 보이고 있어 당분간 관망이 필요합니다.",
+          "close": 10.650099754333496,
+          "change_pct": -16.338569227767998,
+          "score": 11,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0031207158247655593,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-10-31 05:07 ET",
+      "market_data_as_of": "2026-10-30 12:15 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 15,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "최근 중기 데드크로스가 발생했으며, 시장 대비 약한 모습을 보이고 있습니다. 현재로서는 매수보다는 관망하는 것이 좋겠습니다.",
+          "close": 204.9199981689453,
+          "change_pct": -4.090613752392269,
+          "score": 16,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "NVDA 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 31 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.006982984658145464,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 80,
+          "ai_state": "양호",
+          "ai_action": "선별적 매수",
+          "ai_note": "시장에 비해 상대적으로 강한 흐름을 보이고 있으며, 50일선과 20일선 위에 위치해 있습니다. 최근 로보택시 관련 뉴스도 긍정적입니다.",
+          "close": 400.1145935058594,
+          "change_pct": -0.7898324779381238,
+          "score": 79,
+          "state": "양호",
+          "action": "매우 선별적 접근",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0024638878895496597,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 20,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "시장 대비 약한 모습을 보이며 20일선과 50일선 아래에 있습니다. 최근 AI 모델 출시 등 긍정적인 뉴스도 있으나, 주가 흐름은 아직 회복되지 않았습니다.",
+          "close": 620.47998046875,
+          "change_pct": -0.6469030513276963,
+          "score": 19,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.004310218223430863,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 15,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 위치합니다. 다만, 메타와의 AI 인프라 협력 강화 등 긍정적인 뉴스가 있습니다.",
+          "close": 505.4700012207031,
+          "change_pct": -10.760563456166206,
+          "score": 15,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.008743890559853223,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 25,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "최근 중기 데드크로스가 발생했으나, 단기 골든크로스 신호도 나타나고 있습니다. 거래량이 약하고 RSI가 50선 부근에 있어 방향성 판단이 어렵습니다.",
+          "close": 72.41999816894531,
+          "change_pct": -6.962999003003533,
+          "score": 24,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "TEM 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.1x (거래량 약함) / RSI 56 (상방 우세)",
+            "TEM 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.1x (거래량 약함) / RSI 56 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.051046248411487846,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 10,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "최근 중기 데드크로스가 발생했으며, 시장 대비 약한 모습을 보이고 있습니다. 반도체 섹터 전반의 약세가 지속되고 있습니다.",
+          "close": 469.92999267578125,
+          "change_pct": -8.549019952531644,
+          "score": 12,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "SOXX 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 32 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.005762406337544744,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 10,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 있습니다. 매출은 성장하고 있으나, 막대한 영업 손실과 낮은 총마진이 우려됩니다.",
+          "close": 2.634999990463257,
+          "change_pct": -7.218307390900625,
+          "score": 11,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0018093472399548702,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 10,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "시장 대비 약한 흐름을 보이며 20일선과 50일선 아래에 있습니다. 최근 한국 기술주 전반의 약세와 함께 큰 폭으로 하락했습니다.",
           "close": 10.650099754333496,
           "change_pct": -16.338569227767998,
           "score": 11,
