@@ -1,171 +1,7 @@
 {
-  "updated_at_et": "2026-11-01 21:39 ET",
+  "updated_at_et": "2026-11-02 05:22 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-09-24 22:46 ET",
-      "market_data_as_of": "2026-09-24 15:10 ET (5분봉)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "NVDA",
-          "ai_score": 75,
-          "ai_state": "관망",
-          "ai_action": "보유 유지",
-          "ai_note": "AI 수요 강세 속 칩 생산량 증대 계획 발표. 다만, 최근 단기 골든크로스에도 거래량은 약세를 보이고 있어 추가 상승 여부는 지켜볼 필요가 있습니다. 보유 중이라면 추세 전환 시까지 유지하는 전략이 유효합니다.",
-          "close": 223.7100067138672,
-          "change_pct": -0.7981853739587486,
-          "score": 81,
-          "state": "강함",
-          "action": "아주 소규모 / 대기",
-          "cross_highlights": [
-            "NVDA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 45 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.0026485016665576617,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "TSLA",
-          "ai_score": 80,
-          "ai_state": "관망",
-          "ai_action": "보유 유지",
-          "ai_note": "2분기 매출 성장에도 불구하고 영업이익률 하락. 로보택시 서비스 확장 등 AI 및 로보틱스 전환에 집중하고 있으나, 단기 골든크로스에도 거래량은 약합니다. 보유 시 추세 확인 후 비중 조절을 고려합니다.",
-          "close": 378.4849853515625,
-          "change_pct": -0.43012990282738084,
-          "score": 83,
-          "state": "강함",
-          "action": "아주 소규모 / 대기",
-          "cross_highlights": [
-            "TSLA 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 51 (중립)"
-          ],
-          "volume_ratio_20d": 0.004023528721099116,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "META",
-          "ai_score": 85,
-          "ai_state": "강세",
-          "ai_action": "소량 매수 / 보유 유지",
-          "ai_note": "AI 스마트 글래스 및 AI 에이전트 'Muse' 출시 등 AI 분야 투자 확대. 최근 중기 골든크로스가 나왔으나 RSI가 과열 구간에 진입했습니다. 단기 급등 후 숨 고르기 구간으로, 소량 분할 매수 또는 보유 유지하며 추가 상승을 노려볼 수 있습니다.",
-          "close": 777.7100219726562,
-          "change_pct": 4.516872394768279,
-          "score": 83,
-          "state": "강함",
-          "action": "아주 소규모 / 대기",
-          "cross_highlights": [
-            "META 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 86 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.010268129460088421,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "AMD",
-          "ai_score": 78,
-          "ai_state": "양호",
-          "ai_action": "보유 유지",
-          "ai_note": "EPYC 서버 프로세서 및 Instinct AI 가속기 수요 강세로 역대 최고 분기 실적 달성. 최근 중기 골든크로스가 나왔으나 RSI가 과열 구간입니다. 시장 대비 강한 흐름을 보이고 있으나, 과열 부담감으로 인해 단기 조정을 염두에 두고 보유를 유지하는 것이 좋습니다.",
-          "close": 623.5593872070312,
-          "change_pct": 1.456110715537684,
-          "score": 78,
-          "state": "양호",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [
-            "AMD 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 81 (과열 구간)"
-          ],
-          "volume_ratio_20d": 0.006813133919648863,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bull"
-          }
-        },
-        {
-          "ticker": "TEM",
-          "ai_score": 75,
-          "ai_state": "관망",
-          "ai_action": "보유 유지",
-          "ai_note": "데이터 라이선스 계약 연장 및 새로운 RNA 모델 라이선스 계약 체결. AI 기반 신약 개발 시장 성장에 따른 수혜가 기대되나, 현재 뚜렷한 거래량 동반 없이 상승 중입니다. 시장 대비 강한 흐름을 보이고 있으므로 추세 확인 후 매수 또는 보유 유지를 권장합니다.",
-          "close": 80.76000213623047,
-          "change_pct": 5.444582840744783,
-          "score": 79,
-          "state": "양호",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.013046864275647798,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SOXX",
-          "ai_score": 55,
-          "ai_state": "애매",
-          "ai_action": "보유 축소 / 관망",
-          "ai_note": "최근 단기 골든크로스가 나왔으나 거래량은 약하고 RSI는 상방 우세입니다. 반도체 섹터 전반의 불확실성이 존재하며, 특히 금리 인상 우려와 지정학적 리스크가 부담으로 작용할 수 있습니다. 보유 중이라면 비중 축소 또는 관망을 추천합니다.",
-          "close": 563.5599975585938,
-          "change_pct": -0.3818095977496827,
-          "score": 54,
-          "state": "애매",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [
-            "SOXX 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 68 (상방 우세)"
-          ],
-          "volume_ratio_20d": 0.004187373322262078,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "SERV",
-          "ai_score": 20,
-          "ai_state": "회피",
-          "ai_action": "매도 / 회피",
-          "ai_note": "로봇 배달 서비스 확장 및 파트너십 강화 소식에도 불구하고 시장 대비 약한 흐름을 보이고 있습니다. RSI가 낮고 거래량도 미미하여 현재로서는 매력적인 투자 기회를 제공하지 못하고 있습니다. 보유 중이라면 손절 또는 비중 축소를 고려해야 합니다.",
-          "close": 4.409999847412109,
-          "change_pct": 2.320183432950995,
-          "score": 20,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.0012102296446465757,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "KORU",
-          "ai_score": 35,
-          "ai_state": "약세",
-          "ai_action": "매도 / 회피",
-          "ai_note": "최근 단기 골든크로스가 나왔으나 시장 대비 약한 흐름을 보이고 있으며, 거래량도 약합니다. 한국 증시 전반의 변동성과 지정학적 리스크가 부담으로 작용할 수 있습니다. 보유 중이라면 손절 또는 비중 축소를 고려하는 것이 좋습니다.",
-          "close": 19.91710090637207,
-          "change_pct": -6.360599540550482,
-          "score": 37,
-          "state": "약함",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [
-            "KORU 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 48 (중립)"
-          ],
-          "volume_ratio_20d": 0.006376036414809834,
-          "signals": {
-            "short_cross": "bull",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-09-25 04:24 ET",
       "market_data_as_of": "2026-09-24 15:10 ET (5분봉)",
@@ -24893,6 +24729,13 @@
     },
     {
       "generated_at_et": "2026-11-01 21:39 ET",
+      "market_data_as_of": "2026-10-30 12:15 ET (5분봉)",
+      "status": "error",
+      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
+      "items": []
+    },
+    {
+      "generated_at_et": "2026-11-02 05:22 ET",
       "market_data_as_of": "2026-10-30 12:15 ET (5분봉)",
       "status": "error",
       "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
