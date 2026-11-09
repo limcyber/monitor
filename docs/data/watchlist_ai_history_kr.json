@@ -1,173 +1,7 @@
 {
-  "updated_at_et": "2026-11-08 19:29 ET",
+  "updated_at_et": "2026-11-09 02:37 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-07-30 01:37 ET",
-      "market_data_as_of": "2026-07-30 15:30 KST (Close)",
-      "status": "ok",
-      "error": null,
-      "items": [
-        {
-          "ticker": "124500.KQ",
-          "ai_score": 30,
-          "ai_state": "관망",
-          "ai_action": "보유 유지",
-          "ai_note": "아이티센글로벌은 웹3 사업이 순항 중이라는 소식이 있습니다. 다만, 최근 단기 데드크로스가 발생하여 추가 하락 가능성을 염두에 두고 관망하는 것이 좋겠습니다.",
-          "close": 18750.0,
-          "change_pct": 0.32102728731941976,
-          "score": 19,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [
-            "아이티센글로벌 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.8x (거래량 약함) / RSI 46 (중립)"
-          ],
-          "volume_ratio_20d": 0.8251721741328111,
-          "rsi14": 46.33596392333709,
-          "signals": {
-            "short_cross": "bear",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "466100.KQ",
-          "ai_score": 25,
-          "ai_state": "관망",
-          "ai_action": "보유 유지",
-          "ai_note": "클로봇은 물류센터 설계 및 구축 역량 강화를 위한 DLS 인수를 진행 중이나 자금 조달에 어려움을 겪고 있다는 소식이 있습니다. 현재 20일선 아래에 위치해 있어 추가 하락 가능성을 고려하며 관망하는 것이 좋겠습니다.",
-          "close": 20550.0,
-          "change_pct": -7.223476297968401,
-          "score": 26,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 1.0706220691136212,
-          "rsi14": 40.128755364806864,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "005930.KS",
-          "ai_score": 40,
-          "ai_state": "관망",
-          "ai_action": "보유 유지",
-          "ai_note": "삼성전자는 2분기 역대 최대 실적을 기록했으나, 반도체 업황 둔화 우려가 제기되고 있습니다. 최근 중기 데드크로스가 발생했으므로, 추가 하락 가능성을 염두에 두고 관망하는 것이 좋겠습니다.",
-          "close": 211250.0,
-          "change_pct": 1.318944844124692,
-          "score": 9,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [
-            "삼성전자 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.9x (거래량 보통) / RSI 33 (하방 우세)"
-          ],
-          "volume_ratio_20d": 0.9421541187440442,
-          "rsi14": 33.079847908745236,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "000660.KS",
-          "ai_score": 35,
-          "ai_state": "관망",
-          "ai_action": "보유 유지",
-          "ai_note": "SK하이닉스는 2분기 역대 최대 실적을 달성했으나, 컨퍼런스콜에서 HBM 및 LTA 가이던스 부재로 업황 우려가 커지고 있습니다. 최근 중기 데드크로스가 발생했으므로, 추가 하락 가능성을 염두에 두고 관망하는 것이 좋겠습니다.",
-          "close": 1334000.0,
-          "change_pct": -4.782298358315485,
-          "score": 7,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [
-            "SK하이닉스 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.9x (거래량 보통) / RSI 26 (과매도 구간)"
-          ],
-          "volume_ratio_20d": 0.9405696954847408,
-          "rsi14": 25.82292849035187,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "bear"
-          }
-        },
-        {
-          "ticker": "035420.KS",
-          "ai_score": 50,
-          "ai_state": "관망",
-          "ai_action": "보유 유지",
-          "ai_note": "NAVER는 엔비디아의 직접 투자 유치와 AI 팩토리 사업 확대로 성장 동력을 확보했습니다. 다만, 최근 주가가 하락세를 보이고 있어 추가 하락 가능성을 염두에 두고 관망하는 것이 좋겠습니다.",
-          "close": 197100.0,
-          "change_pct": -2.1836228287841153,
-          "score": 29,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.8308144359950188,
-          "rsi14": 55.38592027141645,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "005380.KS",
-          "ai_score": 30,
-          "ai_state": "관망",
-          "ai_action": "보유 유지",
-          "ai_note": "현대차그룹은 자율주행 전문가 영입을 통해 미래 모빌리티 경쟁력 강화에 나서고 있습니다. 하지만 시장보다 힘이 약한 모습을 보이고 있으며, 20일선 아래에 위치해 있어 추가 하락 가능성을 고려하며 관망하는 것이 좋겠습니다.",
-          "close": 349000.0,
-          "change_pct": -1.2729844413012725,
-          "score": 12,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.668096447062051,
-          "rsi14": 26.968973747016705,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "012450.KS",
-          "ai_score": 45,
-          "ai_state": "관망",
-          "ai_action": "보유 유지",
-          "ai_note": "한화에어로스페이스는 스페인 K9 자주포 현대화 사업 수주 소식으로 주가가 상승했으나, 최근 대전 사업장 폭발 사고 관련 수사가 진행 중입니다. 20일선 아래에 위치해 있어 추가 하락 가능성을 염두에 두고 관망하는 것이 좋겠습니다.",
-          "close": 881000.0,
-          "change_pct": 8.765432098765435,
-          "score": 21,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.6532797622903926,
-          "rsi14": 44.07894736842105,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        },
-        {
-          "ticker": "079550.KS",
-          "ai_score": 40,
-          "ai_state": "관망",
-          "ai_action": "보유 유지",
-          "ai_note": "LIG넥스원은 함대공유도탄-II 조립·점검장 준공 소식이 있었으나, 과거 납품 비리 의혹으로 인한 신뢰도 하락 우려가 있습니다. 현재 20일선 아래에 위치해 있어 추가 하락 가능성을 고려하며 관망하는 것이 좋겠습니다.",
-          "close": 652000.0,
-          "change_pct": 5.161290322580636,
-          "score": 26,
-          "state": "회피",
-          "action": "회피 / 비중 축소",
-          "cross_highlights": [],
-          "volume_ratio_20d": 0.7382258367816243,
-          "rsi14": 46.4527027027027,
-          "signals": {
-            "short_cross": "none",
-            "mid_cross": "none"
-          }
-        }
-      ]
-    },
     {
       "generated_at_et": "2026-07-30 19:02 ET",
       "market_data_as_of": "2026-07-30 15:30 KST (Close)",
@@ -24526,6 +24360,175 @@
           "ai_state": "회피",
           "ai_action": "관찰",
           "ai_note": "입찰참가 제한 처분 관련 법정 다툼이 진행 중이며, 주가는 약세를 보이고 있습니다. 중기 데드크로스가 발생했고 20일선과 50일선 아래에 위치하므로, 당분간 관망하며 추세 전환을 기다리는 것이 좋습니다.",
+          "close": 660000.0,
+          "change_pct": -6.382978723404253,
+          "score": 16,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "LIG넥스원 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.7x (거래량 약함) / RSI 40 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.6515266836023604,
+          "rsi14": 40.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-11-09 02:37 ET",
+      "market_data_as_of": "2026-09-15 15:30 KST (Close)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "124500.KQ",
+          "ai_score": 55,
+          "ai_state": "관망",
+          "ai_action": "보유",
+          "ai_note": "아이티센글로벌은 최근 단기 데드크로스가 발생했으나 시장 대비 강한 흐름을 보이고 있어 관망하며 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 30650.0,
+          "change_pct": -4.517133956386288,
+          "score": 56,
+          "state": "애매",
+          "action": "관찰",
+          "cross_highlights": [
+            "아이티센글로벌 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.5x (거래량 약함) / RSI 27 (과매도 구간)"
+          ],
+          "volume_ratio_20d": 0.5447113292441889,
+          "rsi14": 26.903553299492387,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "466100.KQ",
+          "ai_score": 15,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "클로봇은 최근 중기 데드크로스가 발생했고 시장 대비 약한 흐름을 보여 당분간 관찰이 필요합니다.",
+          "close": 22900.0,
+          "change_pct": 1.777777777777767,
+          "score": 15,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "클로봇 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 1.0x (거래량 보통) / RSI 31 (하방 우세)"
+          ],
+          "volume_ratio_20d": 1.0212892137703773,
+          "rsi14": 30.909090909090907,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "005930.KS",
+          "ai_score": 25,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "삼성전자는 최근 단기 데드크로스가 나왔고 시장 대비 약세를 보여 당분간 관찰하며 추세를 지켜보는 것이 좋겠습니다.",
+          "close": 247000.0,
+          "change_pct": -0.8032128514056214,
+          "score": 24,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [
+            "삼성전자 최근 단기 데드크로스: 5일선이 20일선 아래로 내려갔습니다. 거래량 0.4x (거래량 약함) / RSI 40 (하방 우세)",
+            "삼성전자 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.4x (거래량 약함) / RSI 40 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.4123012900595574,
+          "rsi14": 39.86013986013985,
+          "signals": {
+            "short_cross": "bear",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "000660.KS",
+          "ai_score": 40,
+          "ai_state": "약세",
+          "ai_action": "관찰",
+          "ai_note": "SK하이닉스는 20일선과 50일선 아래에 위치하며 시장 대비 약한 흐름을 보이고 있어 추가적인 반등 신호를 기다리는 것이 좋겠습니다.",
+          "close": 1682000.0,
+          "change_pct": -0.8839127872716568,
+          "score": 41,
+          "state": "약함",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.5496446668493946,
+          "rsi14": 49.565217391304344,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "035420.KS",
+          "ai_score": 28,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "NAVER는 시장 대비 약한 흐름을 보이고 있으며 20일선과 50일선 아래에 위치해 있어 당분간 관찰이 필요합니다.",
+          "close": 206000.0,
+          "change_pct": 0.9803921568627416,
+          "score": 28,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.3515749792345537,
+          "rsi14": 35.1063829787234,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "005380.KS",
+          "ai_score": 16,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "현대차는 시장 대비 약한 흐름을 보이고 있으며 20일선과 50일선 아래에 위치해 있어 당분간 관찰이 필요합니다.",
+          "close": 368000.0,
+          "change_pct": -0.9421265141319024,
+          "score": 16,
+          "state": "회피",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.40285040670356237,
+          "rsi14": 27.528089887640448,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "012450.KS",
+          "ai_score": 45,
+          "ai_state": "약세",
+          "ai_action": "관찰",
+          "ai_note": "한화에어로스페이스는 20일선 아래에 위치하며 최근 하락세를 보이고 있어 추가적인 반등 신호를 기다리는 것이 좋겠습니다.",
+          "close": 1069000.0,
+          "change_pct": -5.9806508355320975,
+          "score": 44,
+          "state": "약함",
+          "action": "관찰",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.8302750433752897,
+          "rsi14": 47.945205479452056,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "079550.KS",
+          "ai_score": 16,
+          "ai_state": "회피",
+          "ai_action": "관찰",
+          "ai_note": "LIG넥스원은 최근 중기 데드크로스가 발생했고 20일선 및 50일선 아래에 위치하여 당분간 관찰이 필요합니다.",
           "close": 660000.0,
           "change_pct": -6.382978723404253,
           "score": 16,
