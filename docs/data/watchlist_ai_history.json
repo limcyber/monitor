@@ -1,14 +1,7 @@
 {
-  "updated_at_et": "2026-11-16 14:06 ET",
+  "updated_at_et": "2026-11-16 21:33 ET",
   "count": 200,
   "items": [
-    {
-      "generated_at_et": "2026-10-05 20:31 ET",
-      "market_data_as_of": "2026-10-05 15:46 ET (5분봉)",
-      "status": "error",
-      "error": "종목 AI 분석 실패: type object 'datetime.time' has no attribute 'sleep'",
-      "items": []
-    },
     {
       "generated_at_et": "2026-10-06 03:03 ET",
       "market_data_as_of": "2026-10-05 15:46 ET (5분봉)",
@@ -23823,6 +23816,170 @@
           "ai_state": "약함",
           "ai_action": "보유 관망",
           "ai_note": "3분기 매출 성장 및 2분기 연속 흑자 전환은 긍정적이나, 핵심 사업 의존도와 해외 시장 확대 전략의 불확실성을 고려해야 합니다. 현재 구간에서는 보유 관망하며 실적 개선 추이를 지켜보는 것이 좋습니다.",
+          "close": 6.8815,
+          "change_pct": -10.397133413886529,
+          "score": 8,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        }
+      ]
+    },
+    {
+      "generated_at_et": "2026-11-16 21:33 ET",
+      "market_data_as_of": "2026-11-16 08:33 ET (5분봉)",
+      "status": "ok",
+      "error": null,
+      "items": [
+        {
+          "ticker": "NVDA",
+          "ai_score": 15,
+          "ai_state": "하락세",
+          "ai_action": "관망",
+          "ai_note": "CEO 사임 소식으로 주가가 하락했습니다. 11월 17일 실적 발표를 앞두고 있어 변동성이 클 수 있으니 관망하는 것이 좋습니다.",
+          "close": 156.8669,
+          "change_pct": -3.673998083679819,
+          "score": 8,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "ai_score": 40,
+          "ai_state": "약세",
+          "ai_action": "비중 축소",
+          "ai_note": "사이버캡 출시 소식에도 불구하고 주가는 하락했습니다. 스페이스X와의 합병 논의가 진행 중이나 불확실성이 존재하며, 현재로서는 비중 축소가 바람직합니다.",
+          "close": 385.58,
+          "change_pct": -1.1890731398155108,
+          "score": 44,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "TSLA 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 42 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "META",
+          "ai_score": 25,
+          "ai_state": "하락세",
+          "ai_action": "관망",
+          "ai_note": "AI 모델 출시 등 긍정적인 뉴스가 있으나, 이탈리아 규제 당국의 벌금 부과 소식으로 주가가 하락했습니다. 당분간 관망하며 추이를 지켜보는 것이 좋겠습니다.",
+          "close": 639.16,
+          "change_pct": -0.394271756109732,
+          "score": 16,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "META 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 56 (상방 우세)",
+            "META 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 56 (상방 우세)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "AMD",
+          "ai_score": 35,
+          "ai_state": "약세",
+          "ai_action": "관망",
+          "ai_note": "데이터센터 사업 호조와 구글 클라우드와의 파트너십 소식에도 불구하고 경쟁사 엔비디아의 CEO 사임 이슈로 인해 주가 변동성이 커지고 있습니다. 현재로서는 관망하는 것이 좋습니다.",
+          "close": 502.8,
+          "change_pct": -5.853274482548021,
+          "score": 21,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "AMD 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 44 (하방 우세)",
+            "AMD 최근 중기 데드크로스: 20일선이 50일선 아래로 내려갔습니다. 거래량 0.0x (거래량 약함) / RSI 44 (하방 우세)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "bear"
+          }
+        },
+        {
+          "ticker": "TEM",
+          "ai_score": 60,
+          "ai_state": "상승세",
+          "ai_action": "매수",
+          "ai_note": "3분기 실적 호조와 연간 가이던스 상향 조정 소식으로 주가가 상승했습니다. 유럽 시장 진출 확대 등 긍정적인 모멘텀이 지속될 것으로 보입니다.",
+          "close": 68.75,
+          "change_pct": -3.980444881086398,
+          "score": 40,
+          "state": "약함",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "TEM 최근 중기 골든크로스: 20일선이 50일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 47 (중립)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "bull"
+          }
+        },
+        {
+          "ticker": "SOXX",
+          "ai_score": 10,
+          "ai_state": "하락세",
+          "ai_action": "회피",
+          "ai_note": "반도체 섹터 전반의 약세와 엔비디아 CEO 사임 이슈로 인해 주가가 하락했습니다. 당분간 반도체 섹터의 불확실성이 지속될 것으로 예상되므로 회피하는 것이 좋습니다.",
+          "close": 142.95,
+          "change_pct": -4.253183470837884,
+          "score": 12,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "none",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "SERV",
+          "ai_score": 20,
+          "ai_state": "하락세",
+          "ai_action": "관망",
+          "ai_note": "로봇 배송 네트워크 개방 및 물리적 AI 서비스 출시 등 긍정적인 뉴스가 있으나, 3분기 실적 발표 후 주가가 하락했습니다. 당분간 관망하며 추이를 지켜보는 것이 좋겠습니다.",
+          "close": 2.66,
+          "change_pct": -8.43373403795804,
+          "score": 12,
+          "state": "회피",
+          "action": "회피 / 비중 축소",
+          "cross_highlights": [
+            "SERV 최근 단기 골든크로스: 5일선이 20일선을 위로 돌파했습니다. 거래량 0.0x (거래량 약함) / RSI 50 (중립)"
+          ],
+          "volume_ratio_20d": 0.0,
+          "signals": {
+            "short_cross": "bull",
+            "mid_cross": "none"
+          }
+        },
+        {
+          "ticker": "KORU",
+          "ai_score": 10,
+          "ai_state": "하락세",
+          "ai_action": "회피",
+          "ai_note": "3분기 실적 발표 및 가이던스 상향 조정에도 불구하고 주가는 하락했습니다. 현재로서는 특별한 상승 모멘텀이 보이지 않아 회피하는 것이 좋습니다.",
           "close": 6.8815,
           "change_pct": -10.397133413886529,
           "score": 8,
